@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YaoHuo.Plugin</RootNamespace>
-    <AssemblyName>YaoHuo.Plugin</AssemblyName>
+    <RootNamespace>YaoHuo.Plugin.Blacklist</RootNamespace>
+    <AssemblyName>YaoHuo.Plugin.Blacklist</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -30,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,8 +39,15 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>Lib\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="GamesClassManager">
+      <HintPath>Lib\GamesClassManager.dll</HintPath>
+    </Reference>
     <Reference Include="KeLink.Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Lib\KeLink.Com.dll</HintPath>
@@ -52,11 +60,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Lib\KenLin_ClassManager.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -67,33 +79,105 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Lib\UBB_Expand.dll</HintPath>
     </Reference>
+    <Reference Include="WeiXinClassManager">
+      <HintPath>Lib\WeiXinClassManager.dll</HintPath>
+    </Reference>
+    <Reference Include="WwwClassManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\WwwClassManager.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="BBS\Book_List.aspx" />
+    <Content Include="BBS\Book_View.aspx" />
+    <Content Include="BBS\Index.aspx" />
+    <Content Include="BBS\SendMoney.aspx" />
+    <Content Include="BBS\SendMoney_Free.aspx" />
+    <Content Include="BBS\SendMoney_FreeMain.aspx" />
+    <Content Include="BBS\UserInfo.aspx" />
+    <Content Include="BBS\View.aspx" />
+    <Content Include="BBS\ViewUser.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="BBS\FriendList.aspx" />
+    <Content Include="Lib\AspNetPager.dll" />
+    <Content Include="Lib\GamesClassManager.dll" />
     <Content Include="Lib\KeLink.Com.dll" />
     <Content Include="Lib\KeLin_WebSite.dll" />
     <Content Include="Lib\KenLin_ClassManager.dll" />
-    <Content Include="Index.aspx" />
     <Content Include="Lib\UBB_Expand.dll" />
+    <Content Include="Lib\WeiXinClassManager.dll" />
+    <Content Include="Lib\WwwClassManager.dll" />
+    <Content Include="BBS\List.aspx" />
+    <Content Include="MyFile.aspx" />
+    <Content Include="WapIndex.aspx" />
+    <Content Include="WapLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\UserBLL.cs" />
-    <Compile Include="Conversion.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Index.aspx.cs">
+    <Compile Include="BBS\Book_List.aspx.cs">
+      <DependentUpon>Book_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_View.aspx.cs">
+      <DependentUpon>Book_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="BBS\SendMoney.aspx.cs">
+      <DependentUpon>SendMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\SendMoney_Free.aspx.cs">
+      <DependentUpon>SendMoney_Free.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\SendMoney_FreeMain.aspx.cs">
+      <DependentUpon>SendMoney_FreeMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\ViewUser.aspx.cs">
+      <DependentUpon>ViewUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Conversion.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\FriendList.aspx.cs">
+      <DependentUpon>FriendList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFile.aspx.cs">
+      <DependentUpon>MyFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\BlackTool.cs" />
+    <Compile Include="Tool\ExcludeTool.cs" />
+    <Compile Include="Tool\WebTool.cs" />
+    <Compile Include="WapIndex.aspx.cs">
+      <DependentUpon>WapIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WapLogin.aspx.cs">
+      <DependentUpon>WapLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

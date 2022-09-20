@@ -1,17 +1,16 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // 有关程序集的常规信息通过下列特性集
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("YaoHuo.Plugin")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("妖火论坛拓展插件")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
 [assembly: AssemblyProduct("YaoHuo.Plugin")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2022")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("zgcwkj")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型
