@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FriendList.aspx.cs" Inherits="FriendList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FriendList.aspx.cs" Inherits="YaoHuo.Plugin.BBS.FriendList" %>
 
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%

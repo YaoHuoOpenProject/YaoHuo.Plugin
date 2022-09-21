@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WapLogin.aspx.cs" Inherits="WapLogin" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WapLogin.aspx.cs" Inherits="YaoHuo.Plugin.WapLogin" %>
 
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%

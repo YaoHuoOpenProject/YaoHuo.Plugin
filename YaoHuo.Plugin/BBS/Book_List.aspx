@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_List.aspx.cs" Inherits="Book_List" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_List.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_List" %>
 
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%@ Import Namespace="System.Data" %>

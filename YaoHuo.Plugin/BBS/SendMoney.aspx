@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SendMoney.aspx.cs" Inherits="SendMoney" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SendMoney.aspx.cs" Inherits="YaoHuo.Plugin.BBS.SendMoney" %>
 
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%

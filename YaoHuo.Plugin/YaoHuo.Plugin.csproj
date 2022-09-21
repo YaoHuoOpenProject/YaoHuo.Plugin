@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YaoHuo.Plugin.Blacklist</RootNamespace>
-    <AssemblyName>YaoHuo.Plugin.Blacklist</AssemblyName>
+    <RootNamespace>YaoHuo.Plugin</RootNamespace>
+    <AssemblyName>YaoHuo.Plugin</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -91,6 +91,9 @@
     <Content Include="BBS\Book_List.aspx" />
     <Content Include="BBS\Book_View.aspx" />
     <Content Include="BBS\Index.aspx" />
+    <Content Include="BBS\MessageList.aspx" />
+    <Content Include="BBS\MessageList_Clear.aspx" />
+    <Content Include="BBS\MessageList_Del.aspx" />
     <Content Include="BBS\SendMoney.aspx" />
     <Content Include="BBS\SendMoney_Free.aspx" />
     <Content Include="BBS\SendMoney_FreeMain.aspx" />
@@ -112,6 +115,7 @@
     <Content Include="WapIndex.aspx" />
     <Content Include="WapLogin.aspx" />
     <Content Include="Web.config" />
+    <Content Include="XinZhang\Book_View_My.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BBS\Book_List.aspx.cs">
@@ -124,6 +128,18 @@
     </Compile>
     <Compile Include="BBS\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\MessageList.aspx.cs">
+      <DependentUpon>MessageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\MessageList_Clear.aspx.cs">
+      <DependentUpon>MessageList_Clear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\MessageList_Del.aspx.cs">
+      <DependentUpon>MessageList_Del.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\SendMoney.aspx.cs">
@@ -170,6 +186,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tool\BlackTool.cs" />
     <Compile Include="Tool\ExcludeTool.cs" />
+    <Compile Include="Tool\MessageTool.cs" />
+    <Compile Include="Tool\SendMoneyTool.cs" />
     <Compile Include="Tool\WebTool.cs" />
     <Compile Include="WapIndex.aspx.cs">
       <DependentUpon>WapIndex.aspx</DependentUpon>
@@ -177,6 +195,10 @@
     </Compile>
     <Compile Include="WapLogin.aspx.cs">
       <DependentUpon>WapLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XinZhang\Book_View_My.aspx.cs">
+      <DependentUpon>Book_View_My.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
