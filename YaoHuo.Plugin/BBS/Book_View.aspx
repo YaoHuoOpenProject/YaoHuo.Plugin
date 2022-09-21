@@ -109,7 +109,7 @@
             strhtml.Append("[分享]:<a href=\"http://v.t.sina.com.cn/share/share.php?url=" + HttpUtility.UrlEncode(this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&classid=" + this.classid + "&id=" + this.id) + "&amp;title=" + HttpUtility.UrlEncode(bookVo.book_title) + "\">新浪</a>.<a href=\"http://v.t.qq.com/share/share.php?url=" + HttpUtility.UrlEncode(this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&classid=" + this.classid + "&id=" + this.id) + "&amp;title=" + HttpUtility.UrlEncode(bookVo.book_title) + "\">腾讯</a>.<a href=\"" + this.http_start + "bbs/share.aspx?action=goclan&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;sid=" + this.sid + "\">家族</a>.<a href=\"" + this.http_start + "bbs/share.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + this.id + "&amp;vpage=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "" + "\">更多</a><br/>");
             strhtml.Append("[签名]:<u>" + toUserVo.remark + "</u><br/>");
             strhtml.Append("<a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;state=1&amp;vpage=" + CurrentPage + "&amp;lpage=" + lpage + "&amp;id=" + id + "" + "\">送<img src=\"" + this.http_start + "NetImages/flower.gif\" alt=\"花\"/></a>(" + bookVo.suport + ") <a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;state=2&amp;vpage=" + CurrentPage + "&amp;lpage=" + lpage + "&amp;id=" + id + "" + "\">扔<img src=\"" + this.http_start + "NetImages/egg.gif\" alt=\"蛋\"/></a>(" + bookVo.oppose + ") ");
-            if (this.IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername) || true)
+            if (true || this.IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername))
             {
                 strhtml.Append("[<a href=\"" + this.http_start + "bbs/SendMoney_freeMain.aspx?action=sendmoney&amp;classid=" + classid + "&amp;id=" + id + "&amp;touserid=" + bookVo.book_pub + "&amp;siteid=" + this.siteid + "\">奖励送币</a>]");
             }
@@ -156,7 +156,7 @@
             }
             //显示最新回复
             strhtml.Append("<a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;state=1&amp;vpage=" + CurrentPage + "&amp;lpage=" + lpage + "&amp;id=" + id + "" + "\">送<img src=\"" + this.http_start + "NetImages/flower.gif\" alt=\"花\"/></a>(" + bookVo.suport + ") <a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;state=2&amp;vpage=" + CurrentPage + "&amp;lpage=" + lpage + "&amp;id=" + id + "" + "\">扔<img src=\"" + this.http_start + "NetImages/egg.gif\" alt=\"蛋\"/></a>(" + bookVo.oppose + ") ");
-            if (this.IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername) || true)
+            if (true || this.IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername))
             {
                 strhtml.Append("[<a href=\"" + this.http_start + "bbs/SendMoney_freeMain.aspx?action=sendmoney&amp;classid=" + classid + "&amp;id=" + id + "&amp;touserid=" + bookVo.book_pub + "&amp;siteid=" + this.siteid + "\">奖励送币</a>]");
             }
@@ -377,7 +377,7 @@
             strhtml.Append("[操作] <a href=\"" + this.http_start + "bbs/Book_View_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + this.id + "&amp;lpage=" + this.lpage + "\">管理</a> <a href=\"" + this.http_start + "bbs/Report_add.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "&amp;id=" + this.id + "\">举报</a> <a href=\"" + this.http_start + "bbs/share.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + this.id + "\">分享</a> <a href=\"" + this.http_start + "bbs/Share.aspx?action=fav&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "\">收藏</a><br/> ");
             strhtml.Append("[签名] <u>" + toUserVo.remark + "</u><br/>");
             strhtml.Append("<a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;state=1&amp;vpage=" + CurrentPage + "&amp;lpage=" + lpage + "&amp;id=" + id + "\">顶<img src=\"" + this.http_start + "NetImages/flower.gif\" alt=\"花\"/></a>(" + bookVo.suport + ") <a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;state=2&amp;vpage=" + CurrentPage + "&amp;lpage=" + lpage + "&amp;id=" + id + "\">赞<img src=\"" + this.http_start + "NetImages/egg.gif\" alt=\"蛋\"/></a>(" + bookVo.oppose + ") ");
-            if (this.IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername) || true)
+            if (true || this.IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername))
             {
                 strhtml.Append("[<a href=\"" + this.http_start + "bbs/SendMoney_freeMain.aspx?action=sendmoney&amp;classid=" + classid + "&amp;id=" + id + "&amp;touserid=" + bookVo.book_pub + "&amp;siteid=" + this.siteid + "\">奖励送币</a>]");
             }
@@ -436,7 +436,7 @@
             }
             strhtml.Append("<div class=\"subtitle\">");
             strhtml.Append("<a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;state=1&amp;vpage=" + CurrentPage + "&amp;lpage=" + lpage + "&amp;id=" + id + "\">送<img src=\"" + this.http_start + "NetImages/flower.gif\" alt=\"花\"/></a>(" + bookVo.suport + ") <a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;state=2&amp;vpage=" + CurrentPage + "&amp;lpage=" + lpage + "&amp;id=" + id + "\">扔<img src=\"" + this.http_start + "NetImages/egg.gif\" alt=\"蛋\"/></a>(" + bookVo.oppose + ") ");
-            if (this.IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername) || true)
+            if (true || this.IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername))
             {
                 strhtml.Append("[<a href=\"" + this.http_start + "bbs/SendMoney_freeMain.aspx?action=sendmoney&amp;classid=" + classid + "&amp;id=" + id + "&amp;touserid=" + bookVo.book_pub + "&amp;siteid=" + this.siteid + "\">奖励送币</a>]");
             }
