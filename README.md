@@ -199,10 +199,11 @@ namespace YaoHuo.Plugin
 }
 ```
 
-## 添加 UBB 地址
+## 修改地址
 
 1. /admin/addtopwapALL.aspx?siteid=1000&classid=0
-2. /bbs/admin_WAPadvertise.aspx?action=go&siteid=1000&classid=0&page=1
+2. /bbs/admin_WAPadvertise.aspx?action=go&siteid=1000&classid=0
+3. /bbs/toMoneylvl.aspx?siteid=1000
 
 ## 其他
 

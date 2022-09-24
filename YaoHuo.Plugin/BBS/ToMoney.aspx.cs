@@ -281,7 +281,12 @@ namespace YaoHuo.Plugin.BBS
                             goto IL_0526;
                         case 4:
                             {
-								MainBll.UpdateSQL("update [user] set money=money + " + tomoney + " where userid=" + touserid);
+                                //==>管理员转账
+                                //
+                                //加钱脚本
+                                MainBll.UpdateSQL("update [user] set money=money + " + tomoney + " where userid=" + touserid);
+                                //写日志记录(被转币者)
+                                base.SaveBankLog(this.touserid, "转币操作", this.tomoney.ToString(), base.userid, base.nickname, "操作人转币给我");
                                 //新消息
                                 string text = "恭喜您，" + base.userVo.nickname + "奖励" + this.tomoney + "个币给您！";
                                 string text2 = "原因:" + this.remark;
@@ -306,6 +311,8 @@ namespace YaoHuo.Plugin.BBS
                                     num = 36;
                                     continue;
                                 }
+                                //==>会员转账
+                                //
                                 //扣钱脚本
                                 base.MainBll.UpdateSQL("update [user] set money=money - " + this.tomoney + " where userid=" + base.userid);
                                 //写日志记录(转币者)
