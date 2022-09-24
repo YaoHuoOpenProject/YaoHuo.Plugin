@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>YaoHuo.Plugin</RootNamespace>
     <AssemblyName>YaoHuo.Plugin</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -67,6 +67,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
@@ -97,6 +98,8 @@
     <Content Include="BBS\SendMoney.aspx" />
     <Content Include="BBS\SendMoney_Free.aspx" />
     <Content Include="BBS\SendMoney_FreeMain.aspx" />
+    <Content Include="BBS\ToMoney.aspx" />
+    <Content Include="BBS\ToMyBankMoney.aspx" />
     <Content Include="BBS\UserInfo.aspx" />
     <Content Include="BBS\View.aspx" />
     <Content Include="BBS\ViewUser.aspx" />
@@ -152,6 +155,14 @@
     </Compile>
     <Compile Include="BBS\SendMoney_FreeMain.aspx.cs">
       <DependentUpon>SendMoney_FreeMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\ToMoney.aspx.cs">
+      <DependentUpon>ToMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\ToMyBankMoney.aspx.cs">
+      <DependentUpon>ToMyBankMoney.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\UserInfo.aspx.cs">

@@ -792,7 +792,8 @@ namespace YaoHuo.Plugin.Tool
             {
                 if (wmlVo.KL_PAGE_DOWN.Trim() != "")
                 {
-                    stringBuilder.Append(WapTool.ToWML(wmlVo.KL_PAGE_DOWN, wmlVo));
+                    //显示版权信息
+                    //stringBuilder.Append(WapTool.ToWML(wmlVo.KL_PAGE_DOWN, wmlVo));
                 }
                 stringBuilder.Append("\n</body>");
                 stringBuilder.Append("\n</html>");
@@ -9815,6 +9816,11 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
             return text.IndexOf(string_0) > 0;
         }
 
+        /// <summary>
+        /// 解密授权信息
+        /// </summary>
+        /// <param name="decryptString"></param>
+        /// <returns></returns>
         public static string DesDecrypt(string decryptString)
         {
             string text = "KL****KL**Kelink.com";
@@ -9829,6 +9835,11 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
             return Encoding.UTF8.GetString(memoryStream.ToArray());
         }
 
+        /// <summary>
+        /// 加密授权信息
+        /// </summary>
+        /// <param name="encryptString"></param>
+        /// <returns></returns>
         public static string DesEncrypt(string encryptString)
         {
             string text = "KL****KL**Kelink.com";

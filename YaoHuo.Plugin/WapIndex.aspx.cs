@@ -18,8 +18,31 @@ namespace YaoHuo.Plugin
 
         public string strShowHtml = "";
 
+        /// <summary>
+        /// 测试代码
+        /// </summary>
+        public void TestCode()
+        {
+            //var d1 = "se9v+6Rln020DWhvmJTy8HLJQXBmYp26wE2s3a8s87TKDfh1ytd76lFsmnOrqbgArhglXIMdr8gfVDa7vWoUdse+d5HcbOjRDmwFbp8OHPw=";
+            //var d1d = WapTool.DesDecrypt(d1);
+            //var d1dd = WapTool.GetSiteDefault(d1d, 3);
+            //var d2 = "10000|1|1000|iiweb.com|art|bbs|pic|dow|rin|vid|wml|sho|gue|cha|lin|adl|";
+            //var d2d = WapTool.DesEncrypt(d2);
+            var stringBuilder = new StringBuilder();
+            var text12 = WapTool.DesDecrypt(WapTool.GetFunction()).ToLower();
+            stringBuilder.Append("<b>内核版本</b>:10.2014.12.18<br/>");
+            stringBuilder.Append("<b>机器码域名</b>:" + WapTool.GetDomain() + "<br/>");
+            stringBuilder.Append("<b>授权版本</b>:" + WapTool.GetSystemVersion(this.KL_VERSION, "0") + "<br/>");
+            stringBuilder.Append("<b>授权ＩＤ</b>:" + WapTool.GetSiteDefault(text12, 0) + "<br/>");
+            stringBuilder.Append("<b>授权域名</b>:" + WapTool.GetSiteDefault(text12, 3) + "<br/>");
+            var sssss = this.KL_ISREG;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            //测试代码
+            //TestCode();
+
             //Discarded unreachable code: IL_0723
             int num4 = default(int);
             string str = default(string);

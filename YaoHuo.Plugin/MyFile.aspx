@@ -38,7 +38,16 @@
         sb.Append(line1 + "<a href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=0&amp;types=0" + "\">信箱</a>:(" + messagecount + "/" + messageAll + ") <a href=\"" + http_start + "bbs/FriendList.aspx?siteid=" + siteid + "&amp;classid=0&amp;friendtype=0" + "\">好友</a>(" + goodfriend + ")" + div);
         sb.Append(line2 + "我的ID: " + userVo.userid + WapTool.GetOLtimePic(http_start, siteVo.lvlTimeImg, userVo.LoginTimes) + div);
         sb.Append(line1 + "我的" + WapTool.GetSiteMoneyName(siteVo.sitemoneyname, this.lang) + ":" + userVo.money + "" + div);
-        sb.Append(line2 + "<a href=\"" + http_start + "chinabank_wap/RMBtoMoney.aspx?siteid=" + siteid + "" + "\">充值" + siteVo.sitemoneyname + "</a>/<a href=\"" + http_start + "bbs/banklist.aspx?siteid=" + siteid + "&amp;classid=0&amp;key=" + this.userid + "" + "\">明细</a>" + div);
+        //==> 钱相关操作
+        var moneyHtml = line2;
+        moneyHtml += "<a href=\"" + http_start + "chinabank_wap/RMBtoMoney.aspx?siteid=" + siteid + "" + "\">充值" + siteVo.sitemoneyname + "</a>";
+        moneyHtml += "/";
+        moneyHtml += "<a href=\"" + http_start + "/bbs/tomoney.aspx?siteid=" + siteid + "\">转账</a>";
+        moneyHtml += "/";
+        moneyHtml += "<a href=\"" + http_start + "bbs/banklist.aspx?siteid=" + siteid + "&amp;classid=0&amp;key=" + this.userid + "" + "\">明细</a>";
+        moneyHtml += div;
+        sb.Append(moneyHtml);
+        //==> 钱相关操作
         sb.Append(line1 + "银行账户:" + userVo.myBankMoney + " <a href=\"/bbs/tomybankmoney.aspx?type=1\">取款</a>" + div);
         sb.Append(line2 + "我的经验:" + userVo.expr + div);
         sb.Append(line1 + "我的等级:" + WapTool.GetLevl(siteVo.lvlNumer, userVo.expr, userVo.money, type) + div);

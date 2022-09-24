@@ -21,7 +21,7 @@ namespace YaoHuo.Plugin.Tool
             var sqlStr = string.Empty;
             if (!string.IsNullOrEmpty(userid) && userid != "0")
             {
-                sqlStr = $@" update wap_message set isnew = 0 where siteid = {siteid} and touserid = {userid}";
+                sqlStr = $@" update wap_message set isnew = 0 where isnew = 1 and siteid = {siteid} and touserid = {userid}";
             }
             return sqlStr;
         }
