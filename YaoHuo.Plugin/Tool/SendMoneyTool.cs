@@ -18,10 +18,10 @@ namespace YaoHuo.Plugin.Tool
         public static bool IsReasonable(string moneyStr)
         {
             var money = long.Parse(moneyStr);
-            //小于 100
-            if (money < 100) return false;
+            //小于 101
+            if (money < 101) return false;
             //大于 50000
-            else if (money > 50000) return false;
+            else if (money > 10101) return false;
             //返回不在合理的范围
             return true;
         }
@@ -35,7 +35,7 @@ namespace YaoHuo.Plugin.Tool
         {
             var money = double.Parse(moneyStr);
             //费率
-            var rates = 0.03;
+            var rates = 0.01;
             //手续费
             var result = money * rates;
             //返回手续费

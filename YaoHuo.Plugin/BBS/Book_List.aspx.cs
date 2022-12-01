@@ -959,7 +959,7 @@ namespace YaoHuo.Plugin.BBS
                             }
                         case 0:
                             //condition = " ischeck=0 and userid=" + siteid;
-                            condition = $" ischeck = 0 and userid = {siteid} {ExcludeTool.GetExcludeUserSql("book_pub", userid)}";//排除拉黑的用户
+                            condition = $" ischeck = 0 and book_classid not like '299' and userid = {siteid} {ExcludeTool.GetExcludeUserSql("book_pub", userid)}";//排除拉黑的用户
                             classVo.classid = 0L;
                             classVo.position = "left";
                             classVo.classname = "所有最新贴子";
