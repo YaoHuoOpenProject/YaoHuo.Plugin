@@ -20,9 +20,9 @@ namespace YaoHuo.Plugin.Tool
         public static string AddBlackUser(user_Model userInfo, string connStr, string addUserID)
         {
             //黑名单上限
-            var blackUp = 6;
+            var blackUp = 10;
             //会员用户增加黑名单上限
-            if (userInfo.SessionTimeout == 105) blackUp = 15;
+            if (userInfo.SessionTimeout == 105) blackUp = 20;
             //获取拉取黑名单数量
             var sqlStr = $"select count(0) from wap_friends where friendtype = 1 and userid = {userInfo.userid}";
             var friendsCount = DbHelperSQL.ExecuteScalar(connStr, CommandType.Text, sqlStr).ToInt();
@@ -39,31 +39,43 @@ namespace YaoHuo.Plugin.Tool
                 return "NOTBLACK";
             }
             //经验未达到2000却拉了一个黑名单（准备拉第二个黑名单）
-            else if (userInfo.expr <= 2000 && friendsCount >= blackUp - 6)
+            else if (userInfo.expr <= 2000 && friendsCount >= blackUp - 9)
             {
                 return "UPMAX";
             }
-            else if (userInfo.expr <= 5000 && friendsCount >= blackUp - 5)
+            else if (userInfo.expr <= 5000 && friendsCount >= blackUp - 8)
             {
                 return "UPMAX";
             }
-            else if (userInfo.expr <= 10000 && friendsCount >= blackUp - 4)
+            else if (userInfo.expr <= 10000 && friendsCount >= blackUp - 7)
             {
                 return "UPMAX";
             }
-            else if (userInfo.expr <= 50000 && friendsCount >= blackUp - 3)
+            else if (userInfo.expr <= 50000 && friendsCount >= blackUp - 6)
             {
                 return "UPMAX";
             }
-            else if (userInfo.expr <= 100000 && friendsCount >= blackUp - 2)
+            else if (userInfo.expr <= 100000 && friendsCount >= blackUp - 5)
             {
                 return "UPMAX";
             }
-            else if (userInfo.expr <= 200000 && friendsCount >= blackUp - 1)
+            else if (userInfo.expr <= 200000 && friendsCount >= blackUp - 4)
             {
                 return "UPMAX";
             }
-            else if (userInfo.expr <= 300000 && friendsCount >= blackUp - 0)
+            else if (userInfo.expr <= 300000 && friendsCount >= blackUp - 3)
+            {
+                return "UPMAX";
+            }
+            else if (userInfo.expr <= 500000 && friendsCount >= blackUp - 2)
+            {
+                return "UPMAX";
+            }
+            else if (userInfo.expr <= 800000 && friendsCount >= blackUp - 1)
+            {
+                return "UPMAX";
+            }
+            else if (userInfo.expr <= 1000000 && friendsCount >= blackUp - 0)
             {
                 return "UPMAX";
             }
