@@ -129,7 +129,7 @@ namespace YaoHuo.Plugin.BBS
                                             case 17:
                                                 {
                                                     //新消息
-                                                    string text3 = "备注原因：" + text + " [[url=" + base.http_start + "bbs-" + this.id + ".html]进入帖子查看[/url]]";
+                                                    string text3 = "备注：" + text + " [br][url=" + base.http_start + "bbs-" + this.id + ".html]到帖子中查看[/url]";
                                                     base.MainBll.UpdateSQL("update [wap_bbs] set mygetmoney =mygetmoney + " + requestValue + " where id=" + long.Parse(this.id) + " and userid=" + base.siteid + " and book_pub='" + this.touserid + "'");
                                                     string text4 = "insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)";
                                                     string strSQL = text4 + "  values(" + base.siteid + "," + base.userid + ",'" + base.userVo.nickname + "','" + text2 + "','" + text3 + "'," + this.touserid + ",1)";
@@ -162,7 +162,7 @@ namespace YaoHuo.Plugin.BBS
                                                     //加钱脚本
                                                     base.MainBll.UpdateSQL("update [user] set money=money + " + requestValue + " where userid=" + this.touserid);
                                                     //写日志记录(被打赏者)
-                                                    base.SaveBankLog(this.touserid, "打赏送币", requestValue.ToString(), base.userid, base.nickname, "发贴获得打赏");
+                                                    base.SaveBankLog(this.touserid, "打赏送币", requestValue.ToString(), base.userid, base.nickname, "发帖获得打赏");
                                                     //新消息
                                                     text2 = "恭喜，" + base.userVo.nickname + "打赏" + requestValue + "个妖晶给您！";
                                                     text = "您的帖子获得赞赏！";

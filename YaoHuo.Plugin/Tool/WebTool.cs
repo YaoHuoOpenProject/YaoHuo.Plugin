@@ -601,8 +601,8 @@ namespace YaoHuo.Plugin.Tool
                 stringBuilder.Append("<?xml version=\"1.0\" encoding=\"utf-8\"?><!DOCTYPE wml PUBLIC \"-//WAPFORUM//DTD WML 1.1//EN\" \"http://www.wapforum.org/DTD/wml_1.1.xml\">\n");
                 stringBuilder.Append("<wml>\n");
                 stringBuilder.Append("<head>\n");
-                stringBuilder.Append("<meta http-equiv=\"Cache-Control\" content=\"max-age=0\"/>\n");
-                stringBuilder.Append("<meta http-equiv=\"Cache-Control\" content=\"no-cache\"/>\n");
+                //stringBuilder.Append("<meta http-equiv=\"Cache-Control\" content=\"max-age=0\"/>\n");
+                //stringBuilder.Append("<meta http-equiv=\"Cache-Control\" content=\"no-cache\"/>\n");
                 if (wmlVo.timer != null && wmlVo.timer != "")
                 {
                     string text = wmlVo.strUrl;
@@ -681,17 +681,6 @@ namespace YaoHuo.Plugin.Tool
                             "\" />\r\n"
                         }));
                     }
-                    if (wmlVo.mycss.IndexOf("author") < 0)
-                    {
-                        stringBuilder.Append(string.Concat(new string[]
-                        {
-                            "<meta name=\"author\" content=\"",
-                            wmlVo.siteVo.sitename,
-                            " ",
-                            wmlVo.http_start.Replace("http:", "").Replace("/", ""),
-                            "\" />\r\n"
-                        }));
-                    }
                 }
                 catch (Exception)
                 {
@@ -708,7 +697,7 @@ namespace YaoHuo.Plugin.Tool
                 {
                     stringBuilder.Append("\r\n<link rel=\"stylesheet\" href=\"/Template/default/default.css?v=" + string.Format("{0:yyyyMMdd}", DateTime.Now) + "\" type=\"text/css\" />\r\n");
                 }
-                stringBuilder.Append("\n<title>");
+                stringBuilder.Append("<title>");
                 stringBuilder.Append(title.Replace("［", "[").Replace("］", "]"));
                 string text2 = "";
                 if (wmlVo.siteVo != null)
@@ -719,7 +708,7 @@ namespace YaoHuo.Plugin.Tool
                 {
                     if (wmlVo.siteVo != null)
                     {
-                        stringBuilder.Append("_");
+                        stringBuilder.Append(" - ");
                         if (text2 != "")
                         {
                             stringBuilder.Append(text2);
@@ -734,12 +723,12 @@ namespace YaoHuo.Plugin.Tool
                 {
                     if (wmlVo.classVo != null)
                     {
-                        stringBuilder.Append("_");
-                        stringBuilder.Append(wmlVo.classVo.classname);
+                        stringBuilder.Append("");
+                        //stringBuilder.Append(wmlVo.classVo.classname);
                     }
                     if (wmlVo.siteVo != null)
                     {
-                        stringBuilder.Append("_");
+                        stringBuilder.Append(" - ");
                         if (text2 != "")
                         {
                             stringBuilder.Append(text2);
@@ -3750,26 +3739,26 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                         Regex regex = new Regex("(\\[img\\])(.[^\\[]*)(\\[\\/img\\])");
                         if (wmlVo.ver == "0")
                         {
-                            WapStr = regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" alt=\".\"/></a>");
+                            WapStr = regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\"/></a>");
                         }
                         else
                         {
-                            WapStr = regex.Replace(WapStr, "<img src=\"$2\" alt=\".\"/>");
+                            WapStr = regex.Replace(WapStr, "<img src=\"$2\"/>");
                         }
                     }
                     else
                     {
-                        Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|GIF|JPG))(\\[\\/img\\])");
+                        Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp|WEBP|JPEG|PNG|GIF|JPG))(\\[\\/img\\])");
                         if (wmlVo.ver == "0")
                         {
-                            WapStr = regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" alt=\".\"/></a>");
+                            WapStr = regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\"/></a>");
                         }
                         else
                         {
-                            WapStr = regex.Replace(WapStr, "<img src=\"$2\" alt=\".\"/>");
+                            WapStr = regex.Replace(WapStr, "<img src=\"$2\"/>");
                         }
                     }
-                    Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|GIF|JPG))\\])(.[^\\[]*)(\\[\\/img\\])");
+                    Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp|WEBP|JPEG|PNG|GIF|JPG))\\])(.[^\\[]*)(\\[\\/img\\])");
                     if (wmlVo.ver == "0")
                     {
                         WapStr = regex2.Replace(WapStr, "<a href=\"javascript:T('{{img=$2}}$4{{/img}}');\"><img src=\"$2\" alt=\"$4\"/></a>");
@@ -3961,7 +3950,24 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                     }
                     else
                     {
-                        WapStr = regex.Replace(WapStr, "$2");
+                        foreach (Match matche in regex.Matches(WapStr))
+                        {
+                            var bbsData = matche.Value;
+                            var bbsContent = Regex.Match(bbsData, "(?<=\\[text\\]).+?(?=\\[\\/text\\])").Value;
+                            //bbsContent = Regex.Replace(bbsContent, "[\uff10-\uff19\uff21-\uff3a\uff41-\uff5a]", new MatchEvaluator(p => ((char)(char.Parse(p.Value) - 65248)).ToString()));
+                            bbsContent = bbsContent.Replace("“", "\"")
+                                                    .Replace("‘", "'")
+                                                    .Replace("”", "\"")
+                                                    .Replace("’", "'")
+                                                    .Replace("《", "<")
+                                                    .Replace("》", ">")
+                                                    .Replace("：", ";")
+                                                    .Replace("，", ",")
+                                                    .Replace("。", ".")
+                                                    .Replace("【", "[")
+                                                    .Replace("】", "]");
+                            WapStr = WapStr.Replace(bbsData, bbsContent);
+                        }
                     }
                 }
                 if (WapStr.IndexOf("[/a]") > 0)
