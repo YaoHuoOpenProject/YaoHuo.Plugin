@@ -121,12 +121,12 @@
                     }
                     isexit = true;
                     //strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + arry[i] + "\" />");
-                    strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"删除_" + arry[i] + "\"/>");
+                    //strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"删除_" + arry[i] + "\"/>");
                     strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"隐藏_" + arry[i] + "\"/>");
                     strhtml.Append("<br/><br/>");
                 }
             }
-            string[] hideArry = this.moneyname.Split('|');
+            string[] hideArry = this.HideMoneyName.Split('|');
             for (int i = 0; i < hideArry.Length; i++)
             {
                 if (hideArry[i].Trim() != "")
