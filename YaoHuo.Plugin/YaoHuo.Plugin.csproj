@@ -117,6 +117,7 @@
     <Content Include="WapIndex.aspx" />
     <Content Include="WapLogin.aspx" />
     <Content Include="Web.config" />
+    <Content Include="XinZhang\Book_View_Buy.aspx" />
     <Content Include="XinZhang\Book_View_My.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +206,10 @@
     </Compile>
     <Compile Include="WapLogin.aspx.cs">
       <DependentUpon>WapLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XinZhang\Book_View_Buy.aspx.cs">
+      <DependentUpon>Book_View_Buy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="XinZhang\Book_View_My.aspx.cs">

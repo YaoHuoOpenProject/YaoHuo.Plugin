@@ -14,7 +14,7 @@
 
         if (this.INFO == "OK")
         {
-            strhtml.Append("<b>*删除成功!</b><br/>");
+            strhtml.Append("<b>*操作成功!</b><br/>");
         }
         else if (this.INFO == "NOMONEY")
         {
@@ -82,11 +82,11 @@
         //{
         //    strhtml.Append(adVo.threeShowTop );
         //}
-        strhtml.Append("<div class=\"subtitle\">删除我的勋章</div>");
+        strhtml.Append("<div class=\"subtitle\">我的勋章</div>");
 
         if (this.INFO == "OK")
         {
-            strhtml.Append("<div class=\"tip\"><b>*删除成功！</b></div>");
+            strhtml.Append("<div class=\"tip\"><b>*操作成功！</b></div>");
         }
 
         else if (this.INFO == "NOPASS")
@@ -99,7 +99,8 @@
             strhtml.Append("<div class=\"content\">");
 
             strhtml.Append("<form name=\"f\" action=\"" + http_start + "xinzhang/book_view_my.aspx\" method=\"post\">");
-            strhtml.Append("删除后无法恢复，确认请输入密码：<input type=\"text\" name=\"pw\" style=\"width: 66%; \" value=\"" + pw + "\" size=\"15\"/><br/><br/>");
+            strhtml.Append("请输入操作密码：<input type=\"text\" name=\"pw\" style=\"width: 66%; \" value=\"" + pw + "\" size=\"15\"/>");
+            strhtml.Append("<br/><br/>");
 
             string[] arry = userVo.moneyname.Split('|');
             for (int i = 0; i < arry.Length; i++)
@@ -120,48 +121,33 @@
                     }
                     isexit = true;
                     //strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + arry[i] + "\" />");
-                    strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"删除_" + arry[i] + "\"/><br/><br/>");
+                    strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"删除_" + arry[i] + "\"/>");
+                    strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"隐藏_" + arry[i] + "\"/>");
+                    strhtml.Append("<br/><br/>");
                 }
             }
-            //strhtml.Append("<style>");
-            //strhtml.Append("table,table tr th, table tr td { border:1px solid #0094ff; }");
-            //strhtml.Append("table { width: 200px; min-height: 25px; line-height: 25px; text-align: center; border-collapse: collapse; padding:2px; }");
-            //strhtml.Append("td { padding: 3px; }");
-            //strhtml.Append("</style>");
-            //strhtml.Append("<table border=\"1\">");
-            //strhtml.Append("<tbody>");
-            //strhtml.Append("<tr>");
-            //strhtml.Append("<td>勋章</td>");
-            //strhtml.Append("<td>操作</td>");
-            //strhtml.Append("</tr>");
-            //string[] arry = userVo.moneyname.Split('|');
-            //for (int i = 0; i < arry.Length; i++)
-            //{
-            //    if (arry[i].Trim() != "")
-            //    {
-            //        isexit = true;
-            //        var getImgHtml = "";
-            //        var delImgHtml = "<input class=\"btn\" type=\"submit\" name=\"g\" value=\"删除_" + arry[i] + "\"/>";
-            //        if (arry[i].Trim().IndexOf("XinZhang") >= 0)
-            //        {
-            //            getImgHtml = "<img src=\"" + this.http_start + arry[i] + "\" alt=\".\"/>";
-            //        }
-            //        else if (arry[i].Trim().StartsWith("/") || arry[i].Trim().StartsWith("http://"))
-            //        {
-            //            getImgHtml = "<img src=\"" + arry[i].Trim() + "\" alt=\".\"/>";
-            //        }
-            //        else
-            //        {
-            //            getImgHtml = "<img src=\"" + this.http_start + "bbs/medal/" + arry[i] + "\" alt=\".\"/>";
-            //        }
-            //        strhtml.Append("<tr>");
-            //        strhtml.Append("<td>" + getImgHtml + "</td>");
-            //        strhtml.Append("<td>" + delImgHtml + "</td>");
-            //        strhtml.Append("</tr>");
-            //    }
-            //}
-            //strhtml.Append("</tbody>");
-            //strhtml.Append("</table>");
+            string[] hideArry = this.moneyname.Split('|');
+            for (int i = 0; i < hideArry.Length; i++)
+            {
+                if (hideArry[i].Trim() != "")
+                {
+                    if (hideArry[i].Trim().IndexOf("XinZhang") >= 0)
+                    {
+                        strhtml.Append("<img src=\"" + this.http_start + hideArry[i] + "\" alt=\".\"/><br/>");
+                    }
+                    else if (hideArry[i].Trim().StartsWith("/") || hideArry[i].Trim().StartsWith("http://"))
+                    {
+                        strhtml.Append("<img src=\"" + hideArry[i].Trim() + "\" alt=\".\"/><br/>");
+                    }
+                    else
+                    {
+                        strhtml.Append("<img src=\"" + this.http_start + "bbs/medal/" + hideArry[i] + "\" alt=\".\"/><br/>");
+                    }
+                    isexit = true;
+                    strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"还原_" + hideArry[i] + "\"/>");
+                    strhtml.Append("<br/><br/>");
+                }
+            }
 
             strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
             strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
