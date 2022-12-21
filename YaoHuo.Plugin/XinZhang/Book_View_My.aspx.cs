@@ -49,7 +49,10 @@ namespace YaoHuo.Plugin.XinZhang
 
         public string type = "";
 
-        public string moneyname
+        /// <summary>
+        /// 隐藏的勋章
+        /// </summary>
+        public string HideMoneyName
         {
             get
             {
@@ -140,7 +143,7 @@ GO
                                                     base.userVo.moneyname = base.userVo.moneyname.Replace(this.id, "").Replace("||", "|");
                                                     var updCount = base.MainBll.UpdateSQL("update [user] set moneyname='" + base.userVo.moneyname + "' where siteid=" + base.siteid + " and userid=" + base.userVo.userid);
                                                     //添加隐藏
-                                                    var setMoneyName = moneyname + (!string.IsNullOrEmpty(moneyname) ? "|" : "") + this.id;
+                                                    var setMoneyName = HideMoneyName + (!string.IsNullOrEmpty(HideMoneyName) ? "|" : "") + this.id;
                                                     var sqlStr = "update XinZhang_Plugin set moneyname='" + setMoneyName + "' where siteid=" + base.siteid + " and userid=" + base.userVo.userid;
                                                     if (updCount > 0) DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
                                                 }
@@ -148,7 +151,7 @@ GO
                                                 else if (this.type == "还原")
                                                 {
                                                     //删除隐藏
-                                                    var myMoneyName = moneyname.Replace(this.id, "").Replace("||", "|");
+                                                    var myMoneyName = HideMoneyName.Replace(this.id, "").Replace("||", "|");
                                                     var sqlStr = "update XinZhang_Plugin set moneyname='" + myMoneyName + "' where siteid=" + base.siteid + " and userid=" + base.userVo.userid;
                                                     var updCount = DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
                                                     //还原

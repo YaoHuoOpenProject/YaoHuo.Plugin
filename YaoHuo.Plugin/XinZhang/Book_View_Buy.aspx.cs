@@ -107,8 +107,8 @@ namespace YaoHuo.Plugin.XinZhang
                                 if (flag)
                                 {
                                     //是否有重复的勋章
-                                    var myNoneyNames = base.userVo.moneyname.Split('|').ToList();
-                                    if (myNoneyNames.IndexOf(this.bookVo.XinZhangTuPian) != -1)
+                                    var myMoneyNames = base.userVo.moneyname.Split('|').ToList();
+                                    if (myMoneyNames.IndexOf(this.bookVo.XinZhangTuPian) != -1)
                                     {
                                         //重复勋章
                                         this.INFO = "REPEAT";
