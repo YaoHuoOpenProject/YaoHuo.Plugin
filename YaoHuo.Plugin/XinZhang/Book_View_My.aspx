@@ -88,7 +88,10 @@
         {
             strhtml.Append("<div class=\"tip\"><b>*操作成功！</b></div>");
         }
-
+        else if (this.INFO == "NO")
+        {
+            strhtml.Append("<div class=\"tip\"><b>*操作失败！</b></div>");
+        }
         else if (this.INFO == "NOPASS")
         {
             strhtml.Append("<div class=\"tip\"><b>*密码错误，请重新录入。</b></div>");
@@ -102,6 +105,7 @@
             strhtml.Append("请输入操作密码：<input type=\"text\" name=\"pw\" style=\"width: 66%; \" value=\"" + pw + "\" size=\"15\"/>");
             strhtml.Append("<br/><br/>");
 
+            //显示的勋章
             string[] arry = userVo.moneyname.Split('|');
             for (int i = 0; i < arry.Length; i++)
             {
@@ -126,6 +130,7 @@
                     strhtml.Append("<br/><br/>");
                 }
             }
+            //隐藏的勋章
             string[] hideArry = this.HideMoneyName.Split('|');
             for (int i = 0; i < hideArry.Length; i++)
             {
