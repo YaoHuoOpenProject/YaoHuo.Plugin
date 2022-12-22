@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Data;
 using System.Linq;
 using System.Text;
 using KeLin.ClassManager;
 using KeLin.ClassManager.BLL;
+using KeLin.ClassManager.ExUtility;
 using KeLin.ClassManager.Model;
 using KeLin.WebSite;
 
@@ -11,6 +13,17 @@ namespace YaoHuo.Plugin.XinZhang
     public class Book_View_Buy : PageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
+
+        /// <summary>
+        /// 数据库连接字符串
+        /// </summary>
+        private string ConnectionString
+        {
+            get
+            {
+                return PubConstant.GetConnectionString(a);
+            }
+        }
 
         public string id = "0";
 
@@ -107,7 +120,9 @@ namespace YaoHuo.Plugin.XinZhang
                                 if (flag)
                                 {
                                     //是否有重复的勋章
-                                    var myMoneyNames = base.userVo.moneyname.Split('|').ToList();
+                                    var sqlStr = $"select top 1 moneyname from XinZhang_Plugin where siteid={base.siteid} and userid={base.userVo.userid}";
+                                    var myHideMoneyName = DbHelperSQL.ExecuteScalar(ConnectionString, CommandType.Text, sqlStr).ToStr();//隐藏的勋章
+                                    var myMoneyNames = (base.userVo.moneyname + "|" + myHideMoneyName).Split('|').ToList();
                                     if (myMoneyNames.IndexOf(this.bookVo.XinZhangTuPian) != -1)
                                     {
                                         //重复勋章
@@ -117,7 +132,7 @@ namespace YaoHuo.Plugin.XinZhang
                                     {
                                         //添加勋章
                                         base.userVo.moneyname = base.userVo.moneyname + "|" + this.bookVo.XinZhangTuPian;
-                                        base.MainBll.UpdateSQL("update [user] set money=money-" + this.bookVo.XinZhangJiaGe + ",moneyname='" + base.userVo.moneyname + "' where siteid=" + base.siteid + " and userid=" + base.userVo.userid);
+                                        base.MainBll.UpdateSQL($"update [user] set money=money-{this.bookVo.XinZhangJiaGe},moneyname='{base.userVo.moneyname}' where siteid={base.siteid} and userid={base.userVo.userid}");
                                         base.SaveBankLog(base.userid, "购买勋章", "-" + this.bookVo.XinZhangJiaGe, base.userid, base.nickname, "购买勋章[" + this.bookVo.ID + "]");
                                         this.INFO = "OK";
                                     }

@@ -28,7 +28,7 @@
         if (1 == 1)
         {
             strhtml.Append("<b>我当前拥有勋章：</b><br/>");
-            strhtml.Append("我的密码：<input type=\"text\" name=\"pw\" value=\"\" size=\"8\"/><br/>");
+            strhtml.Append("我的密码：<input type=\"password\" name=\"pw\" value=\"\" size=\"8\"/><br/>");
 
             string[] arry = userVo.moneyname.Split('|');
             for (int i = 0; i < arry.Length; i++)
@@ -102,7 +102,7 @@
             strhtml.Append("<div class=\"content\">");
 
             strhtml.Append("<form name=\"f\" action=\"" + http_start + "xinzhang/book_view_my.aspx\" method=\"post\">");
-            strhtml.Append("请输入操作密码：<input type=\"text\" name=\"pw\" style=\"width: 66%; \" value=\"" + pw + "\" size=\"15\"/>");
+            strhtml.Append("请输入操作密码：<input type=\"password\" name=\"pw\" style=\"width: 66%; \" value=\"" + pw + "\" size=\"15\"/>");
             strhtml.Append("<br/><br/>");
 
             //显示的勋章
