@@ -82,7 +82,7 @@
         //{
         //    strhtml.Append(adVo.threeShowTop );
         //}
-        strhtml.Append("<div class=\"subtitle\">我的勋章</div>");
+        strhtml.Append("<div class=\"subtitle\">管理我的勋章</div>");
 
         if (this.INFO == "OK")
         {
@@ -102,7 +102,12 @@
             strhtml.Append("<div class=\"content\">");
 
             strhtml.Append("<form name=\"f\" action=\"" + http_start + "xinzhang/book_view_my.aspx\" method=\"post\">");
+            strhtml.Append("<span style='color:red'>操作存在风险，丢失无法找回！</span>");
+            strhtml.Append("<br/>");
             strhtml.Append("请输入操作密码：<input type=\"password\" name=\"pw\" style=\"width: 66%; \" value=\"" + pw + "\" size=\"15\"/>");
+            strhtml.Append("<br/><br/>");
+            strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"隐藏全部\"/>");
+            strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"显示全部\"/>");
             strhtml.Append("<br/><br/>");
 
             //显示的勋章
@@ -149,7 +154,7 @@
                         strhtml.Append("<img src=\"" + this.http_start + "bbs/medal/" + hideArry[i] + "\" alt=\".\"/><br/>");
                     }
                     isexit = true;
-                    strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"还原_" + hideArry[i] + "\"/>");
+                    strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"显示_" + hideArry[i] + "\"/>");
                     strhtml.Append("<br/><br/>");
                 }
             }
