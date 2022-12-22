@@ -59,17 +59,17 @@ namespace YaoHuo.Plugin.XinZhang
                 //初始化新功能表
                 /*
 CREATE TABLE [dbo].[XinZhang_Plugin] (
-[userid] bigint  NOT NULL,
-[siteid] bigint  NOT NULL,
-[moneyname] ntext COLLATE Chinese_PRC_CI_AS  NULL
+    [userid] bigint  NOT NULL,
+    [siteid] bigint  NOT NULL,
+    [moneyname] ntext COLLATE Chinese_PRC_CI_AS  NULL
 )
 GO
                  */
-                var sqlStr = "select top 1 moneyname from XinZhang_Plugin where siteid=" + base.siteid + " and userid=" + base.userVo.userid;
+                var sqlStr = $"select top 1 moneyname from XinZhang_Plugin where siteid={base.siteid} and userid={base.userVo.userid}";
                 var myMoneyName = DbHelperSQL.ExecuteScalar(ConnectionString, CommandType.Text, sqlStr);
                 if (myMoneyName == null)
                 {
-                    sqlStr = "insert XinZhang_Plugin(userid,siteid,moneyname) values('" + base.userVo.userid + "','" + base.siteid + "','')";
+                    sqlStr = $"insert XinZhang_Plugin(userid,siteid,moneyname) values('{base.userVo.userid}','{base.siteid}','')";
                     DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
                 }
                 return myMoneyName.ToStr();
@@ -129,8 +129,21 @@ GO
                                                     num = 2;
                                                     continue;
                                                 }
-                                                //修改数量
-                                                var updCount = 0L;
+                                                //查找勋章是否存在（防止不规范的数据）
+                                                {
+                                                    var sqlStr = $"select count(0) from XinZhang where XinZhangTuPian = @XinZhangTuPian";
+                                                    var array = new SqlParameter[]
+                                                    {
+                                                        new SqlParameter("@XinZhangTuPian", SqlDbType.NVarChar),
+                                                    };
+                                                    array[0].Value = this.id;
+                                                    var isXinZhang = DbHelperSQL.ExecuteScalar(ConnectionString, CommandType.Text, sqlStr, array).ToInt();
+                                                    if (isXinZhang == 0)
+                                                    {
+                                                        this.INFO = "NO";
+                                                        return;
+                                                    }
+                                                }
                                                 //删除勋章
                                                 if (this.type == "删除")
                                                 {
@@ -143,7 +156,7 @@ GO
                                                         return;
                                                     }
                                                     var sqlStr = $"update [user] set moneyname='{updMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    updCount = base.MainBll.UpdateSQL(sqlStr);
+                                                    base.MainBll.UpdateSQL(sqlStr);
                                                     //立刻刷新界面数据
                                                     base.userVo.moneyname = updMoneyName;
                                                 }
@@ -159,12 +172,12 @@ GO
                                                         return;
                                                     }
                                                     var sqlStr = $"update [user] set moneyname='{updMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    updCount = base.MainBll.UpdateSQL(sqlStr);
+                                                    base.MainBll.UpdateSQL(sqlStr);
                                                     //添加隐藏
                                                     var myHideMoneyName = HideMoneyName.Replace("||", "|").Trim('|');
                                                     var setHideMoneyName = myHideMoneyName + "|" + this.id;
                                                     sqlStr = $"update XinZhang_Plugin set moneyname='{setHideMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    if (updCount > 0) DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
+                                                    DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
                                                     //立刻刷新界面数据
                                                     base.userVo.moneyname = updMoneyName;
                                                 }
@@ -180,12 +193,12 @@ GO
                                                         return;
                                                     }
                                                     var sqlStr = $"update XinZhang_Plugin set moneyname='{updHideMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    updCount = DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
+                                                    DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
                                                     //还原显示
                                                     var myMoneyName = base.userVo.moneyname.Replace("||", "|").Trim('|');
                                                     var setMoneyName = myMoneyName + "|" + this.id;
                                                     sqlStr = $"update [user] set moneyname='{setMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    if (updCount > 0) DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
+                                                    DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
                                                     //立刻刷新界面数据
                                                     base.userVo.moneyname = setMoneyName;
                                                 }
