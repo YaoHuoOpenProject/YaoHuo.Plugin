@@ -1,8 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_My.aspx.cs" Inherits="YaoHuo.Plugin.XinZhang.Book_View_My" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="book_view_my.aspx.cs" Inherits="YaoHuo.Plugin.XinZhang.Book_View_My" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-    Response.Write(WapTool.showTop("我的勋章", wmlVo));//显示头  
+    Response.Write(WapTool.showTop("管理我的勋章", wmlVo));//显示头  
     bool isexit = false;
     if (ver == "1")
     {
@@ -24,7 +23,6 @@
         {
             strhtml.Append("<b>*密码错误，请重新录入。</b><br/>");
         }
-
         if (1 == 1)
         {
             strhtml.Append("<b>我当前拥有勋章：</b><br/>");
@@ -71,7 +69,6 @@
         //输出错误
         strhtml.Append(ERROR);
         strhtml.Append("</p>");
-
         //输出
         Response.Write(WapTool.ToWML(strhtml.ToString(), wmlVo));
     }
@@ -82,34 +79,31 @@
         //{
         //    strhtml.Append(adVo.threeShowTop );
         //}
-        strhtml.Append("<div class=\"subtitle\">管理我的勋章</div>");
+        strhtml.Append("<div class=\"title\">管理我的勋章</div>");
 
         if (this.INFO == "OK")
         {
-            strhtml.Append("<div class=\"tip\"><b>*操作成功！</b></div>");
+            strhtml.Append("<div class=\"tip\"><b>操作成功！</b></div>");
         }
         else if (this.INFO == "NO")
         {
-            strhtml.Append("<div class=\"tip\"><b>*操作失败！</b></div>");
+            strhtml.Append("<div class=\"tip\"><b>操作失败！</b></div>");
         }
         else if (this.INFO == "NOPASS")
         {
-            strhtml.Append("<div class=\"tip\"><b>*密码错误，请重新录入。</b></div>");
+            strhtml.Append("<div class=\"tip\"><b>密码错误，请重新输入</b></div>");
         }
-
         if (1 == 1)
         {
             strhtml.Append("<div class=\"content\">");
-
             strhtml.Append("<form name=\"f\" action=\"" + http_start + "xinzhang/book_view_my.aspx\" method=\"post\">");
-            strhtml.Append("<span style='color:red'>操作存在风险，丢失无法找回！</span>");
+            strhtml.Append("<span style='font-size:90%;'>操作存在风险，丢失无法找回</span>");
             strhtml.Append("<br/>");
-            strhtml.Append("请输入操作密码：<input type=\"password\" name=\"pw\" style=\"width: 66%; \" value=\"" + pw + "\" size=\"15\"/>");
-            strhtml.Append("<br/><br/>");
+            strhtml.Append("<input type=\"password\" name=\"pw\" style=\"width:66%;\" placeholder=\"确认操作请输入密码\" value=\"" + pw + "\" size=\"15\"/>");
+            strhtml.Append("<br/>");
             strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"隐藏全部\"/>");
             strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"显示全部\"/>");
-            strhtml.Append("<br/><br/>");
-
+            strhtml.Append("<br/><hr/><br/>");
             //显示的勋章
             string[] arry = userVo.moneyname.Split('|');
             for (int i = 0; i < arry.Length; i++)
@@ -132,7 +126,7 @@
                     //strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + arry[i] + "\" />");
                     //strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"删除_" + arry[i] + "\"/>");
                     strhtml.Append("<input class=\"btn\" type=\"submit\" name=\"g\" value=\"隐藏_" + arry[i] + "\"/>");
-                    strhtml.Append("<br/><br/>");
+                    strhtml.Append("<hr/><br/>");
                 }
             }
             //隐藏的勋章
@@ -158,15 +152,12 @@
                     strhtml.Append("<br/><br/>");
                 }
             }
-
             strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\" />");
             strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\" />");
-
             strhtml.Append("<input type=\"hidden\" name=\"lpage\" value=\"" + (this.lpage) + "\" />");
             strhtml.Append("<input type=\"hidden\" name=\"ordertype\" value=\"" + ordertype + "\" />");
             strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
             strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"godel\" />");
-
             strhtml.Append("</form>");
             strhtml.Append("</div>");
         }
@@ -177,17 +168,13 @@
         string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码   
         strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
         strhtml.Append("<a href=\"" + this.http_start + "XinZhang/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + this.lpage + "&amp;ordertype=" + this.ordertype + "" + "\">返回上级</a> ");
-
         strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=0" + "\">返回首页</a>");
-
         strhtml.Append("</div></div>");
-
         if (isWebHtml != "")
         {
             //string strhtml_list = strhtml.ToString();
             //int s = strhtml_list.IndexOf("<div class=\"title\">");
             //strhtml_list = strhtml_list.Substring(s, strhtml_list.Length - s);
-
             Response.Clear();
             Response.Write(WapTool.ToWML(isWebHtml, wmlVo).Replace("[view]", strhtml.ToString()));
             Response.End();

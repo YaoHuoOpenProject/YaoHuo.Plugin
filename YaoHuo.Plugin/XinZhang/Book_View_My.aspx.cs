@@ -130,21 +130,21 @@ GO
                                                     continue;
                                                 }
                                                 //查找勋章是否存在（防止不规范的数据）
-                                                if (this.type != "隐藏全部" && this.type != "显示全部")
-                                                {
-                                                    var sqlStr = $"select count(0) from XinZhang where XinZhangTuPian = @XinZhangTuPian";
-                                                    var array = new SqlParameter[]
-                                                    {
-                                                        new SqlParameter("@XinZhangTuPian", SqlDbType.NVarChar),
-                                                    };
-                                                    array[0].Value = this.id;
-                                                    var isXinZhang = DbHelperSQL.ExecuteScalar(ConnectionString, CommandType.Text, sqlStr, array).ToInt();
-                                                    if (isXinZhang == 0)
-                                                    {
-                                                        this.INFO = "NO";
-                                                        return;
-                                                    }
-                                                }
+                                                //if (this.type != "隐藏全部" && this.type != "显示全部")
+                                                //{
+                                                //    var sqlStr = $"select count(0) from XinZhang where XinZhangTuPian = @XinZhangTuPian";
+                                                //    var array = new SqlParameter[]
+                                                //    {
+                                                //        new SqlParameter("@XinZhangTuPian", SqlDbType.NVarChar),
+                                                //    };
+                                                //    array[0].Value = this.id;
+                                                //    var isXinZhang = DbHelperSQL.ExecuteScalar(ConnectionString, CommandType.Text, sqlStr, array).ToInt();
+                                                //    if (isXinZhang == 0)
+                                                //    {
+                                                //        this.INFO = "NO";
+                                                //        return;
+                                                //    }
+                                                //}
                                                 //删除勋章
                                                 if (this.type == "删除")
                                                 {
