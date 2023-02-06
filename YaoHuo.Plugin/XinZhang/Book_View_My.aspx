@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="book_view_my.aspx.cs" Inherits="YaoHuo.Plugin.XinZhang.Book_View_My" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_My.aspx.cs" Inherits="YaoHuo.Plugin.XinZhang.Book_View_My" %>
+
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     Response.Write(WapTool.showTop("管理我的勋章", wmlVo));//显示头  

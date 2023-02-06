@@ -1,5 +1,6 @@
 ﻿using KeLin.ClassManager.ExUtility;
 using KeLin.ClassManager.Model;
+using Microsoft.VisualBasic.ApplicationServices;
 using System.Collections.Generic;
 using System.Data;
 
@@ -13,7 +14,7 @@ namespace YaoHuo.Plugin.Tool
         /// <summary>
         /// 添加黑名单用户
         /// </summary>
-        /// <param name="userInfo">查询用户信息</param>
+        /// <param name="userInfo">用户信息</param>
         /// <param name="connStr">数据库连接字符串</param>
         /// <param name="addUserID">要拉黑的用户ID</param>
         /// <returns></returns>
@@ -85,6 +86,20 @@ namespace YaoHuo.Plugin.Tool
                 return "UPMAX";
             }
             return "";
+        }
+
+        /// <summary>
+        /// 是否是黑名单用户
+        /// </summary>
+        /// <param name="connStr">数据库连接字符串</param>
+        /// <param name="muUserID">用户ID</param>
+        /// <param name="isUserID">验证的用户ID</param>
+        /// <returns></returns>
+        public static bool IsBlackUser(string connStr, string muUserID, string isUserID)
+        {
+            var sqlStr = $"select count(0) from wap_friends where friendtype = 1 and userid = '{muUserID}' and frienduserid = '{isUserID}'";
+            var isCount = DbHelperSQL.ExecuteScalar(connStr, CommandType.Text, sqlStr).ToInt();
+            return isCount > 0;
         }
     }
 }
