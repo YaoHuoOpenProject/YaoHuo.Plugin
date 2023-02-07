@@ -1233,7 +1233,8 @@ namespace YaoHuo.Plugin.BBS
                                                 continue;
                                             case 156:
                                                 //黑名单不发送消息（他的黑名单有我）
-                                                isBlack = BlackTool.IsBlackUser(connStr, this.touserid, base.userid);
+                                                //this.bookVo.book_pub ==> 楼主用户ID
+                                                isBlack = BlackTool.IsBlackUser(connStr, this.bookVo.book_pub, base.userid);
                                                 if (!isBlack)
                                                 {
                                                     //第一个回复通知
@@ -1286,7 +1287,8 @@ namespace YaoHuo.Plugin.BBS
                                                 goto case 39;
                                             case 71:
                                                 //黑名单不发送消息（他的黑名单有我）
-                                                isBlack = BlackTool.IsBlackUser(connStr, this.touserid, base.userid);
+                                                //this.bookVo.book_pub ==> 楼主用户ID
+                                                isBlack = BlackTool.IsBlackUser(connStr, this.bookVo.book_pub, base.userid);
                                                 if (!isBlack)
                                                 {
                                                     //回复通知楼主

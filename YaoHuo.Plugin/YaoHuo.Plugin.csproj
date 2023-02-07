@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BBS\Book_List.aspx" />
+    <Content Include="BBS\Book_Re.aspx" />
     <Content Include="BBS\Book_View.aspx" />
     <Content Include="BBS\Index.aspx" />
     <Content Include="BBS\MessageList.aspx" />
@@ -123,6 +124,10 @@
   <ItemGroup>
     <Compile Include="BBS\Book_List.aspx.cs">
       <DependentUpon>Book_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_Re.aspx.cs">
+      <DependentUpon>Book_Re.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_View.aspx.cs">
