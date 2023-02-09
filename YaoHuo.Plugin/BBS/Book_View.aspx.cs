@@ -2965,97 +2965,32 @@ namespace YaoHuo.Plugin.BBS
             }
         }
 
-        public string ShowNickName_color(long userid, string nickname)
-        {
-            //Discarded unreachable code: IL_00a5
-            int num2 = default(int);
-            string result = default(string);
-            while (true)
-            {
-                bool flag = userListVo_IDName != null;
-                int num = 7;
-                while (true)
-                {
-                    int num3;
-                    switch (num)
-                    {
-                        case 7:
-                            if (!flag)
-                            {
-                                num = 11;
-                                continue;
-                            }
-                            num2 = 0;
-                            num = 13;
-                            continue;
-                        case 12:
-                            num3 = 0;
-                            goto IL_00be;
-                        case 13:
-                        case 14:
-                            num = 0;
-                            continue;
-                        case 0:
-                            num = ((userListVo_IDName != null) ? 6 : 12);
-                            continue;
-                        case 6:
-                            num = 3;
-                            continue;
-                        case 1:
-                            if (!flag)
-                            {
-                                num = 5;
-                                continue;
-                            }
-                            flag = userListVo_IDName[num2].userid != userid;
-                            num = 8;
-                            continue;
-                        case 11:
-                            result = nickname;
-                            num = 9;
-                            continue;
-                        case 3:
-                            num3 = ((num2 < userListVo_IDName.Count) ? 1 : 0);
-                            goto IL_00be;
-                        case 2:
-                        case 5:
-                            result = nickname;
-                            num = 4;
-                            continue;
-                        case 10:
-                            nickname = WapTool.GetColorNickName(userListVo_IDName[num2].idname, nickname, lang, ver, userListVo_IDName[num2].endTime);
-                            num = 2;
-                            continue;
-                        case 8:
-                            if (!flag)
-                            {
-                                num = 10;
-                                continue;
-                            }
-                            num2++;
-                            num = 14;
-                            continue;
-                        case 4:
-                        case 9:
-                            {
-                                return result;
-                            }
-                        IL_00be:
-                            flag = (byte)num3 != 0;
-                            num = 1;
-                            continue;
-                    }
-                    break;
-                }
-            }
-        }
-
         public void UpdateBbsReCount(string nowid)
         {
             //Discarded unreachable code: IL_0003
             wap_bbsre_BLL wap_bbsre_BLL = new wap_bbsre_BLL(a);
             long num = wap_bbsre_BLL.GetListCount(" devid='" + siteid + "' and bookid=" + nowid + " and ischeck=0");
             MainBll.UpdateSQL("update wap_bbs set book_re=" + num + " where id=" + nowid);
+        }
+
+        public string ShowNickName_color(long userid, string nickname)
+        {
+            //AI 解混淆的结果
+            if (this.userListVo_IDName == null)
+            {
+                return nickname;
+            }
+
+            foreach (var item in this.userListVo_IDName)
+            {
+                if (item.userid == userid)
+                {
+                    nickname = WapTool.GetColorNickName(item.idname, nickname, base.lang, base.ver, item.endTime);
+                    break;
+                }
+            }
+
+            return nickname;
         }
     }
 }

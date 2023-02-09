@@ -11,111 +11,35 @@ namespace YaoHuo.Plugin.BBS
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Discarded unreachable code: IL_0156
-            while (true)
+            var text = base.Request.QueryString.Get("siteid");
+            var classid = base.Request.QueryString.Get("classid");
+            var sid = base.Request.QueryString.Get("sid");
+            var action = base.Request.QueryString.Get("action");
+            var url = "http://" + base.Request.ServerVariables["HTTP_HOST"] + "/";
+            switch (action)
             {
-                string text = base.Request.QueryString.Get("siteid");
-                string text2 = base.Request.QueryString.Get("classid");
-                string text3 = base.Request.QueryString.Get("sid");
-                string text4 = base.Request.QueryString.Get("action");
-                string text5 = "http://" + base.Request.ServerVariables["HTTP_HOST"] + "/";
-                bool flag = !(text4 == "webAdmin");
-                int num = 10;
-                while (true)
-                {
-                    switch (num)
+                case "webAdmin":
+                    base.Response.Redirect("userlist.aspx?classid=" + classid);
+                    break;
+                case "webAdmin00":
+                    base.Response.Redirect("admin_userlist.aspx?classid=" + classid);
+                    break;
+                case "wapAdmin":
+                    base.Response.Redirect(url + "bbs/admin_userlistWAP.aspx?siteid=" + text + "&classid=" + classid);
+                    break;
+                case "wapAdmin00":
+                    base.Response.Redirect(url + "bbs/admin_userlistWAP00.aspx?siteid=" + text + "&classid=" + classid);
+                    break;
+                default:
+                    if (WapTool.ISAPI_Rewrite3_Open == "1")
                     {
-                        case 10:
-                            if (!flag)
-                            {
-                                num = 16;
-                                continue;
-                            }
-                            flag = !(text4 == "webAdmin00");
-                            num = 8;
-                            continue;
-                        case 11:
-                            if (!flag)
-                            {
-                                num = 5;
-                                continue;
-                            }
-                            base.Response.Redirect(text5 + "bbs/list.aspx?classid=" + text2);
-                            num = 13;
-                            continue;
-                        case 9:
-                            if (flag)
-                            {
-                                flag = !(WapTool.ISAPI_Rewrite3_Open == "1");
-                                num = 11;
-                            }
-                            else
-                            {
-                                num = 6;
-                            }
-                            continue;
-                        case 8:
-                            if (!flag)
-                            {
-                                num = 14;
-                                continue;
-                            }
-                            flag = !(text4 == "wapAdmin");
-                            num = 15;
-                            continue;
-                        case 16:
-                            base.Response.Redirect("userlist.aspx?classid=" + text2);
-                            num = 7;
-                            continue;
-                        case 7:
-                            return;
-
-                        case 5:
-                            base.Response.Redirect(text5 + "bbslist-" + text2 + ".html");
-                            num = 2;
-                            continue;
-                        case 2:
-                        case 13:
-                            num = 3;
-                            continue;
-                        case 3:
-                            return;
-
-                        case 12:
-                            base.Response.Redirect(text5 + "bbs/admin_userlistWAP.aspx?siteid=" + text + "&classid=" + text2);
-                            num = 4;
-                            continue;
-                        case 4:
-                            return;
-
-                        case 14:
-                            base.Response.Redirect("admin_userlist.aspx?classid=" + text2);
-                            num = 1;
-                            continue;
-                        case 1:
-                            return;
-
-                        case 6:
-                            base.Response.Redirect(text5 + "bbs/admin_userlistWAP00.aspx?siteid=" + text + "&classid=" + text2);
-                            num = 0;
-                            continue;
-                        case 0:
-                            return;
-
-                        case 15:
-                            if (flag)
-                            {
-                                flag = !(text4 == "wapAdmin00");
-                                num = 9;
-                            }
-                            else
-                            {
-                                num = 12;
-                            }
-                            continue;
+                        base.Response.Redirect(url + "bbslist-" + classid + ".html");
+                    }
+                    else
+                    {
+                        base.Response.Redirect(url + "bbs/list.aspx?classid=" + classid);
                     }
                     break;
-                }
             }
         }
     }

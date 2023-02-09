@@ -1518,92 +1518,22 @@ namespace YaoHuo.Plugin.BBS
 
         public string ShowNickName_color(long userid, string nickname)
         {
-            //Discarded unreachable code: IL_0097
-            int num2 = default(int);
-            string result = default(string);
-            while (true)
+            //AI 解混淆的结果
+            if (this.userListVo_IDName == null)
             {
-                bool flag = userListVo_IDName != null;
-                int num = 10;
-                while (true)
+                return nickname;
+            }
+
+            foreach (var item in this.userListVo_IDName)
+            {
+                if (item.userid == userid)
                 {
-                    int num3;
-                    switch (num)
-                    {
-                        case 10:
-                            if (!flag)
-                            {
-                                num = 7;
-                                continue;
-                            }
-                            num2 = 0;
-                            num = 8;
-                            continue;
-                        case 4:
-                            num3 = 0;
-                            goto IL_00be;
-                        case 2:
-                        case 8:
-                            num = 11;
-                            continue;
-                        case 11:
-                            if (userListVo_IDName == null)
-                            {
-                                num = 4;
-                                continue;
-                            }
-                            num = 3;
-                            continue;
-                        case 6:
-                            if (!flag)
-                            {
-                                num = 9;
-                                continue;
-                            }
-                            flag = userListVo_IDName[num2].userid != userid;
-                            num = 5;
-                            continue;
-                        case 7:
-                            result = nickname;
-                            num = 1;
-                            continue;
-                        case 3:
-                            num = 14;
-                            continue;
-                        case 14:
-                            num3 = ((num2 < userListVo_IDName.Count) ? 1 : 0);
-                            goto IL_00be;
-                        case 9:
-                        case 12:
-                            result = nickname;
-                            num = 0;
-                            continue;
-                        case 13:
-                            nickname = WapTool.GetColorNickName(userListVo_IDName[num2].idname, nickname, lang, ver, userListVo_IDName[num2].endTime);
-                            num = 12;
-                            continue;
-                        case 5:
-                            if (!flag)
-                            {
-                                num = 13;
-                                continue;
-                            }
-                            num2++;
-                            num = 2;
-                            continue;
-                        case 0:
-                        case 1:
-                            {
-                                return result;
-                            }
-                        IL_00be:
-                            flag = (byte)num3 != 0;
-                            num = 6;
-                            continue;
-                    }
+                    nickname = WapTool.GetColorNickName(item.idname, nickname, base.lang, base.ver, item.endTime);
                     break;
                 }
             }
+
+            return nickname;
         }
     }
 }
