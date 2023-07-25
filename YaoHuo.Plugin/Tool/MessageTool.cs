@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace YaoHuo.Plugin.Tool
+﻿namespace YaoHuo.Plugin.Tool
 {
     /// <summary>
     /// 消息工具

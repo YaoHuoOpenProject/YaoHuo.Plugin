@@ -76,9 +76,11 @@ namespace YaoHuo.Plugin.BBS
                 case "addfriend":
                     this.goaddfriend();
                     break;
+
                 case "class":
                     this.showclass();
                     break;
+
                 default:
                     this.showclass();
                     break;

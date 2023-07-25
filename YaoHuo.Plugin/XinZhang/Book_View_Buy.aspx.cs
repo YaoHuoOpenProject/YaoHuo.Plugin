@@ -1,12 +1,12 @@
-﻿using System;
-using System.Data;
-using System.Linq;
-using System.Text;
-using KeLin.ClassManager;
+﻿using KeLin.ClassManager;
 using KeLin.ClassManager.BLL;
 using KeLin.ClassManager.ExUtility;
 using KeLin.ClassManager.Model;
 using KeLin.WebSite;
+using System;
+using System.Data;
+using System.Linq;
+using System.Text;
 
 namespace YaoHuo.Plugin.XinZhang
 {
@@ -17,13 +17,7 @@ namespace YaoHuo.Plugin.XinZhang
         /// <summary>
         /// 数据库连接字符串
         /// </summary>
-        private string ConnectionString
-        {
-            get
-            {
-                return PubConstant.GetConnectionString(a);
-            }
-        }
+        private string ConnectionString => PubConstant.GetConnectionString(a);
 
         public string id = "0";
 

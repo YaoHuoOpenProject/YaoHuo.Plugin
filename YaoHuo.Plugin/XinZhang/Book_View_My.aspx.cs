@@ -4,8 +4,6 @@ using KeLin.ClassManager.Model;
 using KeLin.WebSite;
 using System;
 using System.Data;
-using System.Data.SqlClient;
-using System.Reflection;
 using System.Text;
 
 namespace YaoHuo.Plugin.XinZhang
@@ -17,13 +15,7 @@ namespace YaoHuo.Plugin.XinZhang
         /// <summary>
         /// 数据库连接字符串
         /// </summary>
-        private string ConnectionString
-        {
-            get
-            {
-                return PubConstant.GetConnectionString(a);
-            }
-        }
+        private string ConnectionString => PubConstant.GetConnectionString(a);
 
         public string id = "0";
 
@@ -56,21 +48,30 @@ namespace YaoHuo.Plugin.XinZhang
         {
             get
             {
-                //初始化新功能表
-                /*
+                var sqlStr = string.Empty;
+                //检查表存在否
+                sqlStr = "select count(0) from sysObjects where id = object_id(N'XinZhang_Plugin') and xtype = 'U'";
+                var isExist = DbHelperSQL.ExecuteScalar(ConnectionString, CommandType.Text, sqlStr).ToInt();
+                if (isExist <= 0)
+                {
+                    //初始化新表
+                    sqlStr = $@"
 CREATE TABLE [dbo].[XinZhang_Plugin] (
     [userid] bigint  NOT NULL,
     [siteid] bigint  NOT NULL,
     [moneyname] ntext COLLATE Chinese_PRC_CI_AS  NULL
-)
-GO
-                 */
-                var sqlStr = $"select top 1 moneyname from XinZhang_Plugin where siteid={base.siteid} and userid={base.userVo.userid}";
+);
+ALTER TABLE XinZhang_Plugin ADD CONSTRAINT PK_XinZhang_Plugin PRIMARY KEY (userid);";
+                    base.MainBll.UpdateSQL(sqlStr);
+                }
+                //查询隐藏的勋章
+                sqlStr = $"select top 1 moneyname from XinZhang_Plugin where siteid={base.siteid} and userid={base.userVo.userid}";
                 var myMoneyName = DbHelperSQL.ExecuteScalar(ConnectionString, CommandType.Text, sqlStr);
                 if (myMoneyName == null)
                 {
+                    //初始化用户数据
                     sqlStr = $"insert XinZhang_Plugin(userid,siteid,moneyname) values('{base.userVo.userid}','{base.siteid}','')";
-                    DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
+                    base.MainBll.UpdateSQL(sqlStr);
                 }
                 return myMoneyName.ToStr();
             }
@@ -150,13 +151,13 @@ GO
                                                 {
                                                     //删除显示
                                                     var myMoneyName = base.userVo.moneyname.Replace("||", "|").Trim('|');
-                                                    var updMoneyName = myMoneyName.Replace(this.id, "");
+                                                    var updMoneyName = myMoneyName.Replace(this.id, "").Replace("||", "|").Trim('|');
                                                     if (myMoneyName == updMoneyName)
                                                     {
                                                         this.INFO = "NO";
                                                         return;
                                                     }
-                                                    var sqlStr = $"update [user] set moneyname='{updMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
+                                                    var sqlStr = $@"update [user] set moneyname='{updMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
                                                     base.MainBll.UpdateSQL(sqlStr);
                                                     //立刻刷新界面数据
                                                     base.userVo.moneyname = updMoneyName;
@@ -166,7 +167,7 @@ GO
                                                 {
                                                     //删除显示
                                                     var myMoneyName = base.userVo.moneyname.Replace("||", "|").Trim('|');
-                                                    var updMoneyName = myMoneyName.Replace(this.id, "");
+                                                    var updMoneyName = myMoneyName.Replace(this.id, "").Replace("||", "|").Trim('|');
                                                     if (myMoneyName == updMoneyName)
                                                     {
                                                         this.INFO = "NO";
@@ -176,24 +177,25 @@ GO
                                                     base.MainBll.UpdateSQL(sqlStr);
                                                     //添加隐藏
                                                     var myHideMoneyName = HideMoneyName.Replace("||", "|").Trim('|');
-                                                    var setHideMoneyName = myHideMoneyName + "|" + this.id;
+                                                    var setHideMoneyName = (!myHideMoneyName.IsNull() ? $"{myHideMoneyName}|" : "") + this.id;
                                                     sqlStr = $"update XinZhang_Plugin set moneyname='{setHideMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
+                                                    base.MainBll.UpdateSQL(sqlStr);
                                                     //立刻刷新界面数据
                                                     base.userVo.moneyname = updMoneyName;
                                                 }
                                                 //隐藏全部勋章
                                                 else if (this.type == "隐藏全部")
                                                 {
-                                                    var showMoneyName = base.userVo.moneyname;
-                                                    //删除显示
-                                                    var sqlStr = $"update [user] set moneyname='' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    base.MainBll.UpdateSQL(sqlStr);
-                                                    //添加隐藏
+                                                    var showMoneyName = base.userVo.moneyname.Replace("||", "|").Trim('|');
                                                     var myHideMoneyName = HideMoneyName.Replace("||", "|").Trim('|');
-                                                    var setHideMoneyName = myHideMoneyName + "|" + showMoneyName;
-                                                    sqlStr = $"update XinZhang_Plugin set moneyname='{setHideMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
+                                                    var setHideMoneyName = (!myHideMoneyName.IsNull() ? $"{myHideMoneyName}|" : "") + showMoneyName;
+                                                    //执行脚本
+                                                    var sqlStr = $@"
+--删除显示
+update [user] set moneyname='' where siteid={base.siteid} and userid={base.userVo.userid}
+--添加隐藏
+update XinZhang_Plugin set moneyname='{setHideMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
+                                                    base.MainBll.UpdateSQL(sqlStr);
                                                     //立刻刷新界面数据
                                                     base.userVo.moneyname = "";
                                                 }
@@ -202,34 +204,35 @@ GO
                                                 {
                                                     //删除隐藏
                                                     var myHideMoneyName = HideMoneyName.Replace("||", "|").Trim('|');
-                                                    var updHideMoneyName = myHideMoneyName.Replace(this.id, "");
+                                                    var updHideMoneyName = myHideMoneyName.Replace(this.id, "").Replace("||", "|").Trim('|');
                                                     if (myHideMoneyName == updHideMoneyName)
                                                     {
                                                         this.INFO = "NO";
                                                         return;
                                                     }
                                                     var sqlStr = $"update XinZhang_Plugin set moneyname='{updHideMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
+                                                    base.MainBll.UpdateSQL(sqlStr);
                                                     //还原显示
                                                     var myMoneyName = base.userVo.moneyname.Replace("||", "|").Trim('|');
-                                                    var setMoneyName = myMoneyName + "|" + this.id;
+                                                    var setMoneyName = (!myMoneyName.IsNull() ? $"{myMoneyName}|" : "") + this.id;
                                                     sqlStr = $"update [user] set moneyname='{setMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
+                                                    base.MainBll.UpdateSQL(sqlStr);
                                                     //立刻刷新界面数据
                                                     base.userVo.moneyname = setMoneyName;
                                                 }
                                                 //显示全部勋章
                                                 else if (this.type == "显示全部")
                                                 {
-                                                    var hideMoneyName = HideMoneyName;
-                                                    //删除隐藏
-                                                    var sqlStr = $"update XinZhang_Plugin set moneyname='' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
-                                                    //还原显示
+                                                    var hideMoneyName = HideMoneyName.Replace("||", "|").Trim('|');
                                                     var myMoneyName = base.userVo.moneyname.Replace("||", "|").Trim('|');
-                                                    var setMoneyName = myMoneyName + "|" + hideMoneyName;
-                                                    sqlStr = $"update [user] set moneyname='{setMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
-                                                    DbHelperSQL.ExecuteQuery(ConnectionString, sqlStr);
+                                                    var setMoneyName = (!myMoneyName.IsNull() ? $"{myMoneyName}|" : "") + hideMoneyName;
+                                                    //执行脚本
+                                                    var sqlStr = $@"
+--删除隐藏
+update XinZhang_Plugin set moneyname='' where siteid={base.siteid} and userid={base.userVo.userid}
+--还原显示
+update [user] set moneyname='{setMoneyName}' where siteid={base.siteid} and userid={base.userVo.userid}";
+                                                    base.MainBll.UpdateSQL(sqlStr);
                                                     //立刻刷新界面数据
                                                     base.userVo.moneyname = setMoneyName;
                                                 }

@@ -140,9 +140,11 @@ namespace YaoHuo.Plugin.BBS
                 case "add":
                     this.add();
                     break;
+
                 case "class":
                     this.showclass();
                     break;
+
                 default:
                     this.showclass();
                     break;

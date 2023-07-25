@@ -1,6 +1,5 @@
 ﻿using KeLin.ClassManager.ExUtility;
 using KeLin.ClassManager.Model;
-using Microsoft.VisualBasic.ApplicationServices;
 using System.Collections.Generic;
 using System.Data;
 

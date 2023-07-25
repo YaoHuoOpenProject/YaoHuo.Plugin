@@ -258,6 +258,7 @@ namespace YaoHuo.Plugin.BBS
                                 continue;
                             }
                             return;
+
                         case 0:
                             {
                                 base.ShowTipInfo("抱歉，当前访问的栏目ID对应非论坛模块，请联系站长处理。", "");

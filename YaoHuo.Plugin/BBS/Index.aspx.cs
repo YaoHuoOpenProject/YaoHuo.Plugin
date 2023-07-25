@@ -21,15 +21,19 @@ namespace YaoHuo.Plugin.BBS
                 case "webAdmin":
                     base.Response.Redirect("userlist.aspx?classid=" + classid);
                     break;
+
                 case "webAdmin00":
                     base.Response.Redirect("admin_userlist.aspx?classid=" + classid);
                     break;
+
                 case "wapAdmin":
                     base.Response.Redirect(url + "bbs/admin_userlistWAP.aspx?siteid=" + text + "&classid=" + classid);
                     break;
+
                 case "wapAdmin00":
                     base.Response.Redirect(url + "bbs/admin_userlistWAP00.aspx?siteid=" + text + "&classid=" + classid);
                     break;
+
                 default:
                     if (WapTool.ISAPI_Rewrite3_Open == "1")
                     {
