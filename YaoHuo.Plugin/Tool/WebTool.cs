@@ -3954,16 +3954,16 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                         {
                             var bbsData = matche.Value;
                             var bbsContent = Regex.Match(bbsData, "(?<=\\[text\\]).+?(?=\\[\\/text\\])").Value;
-                            //bbsContent = Regex.Replace(bbsContent, "[\uff10-\uff19\uff21-\uff3a\uff41-\uff5a]", new MatchEvaluator(p => ((char)(char.Parse(p.Value) - 65248)).ToString()));
                             bbsContent = bbsContent.Replace("“", "\"")
-                                                    .Replace("‘", "'")
                                                     .Replace("”", "\"")
+                                                    .Replace("‘", "'")
                                                     .Replace("’", "'")
                                                     .Replace("《", "<")
                                                     .Replace("》", ">")
-                                                    .Replace("：", ";")
+                                                    .Replace("；", ";")
                                                     .Replace("，", ",")
                                                     .Replace("。", ".")
+                                                    .Replace("？", "?")
                                                     .Replace("【", "[")
                                                     .Replace("】", "]");
                             WapStr = WapStr.Replace(bbsData, bbsContent);
