@@ -31,7 +31,6 @@ namespace YaoHuo.Plugin.Tool
                     blackUp = 30;
                     break;
                 default:
-                    blackUp = 20;
                     break;
             }
             //获取拉取黑名单数量
