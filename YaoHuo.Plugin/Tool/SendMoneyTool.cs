@@ -17,8 +17,8 @@ namespace YaoHuo.Plugin.Tool
             var money = long.Parse(moneyStr);
             //小于 101
             if (money < 101) return false;
-            //大于 50000
-            else if (money > 10101) return false;
+            //大于 20200
+            else if (money > 20200) return false;
             //返回不在合理的范围
             return true;
         }

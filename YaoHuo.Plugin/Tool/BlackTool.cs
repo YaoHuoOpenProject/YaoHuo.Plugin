@@ -1,6 +1,7 @@
 ﻿using KeLin.ClassManager.ExUtility;
 using KeLin.ClassManager.Model;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Data;
 
 namespace YaoHuo.Plugin.Tool
@@ -20,9 +21,19 @@ namespace YaoHuo.Plugin.Tool
         public static string AddBlackUser(user_Model userInfo, string connStr, string addUserID)
         {
             //黑名单上限
-            var blackUp = 10;
+            var blackUp = 20;
             //会员用户增加黑名单上限
-            if (userInfo.SessionTimeout == 105) blackUp = 20;
+            switch (userInfo.SessionTimeout)
+            {
+                case 105:
+                case 140:
+                case 180:
+                    blackUp = 30;
+                    break;
+                default:
+                    blackUp = 20;
+                    break;
+            }
             //获取拉取黑名单数量
             var sqlStr = $"select count(0) from wap_friends where friendtype = 1 and userid = {userInfo.userid}";
             var friendsCount = DbHelperSQL.ExecuteScalar(connStr, CommandType.Text, sqlStr).ToInt();
@@ -33,12 +44,18 @@ namespace YaoHuo.Plugin.Tool
                 "11637",
                 "36787",
             };
+            // 移除前导零并检查
+            string processedUserID = Regex.Replace(addUserID, @"^0+", "");
             //白名单不能黑
-            if (noBlockList.IndexOf(addUserID) != -1)
+            if (noBlockList.Contains(processedUserID))
             {
                 return "NOTBLACK";
             }
             //经验未达到2000却拉了一个黑名单（准备拉第二个黑名单）
+            else if (userInfo.expr <= 1000 && friendsCount >= blackUp - 10)
+            {
+                return "UPMAX";
+            }
             else if (userInfo.expr <= 2000 && friendsCount >= blackUp - 9)
             {
                 return "UPMAX";
