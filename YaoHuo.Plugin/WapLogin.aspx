@@ -84,9 +84,9 @@
             strhtml.Append("<postfield name=\"sid\" value=\"" + sid + "\"/>");
             strhtml.Append("<postfield name=\"backurl\" value=\"" + backurl + "\"/>");
             //谷歌人机验证配置
-            if (!string.IsNullOrEmpty(this.GoogleRecaptchaV2_Key))
+            if (!string.IsNullOrEmpty(this.RecaptchaV2_Key))
             {
-                strhtml.Append("<div class='g-recaptcha' data-sitekey='" + this.GoogleRecaptchaV2_Key + "'></div>");
+                strhtml.Append("<div class='g-recaptcha' data-sitekey='" + this.RecaptchaV2_Key + "'></div>");
             }
             strhtml.Append("</go>" + this.GetLang("登 录|登 录|Login") + "</anchor><br/>");
 
@@ -196,9 +196,9 @@
             strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"backurl\" value=\"" + backurl + "\"/>");
             //谷歌人机验证配置
-            if (!string.IsNullOrEmpty(this.GoogleRecaptchaV2_Key))
+            if (!string.IsNullOrEmpty(this.RecaptchaV2_Key))
             {
-                strhtml.Append("<div class='g-recaptcha' data-sitekey='" + this.GoogleRecaptchaV2_Key + "'></div>");
+                strhtml.Append("<div class='g-recaptcha' data-sitekey='" + this.RecaptchaV2_Key + "'></div>");
             }
             strhtml.Append("<input type=\"submit\" name=\"g\" class=\"btn\" value=\"" + this.GetLang("登 录|登 录|Login") + "\"/><br/>");
 
@@ -251,9 +251,9 @@
         Response.Write(strhtml);
     }
     //底部引入资源文件
-    if (!string.IsNullOrEmpty(this.GoogleRecaptchaV2_Key))
+    if (!string.IsNullOrEmpty(this.RecaptchaV2_Key))
     {
-        var outHtml = new StringBuilder();
+        StringBuilder outHtml = new StringBuilder();
         //outHtml.Append("<script src='https://www.google.com/recaptcha/api.js'></script>");
         outHtml.Append("<script src='https://recaptcha.google.cn/recaptcha/api.js'></script>");
         Response.Write(outHtml);
