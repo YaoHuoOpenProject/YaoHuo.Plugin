@@ -44,13 +44,13 @@ namespace YaoHuo.Plugin.Tool
                 "36787",
             };
             // 移除前导零并检查
-            string processedUserID = Regex.Replace(addUserID, @"^0+", "");
+            var processedUserID = Regex.Replace(addUserID, @"^0+", "");
             //白名单不能黑
             if (noBlockList.Contains(processedUserID))
             {
                 return "NOTBLACK";
             }
-            //经验未达到2000却拉了一个黑名单（准备拉第二个黑名单）
+            //经验未达到1000却拉了一个黑名单（准备拉第二个黑名单）
             else if (userInfo.expr <= 1000 && friendsCount >= blackUp - 10)
             {
                 return "UPMAX";

@@ -4,12 +4,12 @@
 <%
     if (this.INFO == "OK")
     {
-        wmlVo.timer = "2"; //5秒后自动跳转
+        wmlVo.timer = "2"; //N秒后自动跳转
         wmlVo.strUrl = backurl;
     }
-    StringBuilder strhtml = new StringBuilder();
+    var strhtml = new StringBuilder();
     //显示头
-    Response.Write(WapTool.showTop(this.GetLang("登录网站|登錄網站|LogIn"), wmlVo));//显示头
+    Response.Write(WapTool.showTop(this.GetLang("登录网站|登錄網站|LogIn"), wmlVo));
     if (ver == "1")  //显示WAP1.0
     {
         strhtml.Append("<p>");
@@ -41,6 +41,10 @@
         else if (this.INFO == "MAXLOGIN")
         {
             strhtml.Append("<b>" + this.GetLang("*登录失败次数超过" + this.KL_LoginTime + "次了，请明天再来!") + "</b><br/>");
+        }
+        else if (this.INFO == "NOTGOOGLERECAPTCHA")
+        {
+            strhtml.Append("<b>" + this.GetLang("*登录失败，谷歌人机验证失败!") + "</b><br/>");
         }
 
         if (errorinfo == "config")
@@ -79,6 +83,11 @@
             strhtml.Append("<postfield name=\"siteid\" value=\"" + siteid + "\"/>");
             strhtml.Append("<postfield name=\"sid\" value=\"" + sid + "\"/>");
             strhtml.Append("<postfield name=\"backurl\" value=\"" + backurl + "\"/>");
+            //谷歌人机验证配置
+            if (!string.IsNullOrEmpty(this.GoogleRecaptchaV2_Key))
+            {
+                strhtml.Append("<div class='g-recaptcha' data-sitekey='" + this.GoogleRecaptchaV2_Key + "'></div>");
+            }
             strhtml.Append("</go>" + this.GetLang("登 录|登 录|Login") + "</anchor><br/>");
 
             if (this.showQQLogin == "0")
@@ -141,6 +150,10 @@
             strhtml.Append("<div class=\"tip\">");
             strhtml.Append("<b>" + this.GetLang("*登录失败次数超过" + this.KL_LoginTime + "次了，请明天再来!") + "</b></div>");
         }
+        else if (this.INFO == "NOTGOOGLERECAPTCHA")
+        {
+            strhtml.Append("<b>" + this.GetLang("*登录失败，谷歌人机验证失败!") + "</b><br/>");
+        }
         else if (this.INFO == "weixin")
         {
             strhtml.Append("<div class=\"tip\">");
@@ -182,6 +195,11 @@
             strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"backurl\" value=\"" + backurl + "\"/>");
+            //谷歌人机验证配置
+            if (!string.IsNullOrEmpty(this.GoogleRecaptchaV2_Key))
+            {
+                strhtml.Append("<div class='g-recaptcha' data-sitekey='" + this.GoogleRecaptchaV2_Key + "'></div>");
+            }
             strhtml.Append("<input type=\"submit\" name=\"g\" class=\"btn\" value=\"" + this.GetLang("登 录|登 录|Login") + "\"/><br/>");
 
             strhtml.Append("</div>");
@@ -231,6 +249,14 @@
         }
 
         Response.Write(strhtml);
+    }
+    //底部引入资源文件
+    if (!string.IsNullOrEmpty(this.GoogleRecaptchaV2_Key))
+    {
+        var outHtml = new StringBuilder();
+        //outHtml.Append("<script src='https://www.google.com/recaptcha/api.js'></script>");
+        outHtml.Append("<script src='https://recaptcha.google.cn/recaptcha/api.js'></script>");
+        Response.Write(outHtml);
     }
     //显示底部
     Response.Write(WapTool.showDown(wmlVo));

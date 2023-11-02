@@ -61,6 +61,10 @@
       <HintPath>Lib\KenLin_ClassManager.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -202,6 +206,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tool\BlackTool.cs" />
     <Compile Include="Tool\ExcludeTool.cs" />
+    <Compile Include="Tool\HttpTool.cs" />
     <Compile Include="Tool\MessageTool.cs" />
     <Compile Include="Tool\SendMoneyTool.cs" />
     <Compile Include="Tool\WebTool.cs" />

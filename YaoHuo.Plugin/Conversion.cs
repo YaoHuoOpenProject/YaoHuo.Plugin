@@ -327,68 +327,6 @@ namespace YaoHuo.Plugin
         }
 
         /// <summary>
-        /// DataTable 转换成 List
-        /// </summary>
-        /// <param name="dataTable">需要转换的 DataTable</param>
-        /// <returns>转换后的 List</returns>
-        public static List<Dictionary<string, object>> ToList(this DataTable dataTable)
-        {
-            List<Dictionary<string, object>> list = new List<Dictionary<string, object>>();
-            foreach (DataRow dataRow in dataTable.Rows)
-            {
-                Dictionary<string, object> dictionary = new Dictionary<string, object>();
-                foreach (DataColumn dataColumn in dataTable.Columns)
-                {
-                    //列名
-                    var columnName = dataColumn.ColumnName;
-                    //列值
-                    var columnValue = dataRow[dataColumn.ColumnName];
-                    //列类型
-                    var columnType = columnValue.GetType();
-                    //处理时间类型格式
-                    if (columnType == typeof(DateTime))
-                    {
-                        dictionary.Add(columnName, columnValue.ToDate("yyyy-MM-dd HH:mm:ss"));
-                        continue;
-                    }
-                    //处理一般
-                    dictionary.Add(columnName, columnValue);
-                }
-                list.Add(dictionary);
-            }
-            return list;
-        }
-
-        /// <summary>
-        /// List 转换成 DataTable
-        /// </summary>
-        /// <param name="list">需要转换的 List</param>
-        /// <returns>转换后的 DataTable</returns>
-        public static DataTable ToDataTable(this List<Dictionary<string, object>> list)
-        {
-            DataTable dataTable = new DataTable();
-            if (list.Count > 0)
-            {
-                //==>创建 Table 表头
-                foreach (KeyValuePair<string, object> keyValuePair in list[0])
-                {
-                    dataTable.Columns.Add(keyValuePair.Key, typeof(string));
-                }
-                //==>创建 Table 数据
-                foreach (Dictionary<string, object> dictionary in list)
-                {
-                    DataRow dr = dataTable.NewRow();
-                    foreach (KeyValuePair<string, object> keyValuePair in dictionary)
-                    {
-                        dr[keyValuePair.Key] = keyValuePair.Value;
-                    }
-                    dataTable.Rows.Add(dr);
-                }
-            }
-            return dataTable;
-        }
-
-        /// <summary>
         /// 判断是否为空
         /// </summary>
         /// <param name="value">值</param>
