@@ -99,5 +99,5 @@ Response.Redirect("/waplogin.aspx?sid=-2");
         Response.Write(outHtml);
     }*/
 //ÏÔÊ¾µ×²¿
-//Response.Write(WapTool.showDown(wmlVo)); 
+Response.Write(WapTool.showDown(wmlVo)); 
 %>
