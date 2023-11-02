@@ -129,7 +129,7 @@ namespace YaoHuo.Plugin.BBS
                                             case 17:
                                                 {
                                                     //新消息
-                                                    string text3 = "备注：" + text + " [br][url=" + base.http_start + "bbs-" + this.id + ".html]到帖子中查看[/url]";
+                                                    string text3 = "" + text + " [br][url=" + base.http_start + "bbs-" + this.id + ".html]到帖子中查看[/url]";
                                                     base.MainBll.UpdateSQL("update [wap_bbs] set mygetmoney =mygetmoney + " + requestValue + " where id=" + long.Parse(this.id) + " and userid=" + base.siteid + " and book_pub='" + this.touserid + "'");
                                                     string text4 = "insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)";
                                                     string strSQL = text4 + "  values(" + base.siteid + "," + base.userid + ",'" + base.userVo.nickname + "','" + text2 + "','" + text3 + "'," + this.touserid + ",1)";
