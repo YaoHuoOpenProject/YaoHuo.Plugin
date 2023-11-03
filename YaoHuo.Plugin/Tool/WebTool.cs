@@ -12166,11 +12166,11 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
             }
             else if (headimg.StartsWith("http://qzapp.qlogo.cn"))
             {
-                result = "<img src=\"" + headimg + "\" alt=\"头像\" style=\"max-width:320;max-height:320;\"/>";
+                result = "<img src=\"" + headimg + "\" alt=\"头像\"/>";
             }
             else if (headimg.IndexOf("/") >= 0)
             {
-                result = "<img src=\"" + http_start + headimg + "\" style=\"max-width:320;max-height:320;\" alt=\"头像\"/>";
+                result = "<img src=\"" + http_start + headimg + "\" alt=\"头像\"/>";
             }
             else
             {
@@ -12180,7 +12180,7 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                     http_start,
                     "bbs/head/",
                     headimg,
-                    "\" style=\"max-width:320;max-height:320;\" alt=\"头像\"/>"
+                    "\" alt=\"头像\"/>"
                 });
             }
             return result;

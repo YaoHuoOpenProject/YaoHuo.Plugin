@@ -120,36 +120,43 @@ namespace YaoHuo.Plugin
             else
             {
                 if (!(action == "login")) return;
-                //谷歌人机验证
+                // 谷歌人机验证（reCAPTCHA v3）
                 var rpToken = GetRequestValue("g-recaptcha-response");
                 if (!string.IsNullOrEmpty(RecaptchaV2_Key))
                 {
-                    //进入登录逻辑标识
+                    // 进入登录逻辑标识
                     var goLogin = false;
-                    //
+
                     try
                     {
                         if (!string.IsNullOrEmpty(rpToken))
                         {
-                            //调用获取验证结果
-                            //var postUrl = "https://www.google.com/recaptcha/api/siteverify";//服务器在国外时
-                            var postUrl = "https://recaptcha.google.cn/recaptcha/api/siteverify";
+                            var postUrl = "https://recaptcha.google.cn/recaptcha/api/siteverify"; // 或者其他适当的URL
                             var postData = string.Format("secret={0}&response={1}", RecaptchaV2_Response, rpToken);
                             var data = HttpTool.Post(postUrl, postData);
                             var jObject = JObject.Parse(data);
-                            var rpOk = jObject["success"].ToStr().ToBool();
-                            if (rpOk) goLogin = true;
+                            var rpOk = jObject["success"].ToString().ToBool();
+                            if (rpOk)
+                            {
+                                // 检查reCAPTCHA v3返回的分数，可以根据分数采取不同的操作
+                                var score = jObject.Value<float>("score");
+                                if (score >= 0.5) // 调整分数阈值以满足你的需求
+                                {
+                                    goLogin = true;
+                                }
+                            }
                             System.IO.File.WriteAllText(@"D://q1.txt", data + goLogin);
                         }
                     }
                     catch { }
-                    //
+
                     if (!goLogin)
                     {
                         INFO = "NOTGOOGLERECAPTCHA";
                         return;
                     }
                 }
+
                 //帐号验证
                 var fcountSubMoneyFlag = WapTool.getFcountSubMoneyFlag(siteid, userid, IP);
                 if (int.Parse(KL_LoginTime) > 0)
