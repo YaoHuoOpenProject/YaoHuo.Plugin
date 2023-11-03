@@ -635,7 +635,7 @@ namespace YaoHuo.Plugin.Tool
                 stringBuilder.Append("<meta http-equiv=\"Cache-Control\" content=\"no-cache\"/>\n");
                 if (wmlVo.mycss.IndexOf("viewport") < 0)
                 {
-                    stringBuilder.Append("<meta name=\"viewport\" content=\"width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0\">\n");
+                    stringBuilder.Append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\">\n");
                 }
                 if (wmlVo.timer != null && wmlVo.timer != "")
                 {
