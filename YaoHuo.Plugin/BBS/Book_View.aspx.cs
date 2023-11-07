@@ -969,7 +969,7 @@ namespace YaoHuo.Plugin.BBS
                                                     num = 232;
                                                     continue;
                                                 }
-                                                stringBuilder2.Append("<span class=\"downloadurl\"><a class=\"urlbtn\"  href=\"" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + listVo[num2].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(listVo[num2].book_title) + "." + listVo[num2].book_ext + "\">点击下载</a></span><span class=\"downloadcount\">(" + listVo[num2].book_click + "次)</span>");
+                                                stringBuilder2.Append("<span class=\"downloadlink\"><span class=\"downloadurl\"><a class=\"urlbtn\"  href=\"" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + listVo[num2].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(listVo[num2].book_title) + "." + listVo[num2].book_ext + "\">点击下载</a></span><span class=\"downloadcount\">(" + listVo[num2].book_click + "次)</span></span>");
                                                 num = 60;
                                                 continue;
                                             case 232:
