@@ -814,9 +814,9 @@ namespace YaoHuo.Plugin.BBS
                                                 }
                                                 goto case 315;
                                             case 245:
-                                                stringBuilder2.Append("<br/>共有" + listVo.Count + "个附件");
+                                                stringBuilder2.Append("<div class=\"attachment\">共有" + listVo.Count + "个附件");
                                                 stringBuilder2.Append(text12);
-                                                stringBuilder2.Append(":<br/>");
+                                                stringBuilder2.Append(":</div>");
                                                 num = 315;
                                                 continue;
                                             case 315:
