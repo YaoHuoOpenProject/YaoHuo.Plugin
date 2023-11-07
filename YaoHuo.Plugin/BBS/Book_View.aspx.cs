@@ -814,9 +814,9 @@ namespace YaoHuo.Plugin.BBS
                                                 }
                                                 goto case 315;
                                             case 245:
-                                                stringBuilder2.Append("<div class=\"attachment\">共有" + listVo.Count + "个附件");
+                                                stringBuilder2.Append("<div class=\"attachment\"><span class=\"attachmenSum\"><span class=\"attachmentext\">共有</span><span class=\"attachmentlistnum\">" + listVo.Count + "</span><span class=\"attachmentext\">个附件</span><span class=\"attachmentCharge\">");
                                                 stringBuilder2.Append(text12);
-                                                stringBuilder2.Append(":</div>");
+                                                stringBuilder2.Append("</span></span>");
                                                 num = 315;
                                                 continue;
                                             case 315:
@@ -860,8 +860,11 @@ namespace YaoHuo.Plugin.BBS
                                                     num = 427;
                                                     continue;
                                                 }
-                                                stringBuilder2.Append("<div class=\"line\">");
-                                                stringBuilder2.Append(num2 + 1 + "." + listVo[num2].book_title);
+                                                stringBuilder2.Append("<div class=\"attachmentinfo\">");
+                                                stringBuilder2.Append("<span class=\"downloadname\">");
+                                                //stringBuilder2.Append(num2 + 1 + "." + listVo[num2].book_title);
+                                                stringBuilder2.Append("<span class='attachmentnumber'>" + (num2 + 1) + ".</span>");
+                                                stringBuilder2.Append("<span class='attachmentitle'>" + listVo[num2].book_title + "</span>");
                                                 num = 71;
                                                 continue;
                                             case 427:
@@ -887,7 +890,9 @@ namespace YaoHuo.Plugin.BBS
                                                 }
                                                 goto case 227;
                                             case 266:
+                                                stringBuilder2.Append("<span class=\"FileExtension\">");
                                                 stringBuilder2.Append("." + listVo[num2].book_ext);
+                                                stringBuilder2.Append("</span>");
                                                 num = 227;
                                                 continue;
                                             case 227:
@@ -902,11 +907,12 @@ namespace YaoHuo.Plugin.BBS
                                                 }
                                                 goto case 249;
                                             case 318:
+                                                stringBuilder2.Append("<span class=\"attachmentsize\">");
                                                 stringBuilder2.Append("(" + listVo[num2].book_size + ")");
                                                 num = 249;
                                                 continue;
                                             case 249:
-                                                stringBuilder2.Append("<br/>");
+                                                stringBuilder2.Append("</span></span>");
                                                 num = 161;
                                                 continue;
                                             case 161:
@@ -941,7 +947,8 @@ namespace YaoHuo.Plugin.BBS
                                                 num = 52;
                                                 continue;
                                             case 52:
-                                                stringBuilder2.Append("<a href=\"" + http_start + "bbs/picDIY.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;path=" + HttpUtility.UrlEncode("bbs\\" + listVo[num2].book_file) + "\"><img src=\"" + text6 + "\" " + towidths + " alt=\"" + listVo[num2].book_title + "\"/></a><br/>");
+                                                //stringBuilder2.Append("<a href=\"" + http_start + "bbs/picDIY.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;path=" + HttpUtility.UrlEncode("bbs\\" + listVo[num2].book_file) + "\"><img src=\"" + text6 + "\" " + towidths + " alt=\"" + listVo[num2].book_title + "\"/></a><br/>");
+                                                stringBuilder2.Append("<span class=\"attachmentimage\"><a href=\"" + http_start + "" + HttpUtility.UrlEncode("bbs\\" + listVo[num2].book_file) + "\"><img src=\"" + text6 + "\" " + towidths + " alt=\"" + listVo[num2].book_title + "\"/></a></span>");
                                                 num = 9;
                                                 continue;
                                             case 407:
@@ -962,7 +969,7 @@ namespace YaoHuo.Plugin.BBS
                                                     num = 232;
                                                     continue;
                                                 }
-                                                stringBuilder2.Append("<a class=\"urlbtn\"  href=\"" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + listVo[num2].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(listVo[num2].book_title) + "." + listVo[num2].book_ext + "\">点击下载</a>(" + listVo[num2].book_click + "次)<br/>");
+                                                stringBuilder2.Append("<span class=\"downloadurl\"><a class=\"urlbtn\"  href=\"" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + listVo[num2].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(listVo[num2].book_title) + "." + listVo[num2].book_ext + "\">点击下载</a></span><span class=\"downloadcount\">(" + listVo[num2].book_click + "次)</span>");
                                                 num = 60;
                                                 continue;
                                             case 232:
@@ -981,7 +988,7 @@ namespace YaoHuo.Plugin.BBS
                                             case 87:
                                                 stringBuilder2.Append("<video id=\"movies\" onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"" + listVo[num2].book_file + "\" autobuffer=\"true\" width=\"320px\" height=\"180px\" poster=\"/NetImages/play.gif\" controls>{抱歉,不支持在线播放，换个HTML5浏览器吧。}</video><br/><br/>");
                                                 stringBuilder2.Append("");
-                                                stringBuilder2.Append("<a class=\"urlbtn\" href=\"" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + listVo[num2].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(listVo[num2].book_title) + "." + listVo[num2].book_ext + "\">点击下载</a>(" + listVo[num2].book_click + "次)<br/>");
+                                                stringBuilder2.Append("<span class=\"downloadurl\"><a class=\"urlbtn\" href=\"" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + listVo[num2].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(listVo[num2].book_title) + "." + listVo[num2].book_ext + "\">点击下载</a></span><span class=\"downloadcount\">(" + listVo[num2].book_click + "次)</span>");
                                                 num = 86;
                                                 continue;
                                             case 86:
@@ -991,7 +998,9 @@ namespace YaoHuo.Plugin.BBS
                                             case 9:
                                             case 60:
                                             case 380:
-                                                stringBuilder2.Append(listVo[num2].book_content + "<br/>");
+                                                stringBuilder2.Append("<span class=\"attachmentNote\">");
+                                                stringBuilder2.Append(listVo[num2].book_content + "");
+                                                stringBuilder2.Append("</span>");
                                                 stringBuilder2.Append("</div>");
                                                 num2++;
                                                 num = 157;
@@ -1049,7 +1058,7 @@ namespace YaoHuo.Plugin.BBS
                                             case 2:
                                                 stringBuilder2.Append("<div class=\"btBox\"><div class=\"bt1\">");
                                                 stringBuilder2.Append("<a href=\"" + http_start + "bbs/book_view_showfile.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage + stypelink + "\">{查看所有附件}</a> ");
-                                                stringBuilder2.Append("</div></div>");
+                                                stringBuilder2.Append("</div></div></div>");
                                                 num = 391;
                                                 continue;
                                             case 391:
