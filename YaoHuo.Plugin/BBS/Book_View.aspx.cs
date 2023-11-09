@@ -948,7 +948,7 @@ namespace YaoHuo.Plugin.BBS
                                                 continue;
                                             case 52:
                                                 //stringBuilder2.Append("<a href=\"" + http_start + "bbs/picDIY.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;path=" + HttpUtility.UrlEncode("bbs\\" + listVo[num2].book_file) + "\"><img src=\"" + text6 + "\" " + towidths + " alt=\"" + listVo[num2].book_title + "\"/></a><br/>");
-                                                stringBuilder2.Append("<span class=\"attachmentimage\"><a href=\"" + http_start + "" + HttpUtility.UrlEncode("bbs\\" + listVo[num2].book_file) + "\"><img src=\"" + text6 + "\" " + towidths + " alt=\"" + listVo[num2].book_title + "\"/></a></span>");
+                                                stringBuilder2.Append("<span class=\"attachmentimage\"><a href=\"" + http_start + "" + HttpUtility.UrlEncode("bbs\\" + listVo[num2].book_file) + "\"><img src=\"" + text6 + "\" " + towidths + "/></a></span>");
                                                 num = 9;
                                                 continue;
                                             case 407:
