@@ -4609,30 +4609,32 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                         Random random = new Random();
                         while (match.Success)
                         {
-                            string[] array = match.Groups[2].Value.Replace("｜", "|").Split(new char[]
-                            {
-                                '*'
-                            });
-                            string[] array2 = match.Groups[3].Value.Replace("｜", "|").Split(new char[]
-                            {
-                                '|'
-                            });
+                            string[] array = match.Groups[2].Value.Replace("｜", "|").Split(new char[] { '*' });
+                            string[] array2 = match.Groups[3].Value.Replace("｜", "|").Split(new char[] { '|' });
+                            string width = array[0];
+                            string height = array[1];
+                            bool isWidthPercentage = width.EndsWith("%");
+                            bool isHeightPercentage = height.EndsWith("%");
+                            width = isWidthPercentage ? width.TrimEnd('%') : width;
+                            height = isHeightPercentage ? height.TrimEnd('%') : height;
                             string text8 = array2[1];
                             if (text8 == "")
                             {
                                 text8 = "/NetImages/play.gif";
                             }
+                            string widthAttribute = isWidthPercentage ? $"width=\"{width}%\"" : $"width=\"{width}px\"";
+                            string heightAttribute = isHeightPercentage ? $"height=\"{height}%\"" : $"height=\"{height}px\"";
                             WapStr = regex.Replace(WapStr, string.Concat(new string[]
                             {
-                                "<video id=\"movies\" onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"",
-                                array2[0],
-                                "\" autobuffer=\"true\" width=\"",
-                                array[0],
-                                "px\" height=\"",
-                                array[1],
-                                "px\" poster=\"",
-                                text8,
-                                "\" controls>{抱歉,不支持在线播放，换个HTML5浏览器吧。}</video>"
+                             "<video id=\"movies\" onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"",
+                             array2[0],
+                             "\" ",
+                             widthAttribute,
+                             " ",
+                             heightAttribute,
+                             " poster=\"",
+                             text8,
+                             "\" controls>{不支持在线播放，请更换浏览器}</video>"
                             }), 1);
                             match = match.NextMatch();
                         }
@@ -4642,6 +4644,7 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                         WapStr = regex.Replace(WapStr, "{格式错误}");
                     }
                 }
+
                 if (WapStr.IndexOf("[/audio]") > 0)
                 {
                     Regex regex = new Regex("(\\[audio=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/audio\\])");
@@ -4668,7 +4671,7 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                                 text2,
                                 "\" ",
                                 text9,
-                                ">{抱歉,不支持在线播放，换个HTML5浏览器吧。}</audio>"
+                                ">{不支持在线播放，请更换浏览器}</audio>"
                             }), 1);
                             match = match.NextMatch();
                         }

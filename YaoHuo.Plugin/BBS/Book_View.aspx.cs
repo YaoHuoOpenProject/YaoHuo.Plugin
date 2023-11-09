@@ -864,7 +864,7 @@ namespace YaoHuo.Plugin.BBS
                                                 stringBuilder2.Append("<span class=\"downloadname\">");
                                                 //stringBuilder2.Append(num2 + 1 + "." + listVo[num2].book_title);
                                                 stringBuilder2.Append("<span class='attachmentnumber'>" + (num2 + 1) + ".</span>");
-                                                stringBuilder2.Append("<span class='attachmentitle'>" + listVo[num2].book_title + "</span>");
+                                                stringBuilder2.Append("<span class='attachmentname'><span class='attachmentitle'>" + listVo[num2].book_title + "</span>");
                                                 num = 71;
                                                 continue;
                                             case 427:
@@ -892,7 +892,7 @@ namespace YaoHuo.Plugin.BBS
                                             case 266:
                                                 stringBuilder2.Append("<span class=\"FileExtension\">");
                                                 stringBuilder2.Append("." + listVo[num2].book_ext);
-                                                stringBuilder2.Append("</span>");
+                                                stringBuilder2.Append("</span></span>");
                                                 num = 227;
                                                 continue;
                                             case 227:
@@ -922,7 +922,7 @@ namespace YaoHuo.Plugin.BBS
                                                 num = 360;
                                                 continue;
                                             case 360:
-                                                num11 = ((".gif|.jpg|.jpeg|.png|.bmp|".IndexOf(listVo[num2].book_ext.ToLower()) < 0) ? 1 : 0);
+                                                num11 = ((".gif|.jpg|.jpeg|.png|.webp|.bmp|".IndexOf(listVo[num2].book_ext.ToLower()) < 0) ? 1 : 0);
                                                 goto IL_22be;
                                             case 116:
                                                 num11 = 1;
@@ -973,7 +973,7 @@ namespace YaoHuo.Plugin.BBS
                                                 num = 60;
                                                 continue;
                                             case 232:
-                                                flag = ".avi|.3gp|.mpeg|.wmv|.mp4".IndexOf(WapTool.right(listVo[num2].book_file.ToLower(), 3)) < 0;
+                                                flag = ".mov|.m3u8|.mp4".IndexOf(WapTool.right(listVo[num2].book_file.ToLower(), 3)) < 0;
                                                 num = 84;
                                                 continue;
                                             case 84:
@@ -982,11 +982,11 @@ namespace YaoHuo.Plugin.BBS
                                                     num = 87;
                                                     continue;
                                                 }
-                                                stringBuilder2.Append("<iframe width=\"300\" height=\"200\" src=\"" + listVo[num2].book_file + "\" frameborder=\"0\" allowfullscreen=\"\" qbiframeattached=\"true\" style=\"line-height: 2em; font-size: 16px; z-index: 1;\"></iframe><br/><br/>");
+                                                //stringBuilder2.Append("<iframe width=\"300\" height=\"200\" src=\"" + listVo[num2].book_file + "\" frameborder=\"0\" allowfullscreen=\"\" qbiframeattached=\"true\" style=\"line-height: 2em; font-size: 16px; z-index: 1;\"></iframe><br/><br/>");
                                                 num = 88;
                                                 continue;
                                             case 87:
-                                                stringBuilder2.Append("<video id=\"movies\" onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"" + listVo[num2].book_file + "\" autobuffer=\"true\" width=\"320px\" height=\"180px\" poster=\"/NetImages/play.gif\" controls>{抱歉,不支持在线播放，换个HTML5浏览器吧。}</video><br/><br/>");
+                                                stringBuilder2.Append("<span class=\"videoplay\"><video onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"" + listVo[num2].book_file + "\" width=\"100%\" height=\"100%\" poster=\"/NetImages/play.gif\" controls>{不支持在线播放，请更换浏览器}</video></span>");
                                                 stringBuilder2.Append("");
                                                 stringBuilder2.Append("<span class=\"downloadurl\"><a class=\"urlbtn\" href=\"" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + listVo[num2].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(listVo[num2].book_title) + "." + listVo[num2].book_ext + "\">点击下载</a></span><span class=\"downloadcount\">(" + listVo[num2].book_click + "次)</span>");
                                                 num = 86;
