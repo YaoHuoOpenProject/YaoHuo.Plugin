@@ -4626,7 +4626,7 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                             string heightAttribute = isHeightPercentage ? $"height=\"{height}%\"" : $"height=\"{height}px\"";
                             WapStr = regex.Replace(WapStr, string.Concat(new string[]
                             {
-                             "<video id=\"movies\" onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"",
+                             "<video class=\"ubbvideo\" onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"",
                              array2[0],
                              "\" ",
                              widthAttribute,
