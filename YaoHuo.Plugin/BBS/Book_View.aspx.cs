@@ -366,10 +366,6 @@ namespace YaoHuo.Plugin.BBS
                         stringBuilder.Append("<span class='attachmentext'>个附件</span>");
                         stringBuilder.Append("<span class='attachmentCharge'>" + text4 + "</span>");
                         stringBuilder.Append("</span>");
-
-                        stringBuilder.Append("<div class='attachment'>共有" + list2.Count + "个附件");
-                        stringBuilder.Append(text4);
-                        stringBuilder.Append(":<div/>");
                     }
                     string text7 = WapTool.getArryString(classVo.smallimg, '|', 33);
                     if (!WapTool.IsNumeric(text7))
@@ -383,44 +379,52 @@ namespace YaoHuo.Plugin.BBS
                     int i = 0;
                     while (list2 != null && i < list2.Count && i <= int.Parse(text7) - 1)
                     {
-                        stringBuilder.Append("<div class='line'>");
-                        stringBuilder.Append(i + 1 + "." + list2[i].book_title);
+                        stringBuilder.Append("<div class='attachmentinfo'><span class=\"downloadname\"><span class=\"attachmentnumber\">");
+                        stringBuilder.Append(i + 1 + ".");
+                        stringBuilder.Append("</span><span class='attachmentname'><span class='attachmentitle'>");
+                        stringBuilder.Append(list2[i].book_title);
+                        stringBuilder.Append("</span>");
                         if (list2[i].book_ext.Trim() != "" && list2[i].book_ext.Trim() != "mov")
                         {
+                            stringBuilder.Append("<span class=\"FileExtension\">");
                             stringBuilder.Append("." + list2[i].book_ext);
+                            stringBuilder.Append("</span></span>");
                         }
                         if (list2[i].book_size.Trim() != "")
                         {
+                            stringBuilder.Append("<span class=\"attachmentsize\">");
                             stringBuilder.Append("(" + list2[i].book_size + ")");
+                            stringBuilder.Append("</span></span>");
                         }
-                        stringBuilder.Append("<br/>");
-                        if (list2[i].book_ext.Trim() != "" && ".gif|.jpg|.jpeg|.png|.bmp|".IndexOf(list2[i].book_ext.ToLower()) >= 0)
+                        if (list2[i].book_ext.Trim() != "" && ".gif|.jpg|.jpeg|.png|.webp|.bmp|".IndexOf(list2[i].book_ext.ToLower()) >= 0)
                         {
                             string text8 = http_start + "bbs/" + list2[i].book_file;
                             if (list2[i].book_file.ToLower().StartsWith("http"))
                             {
                                 text8 = list2[i].book_file;
                             }
-                            stringBuilder.Append("<a href='" + http_start + "bbs/picDIY.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;path=" + HttpUtility.UrlEncode("bbs\\" + list2[i].book_file) + "'><img src='" + text8 + "' " + towidths + " alt='" + list2[i].book_title + "'/></a><br/>");
+                            stringBuilder.Append("<span class=\"attachmentimage\">");
+                            //stringBuilder.Append("<a href='" + http_start + "bbs/picDIY.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;path=" + HttpUtility.UrlEncode("bbs\\" + list2[i].book_file) + "'><img src='" + text8 + "' " + towidths + "/></a>");
+                            stringBuilder.Append("<a href='" + http_start + "bbs/" + HttpUtility.UrlDecode(list2[i].book_file) + "'>");
+                            //stringBuilder.Append("<img src='" + text8 + "' " + towidths + "/></a>");
+                            stringBuilder.Append("<img src='" + text8 + "' referrerpolicy='no-referrer'/></a>");
+                            stringBuilder.Append("</span>");
                         }
                         else if (list2[i].book_ext.Trim() != "" && ".mov".IndexOf(list2[i].book_ext.ToLower()) >= 0)
                         {
-                            if (".avi|.3gp|.mpeg|.wmv|.mp4".IndexOf(WapTool.right(list2[i].book_file.ToLower(), 3)) >= 0)
+                            if (".mov|.flv|.m3u8|.mp4".IndexOf(WapTool.right(list2[i].book_file.ToLower(), 3)) >= 0)
                             {
-                                stringBuilder.Append("<video id='movies' onclick='if(this.paused) { this.play();}else{ this.pause();}' src='" + list2[i].book_file + "' autobuffer='true' width='320px' height='180px' poster='/NetImages/play.gif' controls>{抱歉,不支持在线播放，换个HTML5浏览器吧。}</video><br/><br/>");
-                                stringBuilder.Append("");
-                                stringBuilder.Append("<a class='urlbtn' href='" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + list2[i].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(list2[i].book_title) + "." + list2[i].book_ext + "'>点击下载</a>(" + list2[i].book_click + "次)<br/>");
-                            }
-                            else
-                            {
-                                stringBuilder.Append("<iframe width='300' height='200' src='" + list2[i].book_file + "' frameborder='0' allowfullscreen='' qbiframeattached='true' style='line-height: 2em; font-size: 16px; z-index: 1;'></iframe><br/><br/>");
+                                stringBuilder.Append("<span class=\"videoplay\"><video onclick='if(this.paused) { this.play();}else{ this.pause();}' src='" + list2[i].book_file + "' autobuffer='true' width='100%' height='100%' poster='/NetImages/play.gif' controls>{不支持在线播放，请更换浏览器}</video>");
+                                //stringBuilder.Append("<span class=\"downloadlink\"><span class=\"downloadurl\"><a class='urlbtn' href='" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + list2[i].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(list2[i].book_title) + "." + list2[i].book_ext + "'>点击下载</a></span><span class=\"downloadcount\">(" + list2[i].book_click + "次)</span></span>");
                             }
                         }
                         else
                         {
-                            stringBuilder.Append("<a class='urlbtn'  href='" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + list2[i].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(list2[i].book_title) + "." + list2[i].book_ext + "'>点击下载</a>(" + list2[i].book_click + "次)<br/>");
+                            stringBuilder.Append("</span><span class=\"downloadlink\"><span class=\"downloadurl\"><a class='urlbtn'  href='" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + list2[i].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(list2[i].book_title) + "." + list2[i].book_ext + "'>点击下载</a></span><span class=\"downloadcount\">(" + list2[i].book_click + "次)</span></span>");
                         }
-                        stringBuilder.Append(list2[i].book_content + "<br/>");
+                        stringBuilder.Append("<span class=\"attachmentNote\">");
+                        stringBuilder.Append(list2[i].book_content + "");
+                        stringBuilder.Append("</span>");
                         stringBuilder.Append("</div>");
                         i++;
                     }
@@ -769,17 +773,17 @@ namespace YaoHuo.Plugin.BBS
                 string siteDefault = WapTool.GetSiteDefault(siteVo.Version, 33);
                 if (siteDefault != "1" && relistVo != null)
                 {
-                    StringBuilder stringBuilder2 = new StringBuilder();
-                    stringBuilder2.Append("siteid=" + siteid + " and userid in(");
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.Append("siteid=" + siteid + " and userid in(");
                     int i = 0;
                     while (relistVo != null && i < relistVo.Count && i < 5)
                     {
-                        stringBuilder2.Append(relistVo[i].userid);
-                        stringBuilder2.Append(",");
+                        stringBuilder.Append(relistVo[i].userid);
+                        stringBuilder.Append(",");
                         i++;
                     }
-                    stringBuilder2.Append("0)");
-                    userListVo_IDName = MainBll.GetUserListVo(stringBuilder2.ToString());
+                    stringBuilder.Append("0)");
+                    userListVo_IDName = MainBll.GetUserListVo(stringBuilder.ToString());
                 }
                 VisiteCount("正在浏览贴子:<a href='" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "'>" + bookVo.book_title + "</a>");
                 Action_user_doit(3);

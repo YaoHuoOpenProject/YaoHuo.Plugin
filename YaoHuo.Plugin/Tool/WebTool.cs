@@ -3739,33 +3739,35 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                         Regex regex = new Regex("(\\[img\\])(.[^\\[]*)(\\[\\/img\\])");
                         if (wmlVo.ver == "0")
                         {
-                            WapStr = regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\"/></a>");
+                            WapStr = regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\"/></a>");
                         }
                         else
                         {
-                            WapStr = regex.Replace(WapStr, "<img src=\"$2\"/>");
+                            WapStr = regex.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\"/>");
                         }
                     }
                     else
                     {
-                        Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp|WEBP|JPEG|PNG|GIF|JPG))(\\[\\/img\\])");
+                        //Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp|WEBP|JPEG|PNG|GIF|JPG))(\\[\\/img\\])");
+                        Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp))(\\[\\/img\\])", RegexOptions.IgnoreCase);
                         if (wmlVo.ver == "0")
                         {
-                            WapStr = regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\"/></a>");
+                            WapStr = regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\"/></a>");
                         }
                         else
                         {
-                            WapStr = regex.Replace(WapStr, "<img src=\"$2\"/>");
+                            WapStr = regex.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\"/>");
                         }
                     }
-                    Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp|WEBP|JPEG|PNG|GIF|JPG))\\])(.[^\\[]*)(\\[\\/img\\])");
+                    //Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp|WEBP|JPEG|PNG|GIF|JPG))\\])(.[^\\[]*)(\\[\\/img\\])");
+                    Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp))\\])(.[^\\[]*)(\\[\\/img\\])", RegexOptions.IgnoreCase);
                     if (wmlVo.ver == "0")
                     {
-                        WapStr = regex2.Replace(WapStr, "<a href=\"javascript:T('{{img=$2}}$4{{/img}}');\"><img src=\"$2\" alt=\"$4\"/></a>");
+                        WapStr = regex2.Replace(WapStr, "<a href=\"javascript:T('{{img=$2}}$4{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\"/></a>");
                     }
                     else
                     {
-                        WapStr = regex2.Replace(WapStr, "<img src=\"$2\" alt=\"$4\"/>");
+                        WapStr = regex2.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\"/>");
                     }
                 }
                 if (WapStr.IndexOf("[/bgsound]") > 0)
@@ -4634,7 +4636,7 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                              heightAttribute,
                              " poster=\"",
                              text8,
-                             "\" controls>{不支持在线播放，请更换浏览器}</video>"
+                             "\" controls referrerpolicy='no-referrer'>{不支持在线播放，请更换浏览器}</video>"
                             }), 1);
                             match = match.NextMatch();
                         }
@@ -4667,7 +4669,7 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                             }
                             WapStr = regex.Replace(WapStr, string.Concat(new string[]
                             {
-                                "<audio controls src=\"",
+                                "<audio referrerpolicy='no-referrer' controls src=\"",
                                 text2,
                                 "\" ",
                                 text9,
@@ -5298,20 +5300,20 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                         {
                             wmlVo.cityCode = match.Groups[3].Value;
                         }
-                        StringBuilder stringBuilder2 = new StringBuilder();
+                        StringBuilder stringBuilder = new StringBuilder();
                         if (text == "0")
                         {
-                            stringBuilder2.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"18\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=1&v=0&d=1&bd=0&k=&f=&q=1&e=0&a=1&c=54511&w=317&h=18&align=center\"></iframe>");
+                            stringBuilder.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"18\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=1&v=0&d=1&bd=0&k=&f=&q=1&e=0&a=1&c=54511&w=317&h=18&align=center\"></iframe>");
                         }
                         else if (text == "1")
                         {
-                            stringBuilder2.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"64\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=2&d=2&bd=0&k=&f=&q=0&e=1&a=1&c=54511&w=317&h=64&align=center\"></iframe>");
+                            stringBuilder.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"64\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=2&d=2&bd=0&k=&f=&q=0&e=1&a=1&c=54511&w=317&h=64&align=center\"></iframe>");
                         }
                         else if (text == "2")
                         {
-                            stringBuilder2.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"98\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=1&z=1&t=1&v=0&d=2&bd=0&k=&f=&q=1&e=1&a=1&c=54511&w=317&h=98&align=center\"></iframe>");
+                            stringBuilder.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"98\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=1&z=1&t=1&v=0&d=2&bd=0&k=&f=&q=1&e=1&a=1&c=54511&w=317&h=98&align=center\"></iframe>");
                         }
-                        WapStr = regex.Replace(WapStr, stringBuilder2.ToString(), 1);
+                        WapStr = regex.Replace(WapStr, stringBuilder.ToString(), 1);
                         match = match.NextMatch();
                     }
                 }
@@ -8144,7 +8146,6 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
         public static string GetCardIDNameFormID_multiple(string siteid, string id_multiple, string lang)
         {
             StringBuilder stringBuilder = new StringBuilder();
-            StringBuilder stringBuilder2 = new StringBuilder();
             id_multiple = id_multiple.Replace("_", "|");
             string[] array = id_multiple.Split(new char[]
             {
@@ -8158,7 +8159,7 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                     stringBuilder.Append(",");
                     if (array[i].Trim() == "0")
                     {
-                        stringBuilder2.Append("普通会员;");
+                        stringBuilder.Append("普通会员;");
                     }
                 }
             }
@@ -8182,11 +8183,11 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                 }
                 foreach (DataRow dataRow in dataSet.Tables[0].Rows)
                 {
-                    stringBuilder2.Append(WapTool.GetMyID(dataRow["subclassname"].ToString(), lang));
-                    stringBuilder2.Append(" ; ");
+                    stringBuilder.Append(WapTool.GetMyID(dataRow["subclassname"].ToString(), lang));
+                    stringBuilder.Append(" ; ");
                 }
             }
-            result = stringBuilder2.ToString();
+            result = stringBuilder.ToString();
             return result;
         }
 
