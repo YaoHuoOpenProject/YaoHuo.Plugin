@@ -139,7 +139,7 @@ namespace YaoHuo.Plugin
                             var jObject = JObject.Parse(data);
                             var rpOk = jObject["success"].ToStr().ToBool();
                             if (rpOk) goLogin = true;
-                            System.IO.File.WriteAllText(@"D://q1.txt", data + goLogin);
+                            //System.IO.File.WriteAllText(@"D://q1.txt", data + goLogin);
                         }
                     }
                     catch { }

@@ -3756,7 +3756,7 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                         }
                         else
                         {
-                            WapStr = regex.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\"/>");
+                            WapStr = regex.Replace(WapStr, "<img class=\"ubbimg\" src=\"$2\" referrerpolicy=\"no-referrer\"/>");
                         }
                     }
                     //Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp|WEBP|JPEG|PNG|GIF|JPG))\\])(.[^\\[]*)(\\[\\/img\\])");
@@ -5265,14 +5265,23 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                 }
                 if (WapStr.IndexOf("[img=") > 0)
                 {
-                    Regex regex = new Regex("\\[img=*([0-9]*),*([0-9]*)\\](.[^\\[]*)\\[\\/img]");
-                    if (wmlVo.ver == "1" || wmlVo.mycss == "")
+                    Regex regex = new Regex("\\[img=([0-9]+)(?:,([0-9]+))?\\](.[^\\[]*)\\[\\/img]");
+                    MatchCollection matches = regex.Matches(WapStr);
+                    foreach (Match match in matches)
                     {
-                        WapStr = regex.Replace(WapStr, "<img src=\"$3\" alt=\"$1X$2\" />");
-                    }
-                    else
-                    {
-                        WapStr = regex.Replace(WapStr, "<img border=\"0\" src=\"$3\" alt=\"$1X$2\" width=\"$1\" height=\"$2\"/>");
+                        string width = match.Groups[1].Value;
+                        string height = match.Groups[2].Success ? match.Groups[2].Value : "";
+                        string imageUrl = match.Groups[3].Value;
+                        string replacement = "";
+                        if (string.IsNullOrEmpty(height))
+                        {
+                            replacement = $"<img class=\"ubbimg\" src=\"{imageUrl}\" width=\"{width}\" />";
+                        }
+                        else
+                        {
+                            replacement = $"<img class=\"ubbimg\" src=\"{imageUrl}\" width=\"{width}\" height=\"{height}\" />";
+                        }
+                        WapStr = WapStr.Replace(match.Value, replacement);
                     }
                 }
                 if (WapStr.IndexOf("[/strike]") > 0)
