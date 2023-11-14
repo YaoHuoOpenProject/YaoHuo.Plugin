@@ -94,7 +94,6 @@
   <ItemGroup>
     <Content Include="BBS\Book_List.aspx" />
     <Content Include="BBS\Book_Re.aspx" />
-    <Content Include="BBS\Book_re_addfileShow.aspx" />
     <Content Include="BBS\Book_View.aspx" />
     <Content Include="BBS\Book_View_mod.aspx" />
     <Content Include="BBS\Index.aspx" />
@@ -134,10 +133,6 @@
     </Compile>
     <Compile Include="BBS\Book_Re.aspx.cs">
       <DependentUpon>Book_Re.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BBS\Book_re_addfileShow.aspx.cs">
-      <DependentUpon>Book_re_addfileShow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_View.aspx.cs">

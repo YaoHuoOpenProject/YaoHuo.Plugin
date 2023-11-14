@@ -3,10 +3,6 @@ using KeLin.ClassManager.BLL;
 using KeLin.ClassManager.Model;
 using KeLin.WebSite;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Web;
 using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.BBS
