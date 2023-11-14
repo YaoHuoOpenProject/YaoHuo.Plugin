@@ -88,5 +88,3 @@ else //2.0界面
                                                                                                                                                                              
 //显示底部
 Response.Write(WapTool.showDown(wmlVo)); %>
-
-
