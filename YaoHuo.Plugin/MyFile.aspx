@@ -39,7 +39,7 @@
         sb.Append(line2 + "我的ID: " + userVo.userid + WapTool.GetOLtimePic(http_start, siteVo.lvlTimeImg, userVo.LoginTimes) + div);
         sb.Append(line1 + "我的" + WapTool.GetSiteMoneyName(siteVo.sitemoneyname, this.lang) + ":" + userVo.money + "" + div);
         //==> 钱相关操作
-        var moneyHtml = line2;
+        string moneyHtml = line2;
         moneyHtml += "<a href=\"" + http_start + "chinabank_wap/RMBtoMoney.aspx?siteid=" + siteid + "" + "\">充值" + siteVo.sitemoneyname + "</a>";
         moneyHtml += "/";
         moneyHtml += "<a href=\"" + http_start + "/bbs/tomoney.aspx?siteid=" + siteid + "\">转账</a>";
