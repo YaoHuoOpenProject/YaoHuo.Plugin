@@ -43,7 +43,7 @@ namespace YaoHuo.Plugin.BBS
             id = GetRequestValue("id");
             lpage = GetRequestValue("lpage");
             IsLogin(userid, "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
-            needPassWordToAdmin();
+            //needPassWordToAdmin();
             if ("1".Equals(WapTool.getArryString(classVo.smallimg, '|', 28)) && "|00|01|".IndexOf(userVo.managerlvl) < 0)
             {
                 ShowTipInfo("修改贴子功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
@@ -102,7 +102,7 @@ namespace YaoHuo.Plugin.BBS
             else
             {
                 IsLogin(userid, "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
-                needPassWordToAdmin();
+                //needPassWordToAdmin();
             }
             int num = bbsVo.book_title.LastIndexOf("]");
             if (num > 0)

@@ -95,7 +95,10 @@
     <Content Include="BBS\Book_List.aspx" />
     <Content Include="BBS\Book_Re.aspx" />
     <Content Include="BBS\Book_View.aspx" />
+    <Content Include="BBS\Book_View_addfileAdd.aspx" />
     <Content Include="BBS\Book_View_mod.aspx" />
+    <Content Include="BBS\Book_View_modadd.aspx" />
+    <Content Include="BBS\book_View_modfile.aspx" />
     <Content Include="BBS\Index.aspx" />
     <Content Include="BBS\MessageList.aspx" />
     <Content Include="BBS\MessageList_Clear.aspx" />
@@ -139,8 +142,20 @@
       <DependentUpon>Book_View.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BBS\Book_View_addfileAdd.aspx.cs">
+      <DependentUpon>Book_View_addfileAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BBS\Book_View_mod.aspx.cs">
       <DependentUpon>Book_View_mod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_View_modadd.aspx.cs">
+      <DependentUpon>Book_View_modadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\book_View_modfile.aspx.cs">
+      <DependentUpon>book_View_modfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Index.aspx.cs">
