@@ -92,6 +92,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Lib\AspNetPager.dll" />
+    <Content Include="Lib\GamesClassManager.dll" />
+    <Content Include="Lib\KeLink.Com.dll" />
+    <Content Include="Lib\KeLin_WebSite.dll" />
+    <Content Include="Lib\KenLin_ClassManager.dll" />
+    <Content Include="Lib\UBB_Expand.dll" />
+    <Content Include="Lib\WeiXinClassManager.dll" />
+    <Content Include="Lib\WwwClassManager.dll" />
+    <Content Include="MyFile.aspx" />
+    <Content Include="WapIndex.aspx" />
+    <Content Include="WapLogin.aspx" />
+    <Content Include="Web.config" />
     <Content Include="BBS\Book_List.aspx" />
     <Content Include="BBS\Book_Re.aspx" />
     <Content Include="BBS\Book_View.aspx" />
@@ -111,21 +124,8 @@
     <Content Include="BBS\UserInfo.aspx" />
     <Content Include="BBS\View.aspx" />
     <Content Include="BBS\ViewUser.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="BBS\FriendList.aspx" />
-    <Content Include="Lib\AspNetPager.dll" />
-    <Content Include="Lib\GamesClassManager.dll" />
-    <Content Include="Lib\KeLink.Com.dll" />
-    <Content Include="Lib\KeLin_WebSite.dll" />
-    <Content Include="Lib\KenLin_ClassManager.dll" />
-    <Content Include="Lib\UBB_Expand.dll" />
-    <Content Include="Lib\WeiXinClassManager.dll" />
-    <Content Include="Lib\WwwClassManager.dll" />
     <Content Include="BBS\List.aspx" />
-    <Content Include="MyFile.aspx" />
-    <Content Include="WapIndex.aspx" />
-    <Content Include="WapLogin.aspx" />
-    <Content Include="Web.config" />
     <Content Include="XinZhang\Book_View_Buy.aspx" />
     <Content Include="XinZhang\Book_View_My.aspx" />
   </ItemGroup>
@@ -206,17 +206,17 @@
       <DependentUpon>ViewUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Conversion.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="BBS\FriendList.aspx.cs">
       <DependentUpon>FriendList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\List.aspx.cs">
       <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Conversion.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MyFile.aspx.cs">
