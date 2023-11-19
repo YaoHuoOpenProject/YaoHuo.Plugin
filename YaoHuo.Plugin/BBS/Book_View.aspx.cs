@@ -410,12 +410,16 @@ namespace YaoHuo.Plugin.BBS
                             stringBuilder.Append("<img src='" + text8 + "' referrerpolicy='no-referrer'/></a>");
                             stringBuilder.Append("</span>");
                         }
-                        else if (list2[i].book_ext.Trim() != "" && (".mov|.flv|.m3u8|.mp4").IndexOf(list2[i].book_ext.ToLower()) >= 0)
+                        else if (list2[i].book_ext.Trim() != "" && ("mov|flv|m3u8|mp4").IndexOf(list2[i].book_ext.ToLower()) >= 0)
                         {
-                            if (".mov|.flv|.m3u8|.mp4".IndexOf(WapTool.right(list2[i].book_file.ToLower(), 3)) >= 0)
+                            string fileExt = WapTool.right(list2[i].book_file.ToLower(), 3);
+                            if (("mov|flv|m3u8|mp4").IndexOf(fileExt) >= 0)
                             {
                                 stringBuilder.Append("<span class=\"videoplay\"><video onclick='if(this.paused) { this.play();}else{ this.pause();}' src='" + list2[i].book_file + "' autobuffer='true' width='100%' height='100%' poster='/NetImages/play.gif' controls>{不支持在线播放，请更换浏览器}</video>");
-                                stringBuilder.Append("<span class=\"downloadlink\"><span class=\"downloadurl\"><a class='urlbtn' href='" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + list2[i].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(list2[i].book_title) + "." + list2[i].book_ext + "'>点击下载</a></span><span class=\"downloadcount\">(" + list2[i].book_click + "次)</span></span>");
+                            }
+                            else
+                            {
+                                stringBuilder.Append("</span><span class=\"downloadlink\"><span class=\"downloadurl\"><a class='urlbtn'  href='" + http_start + "bbs/download.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;book_id=" + id + "&amp;id=" + list2[i].ID + "&amp;RndPath=" + siteVo.SaveUpFilesPath + "&amp;n=" + HttpUtility.UrlEncode(list2[i].book_title) + "." + list2[i].book_ext + "'>点击下载</a></span><span class=\"downloadcount\">(" + list2[i].book_click + "次)</span></span>");
                             }
                         }
                         else
