@@ -7671,7 +7671,7 @@ from wap_{text3}_view where ischeck=0 and userid={strSiteId}";
                     num,
                     ")</span></a></div></div>"
                 }));
-                stringBuilder.Append("<script src=\"/NetCSS/KL_common.js\" language=\"javascript\"></script>");
+                //stringBuilder.Append("<script src=\"/NetCSS/KL_common.js\" language=\"javascript\"></script>");
                 if (isShow_old_link != "1" && strlink.IndexOf("classid=0") < 0)
                 {
                     result = stringBuilder.ToString();
