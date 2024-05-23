@@ -395,7 +395,6 @@
         strhtml.Append("</div></div>");
 
         Response.Write(strhtml.ToString());
-
     }
 
     //显示底部

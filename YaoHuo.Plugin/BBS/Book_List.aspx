@@ -232,7 +232,6 @@
         strhtml.Append("</p>");
         //输出
         Response.Write(WapTool.ToWML(strhtml.ToString(), wmlVo));
-
     }
     else //2.0界面
     {
@@ -526,4 +525,5 @@
 
     Response.Write(ERROR);
     //显示底部
-    Response.Write(WapTool.showDown(wmlVo)); %>
+    Response.Write(WapTool.showDown(wmlVo));
+%>

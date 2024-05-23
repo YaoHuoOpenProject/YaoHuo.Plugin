@@ -192,5 +192,3 @@
     //显示底部
     Response.Write(WapTool.showDown(wmlVo));
 %>
-
-

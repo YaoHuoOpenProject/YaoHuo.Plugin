@@ -567,4 +567,5 @@
         //输出
         Response.Write(WapTool.ToWML(strhtml.ToString(), wmlVo));
     }
-    Response.Write(WapTool.showDown(wmlVo)); %>
+    Response.Write(WapTool.showDown(wmlVo));
+%>

@@ -92,7 +92,7 @@
             strhtml.Append("<div class='tip'>");
             strhtml.Append("<b>如果总是进入登录界面，请联系站长在“网站默认配制”“[55].参数保存方式”选[1]</b></div>");
         }
-         //看是存在html代
+        //看是存在html代
         string isWebHtml = this.ShowWEB_view(this.classid);
         if (this.INFO != "OK")
         {

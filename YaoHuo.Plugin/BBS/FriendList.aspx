@@ -246,16 +246,9 @@
 
         strhtml.Append("</div></div>");
         Response.Write(strhtml);
-
-
-
-
-
-
     }
 
     Response.Write(ERROR);
     //显示底部
-    Response.Write(WapTool.showDown(wmlVo)); %>
-
-
+    Response.Write(WapTool.showDown(wmlVo));
+%>
