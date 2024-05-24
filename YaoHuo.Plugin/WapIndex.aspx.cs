@@ -23,11 +23,19 @@ namespace YaoHuo.Plugin
         /// </summary>
         public void TestCode()
         {
-            //var d1 = "se9v+6Rln020DWhvmJTy8HLJQXBmYp26wE2s3a8s87TKDfh1ytd76lFsmnOrqbgArhglXIMdr8gfVDa7vWoUdse+d5HcbOjRDmwFbp8OHPw=";
-            //var d1d = WapTool.DesDecrypt(d1);
-            //var d1dd = WapTool.GetSiteDefault(d1d, 3);
-            //var d2 = "10000|1|1000|iiweb.com|art|bbs|pic|dow|rin|vid|wml|sho|gue|cha|lin|adl|";
-            //var d2d = WapTool.DesEncrypt(d2);
+            //配置文件 KL_License 值存储授权信息
+            //解密数据
+            var d1 = "se9v+6Rln020DWhvmJTy8HLJQXBmYp26wE2s3a8s87TKDfh1ytd76lFsmnOrqbgArhglXIMdr8gfVDa7vWoUdse+d5HcbOjRDmwFbp8OHPw=";
+            var d1d = WapTool.DesDecrypt(d1);
+            var d1dd = WapTool.GetSiteDefault(d1d, 3);
+            //加密数据
+            var d2 = "0|2|1000|iiweb.com|art|bbs|pic|dow|rin|vid|wml|sho|gue|cha|lin|adl|";
+            var d2d = WapTool.DesEncrypt(d2);
+            //版权去除
+            //1、domainname 表的 domain 改为自己的域名
+            //2、user 表的 version 有底部信息
+            //3、配置文件 KL_PAGE_DOWN 值改为空格
+            //
             var stringBuilder = new StringBuilder();
             var text12 = WapTool.DesDecrypt(WapTool.GetFunction()).ToLower();
             stringBuilder.Append("<b>内核版本</b>:10.2014.12.18<br/>");
