@@ -84,13 +84,15 @@ namespace YaoHuo.Plugin
             {
                 pd = true;
             }
-            logname = GetRequestValue("logname");
-            logpass = GetRequestValue("logpass");
             action = GetRequestValue("action");
             savesid = GetRequestValue("savesid");
+            //帐号
+            logname = GetRequestValue("logname");
             logname = logname.Replace("\n", "").Trim();
             logname = logname.Replace("=", "");
             logname = logname.Replace(" ", "");
+            //密码
+            logpass = GetRequestValue("logpass");
             logpass = logpass.Replace("\n", "").Trim();
             logpass = logpass.Replace("=", "");
             logpass = logpass.Replace(" ", "");
@@ -188,6 +190,9 @@ namespace YaoHuo.Plugin
             }
         }
 
+        /// <summary>
+        /// 检查用户
+        /// </summary>
         public void checkUser()
         {
             if (userVo == null)
@@ -241,6 +246,9 @@ namespace YaoHuo.Plugin
             {
                 base.Response.Cookies["sid" + text2].Expires = DateTime.Now.AddYears(1);
                 base.Response.Cookies["sid" + text2].Value = sid;
+                //帐号二次密码验证值
+                base.Response.Cookies["GET" + userVo.userid].Expires = DateTime.Now.AddYears(1);
+                base.Response.Cookies["GET" + userVo.userid].Value = PubConstant.md5(PubConstant.md5(PubConstant.md5($"{userVo.userid}{DateTime.Now.Day}")));
             }
             else
             {
