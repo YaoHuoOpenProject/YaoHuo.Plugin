@@ -1,34 +1,34 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WapLogin.aspx.cs" Inherits="YaoHuo.Plugin.WapLogin" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WapLogin.aspx.cs" Inherits="YaoHuo.Plugin.WapLogin" %>
 
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     if (this.INFO == "OK")
     {
-        wmlVo.timer = "0"; //5Ãëºó×Ô¶¯Ìø×ª
+        wmlVo.timer = "0"; //5ç§’åè‡ªåŠ¨è·³è½¬
         wmlVo.strUrl = backurl;
     }
     StringBuilder strhtml = new StringBuilder();
-    //ÏÔÊ¾Í·
+    //æ˜¾ç¤ºå¤´
     if (ver == "1")
     {
-        //ÏÔÊ¾WAP1.0
+        //æ˜¾ç¤ºWAP1.0
         Response.Redirect("/waplogin.aspx?sid=-2");
     }
     else
     {
-        //ÏÔÊ¾WAP2.0
+        //æ˜¾ç¤ºWAP2.0
         strhtml.Append("<!DOCTYPE html><html>");
         strhtml.Append("<head>");
         strhtml.Append("<meta charset='utf-8'>");
         strhtml.Append("<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>");
-        strhtml.Append("<meta name='keywords' content='Ñı»ğ,Ñı»ğÍø,Ñı»ğÂÛÌ³'/>");
+        strhtml.Append("<meta name='keywords' content='å¦–ç«,å¦–ç«ç½‘,å¦–ç«è®ºå›'/>");
         strhtml.Append("<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>");
-        strhtml.Append("<title>µÇÂ¼ - Ñı»ğÍø</title>");
+        strhtml.Append("<title>ç™»å½• - å¦–ç«ç½‘</title>");
         strhtml.Append("<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>");
         strhtml.Append("<link rel='stylesheet' href='/CSS/img/login/000.css'>");
         strhtml.Append("<script src='/CSS/img/login/bundle-home.js'></script>");
         strhtml.Append("<script src='/css/img/login/zero.js'></script>");
-        //µ×²¿ÒıÈë×ÊÔ´ÎÄ¼ş
+        //åº•éƒ¨å¼•å…¥èµ„æºæ–‡ä»¶
         if (!string.IsNullOrEmpty(this.RecaptchaV2_Key))
         {
             //strhtml.Append("<script src='https://www.google.com/recaptcha/api.js'></script>");
@@ -37,72 +37,72 @@
         strhtml.Append("</head>");
         if (this.INFO == "OK")
         {
-            strhtml.Append("<meta http-equiv='refresh' content='0;url=wapindex.aspx?sid=-2'><div class='wrap'><div style='text-align: center; color: #FFFFFF; font-weight: 500; padding-bottom: 10px; letter-spacing: 2px; margin-top: 120px;'><h1>µÇÂ¼³É¹¦</h1></div></div>");
+            strhtml.Append("<meta http-equiv='refresh' content='0;url=wapindex.aspx?sid=-2'><div class='wrap'><div style='text-align: center; color: #FFFFFF; font-weight: 500; padding-bottom: 10px; letter-spacing: 2px; margin-top: 120px;'><h1>ç™»å½•æˆåŠŸ</h1></div></div>");
         }
         if (this.INFO == "IDNULL")
         {
             strhtml.Append("<div class='tip'>");
-            strhtml.Append("" + this.GetLang("ÇëÊäÈëÕËºÅ|ÇëÊäÈëÕËºÅ|username not null!") + "</div>");
+            strhtml.Append("" + this.GetLang("è¯·è¾“å…¥è´¦å·|è¯·è¾“å…¥è´¦å·|username not null!") + "</div>");
         }
         else if (this.INFO == "PASSNULL")
         {
             strhtml.Append("<div class='tip'>");
-            strhtml.Append("" + this.GetLang("ÇëÊäÈëÃÜÂë|ÇëÊäÈëÃÜÂë|password not null!") + "</div>");
+            strhtml.Append("" + this.GetLang("è¯·è¾“å…¥å¯†ç |è¯·è¾“å…¥å¯†ç |password not null!") + "</div>");
         }
         else if (this.INFO == "NOTEXIST")
         {
             strhtml.Append("<div class='tip'>");
-            strhtml.Append("" + this.GetLang("ÇëÈ·ÈÏÕËºÅÕıÈ·|ÇëÈ·ÈÏÕËºÅÕıÈ·|username not exist ") + "</div>");
+            strhtml.Append("" + this.GetLang("è¯·ç¡®è®¤è´¦å·æ­£ç¡®|è¯·ç¡®è®¤è´¦å·æ­£ç¡®|username not exist ") + "</div>");
         }
         else if (this.INFO == "PASSERR")
         {
             strhtml.Append("<div class='tip'>");
-            strhtml.Append("" + this.GetLang("ÇëÈ·ÈÏÃÜÂëÕıÈ·|ÇëÈ·ÈÏÃÜÂëÕıÈ·|Password error!") + "</div>");
+            strhtml.Append("" + this.GetLang("è¯·ç¡®è®¤å¯†ç æ­£ç¡®|è¯·ç¡®è®¤å¯†ç æ­£ç¡®|Password error!") + "</div>");
         }
         else if (this.INFO == "USERLOCK")
         {
             strhtml.Append("<div class='tip'>");
-            strhtml.Append("" + this.GetLang("ÓÃ»§±»Ëø¶¨|ÓÃ»§±»Ëø¶¨|user locked!") + "</div>");
+            strhtml.Append("" + this.GetLang("ç”¨æˆ·è¢«é”å®š|ç”¨æˆ·è¢«é”å®š|user locked!") + "</div>");
         }
         else if (this.INFO == "MAXLOGIN")
         {
             strhtml.Append("<div class='tip'>");
-            strhtml.Append("" + this.GetLang("µÇÂ¼Ê§°Ü³¬¹ı " + this.KL_LoginTime + " ´ÎÁË£¬ÇëÃ÷ÌìÔÙÀ´") + "</div>");
+            strhtml.Append("" + this.GetLang("ç™»å½•å¤±è´¥è¶…è¿‡ " + this.KL_LoginTime + " æ¬¡äº†ï¼Œè¯·æ˜å¤©å†æ¥") + "</div>");
         }
         else if (this.INFO == "NOTGOOGLERECAPTCHA")
         {
             strhtml.Append("<div class='tip'>");
-            strhtml.Append("" + this.GetLang("ÈË»úÑéÖ¤Ê§°Ü£¬ÇëÖØÊÔ") + "</div>");
+            strhtml.Append("" + this.GetLang("äººæœºéªŒè¯å¤±è´¥ï¼Œè¯·é‡è¯•") + "</div>");
         }
         else if (this.INFO == "weixin")
         {
             strhtml.Append("<div class='tip'>");
             if (publicID != "")
             {
-                strhtml.Append("ÇëÔÚÎ¢ĞÅ¼Ó±¾Õ¾¹«¹²ÕÊºÅ:" + publicName + " »ò " + publicID + " £¬¹Ø×¢ºó×Ô¶¯×¢²á³ÉÎª»áÔ±£¬¸ü¸ÄÃÜÂëÔÚÎ¢ĞÅÉÏ·¢ËÍ£ºÃÜÂë+XXXX£¬²é¿´×¢²áÕÊºÅĞÅÏ¢·¢ËÍ£ºÕÊºÅ");
+                strhtml.Append("è¯·åœ¨å¾®ä¿¡åŠ æœ¬ç«™å…¬å…±å¸å·:" + publicName + " æˆ– " + publicID + " ï¼Œå…³æ³¨åè‡ªåŠ¨æ³¨å†Œæˆä¸ºä¼šå‘˜ï¼Œæ›´æ”¹å¯†ç åœ¨å¾®ä¿¡ä¸Šå‘é€ï¼šå¯†ç +XXXXï¼ŒæŸ¥çœ‹æ³¨å†Œå¸å·ä¿¡æ¯å‘é€ï¼šå¸å·");
             }
             else
             {
-                strhtml.Append("±¾Õ¾¹ÜÀíÔ±»¹Ã»ÓĞÅäÖÃÎ¢ĞÅ¹²ÕÊºÅ¡£");
+                strhtml.Append("æœ¬ç«™ç®¡ç†å‘˜è¿˜æ²¡æœ‰é…ç½®å¾®ä¿¡å…±å¸å·ã€‚");
             }
             strhtml.Append("</div>");
         }
         if (errorinfo == "config")
         {
             strhtml.Append("<div class='tip'>");
-            strhtml.Append("<b>Èç¹û×ÜÊÇ½øÈëµÇÂ¼½çÃæ£¬ÇëÁªÏµÕ¾³¤ÔÚ¡°ÍøÕ¾Ä¬ÈÏÅäÖÆ¡±¡°[55].²ÎÊı±£´æ·½Ê½¡±Ñ¡[1]</b></div>");
+            strhtml.Append("<b>å¦‚æœæ€»æ˜¯è¿›å…¥ç™»å½•ç•Œé¢ï¼Œè¯·è”ç³»ç«™é•¿åœ¨â€œç½‘ç«™é»˜è®¤é…åˆ¶â€â€œ[55].å‚æ•°ä¿å­˜æ–¹å¼â€é€‰[1]</b></div>");
         }
-        //¿´ÊÇ´æÔÚhtml´ú
+        //çœ‹æ˜¯å­˜åœ¨htmlä»£
         string isWebHtml = this.ShowWEB_view(this.classid);
         if (this.INFO != "OK")
         {
-            strhtml.Append("<body id='login' class='unloaded'><div class='wrapper'><div class='zero'></div><div class='login'> <form action='/waplogin.aspx' method='post' name='login' class='container offset1 loginform'> <div id='owl-login'> <div class='eyes'></div> <div class='arm-up-right'></div> <div class='arm-up-left'></div> <div class='arm-down-left'></div> <div class='arm-down-right'></div> </div><div class='pad'> <div class='control-group'> <div class='controls'> <label for='email' class='control-label fa fa-envelope'></label> <input type='text' name='logname' id='logname' placeholder='ÊÖ»ú»òIDºÅ' tabindex='1' autofocus='autofocus' required class='form-control input-medium' value='" + this.logname + "'/> </div> </div> <div class='control-group'> <div class='controls'> <label for='password' class='control-label fa fa-asterisk'> </label> <input id='password' type='password' name='logpass' placeholder='ÇëÊäÈëÃÜÂë' tabindex='2' required class='form-control input-medium' value='" + this.logpass + "'/> <input type='hidden' name='action' value='login'><input type='hidden' name='classid' value='0'><input type='hidden' name='siteid' value='1000'><input type='hidden' name='backurl' value='" + backurl + "'/><input type='hidden' name='savesid' value='0' ></div></div>");
-            //¹È¸èÈË»úÑéÖ¤ÅäÖÃ
+            strhtml.Append("<body id='login' class='unloaded'><div class='wrapper'><div class='zero'></div><div class='login'> <form action='/waplogin.aspx' method='post' name='login' class='container offset1 loginform'> <div id='owl-login'> <div class='eyes'></div> <div class='arm-up-right'></div> <div class='arm-up-left'></div> <div class='arm-down-left'></div> <div class='arm-down-right'></div> </div><div class='pad'> <div class='control-group'> <div class='controls'> <label for='email' class='control-label fa fa-envelope'></label> <input type='text' name='logname' id='logname' placeholder='æ‰‹æœºæˆ–IDå·' tabindex='1' autofocus='autofocus' required class='form-control input-medium' value='" + this.logname + "'/> </div> </div> <div class='control-group'> <div class='controls'> <label for='password' class='control-label fa fa-asterisk'> </label> <input id='password' type='password' name='logpass' placeholder='è¯·è¾“å…¥å¯†ç ' tabindex='2' required class='form-control input-medium' value='" + this.logpass + "'/> <input type='hidden' name='action' value='login'><input type='hidden' name='classid' value='0'><input type='hidden' name='siteid' value='1000'><input type='hidden' name='backurl' value='" + backurl + "'/><input type='hidden' name='savesid' value='0' ></div></div>");
+            //è°·æ­ŒäººæœºéªŒè¯é…ç½®
             if (!string.IsNullOrEmpty(this.RecaptchaV2_Key))
             {
                 strhtml.Append("<div style='margin-bottom: -20px;' class='g-recaptcha' data-sitekey='" + this.RecaptchaV2_Key + "'></div>");
             }
-            strhtml.Append("</div><div class='form-actions'> <a tabindex='5' href='/bbs-138352.html' class='btn pull-left btn-link text-muted'>×¢²á</a> <button type='submit' tabindex='4' class='btn btn-primary'>µÇÂ¼</button> </div></form></div></div></html>");
+            strhtml.Append("</div><div class='form-actions'> <a tabindex='5' href='/bbs-138352.html' class='btn pull-left btn-link text-muted'>æ³¨å†Œ</a> <button type='submit' tabindex='4' class='btn btn-primary'>ç™»å½•</button> </div></form></div></div></html>");
         }
         if (isWebHtml != "")
         {
@@ -112,6 +112,6 @@
         }
         Response.Write(strhtml);
     }
-    //ÏÔÊ¾µ×²¿
+    //æ˜¾ç¤ºåº•éƒ¨
     Response.Write(WapTool.showDown(wmlVo));
 %>

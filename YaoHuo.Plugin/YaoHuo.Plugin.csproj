@@ -45,7 +45,8 @@
     <Reference Include="AspNetPager">
       <HintPath>Lib\AspNetPager.dll</HintPath>
     </Reference>
-    <Reference Include="GamesClassManager">
+    <Reference Include="GamesClassManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>Lib\GamesClassManager.dll</HintPath>
     </Reference>
     <Reference Include="KeLink.Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -93,6 +94,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Games\ChuiNiu\Add.aspx" />
+    <Content Include="Games\ChuiNiu\Book_List.aspx" />
+    <Content Include="Games\ChuiNiu\Book_View.aspx" />
+    <Content Include="Games\ChuiNiu\Doit.aspx" />
+    <Content Include="Games\ChuiNiu\Index.aspx" />
+    <Content Include="Games\GamesIndex.aspx" />
+    <Content Include="Games\Index.aspx" />
     <Content Include="Lib\AspNetPager.dll" />
     <Content Include="Lib\GamesClassManager.dll" />
     <Content Include="Lib\KeLink.Com.dll" />
@@ -219,6 +227,34 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Games\ChuiNiu\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\ChuiNiu\Book_List.aspx.cs">
+      <DependentUpon>Book_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\ChuiNiu\Book_View.aspx.cs">
+      <DependentUpon>Book_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\ChuiNiu\Doit.aspx.cs">
+      <DependentUpon>Doit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\ChuiNiu\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\GamesIndex.aspx.cs">
+      <DependentUpon>GamesIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="MyFile.aspx.cs">
       <DependentUpon>MyFile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +264,9 @@
     <Compile Include="Tool\ExcludeTool.cs" />
     <Compile Include="Tool\HttpTool.cs" />
     <Compile Include="Tool\MessageTool.cs" />
+    <Compile Include="Tool\PageWapTemp.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Tool\SendMoneyTool.cs" />
     <Compile Include="Tool\WebTool.cs" />
     <Compile Include="WapIndex.aspx.cs">
@@ -247,6 +286,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

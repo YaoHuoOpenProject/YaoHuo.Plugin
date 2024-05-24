@@ -1,4 +1,4 @@
-# YaoHuo.Plugin
+﻿# YaoHuo.Plugin
 
 ## 插件功能
 
@@ -20,9 +20,11 @@
 10. 我的勋章
 11. 银行功能
 
-## 代码示例
+## 开发
 
-> zgcwkj.aspx
+<details>
+<summary><strong>zgcwkj.aspx 示例</strong></summary>
+<div>
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="zgcwkj.aspx.cs" Inherits="YaoHuo.Plugin.zgcwkj" %>
@@ -45,7 +47,12 @@
 <%= strhtml %>
 ```
 
-> zgcwkj.aspx.cs
+</div>
+</details>
+
+<details>
+<summary><strong>zgcwkj.aspx.cs 示例</strong></summary>
+<div>
 
 ```
 using KeLin.ClassManager;
@@ -201,7 +208,10 @@ namespace YaoHuo.Plugin
 }
 ```
 
-## 修改地址
+</div>
+</details>
+
+## 地址
 
 1. /admin/addtopwapALL.aspx?siteid=1000&classid=0
 2. /bbs/admin_WAPadvertise.aspx?action=go&siteid=1000&classid=0

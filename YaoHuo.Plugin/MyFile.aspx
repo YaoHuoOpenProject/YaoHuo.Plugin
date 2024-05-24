@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyFile.aspx.cs" Inherits="YaoHuo.Plugin.MyFile" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyFile.aspx.cs" Inherits="YaoHuo.Plugin.MyFile" %>
 
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
@@ -21,71 +21,71 @@
         line = "----------<br/>";
         div = "<br/>";
     }
-    //¿´ÊÇ·ñÓĞµçÄÔ°æhtml´úÂë
+    //çœ‹æ˜¯å¦æœ‰ç”µè„‘ç‰ˆhtmlä»£ç 
     string isWebHtml = this.ShowWEB_list("-1");
-    //ÏÔÊ¾Í·
-    Response.Write(WapTool.showTop(this.GetLang("ÎÒµÄµØÅÌ|ÎÒµÄµØ±P|my zone"), wmlVo));
+    //æ˜¾ç¤ºå¤´
+    Response.Write(WapTool.showTop(this.GetLang("æˆ‘çš„åœ°ç›˜|æˆ‘çš„åœ°ç›¤|my zone"), wmlVo));
 
     if (this.ver == "1")
     {
         Response.Write("<p>");
     }
 
-    //ÏÔÊ¾ÖĞ¼ä²¿·Ö
+    //æ˜¾ç¤ºä¸­é—´éƒ¨åˆ†
     if (strHtml.IndexOf("[myfile]") > -1 || isWebHtml.IndexOf("[view]") > -1)
     {
-        sb.Append(welcome + "»¶Ó­Äú£º" + WapTool.GetColorNickName(userVo.idname, userVo.nickname, lang, ver) + div);
-        sb.Append(line1 + "<a href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=0&amp;types=0" + "\">ĞÅÏä</a>:(" + messagecount + "/" + messageAll + ") <a href=\"" + http_start + "bbs/FriendList.aspx?siteid=" + siteid + "&amp;classid=0&amp;friendtype=0" + "\">ºÃÓÑ</a>(" + goodfriend + ")" + div);
-        sb.Append(line2 + "ÎÒµÄID: " + userVo.userid + WapTool.GetOLtimePic(http_start, siteVo.lvlTimeImg, userVo.LoginTimes) + div);
-        sb.Append(line1 + "ÎÒµÄ" + WapTool.GetSiteMoneyName(siteVo.sitemoneyname, this.lang) + ":" + userVo.money + "" + div);
-        //==> Ç®Ïà¹Ø²Ù×÷
+        sb.Append(welcome + "æ¬¢è¿æ‚¨ï¼š" + WapTool.GetColorNickName(userVo.idname, userVo.nickname, lang, ver) + div);
+        sb.Append(line1 + "<a href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=0&amp;types=0" + "\">ä¿¡ç®±</a>:(" + messagecount + "/" + messageAll + ") <a href=\"" + http_start + "bbs/FriendList.aspx?siteid=" + siteid + "&amp;classid=0&amp;friendtype=0" + "\">å¥½å‹</a>(" + goodfriend + ")" + div);
+        sb.Append(line2 + "æˆ‘çš„ID: " + userVo.userid + WapTool.GetOLtimePic(http_start, siteVo.lvlTimeImg, userVo.LoginTimes) + div);
+        sb.Append(line1 + "æˆ‘çš„" + WapTool.GetSiteMoneyName(siteVo.sitemoneyname, this.lang) + ":" + userVo.money + "" + div);
+        //==> é’±ç›¸å…³æ“ä½œ
         string moneyHtml = line2;
-        moneyHtml += "<a href=\"" + http_start + "chinabank_wap/RMBtoMoney.aspx?siteid=" + siteid + "" + "\">³äÖµ" + siteVo.sitemoneyname + "</a>";
+        moneyHtml += "<a href=\"" + http_start + "chinabank_wap/RMBtoMoney.aspx?siteid=" + siteid + "" + "\">å……å€¼" + siteVo.sitemoneyname + "</a>";
         moneyHtml += "/";
-        moneyHtml += "<a href=\"" + http_start + "/bbs/tomoney.aspx?siteid=" + siteid + "\">×ªÕË</a>";
+        moneyHtml += "<a href=\"" + http_start + "/bbs/tomoney.aspx?siteid=" + siteid + "\">è½¬è´¦</a>";
         moneyHtml += "/";
-        moneyHtml += "<a href=\"" + http_start + "bbs/banklist.aspx?siteid=" + siteid + "&amp;classid=0&amp;key=" + this.userid + "" + "\">Ã÷Ï¸</a>";
+        moneyHtml += "<a href=\"" + http_start + "bbs/banklist.aspx?siteid=" + siteid + "&amp;classid=0&amp;key=" + this.userid + "" + "\">æ˜ç»†</a>";
         moneyHtml += div;
         sb.Append(moneyHtml);
-        //==> Ç®Ïà¹Ø²Ù×÷
-        sb.Append(line1 + "ÒøĞĞÕË»§:" + userVo.myBankMoney + " <a href=\"/bbs/tomybankmoney.aspx?type=1\">È¡¿î</a>" + div);
-        sb.Append(line2 + "ÎÒµÄ¾­Ñé:" + userVo.expr + div);
-        sb.Append(line1 + "ÎÒµÄµÈ¼¶:" + WapTool.GetLevl(siteVo.lvlNumer, userVo.expr, userVo.money, type) + div);
-        sb.Append(line2 + "ÎÒµÄÍ·ÏÎ:" + WapTool.GetHandle(siteVo.lvlNumer, userVo.expr, userVo.money, type) + div);
-        sb.Append(line1 + "ÎÒµÄÉí·İ:" + WapTool.GetMyID(userVo.idname, lang) + "<br/><a href=\"/wapindex.aspx?siteid=" + siteid + "&amp;classid=171" + "\">" + WapTool.showIDEndTime(userVo.siteid, userVo.userid, userVo.endTime, this.lang) + "</a>" + div);
-        sb.Append(line1 + "¹ÜÀíÈ¨ÏŞ:" + WapTool.GetIDName(siteid, this.userid, userVo.managerlvl, this.lang) + div);
-        sb.Append(line2 + "<a href=\"" + http_start + "xinzhang/book_view_my.aspx?siteid=" + siteid + "&amp;classid=0" + "\">ÎÒµÄÑ«ÕÂ</a>:" + WapTool.GetMedal(userVo.userid.ToString(), userVo.moneyname, WapTool.GetSiteDefault(siteVo.Version, 47), wmlVo) + div);
-        sb.Append(line2 + "<a href=\"/wapindex.aspx?siteid=" + siteid + "&amp;classid=224" + "\">ÉêÇëÑ«ÕÂ</a>/<a href=\"/wapindex.aspx?siteid=" + siteid + "&amp;classid=226" + "\">¹ºÂòÑ«ÕÂ</a>" + div);
-        //"<br/><a href=\"" + this.http_start + "XinZhang/XinZhangLieBiao.asp?siteid="+this.siteid+"&amp;classid=0&amp;sid="+this.sid+"\">¹ºÂòÑ«ÕÂ</a>" +
+        //==> é’±ç›¸å…³æ“ä½œ
+        sb.Append(line1 + "é“¶è¡Œè´¦æˆ·:" + userVo.myBankMoney + " <a href=\"/bbs/tomybankmoney.aspx?type=1\">å–æ¬¾</a>" + div);
+        sb.Append(line2 + "æˆ‘çš„ç»éªŒ:" + userVo.expr + div);
+        sb.Append(line1 + "æˆ‘çš„ç­‰çº§:" + WapTool.GetLevl(siteVo.lvlNumer, userVo.expr, userVo.money, type) + div);
+        sb.Append(line2 + "æˆ‘çš„å¤´è¡”:" + WapTool.GetHandle(siteVo.lvlNumer, userVo.expr, userVo.money, type) + div);
+        sb.Append(line1 + "æˆ‘çš„èº«ä»½:" + WapTool.GetMyID(userVo.idname, lang) + "<br/><a href=\"/wapindex.aspx?siteid=" + siteid + "&amp;classid=171" + "\">" + WapTool.showIDEndTime(userVo.siteid, userVo.userid, userVo.endTime, this.lang) + "</a>" + div);
+        sb.Append(line1 + "ç®¡ç†æƒé™:" + WapTool.GetIDName(siteid, this.userid, userVo.managerlvl, this.lang) + div);
+        sb.Append(line2 + "<a href=\"" + http_start + "xinzhang/book_view_my.aspx?siteid=" + siteid + "&amp;classid=0" + "\">æˆ‘çš„å‹‹ç« </a>:" + WapTool.GetMedal(userVo.userid.ToString(), userVo.moneyname, WapTool.GetSiteDefault(siteVo.Version, 47), wmlVo) + div);
+        sb.Append(line2 + "<a href=\"/wapindex.aspx?siteid=" + siteid + "&amp;classid=224" + "\">ç”³è¯·å‹‹ç« </a>/<a href=\"/wapindex.aspx?siteid=" + siteid + "&amp;classid=226" + "\">è´­ä¹°å‹‹ç« </a>" + div);
+        //"<br/><a href=\"" + this.http_start + "XinZhang/XinZhangLieBiao.asp?siteid="+this.siteid+"&amp;classid=0&amp;sid="+this.sid+"\">è´­ä¹°å‹‹ç« </a>" +
         sb.Append(line);
-        //sb.Append(line2 + "ÎÒµÄRMB:£¤" + userVo.RMB.ToString("f2") + "<br/><a href=\"" + http_start + "chinabank_wap/selbank_wap.aspx?siteid=" + siteid +"\">ÔÚÏß³äÖµ</a>/<a href=\"" + http_start + "chinabank_wap/banklist.aspx?siteid=" + siteid + "&amp;tositeid=" + this.siteid + "&amp;touserid=" + this.userid + "" + "\">Ã÷Ï¸</a>" + div);
-        //sb.Append(line2 + "µç×ÓÓÊÏä Í¨Ñ¶µØÖ·" + div);
-        sb.Append(title + "ÎÒµÄÉèÖÃ" + div);
-        sb.Append(line1 + "<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + this.siteid + "&amp;touserid=" + this.userid + "\">ÎÒµÄ¿Õ¼ä</a> <a href=\"" + this.http_start + "bbs/modifyuserinfo.aspx?siteid=" + siteid + "" + "\">ĞŞ¸Ä×ÊÁÏ</a>" + div);
-        sb.Append(line2 + "<a href=\"" + http_start + "bbs/favlist.aspx?siteid=" + siteid + "&amp;classid=0" + "\">ÎÒµÄÊÕ²Ø</a> <a href=\"/album/albumlist.aspx?siteid=1000&classid=0&smalltypeid=0&touserid=" + this.userid + "" + "\">ÎÒµÄÏà²á</a>" + div);
-        //sb.Append(line1 + "<a href=\"/album/albumlist.aspx?siteid=1000&classid=0&smalltypeid=0&touserid="+this.userid+"" + "\">ÎÒµÄÏà²á</a>" + div);
+        //sb.Append(line2 + "æˆ‘çš„RMB:ï¿¥" + userVo.RMB.ToString("f2") + "<br/><a href=\"" + http_start + "chinabank_wap/selbank_wap.aspx?siteid=" + siteid +"\">åœ¨çº¿å……å€¼</a>/<a href=\"" + http_start + "chinabank_wap/banklist.aspx?siteid=" + siteid + "&amp;tositeid=" + this.siteid + "&amp;touserid=" + this.userid + "" + "\">æ˜ç»†</a>" + div);
+        //sb.Append(line2 + "ç”µå­é‚®ç®± é€šè®¯åœ°å€" + div);
+        sb.Append(title + "æˆ‘çš„è®¾ç½®" + div);
+        sb.Append(line1 + "<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + this.siteid + "&amp;touserid=" + this.userid + "\">æˆ‘çš„ç©ºé—´</a> <a href=\"" + this.http_start + "bbs/modifyuserinfo.aspx?siteid=" + siteid + "" + "\">ä¿®æ”¹èµ„æ–™</a>" + div);
+        sb.Append(line2 + "<a href=\"" + http_start + "bbs/favlist.aspx?siteid=" + siteid + "&amp;classid=0" + "\">æˆ‘çš„æ”¶è—</a> <a href=\"/album/albumlist.aspx?siteid=1000&classid=0&smalltypeid=0&touserid=" + this.userid + "" + "\">æˆ‘çš„ç›¸å†Œ</a>" + div);
+        //sb.Append(line1 + "<a href=\"/album/albumlist.aspx?siteid=1000&classid=0&smalltypeid=0&touserid="+this.userid+"" + "\">æˆ‘çš„ç›¸å†Œ</a>" + div);
         sb.Append(line);
-        sb.Append(title + "Ïà¹ØĞÅÏ¢" + div);
-        sb.Append(line2 + "<a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=0&amp;key=" + this.userid + "&amp;type=pub\">ÎÒµÄÌû×Ó</a> <a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=0&amp;touserid=" + userid + "&amp;" + "\">»Ø¸´(" + userVo.bbsReCount + ")</a>" + div);
-        //sb.Append(line2 + "<a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=0&amp;key=" + this.userid + "&amp;type=pub\">ÎÒµÄÌû×Ó(" + userVo.bbsCount + ")</a> <a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=0&amp;touserid=" + userid + "&amp;" + "\">»Ø¸´(" + userVo.bbsReCount + ")</a>" + div);
-        //sb.Append(line1 + "<a href=\"" + http_start + "bbs/FriendList.aspx?siteid=" + siteid + "&amp;classid=0&amp;friendtype=2" + "\">ÎÒµÄ×·Çó</a> <a href=\"" + http_start + "bbs/FriendList.aspx?siteid=" + siteid + "&amp;classid=0&amp;friendtype=4" + "\">×·ÇóÎÒµÄÈË</a>" + div);
-        sb.Append(line2 + "<a href=\"" + http_start + "clan/main.aspx?siteid=" + this.siteid + "&amp;classid=0\">ÎÒµÄ¼Ò×å</a> <a href=\"" + http_start + "bbs/FriendList.aspx?siteid=" + siteid + "&amp;classid=0&amp;friendtype=1" + "\">ÎÒµÄºÚÃûµ¥</a>" + div);
-        sb.Append(title + "ÍøÕ¾¹æÔò" + div);
-        sb.Append(line1 + "<a href=\"" + this.http_start + "bbs/tomoneyinfo.aspx?siteid=" + this.siteid + "\">" + siteVo.sitemoneyname + "»ñÈ¡Ïû·Ñ¹æÔò</a><br/><a href=\"" + this.http_start + "bbs/tolvlinfo.aspx?siteid=" + this.siteid + "\">¾­ÑéÍ·ÏÎµÈ¼¶¹æÔò</a><br/><a href=\"" + this.http_start + "bbs/totimeinfo.aspx?siteid=" + this.siteid + "" + "\">ÔÚÏßÊ±¼äÍ¼±ê¹æÔò</a>" + div);
+        sb.Append(title + "ç›¸å…³ä¿¡æ¯" + div);
+        sb.Append(line2 + "<a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=0&amp;key=" + this.userid + "&amp;type=pub\">æˆ‘çš„å¸–å­</a> <a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=0&amp;touserid=" + userid + "&amp;" + "\">å›å¤(" + userVo.bbsReCount + ")</a>" + div);
+        //sb.Append(line2 + "<a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=0&amp;key=" + this.userid + "&amp;type=pub\">æˆ‘çš„å¸–å­(" + userVo.bbsCount + ")</a> <a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=0&amp;touserid=" + userid + "&amp;" + "\">å›å¤(" + userVo.bbsReCount + ")</a>" + div);
+        //sb.Append(line1 + "<a href=\"" + http_start + "bbs/FriendList.aspx?siteid=" + siteid + "&amp;classid=0&amp;friendtype=2" + "\">æˆ‘çš„è¿½æ±‚</a> <a href=\"" + http_start + "bbs/FriendList.aspx?siteid=" + siteid + "&amp;classid=0&amp;friendtype=4" + "\">è¿½æ±‚æˆ‘çš„äºº</a>" + div);
+        sb.Append(line2 + "<a href=\"" + http_start + "clan/main.aspx?siteid=" + this.siteid + "&amp;classid=0\">æˆ‘çš„å®¶æ—</a> <a href=\"" + http_start + "bbs/FriendList.aspx?siteid=" + siteid + "&amp;classid=0&amp;friendtype=1" + "\">æˆ‘çš„é»‘åå•</a>" + div);
+        sb.Append(title + "ç½‘ç«™è§„åˆ™" + div);
+        sb.Append(line1 + "<a href=\"" + this.http_start + "bbs/tomoneyinfo.aspx?siteid=" + this.siteid + "\">" + siteVo.sitemoneyname + "è·å–æ¶ˆè´¹è§„åˆ™</a><br/><a href=\"" + this.http_start + "bbs/tolvlinfo.aspx?siteid=" + this.siteid + "\">ç»éªŒå¤´è¡”ç­‰çº§è§„åˆ™</a><br/><a href=\"" + this.http_start + "bbs/totimeinfo.aspx?siteid=" + this.siteid + "" + "\">åœ¨çº¿æ—¶é—´å›¾æ ‡è§„åˆ™</a>" + div);
         strHtml = strHtml.Replace("[myfile]", sb.ToString());
         isWebHtml = isWebHtml.Replace("[view]", sb.ToString());
     }
-    //ÏÔÊ¾µçÄÔĞ§¹û
+    //æ˜¾ç¤ºç”µè„‘æ•ˆæœ
     if (isWebHtml != "")
     {
         Response.Clear();
         Response.Write(WapTool.ToWML(isWebHtml, wmlVo));
         Response.End();
     }
-    //½âÎöUBB·½·¨:
+    //è§£æUBBæ–¹æ³•:
     if (strHtml.Trim() == "")
     {
-        Response.Write("<b>ÇëÔÚWEB/WAPºóÌ¨---Ò³Ãæ×ÛºÏÅÅ°æ---±à¼­ÎÒµÄµØÅÌ---[¶¥] Â¼Èë[myfile]»ò×Ô¼ºÅÅ°æ</b><br/>");
+        Response.Write("<b>è¯·åœ¨WEB/WAPåå°---é¡µé¢ç»¼åˆæ’ç‰ˆ---ç¼–è¾‘æˆ‘çš„åœ°ç›˜---[é¡¶] å½•å…¥[myfile]æˆ–è‡ªå·±æ’ç‰ˆ</b><br/>");
     }
     else
     {
@@ -93,32 +93,32 @@
     }
     if (this.ver == "1") Response.Write(line);
     bool isclassadm = WapTool.isClassAdmin(siteid, userid);
-    if ("|00|01|03|".IndexOf(userVo.managerlvl) > 0 || isclassadm == true) Response.Write(title + "ÍøÕ¾¹ÜÀíºóÌ¨<a href=\"" + this.http_start + "admin/loginwap.aspx?siteid=" + this.siteid + "\">&gt;&gt;</a>" + div);
+    if ("|00|01|03|".IndexOf(userVo.managerlvl) > 0 || isclassadm == true) Response.Write(title + "ç½‘ç«™ç®¡ç†åå°<a href=\"" + this.http_start + "admin/loginwap.aspx?siteid=" + this.siteid + "\">&gt;&gt;</a>" + div);
     if (userVo.managerlvl == "00" || userVo.managerlvl == "01")
     {
-        Response.Write(line1 + "[<a href=\"" + this.http_start + "admin/basesitemodifywml.aspx?siteid=" + siteid + "" + "\">Õ¾³¤¹ÜÀíºóÌ¨</a>]" + div);
+        Response.Write(line1 + "[<a href=\"" + this.http_start + "admin/basesitemodifywml.aspx?siteid=" + siteid + "" + "\">ç«™é•¿ç®¡ç†åå°</a>]" + div);
     }
     if (userVo.managerlvl == "00")
     {
-        Response.Write(line1 + "[<a href=\"" + this.http_start + "admin/basesitemodifywml00.aspx?siteid=" + siteid + "" + "\">³¬¼¶¹ÜÀíÔ±ºóÌ¨</a>]" + div);
+        Response.Write(line1 + "[<a href=\"" + this.http_start + "admin/basesitemodifywml00.aspx?siteid=" + siteid + "" + "\">è¶…çº§ç®¡ç†å‘˜åå°</a>]" + div);
     }
     if (userVo.managerlvl == "03")
     {
-        Response.Write(line1 + "[<a href=\"" + this.http_start + "admin/admin_waplist.aspx?siteid=" + siteid + "" + "\">×Ü±à¼­¹ÜÀíºóÌ¨</a>]" + div);
+        Response.Write(line1 + "[<a href=\"" + this.http_start + "admin/admin_waplist.aspx?siteid=" + siteid + "" + "\">æ€»ç¼–è¾‘ç®¡ç†åå°</a>]" + div);
     }
     if (isclassadm == true)
     {
-        Response.Write(line1 + "[<a href=\"" + this.http_start + "admin/admin_waplist.aspx?siteid=" + siteid + "" + "\">À¸Ä¿¹ÜÀíÔ±ºóÌ¨</a>]" + div);
+        Response.Write(line1 + "[<a href=\"" + this.http_start + "admin/admin_waplist.aspx?siteid=" + siteid + "" + "\">æ ç›®ç®¡ç†å‘˜åå°</a>]" + div);
     }
     Response.Write(line);
     Response.Write("<div class=\"btBox\"><div class=\"bt2\">");
-    Response.Write("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classid + "" + "\">·µ»ØÉÏ¼¶</a> ");
-    Response.Write("<a href=\"" + this.http_start + "waplogout.aspx?siteid=" + siteid + "" + "\">°²È«ÍË³ö</a> ");
+    Response.Write("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classid + "" + "\">è¿”å›ä¸Šçº§</a> ");
+    Response.Write("<a href=\"" + this.http_start + "waplogout.aspx?siteid=" + siteid + "" + "\">å®‰å…¨é€€å‡º</a> ");
     Response.Write("</div></div>");
     if (this.ver == "1")
     {
         Response.Write("</p>");
     }
-    //ÏÔÊ¾Î²
+    //æ˜¾ç¤ºå°¾
     Response.Write(WapTool.showDown(wmlVo));
 %>

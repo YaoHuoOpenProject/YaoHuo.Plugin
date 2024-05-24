@@ -1,10 +1,10 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewUser.aspx.cs" Inherits="YaoHuo.Plugin.BBS.ViewUser" %>
+Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewUser.aspx.cs" Inherits="YaoHuo.Plugin.BBS.ViewUser" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>≤Èø¥Ã˚◊”ªÿ∏¥</title>
+    <title>Êü•ÁúãÂ∏ñÂ≠êÂõûÂ§ç</title>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
     <link href="/NetCSS/style.css" rel="stylesheet" type="text/css" />
     <script language="javascript" type="text/javascript">
@@ -31,7 +31,7 @@
                                                     <img src="/NetImages/i08.gif" width="16" height="16">
                                                 </div>
                                             </td>
-                                            <td width="98%" height="24" valign="middle">ƒ⁄»›…Û∫À &gt;&gt; ¬€Ã≥ƒ⁄»› &gt;&gt;≤Èø¥Ã˚◊”
+                                            <td width="98%" height="24" valign="middle">ÂÜÖÂÆπÂÆ°Ê†∏ &gt;&gt; ËÆ∫ÂùõÂÜÖÂÆπ &gt;&gt;Êü•ÁúãÂ∏ñÂ≠ê
                                                         
                                             </td>
                                         </tr>
@@ -72,21 +72,21 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="f" colspan="2">
-                                                                <span class="forumThread" id="_ct">∑¢Ã˚»À <b>
+                                                                <span class="forumThread" id="_ct">ÂèëÂ∏ñ‰∫∫ <b>
                                                                     <%# DataBinder.Eval(Container.DataItem,"book_author")%>
-                                                                </b>&nbsp;&nbsp;&nbsp; ≥ˆ¥¶: <b>
+                                                                </b>&nbsp;&nbsp;&nbsp; Âá∫Â§Ñ: <b>
                                                                     <%# DataBinder.Eval(Container.DataItem,"book_pub")%>
-                                                                </b>&nbsp;&nbsp;&nbsp; ∑¢Ã˚ ±º‰:<b><%# DataBinder.Eval(Container.DataItem,"book_date")%></b>&nbsp;&nbsp;&nbsp;
-                                                                    ªÿ∏¥ ˝: <b>
+                                                                </b>&nbsp;&nbsp;&nbsp; ÂèëÂ∏ñÊó∂Èó¥:<b><%# DataBinder.Eval(Container.DataItem,"book_date")%></b>&nbsp;&nbsp;&nbsp;
+                                                                    ÂõûÂ§çÊï∞: <b>
                                                                         <%# DataBinder.Eval(Container.DataItem,"book_re")%>
-                                                                    </b>&nbsp;&nbsp;&nbsp; «©µΩÀÕ∑÷:<b><%# DataBinder.Eval(Container.DataItem,"reshow")%></b>&nbsp;&nbsp;&nbsp;
-                                                                    –¸…Õ∑÷:<b><%# DataBinder.Eval(Container.DataItem,"sendmoney")%></b>&nbsp;&nbsp;&nbsp;
+                                                                    </b>&nbsp;&nbsp;&nbsp; Á≠æÂà∞ÈÄÅÂàÜ:<b><%# DataBinder.Eval(Container.DataItem,"reshow")%></b>&nbsp;&nbsp;&nbsp;
+                                                                    ÊÇ¨ËµèÂàÜ:<b><%# DataBinder.Eval(Container.DataItem,"sendmoney")%></b>&nbsp;&nbsp;&nbsp;
                                                                 </span>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="fh3a" width="10%">
-                                                                <span class="forumThread" id="_ThreadStats">ƒ⁄»›:</span></td>
+                                                                <span class="forumThread" id="_ThreadStats">ÂÜÖÂÆπ:</span></td>
                                                             <td class="fh3a">&nbsp;&nbsp;&nbsp;&nbsp;<%# DataBinder.Eval(Container.DataItem,"book_content")%>
                                                             </td>
                                                         </tr>
@@ -109,8 +109,8 @@
                                                                                             <span class="dateText" align="left">
                                                                                                 <img src="/NetImages/icon_post_show.gif" border="0" />
                                                                                                 <%#(Container.ItemIndex + 1) + AspNetPager1.PageSize * (AspNetPager1.CurrentPageIndex - 1)%>
-                                                                                                ¬•
-                                                                                                <!--±ÍÕ∑-->
+                                                                                                Ê•º
+                                                                                                <!--Ê†áÂ§¥-->
                                                                                             </span>
                                                                                         </td>
                                                                                     </tr>
@@ -130,9 +130,9 @@
                                                                                                                     <br />
                                                                                                                 </b>
                                                                                                                 <br />
-                                                                                                                ªÿ∏¥ ±º‰£∫<%# DataBinder.Eval(Container.DataItem, "redate")%><br />
-                                                                                                                …Û∫À◊¥Ã¨£∫<img src="/NetImages/<%#DataBinder.Eval(Container.DataItem, "ischeck")%>.gif"
-                                                                                                                    alt="…Û∫À◊¥Ã¨" />
+                                                                                                                ÂõûÂ§çÊó∂Èó¥Ôºö<%# DataBinder.Eval(Container.DataItem, "redate")%><br />
+                                                                                                                ÂÆ°Ê†∏Áä∂ÊÄÅÔºö<img src="/NetImages/<%#DataBinder.Eval(Container.DataItem, "ischeck")%>.gif"
+                                                                                                                    alt="ÂÆ°Ê†∏Áä∂ÊÄÅ" />
                                                                                                             </td>
                                                                                                         </tr>
                                                                                                     </table>
@@ -182,7 +182,7 @@
                                             </webdiyer:AspNetPager>
                                             <br />
                                             <!-- Repeater End-->
-                                            <!--øÏΩ›±‡º≠ by Saufu
+                                            <!--Âø´Êç∑ÁºñËæë by Saufu
                                             <table id="Table10" cellspacing="0" cellpadding="0"border="0" width="100%" style="height: 225px">
                                                 <tbody>
                                                     <tr>
@@ -194,16 +194,16 @@
                                                                         <tr>
                                                                             <td class="column" colspan="2" align="left">
                                                                                 <span class="dateText">&nbsp;<img src="/NetImages/icon_post_show.gif" border="0">&nbsp;
-                                                                                    øÏÀŸ±‡º≠ </span>
+                                                                                    Âø´ÈÄüÁºñËæë </span>
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td class="fh" style="width: 90px" valign="top" rowspan="2">
-                                                                                UBB”Ô∑®÷ß≥÷<br>
+                                                                                UBBËØ≠Ê≥ïÊîØÊåÅ<br>
                                                                                 <br>
-                                                                                 æ¿˝:<br>
-                                                                                <b>¥÷ÃÂŒƒ◊÷</b><br>
-                                                                                [b]¥÷ÃÂŒƒ◊÷[/b]
+                                                                                Á§∫‰æã:<br>
+                                                                                <b>Á≤ó‰ΩìÊñáÂ≠ó</b><br>
+                                                                                [b]Á≤ó‰ΩìÊñáÂ≠ó[/b]
                                                                                 <p>
                                                                                     &nbsp;</p>
                                                                                 <br>
@@ -211,7 +211,7 @@
                                                                                 <br>
                                                                             </td>
                                                                             <td class="f" valign="top" align="left">
-                                                                                <span class="txt5Bold">±ÍÃ‚:&nbsp; </span>
+                                                                                <span class="txt5Bold">Ê†áÈ¢ò:&nbsp; </span>
                                                                                 <asp:TextBox ID="tb_title" runat="server" Width="521px"></asp:TextBox><span class="txt5Bold">&nbsp;
                                                                                 </span>
                                                                             </td>
@@ -221,7 +221,7 @@
                                                                                 <asp:TextBox ID="tb_rec" runat="server" Width="606px" Height="193px" TextMode="MultiLine">
                                                                                 </asp:TextBox>
                                                                                 <br>
-                                                                                <asp:Button ID="bt_revert" runat="server" Text=" ±£ ¥Ê "></asp:Button>&nbsp;&nbsp;
+                                                                                <asp:Button ID="bt_revert" runat="server" Text=" ‰øù Â≠ò "></asp:Button>&nbsp;&nbsp;
                                                                                 <span class="QuickPostText">&nbsp;&nbsp;</span>
                                                                                 
                                                                             </td>
@@ -233,13 +233,13 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            øÏΩ›ªÿ∏¥ Ω· ¯-->
+                                            Âø´Êç∑ÂõûÂ§ç ÁªìÊùü-->
                                         </td>
                                     </tr>
                                     <tr>
                                         <td colspan="4" valign="top" align="center">
                                             <!--Repeater-->
-                                            <input id="bt_return" type="button" value=" ∑µ ªÿ " onclick="return bt_return_onclick()" class="bt" />
+                                            <input id="bt_return" type="button" value=" Ëøî Âõû " onclick="return bt_return_onclick()" class="bt" />
                                         </td>
                                     </tr>
                                 </tbody>
@@ -251,7 +251,7 @@
                     <td></td>
                 </tr>
                 <tr align="center">
-                    <td>“≥√Ê÷¥–– ±º‰£∫<%=loadpagetime %>&nbsp;∫¡√Î£°</td>
+                    <td>È°µÈù¢ÊâßË°åÊó∂Èó¥Ôºö<%=loadpagetime %>&nbsp;ÊØ´ÁßíÔºÅ</td>
                 </tr>
             </tbody>
         </table>
