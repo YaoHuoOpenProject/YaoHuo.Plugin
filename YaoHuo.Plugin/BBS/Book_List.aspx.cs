@@ -270,7 +270,8 @@ namespace YaoHuo.Plugin.BBS
                 }
                 else
                 {
-                    listVo = wap_bbs_BLL.GetListVo(pageSize, CurrentPage, condition + " and book_top =0 ", "book_classid,classname,id,book_title,book_date,book_click,book_re,book_author,book_pub,book_top,book_good,topic,islock,ischeck,sendMoney,isvote,redate,isdown,hangbiaoshi,freeMoney,book_img,MarkSixBetID,MarkSixWin", "redate", total, 1);
+                    var sreWhere = $@"{condition} and book_top = 0 {ExcludeTool.GetExcludeUserSql("book_pub", userid)}";//排除拉黑的用户
+                    listVo = wap_bbs_BLL.GetListVo(pageSize, CurrentPage, sreWhere, "book_classid,classname,id,book_title,book_date,book_click,book_re,book_author,book_pub,book_top,book_good,topic,islock,ischeck,sendMoney,isvote,redate,isdown,hangbiaoshi,freeMoney,book_img,MarkSixBetID,MarkSixWin", "redate", total, 1);
                 }
                 sys_ad_show_BLL sys_ad_show_BLL = new sys_ad_show_BLL(a);
                 adVo = sys_ad_show_BLL.GetModelBySQL(" and systype='bbs' and siteid=" + siteid);

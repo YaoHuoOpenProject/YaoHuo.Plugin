@@ -1628,6 +1628,10 @@ namespace YaoHuo.Plugin.Tool
                                             else if (long.Parse(text6) > 0L)
                                             {
                                                 text12 = "select top " + text4 + " userid,book_classid,id,book_title,book_content,book_img,book_date,classname from wap_" + text8 + "_view where ischeck=0 and userid=" + strSiteId;
+                                                if (text8 == "bbs" && strUserID != "")
+                                                {
+                                                    text12 += ExcludeTool.GetExcludeUserSql("book_pub", strUserID);//排除拉黑的用户
+                                                }
                                                 if (text9 != "0")
                                                 {
                                                     text12 = text12 + " and " + text;
@@ -2558,7 +2562,7 @@ namespace YaoHuo.Plugin.Tool
                         height = isHeightPercentage ? height.TrimEnd('%') : height;
                         string heightAttribute = isHeightPercentage ? $"height=\"{height}%\"" : $"height=\"{height}px\"";
                         WapStr = regex.Replace(WapStr, "<video class=\"ubbvideo\" onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"" + array2[0]
-                            + widthAttribute + heightAttribute
+                            + "\" " + widthAttribute + " " + heightAttribute
                             + " poster=\"" + text8 + "\" controls>{不支持在线播放，请更换浏览器}</video>", 1);
                         match = match.NextMatch();
                     }
