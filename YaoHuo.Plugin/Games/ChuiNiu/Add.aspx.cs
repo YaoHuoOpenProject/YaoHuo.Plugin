@@ -4,6 +4,7 @@ using KeLin.ClassManager.Model;
 using KeLin.WebSite;
 using System;
 using System.Collections.Generic;
+using System.Web;
 using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.Games.ChuiNiu
@@ -78,6 +79,12 @@ namespace YaoHuo.Plugin.Games.ChuiNiu
             }
             if (!(action == "gomod"))
             {
+                return;
+            }
+            // 添加请求方式限制
+            if (HttpContext.Current.Request.HttpMethod != "POST")
+            {
+                INFO = "ERR";
                 return;
             }
             try
