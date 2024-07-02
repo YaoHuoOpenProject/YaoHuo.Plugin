@@ -9,7 +9,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.BBS
 {
-    public class Book_Re : PageWap
+    public class Book_Re : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 

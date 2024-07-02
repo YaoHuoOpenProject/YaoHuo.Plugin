@@ -6,7 +6,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.BBS
 {
-    public class ToMyBankMoney : PageWap
+    public class ToMyBankMoney : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 

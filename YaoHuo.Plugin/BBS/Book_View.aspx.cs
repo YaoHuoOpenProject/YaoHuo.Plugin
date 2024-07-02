@@ -11,7 +11,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.BBS
 {
-    public class Book_View : PageWap
+    public class Book_View : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 

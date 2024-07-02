@@ -1,14 +1,14 @@
 ﻿using KeLin.ClassManager;
 using KeLin.ClassManager.BLL;
 using KeLin.ClassManager.Model;
-using KeLin.WebSite;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.Games
 {
-    public class GamesIndex : PageWap
+    public class GamesIndex : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 

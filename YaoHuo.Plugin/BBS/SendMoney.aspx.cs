@@ -7,7 +7,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.BBS
 {
-    public class SendMoney : PageWap
+    public class SendMoney : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 

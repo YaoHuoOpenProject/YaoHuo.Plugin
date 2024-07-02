@@ -8,7 +8,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.BBS
 {
-    public class MessageList_Del : PageWap
+    public class MessageList_Del : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 

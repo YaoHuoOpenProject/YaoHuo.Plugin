@@ -7,7 +7,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin
 {
-    public class MyFile : PageWap
+    public class MyFile : MyPageWap
     {
         public string INFO = "";
 

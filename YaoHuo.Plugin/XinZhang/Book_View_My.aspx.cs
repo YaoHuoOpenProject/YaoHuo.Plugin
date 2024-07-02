@@ -1,14 +1,14 @@
 ﻿using KeLin.ClassManager;
 using KeLin.ClassManager.ExUtility;
 using KeLin.ClassManager.Model;
-using KeLin.WebSite;
 using System;
 using System.Data;
 using System.Text;
+using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.XinZhang
 {
-    public class Book_View_My : PageWap
+    public class Book_View_My : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 

@@ -9,7 +9,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin
 {
-    public class WapLogin : PageWap
+    public class WapLogin : MyPageWap
     {
         public string _InstanceName = PubConstant.GetAppString("InstanceName");
 

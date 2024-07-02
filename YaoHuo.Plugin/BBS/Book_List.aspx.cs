@@ -1,7 +1,6 @@
 ﻿using KeLin.ClassManager;
 using KeLin.ClassManager.BLL;
 using KeLin.ClassManager.Model;
-using KeLin.WebSite;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,7 +9,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.BBS
 {
-    public class Book_List : PageWap
+    public class Book_List : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 

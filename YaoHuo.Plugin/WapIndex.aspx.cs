@@ -10,7 +10,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin
 {
-    public class WapIndex : PageWap
+    public class WapIndex : MyPageWap
     {
         public List<class_Model> classList = new List<class_Model>();
 

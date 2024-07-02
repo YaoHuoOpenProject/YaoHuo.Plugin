@@ -1,9 +1,9 @@
-﻿using KeLin.WebSite;
-using System;
+﻿using System;
+using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.Games
 {
-    public class Index : PageWap
+    public class Index : MyPageWap
     {
         protected void Page_Load(object sender, EventArgs e)
         {

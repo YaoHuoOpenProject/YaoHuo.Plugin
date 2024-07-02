@@ -264,7 +264,8 @@
     <Compile Include="Tool\ExcludeTool.cs" />
     <Compile Include="Tool\HttpTool.cs" />
     <Compile Include="Tool\MessageTool.cs" />
-    <Compile Include="Tool\PageWapTemp.cs">
+    <Compile Include="Tool\MyCount.cs" />
+    <Compile Include="Tool\MyPageWap.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tool\SendMoneyTool.cs" />

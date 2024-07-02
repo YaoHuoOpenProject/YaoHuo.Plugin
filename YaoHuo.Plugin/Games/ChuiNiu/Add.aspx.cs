@@ -9,7 +9,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.Games.ChuiNiu
 {
-    public class Add : PageWap
+    public class Add : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 

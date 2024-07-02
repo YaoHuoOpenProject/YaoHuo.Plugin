@@ -13,7 +13,7 @@ using YaoHuo.Plugin.Tool;
 
 namespace YaoHuo.Plugin.BBS
 {
-    public class UserInfo : PageWap
+    public class UserInfo : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 

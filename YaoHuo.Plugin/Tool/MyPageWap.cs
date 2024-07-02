@@ -16,7 +16,7 @@ using UBB_Expand;
 
 namespace YaoHuo.Plugin.Tool
 {
-    public class PageWapTemp : Page
+    public class MyPageWap : Page
     {
         public string sid = "";
 
@@ -130,7 +130,7 @@ namespace YaoHuo.Plugin.Tool
 
         private string[] e;
 
-        public PageWapTemp()
+        public MyPageWap()
         {
             base.Load += PageWap_Load;
         }
@@ -1586,7 +1586,7 @@ namespace YaoHuo.Plugin.Tool
                 {
                     welcomeurl = "_QR=" + Session["_QR"].ToString();
                 }
-                Count.SaveCount(siteVo.siteid, 0L, userVo.userid, WapTool.left(GetUrl(), 300), welcomeurl, UA, IP, userStartTime, otherPageCount, base.Server.MapPath("/"), base.Request.ServerVariables["HTTP_HOST"], siteVo.username, text, guid, CityNameALL, classVo.classname, wmlVo.title);
+                MyCount.SaveCount(siteVo.siteid, 0L, userVo.userid, WapTool.left(GetUrl(), 300), welcomeurl, UA, IP, userStartTime, otherPageCount, base.Server.MapPath("/"), base.Request.ServerVariables["HTTP_HOST"], siteVo.username, text, guid, CityNameALL, classVo.classname, wmlVo.title);
                 base.Application["KLCOUNT" + siteid] = "0";
             }
             else if (base.Application["KLCOUNT" + siteid] != null)
