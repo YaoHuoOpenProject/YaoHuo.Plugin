@@ -1,15 +1,20 @@
-﻿/*
+/*
+ Navicat Premium Data Transfer
+
  Source Server         : MsSql
  Source Server Type    : SQL Server
- Source Server Version : 10504000
+ Source Server Version : 16001000
  Source Host           : localhost:1433
  Source Catalog        : NETOK
  Source Schema         : dbo
 
  Target Server Type    : SQL Server
- Target Server Version : 10504000
+ Target Server Version : 16001000
  File Encoding         : 65001
+
+ Date: 31/07/2024 16:51:52
 */
+
 
 -- ----------------------------
 -- Table structure for chinaBank_order
@@ -194,883 +199,7 @@ GO
 SET IDENTITY_INSERT [dbo].[class] ON
 GO
 
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'1', N'0', N'101', N'手机', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=subtitle]', N'[/div][div=content][back]返回上级[/back] [tab][tab][index]返回首页[/index][/div]', N'79', N'0', N'', NULL, N'1', N'2012-07-05 15:48:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'2', N'0', N'101', N'数码', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[div=content][back]返回上级[/back] [tab][tab][index]返回首页[/index][/div]', N'20', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击手机[/div]', N'2', N'2012-07-05 15:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'3', N'0', N'101', N'衣服', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[div=content][back]返回上级[/back] [tab][tab][index]返回首页[/index][/div]', N'9', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击手机[/div]', N'3', N'2012-07-05 15:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'4', N'0', N'101', N'电脑', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[div=content][back]返回上级[/back] [tab][tab][index]返回首页[/index][/div]', N'8', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击手机[/div]', N'4', N'2012-07-05 15:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'5', N'0', N'101', N'鞋城', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=subtitle]', N'[div=content][back]返回上级[/back] [tab][tab][index]返回首页[/index][/div]', N'6', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击手机[/div]', N'5', N'2012-07-05 15:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'6', N'0', N'101', N'家装', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[div=content][back]返回上级[/back] [tab][tab][index]返回首页[/index][/div]', N'6', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击手机[/div]', N'6', N'2012-07-05 15:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'7', N'0', N'101', N'食品', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[div=content][back]返回上级[/back] [tab][tab][index]返回首页[/index][/div]', N'8', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击手机[/div]', N'7', N'2012-07-05 15:50:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'8', N'0', N'101', N'美容', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[div=content][back]返回上级[/back] [tab][tab][index]返回首页[/index][/div]', N'8', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击手机[/div]', N'8', N'2012-07-05 15:50:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'9', N'1', N'101', N'诺基亚', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=content]', NULL, N'3', N'0', N'', NULL, N'9', N'2012-07-05 16:14:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'10', N'1', N'101', N'HTC', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'1', N'0', N'', NULL, N'10', N'2012-07-05 16:14:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'11', N'1', N'101', N'三星', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'1', N'0', N'', NULL, N'11', N'2012-07-05 16:14:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'1', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'12', N'1', N'101', N'苹果', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'1', N'0', N'', NULL, N'12', N'2012-07-05 16:14:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'13', N'1', N'101', N'摩托罗拉', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'1', N'0', N'', NULL, N'13', N'2012-07-05 16:15:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'14', N'1', N'101', N'索爱|', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'0', N'0', N'', NULL, N'14', N'2012-07-05 16:15:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'15', N'1', N'101', N'水货区', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'1', N'0', N'', NULL, N'15', N'2012-07-05 16:16:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'16', N'0', N'102', N'购彩', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=line2]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'9', N'0', N'', N'[div=tip]此处可以增加版块[/div]', N'16', N'2012-07-05 16:48:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'17', N'0', N'102', N'开奖', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'5', N'0', N'', N'[div=tip]此处可以增加版块[/div]', N'17', N'2012-07-05 16:48:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'18', N'0', N'102', N'运势', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'5', N'0', N'', N'[div=tip]此处可以增加版块[/div]', N'18', N'2012-07-05 16:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'19', N'0', N'102', N'工具', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'4', N'0', N'', N'[div=tip]此处可以增加版块[/div]', N'19', N'2012-07-05 16:50:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'20', N'0', N'102', N'图表', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=line2]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'4', N'0', N'', N'[div=tip]此处可以增加版块[/div]', N'20', N'2012-07-05 16:50:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'21', N'0', N'102', N'过滤', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'6', N'0', N'', N'[div=tip]此处可以增加版块[/div]', N'22', N'2012-07-05 16:50:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'22', N'0', N'102', N'高频', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'6', N'0', N'', N'[div=tip]此处可以增加版块[/div]', N'21', N'2012-07-05 16:52:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'23', N'0', N'102', N'邀请', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'4', N'0', N'', N'[div=tip]此处可以增加版块[/div]', N'23', N'2012-07-05 16:52:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'24', N'0', N'102', N'双色球', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=subtitle]', NULL, N'10', N'0', N'', NULL, N'24', N'2012-07-05 17:06:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'25', N'0', N'102', N'福彩3D', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab].[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'6', N'0', N'', N'[div=tip]此处可以增加内容，如：点进双色球[/div]', N'25', N'2012-07-05 17:07:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'26', N'0', N'102', N'七乐', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab].[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'5', N'0', N'', N'[div=tip]此处可以增加内容，如：点进双色球[/div]', N'26', N'2012-07-05 17:08:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'27', N'0', N'102', N'试后', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab].[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'6', N'0', N'', N'[div=tip]此处可以增加内容，如：点进双色球[/div]', N'27', N'2012-07-05 17:08:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'28', N'0', N'102', N'字谜', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=content]此处可以添加图片等UBB[br][article=0_5_1_8_1] [/div][div=subtitle]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'5', N'0', N'', N'[div=tip]此处可以增加内容，如：点进双色球[/div]', N'28', N'2012-07-05 17:09:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'29', N'0', N'102', N'开机', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab].[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'4', N'0', N'', N'[div=tip]此处可以增加内容，如：点进双色球[/div]', N'29', N'2012-07-05 17:09:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'30', N'0', N'102', N'试机', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab].[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'6', N'0', N'', N'[div=tip]此处可以增加内容，如：点进双色球[/div]', N'30', N'2012-07-05 17:09:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'31', N'0', N'102', N'胆杀', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab].[tab][tab]', N'[back]返回上级[/back][tab][tab][index]返回首页[/index]', N'5', N'0', N'', N'[div=tip]此处可以增加内容，如：点进双色球[/div]', N'31', N'2012-07-05 17:10:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'33', N'0', N'103', N'心得交流', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=welcome]【', NULL, N'4', N'0', N'', NULL, N'33', N'2012-07-06 15:46:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'34', N'0', N'103', N'交易专区', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=content]此处可以添加图片等UBB[br][bbs=0_5_1_10_0] [/div][div=welcome]【', NULL, N'1', N'0', N'', NULL, N'34', N'2012-07-06 15:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'35', N'0', N'103', N'分类交流', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=content]此处可以添加图片等UBB[br][bbs=0_5_5_10_0] [/div][div=welcome]【', NULL, N'1', N'0', N'', NULL, N'35', N'2012-07-06 15:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'36', N'0', N'103', N'编程交流', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=content]此处可以添加图片等UBB[br][bbs=0_5_5_10_0] [/div][div=welcome]【', NULL, N'1', N'0', N'', NULL, N'36', N'2012-07-06 15:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'37', N'53', N'110', N'系统', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'37', N'2012-07-06 16:02:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'38', N'53', N'110', N'地图', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'38', N'2012-07-06 16:02:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'39', N'53', N'110', N'视频', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'39', N'2012-07-06 16:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'40', N'53', N'110', N'音乐', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'40', N'2012-07-06 16:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'41', N'53', N'110', N'通讯', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'41', N'2012-07-06 16:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'42', N'53', N'110', N'图像', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'0', N'0', N'', NULL, N'42', N'2012-07-06 16:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'43', N'53', N'110', N'交友', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'43', N'2012-07-06 16:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'44', N'53', N'110', N'公交', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'44', N'2012-07-06 16:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'45', N'53', N'110', N'天气', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'45', N'2012-07-06 16:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'46', N'53', N'110', N'阅读', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'46', N'2012-07-06 16:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'47', N'53', N'110', N'词典', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'0', N'0', N'', NULL, N'47', N'2012-07-06 16:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'48', N'53', N'110', N'墙纸', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'48', N'2012-07-06 16:04:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'49', N'53', N'110', N'桌面', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'49', N'2012-07-06 16:06:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'50', N'53', N'110', N'安全', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'50', N'2012-07-06 16:07:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'51', N'53', N'110', N'蓝牙', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'51', N'2012-07-06 16:07:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'52', N'53', N'110', N'此为隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=subnav]【本周最新】[/div][div=content] [download=0_5_0_0_1][/div][div=subnav]【本周最热】[/div][div=content] [download=0_5_0_0_1][/div]', NULL, N'0', N'0', N'', NULL, N'52', N'2012-07-06 16:16:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'53', N'0', N'110', N'软件', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'55', N'0', N'', N'[div=subnav]', N'53', N'2012-07-06 16:46:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'54', N'0', N'110', N'单机', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'丨', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'8', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击软件后。。。[/div]', N'54', N'2012-07-06 16:46:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'55', N'0', N'110', N'网游', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'丨', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'5', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击手机[/div]', N'55', N'2012-07-06 16:46:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'56', N'0', N'110', N'社区', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'丨', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'3', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击手机[/div][br]', N'57', N'2012-07-06 16:46:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'57', N'0', N'110', N'资讯', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'丨', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'7', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的点击手机[/div]', N'56', N'2012-07-06 16:47:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'58', N'0', N'104', N'通知公告', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=tip]', NULL, N'4', N'0', N'', NULL, N'58', N'2012-07-06 16:57:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'59', N'0', N'104', N'党建时讯', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'5', N'0', N'', N'[div=title]此处可以添加模版或内容[/div]', N'59', N'2012-07-06 17:02:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'61', N'0', N'104', N'创先争优', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'5', N'0', N'', N'[div=title]此处可以添加模版或内容[/div]', N'61', N'2012-07-06 17:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'62', N'0', N'104', N'干部任免', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'3', N'0', N'', N'[div=title]此处可以添加模版或内容[/div]', N'62', N'2012-07-06 17:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'63', N'0', N'104', N'先锋微博', N'112', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=tip]', NULL, N'3', N'0', N'', N'[div=title]此处可以添加模版或内容[/div]', N'63', N'2012-07-06 17:03:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'64', N'0', N'104', N'电子政务', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'1', N'0', N'', NULL, N'65', N'2012-07-06 17:04:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'65', N'0', N'104', N'网站了解', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'4', N'0', N'', N'[div=title]此处可以添加模版或内容[/div]', N'64', N'2012-07-06 17:04:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'66', N'0', N'104', N'我要留言', N'49', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'5', N'0', N'', N'', N'66', N'2012-07-06 17:05:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'67', N'0', N'110', N'隐藏的栏目', N'142', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=subtitle]【最热新闻】↓[/div][div=content]此处可以添加图片等UBB[br][article=0_5_1_0_0] [/div][div=subtitle]【最新上传】↓[/div][div=content]此处可以添加图片等UBB[br][dl=0_5_1_0_0] [/div][div=subtitle]【最新上传】↓[/div][div=content]此处可以添加图片等UBB[br][dl=0_5_1_0_0] [/div][div=subtitle]此模版用【悠闲灰色√】皮肤效果更佳[/div][div=subtitle]【内容管理】添加栏目内容[/div][div=subtitle]本页面随机标题或图片就会显示[/div]', NULL, N'0', N'0', N'', NULL, N'67', N'2012-07-06 17:21:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'69', N'0', N'105', N'新闻', N'62', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=subtitle]【网站分类】[/div][div=content][', NULL, N'6', N'0', N'', NULL, N'69', N'2012-07-09 11:27:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'70', N'0', N'105', N'小说', N'62', N'left', NULL, N'NetImages/no.gif', N'1', N'][url=http://kelink.com/]柯林新闻[/url][link=0_4_3_4_0] [/div][div=content][', NULL, N'3', N'0', N'', N'[div=title]此处可以添加模块或内容[/div]', N'70', N'2012-07-09 11:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'71', N'0', N'105', N'购物', N'62', N'left', NULL, N'NetImages/no.gif', N'1', N'][url=http://yanxiw.com/]颜兮[/url][link=0_4_5_4_0] [/div][div=content][', NULL, N'3', N'0', N'', N'[div=title]此处可以添加模块或内容[/div]', N'72', N'2012-07-09 11:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'72', N'0', N'105', N'微博', N'62', N'left', NULL, N'NetImages/no.gif', N'1', N'][url=http://ihuanji.com/]幻祭[/url][link=0_4_5_4_0] [/div][div=content][', NULL, N'2', N'0', N'', N'[div=title]此处可以添加模块或内容[/div]', N'71', N'2012-07-09 11:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'73', N'0', N'105', N'社区', N'62', N'left', NULL, N'NetImages/no.gif', N'1', N'][url=http://ebao.mobi/]宜宝商城[/url][link=0_4_2_4_0] [/div][div=content][', NULL, N'2', N'0', N'', N'[div=title]此处可以添加模块或内容[/div]', N'73', N'2012-07-09 11:29:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'74', N'0', N'105', N'游戏', N'62', N'left', NULL, N'NetImages/no.gif', N'1', N'][url=http://97xyw.com/]惜缘网[/url][link=0_4_1_4_0] [/div][div=content][', NULL, N'2', N'0', N'', N'[div=title]此处可以添加模块或内容[/div]', N'74', N'2012-07-09 11:29:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'75', N'0', N'109', N'图片', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'39', N'0', N'', NULL, N'75', N'2012-07-09 12:00:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'76', N'0', N'109', N'社区', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'10', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的图片栏目[/div][br]', N'76', N'2012-07-09 12:00:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'77', N'0', N'109', N'交友', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'8', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的图片栏目[/div][br]', N'77', N'2012-07-09 15:56:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'78', N'0', N'109', N'咨询', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'7', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的图片栏目[/div][br]', N'78', N'2012-07-09 15:56:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'79', N'0', N'109', N'签到', N'142', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'7', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的图片栏目[/div][br]', N'80', N'2012-07-09 16:00:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'80', N'0', N'109', N'此栏目是隐藏的', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=subtitle]【最新图片】[/div][div=content]此处可以添加图片等UBB[br][picture=0_5_1_11_0] [/div][div=subtitle]【最热图片】[/div][div=content]此处可以添加图片等UBB[br][picture=0_5_2_11_0] [/div][div=subtitle]【精华图片】[/div][div=content]此处可以添加图片等UBB[br][picture=0_5_2_11_0] [/div][div=subtitle]【热门话题】[/div][div=content]此处可以添加图片等UBB[br][bbs=0_5_1_11_0]  [/div][div=subtitle]此模版用【稳重深蓝√】皮肤效果更佳[/div][div=subtitle]【内容管理】添加栏目内容[/div][div=subtitle]本页面随机标题或图片就会显示[/div]', NULL, N'0', N'0', N'', NULL, N'81', N'2012-07-09 16:01:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'81', N'0', N'109', N'视频', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][index]返回首页[/index] 丨 [return]返回上一页面[/return][/div]', N'8', N'0', N'', N'[div=tip]此处可以增加版块，如：首页的图片栏目[/div][br]', N'79', N'2012-07-09 16:20:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'82', N'75', N'109', N'校园美眉', N'7', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=content]本站美图下载全部免费！！！[br][bbs=0_5_0_11_0] [/div][div=subtitle]【', NULL, N'4', N'0', N'', NULL, N'82', N'2012-07-09 16:30:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'83', N'75', N'109', N'性感写真', N'7', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=content] [picture=0_5_1_11_0][/div][div=subtitle]【', NULL, N'0', N'0', N'', NULL, N'83', N'2012-07-09 17:13:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'84', N'75', N'109', N'清纯美眉', N'7', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=content] [picture=0_5_1_11_0][/div][div=subtitle]【', NULL, N'0', N'0', N'', NULL, N'84', N'2012-07-09 17:17:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'85', N'75', N'109', N'动漫美图', N'7', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=content] [picture=0_5_1_11_0][/div][div=subtitle]【', NULL, N'0', N'0', N'', NULL, N'85', N'2012-07-09 17:17:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'86', N'75', N'109', N'此为隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=content] [picture=0_5_1_11_0][/div]', NULL, N'0', N'0', N'', NULL, N'87', N'2012-07-09 17:18:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'87', N'75', N'109', N'高清美腿', N'7', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=content] [picture=0_5_1_11_0][/div][div=subtitle]【', NULL, N'0', N'0', N'', NULL, N'86', N'2012-07-09 17:34:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'88', N'0', N'106', N'专栏', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=title]', NULL, N'6', N'0', N'', N'[div=tip]此栏目可以添加更多的栏目[/div][back]返回上级[/back][tab][tab][index]返回首页[/index]', N'88', N'2012-07-09 18:11:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'89', N'0', N'106', N'论坛', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'3', N'0', N'', N'[div=tip]此栏目可以添加更多的栏目[/div][back]返回上级[/back][tab][tab][index]返回首页[/index]', N'89', N'2012-07-09 18:11:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'90', N'0', N'106', N'投稿', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'4', N'0', N'', N'[div=tip]此栏目可以添加更多的栏目[/div][back]返回上级[/back][tab][tab][index]返回首页[/index]', N'90', N'2012-07-09 18:12:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'91', N'0', N'106', N'签到', N'142', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'1', N'0', N'', NULL, N'91', N'2012-07-09 18:22:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'92', N'0', N'106', N'下载', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=title]', NULL, N'2', N'0', N'', N'[div=tip]此栏目可以添加更多的栏目[/div][back]返回上级[/back][tab][tab][index]返回首页[/index]', N'92', N'2012-07-09 18:23:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'93', N'0', N'106', N'聊天', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'2', N'0', N'', N'[div=tip]此栏目可以添加更多的栏目[/div][back]返回上级[/back][tab][tab][index]返回首页[/index]', N'93', N'2012-07-09 18:23:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'94', N'0', N'106', N'广播', N'137', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'2', N'0', N'', N'[div=tip]此栏目可以添加更多的栏目[/div][back]返回上级[/back][tab][tab][index]返回首页[/index]', N'94', N'2012-07-09 18:26:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'95', N'0', N'106', N'晒照', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab]|[tab][tab]', NULL, N'2', N'0', N'', N'[div=tip]此栏目可以添加更多的栏目[/div][back]返回上级[/back][tab][tab][index]返回首页[/index]', N'95', N'2012-07-09 18:26:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'96', N'0', N'108', N'社区', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'5', N'0', N'', N'[div=tip]此处可以例如交友栏目添加内容[/div]', N'97', N'2012-07-09 18:27:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'97', N'0', N'108', N'游戏', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'3', N'0', N'', N'[div=tip]此处可以例如交友栏目添加内容[/div]', N'98', N'2012-07-09 18:27:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'98', N'0', N'108', N'交友', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=subtitle]', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'23', N'0', N'', NULL, N'96', N'2012-07-09 18:27:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'99', N'0', N'108', N'兼职', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'3', N'0', N'', N'[div=tip]此处可以例如交友栏目添加内容[/div]', N'99', N'2012-07-09 18:27:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'100', N'0', N'108', N'创业', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'3', N'0', N'', N'[div=tip]此处可以例如交友栏目添加内容[/div]', N'100', N'2012-07-09 18:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'101', N'0', N'108', N'新闻', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'3', N'0', N'', N'[div=tip]此处可以例如交友栏目添加内容[/div][br]', N'101', N'2012-07-09 18:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'102', N'0', N'108', N'学习', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'3', N'0', N'', N'[div=tip]此处可以例如交友栏目添加内容[/div][br]', N'102', N'2012-07-09 18:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'103', N'0', N'108', N'下载', N'142', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'3', N'0', N'', N'[div=tip]此处可以例如交友栏目添加内容[/div][br]', N'103', N'2012-07-09 18:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'104', N'0', N'108', N'旅游', N'142', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'4', N'0', N'', N'[div=tip]此处可以例如交友栏目添加内容[/div][br]', N'104', N'2012-07-09 18:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'105', N'0', N'108', N'文学', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'3', N'0', N'', N'[div=tip]此处可以例如交友栏目添加内容[/div]', N'105', N'2012-07-09 18:29:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'106', N'0', N'106', N'美文', N'140', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=content]【', NULL, N'1', N'0', N'', NULL, N'106', N'2012-07-09 18:32:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'107', N'0', N'106', N'小说', N'140', N'left', NULL, N'NetImages/no.gif', N'1', N'】', NULL, N'1', N'0', N'', NULL, N'107', N'2012-07-09 18:32:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'3', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'108', N'0', N'106', N'诗歌', N'140', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab].[tab][tab]', NULL, N'1', N'0', N'', NULL, N'108', N'2012-07-09 18:33:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'109', N'0', N'106', N'散文', N'140', N'left', NULL, N'NetImages/no.gif', N'1', N'[tab][tab].[tab][tab]', NULL, N'1', N'0', N'', NULL, N'109', N'2012-07-09 18:33:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'110', N'0', N'106', N'隐藏的栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=content]此处可以添加图片等UBB[br][novel=0_5_5_0_0] [/div][div=tip]此模版用【华丽大红√】皮肤效果更佳[/div][div=tip]【内容管理】添加栏目内容[/div][div=tip]本页面随机标题或图片就会显示[/div]', NULL, N'0', N'0', N'', NULL, N'110', N'2012-07-10 11:08:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'111', N'0', N'108', N'此为隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=content][bbs=0_5_1_0_0] [/div][div=subtitle]【交友】帅哥.美女.赛照[/div][div=content]可以在此处换成你需要的UBB[br][bbs=0_5_1_0_0] [/div][div=subtitle]【新闻】头条.综合.校友[/div][div=content]可以在此处换成你需要的UBB[br][bbs=0_5_1_0_0] [/div][div=subtitle]【学习】外语.考试.编程[/div][div=content]可以在此处换成你需要的UBB[br][bbs=0_5_1_0_0] [/div][div=title]此模版用【优雅粉蓝√】样式效果更佳[/div][div=title]【内容管理】添加栏目内容[/div][div=title]本页面随机标题或图片就会显示[/div]', NULL, N'0', N'0', N'', NULL, N'111', N'2012-07-10 11:23:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'112', N'0', N'101', N'隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=tip]最新商品显示:[/div][div=content]此处可以添加图片等UBB[br][shop=0_6_0_10_0] [/div][div=tip]此模版用【粉红经典√】皮肤效果更佳[/div][div=tip]【内容管理】添加栏目内容[/div][div=tip]本页面随机标题或图片就会显示[/div]', NULL, N'0', N'0', N'', NULL, N'112', N'2012-07-10 11:23:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'113', N'0', N'102', N'插', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=content]此处可以添加图片等UBB[br][article=0_5_5_8_1] [/div][div=title]此模版用【橙色活力√】皮肤效果更佳[/div][div=title]【内容管理】添加栏目内容[/div][div=title]本页面随机标题或图片就会显示[/div]', NULL, N'0', N'0', N'', NULL, N'113', N'2012-07-10 11:25:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'114', N'0', N'103', N'插', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=content]此处可以添加图片等UBB[br][bbs=0_5_5_10_0] [/div][div=title]此模版用【轻快浅黄√】皮肤效果更佳[/div][div=title]【内容管理】添加栏目内容[/div][div=title]本页面随机标题或图片就会显示[/div]', NULL, N'0', N'0', N'', NULL, N'114', N'2012-07-10 11:27:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'115', N'0', N'104', N'隐藏的栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=subtitle][text]【头条先锋】[/text][/div][div=content]此处可以添加图片等UBB[br][article=0_5_5_20_0] [/div][div=subtitle][text]【阳光组工|党建时讯|通知公告】 [/text][/div][div=content]此处可以添加图片等UBB[br][article=0_5_5_20_0]  [/div][div=title]此模版用【悠红黑百√】三色皮肤效果更佳[/div][div=title]【内容管理】添加栏目内容[/div][div=title]本页面随机标题或图片就会显示[/div]', NULL, N'0', N'0', N'', NULL, N'115', N'2012-07-10 11:30:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'116', N'0', N'105', N'隐藏的栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'][url=http://91syw.com/]91手游[/url][link=0_4_5_4_0] [/div][div=title]此模版用【浅浅悠蓝√】皮肤效果更佳[/div][div=title]【内容管理】添加栏目内容[/div][div=title]本页面随机标题或图片就会显示[/div]', NULL, N'0', N'0', N'', NULL, N'116', N'2012-07-10 11:32:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'117', N'98', N'108', N'帅哥', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=subtitle]', NULL, N'0', N'0', N'', NULL, N'117', N'2012-07-10 11:39:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'118', N'98', N'108', N'美女', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'1', N'0', N'', NULL, N'118', N'2012-07-10 11:50:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'119', N'98', N'108', N'赛照', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'119', N'2012-07-10 11:50:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'120', N'98', N'108', N'福榜', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'120', N'2012-07-10 11:50:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'121', N'98', N'108', N'单身', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'121', N'2012-07-10 11:50:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'122', N'98', N'108', N'此为隐藏栏目，可添加UBB等', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=content][bbs=0_5_0_0_0] [/div][div=subtitle]【爱秀高富帅】[/div][div=content][bbs=0_5_0_0_0] [/div][div=subtitle]【爱尚萝莉妹】[/div][div=content]此处可写你适合的UBB[br][bbs=0_5_0_0_0] [/div][div=subtitle]【幸福红人馆】[/div][div=content]此处可写你适合的UBB[br][bbs=0_5_0_0_0] [/div][div=subtitle]【醉单身情歌】[/div][div=content]此处可写你适合的UBB[br][bbs=0_5_0_0_0] [/div]', NULL, N'0', N'0', N'', NULL, N'122', N'2012-07-10 11:51:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'123', N'0', N'107', N'新闻中心', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'丨', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'8', N'0', N'', N'[div=tip]此处可以添加内容[/div]', N'124', N'2012-07-10 16:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'124', N'0', N'107', N'关于我们', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=title][index]首页[/index]丨', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'6', N'0', N'', N'[div=tip]联系我们：[/div][div=subtitle]客服电话：******[br]传真电话：*******[br]固定电话：*******[br]企业ＱＱ：*******[br]E-mail：*******[br]地址：********[br]邮编：*******[/div]', N'123', N'2012-07-10 16:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'125', N'0', N'107', N'产品介绍', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'丨', N'[div=mylink][back]返回上级[/back] | [index]返回首页[/index][/div]', N'8', N'0', N'', N'[div=tip]产品介绍：[/div][div=subtitle][tab][tab]***产品是本公司********************************************************[/div]', N'125', N'2012-07-10 16:50:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'126', N'0', N'107', N'此为隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=content][article=0_5_1_0_0] [/div][div=subtitle][text]最新优惠[/text][/div][div=content]此处可以添加图片等UBB[br][article=0_5_1_0_0] [/div][div=subtitle][text]热销产品[/text][/div][div=content]此处可以添加图片等UBB[br][article=0_5_1_0_0] [/div][div=subtitle][text]最新产品[/text][/div][div=content]此处可以添加图片等UBB[br][article=0_5_1_0_0] [/div][div=title]此模版用【浅灰黄白√】样式效果更佳[/div][div=title]【内容管理】添加栏目内容[/div][div=title]本页面随机标题或图片就会显示[/div]', NULL, N'0', N'0', N'', NULL, N'126', N'2012-07-10 16:51:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'127', N'0', N'111', N'企业动态', N'4', N'left', N'1|1|0|0|0|0|0|1|0|||0|0|0|||7|100|75|0', N'NetImages/no.gif', N'0', N'', NULL, N'17', N'0', N'', N'[div=subcontent][img]/NetImages/model/model11/22.jpg[/img][/div][div=subtitle]企业动态[/div]', N'127', N'2012-07-27 15:36:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'128', N'0', N'111', N'产品展示', N'4', N'left', N'1|1|0|0|0|0|0|1|0|||0|0|0|||6|130|180|0', N'NetImages/no.gif', N'0', N'', NULL, N'8', N'0', N'', N'[div=subtitle]产品展示[/div]', N'128', N'2012-07-27 15:37:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'129', N'0', N'111', N'关于我们', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', N'[div=mylink][back]返回上级[/back]-[index]返回首页[/index][/div]', N'110', N'0', N'', N'[div=subtitle]关于我们[/div][div=content]　　广州市联速计算机科技有限公司，为拓展经营范围，新公司于2009.08.28日成立，注册号:440106000040708 (原广州市柯林软件有限公司，注册号:4401052015582)，是一家专业移动通信技术应用解决方案提供商，以及拥有计算机硬件研发、维修、维护、销售电子产品等拓展业务。公司以基于WAP无线应用协议的移动商务应用系统开发为主，SMS/二维码MMS及WEB互联网服务的开发为辅。公司凭借领先的移动通信技术、经验丰富的WAP开发队伍、创新的管理模式和优质的服务意识，为企业客户全力拓展移动信息时代的商务空间，全面提升企业的竞争力。主要产品Kelink WAP手机自助建站系统适应于电信运营商、SP公司、各类门户站点、移动电子商务网站及企业手机网站等，面向企业、政府机构、事业单位、学校和广大个人用户提供完整全面的无线应用解决方案。[/div]', N'129', N'2012-07-27 15:37:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'130', N'0', N'111', N'隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=content]　　Kelink WAP自助建站系统是一套大型的在线WAP网站申请和WAP网站管理系统，适应于电信运营商、SP公司、各类门户站点、移动电子商务网站及企业手机网站等，为企业、政府机构、事业单位、学校和广大个人用户提供完整全面的无线应用解决方案...[/div][div=subtitle][text]最热产品[/text][/div][div=subcontent][article=0_4_0_5_6*130*180] [/div][div=subcontent][img]/NetImages/model/model11/22.jpg[/img] [/div]', NULL, N'0', N'0', N'', NULL, N'130', N'2012-07-27 15:44:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'131', N'0', N'112', N'最新动态', N'4', N'left', N'0|0|0|0|0|0|0|0|0|||0|0|0|||7|100|75|0', N'NetImages/no.gif', N'0', N'', NULL, N'7', N'0', N'', N'[div=subtitle]企业动态[/div]', N'131', N'2012-07-28 15:35:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'132', N'0', N'112', N'奔驰车款', N'4', N'left', N'0|0|0|0|0|0|0|0|0|||0|0|0|||6|140|105|0', N'NetImages/no.gif', N'0', N'', NULL, N'5', N'0', N'', N'[div=subtitle]奔驰G系列[/div]', N'132', N'2012-07-28 15:36:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'133', N'0', N'112', N'联系奔驰', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', N'[div=mylink][back]返回上级[/back]-[index]返回首页[/index][/div]', N'63', N'0', N'', N'[div=content][img]/NetImages/model/model12/123.jpg[/img]　　广州市联速计算机科技有限公司，为拓展经营范围，新公司于2009.08.28日成立，注册号:440106000040708 (原广州市柯林软件有限公司，注册号:4401052015582)，是一家专业移动通信技术应用解决方案提供商，以及拥有计算机硬件研发、维修、维护、销售电子产品等拓展业务。公司以基于WAP无线应用协议的移动商务应用系统开发为主，SMS/二维码MMS及WEB互联网服务的开发为辅。公司凭借领先的移动通信技术、经验丰富的WAP开发队伍、创新的管理模式和优质的服务意识，为企业客户全力拓展移动信息时代的商务空间，全面提升企业的竞争力。主要产品Kelink WAP手机自助建站系统适应于电信运营商、SP公司、各类门户站点、移动电子商务网站及企业手机网站等，面向企业、政府机构、事业单位、学校和广大个人用户提供完整全面的无线应用解决方案。[/div]', N'133', N'2012-07-28 15:36:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'134', N'0', N'112', N'隐藏栏目', N'142', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=subtitle][text]奔驰GLK[/text][/div][article=0_4_0_7_6*140*105] [div=subtitle][text]奔驰R300[/text][/div][article=0_4_0_7_6*140*105] [div=subtitle][text]奔驰S400[/text][/div][article=0_4_0_7_6*140*105] ', NULL, N'0', N'0', N'', NULL, N'134', N'2012-07-28 16:01:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'135', N'0', N'113', N'媒体关注', N'4', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'2', N'0', N'', NULL, N'135', N'2012-07-28 18:13:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'136', N'0', N'113', N'集团产品', N'4', N'left', N'0|0|0|0|0|0|0|0|0|||0|0|0|||7|100|100|0', N'NetImages/no.gif', N'0', N'', NULL, N'3', N'0', N'', NULL, N'136', N'2012-07-28 18:13:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'137', N'0', N'113', N'关于我们', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', N'[div=mylink][back]返回上级[/back]-[index]返回首页[/index][/div]', N'50', N'0', N'', N'[div=subtitle]关于我们[/div][div=content]　　广州市联速计算机科技有限公司，为拓展经营范围，新公司于2009.08.28日成立，注册号:440106000040708 (原广州市柯林软件有限公司，注册号:4401052015582)，是一家专业移动通信技术应用解决方案提供商，以及拥有计算机硬件研发、维修、维护、销售电子产品等拓展业务。公司以基于WAP无线应用协议的移动商务应用系统开发为主，SMS/二维码MMS及WEB互联网服务的开发为辅。公司凭借领先的移动通信技术、经验丰富的WAP开发队伍、创新的管理模式和优质的服务意识，为企业客户全力拓展移动信息时代的商务空间，全面提升企业的竞争力。主要产品Kelink WAP手机自助建站系统适应于电信运营商、SP公司、各类门户站点、移动电子商务网站及企业手机网站等，面向企业、政府机构、事业单位、学校和广大个人用户提供完整全面的无线应用解决方案。[/div]', N'137', N'2012-07-28 18:13:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'138', N'0', N'113', N'隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=subtitle][text]集团产品[/text][/div][div=subcontent][article=136_4_0_4_7*100*100] [/div]', NULL, N'0', N'0', N'', NULL, N'138', N'2012-07-28 18:34:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'139', N'0', N'114', N'企业动态', N'4', N'left', N'0|0|0|0|0|0|0|0|0|||0|0|0|||7|100|100|0', N'NetImages/no.gif', N'0', N'', N'[div=mylink][back]返回上级[/back]-[index]返回首页[/index][/div]', N'92', N'0', N'', N'[div=subtitle]企业动态[/div]', N'139', N'2012-07-29 10:02:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'140', N'0', N'114', N'商品展示', N'4', N'left', N'0|0|0|0|0|0|0|0|0|||0|0|0|||6|130|130|0', N'NetImages/no.gif', N'0', N'', NULL, N'7', N'0', N'', N'[div=subtitle]商品展示[/div]', N'140', N'2012-07-29 10:02:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'141', N'0', N'114', N'关于我们', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', N'[div=mylink][back]返回上级[/back]-[index]返回首页[/index][/div]', N'76', N'0', N'', N'[div=subtitle]关于我们[/div][div=content]　　广州市联速计算机科技有限公司，为拓展经营范围，新公司于2009.08.28日成立，注册号:440106000040708 (原广州市柯林软件有限公司，注册号:4401052015582)，是一家专业移动通信技术应用解决方案提供商，以及拥有计算机硬件研发、维修、维护、销售电子产品等拓展业务。公司以基于WAP无线应用协议的移动商务应用系统开发为主，SMS/二维码MMS及WEB互联网服务的开发为辅。公司凭借领先的移动通信技术、经验丰富的WAP开发队伍、创新的管理模式和优质的服务意识，为企业客户全力拓展移动信息时代的商务空间，全面提升企业的竞争力。主要产品Kelink WAP手机自助建站系统适应于电信运营商、SP公司、各类门户站点、移动电子商务网站及企业手机网站等，面向企业、政府机构、事业单位、学校和广大个人用户提供完整全面的无线应用解决方案。[/div]', N'141', N'2012-07-29 10:02:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'142', N'0', N'114', N'隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=subtitle][text]最新动态[/text][/div][div=content][img]/NetImages/model/model14/123.jpg[/img]　[text]　广州市联速计算机科技有限公司，为拓展经营范围，新公司于2009.08.28日成立，注册号:440106000040708 (原广州市柯林软件有限公司，注册号:4401052015582)，是一家专业移动通信技术应用解决方案提供商，以及拥有计算机硬件研发、维修、维护、销售电子产品等拓展业务...[/text][/div][div=subcontent][article=0_4_0_12_7*100*100] [/div]', NULL, N'0', N'0', N'', NULL, N'142', N'2012-07-29 10:19:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'143', N'0', N'115', N'布局6效果', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'143', N'2012-07-29 16:46:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'144', N'0', N'115', N'隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=subtitle]UBB布局z=6效果[/div][div=subcontent]调用UBB［article=0_3_0_0_6*90*100］（如需要更理想效果可以修改css样式）实现效果如下↓↓↓[/div][article=0_3_0_0_6*90*100] [div=subtitle]UBB布局z=7效果[/div][div=subcontent]调用UBB［article=0_3_0_0_7*100*100］（如需要更理想效果可以修改css样式）实现效果如下↓↓↓[/div][article=0_3_0_0_7*100*100] [br]', NULL, N'0', N'0', N'', NULL, N'144', N'2012-07-29 16:47:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'147', N'0', N'116', N'关于我们', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', N'[div=mylink][back]返回上级[/back]-[index]返回首页[/index][/div]', N'41', N'0', N'', N'[div=subtitle]关于我们[/div][div=content]　　广州市联速计算机科技有限公司，为拓展经营范围，新公司于2009.08.28日成立，注册号:440106000040708 (原广州市柯林软件有限公司，注册号:4401052015582)，是一家专业移动通信技术应用解决方案提供商，以及拥有计算机硬件研发、维修、维护、销售电子产品等拓展业务。公司以基于WAP无线应用协议的移动商务应用系统开发为主，SMS/二维码MMS及WEB互联网服务的开发为辅。公司凭借领先的移动通信技术、经验丰富的WAP开发队伍、创新的管理模式和优质的服务意识，为企业客户全力拓展移动信息时代的商务空间，全面提升企业的竞争力。主要产品Kelink WAP手机自助建站系统适应于电信运营商、SP公司、各类门户站点、移动电子商务网站及企业手机网站等，面向企业、政府机构、事业单位、学校和广大个人用户提供完整全面的无线应用解决方案。[/div]', N'147', N'2012-07-29 21:37:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'148', N'0', N'116', N'商品展示', N'4', N'left', N'0|0|0|0|0|0|0|0|0|||0|0|0|||7|100|100|0', N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'149', N'2012-07-29 21:37:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'149', N'0', N'116', N'影音', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', N'[div=mylink][back]返回上级[/back]-[index]返回首页[/index][/div]', N'116', N'0', N'', N'[div=subtitle]在线音乐[/div][div=content]音乐1[br][audio=0]/NetImages/model/model16/kelinkcom.mp3[/audio][br]音乐2[br][audio=0]/NetImages/model/model16/kelinkcom.mp3[/audio][br]音乐3[br][audio=0]/NetImages/model/model16/kelinkcom.mp3[/audio][br]音乐4[br][audio=0]/NetImages/model/model16/kelinkcom.mp3[/audio][/div][div=subtitle]广州旅游景点视频[/div][div=subcontent][movie=320*180]/NetImages/model/model16/kelinkcom.mp4|/NetImages/model/model16/123.jpg[/movie][/div][div=subtitle]丽江旅游景点视频[/div][div=subcontent][movie=320*180]/NetImages/model/model16/kelinkcom.mp4|/NetImages/model/model16/222.jpg[/movie][/div][div=subtitle]泰山旅游景点视频[/div][div=subcontent][movie=320*180]/NetImages/model/model16/kelinkcom.mp4|/NetImages/model/model16/333.jpg[/movie][/div]', N'148', N'2012-07-29 21:38:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'150', N'0', N'116', N'隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=subtitle][text]广州旅游景点视频[/text][/div][div=subcontent][movie=320*180]/NetImages/model/model16/kelinkcom.mp4|/NetImages/model/model16/123.jpg[/movie][/div][div=subtitle][text]丽江旅游景点视频[/text][/div][div=subcontent][movie=320*180]/NetImages/model/model16/kelinkcom.mp4|/NetImages/model/model16/222.jpg[/movie][/div][div=subtitle][text]泰山旅游景点视频[/text][/div][div=subcontent][movie=320*180]/NetImages/model/model16/kelinkcom.mp4|/NetImages/model/model16/333.jpg[/movie][/div][div=content][text]　　广州市联速计算机科技有限公司，为拓展经营范围，新公司于2009.08.28日成立，注册号:440106000040708 (原广州市柯林软件有限公司，注册号:4401052015582)，是一家专业移动通信技术应用解决方案提供商，以及拥有计算机硬件研发、维修、维护、销售电子产品等拓展业务...[/text][/div][div=subcontent][article=0_4_0_12_7*100*100] [/div][div=subtitle][text]我的当前位置[/text][/div][map]320*240[/map]', NULL, N'0', N'0', N'', NULL, N'150', N'2012-07-30 10:24:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'155', N'0', N'1000', N'企业动态', N'4', N'left', N'0|0|0|0|0|0|0|0|0|||0|0|0|||7|100|100|0', N'NetImages/no.gif', N'0', N'', N'[div=mylink][back]返回上级[/back]-[index]返回首页[/index][/div]', N'1', N'0', NULL, N'[div=subtitle]企业动态[/div]', N'139', N'2012-07-31 11:58:00', N'0', N'1', N'', NULL, NULL, NULL, NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'156', N'0', N'1000', N'商品展示', N'4', N'left', N'0|0|0|0|0|0|0|0|0|||0|0|0|||6|130|130|0', N'NetImages/no.gif', N'0', N'', N'', N'1', N'0', NULL, N'[div=subtitle]商品展示[/div]', N'140', N'2012-07-31 11:58:00', N'0', N'1', N'', NULL, NULL, NULL, NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'157', N'0', N'1000', N'关于我们', N'25', N'left', N'', N'NetImages/no.gif', N'0', N'', N'[div=mylink][back]返回上级[/back]-[index]返回首页[/index][/div]', N'25', N'0', NULL, N'[div=subtitle]关于我们[/div][div=content]　　广州市联速计算机科技有限公司，为拓展经营范围，新公司于2009.08.28日成立，注册号:440106000040708 (原广州市柯林软件有限公司，注册号:4401052015582)，是一家专业移动通信技术应用解决方案提供商，以及拥有计算机硬件研发、维修、维护、销售电子产品等拓展业务。公司以基于WAP无线应用协议的移动商务应用系统开发为主，SMS/二维码MMS及WEB互联网服务的开发为辅。公司凭借领先的移动通信技术、经验丰富的WAP开发队伍、创新的管理模式和优质的服务意识，为企业客户全力拓展移动信息时代的商务空间，全面提升企业的竞争力。主要产品Kelink WAP手机自助建站系统适应于电信运营商、SP公司、各类门户站点、移动电子商务网站及企业手机网站等，面向企业、政府机构、事业单位、学校和广大个人用户提供完整全面的无线应用解决方案。[/div]', N'141', N'2012-07-31 11:58:00', N'0', N'1', N'', NULL, NULL, NULL, NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'158', N'0', N'1000', N'隐藏栏目', N'25', N'left', N'', N'NetImages/no.gif', N'1', N'[div=subtitle][text]最新动态[/text][/div][div=content][img]/NetImages/model/model14/123.jpg[/img]　　欢迎您使用风靡WAP界的联速科技公司旗下产品:柯林WAP手机自助建站系统。本系统双后台管理，WEB后台+WAP后台，其中WAP后台也可以在电脑上管理哦。电脑后台：[url=http://[domain]/admin]http://[domain]/admin[/url]进入；手机后台点击顶部的【登录】进入；默认超级管理员用户名为wap，密码888888，新手可以直接在WEB后台→【页面综合排版】→【模板向导】中直接导入网站模板。不会排版还可以找柯林设计师有尝帮您排版本哦...[/div][div=subcontent][article=0_4_0_12_7*100*100][/div]', N'', N'0', N'0', NULL, N'', N'142', N'2012-07-31 11:58:00', N'0', N'1', N'', NULL, NULL, NULL, NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'159', N'0', N'117', N'矿业新闻', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'3', N'0', N'', NULL, N'159', N'2012-11-30 16:08:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'160', N'0', N'117', N'矿业设备', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'4', N'0', N'', NULL, N'160', N'2012-11-30 16:08:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'161', N'0', N'117', N'矿产资源', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'7', N'0', N'', NULL, N'161', N'2012-11-30 16:08:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'162', N'0', N'117', N'矿业管理', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'5', N'0', N'', NULL, N'162', N'2012-11-30 16:09:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'163', N'0', N'117', N'矿业城市', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'163', N'2012-11-30 16:09:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'164', N'0', N'117', N'矿业市场', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'164', N'2012-11-30 16:09:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'165', N'0', N'117', N'矿山安全', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'165', N'2012-11-30 16:09:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'166', N'0', N'117', N'矿权法规 ', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'166', N'2012-11-30 16:09:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'167', N'0', N'117', N'项目合作', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'167', N'2012-11-30 16:09:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'168', N'0', N'117', N'矿业展会', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'168', N'2012-11-30 16:09:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'169', N'0', N'117', N'在线留言', N'49', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'169', N'2012-11-30 16:10:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'170', N'0', N'117', N'联系我们', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'170', N'2012-11-30 16:10:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'171', N'0', N'117', N'天气查询', N'124', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'171', N'2012-11-30 16:10:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'172', N'0', N'117', N'生活百科', N'123', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'172', N'2012-11-30 16:11:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'173', N'0', N'117', N'游戏大厅', N'139', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'173', N'2012-11-30 16:11:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'174', N'0', N'117', N'矿业动态', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'174', N'2012-11-30 17:17:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'175', N'0', N'117', N'中国矿联', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'175', N'2012-11-30 17:38:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'176', N'0', N'117', N'矿业论坛', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'176', N'2012-11-30 17:38:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'177', N'0', N'117', N'国际矿业', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'177', N'2012-11-30 17:38:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'178', N'0', N'117', N'矿业统计', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'178', N'2012-11-30 17:38:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'179', N'0', N'118', N'签到', N'142', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'179', N'2012-12-01 21:45:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'180', N'0', N'118', N'名站导航', N'62', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=welcome]【', NULL, N'2', N'0', N'', NULL, N'180', N'2012-12-01 22:16:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'181', N'0', N'118', N'网站分类', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=showpage][url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=welcome]【[url=/link/book_list.aspx?action=back&amp;siteid=[siteid]&amp;classid=180&amp;sid=[sid]]动态排名[/url] [url=/link/book_list.aspx?action=new&amp;siteid=[siteid]&amp;classid=180&amp;sid=[sid]]新站[/url]】[/div][div=showpage][url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=welcome]【', NULL, N'0', N'0', N'', NULL, N'181', N'2012-12-01 22:38:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'182', N'0', N'118', N'手机地域', N'114', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=showpage]', NULL, N'0', N'0', N'', NULL, N'183', N'2012-12-01 22:49:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'183', N'0', N'118', N'实用查询', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'】[/div][div=showpage]［新闻］：  [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=showpage]［小说］：  [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=showpage]［微博］：  [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=showpage]［购物］：  [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=showpage]［社区］：  [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=showpage]［彩票］：  [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=showpage]［游戏］：  [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=showpage]［软件］：  [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=showpage]［军事］：  [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=showpage]［视频］：  [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url] [url=http://kelink.com]测试[/url][/div][div=tip2][img]/netimages/jiantou.gif[/img][url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid]]查看更多分类[/url]&amp;gt;&amp;gt;[/div][div=welcome]【', NULL, N'0', N'0', N'', NULL, N'182', N'2012-12-02 01:09:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'184', N'0', N'118', N'电话区号', N'119', N'left', NULL, N'NetImages/no.gif', N'1', N'.', NULL, N'0', N'0', N'', NULL, N'184', N'2012-12-02 01:12:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'185', N'0', N'118', N'生活全书', N'123', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=showpage]', NULL, N'0', N'0', N'', NULL, N'185', N'2012-12-02 01:12:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'186', N'0', N'118', N'天气预报', N'124', N'left', NULL, N'NetImages/no.gif', N'1', N'.', NULL, N'0', N'0', N'', NULL, N'186', N'2012-12-02 01:12:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'187', N'0', N'119', N'推荐企业', N'4', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'21', N'0', N'', N'[div=listtitle][span=index][imgurl=38*38]/NetImages/model/model19/home.gif*/wapindex.aspx?siteid=[siteid][/imgurl][/span][span=classtit]　[classname]&amp;gt;&amp;gt;[/span][img]/NetImages/right.png[/img][/div]', N'187', N'2012-12-02 13:28:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'188', N'0', N'119', N'房产新闻', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'188', N'2012-12-02 13:28:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'189', N'0', N'119', N'地产营销', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'189', N'2012-12-02 13:28:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'190', N'0', N'119', N'楼市动态', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'190', N'2012-12-02 13:29:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'191', N'0', N'119', N'二手房资', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'191', N'2012-12-02 13:32:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'192', N'0', N'119', N'家居装饰', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'192', N'2012-12-02 13:32:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'193', N'0', N'119', N'购房步骤', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'193', N'2012-12-02 13:32:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'194', N'0', N'119', N'购房常识', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'194', N'2012-12-02 13:32:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'195', N'0', N'119', N'政策法规', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'195', N'2012-12-02 13:33:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'196', N'0', N'119', N'探盘手记', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'196', N'2012-12-02 13:33:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'197', N'0', N'119', N'房产新闻', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'197', N'2012-12-02 13:33:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'198', N'0', N'119', N'联系我们', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'198', N'2012-12-02 13:33:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'200', N'0', N'119', N'济南', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=content]', NULL, N'0', N'0', N'', NULL, N'200', N'2012-12-02 19:16:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'201', N'0', N'119', N'青岛', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'201', N'2012-12-02 19:16:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'202', N'0', N'119', N'烟台', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'202', N'2012-12-02 19:16:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'203', N'0', N'119', N'威海', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'203', N'2012-12-02 19:16:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'204', N'0', N'119', N'淄博', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'0', N'0', N'', NULL, N'204', N'2012-12-02 19:16:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'205', N'0', N'119', N'泰安', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'205', N'2012-12-02 19:16:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'206', N'0', N'119', N'济宁', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'206', N'2012-12-02 19:16:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'207', N'0', N'119', N'东营', N'144', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'207', N'2012-12-02 19:16:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'208', N'0', N'119', N'隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div]', NULL, N'0', N'0', N'', NULL, N'211', N'2012-12-02 19:17:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'209', N'0', N'119', N'楼房查询', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=subtitle]便民工具[/div][div=content]', NULL, N'0', N'0', N'', NULL, N'208', N'2012-12-02 19:21:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'210', N'0', N'119', N'天气查询', N'124', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'209', N'2012-12-02 19:21:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'211', N'0', N'119', N'贷款按揭查询', N'134', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'210', N'2012-12-02 19:22:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'212', N'0', N'120', N'企业推荐', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=nav]', NULL, N'2', N'0', N'', NULL, N'212', N'2012-12-02 20:43:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'213', N'0', N'120', N'行业新闻', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'213', N'2012-12-02 20:44:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'214', N'0', N'120', N'商机供求', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'214', N'2012-12-02 20:44:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'215', N'0', N'120', N'行业标准', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'215', N'2012-12-02 20:44:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'216', N'0', N'120', N'行业展会', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'216', N'2012-12-02 20:44:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'217', N'0', N'120', N'政策法规', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'217', N'2012-12-02 20:44:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'218', N'0', N'120', N'橡胶知识', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'218', N'2012-12-02 20:45:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'219', N'0', N'120', N'招商加盟', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'219', N'2012-12-02 20:45:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'220', N'0', N'120', N'联系我们', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'220', N'2012-12-02 20:45:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'221', N'0', N'120', N'产品库', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=subcontent][img]/NetImages/model/model20/1.jpg[/img][/div][div=title][url=/wapindex.aspx?siteid=[siteid]&amp;classid=212&amp;sid=[sid]]企业推荐[/url][/div][div=ubbcontent][article=0_5_5_Y_0] [br][span=more][url=/wapindex.aspx?siteid=[siteid]&amp;classid=188&amp;sid=[sid]]查看更多[/url][/span][/div][div=title][url=/wapindex.aspx?siteid=[siteid]&amp;classid=212&amp;sid=[sid]]企业推荐[/url][/div][div=ubbcontent][article=0_5_5_Y_0] [br][span=more][url=/wapindex.aspx?siteid=[siteid]&amp;classid=188&amp;sid=[sid]]查看更多[/url][/span][/div][div=title][url=/wapindex.aspx?siteid=[siteid]&amp;classid=212&amp;sid=[sid]]企业推荐[/url][/div][div=ubbcontent][article=0_5_5_Y_0] [br][span=more][url=/wapindex.aspx?siteid=[siteid]&amp;classid=188&amp;sid=[sid]]查看更多[/url][/span][/div][div=title]', NULL, N'0', N'0', N'', NULL, N'221', N'2012-12-02 20:46:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'222', N'0', N'120', N'隐藏栏目', N'144', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div]', NULL, N'0', N'0', N'', NULL, N'231', N'2012-12-02 20:55:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'223', N'0', N'120', N'橡胶原料', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=content]', NULL, N'0', N'0', N'', NULL, N'223', N'2012-12-02 20:57:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'224', N'0', N'120', N'废橡胶', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'224', N'2012-12-02 20:58:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'225', N'0', N'120', N'合成橡胶', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'225', N'2012-12-02 20:58:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'226', N'0', N'120', N'天然橡胶', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'226', N'2012-12-02 20:58:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'227', N'0', N'120', N'工程橡胶', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'0', N'0', N'', NULL, N'227', N'2012-12-02 20:58:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'228', N'0', N'120', N'胶带', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'228', N'2012-12-02 20:58:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'229', N'0', N'120', N'橡胶机械', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'229', N'2012-12-02 20:58:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'230', N'0', N'120', N'硫化罐', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'230', N'2012-12-02 20:58:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'231', N'0', N'121', N'手机', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=line2]', NULL, N'0', N'0', N'', NULL, N'231', N'2012-12-03 02:42:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'232', N'0', N'121', N'电脑', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'232', N'2012-12-03 02:42:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'233', N'0', N'121', N'女装', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'233', N'2012-12-03 02:43:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'234', N'0', N'121', N'男装', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'234', N'2012-12-03 02:43:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'235', N'0', N'121', N'情侣', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'235', N'2012-12-03 02:43:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'236', N'0', N'121', N'手表', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'0', N'0', N'', NULL, N'236', N'2012-12-03 02:43:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'237', N'0', N'121', N'包包', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'237', N'2012-12-03 02:43:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'238', N'0', N'121', N'男鞋', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'238', N'2012-12-03 02:43:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'239', N'0', N'121', N'女鞋', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'239', N'2012-12-03 02:43:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'240', N'0', N'121', N'内衣', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'240', N'2012-12-03 02:44:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'241', N'0', N'121', N'隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=content][forecolor=#FF0000]新品:[/forecolor][url=123]小米安卓触屏手机仅468元[/url][/div][div=content][forecolor=#FF0000]新品:[/forecolor][url=123]小米安卓触屏手机仅468元[/url][/div][div=content][forecolor=#FF0000]新品:[/forecolor][url=123]小米安卓触屏手机仅468元[/url][/div][div=content][forecolor=#FF0000]新品:[/forecolor][url=123]小米安卓触屏手机仅468元[/url][/div][div=subcontent][img]/netimages/model/model20/123.jpg[/img][br][forecolor=#cccccc]3.2寸高清触屏,高清摄像头,超薄流线机型,功能齐全[/forecolor][/div][div=welcome]热销:', NULL, N'0', N'0', N'', NULL, N'241', N'2012-12-03 02:44:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'242', N'0', N'121', N'东信', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'242', N'2012-12-03 02:57:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'243', N'0', N'121', N'创客', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'243', N'2012-12-03 02:58:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'244', N'0', N'121', N'天星', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'1', N'0', N'', NULL, N'244', N'2012-12-03 02:58:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'245', N'0', N'121', N'三普', N'122', N'left', NULL, N'NetImages/no.gif', N'1', N' | ', NULL, N'0', N'0', N'', NULL, N'245', N'2012-12-03 02:58:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'246', N'0', N'121', N'隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=subcontent][img]/netimages/model/model20/123.jpg[/img][/div][div=content][forecolor=#FF0000]新品:[/forecolor][url=123]小米安卓触屏手机仅468元[/url][/div][div=content][forecolor=#FF0000]新品:[/forecolor][url=123]小米安卓触屏手机仅468元[/url][/div][div=content][forecolor=#FF0000]新品:[/forecolor][url=123]小米安卓触屏手机仅468元[/url][/div][div=sysad]【热销导购】&amp;gt;&amp;gt;[url=123]全站导购[/url][/div][div=content][forecolor=#FF0000]新品:[/forecolor][url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid]]东信[/url][tab]|[tab][url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid]]东信[/url] | [url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid]]东信[/url][/div][div=content][forecolor=#FF0000]新品:[/forecolor][url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid]]东信[/url][tab]|[tab][url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid]]东信[/url] | [url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid]]东信[/url][/div][div=content][forecolor=#FF0000]新品:[/forecolor][url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid]]东信[/url][tab]|[tab][url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid]]东信[/url] | [url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid]]东信[/url][/div]', NULL, N'0', N'0', N'', NULL, N'246', N'2012-12-03 02:58:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'247', N'0', N'122', N'黄鹤楼简介', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=subtitle]', NULL, N'3', N'0', N'', NULL, N'247', N'2012-12-03 09:27:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'248', N'0', N'122', N'文化底蕴', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'248', N'2012-12-03 09:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'249', N'0', N'122', N'神话传说', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'249', N'2012-12-03 09:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'250', N'0', N'122', N'黄鹤楼故址', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'0', N'0', N'', NULL, N'250', N'2012-12-03 09:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'251', N'0', N'122', N'景区布局', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'251', N'2012-12-03 09:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'252', N'0', N'122', N'交通指南', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'252', N'2012-12-03 09:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'253', N'0', N'122', N'黄鹤楼特色', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[br]', NULL, N'0', N'0', N'', NULL, N'253', N'2012-12-03 09:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'254', N'0', N'122', N'周边酒店', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'254', N'2012-12-03 09:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'255', N'0', N'122', N'美食推荐', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'｜', NULL, N'0', N'0', N'', NULL, N'255', N'2012-12-03 09:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'256', N'0', N'122', N'黄鹤楼新闻', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=subcontent][img]/NetImages/model/model20/hhl.jpg[/img][/div][div=content][size=5][url=wapindex.aspx?siteid=[siteid]&amp;classid=247&amp;sid=[sid]]黄鹤楼[/url][/size] 位于湖北省武汉市。江南三大名楼之一，国家旅游胜地四十佳。素有“天下江山第一楼”之美誉。[url=wapindex.aspx?siteid=[siteid]&amp;classid=247&amp;sid=[sid]]更多[/url][img]/NetImages/model/model20/gd.gif[/img][br][img]/NetImages/model/model20/jt.gif[/img][url=wapindex.aspx?siteid=[siteid]&amp;classid=247&amp;sid=[sid]]黄鹤楼[/url] [img]/NetImages/model/model20/jt.gif[/img][url=wapindex.aspx?siteid=[siteid]&amp;classid=247&amp;sid=[sid]]黄鹤楼[/url] [img]/NetImages/model/model20/jt.gif[/img][url=wapindex.aspx?siteid=[siteid]&amp;classid=247&amp;sid=[sid]]黄鹤楼[/url][br][forecolor=#D66600]白云阁[/forecolor] 巍峨耸立于武昌蛇山的黄鹤楼，享有“天下绝景”的盛誉，与湖南岳阳楼，江西滕王阁并称为“江南三大名楼”。[br][img]/NetImages/model/model20/more.gif[/img][url=wapindex.aspx?siteid=[siteid]&amp;classid=247&amp;sid=[sid]]点击更多详情[/url][img]/NetImages/model/model20/gd.gif[/img][br][forecolor=#660000]亭 台[/forecolor] 毛泽东词亭，在南楼东南侧，黄鹤楼东南206米，白云阁西南90米处。[img]/NetImages/model/model20/more.gif[/img][url=wapindex.aspx?siteid=[siteid]&amp;classid=247&amp;sid=[sid]]点击更多[/url][img]/NetImages/model/model20/gd.gif[/img][/div][div=subcontent][img]/NetImages/model/model20/333.gif[/img][img]/NetImages/model/model20/title_hhl.jpg[/img][/div][div=content][img]/NetImages/model/model20/jt2.gif[/img][url=wapindex.aspx?siteid=[siteid]&amp;classid=247&amp;sid=[sid]]主楼图片集锦[/url][br][img]/NetImages/model/model20/fj.jpg[/img] [img]/NetImages/model/model20/fj.jpg[/img] [img]/NetImages/model/model20/fj.jpg[/img][br][img]/NetImages/model/model20/jt2.gif[/img][url=wapindex.aspx?siteid=[siteid]&amp;classid=247&amp;sid=[sid]]主楼图片集锦[/url][br][img]/NetImages/model/model20/fj.jpg[/img] [img]/NetImages/model/model20/fj.jpg[/img] [img]/NetImages/model/model20/fj.jpg[/img][br][img]/NetImages/model/model20/jt2.gif[/img][url=wapindex.aspx?siteid=[siteid]&amp;classid=247&amp;sid=[sid]]主楼图片集锦[/url][br][img]/NetImages/model/model20/fj.jpg[/img] [img]/NetImages/model/model20/fj.jpg[/img] [img]/NetImages/model/model20/fj.jpg[/img][/div][div=subcontent][img]/NetImages/model/model20/333.gif[/img][img]/NetImages/model/model20/ship.jpg[/img][/div][div=subcontent][movie=320*180]视频地址|图片地址[/movie][/div][div=title]', NULL, N'0', N'0', N'', NULL, N'256', N'2012-12-03 11:22:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'257', N'0', N'122', N'隐藏栏目', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'[/div][div=ubbcontent] [article=0_5_5_0_0] [/div][div=subcontent][img]/NetImages/model/model20/333.gif[/img][img]/NetImages/model/model20/xiaochi.jpg[/img][/div][div=subcontent][img]/NetImages/model/model20/xc.jpg[/img][/div][div=subcontent][img]/NetImages/model/model20/333.gif[/img][img]/NetImages/model/model20/xiaochi.jpg[/img][/div][div=subcontent][img]/NetImages/model/model20/xc.jpg[/img][/div][div=subcontent][img]/NetImages/model/model20/333.gif[/img][img]/NetImages/model/model20/xiaochi.jpg[/img][/div][div=subcontent][img]/NetImages/model/model20/xc.jpg[/img][/div]', NULL, N'0', N'0', N'', NULL, N'257', N'2012-12-03 11:28:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'258', N'0', N'123', N'新闻动态', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[getwml=1][div=theTitle][url=/article/book_list.aspx?action=class&amp;siteid=123&amp;classid=258&amp;sid=[sid]]［新闻动态］[/url][span=span][url=/article/book_list.aspx?action=class&amp;siteid=123&amp;classid=258&amp;sid=[sid]]更多&amp;gt;&amp;gt;[/url][/span][/div][div=ubbContent][article=258_5_5_0_0] [/div][div=tu]　[/div][div=theTitle][医院概况][/div][div=about][text]北京奥北中医院成立于1994年3月，位于北京市沙滩桥东，因位于奥林匹克公园北边而得名。医院是全...[/text][url=/wapindex.aspx?siteid=123&amp;classid=262&amp;sid=[sid]]［详细］[/url][/div]', NULL, N'0', N'0', N'', NULL, N'258', N'2012-12-09 02:20:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'259', N'0', N'123', N'权威技术', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=theTitle][url=/article/book_list.aspx?action=class&amp;siteid=123&amp;classid=259&amp;sid=[sid]]［权威技术］[/url][span=span][url=/article/book_list.aspx?action=class&amp;siteid=123&amp;classid=259&amp;sid=[sid]]更多&amp;gt;&amp;gt;[/url][/span][/div][div=tabNum][span=li1][tab][/span][url=123]内窥式保宫无痛取胚术[/url][span=li2][tab][/span][url=123]内窥式保宫无痛取胚术[/url][span=li3][tab][/span][url=123]内窥式保宫无痛取胚术[/url][span=li4][tab][/span][url=123]内窥式保宫无痛取胚术[/url][/div]', NULL, N'0', N'0', N'', NULL, N'259', N'2012-12-09 02:20:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'260', N'0', N'123', N'微回答', N'4', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=theTitle][url=/article/book_list.aspx?action=class&amp;siteid=123&amp;classid=260&amp;sid=[sid]]［微回答］[/url][span=span][url=/article/book_list.aspx?action=class&amp;siteid=123&amp;classid=260&amp;sid=[sid]]更多&amp;gt;&amp;gt;[/url][/span][/div][div=weiContent][span=theTime]刚刚[/span][span=wen]　[/span][url=123]无痛人流要多少钱？[/url][/div][div=weiContent][span=theTime]3分钟前[/span][span=wen]　[/span][url=123]无痛人流要多少钱？[/url][/div][div=weiContent][span=theTime]10分钟前[/span][span=wen]　[/span][url=123]无痛人流要多少钱？[/url][/div][div=weiContent][span=theTime]2小时前[/span][span=wen]　[/span][url=123]无痛人流要多少钱？[/url][/div][div=weiContent][span=theTime]5小时前[/span][span=wen]　[/span][url=123]无痛人流要多少钱？[/url][/div]', NULL, N'0', N'0', N'', NULL, N'260', N'2012-12-09 02:21:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'261', N'0', N'123', N'康复案例', N'144', N'left', NULL, N'NetImages/no.gif', N'1', N'[div=theTitle][url=/article/book_list.aspx?action=class&amp;siteid=123&amp;classid=261&amp;sid=[sid]]［康复案例］[/url][span=span][url=/article/book_list.aspx?action=class&amp;siteid=123&amp;classid=261&amp;sid=[sid]]更多&amp;gt;&amp;gt;[/url][/span][/div][article=258_2_1_0_7*110*80][tab=无痛人流|妇科炎症|私密妇科][article=258_5_5_0_0]|[article=258_5_5_0_0]|[article=258_5_5_0_0][/tab]', NULL, N'0', N'0', N'', NULL, N'261', N'2012-12-09 02:21:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'262', N'0', N'123', N'医院简介', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'262', N'2012-12-09 22:47:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'263', N'0', N'123', N'专家团队', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'263', N'2012-12-09 22:47:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'264', N'0', N'123', N'在线预约', N'49', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'264', N'2012-12-09 22:48:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'265', N'0', N'123', N'无痛人流', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'265', N'2012-12-09 22:48:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'266', N'0', N'123', N'妇科炎症', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'266', N'2012-12-09 22:48:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'267', N'0', N'123', N'无痛引产', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'267', N'2012-12-09 23:32:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'268', N'0', N'123', N'私密妇科', N'25', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'268', N'2012-12-09 23:32:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'269', N'0', N'123', N'wml', N'128', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'269', N'2012-12-09 23:36:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'1', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'270', N'0', N'124', N'分类', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'[picurl8=320*140]/NetImages/model/4.jpg|/NetImages/model/4.jpg*/wapindex.aspx?siteid=[siteid]&amp;classid=270&amp;sid=[sid]|/wapindex.aspx?siteid=[siteid]&amp;classid=270&amp;sid=[sid][/picurl8][div=search][getwml=2][/div][div=content][download=0_10_1_0_5][/div][div=showpage][url=/wapindex.aspx?siteid=[siteid]&amp;classid=270&amp;sid=[sid]]加载更多...[/url][/div][div=title]友情链接[/div][div=link][url=http://kelink.com]柯林[/url]|[url=http://kelink.com]柯林[/url][/div]', NULL, N'72', N'0', N'', N'[div=logo][img]/NetImages/logo2.png[/img][/div][div=nav][p=p1][index]首页[/index][span=sp] [/span][/p][p=p2][url=/wapindex.aspx?siteid=[siteid]&amp;classid=270]分类[/url][span=sp] [/span][/p][p=p1][url=/wapindex.aspx?siteid=[siteid]&amp;classid=271]最新[/url][span=sp] [/span][/p][p=p1][url=/wapindex.aspx?siteid=[siteid]&amp;classid=272]热门[/url][span=sp] [/span][/p][/div][div=downType][p=tp][img]/NetImages/model/cl.jpg[/img][url=/wapindex.aspx?siteid=[siteid]&amp;classid=275]游戏下载[/url][/p][p=tp][img]/NetImages/model/ty.jpg[/img][url=/wapindex.aspx?siteid=[siteid]&amp;classid=276]软件下载[/url][/p][p=tp][img]/NetImages/model/cl.jpg[/img][url=/wapindex.aspx?siteid=[siteid]&amp;classid=275]游戏下载[/url][/p][p=tp][img]/NetImages/model/ty.jpg[/img][url=/wapindex.aspx?siteid=[siteid]&amp;classid=276]软件下载[/url][/p][p=tp][img]/NetImages/model/cl.jpg[/img][url=/wapindex.aspx?siteid=[siteid]&amp;classid=275]游戏下载[/url][/p][p=tp][img]/NetImages/model/ty.jpg[/img][url=/wapindex.aspx?siteid=[siteid]&amp;classid=276]软件下载[/url][/p][/div]', N'270', N'2013-01-10 16:51:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'271', N'0', N'124', N'最新', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'18', N'0', N'', N'[div=logo][img]/NetImages/logo2.png[/img][/div][div=nav][p=p1][index]首页[/index][span=sp] [/span][/p][p=p1][url=/wapindex.aspx?siteid=[siteid]&amp;classid=270]分类[/url][span=sp] [/span][/p][p=p2][url=/wapindex.aspx?siteid=[siteid]&amp;classid=271]最新[/url][span=sp] [/span][/p][p=p1][url=/wapindex.aspx?siteid=[siteid]&amp;classid=272]热门[/url][span=sp] [/span][/p][/div][div=content][download=0_10_1_0_5][/div][div=showpage][url=/wapindex.aspx?siteid=[siteid]&amp;classid=270]加载更多...[/url][/div]', N'271', N'2013-01-10 16:52:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'272', N'0', N'124', N'热门', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'19', N'0', N'', N'[div=logo][img]/NetImages/logo2.png[/img][/div][div=nav][p=p1][index]首页[/index][span=sp] [/span][/p][p=p1][url=/wapindex.aspx?siteid=[siteid]&amp;classid=270]分类[/url][span=sp] [/span][/p][p=p1][url=/wapindex.aspx?siteid=[siteid]&amp;classid=271]最新[/url][span=sp] [/span][/p][p=p2][url=/wapindex.aspx?siteid=[siteid]&amp;classid=272]热门[/url][span=sp] [/span][/p][/div][div=content][download=0_10_2_0_5][/div][div=showpage][url=/wapindex.aspx?siteid=[siteid]&amp;classid=270]加载更多...[/url][/div]', N'272', N'2013-01-10 16:52:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'273', N'0', N'124', N'软件下载', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'273', N'2013-01-10 16:52:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'1', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'274', N'0', N'124', N'wml搜索', N'128', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'274', N'2013-01-17 12:04:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'1', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'275', N'270', N'124', N'游戏下载', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'275', N'2013-01-17 17:54:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'276', N'270', N'124', N'软件下载', N'13', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'276', N'2013-01-17 17:54:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'277', N'0', N'125', N'wml', N'128', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'277', N'2014-06-27 22:32:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'6', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'278', N'0', N'125', N'关于我们', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'49', N'0', N'', N'[getwml=4]', N'278', N'2014-06-28 10:30:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'279', N'0', N'125', N'优惠活动', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'66', N'0', N'', N'[getwml=5]', N'279', N'2014-06-28 10:33:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'280', N'0', N'125', N'作品案例展示', N'7', N'left', N'0|0|0|||[getwml=8]|[getwml=8]||||||||7|130|0||', N'NetImages/no.gif', N'1', N'', NULL, N'6', N'0', N'', NULL, N'280', N'2014-06-28 10:47:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'2', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'281', N'0', N'125', N'拍摄场景', N'7', N'left', N'0|0|0|||[getwml=8]|[getwml=8]||||||||7|130|0||', N'NetImages/no.gif', N'1', N'', NULL, N'2', N'0', N'', NULL, N'281', N'2014-06-28 10:48:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'2', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'282', N'0', N'125', N'产品套餐', N'7', N'left', N'0|0|0|||[getwml=8]|[getwml=8]||||||||7|130|0||', N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'282', N'2014-06-28 10:48:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'1', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'283', N'0', N'126', N'车型详情介绍页', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'39', N'0', N'', N'[getwml=12]', N'283', N'2014-07-02 13:28:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'284', N'0', N'126', N'车型列表', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'35', N'0', N'', N'[getwml=13]', N'284', N'2014-07-02 13:45:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'285', N'0', N'126', N'汽车资讯', N'4', N'left', N'1|1|0|0|0|0|1|1|1|[br][br]|[br][br]|0|0|0|||7|0|0|1|0', N'NetImages/no.gif', N'1', N'', NULL, N'9', N'0', N'', NULL, N'285', N'2014-07-02 13:55:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'2', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'286', N'0', N'126', N'联系我们', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'43', N'0', N'', N'[getwml=14]', N'286', N'2014-07-02 15:14:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'287', N'0', N'127', N'产品套餐', N'4', N'left', N'1|1|0|0|0|0|0|1|1|[hr]|[hr]|0|0|0|||6|300|300|0|0', N'NetImages/no.gif', N'1', N'', NULL, N'5', N'0', N'', NULL, N'287', N'2014-07-10 16:34:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'1', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'288', N'0', N'127', N'最新活动', N'4', N'left', N'1|1|0|0|0|0|0|1|1|[hr]|[hr]|0|0|0|||6|300|300|0|0', N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'288', N'2014-07-10 16:34:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'2', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'289', N'0', N'127', N'关于我们', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'50', N'0', N'', N'[getwml=17][getwml=21]', N'289', N'2014-07-10 16:35:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'290', N'0', N'127', N'礼品商城', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'36', N'0', N'', N'[getwml=17][getwml=19]', N'290', N'2014-07-10 16:35:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'291', N'0', N'127', N'咨询帮助', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'26', N'0', N'', N'[getwml=17][getwml=18]', N'291', N'2014-07-10 16:35:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'292', N'0', N'128', N'html代码栏目', N'128', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'1', N'0', N'', NULL, N'292', N'2014-07-18 11:15:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'293', N'0', N'128', N'沙龙新闻', N'4', N'left', N'1|1|0|0|0|0|0|0|0|||0|0|0|||7|150|150|0|0', N'NetImages/no.gif', N'0', N'', NULL, N'2', N'0', N'', NULL, N'293', N'2014-07-18 11:15:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'294', N'0', N'128', N'项目列表', N'4', N'left', N'1|1|0|0|0|0|0|0|0|||0|0|0|||7|150|150|0|0', N'NetImages/no.gif', N'0', N'', N'[div=line]此列表为文章模块，更多栏目属性中选布局7[/div]', N'5', N'0', N'', NULL, N'294', N'2014-07-18 11:16:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'295', N'0', N'128', N'店内公告', N'4', N'left', N'1|1|0|0|0|0|0|0|0|||0|0|0|||2|150|150|0|0', N'NetImages/no.gif', N'0', N'', NULL, N'3', N'0', N'', NULL, N'295', N'2014-07-18 11:16:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'296', N'0', N'128', N'优惠券', N'7', N'left', N'1|0|0||||||||||||6|320|200||', N'NetImages/no.gif', N'0', N'', NULL, N'3', N'0', N'', NULL, N'296', N'2014-07-18 11:16:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'297', N'0', N'128', N'联系我们', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'16', N'0', N'', N'此次录入联系我的信息，下面显示地图：[br][br][getwml=24]', N'297', N'2014-07-18 11:16:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'298', N'0', N'128', N'营业时间', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'11', N'0', N'', N'[br][br]此次录入营业时间', N'298', N'2014-07-18 11:17:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'299', N'0', N'128', N'免费抽奖', N'25', N'left', NULL, N'NetImages/no.gif', N'0', N'', NULL, N'6', N'0', N'', N'[br][br]此次录入说明，可调用挖宝游戏等[br]', N'299', N'2014-07-18 11:17:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'301', N'0', N'126', N'HTML自写代码', N'128', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'301', N'2014-07-18 16:52:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'302', N'0', N'127', N'html自写代码', N'128', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'302', N'2014-07-18 16:54:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'303', N'0', N'129', N'HTML自写代码', N'128', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'303', N'2014-08-04 11:34:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'304', N'0', N'129', N'自己定义表单提交', N'143', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'0', N'0', N'', NULL, N'304', N'2014-08-04 11:34:00', N'10', N'1', N'', N'', N'', N'', NULL, NULL, NULL, N'1', NULL, N'0')
+INSERT INTO [dbo].[class] ([classid], [childid], [userid], [classname], [typeid], [position], [smallimg], [siteimg], [sitelist], [siterowremark], [sitedowntip], [hits], [articlenum], [adminusername], [introduce], [rank], [creatdate], [ismodel], [ishidden], [password], [needMoney], [subMoney], [allowUser], [topicID], [bbsFace], [bbsType], [total], [HangBiaoShi], [isCheck]) VALUES (N'305', N'0', N'1000', N'论坛', N'16', N'left', NULL, N'NetImages/no.gif', N'1', N'', NULL, N'10', N'0', N'', NULL, N'305', N'2024-07-31 15:28:00', N'10', N'0', N'', N'', N'', N'', NULL, NULL, NULL, N'0', NULL, N'0')
 GO
 
 SET IDENTITY_INSERT [dbo].[class] OFF
@@ -1786,97 +915,13 @@ GO
 SET IDENTITY_INSERT [dbo].[fcount] ON
 GO
 
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'644', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2013-01-23 10:08:00', NULL, N'113', N'model13', N'0', N'游客85206', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=113&amp;sid=[sid]">企业高级模版三-Kelink.Com柯林网站模板</a>', NULL, NULL)
+INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1275', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2024-07-31 16:49:00', NULL, N'1000', N'wap', N'1001', N'test', N'0', N'正在浏览最新:<a href="http://localhost:58946/bbs/book_list.aspx?action=new">所有最新贴子</a>', NULL, NULL)
 GO
 
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'659', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-04-24 14:26:00', NULL, N'103', N'model3', N'0', N'游客65336', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=103&amp;classid=0&amp;sid=[sid]">论坛网站模板</a>', NULL, NULL)
+INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1273', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2024-07-31 16:14:00', NULL, N'1000', N'wap', N'0', N'游客82812', N'0', N'进入网站。', N'ZONE1001,', NULL)
 GO
 
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'666', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-04-24 14:29:00', NULL, N'110', N'model10', N'0', N'游客65336', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=110&amp;classid=0&amp;sid=[sid]">游戏网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'670', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-04-24 14:31:00', NULL, N'118', N'model18', N'0', N'游客65336', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=118&amp;classid=0&amp;sid=[sid]">导航网站模板[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'680', NULL, NULL, NULL, NULL, NULL, N'61.234.123.235', NULL, NULL, NULL, N'2014-06-27 17:05:00', NULL, N'200', N'model100', N'0', N'游客33037', N'0', N'正在浏览:<a href="http://v.kelink.com/wapindex.aspx?siteid=200">域名v.kelink.com未授权联系Kelink.Com游戏网站模板-Kelink.Com柯林网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1204', NULL, NULL, NULL, NULL, NULL, N'183.0.70.135', NULL, NULL, NULL, N'2014-07-18 13:51:00', NULL, N'125', N'model25', N'0', N'游客32351', N'0', N'正在浏览:<a href="http://v.kelink.com/wapindex.aspx?siteid=125">柯林摄影模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1227', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-10-09 15:25:00', NULL, N'126', N'model26', N'0', N'游客90335', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=126">柯林汽车模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1228', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-10-09 15:25:00', NULL, N'127', N'model27', N'0', N'游客90335', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=127">柯林清新简洁ISO风格触屏版</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1226', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-10-09 15:25:00', NULL, N'128', N'model28', N'0', N'游客90335', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=128">餐厅网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1225', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-10-09 15:25:00', NULL, N'129', N'model29', N'0', N'游客90335', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=129">【红米Note 手机】限时秒杀</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1231', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:47:00', NULL, N'114', N'model14', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=114">企业高级模版[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1236', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:47:00', NULL, N'120', N'model20', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=120">产品网站模板[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1235', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:47:00', NULL, N'121', N'model21', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=121">商城网站模板[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1234', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:47:00', NULL, N'122', N'model22', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=122">景点网站模板[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1233', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:47:00', NULL, N'123', N'model23', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=123">医院网站模板[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1232', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:47:00', NULL, N'124', N'model24', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=124">下载网站模板[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1237', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:48:00', NULL, N'119', N'model19', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=119">房产网站模板[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1243', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:49:00', NULL, N'107', N'model7', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=107">企业网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1238', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:49:00', NULL, N'111', N'model11', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=111">企业高级模版一</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1242', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:49:00', NULL, N'112', N'model12', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=112">企业高级模版二</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1240', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:49:00', NULL, N'116', N'model16', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=116">在线影音模版[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1239', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:49:00', NULL, N'117', N'model17', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=117">安卓效果模板[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1245', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:50:00', NULL, N'101', N'model1', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=101">购物网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1247', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:50:00', NULL, N'102', N'model2', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=102">彩票网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1244', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:50:00', NULL, N'104', N'model4', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=104">政府网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1250', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:50:00', NULL, N'105', N'model5', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=105">搜索网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1249', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:50:00', NULL, N'106', N'model6', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=106">小说网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1246', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:50:00', NULL, N'108', N'model8', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=108">交友网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1248', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:50:00', NULL, N'109', N'model9', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=109">影视网站模板</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1241', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:50:00', NULL, N'115', N'model15', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=115">高级示例模版[HTML5]</a>', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1230', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2014-11-28 16:50:00', NULL, N'1000', N'wap', N'0', N'游客51950', N'0', N'正在浏览:<a href="http://localhost/wapindex.aspx?siteid=1000&amp;classid=0">柯林WAP建站系统NET版</a>', NULL, NULL)
+INSERT INTO [dbo].[fcount] ([fid], [fyear], [fmonth], [fweek], [fday], [fhour], [fip], [fwindows], [fsystem], [furl], [ftime], [fweeknum], [fuserid], [fuser], [userid], [nickname], [classid], [classname], [SubMoneyFlag], [HangBiaoShi]) VALUES (N'1274', NULL, NULL, NULL, NULL, NULL, N'::1', NULL, NULL, NULL, N'2024-07-31 16:50:00', NULL, N'1000', N'wap', N'1000', N'超级管理员', N'305', N'正在浏览:<a href="http://localhost:58946/bbs/list.aspx?siteid=1000&amp;classid=305">论坛</a>', NULL, NULL)
 GO
 
 SET IDENTITY_INSERT [dbo].[fcount] OFF
@@ -6943,693 +5988,6 @@ GO
 SET IDENTITY_INSERT [dbo].[sys_wap_files] ON
 GO
 
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'713', N'101', N'101', N'1', N'商店上传', N'jpg', N'9', N'shop/upload/101/2012/07/06/101_0914480.jpg', N'2012-07-06 09:14:48.200', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'715', N'101', N'101', N'1', N'商店上传', N'png', N'8', N'shop/upload/101/2012/07/06/101_0929040.png', N'2012-07-06 09:29:04.043', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'716', N'101', N'101', N'1', N'商店上传', N'png', N'8', N'shop/upload/101/2012/07/06/101_0932100.png', N'2012-07-06 09:32:10.013', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'717', N'101', N'101', N'1', N'商店上传', N'jpg', N'8', N'shop/upload/101/2012/07/06/101_0933290.jpg', N'2012-07-06 09:33:29.827', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'719', N'101', N'101', N'1', N'商店上传', N'png', N'1', N'shop/upload/101/2012/07/06/101_0933480.png', N'2012-07-06 09:33:48.747', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'720', N'101', N'101', N'1', N'商店上传', N'png', N'1', N'shop/upload/101/2012/07/06/101_0933500.png', N'2012-07-06 09:33:50.890', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'721', N'101', N'101', N'1', N'商店上传', N'jpg', N'4', N'shop/upload/101/2012/07/06/101_0935530.jpg', N'2012-07-06 09:35:53.687', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'723', N'101', N'101', N'1', N'商店上传', N'jpg', N'8', N'shop/upload/101/2012/07/06/101_0938330.jpg', N'2012-07-06 09:38:33.467', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'725', N'101', N'101', N'1', N'商店上传', N'jpg', N'8', N'shop/upload/101/2012/07/06/101_0940430.jpg', N'2012-07-06 09:40:43.607', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'714', N'101', N'101', N'1', N'商店生成缩图', N'jpg', N'9', N'shop/upload/101/2012/07/06/S101_0914480.jpg', N'2012-07-06 09:14:48.327', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'718', N'101', N'101', N'1', N'商店生成缩图', N'jpg', N'8', N'shop/upload/101/2012/07/06/S101_0933290.jpg', N'2012-07-06 09:33:29.840', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'722', N'101', N'101', N'1', N'商店生成缩图', N'jpg', N'4', N'shop/upload/101/2012/07/06/S101_0935530.jpg', N'2012-07-06 09:35:53.687', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'724', N'101', N'101', N'1', N'商店生成缩图', N'jpg', N'8', N'shop/upload/101/2012/07/06/S101_0938330.jpg', N'2012-07-06 09:38:33.483', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'726', N'101', N'101', N'1', N'商店生成缩图', N'jpg', N'8', N'shop/upload/101/2012/07/06/S101_0940430.jpg', N'2012-07-06 09:40:43.623', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'770', N'101', N'101', N'1', N'WEB后台上传', N'gif', N'3', N'UploadFiles/101/2012/07/11/101_195316.gif', N'2012-07-11 19:53:16.233', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'771', N'102', N'102', N'1', N'WEB后台上传', N'gif', N'3', N'UploadFiles/102/2012/07/11/102_195444.gif', N'2012-07-11 19:54:44.483', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'772', N'103', N'103', N'1', N'WEB后台上传', N'gif', N'3', N'UploadFiles/103/2012/07/11/103_19568.gif', N'2012-07-11 19:56:08.827', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'774', N'104', N'104', N'1', N'WEB后台上传', N'gif', N'2', N'UploadFiles/104/2012/07/11/104_195853.gif', N'2012-07-11 19:58:53.170', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'773', N'105', N'105', N'1', N'WEB后台上传', N'gif', N'3', N'UploadFiles/105/2012/07/11/105_195658.gif', N'2012-07-11 19:56:58.263', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'775', N'106', N'106', N'1', N'WEB后台上传', N'gif', N'2', N'UploadFiles/106/2012/07/11/106_195942.gif', N'2012-07-11 19:59:42.357', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'769', N'107', N'107', N'1', N'WEB后台上传', N'gif', N'2', N'UploadFiles/107/2012/07/10/107_162452.gif', N'2012-07-10 16:24:52.997', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'776', N'107', N'107', N'1', N'WEB后台上传', N'gif', N'2', N'UploadFiles/107/2012/07/11/107_20411.gif', N'2012-07-11 20:04:11.280', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'768', N'108', N'108', N'1', N'WEB后台上传', N'gif', N'2', N'UploadFiles/108/2012/07/09/108_183350.gif', N'2012-07-09 18:33:50.107', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'748', N'109', N'109', N'1', N'图片模块上传', N'gif', N'2', N'picture/upload/109/2012/07/09/109_1634290.gif', N'2012-07-09 16:34:29.593', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'750', N'109', N'109', N'1', N'图片模块上传', N'gif', N'2', N'picture/upload/109/2012/07/09/109_1634480.gif', N'2012-07-09 16:34:48.090', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'752', N'109', N'109', N'1', N'图片模块上传', N'gif', N'2', N'picture/upload/109/2012/07/09/109_1635090.gif', N'2012-07-09 16:35:09.560', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'754', N'109', N'109', N'1', N'图片模块上传', N'gif', N'2', N'picture/upload/109/2012/07/09/109_1635190.gif', N'2012-07-09 16:35:19.263', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'756', N'109', N'109', N'1', N'图片模块上传', N'gif', N'2', N'picture/upload/109/2012/07/09/109_1635340.gif', N'2012-07-09 16:35:34.340', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'758', N'109', N'109', N'1', N'图片模块上传', N'gif', N'2', N'picture/upload/109/2012/07/09/109_1659220.gif', N'2012-07-09 16:59:22.497', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'760', N'109', N'109', N'1', N'图片模块上传', N'gif', N'2', N'picture/upload/109/2012/07/09/109_1659410.gif', N'2012-07-09 16:59:41.890', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'762', N'109', N'109', N'1', N'图片模块上传', N'gif', N'2', N'picture/upload/109/2012/07/09/109_1659510.gif', N'2012-07-09 16:59:51.340', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'764', N'109', N'109', N'1', N'图片模块上传', N'gif', N'2', N'picture/upload/109/2012/07/09/109_1700020.gif', N'2012-07-09 17:00:02.437', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'766', N'109', N'109', N'1', N'图片模块上传', N'gif', N'2', N'picture/upload/109/2012/07/09/109_1700120.gif', N'2012-07-09 17:00:11.997', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'749', N'109', N'109', N'1', N'图片模块生成缩图', N'gif', N'2', N'picture/upload/109/2012/07/09/S109_1634290.gif', N'2012-07-09 16:34:29.657', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'751', N'109', N'109', N'1', N'图片模块生成缩图', N'gif', N'2', N'picture/upload/109/2012/07/09/S109_1634480.gif', N'2012-07-09 16:34:48.107', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'753', N'109', N'109', N'1', N'图片模块生成缩图', N'gif', N'2', N'picture/upload/109/2012/07/09/S109_1635090.gif', N'2012-07-09 16:35:09.560', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'755', N'109', N'109', N'1', N'图片模块生成缩图', N'gif', N'2', N'picture/upload/109/2012/07/09/S109_1635190.gif', N'2012-07-09 16:35:19.263', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'757', N'109', N'109', N'1', N'图片模块生成缩图', N'gif', N'2', N'picture/upload/109/2012/07/09/S109_1635340.gif', N'2012-07-09 16:35:34.340', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'759', N'109', N'109', N'1', N'图片模块生成缩图', N'gif', N'2', N'picture/upload/109/2012/07/09/S109_1659220.gif', N'2012-07-09 16:59:22.497', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'761', N'109', N'109', N'1', N'图片模块生成缩图', N'gif', N'2', N'picture/upload/109/2012/07/09/S109_1659410.gif', N'2012-07-09 16:59:41.890', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'763', N'109', N'109', N'1', N'图片模块生成缩图', N'gif', N'2', N'picture/upload/109/2012/07/09/S109_1659510.gif', N'2012-07-09 16:59:51.357', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'765', N'109', N'109', N'1', N'图片模块生成缩图', N'gif', N'2', N'picture/upload/109/2012/07/09/S109_1700020.gif', N'2012-07-09 17:00:02.437', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'767', N'109', N'109', N'1', N'图片模块生成缩图', N'gif', N'2', N'picture/upload/109/2012/07/09/S109_1700120.gif', N'2012-07-09 17:00:12.030', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'747', N'109', N'109', N'1', N'WEB后台上传', N'gif', N'2', N'UploadFiles/109/2012/07/09/109_11134.gif', N'2012-07-09 11:13:04.217', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'729', N'110', N'110', N'1', N'下载上传', N'jpg', N'23', N'download/upload/110/2012/07/06/110_1742310_墨宝1.jpg', N'2012-07-06 17:42:31.827', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'731', N'110', N'110', N'1', N'下载上传', N'txt', N'1', N'download/upload/110/2012/07/06/110_1742311_1系统软件.txt', N'2012-07-06 17:42:31.873', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'732', N'110', N'110', N'1', N'下载上传', N'jpg', N'28', N'download/upload/110/2012/07/06/110_1743410_一键清理.jpg', N'2012-07-06 17:43:41.530', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'734', N'110', N'110', N'1', N'下载上传', N'jpg', N'23', N'download/upload/110/2012/07/06/110_1743411_墨宝1.jpg', N'2012-07-06 17:43:41.547', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'735', N'110', N'110', N'1', N'下载上传', N'gif', N'5', N'download/upload/110/2012/07/06/110_1744500_超级任务管理1.4.gif', N'2012-07-06 17:44:50.607', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'737', N'110', N'110', N'1', N'下载上传', N'txt', N'1', N'download/upload/110/2012/07/06/110_1744501_1系统软件.txt', N'2012-07-06 17:44:50.607', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'738', N'110', N'110', N'1', N'下载上传', N'gif', N'4', N'download/upload/110/2012/07/06/110_1745240_安卓跑分.gif', N'2012-07-06 17:45:24.903', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'740', N'110', N'110', N'1', N'下载上传', N'txt', N'1', N'download/upload/110/2012/07/06/110_1745241_1系统软件.txt', N'2012-07-06 17:45:24.920', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'741', N'110', N'110', N'1', N'下载上传', N'gif', N'4', N'download/upload/110/2012/07/06/110_1746170_安卓跑分.gif', N'2012-07-06 17:46:17.797', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'743', N'110', N'110', N'1', N'下载上传', N'txt', N'1', N'download/upload/110/2012/07/06/110_1746171_1系统软件.txt', N'2012-07-06 17:46:17.810', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'744', N'110', N'110', N'1', N'下载上传', N'jpg', N'22', N'download/upload/110/2012/07/06/110_1746480_系统面板汉化版.jpg', N'2012-07-06 17:46:48.047', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'746', N'110', N'110', N'1', N'下载上传', N'txt', N'1', N'download/upload/110/2012/07/06/110_1746481_1系统软件.txt', N'2012-07-06 17:46:48.093', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'730', N'110', N'110', N'1', N'下载生成缩放图', N'jpg', N'23', N'download/upload/110/2012/07/06/S110_1742310_墨宝1.jpg', N'2012-07-06 17:42:31.857', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'733', N'110', N'110', N'1', N'下载生成缩放图', N'jpg', N'28', N'download/upload/110/2012/07/06/S110_1743410_一键清理.jpg', N'2012-07-06 17:43:41.547', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'736', N'110', N'110', N'1', N'下载生成缩放图', N'gif', N'5', N'download/upload/110/2012/07/06/S110_1744500_超级任务管理1.4.gif', N'2012-07-06 17:44:50.607', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'739', N'110', N'110', N'1', N'下载生成缩放图', N'gif', N'4', N'download/upload/110/2012/07/06/S110_1745240_安卓跑分.gif', N'2012-07-06 17:45:24.920', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'742', N'110', N'110', N'1', N'下载生成缩放图', N'gif', N'4', N'download/upload/110/2012/07/06/S110_1746170_安卓跑分.gif', N'2012-07-06 17:46:17.810', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'745', N'110', N'110', N'1', N'下载生成缩放图', N'jpg', N'22', N'download/upload/110/2012/07/06/S110_1746480_系统面板汉化版.jpg', N'2012-07-06 17:46:48.093', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'727', N'110', N'110', N'1', N'WEB后台上传', N'gif', N'2', N'UploadFiles/110/2012/07/06/110_105341.gif', N'2012-07-06 10:53:41.560', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'728', N'110', N'110', N'1', N'WEB后台上传', N'gif', N'2', N'UploadFiles/110/2012/07/06/110_161321.gif', N'2012-07-06 16:13:21.483', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'778', N'111', N'111', N'1', N'文章上传', N'jpg', N'16', N'article/upload/111/2012/07/27/111_1726360.jpg', N'2012-07-27 17:26:50.967', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'779', N'111', N'111', N'1', N'文章上传', N'jpg', N'16', N'article/upload/111/2012/07/27/111_1726361.jpg', N'2012-07-27 17:26:51.060', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'780', N'111', N'111', N'1', N'文章上传', N'jpg', N'16', N'article/upload/111/2012/07/27/111_1726362.jpg', N'2012-07-27 17:26:51.077', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'781', N'111', N'111', N'1', N'文章上传', N'jpg', N'16', N'article/upload/111/2012/07/27/111_1726363.jpg', N'2012-07-27 17:26:51.107', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'782', N'111', N'111', N'1', N'文章上传', N'jpg', N'16', N'article/upload/111/2012/07/27/111_1729390.jpg', N'2012-07-27 17:29:54.700', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'783', N'111', N'111', N'1', N'文章上传', N'jpg', N'16', N'article/upload/111/2012/07/27/111_1729500.jpg', N'2012-07-27 17:30:05.730', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'784', N'111', N'111', N'1', N'文章上传', N'jpg', N'16', N'article/upload/111/2012/07/27/111_1730010.jpg', N'2012-07-27 17:30:16.000', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'785', N'111', N'111', N'1', N'文章上传', N'gif', N'5', N'article/upload/111/2012/07/27/111_1816460.gif', N'2012-07-27 18:17:05.730', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'786', N'111', N'111', N'1', N'文章上传', N'gif', N'5', N'article/upload/111/2012/07/27/111_1817190.gif', N'2012-07-27 18:17:39.187', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'787', N'111', N'111', N'1', N'文章上传', N'gif', N'5', N'article/upload/111/2012/07/27/111_1817390.gif', N'2012-07-27 18:17:59.093', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'777', N'111', N'111', N'1', N'WEB后台上传', N'gif', N'5', N'UploadFiles/111/2012/07/27/111_164659.gif', N'2012-07-27 16:47:10.967', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'788', N'111', N'111', N'1', N'WEB后台上传', N'jpg', N'68', N'UploadFiles/111/2012/07/28/111_142920.jpg', N'2012-07-28 14:29:46.247', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'789', N'112', N'112', N'1', N'文章上传', N'jpg', N'4', N'article/upload/112/2012/07/28/112_1607210.jpg', N'2012-07-28 16:07:51.280', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'790', N'112', N'112', N'1', N'文章上传', N'jpg', N'6', N'article/upload/112/2012/07/28/112_1607340.jpg', N'2012-07-28 16:08:04.293', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'791', N'112', N'112', N'1', N'文章上传', N'jpg', N'5', N'article/upload/112/2012/07/28/112_1607460.jpg', N'2012-07-28 16:08:16.153', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'792', N'112', N'112', N'1', N'文章上传', N'jpg', N'7', N'article/upload/112/2012/07/28/112_1607570.jpg', N'2012-07-28 16:08:27.390', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'793', N'112', N'112', N'1', N'文章上传', N'jpg', N'3', N'article/upload/112/2012/07/28/112_1628310.jpg', N'2012-07-28 16:29:02.513', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'794', N'112', N'112', N'1', N'文章上传', N'jpg', N'4', N'article/upload/112/2012/07/28/112_1628580.jpg', N'2012-07-28 16:29:29.013', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'795', N'113', N'113', N'1', N'文章上传', N'jpg', N'20', N'article/upload/113/2012/07/28/113_1836060.jpg', N'2012-07-28 18:36:45.810', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'796', N'113', N'113', N'1', N'文章上传', N'jpg', N'5', N'article/upload/113/2012/07/28/113_1836360.jpg', N'2012-07-28 18:37:15.497', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'797', N'113', N'113', N'1', N'文章上传', N'jpg', N'6', N'article/upload/113/2012/07/28/113_1837160.jpg', N'2012-07-28 18:37:55.700', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'798', N'113', N'113', N'1', N'文章上传', N'jpg', N'10', N'article/upload/113/2012/07/28/113_1837370.jpg', N'2012-07-28 18:38:16.450', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'799', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/29/114_1037540.gif', N'2012-07-29 10:38:08.340', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'800', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/29/114_1037541.gif', N'2012-07-29 10:38:08.373', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'801', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/29/114_1038180.gif', N'2012-07-29 10:38:32.560', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'802', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/29/114_1038181.gif', N'2012-07-29 10:38:32.687', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'803', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/29/114_1038440.gif', N'2012-07-29 10:38:58.607', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'804', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/29/114_1038441.gif', N'2012-07-29 10:38:58.640', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'805', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/29/114_1039060.gif', N'2012-07-29 10:39:20.217', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'806', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/29/114_1039061.gif', N'2012-07-29 10:39:20.230', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'822', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/31/114_1116300.gif', N'2012-07-31 11:16:46.653', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'823', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/31/114_1116301.gif', N'2012-07-31 11:16:46.733', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'824', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/31/114_1116560.gif', N'2012-07-31 11:17:12.920', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'825', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/31/114_1116571.gif', N'2012-07-31 11:17:12.937', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'826', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/31/114_1117130.gif', N'2012-07-31 11:17:29.607', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'827', N'114', N'114', N'1', N'文章上传', N'gif', N'5', N'article/upload/114/2012/07/31/114_1117131.gif', N'2012-07-31 11:17:29.653', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'807', N'115', N'115', N'1', N'文章上传', N'gif', N'5', N'article/upload/115/2012/07/29/115_1657330.gif', N'2012-07-29 16:57:48.857', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'808', N'115', N'115', N'1', N'文章上传', N'gif', N'5', N'article/upload/115/2012/07/29/115_1658070.gif', N'2012-07-29 16:58:23.140', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'809', N'115', N'115', N'1', N'文章上传', N'gif', N'5', N'article/upload/115/2012/07/29/115_1658071.gif', N'2012-07-29 16:58:23.153', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'810', N'115', N'115', N'1', N'文章上传', N'gif', N'5', N'article/upload/115/2012/07/29/115_1658410.gif', N'2012-07-29 16:58:57.310', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'811', N'115', N'115', N'1', N'文章上传', N'gif', N'5', N'article/upload/115/2012/07/29/115_1658411.gif', N'2012-07-29 16:58:57.403', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'812', N'115', N'115', N'1', N'文章上传', N'gif', N'5', N'article/upload/115/2012/07/29/115_1659190.gif', N'2012-07-29 16:59:35.077', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'813', N'115', N'115', N'1', N'文章上传', N'gif', N'5', N'article/upload/115/2012/07/29/115_1659191.gif', N'2012-07-29 16:59:35.090', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'814', N'115', N'115', N'1', N'文章上传', N'gif', N'5', N'article/upload/115/2012/07/29/115_1659360.gif', N'2012-07-29 16:59:51.733', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'815', N'115', N'115', N'1', N'文章上传', N'gif', N'5', N'article/upload/115/2012/07/29/115_1659361.gif', N'2012-07-29 16:59:52.153', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'816', N'116', N'116', N'1', N'文章上传', N'gif', N'5', N'article/upload/116/2012/07/30/116_0954380.gif', N'2012-07-30 09:54:44.077', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'817', N'116', N'116', N'1', N'文章上传', N'gif', N'5', N'article/upload/116/2012/07/30/116_0954391.gif', N'2012-07-30 09:54:44.200', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'818', N'116', N'116', N'1', N'文章上传', N'gif', N'5', N'article/upload/116/2012/07/30/116_0955340.gif', N'2012-07-30 09:55:39.687', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'819', N'116', N'116', N'1', N'文章上传', N'gif', N'5', N'article/upload/116/2012/07/30/116_0955341.gif', N'2012-07-30 09:55:39.747', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'820', N'116', N'116', N'1', N'文章上传', N'gif', N'5', N'article/upload/116/2012/07/30/116_0957330.gif', N'2012-07-30 09:57:38.140', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'821', N'116', N'116', N'1', N'文章上传', N'gif', N'5', N'article/upload/116/2012/07/30/116_0957331.gif', N'2012-07-30 09:57:38.187', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'828', N'117', N'117', N'1', N'WEB后台上传', N'gif', N'5', N'UploadFiles/117/2012/11/30/117_103544.gif', N'2012-11-30 10:35:44.950', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'829', N'123', N'123', N'1', N'WEB后台上传', N'jpg', N'3', N'UploadFiles/123/2012/12/19/123_11426.jpg', N'2012-12-19 11:04:26.593', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'830', N'124', N'124', N'1', N'下载上传', N'gif', N'8', N'download/upload/124/2013/01/17/124_1103080_886198167151.gif', N'2013-01-17 11:03:08.013', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'832', N'124', N'124', N'1', N'下载上传', N'gif', N'8', N'download/upload/124/2013/01/17/124_1103220_886198167151.gif', N'2013-01-17 11:03:22.560', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'831', N'124', N'124', N'1', N'下载生成缩放图', N'gif', N'8', N'download/upload/124/2013/01/17/S124_1103080_886198167151.gif', N'2013-01-17 11:03:08.090', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'833', N'124', N'124', N'1', N'下载生成缩放图', N'gif', N'8', N'download/upload/124/2013/01/17/S124_1103220_886198167151.gif', N'2013-01-17 11:03:22.577', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'834', N'125', N'125', N'1', N'图片模块上传', N'jpg', N'309', N'picture/upload/125/2014/06/28/125_1137380.jpg', N'2014-06-28 11:37:38.690', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'836', N'125', N'125', N'1', N'图片模块上传', N'jpg', N'309', N'picture/upload/125/2014/06/28/125_1138320.jpg', N'2014-06-28 11:38:32.380', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'838', N'125', N'125', N'1', N'图片模块上传', N'jpg', N'118', N'picture/upload/125/2014/06/28/125_1201190.jpg', N'2014-06-28 12:01:19.113', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'840', N'125', N'125', N'1', N'图片模块上传', N'jpg', N'12', N'picture/upload/125/2014/06/28/125_1216080.jpg', N'2014-06-28 12:16:08.207', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'842', N'125', N'125', N'1', N'图片模块上传', N'jpg', N'11', N'picture/upload/125/2014/06/28/125_1216350.jpg', N'2014-06-28 12:16:35.800', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'844', N'125', N'125', N'1', N'图片模块上传', N'jpg', N'5', N'picture/upload/125/2014/06/28/125_1218130.jpg', N'2014-06-28 12:18:13.037', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'835', N'125', N'125', N'1', N'图片模块生成缩图', N'jpg', N'309', N'picture/upload/125/2014/06/28/S125_1137380.jpg', N'2014-06-28 11:37:38.847', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'837', N'125', N'125', N'1', N'图片模块生成缩图', N'jpg', N'309', N'picture/upload/125/2014/06/28/S125_1138320.jpg', N'2014-06-28 11:38:32.457', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'839', N'125', N'125', N'1', N'图片模块生成缩图', N'jpg', N'118', N'picture/upload/125/2014/06/28/S125_1201190.jpg', N'2014-06-28 12:01:19.237', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'841', N'125', N'125', N'1', N'图片模块生成缩图', N'jpg', N'12', N'picture/upload/125/2014/06/28/S125_1216080.jpg', N'2014-06-28 12:16:08.237', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'843', N'125', N'125', N'1', N'图片模块生成缩图', N'jpg', N'11', N'picture/upload/125/2014/06/28/S125_1216350.jpg', N'2014-06-28 12:16:35.800', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'845', N'125', N'125', N'1', N'图片模块生成缩图', N'jpg', N'5', N'picture/upload/125/2014/06/28/S125_1218130.jpg', N'2014-06-28 12:18:13.067', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'846', N'126', N'126', N'1', N'文章上传', N'jpg', N'12', N'article/upload/126/2014/07/02/126_1445110.jpg', N'2014-07-02 14:45:12.033', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'847', N'126', N'126', N'1', N'文章上传', N'jpg', N'11', N'article/upload/126/2014/07/02/126_1502590.jpg', N'2014-07-02 15:02:59.893', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'848', N'126', N'126', N'1', N'文章上传', N'jpg', N'11', N'article/upload/126/2014/07/02/126_1503520.jpg', N'2014-07-02 15:03:52.630', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'650', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'4', N'airplane/upload/2007/02/04/211738547.jpg', N'2007-02-04 21:17:38.720', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'651', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'3', N'airplane/upload/2007/02/04/211746111.gif', N'2007-02-04 21:17:46.690', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'652', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'4', N'airplane/upload/2007/02/04/211830287.jpg', N'2007-02-04 21:18:30.703', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'253', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'122', N'bbs/upload/2006/09/22/102747737.gif', N'2006-09-22 10:27:47.953', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'254', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'86', N'bbs/upload/2006/09/22/10342478.gif', N'2006-09-22 10:34:02.273', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'255', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'24', N'bbs/upload/2006/09/22/103541891.gif', N'2006-09-22 10:35:41.213', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'654', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'4', N'hotel/upload/2007/02/04/211924800.jpg', N'2007-02-04 21:19:24.160', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'655', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'3', N'hotel/upload/2007/02/04/212717336.gif', N'2007-02-04 21:27:17.760', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'216', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'215', N'paimai/upload/2006/08/20/121433551.gif', N'2006-08-20 12:14:33.393', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'217', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'15', N'picture/upload/2006/09/20/233932432.jpg', N'2006-09-20 23:39:32.137', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'698', N'1000', N'69', N'1', N'性感美女缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/233932432_s.jpg', N'2007-03-27 21:33:46.070', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'218', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'9', N'picture/upload/2006/09/20/234014765.jpg', N'2006-09-20 23:40:14.837', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'697', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/234014765_s.jpg', N'2007-03-27 21:32:07.177', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'219', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'10', N'picture/upload/2006/09/20/234045213.jpg', N'2006-09-20 23:40:45.040', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'696', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/234045213_s.jpg', N'2007-03-27 21:32:07.007', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'221', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'77', N'picture/upload/2006/09/20/234122588.gif', N'2006-09-20 23:41:22.543', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'694', N'1000', N'69', N'1', N'缩略图', N'gif', N'2', N'picture/upload/2006/09/20/234122588_s.gif', N'2007-03-27 21:32:06.747', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'220', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'19', N'picture/upload/2006/09/20/23415682.jpg', N'2006-09-20 23:41:05.900', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'695', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/23415682_s.jpg', N'2007-03-27 21:32:06.877', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'222', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'26', N'picture/upload/2006/09/20/234157435.jpg', N'2006-09-20 23:41:57.533', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'693', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/234157435_s.jpg', N'2007-03-27 21:32:06.627', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'223', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'15', N'picture/upload/2006/09/20/234225499.jpg', N'2006-09-20 23:42:25.897', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'692', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/234225499_s.jpg', N'2007-03-27 21:31:00.090', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'225', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'15', N'picture/upload/2006/09/20/234325125.jpg', N'2006-09-20 23:43:25.740', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'690', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/234325125_s.jpg', N'2007-03-27 21:30:59.790', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'226', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'86', N'picture/upload/2006/09/20/234347399.gif', N'2006-09-20 23:43:47.110', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'689', N'1000', N'69', N'1', N'缩略图', N'gif', N'2', N'picture/upload/2006/09/20/234347399_s.gif', N'2007-03-27 21:30:59.530', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'224', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'22', N'picture/upload/2006/09/20/23434973.jpg', N'2006-09-20 23:43:04.180', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'691', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/23434973_s.jpg', N'2007-03-27 21:30:59.950', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'227', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'20', N'picture/upload/2006/09/20/23443229.jpg', N'2006-09-20 23:44:03.777', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'688', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/23443229_s.jpg', N'2007-03-27 21:30:59.360', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'228', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'15', N'picture/upload/2006/09/20/234445971.jpg', N'2006-09-20 23:44:45.157', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'687', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/234445971_s.jpg', N'2007-03-27 21:29:02.180', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'229', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'21', N'picture/upload/2006/09/20/234632492.jpg', N'2006-09-20 23:46:32.720', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'686', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/234632492_s.jpg', N'2007-03-27 21:29:02.050', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'230', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'14', N'picture/upload/2006/09/20/234652922.jpg', N'2006-09-20 23:46:52.580', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'685', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/234652922_s.jpg', N'2007-03-27 21:29:01.890', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'231', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'23', N'picture/upload/2006/09/20/234725228.jpg', N'2006-09-20 23:47:25.357', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'684', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/234725228_s.jpg', N'2007-03-27 21:29:01.740', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'232', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'10', N'picture/upload/2006/09/20/23481921.jpg', N'2006-09-20 23:48:01.930', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'683', N'1000', N'69', N'1', N'缩略图', N'jpg', N'2', N'picture/upload/2006/09/20/23481921_s.jpg', N'2007-03-27 21:29:01.610', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'233', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'28', N'picture/upload/2006/09/20/234821465.jpg', N'2006-09-20 23:48:21.167', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'682', N'1000', N'69', N'1', N'缩略图生成', N'jpg', N'2', N'picture/upload/2006/09/20/234821465_s.jpg', N'2007-03-27 21:26:34.930', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'235', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'46', N'picture/upload/2006/09/20/234935828.jpg', N'2006-09-20 23:49:35.073', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'680', N'1000', N'69', N'1', N'缩略图生成', N'jpg', N'2', N'picture/upload/2006/09/20/234935828_s.jpg', N'2007-03-27 21:26:34.500', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'234', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'14', N'picture/upload/2006/09/20/23495991.jpg', N'2006-09-20 23:49:05.950', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'681', N'1000', N'69', N'1', N'缩略图生成', N'jpg', N'2', N'picture/upload/2006/09/20/23495991_s.jpg', N'2007-03-27 21:26:34.730', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'236', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'8', N'picture/upload/2006/09/20/235024706.jpg', N'2006-09-20 23:50:24.143', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'679', N'1000', N'69', N'1', N'缩略图生成', N'jpg', N'2', N'picture/upload/2006/09/20/235024706_s.jpg', N'2007-03-27 21:26:34.320', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'237', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'17', N'picture/upload/2006/09/20/235059329.jpg', N'2006-09-20 23:50:59.493', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'238', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'28', N'picture/upload/2006/09/20/235131918.jpg', N'2006-09-20 23:51:31.830', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'239', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'108', N'picture/upload/2006/09/20/235150947.gif', N'2006-09-20 23:51:50.527', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'240', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'78', N'picture/upload/2006/09/20/235211118.gif', N'2006-09-20 23:52:11.457', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'241', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'3', N'picture/upload/2006/09/20/235317408.jpg', N'2006-09-20 23:53:17.853', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'242', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'29', N'picture/upload/2006/09/20/235337458.jpg', N'2006-09-20 23:53:37.170', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'243', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'3', N'picture/upload/2006/09/20/235351797.jpg', N'2006-09-20 23:53:51.570', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'245', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'4', N'picture/upload/2006/09/20/235655615.jpg', N'2006-09-20 23:56:55.927', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'256', N'1000', N'3gair', N'1', N'WEB后台上传', N'png', N'8', N'picture/upload/2006/09/22/103647611.png', N'2006-09-22 10:36:47.750', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'257', N'1000', N'3gair', N'1', N'WEB后台上传', N'png', N'24', N'picture/upload/2006/09/22/103719768.png', N'2006-09-22 10:37:19.577', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'258', N'1000', N'3gair', N'1', N'WEB后台上传', N'png', N'28', N'picture/upload/2006/09/22/103756103.png', N'2006-09-22 10:37:56.590', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'259', N'1000', N'3gair', N'1', N'WEB后台上传', N'png', N'21', N'picture/upload/2006/09/22/103841126.png', N'2006-09-22 10:38:41.753', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'260', N'1000', N'3gair', N'1', N'WEB后台上传', N'png', N'19', N'picture/upload/2006/09/22/103921942.png', N'2006-09-22 10:39:21.770', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'711', N'1000', N'69', N'1', N'[时尚明星]栏目缩略图', N'png', N'2', N'picture/upload/2006/09/22/103921942_s.png', N'2007-04-27 11:35:37.350', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'261', N'1000', N'3gair', N'1', N'WEB后台上传', N'png', N'9', N'picture/upload/2006/09/22/104010616.png', N'2006-09-22 10:40:10.600', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'712', N'1000', N'69', N'1', N'[时尚明星]栏目缩略图', N'png', N'2', N'picture/upload/2006/09/22/104010616_s.png', N'2007-04-27 11:35:37.550', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'262', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'15', N'picture/upload/2006/09/22/104214715.gif', N'2006-09-22 10:42:14.630', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'263', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'6', N'picture/upload/2006/09/22/104236901.jpg', N'2006-09-22 10:42:36.863', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'264', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'9', N'picture/upload/2006/09/22/104325368.jpg', N'2006-09-22 10:43:25.490', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'265', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'8', N'picture/upload/2006/09/22/104412149.jpg', N'2006-09-22 10:44:12.230', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'266', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'9', N'picture/upload/2006/09/22/104521526.jpg', N'2006-09-22 10:45:21.030', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'267', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'10', N'picture/upload/2006/09/22/104549440.jpg', N'2006-09-22 10:45:49.360', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'268', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'9', N'picture/upload/2006/09/22/104610845.jpg', N'2006-09-22 10:46:10.240', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'269', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'8', N'picture/upload/2006/09/22/104635799.jpg', N'2006-09-22 10:46:35.183', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'271', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'5', N'picture/upload/2006/09/22/104745625.jpg', N'2006-09-22 10:47:45.017', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'709', N'1000', N'69', N'1', N'[性感美女]栏目缩略图', N'jpg', N'2', N'picture/upload/2006/09/22/104745625_s.jpg', N'2007-04-17 23:30:58.657', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'270', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'6', N'picture/upload/2006/09/22/10479973.jpg', N'2006-09-22 10:47:09.473', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'272', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'7', N'picture/upload/2006/09/22/104815403.jpg', N'2006-09-22 10:48:15.400', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'710', N'1000', N'69', N'1', N'[性感美女]栏目缩略图', N'jpg', N'2', N'picture/upload/2006/09/22/104815403_s.jpg', N'2007-04-17 23:30:58.797', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'273', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'5', N'picture/upload/2006/09/22/104844761.jpg', N'2006-09-22 10:48:44.870', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'274', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'6', N'picture/upload/2006/09/22/104914488.jpg', N'2006-09-22 10:49:14.703', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'275', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'6', N'picture/upload/2006/09/22/11046656.jpg', N'2006-09-22 11:00:46.810', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'674', N'1000', N'siteid=69', N'1', N'缩略图生成', N'jpg', N'2', N'picture/upload/2006/09/22/11046656_s.jpg', N'2007-03-27 21:24:33.947', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'677', N'1000', N'siteid=69', N'1', N'缩略图生成', N'jpg', N'2', N'picture/upload/2006/09/22/11046656_s.jpg', N'2007-03-27 21:24:34.467', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'276', N'1000', N'3gair', N'1', N'WEB后台上传', N'jpg', N'7', N'picture/upload/2006/09/22/11127682.jpg', N'2006-09-22 11:01:27.517', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'675', N'1000', N'siteid=69', N'1', N'缩略图生成', N'jpg', N'2', N'picture/upload/2006/09/22/11127682_s.jpg', N'2007-03-27 21:24:34.097', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'707', N'1000', N'956', N'1', N'[彩图]栏目缩略图', N'jpg', N'2', N'picture/upload/2006/09/22/11127682_s.jpg', N'2007-04-05 15:28:30.993', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'277', N'1000', N'3gair', N'1', N'WEB后台上传', N'gif', N'13', N'picture/upload/2006/09/22/11146787.gif', N'2006-09-22 11:01:46.647', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'676', N'1000', N'siteid=69', N'1', N'缩略图生成', N'gif', N'2', N'picture/upload/2006/09/22/11146787_s.gif', N'2007-03-27 21:24:34.277', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'678', N'1000', N'69', N'1', N'缩略图生成', N'gif', N'2', N'picture/upload/2006/09/22/11146787_s.gif', N'2007-03-27 21:26:34.110', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'708', N'1000', N'956', N'1', N'[彩图]栏目缩略图', N'gif', N'2', N'picture/upload/2006/09/22/11146787_s.gif', N'2007-04-05 15:28:31.183', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'699', N'1000', N'69', N'1', N'[幽默搞笑]缩略图', N'gif', N'2', N'picture/upload/2006/09/22/11146787_s.gif', N'2007-03-27 21:34:44.883', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'673', N'1000', N'siteid=69', N'1', N'缩略图生成', N'jpg', N'2', N'picture/upload/2006/11/26/01926863_s.jpg', N'2007-03-27 21:24:33.727', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[sys_wap_files] ([id], [userid], [username], [book_classid], [book_title], [book_ext], [book_size], [book_file], [book_date], [HangBiaoShi], [isCheck]) VALUES (N'658', N'1000', N'wap', N'1', N'WEB后台上传', N'png', N'4', N'UploadFiles/2007/02/26/21208914.png', N'2007-02-26 21:20:09.030', NULL, N'0')
-GO
-
 SET IDENTITY_INSERT [dbo].[sys_wap_files] OFF
 GO
 
@@ -7663,24 +6021,6 @@ GO
 -- Records of sys_wap_message
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[sys_wap_message] ON
-GO
-
-INSERT INTO [dbo].[sys_wap_message] ([id], [userid], [username], [msg_title], [msg_content], [msg_date], [valid_date], [pop_flag], [msg_type], [HangBiaoShi]) VALUES (N'9', N'69', N'3gair', N'Kelink WAP自助建站系统常见问题', N'[br][url=/help/index.htm]帮助文档[/url][br][br][url=/help/m5.htm]常见问题[/url][br][br][url=http://bbs.kelink.com]视频教程[/url][br][br][url=/admin/ubb2.aspx]UBB大全[/url]', N'2006-04-18 00:00:00.000', N'2011-05-31 00:00:00.000', N'0', N'167', NULL)
-GO
-
-INSERT INTO [dbo].[sys_wap_message] ([id], [userid], [username], [msg_title], [msg_content], [msg_date], [valid_date], [pop_flag], [msg_type], [HangBiaoShi]) VALUES (N'16', N'956', N'wap', N'代码编辑工具UltraEdit-32', N'[url=http://www.kelink.com/download/ue.rar]点击下载[/url]', N'2007-09-03 09:26:05.000', N'2007-09-03 00:00:00.000', N'0', N'167', NULL)
-GO
-
-INSERT INTO [dbo].[sys_wap_message] ([id], [userid], [username], [msg_title], [msg_content], [msg_date], [valid_date], [pop_flag], [msg_type], [HangBiaoShi]) VALUES (N'17', N'956', N'wap', N'手机模拟器Opera8.0', N'[url=http://www.kelink.com/download/opera8.rar]点击下载[/url]', N'2007-09-03 09:26:50.000', N'2007-09-03 00:00:00.000', N'0', N'167', NULL)
-GO
-
-INSERT INTO [dbo].[sys_wap_message] ([id], [userid], [username], [msg_title], [msg_content], [msg_date], [valid_date], [pop_flag], [msg_type], [HangBiaoShi]) VALUES (N'18', N'956', N'wap', N'手机模拟器M3gate1.2', N'[url=http://www.kelink.com/download/m3gate12.rar]点击下载[/url]', N'2007-09-03 09:27:18.000', N'2007-09-03 00:00:00.000', N'0', N'167', NULL)
-GO
-
-INSERT INTO [dbo].[sys_wap_message] ([id], [userid], [username], [msg_title], [msg_content], [msg_date], [valid_date], [pop_flag], [msg_type], [HangBiaoShi]) VALUES (N'20', N'1000', N'wap', N'模板向导中有20套高级网站模板', N'新手可以直接在【页面综合排版】→【模板向导】中直接导入网站模板。[br][br]模板网站效果：[br][br]企业高级模版一：[url=http://model11.kelink.com]http://model11.kelink.com[/url] [br][img]/UploadFiles/QR/111.png[/img][br][br]企业高级模版二：[url=http://model12.kelink.com]http://model12.kelink.com[/url][br][img]/UploadFiles/QR/112.png[/img][br][br]企业高级模版三：[url=http://model13.kelink.com]http://model13.kelink.com[/url][br][img]/UploadFiles/QR/113.png[/img][br][br]企业高级模版(HTML5)：[url=http://model14.kelink.com]http://model14.kelink.com[/url][br][img]/UploadFiles/QR/114.png[/img][br][br]高级示例模版(HTML5)：[url=http://model15.kelink.com]http://model15.kelink.com[/url][br][img]/UploadFiles/QR/115.png[/img][br][br]在线影音模版(HTML5)：[url=http://model16.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/116.png[/img][br][br]购物网站模板：[url=http://model1.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/101.png[/img][br][br]彩票网站模板：[url=http://model2.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/102.png[/img][br][br]论坛网站模板：[url=http://model3.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/103.png[/img][br][br]政府网站模板：[url=http://model4.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/104.png[/img][br][br]搜索网站模板：[url=http://model5.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/105.png[/img][br][br]小说网站模板：[url=http://model6.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/106.png[/img][br][br]企业网站模板：[url=http://model7.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/107.png[/img][br][br]影视网站模板：[url=http://model9.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/109.png[/img][br][br]游戏网站模板：[url=http://model10.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/110.png[/img][br][br]交友网站模板：[url=http://model8.kelink.com]http://model16.kelink.com[/url][br][img]/UploadFiles/QR/108.png[/img][br][br][br]查看更多请进入WEB后台。[br]', N'2012-07-31 20:17:28.000', N'2012-07-31 00:00:00.000', N'0', N'166', NULL)
-GO
-
-INSERT INTO [dbo].[sys_wap_message] ([id], [userid], [username], [msg_title], [msg_content], [msg_date], [valid_date], [pop_flag], [msg_type], [HangBiaoShi]) VALUES (N'21', N'1000', N'wap', N'微信接入+生成苹果APP+安卓APP+二维码+触屏版', N'全新柯林程序：[br][br]支持微信接入+生成苹果APP+安卓APP+二维码+触屏版', N'2014-04-24 14:21:39.213', N'2014-04-24 00:00:00.000', N'0', N'166', NULL)
 GO
 
 SET IDENTITY_INSERT [dbo].[sys_wap_message] OFF
@@ -8291,292 +6631,10 @@ GO
 SET IDENTITY_INSERT [dbo].[user] ON
 GO
 
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'101', N'101', N'model1', N'model1', N'80P04D2BA1LFC83', N'01', N'1', N'23', N'180', N'120', N'', N'_', N'', N'', N'', N'123456453', N'24123431@126.com', N'0', N'', N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 16:24:00', N'3660', N'0', NULL, N'', N'购物网站模板', N'UploadFiles/101/2012/07/11/101_195316.gif', N'[div=title][year]年[month]月[day]日[tab][hour]时[minute]分[tab]星期[weekday][/div]', N'[div=mylink]Copy Right [year][/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, N'', NULL, N'金币', N'1000', N'56', N'0', N'438F09423F271131', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
+INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'1000', N'1000', N'wap', N'超级管理员', N'77804D2BA1922C33', N'00', N'0', N'21', N'123', N'34', N'天歇座', N'体育_800007757', N'已婚', N'软件工程师', N'广州', N'13048036868', N'chinastrong@126.com', N'989605', N'44.gif|XinZhang/Images/18.gif|XinZhang/Images/20.gif', N'10|5|8|1|5|100|1|1|10|20|0', N'2006-12-06 21:45:00', N'::1', N'2024-07-31 16:50:00', N'34520', N'0', N'1.gif', N'13048036868', N'柯林WAP建站系统NET版', N'NetImages/no.gif', N'', N'', N'left', N'[myfile]', N'1', N'2', N'6', N'10', N'1000', N'1024', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'3gangle|操', N'_', N'180', N'欢迎你注册！送10个币', N'0', N'10', N'金币', N'1000', N'101778', N'0', N'6168977A9573DF31', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'0|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'103|54|85|166|578|10|0|1|5|10|1', N'0', NULL, NULL, N'805', NULL, N'0|0|320|0|0|100|1|0|100|0|[div=logo][img]/NetImages/model/model14/logo.jpg[/img][br][/div][br][div=title][index]网站首页[/index][/div]|||12|1|1|FFFF00|0|0|1|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||0|0||3|500|200|恭,喜,发,财|100,200,300,400|300||||||||', N'.0000', N'0', N'2', NULL, N'0', N'1', NULL, NULL, NULL, N'0')
 GO
 
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'102', N'102', N'model2', N'model2', N'80P04D2BA1LFC83', N'01', N'1', N'21', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'12354', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 16:25:00', N'1920', N'0', NULL, NULL, N'彩票网站模板', N'UploadFiles/102/2012/07/11/102_195444.gif', N'[div=title][year]年[month]月[day]日[tab][hour]时[minute]分[tab]星期[weekday][/div]', N'[div=mylink]Copy Right [tab][tab][year][/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'3', N'0', N'2669059EFB12E4A1', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'103', N'103', N'model3', N'model3', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-11 18:18:00', N'960', N'0', NULL, NULL, N'论坛网站模板', N'UploadFiles/103/2012/07/11/103_19568.gif', N'[div=title]技术论坛欢迎大家[/div]', N'[div=mylink]Copy Right [year][/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'3', N'0', N'9544FACD65257A4D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'104', N'104', N'model4', N'model4', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 16:28:00', N'3880', N'0', NULL, NULL, N'政府网站模板', N'UploadFiles/104/2012/07/11/104_195853.gif', NULL, N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'2', N'0', N'D68666B78CAE6D7D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'105', N'105', N'model5', N'model5', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 16:30:00', N'7460', N'0', NULL, NULL, N'搜索网站模板', N'UploadFiles/105/2012/07/11/105_195658.gif', N'[div=title][form2][input2=5]关键字[/input2][sel2][option2=bbs_0]友情链接[/option2][option2=article_0]文章[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][/div]', N'[div=mylink]Copy Right [year][/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'3', N'0', N'714BC10116AAA7DB', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'106', N'106', N'model6', N'model6', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 16:31:00', N'2280', N'0', NULL, NULL, N'小说网站模板', N'UploadFiles/106/2012/07/11/106_195942.gif', NULL, N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'2', N'0', N'16418FFE64E3BBF8', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'107', N'107', N'model7', N'model7', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 16:31:00', N'6520', N'0', NULL, NULL, N'企业网站模板', N'UploadFiles/107/2012/07/11/107_20411.gif', NULL, N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'4', N'0', N'991368BFA1171EB7', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'108', N'108', N'model8', N'model8', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'10', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 16:32:00', N'2580', N'0', NULL, NULL, N'交友网站模板', N'UploadFiles/108/2012/07/09/108_183350.gif', NULL, N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'2', N'0', N'9739E032BE0C2126', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'5', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'109', N'109', N'model9', N'model9', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'10', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 16:32:00', N'4980', N'0', NULL, NULL, N'影视网站模板', N'UploadFiles/109/2012/07/09/109_11134.gif', N'[div=content]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'22', N'0', N'014CDBE855513EA1', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'5', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'110', N'110', N'model10', N'model10', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 16:33:00', N'2720', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'111', N'111', N'model11', N'model11', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-31 11:03:00', N'29680', N'0', NULL, NULL, N'企业高级模版一', N'NetImages/no.gif', N'[picurl8=320*160]/NetImages/model/model11/11.jpg|/NetImages/model/model11/44.jpg*/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=128|/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=128[/picurl8]', N'[div=subcontent]此模版用【华丽灰黄√】皮肤CSS效果更佳[/div]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', NULL, N'', N'金币', N'1000', N'179', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|0|500|1|0|50|50|[div=logo][img]/NetImages/model/model11/model11_logo.jpg[/img][/div][div=title][img]/NetImages/model/jiantou_left.png[/img][index]网站首页[/index]｜[url=/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=127]企业动态[/url]｜[url=/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=128]产品展示[/url]｜[url=/wapindex.aspx?siteid=[siteid]&amp;classid=129]关于我们[/url][img]/NetImages/model/jiantou_right.png[/img][/div]|[div=subcontent]版权所有：[url=http://kelink.com/]联速科技旗下产品[/url][br][/div]||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||', N'.0000', N'0', N'2', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'112', N'112', N'model12', N'model12', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 17:59:00', N'9120', N'0', NULL, NULL, N'企业高级模版二', N'NetImages/no.gif', N'[picurl8=320*240]/NetImages/model/model12/11.jpg|/NetImages/model/model12/22.jpg|/NetImages/model/model12/33.jpg*/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=132|/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=132|/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=132[/picurl8] ', N'[div=content]此模版用【古典黄铜√】皮肤CSS效果更佳[/div]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', NULL, N'', N'金币', N'1000', N'56', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|0|500|1|0|50|50|[div=logo][img]/NetImages/model/model12/logo.jpg[/img][/div][div=title][img]/NetImages/model/jian_left.png[/img][index]奔驰首页[/index]｜[url=/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=131]最新动态[/url]｜[url=/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=132]奔驰车款[/url]｜[url=/wapindex.aspx?siteid=112&amp;classid=133&amp;path=null/index.aspx]联系奔驰[/url][img]/NetImages/model/jian_right.png[/img][/div]|[div=mylink]版权所有：[url=http://kelink.com/]联速科技旗下产品[/url][/div]||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'113', N'113', N'model13', N'model13', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 18:06:00', N'3320', N'0', NULL, NULL, N'企业高级模版三', N'NetImages/no.gif', N'[picurl8=320*240]/NetImages/model/model13/1.jpg|/NetImages/model/model13/2.jpg*/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=136|/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=136[/picurl8] ', N'[div=subcontent]此模版用【经典橙灰√】皮肤CSS效果更佳[/div]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', NULL, N'', N'金币', N'1000', N'68', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'5|0|320|0|0|500|1|0|50|50|[div=logo][img]/NetImages/model/model13/logo.jpg[/img][/div][div=title][img]/NetImages/model/jiantou_left.png[/img][index]网站首页[/index][tab][url=/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=135]媒体关注[/url][tab][url=/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=136]集团产品[/url][tab][url=/wapindex.aspx?siteid=[siteid]&amp;classid=137]关于我们[/url][img]/NetImages/model/jiantou_right.png[/img][/div]|[div=content]版权所有：[url=http://kelink.com/]联速科技旗下产品[/url][/div]||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'114', N'114', N'model14', N'model14', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-31 11:23:00', N'14420', N'0', NULL, NULL, N'企业高级模版[HTML5]', N'NetImages/no.gif', N'[picurl8=320x240]/NetImages/model/model14/1.jpg|/NetImages/model/model14/2.jpg|/NetImages/model/model14/3.jpg|/NetImages/model/model14/4.jpg*/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=140|/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=140|/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=140|/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=140[/picurl8] ', N'[div=content]此模版用【轻快优雅√】皮肤CSS效果更佳[/div]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', NULL, N'', N'金币', N'1000', N'62', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'5|0|320|0|1|500|1|0|50|50|[div=logo][img]/NetImages/model/model14/logo.jpg[/img][/div][div=title][index]网站首页[/index][tab][url=/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=139]企业动态[/url][tab][url=/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=140]商品展示[/url][tab][url=/wapindex.aspx?siteid=[siteid]&amp;classid=141]关于我们[/url][/div]|[div=subtitle]版权所有：[url=http://kelink.com/]联速科技旗下产品[/url][/div]||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'115', N'115', N'model15', N'model15', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 18:02:00', N'13940', N'0', NULL, NULL, N'高级示例模版[HTML5]', N'NetImages/no.gif', N'[div=line]1、触屏按钮效果一,每行一个按钮:［div=bt1］［url=链接］说明［/url］［/div］实现效果如下↓↓↓[/div][div=bt1][url=#]链接[/url][/div][div=line]2、触屏按钮效果一,每行二个按钮:［div=bt2］［url=链接1］说明1［/url］［url=链接2］说明2［/url］［/div］实现效果如下↓↓↓[/div][div=bt2][url=#]链接1[/url][url=#]链接2[/url][/div][div=line]3、触屏按钮效果一,每行N个按钮:［div=btN］N个UBB链接，N为1-5［/div］[/div][div=line]4、触屏按钮效果二:［div=linkbtn］［url=链接］说明［/url］UBB链接不限［/div］实现效果如下↓↓↓[/div][div=linkbtn][url=#]链接1[/url][url=#]链接2[/url][/div]5、触屏按钮效果三:［div=linetouch］［url=链接］说明［/url］UBB链接不限［/div］实现效果如下↓↓↓[/div][div=linetouch][url=#]链接1[/url][url=#]链接2[/url][/div][div=content]6、用：［div=shadow］带阴影的边框［/div］实现效果如下↓↓↓[/div][div=shadow]带阴影的边框[/div][div=content]7、用［div=rounded］圆角的按钮［/div］实现效果如下↓↓↓[/div][div=rounded]圆角的按钮等[/div][div=content]8、用［div=bian］背景颜色渐变［@/div］实现效果如下↓↓↓[/div][div=bian]背景颜色渐变[/div][div=content]9、用［div=bian rounded shadow］三种样式混合使用［/div］实现效果如下↓↓↓[/div][div=bian rounded shadow]三种样式混合使用[/div]', N'[div=red]注意：使用UBB时把［］换成半角输入法。例如：［div=content］你要显示的内容［/div］[/div]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', NULL, N'', N'金币', N'1000', N'52', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50||[div=subtitle]版权所有：[url=http://kelink.com/]联速科技旗下产品[/url][/div]||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'1', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'116', N'116', N'model16', N'model16', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-07-30 18:13:00', N'10940', N'0', NULL, NULL, N'在线影音模版[HTML5]', N'NetImages/no.gif', N'', N'[div=subcontent]此模版用【优雅轻快√】皮肤CSS效果更佳[/div]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', NULL, N'', N'金币', N'1000', N'42', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50|[div=logo][img]/NetImages/model/model14/4.jpg[/img][/div][div=title][index]网站首页[/index][tab][url=/wapindex.aspx?action=class&amp;siteid=[siteid]&amp;classid=149]在线影音[/url][tab][url=/article/book_list.aspx?action=class&amp;siteid=[siteid]&amp;classid=148]商品展示[/url][tab][url=/wapindex.aspx?siteid=[siteid]&amp;classid=147]关于我们[/url][/div]|[div=mylink]版权所有：[url=http://kelink.com/]联速科技旗下产品[/url][/div]||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'117', N'117', N'model17', N'model17', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-12-03 17:43:00', N'3020', N'0', NULL, NULL, N'安卓效果模板[HTML5]', N'UploadFiles/117/2012/11/30/117_103544.gif', N'[div=nav][table][tr][td][imgurl=69*69]/NetImages/ico/1.png*/wapindex.aspx?siteid=[siteid]&amp;classid=160[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=160]矿业设备[/url][/td][td][imgurl=69*69]/NetImages/ico/2.png*/wapindex.aspx?siteid=[siteid]&amp;classid=161[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=161]矿业资源[/url][/td][td][imgurl=69*69]/NetImages/ico/4.png*/wapindex.aspx?siteid=[siteid]&amp;classid=162[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=162]矿业管理[/url][/td][td][imgurl=69*69]/NetImages/ico/3.png*/wapindex.aspx?siteid=[siteid]&amp;classid=163[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=163]矿业城市[/url][/td][/tr][tr][td][imgurl=69*69]/NetImages/ico/6.png*/wapindex.aspx?siteid=[siteid]&amp;classid=164[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=164]矿业市场[/url][/td][td][imgurl=69*69]/NetImages/ico/5.png*/wapindex.aspx?siteid=[siteid]&amp;classid=165[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=165]矿山安全[/url][/td][td][imgurl=69*69]/NetImages/ico/7.png*/wapindex.aspx?siteid=[siteid]&amp;classid=166[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=166]矿权法规[/url][/td][td][imgurl=69*69]/NetImages/ico/8.png*/wapindex.aspx?siteid=[siteid]&amp;classid=167[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=167]项目合作[/url][/td][/tr][tr][td][imgurl=69*69]/NetImages/ico/9.png*/wapindex.aspx?siteid=[siteid]&amp;classid=168[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=168]矿业展会[/url][/td][td][imgurl=69*69]/NetImages/ico/16.png*/wapindex.aspx?siteid=[siteid]&amp;classid=174[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=174]矿业动态[/url][/td][td][imgurl=69*69]/NetImages/ico/11.png*/wapindex.aspx?siteid=[siteid]&amp;classid=175[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=175]中国矿联[/url][/td][td][imgurl=69*69]/NetImages/ico/12.png*/wapindex.aspx?siteid=[siteid]&amp;classid=176[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=176]矿业论坛[/url][/td][/tr][tr][td][imgurl=69*69]/NetImages/ico/13.png*/wapindex.aspx?siteid=[siteid]&amp;classid=177[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=177]国际矿业[/url][/td][td][imgurl=69*69]/NetImages/ico/14.png*/wapindex.aspx?siteid=[siteid]&amp;classid=178[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=178]矿业统计[/url][/td][td][imgurl=69*69]/NetImages/ico/15.png*/wapindex.aspx?siteid=[siteid]&amp;classid=172[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=172]生活百科[/url][/td][td][imgurl=69*69]/NetImages/ico/10.png*/wapindex.aspx?siteid=[siteid]&amp;classid=169[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=169]在线留言[/url][/td][/tr][tr][td][imgurl=69*69]/NetImages/ico/news.png*/wapindex.aspx?siteid=[siteid]&amp;classid=159[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=159]矿业新闻[/url][/td][td][imgurl=69*69]/NetImages/ico/tianqi.png*/wapindex.aspx?siteid=[siteid]&amp;classid=171[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=171]天气查询[/url][/td][td][imgurl=69*69]/NetImages/ico/games.png*/wapindex.aspx?siteid=[siteid]&amp;classid=173[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=173]游戏大厅[/url][/td][td][imgurl=69*69]/NetImages/ico/lianxi.png*/wapindex.aspx?siteid=[siteid]&amp;classid=170[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=170]联系我们[/url][/td][/tr][/table][/div]', N'[div=tip]此模版用【安卓灰绿√】css样式效果更佳[/div][div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', NULL, N'', N'金币', N'1000', N'32', N'0', N'ADBFE4569DFB6E19', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50|[div=ding]中国矿业门户欢迎你[/div]|||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|||||0|0|0|||||||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'118', N'118', N'model18', N'model18', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-12-02 02:08:00', N'2620', N'0', NULL, NULL, N'导航网站模板[HTML5]', N'NetImages/no.gif', N'[div=tip7][url=/wapindex.aspx?siteid=[siteid]]活动：签到有礼[/url][/div][div=tip6][input=15]关键字[/input][ancho=article_0]搜文章[/ancho][ancho=bbs_0]搜论坛[/ancho][form2][input2=5]关键字[/input2][sel2][option2=bbs_0]论坛[/option2][option2=article_0]文章[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索一下[/button2][/form2][/div]', N'[/div][div=subtitle][img]/netimages/tou.gif[/img][url=/link/admin_WAPadd.aspx?action=go&amp;siteid=[siteid]&amp;classid=180&amp;page=0]申请友链合作[/url][/div][div=tip]此模版用【浅蓝导航√】css样式效果更佳[/div][div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', NULL, N'', N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|320|0|1|500|1|0|50|50|[div=logo][img]/NetImages/logo.gif[/img][/div][div=subcontent][img]/NetImages/shu.gif[/img]今日快讯:[url=http://kelink.com]今日资讯[/url][/div]|||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|||||0|0|0||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'119', N'119', N'model19', N'model19', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-12-03 12:42:00', N'2720', N'0', NULL, NULL, N'房产网站模板[HTML5]', N'NetImages/no.gif', N'[div=nav][table][tr][td][imgurl=69*69]/NetImages/model/model19/1.png*/wapindex.aspx?siteid=[siteid]&amp;classid=187[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=187]推荐企业[/url][/td][td][imgurl=69*69]/NetImages/model/model19/2.png*/wapindex.aspx?siteid=[siteid]&amp;classid=188[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=188]房产新闻[/url][/td][td][imgurl=69*69]/NetImages/model/model19/3.png*/wapindex.aspx?siteid=[siteid]&amp;classid=189[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=189]地产营销[/url][/td][td][imgurl=69*69]/NetImages/model/model19/4.png*/wapindex.aspx?siteid=[siteid]&amp;classid=190[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=190]楼市动态[/url][/td][/tr][tr][td][imgurl=69*69]/NetImages/model/model19/5.png*/wapindex.aspx?siteid=[siteid]&amp;classid=191[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=191]二手房资[/url][/td][td][imgurl=69*69]/NetImages/model/model19/6.jpg*/wapindex.aspx?siteid=[siteid]&amp;classid=192[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=192]家居装饰[/url][/td][td][imgurl=69*69]/NetImages/model/model19/7.png*/wapindex.aspx?siteid=[siteid]&amp;classid=193[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=193]购房步骤[/url][/td][td][imgurl=69*69]/NetImages/model/model19/8.png*/wapindex.aspx?siteid=[siteid]&amp;classid=194[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=194]购房常识[/url][/td][/tr][tr][td][imgurl=69*69]/NetImages/model/model19/9.jpg*/wapindex.aspx?siteid=[siteid]&amp;classid=195[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=195]政策法规[/url][/td][td][imgurl=69*69]/NetImages/model/model19/6.jpg*/wapindex.aspx?siteid=[siteid]&amp;classid=196[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=196]探盘手记[/url][/td][td][imgurl=69*69]/NetImages/model/model19/3.png*/wapindex.aspx?siteid=[siteid]&amp;classid=197[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=197]房产新闻[/url][/td][td][imgurl=69*69]/NetImages/model/model19/7.png*/wapindex.aspx?siteid=[siteid]&amp;classid=198[/imgurl][br][url=/wapindex.aspx?siteid=[siteid]&amp;classid=198]联系我们[/url][/td][/tr][/table][/div][div=subcontent][img]/NetImages/model/model19/11.jpg[/img][/div][div=title][url=/wapindex.aspx?siteid=[siteid]&amp;classid=187]推荐企业[/url][/div][div=ubbcontent][article=0_5_5_Y_0] [br][span=more][url=/wapindex.aspx?siteid=[siteid]&amp;classid=187]查看更多[/url][/span][/div][div=title][url=/wapindex.aspx?siteid=[siteid]&amp;classid=188]房产新闻[/url][/div][div=ubbcontent][article=0_5_5_Y_0] [br][span=more][url=/wapindex.aspx?siteid=[siteid]&amp;classid=188]查看更多[/url][/span][/div]', N'[div=tip]此模版用【浅灰橙色√】皮肤CSS效果更佳[/div][div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', NULL, N'', N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50|[div=logo][img]/NetImages/logo.gif[/img][/div]|||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'120', N'120', N'model20', N'model20', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'产品网站模板[HTML5]', N'NetImages/no.gif', N'', N'[div=tip]此模版用【黯淡浅绿√】皮肤CSS效果更佳[/div][div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50|[div=logo][img]/NetImages/logo.gif[/img][/div]|||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'121', N'121', N'model21', N'model21', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'商城网站模板[HTML5]', N'NetImages/no.gif', N'[div=logo][img]/netimages/logo.gif[/img][/div][div=subcontent][input=15]关键字[/input][ancho=article_0]搜文章[/ancho][ancho=bbs_0]搜论坛[/ancho][form2][input2=5]关键字[/input2][sel2][option2=bbs_0]论坛[/option2][option2=article_0]文章[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][/div]', N'[div=tip]此模版用【浅红浅黄√】皮肤CSS效果更佳[/div][div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50|[div=nexttitle][url=/waplogin.aspx?siteid=[siteid]&amp;classid=[classid]&amp;backurl=wapindex.aspx%3fsiteid%3d[siteid]%26classid%3d[classid]]登录[/url] ｜  [url=/wapreg.aspx?siteid=[siteid]&amp;classid=[classid]]注册[/url] ｜ [url=/shop/book_view_add.aspx?classid=[classid]&amp;siteid=[siteid]]购物车[/url] ｜ [url=/shop/orderlistmy.aspx?lpage=1&amp;id=0&amp;classid=[classid]&amp;siteid=[siteid]]我的订单[/url][/div]|||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|||||||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'122', N'122', N'model22', N'model22', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'景点网站模板[HTML5]', N'NetImages/no.gif', N'[div=logo][img]/NetImages/logo.gif[/img][/div][div=content][b]天下江山第一楼——黄鹤楼欢迎您！[/b][br][input=15]关键字[/input][ancho=article_0]搜文章[/ancho][ancho=bbs_0]搜论坛[/ancho][form2][input2=5]关键字[/input2][sel2][option2=bbs_0]论坛[/option2][option2=article_0]文章[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][br][tq=0]020[/tq][/div][div=subcontent][img]/NetImages/model/model20/333.gif[/img][img]/NetImages/model/model20/dh.jpg[/img][/div]', N'[div=tip]此模版用【轻快天蓝√】皮肤CSS效果更佳[/div][div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50|[div=welcome][nologins][url=/waplogin.aspx?siteid=[siteid]&amp;classid=[classid]&amp;backurl=wapindex.aspx%3fsiteid%3d[siteid]%26classid%3d[classid]]登录[/url] ｜ [url=/wapreg.aspx?siteid=[siteid]&amp;classid=[classid]]会员注册[/url][/nologins][logins][hello]，[url=/myfile.aspx?siteid=[siteid]][nickname][/url][/logins] [/div]|||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'123', N'123', N'model23', N'model23', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2012-12-19 11:08:00', N'2840', N'0', NULL, NULL, N'医院网站模板[HTML5]', N'NetImages/no.gif', N'[picurl8=320*122]/NetImages/model/123.gif|/NetImages/model/123.gif*链接地址1|链接地址2[/picurl8]', N'[div=tip]此模版用【华丽暗红√】样式更佳[/div][div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'30', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50|[div=allTop][span=allTopRight][call=10086]健康热线：010-88888888[/call][/span][span=allTopLeft][url=baidu.com]在线预约[/url][url=baidu.com]一键拨号[/url][/span][/div][div=logo] [/div][div=nav][index]网站首页[/index][url=/wapindex.aspx?siteid=123&amp;classid=262]医院简介[/url][url=/wapindex.aspx?siteid=123&amp;classid=263]专家团队[/url][url=/wapindex.aspx?siteid=123&amp;classid=264]在线预约[/url][url=/wapindex.aspx?siteid=123&amp;classid=265]无痛人流[/url][url=/wapindex.aspx?siteid=123&amp;classid=266]妇科炎症[/url][url=/wapindex.aspx?siteid=123&amp;classid=267sid=[sid]]无痛引产[/url][url=/wapindex.aspx?siteid=123&amp;classid=268]私密妇科[/url][/div]|||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'124', N'124', N'model24', N'model24', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'127.0.0.1', N'2013-01-17 16:21:00', N'2900', N'0', NULL, NULL, N'下载网站模板[HTML5]', N'NetImages/no.gif', N'[div=logo][img]/NetImages/logo2.png[/img][/div][div=nav][p=p2][index]首页[/index][span=sp] [/span][/p][p=p1][url=/wapindex.aspx?siteid=[siteid]&amp;classid=270]分类[/url][span=sp] [/span][/p][p=p1][url=/wapindex.aspx?siteid=[siteid]&amp;classid=271]最新[/url][span=sp] [/span][/p][p=p1][url=/wapindex.aspx?siteid=[siteid]&amp;classid=272]热门[/url][span=sp] [/span][/p][/div]', N'[div=tip]此模版用【安卓下载√】样式效果更佳[/div]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'43', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||[div=footer]&amp;lt;[url=/wapindex.aspx?siteid=[siteid]&amp;classid=[classid]&amp;sid=[sid1]-2-[cs]-[lang]-[myua]-[width]]安卓版[/url]｜[url=/wapindex.aspx?siteid=[siteid]&amp;sid=[sid1]-[ver]-[cs]-0-[myua]-[width]]简版[/url]&amp;gt;[br][url=http://kelink.com]广州市联速计算机科技有限公司[/url][/div]||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|||||||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'125', N'125', N'model25', N'model25', N'80P04D2BA1LFC83', N'01', N'1', N'23', N'180', N'120', N'', N'_', N'', N'', N'', N'123456453', N'24123431@126.com', N'0', N'', N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'113.104.64.211', N'2014-07-01 17:26:00', N'13920', N'0', NULL, N'', N'柯林摄影模板', N'NetImages/no.gif', N'[getwml=3]', N'', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'100', N'10000', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', N'', N'', N'金币', N'1000', N'791', N'0', N'BBA57FD928E98D1E', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'2|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|||||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'126', N'126', N'model26', N'model26', N'80P04D2BA1LFC83', N'01', N'1', N'23', N'180', N'120', N'', N'_', N'', N'', N'', N'123456453', N'24123431@126.com', N'0', N'', N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'183.44.129.201', N'2014-07-12 21:29:00', N'6840', N'0', NULL, N'', N'柯林汽车模板', N'NetImages/no.gif', N'[getwml=9]', N'', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', N'', N'', N'金币', N'1000', N'61', N'0', N'EC0982F1138F2F90', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'2|0|0|0|1|500|1|0|50|50|[getwml=11]|[getwml=10]||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|||||||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'127', N'127', N'model27', N'model27', N'80P04D2BA1LFC83', N'01', N'1', N'23', N'180', N'120', N'', N'_', N'', N'', N'', N'123456453', N'24123431@126.com', N'0', N'', N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'101.226.65.105', N'2014-07-10 18:19:00', N'10220', N'0', NULL, N'', N'柯林清新简洁ISO风格触屏版', N'NetImages/no.gif', N'[getwml=15]', N'', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'100', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'', N'_', N'0', N'', N'', N'', N'金币', N'1000', N'27', N'0', N'91A3DDE02BE67043', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|0|500|0|0|50|50||[getwml=16]||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|||||0|0|0|0|1||||||0|5|16|50|50|1|0|0|0|1|1|0||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'128', N'128', N'model28', N'model28', N'AAF568F1C5ED1CB2', N'01', N'1', N'23', N'180', N'120', N'', N'_', N'', N'', N'', N'123456453', N'24123431@126.com', N'0', N'', N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'::1', N'2014-08-02 09:33:00', N'7580', N'0', NULL, N'', N'餐厅网站模板', N'NetImages/no.gif', N'', N'[getwml=22]', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, N'', NULL, N'金币', N'1000', N'27', N'0', N'6966F0DB68696FD8', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'2|0|0|0|1|500|1|0|50|50|[noshow=0_0][getwml=27][/noshow]|[getwml=23]||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||||||', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'129', N'129', N'model29', N'model29', N'5D7B930FF5441C35', N'01', N'1', N'23', N'180', N'120', N'', N'_', N'', N'', N'', N'123456453', N'24123431@126.com', N'0', N'', N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'::1', N'2014-08-04 18:11:00', N'2840', N'0', NULL, N'', N'【红米Note 手机】限时秒杀', N'NetImages/no.gif', N'[getwml=28]', N'', N'left', N'[myfile]', N'0', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, N'', NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'130', N'130', N'model30', N'model30', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'131', N'131', N'model31', N'model31', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'132', N'132', N'model32', N'model32', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'133', N'133', N'model33', N'model33', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'134', N'134', N'model34', N'model34', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'135', N'135', N'model35', N'model35', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'136', N'136', N'model36', N'model36', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'137', N'137', N'model37', N'model37', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'138', N'138', N'model38', N'model38', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'139', N'139', N'model39', N'model39', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'140', N'140', N'model40', N'model40', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'141', N'141', N'model41', N'model41', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'142', N'142', N'model42', N'model42', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'143', N'143', N'model43', N'model43', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'144', N'144', N'model44', N'model44', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'145', N'145', N'model45', N'model45', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'146', N'146', N'model46', N'model46', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'147', N'147', N'model47', N'model47', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'148', N'148', N'model48', N'model48', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'149', N'149', N'model49', N'model49', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'150', N'150', N'model50', N'model50', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'156', N'156', N'model56', N'model56', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'157', N'157', N'model57', N'model57', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'158', N'158', N'model58', N'model58', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'159', N'159', N'model59', N'model59', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'160', N'160', N'model60', N'model60', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'161', N'161', N'model61', N'model61', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'162', N'162', N'model62', N'model62', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'163', N'163', N'model63', N'model63', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'164', N'164', N'model64', N'model64', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'165', N'165', N'model65', N'model65', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'166', N'166', N'model66', N'model66', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'167', N'167', N'model67', N'model67', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'168', N'168', N'model68', N'model68', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'169', N'169', N'model69', N'model69', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'170', N'170', N'model70', N'model70', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'171', N'171', N'model71', N'model71', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'172', N'172', N'model72', N'model72', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'173', N'173', N'model73', N'model73', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'174', N'174', N'model74', N'model74', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'175', N'175', N'model75', N'model75', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'176', N'176', N'model76', N'model76', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'177', N'177', N'model77', N'model77', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'178', N'178', N'model78', N'model78', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'179', N'179', N'model79', N'model79', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'180', N'180', N'model80', N'model80', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'181', N'181', N'model81', N'model81', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'182', N'182', N'model82', N'model82', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'183', N'183', N'model83', N'model83', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'184', N'184', N'model84', N'model84', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'185', N'185', N'model85', N'model85', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'186', N'186', N'model86', N'model86', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'187', N'187', N'model87', N'model87', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'188', N'188', N'model88', N'model88', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'189', N'189', N'model89', N'model89', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'190', N'190', N'model90', N'model90', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'191', N'191', N'model91', N'model91', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'192', N'192', N'model92', N'model92', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'193', N'193', N'model93', N'model93', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'194', N'194', N'model94', N'model94', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'195', N'195', N'model95', N'model95', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'196', N'196', N'model96', N'model96', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'197', N'197', N'model97', N'model97', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'198', N'198', N'model98', N'model98', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'199', N'199', N'model99', N'model99', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'200', N'200', N'model100', N'model100', N'80P04D2BA1LFC83', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'0', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'192.168.1.100', N'2012-07-09 15:51:00', N'2520', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'40F12628D72B0E3D', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'0', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'0', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'1000', N'1000', N'wap', N'超级管理员', N'77804D2BA1922C33', N'00', N'0', N'21', N'123', N'34', N'天歇座', N'体育_800007757', N'已婚', N'软件工程师', N'广州', N'13048036868', N'chinastrong@126.com', N'100', N'44.gif|XinZhang/Images/18.gif|XinZhang/Images/20.gif', N'10|5|8|1|5|100|1|1|10|20|0', N'2006-12-06 21:45:00', N'::1', N'2014-04-24 14:23:00', N'20140', N'0', N'1.gif', N'13048036868', N'柯林WAP建站系统NET版', N'NetImages/no.gif', N'[picurl8=320*240]/NetImages/model/model14/1.jpg|/NetImages/model/model14/2.jpg|/NetImages/model/model14/3.jpg*/article/book_list.aspx?action=class&amp;siteid=1000&amp;classid=155|/article/book_list.aspx?action=class&amp;siteid=1000&amp;classid=155|/article/book_list.aspx?action=class&amp;siteid=1000&amp;classid=155[/picurl8]', N'[div=content]此模版用【轻快优雅√】皮肤CSS效果更佳[/div][vs]', N'left', N'[myfile]', N'1', N'2', N'6', N'10', N'1000', N'1024', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', N'3gangle|操', N'_', N'0', N'欢迎你注册！送10个币', N'0', N'10', N'金币', N'1000', N'101778', N'0', N'6168977A9573DF31', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'0|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'103|54|85|166|578|10|0|1|5|10|1', N'0', NULL, NULL, N'469', NULL, N'0|0|320|0|0|100|1|0|100|0|[div=logo][img]/NetImages/model/model14/logo.jpg[/img][/div][div=title][index]网站首页[/index][tab][url=/article/book_list.aspx?action=class&amp;siteid=1000&amp;classid=155]企业动态[/url][tab][url=/article/book_list.aspx?action=class&amp;siteid=1000&amp;classid=156]商品展示[/url][tab][url=/wapindex.aspx?siteid=1000&amp;classid=157]关于我们[/url][/div]|[div=subtitle]版权所有：[url=http://kelink.com/]联速科技旗下产品[/url][/div]||12|1|1|FFFF00|0|0|1|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0||0|0||3|500|200|恭,喜,发,财|100,200,300,400|300||||||', N'.0000', N'0', N'1', NULL, N'0', NULL, NULL, NULL, NULL, N'0')
+INSERT INTO [dbo].[user] ([userid], [siteid], [username], [nickname], [password], [managerlvl], [sex], [age], [shenggao], [tizhong], [xingzuo], [aihao], [fenfuo], [zhiye], [city], [mobile], [email], [money], [moneyname], [moneyregular], [RegTime], [LastLoginIP], [LastLoginTime], [LoginTimes], [LockUser], [headimg], [remark], [sitename], [siteimg], [siteuptip], [sitedowntip], [siteposition], [siterowremark], [sitelistflag], [sitelist], [sitetype], [MaxPerPage_Default], [MaxPerPage_Content], [MaxFileSize], [SaveUpFilesPath], [UpFileType], [CharFilter], [UAFilter], [SessionTimeout], [MailServer], [MailServerUserName], [MailServerPassWord], [sitemoneyname], [sitespace], [myspace], [siteRight], [SidTimeOut], [lvlNumer], [lvlTimeImg], [lvlRegular], [myBankMoney], [myBankTime], [chuiNiu], [expR], [endTime], [version], [RMB], [siteVIP], [ZoneCount], [HangBiaoShi], [isCheck], [bbsCount], [bbsReCount], [actionTime], [actionState], [TJCount]) VALUES (N'1001', N'1000', N'test', N'test', N'77804D2BA1922C33', N'01', N'1', N'23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'123456453', N'24123431@126.com', N'1480', NULL, N'2|10|3|4|5|100|7|8', N'2012-07-04 00:00:00', N'::1', N'2024-07-31 16:49:00', N'6620', N'0', NULL, NULL, N'游戏网站模板', N'UploadFiles/110/2012/07/06/110_161321.gif', N'[form2][input2=5]关键字[/input2][sel2][option2=download_0]本站[/option2][option2=http://wap.baidu.com/baidu?word=]百度[/option2][/sel2][button2]搜索[/button2][/form2][div=title]', N'[div=mylink]Copy Right 2012[/div][vs]', N'left', N'[myfile]', N'1', N'0', N'19', N'10', N'0', N'100', N'UploadFiles', N'zip|doc|rar|jpg|gif|xls|txt|exe|png|bmp|mid|3gp|amr|wma|mmf|wav|mp3|jar|jad', NULL, NULL, N'0', NULL, NULL, NULL, N'金币', N'1000', N'27', N'0', N'73E669255EFA4EA6', N'0|500|1000|5000|50000|100000|200000|500000|1000000_新手|入门|初级|中级|高级|高手|顾问|侠客|精灵_一级|二级|三级|四级|五级|六级|七级|八级|九级', N'10|30|60|90|120|150|180|210|240|270|300|330|360|390|220|250|280|310|340|360_t1.gif|t2.gif|t3.gif|t4.gif|t5.gif|t6.gif|t7.gif|t8.gif|t9.gif|t10.gif|t11.gif|t12.gif|t13.gif|t14.gif|t15.gif|t16.gif|t17.gif|t18.gif|t19.gif|t20.gif', N'1|5|3|4|5|200|7|8', N'0', NULL, NULL, N'168', N'9999-12-31 00:00:00.000', N'0|0|0|0|1|500|1|0|50|50||||20|2|2|FFFF00|0|0|0|||1000|0|0|0|0|0|0|这家伙很懒，什么都没留下！|0|0|', N'.0000', N'0', N'2', NULL, N'0', N'1', NULL, NULL, NULL, N'0')
 GO
 
 SET IDENTITY_INSERT [dbo].[user] OFF
@@ -8744,157 +6802,7 @@ GO
 SET IDENTITY_INSERT [dbo].[vcount] ON
 GO
 
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'207', N'3', N'4', N'933', N'2009-12-27 22:16:00', N'2012-07-12 00:00:00', N'115', N'127.0.0.1', N'7', N'13', N'1', N'2012', N'15', N'10', N'29', N'wap', N'kelink.com', N'85403498@qq.com', N'我的网站', N'http://kelink.com', N'【新闻出版】新闻、娱乐、资讯', N'超级管理员', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'208', N'3', N'2', N'56', N'2012-07-05 15:42:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'10', N'0', N'2012', N'10', N'6', N'29', N'model1', N'kelink.com', N'85403498@qq.com', N'购物网站模板', N'http://model1.kelink.com', N'个人网站', N'model1', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'209', N'1', N'1', N'52', N'2012-07-05 16:44:00', N'2012-07-12 00:00:00', N'3', N'127.0.0.1', N'7', N'4', N'0', N'2012', N'4', N'3', N'29', N'model2', N'kelink.com', N'85403498@qq.com', N'彩票网站模板', N'http://model2.kelink.com', N'个人网站', N'model2', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'210', N'2', N'3', N'86', N'2012-07-05 17:22:00', N'2012-07-12 00:00:00', N'3', N'127.0.0.1', N'7', N'7', N'0', N'2012', N'7', N'6', N'29', N'model3', N'kelink.com', N'85403498@qq.com', N'论坛网站模板', N'http://model3.kelink.com', N'个人网站', N'model3', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'211', N'2', N'2', N'110', N'2012-07-06 16:56:00', N'2012-07-12 00:00:00', N'5', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model4', N'kelink.com', N'85403498@qq.com', N'政府网站模板', N'http://model4.kelink.com', N'个人网站', N'model4', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'212', N'2', N'3', N'52', N'2012-07-09 10:44:00', N'2012-07-12 00:00:00', N'3', N'127.0.0.1', N'7', N'7', N'0', N'2012', N'7', N'7', N'29', N'model5', N'kelink.com', N'85403498@qq.com', N'搜索网站模板', N'http://model5.kelink.com', N'个人网站', N'model5', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'213', N'2', N'1', N'38', N'2012-07-09 17:58:00', N'2012-07-12 00:00:00', N'1', N'127.0.0.1', N'7', N'4', N'0', N'2012', N'4', N'4', N'29', N'model6', N'kelink.com', N'85403498@qq.com', N'小说网站模板', N'http://model6.kelink.com', N'个人网站', N'model6', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'214', N'2', N'3', N'79', N'2012-07-10 16:20:00', N'2012-07-12 00:00:00', N'2', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'6', N'29', N'model7', N'kelink.com', N'85403498@qq.com', N'企业网站模板', N'http://model7.kelink.com', N'个人网站', N'model7', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'215', N'2', N'2', N'36', N'2012-07-09 17:56:00', N'2012-07-12 00:00:00', N'2', N'127.0.0.1', N'7', N'5', N'0', N'2012', N'5', N'5', N'29', N'model8', N'kelink.com', N'85403498@qq.com', N'交友网站模板', N'http://model8.kelink.com', N'个人网站', N'model8', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'216', N'2', N'2', N'42', N'2012-07-09 10:41:00', N'2012-07-12 00:00:00', N'2', N'127.0.0.1', N'7', N'5', N'0', N'2012', N'5', N'5', N'29', N'model9', N'kelink.com', N'85403498@qq.com', N'影视网站模板', N'http://model9.kelink.com', N'个人网站', N'model9', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'217', N'2', N'1', N'44', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model10', N'kelink.com', N'85403498@qq.com', N'游戏网站模板', N'http://model10.kelink.com', N'个人网站', N'model10', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'218', N'2', N'1', N'1983', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'53', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model11', N'kelink.com', N'85403498@qq.com', N'企业高级模版一', N'http://model11.kelink.com', N'个人网站', N'model11', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'219', N'2', N'1', N'393', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'9', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model12', N'kelink.com', N'85403498@qq.com', N'企业高级模版二', N'http://model12.kelink.com', N'个人网站', N'model12', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'220', N'2', N'1', N'428', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'7', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model13', N'kelink.com', N'85403498@qq.com', N'企业高级模版三', N'http://model13.kelink.com', N'个人网站', N'model13', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'221', N'2', N'1', N'966', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'27', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model14', N'kelink.com', N'85403498@qq.com', N'企业高级模版[HTML5]', N'http://model14.kelink.com', N'个人网站', N'model14', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'222', N'2', N'1', N'647', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'5', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model15', N'kelink.com', N'85403498@qq.com', N'高级示例模版[HTML5]', N'http://model15.kelink.com', N'个人网站', N'model15', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'223', N'2', N'1', N'593', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'18', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model16', N'kelink.com', N'85403498@qq.com', N'在线影音模版[HTML5]', N'http://model16.kelink.com', N'个人网站', N'model16', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'224', N'2', N'1', N'300', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'33', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model17', N'kelink.com', N'85403498@qq.com', N'model17', N'http://model17.kelink.com', N'个人网站', N'model17', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'225', N'2', N'1', N'132', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'11', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model18', N'kelink.com', N'85403498@qq.com', N'model18', N'http://model18.kelink.com', N'个人网站', N'model18', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'226', N'2', N'1', N'245', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'17', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model19', N'kelink.com', N'85403498@qq.com', N'model19', N'http://model19.kelink.com', N'个人网站', N'model19', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'227', N'2', N'1', N'150', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'7', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model20', N'kelink.com', N'85403498@qq.com', N'model20', N'http://model20.kelink.com', N'个人网站', N'model20', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'233', N'2', N'1', N'113', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'7', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model21', N'kelink.com', N'85403498@qq.com', N'model21', N'http://model21.kelink.com', N'个人网站', N'model21', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'234', N'2', N'1', N'231', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'14', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model22', N'kelink.com', N'85403498@qq.com', N'model22', N'http://model22.kelink.com', N'个人网站', N'model22', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'235', N'2', N'1', N'219', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'21', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model23', N'kelink.com', N'85403498@qq.com', N'model23', N'http://model23.kelink.com', N'个人网站', N'model23', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'236', N'2', N'1', N'369', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'18', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model24', N'kelink.com', N'85403498@qq.com', N'model24', N'http://model24.kelink.com', N'个人网站', N'model24', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'237', N'2', N'1', N'757', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'178', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model25', N'kelink.com', N'85403498@qq.com', N'model25', N'http://model25.kelink.com', N'个人网站', N'model25', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'238', N'2', N'1', N'663', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'75', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model26', N'kelink.com', N'85403498@qq.com', N'model26', N'http://model26.kelink.com', N'个人网站', N'model26', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'239', N'2', N'1', N'628', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'81', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model27', N'kelink.com', N'85403498@qq.com', N'model27', N'http://model27.kelink.com', N'个人网站', N'model27', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'240', N'2', N'1', N'258', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'8', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model28', N'kelink.com', N'85403498@qq.com', N'model28', N'http://model28.kelink.com', N'个人网站', N'model28', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'241', N'2', N'1', N'92', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'7', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model29', N'kelink.com', N'85403498@qq.com', N'model29', N'http://model29.kelink.com', N'个人网站', N'model29', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'242', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model30', N'kelink.com', N'85403498@qq.com', N'model30', N'http://model30.kelink.com', N'个人网站', N'model30', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'243', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model31', N'kelink.com', N'85403498@qq.com', N'model31', N'http://model31.kelink.com', N'个人网站', N'model31', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'244', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model32', N'kelink.com', N'85403498@qq.com', N'model32', N'http://model32.kelink.com', N'个人网站', N'model32', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'245', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model33', N'kelink.com', N'85403498@qq.com', N'model33', N'http://model33.kelink.com', N'个人网站', N'model33', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'246', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model34', N'kelink.com', N'85403498@qq.com', N'model34', N'http://model34.kelink.com', N'个人网站', N'model34', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'247', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model35', N'kelink.com', N'85403498@qq.com', N'model35', N'http://model35.kelink.com', N'个人网站', N'model35', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'248', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model36', N'kelink.com', N'85403498@qq.com', N'model36', N'http://model36.kelink.com', N'个人网站', N'model36', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'249', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model37', N'kelink.com', N'85403498@qq.com', N'model37', N'http://model37.kelink.com', N'个人网站', N'model37', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'250', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model38', N'kelink.com', N'85403498@qq.com', N'model38', N'http://model38.kelink.com', N'个人网站', N'model38', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'251', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model39', N'kelink.com', N'85403498@qq.com', N'model39', N'http://model39.kelink.com', N'个人网站', N'model39', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'252', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model40', N'kelink.com', N'85403498@qq.com', N'model40', N'http://model40.kelink.com', N'个人网站', N'model40', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'253', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model41', N'kelink.com', N'85403498@qq.com', N'model41', N'http://model41.kelink.com', N'个人网站', N'model41', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'254', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model42', N'kelink.com', N'85403498@qq.com', N'model42', N'http://model42.kelink.com', N'个人网站', N'model42', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'255', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model43', N'kelink.com', N'85403498@qq.com', N'model43', N'http://model43.kelink.com', N'个人网站', N'model43', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'256', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model44', N'kelink.com', N'85403498@qq.com', N'model44', N'http://model44.kelink.com', N'个人网站', N'model44', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'257', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model45', N'kelink.com', N'85403498@qq.com', N'model45', N'http://model45.kelink.com', N'个人网站', N'model45', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'258', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model46', N'kelink.com', N'85403498@qq.com', N'model46', N'http://model46.kelink.com', N'个人网站', N'model46', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'259', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model47', N'kelink.com', N'85403498@qq.com', N'model47', N'http://model47.kelink.com', N'个人网站', N'model47', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'260', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model48', N'kelink.com', N'85403498@qq.com', N'model48', N'http://model48.kelink.com', N'个人网站', N'model48', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'261', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model49', N'kelink.com', N'85403498@qq.com', N'model49', N'http://model49.kelink.com', N'个人网站', N'model49', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'262', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model50', N'kelink.com', N'85403498@qq.com', N'model50', N'http://model50.kelink.com', N'个人网站', N'model50', N'2012-08-08 18:18:00', NULL)
+INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'207', N'3', N'4', N'1265', N'2009-12-27 22:16:00', N'2012-07-12 00:00:00', N'218', N'127.0.0.1', N'7', N'13', N'1', N'2012', N'15', N'10', N'29', N'wap', N'kelink.com', N'85403498@qq.com', N'我的网站', N'http://kelink.com', N'【新闻出版】新闻、娱乐、资讯', N'超级管理员', N'2012-08-08 18:18:00', NULL)
 GO
 
 INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'263', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model51', N'kelink.com', N'85403498@qq.com', N'model51', N'http://model51.kelink.com', N'个人网站', N'model51', N'2012-08-08 18:18:00', NULL)
@@ -8910,141 +6818,6 @@ INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal]
 GO
 
 INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'267', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model55', N'kelink.com', N'85403498@qq.com', N'model55', N'http://model55.kelink.com', N'个人网站', N'model55', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'268', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model56', N'kelink.com', N'85403498@qq.com', N'model56', N'http://model56.kelink.com', N'个人网站', N'model56', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'269', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model57', N'kelink.com', N'85403498@qq.com', N'model57', N'http://model57.kelink.com', N'个人网站', N'model57', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'270', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model58', N'kelink.com', N'85403498@qq.com', N'model58', N'http://model58.kelink.com', N'个人网站', N'model58', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'281', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model59', N'kelink.com', N'85403498@qq.com', N'model59', N'http://model59.kelink.com', N'个人网站', N'model59', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'282', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model60', N'kelink.com', N'85403498@qq.com', N'model60', N'http://model60.kelink.com', N'个人网站', N'model60', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'283', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model61', N'kelink.com', N'85403498@qq.com', N'model61', N'http://model61.kelink.com', N'个人网站', N'model61', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'284', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model62', N'kelink.com', N'85403498@qq.com', N'model62', N'http://model62.kelink.com', N'个人网站', N'model62', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'285', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model63', N'kelink.com', N'85403498@qq.com', N'model63', N'http://model63.kelink.com', N'个人网站', N'model63', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'286', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model64', N'kelink.com', N'85403498@qq.com', N'model64', N'http://model64.kelink.com', N'个人网站', N'model64', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'287', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model65', N'kelink.com', N'85403498@qq.com', N'model65', N'http://model65.kelink.com', N'个人网站', N'model65', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'288', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model66', N'kelink.com', N'85403498@qq.com', N'model66', N'http://model66.kelink.com', N'个人网站', N'model66', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'289', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model67', N'kelink.com', N'85403498@qq.com', N'model67', N'http://model67.kelink.com', N'个人网站', N'model67', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'290', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model68', N'kelink.com', N'85403498@qq.com', N'model68', N'http://model68.kelink.com', N'个人网站', N'model68', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'291', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model69', N'kelink.com', N'85403498@qq.com', N'model69', N'http://model69.kelink.com', N'个人网站', N'model69', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'292', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model70', N'kelink.com', N'85403498@qq.com', N'model70', N'http://model70.kelink.com', N'个人网站', N'model70', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'293', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model71', N'kelink.com', N'85403498@qq.com', N'model71', N'http://model71.kelink.com', N'个人网站', N'model71', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'294', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model72', N'kelink.com', N'85403498@qq.com', N'model72', N'http://model72.kelink.com', N'个人网站', N'model72', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'295', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model73', N'kelink.com', N'85403498@qq.com', N'model73', N'http://model73.kelink.com', N'个人网站', N'model73', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'296', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model74', N'kelink.com', N'85403498@qq.com', N'model74', N'http://model74.kelink.com', N'个人网站', N'model74', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'297', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model75', N'kelink.com', N'85403498@qq.com', N'model75', N'http://model75.kelink.com', N'个人网站', N'model75', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'298', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model76', N'kelink.com', N'85403498@qq.com', N'model76', N'http://model76.kelink.com', N'个人网站', N'model76', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'299', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model77', N'kelink.com', N'85403498@qq.com', N'model77', N'http://model77.kelink.com', N'个人网站', N'model77', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'301', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model78', N'kelink.com', N'85403498@qq.com', N'model78', N'http://model78.kelink.com', N'个人网站', N'model78', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'302', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model79', N'kelink.com', N'85403498@qq.com', N'model79', N'http://model79.kelink.com', N'个人网站', N'model79', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'303', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model80', N'kelink.com', N'85403498@qq.com', N'model80', N'http://model80.kelink.com', N'个人网站', N'model80', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'304', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model81', N'kelink.com', N'85403498@qq.com', N'model81', N'http://model81.kelink.com', N'个人网站', N'model81', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'305', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model82', N'kelink.com', N'85403498@qq.com', N'model82', N'http://model82.kelink.com', N'个人网站', N'model82', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'306', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model83', N'kelink.com', N'85403498@qq.com', N'model83', N'http://model83.kelink.com', N'个人网站', N'model83', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'307', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model84', N'kelink.com', N'85403498@qq.com', N'model84', N'http://model84.kelink.com', N'个人网站', N'model84', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'308', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model85', N'kelink.com', N'85403498@qq.com', N'model85', N'http://model85.kelink.com', N'个人网站', N'model85', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'309', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model86', N'kelink.com', N'85403498@qq.com', N'model86', N'http://model86.kelink.com', N'个人网站', N'model86', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'310', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model87', N'kelink.com', N'85403498@qq.com', N'model87', N'http://model87.kelink.com', N'个人网站', N'model87', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'311', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model88', N'kelink.com', N'85403498@qq.com', N'model88', N'http://model88.kelink.com', N'个人网站', N'model88', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'312', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model89', N'kelink.com', N'85403498@qq.com', N'model89', N'http://model89.kelink.com', N'个人网站', N'model89', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'313', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model90', N'kelink.com', N'85403498@qq.com', N'model90', N'http://model90.kelink.com', N'个人网站', N'model90', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'314', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model91', N'kelink.com', N'85403498@qq.com', N'model91', N'http://model91.kelink.com', N'个人网站', N'model91', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'315', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model92', N'kelink.com', N'85403498@qq.com', N'model92', N'http://model92.kelink.com', N'个人网站', N'model92', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'316', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model93', N'kelink.com', N'85403498@qq.com', N'model93', N'http://model93.kelink.com', N'个人网站', N'model93', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'317', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model94', N'kelink.com', N'85403498@qq.com', N'model94', N'http://model94.kelink.com', N'个人网站', N'model94', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'318', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model95', N'kelink.com', N'85403498@qq.com', N'model95', N'http://model95.kelink.com', N'个人网站', N'model95', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'319', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model96', N'kelink.com', N'85403498@qq.com', N'model96', N'http://model96.kelink.com', N'个人网站', N'model96', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'320', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model97', N'kelink.com', N'85403498@qq.com', N'model97', N'http://model97.kelink.com', N'个人网站', N'model97', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'321', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model98', N'kelink.com', N'85403498@qq.com', N'model98', N'http://model98.kelink.com', N'个人网站', N'model98', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'322', N'2', N'1', N'26', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model99', N'kelink.com', N'85403498@qq.com', N'model99', N'http://model99.kelink.com', N'个人网站', N'model99', N'2012-08-08 18:18:00', NULL)
-GO
-
-INSERT INTO [dbo].[vcount] ([startcount], [vid], [vtoday], [vyestaday], [vtotal], [vstarttime], [vdate], [vtotal1], [vip], [vmonth], [vnowmonth], [vpremonth], [vyear], [vnowyear], [vweek], [vweeknum], [vuser], [vpass], [vemail], [vtitle], [vurl], [vcontent], [vbanzhu], [vregtime], [HangBiaoShi]) VALUES (N'1', N'323', N'2', N'1', N'27', N'2012-07-06 17:31:00', N'2012-07-12 00:00:00', N'4', N'127.0.0.1', N'7', N'6', N'0', N'2012', N'6', N'5', N'29', N'model100', N'kelink.com', N'85403498@qq.com', N'model100', N'http://model100.kelink.com', N'个人网站', N'model100', N'2012-08-08 18:18:00', NULL)
 GO
 
 SET IDENTITY_INSERT [dbo].[vcount] OFF
@@ -9487,6 +7260,57 @@ GO
 SET IDENTITY_INSERT [dbo].[wap_bankLog] ON
 GO
 
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'1', N'1000', N'1000', N'游戏下注', N'-100', N'0', N'1000', N'超级管理员', N'吹牛下注', N'::1', N'2024-05-24 15:36:03.847', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'2', N'1000', N'1001', N'游戏赢币', N'95', N'1095', N'1000', N'系统', N'吹牛打赢了', N'::1', N'2024-05-24 15:53:30.097', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'3', N'1000', N'1000', N'游戏下注', N'-100', N'989900', N'1000', N'超级管理员', N'吹牛下注', N'::1', N'2024-05-24 15:54:15.100', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'4', N'1000', N'1001', N'游戏输币', N'-100', N'995', N'1000', N'系统', N'吹牛输了', N'::1', N'2024-05-24 16:23:12.077', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'16', N'1000', N'1000', N'论坛发贴', N'10', N'989605', N'1000', N'超级管理员', N'发新贴[21]', N'::1', N'2024-07-31 15:28:55.593', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'17', N'1000', N'1001', N'论坛发贴', N'10', N'1480', N'1001', N'test', N'发新贴[22]', N'::1', N'2024-07-31 16:13:40.777', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'5', N'1000', N'1000', N'游戏赢币', N'195', N'990095', N'1000', N'系统', N'吹牛打赢了', N'::1', N'2024-05-24 16:23:12.090', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'6', N'1000', N'1000', N'游戏下注', N'-100', N'989995', N'1000', N'超级管理员', N'吹牛下注', N'::1', N'2024-05-24 16:23:27.727', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'7', N'1000', N'1001', N'游戏赢币', N'95', N'1090', N'1000', N'系统', N'吹牛打赢了', N'::1', N'2024-05-24 16:23:59.270', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'8', N'1000', N'1000', N'游戏下注', N'-100', N'989895', N'1000', N'超级管理员', N'吹牛下注', N'::1', N'2024-05-24 16:24:17.677', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'9', N'1000', N'1001', N'游戏赢币', N'95', N'1185', N'1000', N'系统', N'吹牛打赢了', N'::1', N'2024-05-24 16:25:01.377', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'10', N'1000', N'1000', N'游戏下注', N'-100', N'989795', N'1000', N'超级管理员', N'吹牛下注', N'::1', N'2024-05-24 16:25:17.337', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'11', N'1000', N'1000', N'游戏下注', N'-100', N'989695', N'1000', N'超级管理员', N'吹牛下注', N'::1', N'2024-05-24 16:25:19.230', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'12', N'1000', N'1000', N'游戏下注', N'-100', N'989595', N'1000', N'超级管理员', N'吹牛下注', N'::1', N'2024-05-24 16:25:21.407', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'13', N'1000', N'1001', N'游戏赢币', N'95', N'1280', N'1000', N'系统', N'吹牛打赢了', N'::1', N'2024-05-24 16:25:32.970', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'14', N'1000', N'1001', N'游戏赢币', N'95', N'1375', N'1000', N'系统', N'吹牛打赢了', N'::1', N'2024-05-24 16:25:42.683', NULL)
+GO
+
+INSERT INTO [dbo].[wap_bankLog] ([id], [siteid], [userid], [actionName], [money], [leftMoney], [opera_userid], [opera_nickname], [remark], [ip], [addtime], [HangBiaoShi]) VALUES (N'15', N'1000', N'1001', N'游戏赢币', N'95', N'1470', N'1000', N'系统', N'吹牛打赢了', N'::1', N'2024-05-24 16:26:05.480', NULL)
+GO
+
 SET IDENTITY_INSERT [dbo].[wap_bankLog] OFF
 GO
 
@@ -9549,64 +7373,10 @@ GO
 SET IDENTITY_INSERT [dbo].[wap_bbs] ON
 GO
 
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'6', N'103', N'33', N'火爆。免费传授制作ICO图标与seo', N'model3', N'103', N'首先进入网站后台,打开css样式管理！把下面的代码加入到css代码的最上面,然后保存更新缓存即可！ 提醒：本教程中的制作ICO图标仅仅针对wap2.0页面起作用,ICO图标就是在浏览器打开网站后网址左面显示的那个小图标！制作ico图标前需要大家先制作好自己网站特色的,长宽像素一样的图片,然后可登陆ico.55.la或者www.ico.la把制作好的图片转换成ico格式的ico图标！然后把制作的ico图标上传到网站相册或论坛、下载等栏目,然后获取一个ico的图标连接,即可把ico图标连接填入以下代码中！ ==================== 如何让百度等搜索引擎尽快搜录自己的网站呢,首页要后台中设置网站进入方式为默认,然后把下面代码中的网站主题关键词和网站描述及其网站名称关键词认真填写！然后保存到css代码中,如果您的网站有多个css,请把每个css都要这样设置！ 代码如下： &amp;lt;head&amp;gt; &amp;lt;meta http-equiv=“Content-Type“ content=“application/xhtml xml; charset=utf-8“/&amp;gt; &amp;lt;meta http-equiv=“Cache-Control“ content=“max-age=0“/&amp;gt; &amp;lt;meta name=“keywords“ content=“此处输入网站主题关键词“&amp;gt; &amp;lt;meta name=“description“ content=“此处输入对您网站的描述“&amp;gt; &amp;lt;link rel=“shortcut icon“ href=“此处输入ico图标连接地址“/&amp;gt; &amp;lt;link rel=“bookmark“ href=“此处输入ico图标连接地址“/&amp;gt; &amp;lt;title&amp;gt;此处输入网站名称关键词&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt;', N'0', N'0', N'2012-07-06 16:10:00', N'0', N'0', N'0', N'2012-07-06 16:09:59.017', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
+INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'22', N'1000', N'305', N'屏蔽测试11', N'test', N'1001', N'屏蔽测试屏蔽测试屏蔽测试屏蔽测试', N'0', N'2', N'2024-07-31 16:14:00', N'0', N'0', N'0', N'2024-07-31 16:13:40.750', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'', N'0', N'0')
 GO
 
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'5', N'103', N'33', N'新手必进，FTP的正确使用图文教程，让你两分钟学会程序的上传安装', N'model3', N'103', N'1，如果你电脑还没有FTP或者FTP不是破解版请先点击本链接下载http://qqoq.cn/download/book_view.aspx?siteid=1000&amp;classid=251&amp;id=582&amp;lpage=1&amp;sp=&amp;sid=-2-0-0-0-0[br][br]2.进入我们的服务器或者虚拟主机控制面板，查看我们的服务器IP，账号及密码。[br][br]3.在本地解压好程序包。[br][br]3.解压软件只有一个.EXE执行文件，我们双击运行。', N'0', N'0', N'2012-07-06 16:10:00', N'0', N'0', N'0', N'2012-07-06 16:09:48.423', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'4', N'103', N'33', N'新手必进，FTP的正确使用图文教程，让你两分钟学会程序的上传安装', N'model3', N'103', N'1，如果你电脑还没有FTP或者FTP不是破解版请先点击本链接下载http://qqoq.cn/download/book_view.aspx?siteid=1000&amp;classid=251&amp;id=582&amp;lpage=1&amp;sp=&amp;sid=-2-0-0-0-0[br][br]2.进入我们的服务器或者虚拟主机控制面板，查看我们的服务器IP，账号及密码。[br][br]3.在本地解压好程序包。[br][br]3.解压软件只有一个.EXE执行文件，我们双击运行。', N'0', N'0', N'2012-07-06 16:08:00', N'0', N'0', N'0', N'2012-07-06 16:08:17.627', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'3', N'103', N'33', N'新手必进，FTP的正确使用图文教程，让你两分钟学会程序的上传安装', N'model3', N'103', N'[br]1，如果你电脑还没有FTP或者FTP不是破解版请先点击本链接下载http://qqoq.cn/download/book_view.aspx?siteid=1000&amp;classid=251&amp;id=582&amp;lpage=1&amp;sp=&amp;sid=-2-0-0-0-0[br][br]2.进入我们的服务器或者虚拟主机控制面板，查看我们的服务器IP，账号及密码。[br][br]3.在本地解压好程序包。[br][br]3.解压软件只有一个.EXE执行文件，我们双击运行。', N'0', N'0', N'2012-07-06 16:08:00', N'0', N'0', N'0', N'2012-07-06 16:08:12.937', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'2', N'103', N'33', N'求本站CSS样式代码', N'model3', N'103', N'求本站CSS样式代码，求本站CSS样式代码求本站CSS样式代码', N'0', N'1', N'2012-07-06 16:05:00', N'0', N'0', N'0', N'2012-07-06 16:05:01.390', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'1', N'103', N'33', N'怎么备份数据库啊', N'model3', N'103', N'怎么备份数据库啊？', N'0', N'0', N'2012-07-06 16:04:00', N'0', N'0', N'0', N'2012-07-06 16:04:25.860', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'7', N'103', N'34', N'出售一下域名还有com双拼', N'model3', N'103', N'易名的域名 easuw.com仿易搜 易素 40元 93w.org 55元极品短域名 nuobian.com 诺编 （编程网）诺变 魔术网 ', N'0', N'1', N'2012-07-06 16:24:00', N'0', N'0', N'0', N'2012-07-06 16:24:14.827', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'8', N'103', N'34', N'极速打造精品空间低价销售', N'model3', N'103', N'极速互联打造最低稳定建站空间销售[br]全能美国抗攻击空间[br]100m 15元/年 赠送mysq20m[br]200m 25元/年 赠送mysq40m[br]300m 40元/年 赠送mysq60m[br]500m 65元/年 赠送mysq80m[br]1000m 125元/年 赠送mysql50m[br]2000m 200元/年 赠送mysq300m', N'0', N'0', N'2012-07-06 16:29:00', N'0', N'0', N'0', N'2012-07-06 16:29:03.877', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'9', N'103', N'34', N'香港美国国内空间尽在心缘数据', N'model3', N'103', N'心缘数据销售香港空间，美国空间，国内空间[br][br]VPS租用，整机服务器租用[br][br]美国空间现在优惠销售150元/500M[br][br]美国空间现在优惠销售200元/1G[br][br]其他相关产品登陆[br][br]手机登陆wap.68xk.com[br][br]登陆网址www.68xk.com[br]', N'0', N'0', N'2012-07-06 16:30:00', N'0', N'0', N'0', N'2012-07-06 16:29:50.470', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'10', N'103', N'34', N'推荐免费空间', N'model3', N'103', N'云空间-全面进入免费云时代-国内首家免费T级云空间！云空间为您提供的空间容量为1T，支持ASP，PHP，.NET等脚本。有独立的控制面板。支持绑域名等．云空间专业的在线云存储技术，分布式存储系统架构', N'0', N'1', N'2012-07-06 16:31:00', N'0', N'0', N'0', N'2012-07-06 16:31:07.110', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'16', N'108', N'117', N'掌柜短头发玫瑰谷一日游', N'model8', N'108', N'掌柜短头发玫瑰谷一日游', N'0', N'0', N'2012-07-10 11:40:00', N'0', N'0', N'0', N'2012-07-10 11:40:16.170', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'17', N'108', N'117', N'惜缘筱淞靓照在线求包养', N'model8', N'108', N'惜缘筱淞靓照在线求包养', N'0', N'1', N'2012-07-10 11:41:00', N'0', N'0', N'0', N'2012-07-10 11:40:36.060', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'18', N'108', N'117', N'帅哥惜缘筱淞在线求基友', N'model8', N'108', N'帅哥惜缘筱淞在线求基友', N'0', N'0', N'2012-07-10 11:41:00', N'0', N'0', N'0', N'2012-07-10 11:40:51.403', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'19', N'108', N'117', N'大肚高福帅彤彤装深沉中', N'model8', N'108', N'大肚高福帅彤彤装深沉中', N'0', N'0', N'2012-07-10 11:41:00', N'0', N'0', N'0', N'2012-07-10 11:41:05.123', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'20', N'108', N'117', N'宇宙无敌大帅哥李江是也', N'model8', N'108', N'请先完善交友资料！', N'0', N'0', N'2012-07-10 11:41:00', N'0', N'0', N'0', N'2012-07-10 11:41:18.590', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'11', N'109', N'76', N'今天天气很好。', N'model9', N'109', N'今天天气很好。', N'0', N'1', N'2012-07-09 17:04:00', N'0', N'0', N'0', N'2012-07-09 17:04:05.127', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'12', N'109', N'76', N'柯林自助建站系统', N'model9', N'109', N'柯林自助建站系统', N'0', N'1', N'2012-07-09 17:05:00', N'0', N'0', N'0', N'2012-07-09 17:04:57.327', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'13', N'109', N'76', N'大家好！我是新来的。', N'model9', N'109', N'柯林自助建站系统', N'0', N'1', N'2012-07-09 17:05:00', N'0', N'0', N'0', N'2012-07-09 17:05:12.547', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'14', N'109', N'76', N'有没同乡', N'model9', N'109', N'柯林自助建站系统', N'0', N'1', N'2012-07-09 17:06:00', N'0', N'0', N'0', N'2012-07-09 17:05:31.127', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'15', N'109', N'76', N'这是UBB实现的。', N'model9', N'109', N'柯林自助建站系统', N'0', N'0', N'2012-07-09 17:06:00', N'0', N'0', N'0', N'2012-07-09 17:06:08.593', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', NULL, NULL, NULL)
+INSERT INTO [dbo].[wap_bbs] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [sysid], [reDate], [reShow], [suport], [oppose], [topic], [islock], [isVote], [whylock], [sendMoney], [hasMoney], [isdown], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [viewType], [viewMoney], [freeMoney], [freeleftMoney], [freeRule], [myGetMoney], [book_img], [MarkSixBetID], [MarkSixWin]) VALUES (N'21', N'1000', N'305', N'测试测试测试测试', N'超级管理员', N'1000', N'测试测试测试测试测试测试测试测试测试', N'0', N'1', N'2024-07-31 15:29:00', N'0', N'0', N'0', N'2024-07-31 15:28:55.577', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'', N'0', N'0')
 GO
 
 SET IDENTITY_INSERT [dbo].[wap_bbs] OFF
@@ -9809,178 +7579,13 @@ GO
 SET IDENTITY_INSERT [dbo].[wap_book] ON
 GO
 
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'1', N'102', N'24', N'12078期开奖', NULL, N'双色球', N'双色球078期开奖号码为：红球：08 15 22 24 28 33，蓝球：12。本期销量为339,534,852元，头奖开出6注866万，二等奖开出90注，单注奖金为366954元，计奖结束后，奖池余额为4.6亿元。', N'0', N'0', N'2012-07-06 15:19:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'2', N'102', N'24', N'12077期开奖', NULL, N'双色球', N'双色球077期开奖号码为：红球：02 04 13 18 26 28，蓝球：12。红球号码特征为：大小比3:3，奇偶比1:5，尾开23468，和值为91，跨度为26；蓝球开12。', N'0', N'0', N'2012-07-06 15:21:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'3', N'102', N'24', N'12076期开奖', NULL, N'双色球', N'北京时间2012年07月01日晚，福利彩票双色球第2012076期开奖，当期开出的奖号为：红球 11 18 22 27 29 30；蓝球 15。本期红球大小比5:1，奇偶比3:3，尾开012789，和值为137，跨度为19；蓝球开大奇数。一等奖开出3注，每注奖金1000万，二等奖81注，每注358552元。全国投注总额为3.79亿，计奖结束后，奖池余额4.17亿。', N'0', N'0', N'2012-07-06 15:22:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'4', N'102', N'24', N'12075期开奖', NULL, N'双色球', N'双色球075期开奖号码为：红球：04 06 22 23 29 32 蓝球：11。红球号码特征为：大小比4:2，奇偶比2:4，尾开23469，和值为116，跨度为28；蓝球开大奇数', N'0', N'0', N'2012-07-06 15:22:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'5', N'102', N'24', N'12075期开奖', NULL, N'双色球', N'双色球075期开奖号码为：红球：04 06 22 23 29 32 蓝球：11。红球号码特征为：大小比4:2，奇偶比2:4，尾开23469，和值为116，跨度为28；蓝球开大奇数', N'0', N'1', N'2012-07-06 15:23:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'6', N'102', N'24', N'12074期开奖', NULL, N'双色球', N'双色球074期开奖号码为：红球：15 16 18 19 28 32 蓝球：08。红球号码特征为：大小比4:2，奇偶比2:4，尾开25689，和值为128，跨度为17；蓝球开小偶数。', N'0', N'1', N'2012-07-06 15:23:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'7', N'110', N'60', N'《吉尔斯的探险》新手入门评测', N'网络', N'网络', N'《吉尔斯的探险》（Gees）改编自法国动漫作品“Les Gees”，在游戏中，你将体验法国式的漫画风格和幽默，就连游戏中的界面都是法文的，虽然我不懂法文，不过还好游戏中常用的单词不多，并且和英文还有那么几分相似，再加上游戏中的动画并没有任何对话和文字，所以对于体验游戏也没什么阻碍。 ', N'0', N'0', N'2012-07-06 17:04:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'8', N'110', N'60', N'《口袋商业街_Small Street》经典休闲模拟游戏', N'网络', N'网络', N'操控一切，成为小人王国中的商界大亨。以经营临街商铺为主题的《口袋商业街》，是一款与传统有别的模拟经营作品，采用较为鲜见的横版视觉和2D卡通画风，少了一份正经，多了几分休闲。 ', N'0', N'0', N'2012-07-06 17:08:00', N'0', N'0', N'0', N'0', N'0', N'0', NULL, NULL, N'', N'', NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'9', N'110', N'60', N'《二战风云》全球第一军事题材策略网游大作', N'网络', N'网络', N'随着Android版《二战风云》2012全新版本刚一上线，一批批的战争狂人便迅速涌入游戏。一时间战火的硝烟四起，《二战风云》是一款大型军事题材RPG网页游戏，游戏将带领玩家回到战火纷飞的第二次世界大战年代。玩家将扮演一位军队统帅，占据一座城市并在战乱世界中寻求生存和发展，并最终建立稳定而强大的势力政权。玩家需要对城市进行管理，建立生产、科研、贸易等体系，采用军事或外交手段与其他玩家交互，并从中获得游戏乐趣。 ', N'0', N'0', N'2012-07-06 17:08:00', N'0', N'0', N'0', N'0', N'0', N'0', NULL, NULL, N'', N'', NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'10', N'110', N'60', N'《忘仙OL》公测深度图文评测', N'网络', N'网络', N'【基本信息】[br][br]评测标题：《忘仙OL》公测深度图文评测[br][br]评测机型：SONY LT26i[br][br]系统版本：Android 2.3.7[br][br]分辨率：1280*720[br][br]游戏状态：公测[br][br]接入点：wifi[br][br]评测时间：10+小时[br][br]游戏印象：从前身《灭世》的出现就开始关注这款游戏了，一直认为从画面到操作，它都有着非常棒的体验；但游戏是否能持续更久，是要取决于后期的平衡性和黑的程度了。[br][br]优点：[br][br]1、画面，直接抓住眼球；[br][br]2、难得好的背景音乐；[br][br]3、操作，简单直接；[br][br]4、庞大的系统（下面会细说）；[br][br]5、游戏引导出色；[br][br]6、便利的社交系统。[br][br]缺点：[br][br]1、流量消耗大；[br][br]2、手机发热的问题严重；[br][br]2、收费点太多；[br][br]3、装备合成过于繁琐；[br][br]4、服务器太少，排队时间久。 ', N'0', N'0', N'2012-07-06 17:05:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'11', N'110', N'60', N'《恶魔来了》评测：缤纷成就战意浓', N'网络', N'网络', N'一、游戏信息[br][br]游戏名称：《恶魔来了》(killdevils)[br][br]游戏版本：1.11[br][br]游戏大小：19.2MB[br][br]开发者：Sun Ground[br][br]游戏类型：塔防游戏[br][br]适用固件：Android 2.1及以上[br][br]官方QQ群：242322326[br][br]游戏评分：9.5分[br][br]二、游戏介绍[br][br]《恶魔来了》是由Sun Ground（南京光辉互动）开发的一款安卓平台塔防游戏，该作突破了一般塔防游戏通过不停建造建筑物来抵御怪物的传统游戏模式，采用唯一魔法塔的方式，游戏中我们只需要操作一个魔法塔就可以抵御来自恶魔的一波又一波攻击。目前游戏已升级至1.11版本，增加了本地成就功能，可实时查询成就动态。 [br]', N'0', N'1', N'2012-07-06 17:06:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'12', N'104', N'58', N'中央组织部《组工通讯》：安徽宣城市着力构建来自基层一线干部培养选拔链', NULL, NULL, N'发布时间：2012-07-09[br][br][br]　　编者按：近日，中共中央组织部《组工通讯》第95期加编者按刊发了我市从基层一线培养选拔干部的做法。指出，安徽宣城市认真贯彻党的十七大和十七届四中全会精神，围绕地方领导班子换届，大力推进干部人事制度改革，为选好干部、配强班子，提高选人用人公信度提供了有力的制度保证。现予全文刊发:[br][br]    　安徽宣城市坚持从基层选拔干部、在基层锻炼干部的用人导向，鼓励年轻干部“走下去”，注重把优秀基层干部“选上来”，着力构建来自基层一线的干部培养选拔链。[br][br][br][br]　　抓住源头培养，干部到基层锻炼。开展“千名干部下基层”活动,抽调1177名具有基层和群众工作经验的优秀干部，组成122个工作队，深入村组一线宣传政策，排查调处各类矛盾纠纷，引导干部在一线掌握民情、落实政策、化解矛盾、转变作风，不断提升处理复杂问题能力。先后从市直单位选派60余名优秀县处级后备干部到乡镇（街道）、县（市、区）直单位挂职任职，从住建系统选派24名优秀年轻干部到乡镇担任村镇规划建设指导员。今年，采取公开推荐、择优遴选办法，从市直单位选派7名优秀年轻干部到乡镇（街道）任乡镇长（主任）。分5批选派908名优秀年轻党员干部到贫困村、后进村和示范村、镇任职。加强选调生培养锻炼，制定出台市直机关公开遴选选调生暂行办法，规定选调生在基层锻炼不少于3年，经历岗位不少于3个。组织实施大学生村官“带贷款下乡进村”活动，帮助那些有创业意愿和能力的大学生村官贷款或协调贷款360多万元，为他们尽快成为带头致富、带领群众致富先锋创造条件。[br][br][br][br]　　加大使用力度，干部从基层选拔。结合县乡换届，采取直接推荐、大评委制面试、全委（扩大）会议竞职演说、差额票决等方式，选拔有丰富基层工作经验的优秀干部充实到县乡党政领导班子。目前，县（市、区）委领导班子成员中具有乡镇党政正职工作经历的占45%，新提拔的党委班子成员均有从事经济工作经历，乡镇党委书记中具有乡镇、街道工作经历的占97%。先后选拔500余名经过基层实践锻炼的优秀干部到重要岗位任职，拿出190个乡科级职位、40个县级职位面向全国公开选拔，部分职位面向乡镇党委书记、优秀村干部和大学生村官定向公选。今年，拿出市环保局副局长等7个市直单位副处级职位，定向从乡镇（街道）正职中公开选拔。[br][br][br][br]　　落实政策措施，干部在基层成长。先后拿出125个职位定向招录服务基层项目人员，24个职位定向招录优秀村干部，市直单位除法检系统外80%以上的职位要求具有2年以上基层工作经历，进一步树立重视基层的用人导向。从市直机关和事业单位拿出150多个职位，面向县（市、区）、乡镇（街道）工作满3年的工作人员选调、选聘。做好首批45名大学生村官期满有序流动工作，通过招录选调生、公务员，免试进入县乡事业单位等方式全部实现就业。大力推行“一定三有”，提高村干部激励保障水平，全市村干部年均报酬达到1万元以上。（关中建）[br]', N'0', N'0', N'2012-07-09 15:12:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'13', N'104', N'58', N'开创农村党建新局面——我市农村基层党建工作综述', NULL, NULL, N'发布时间：2012-07-05[br][br][br]　　近年来，我市紧紧围绕农村发展、农业增效、农民增收，着眼于提高党的执政能力、保持党员先进性，扎实推进农村基层党组织建设，为建设富裕、文明、和谐、秀美的社会主义新农村提供坚强的组织保证。 [br][br][br][br]　　创新组织设置  健全组织体系[br][br][br][br]　　按照便于党员活动、党组织发挥作用的要求，依托农民专业合作社、专业协会和产业链，建立专业党支部；依托农村社区，建立社区党支部；依托驻外联络机构，在外出务工经商人员相对集中点，建立流动党组织；依托能人党员，建立特色党支部或党小组。目前，全市737个村中有564个村设立了党总支（党委），设置专业党组织281个，农村社区党组织97个，流动党组织66个，特色党组织168个。[br][br][br][br]　　整顿建设后进村党组织。按照村级组织软弱涣散、党务村务管理混乱、经济社会发展滞后、矛盾问题比较突出等四个类型，全市研究确定了73个需要整顿的后进村。针对后进村存在的问题，制定了具体的整顿方案，采取领导干部联系、部门包村、干部驻村等措施，对后进村进行整顿转化。[br][br][br][br]　　改进选任方式  加强乡村领导班子建设[br][br][br][br]　　以乡镇党委换届契机，推进干部人事制度改革。对领导班子人选进行全额定向民主推荐、民主测评、民主评议，坚持和完善差额考察、延伸考察，积极稳妥地在广德县东亭乡开展了公推直选试点工作。换届后，乡镇党委领导班子平均年龄为37岁，大学本科以上学历占50%，大专学历占48.9%。[br][br][br][br]　　在村“两委”换届选举中，以优化结构、配强班子为目的，着重把好人选条件关、操作程序关和换届风气关，选配了一批“一好双强”型村党组织书记。换届后，全市村“两委”干部3693人，其中村党组织书记、村委会主任“一人兼”的村占25.7%；平均年龄为44.2岁，大专以上学历占21.7%。 [br][br][br][br]　　加强教育培训  增强农村党员队伍生机活力[br][br][br][br]　　加强经常性教育。每年年初，在全市农村党员干部中开展“小学教”活动。全面实施农村党员干部“素质提升”工程，每年集中对1万名左右农村党员进行“双技”培训。大力推进党员干部远程教育，充分利用远程教育终端站点和“万村网页”开展教育培训，拓展了党员学习教育渠道。[br][br][br][br]　　深化载体建设。着力构建党员中心户、为民服务全程代理、“双培双带”先锋工程、无职党员设岗定责、流动党员“双向带动”、全员承诺等载体，让骨干党员有舞台、能人党员有作为、无职党员有责任、流动党员有贡献、全体党员有动力。据统计，去年以来全市6108名党员中心户开展学习培训、联系服务群众等各项活动5.3万次；参加“双带”党员干部6.3万人，带动农户20余万户；有6.5万名无职党员认岗尽责；流动党员引进项目170多个，资金达2.6亿元，带动近8万多人到苏、浙、沪等地务工经商；近10万多名农村党员承诺为群众办实事33万余件。 [br][br][br][br]　　强化工作责任  完善激励保障机制[br][br][br][br]　　为切实强化各级党组织书记抓基层党建工作的责任，市、县、乡分别对县、乡、村党组织书记，分层进行述职评议、实地考评和综合评价，进一步增强各级党组织书记的管党意识，激发了各级党组织创先争优的内生动力，形成了责任明确、领导有力、运转有序、保障到位的工作机制。[br][br][br][br]　　建立健全农村基层干部激励保障机制。按照“一定三有”要求，建立了村（社区）干部“三位一体”激励保障机制，全市村干部平均年报酬达14400元以上，并按季或按月打卡发放。积极开展从优秀村干部中招录乡镇公务员试点工作，2008年以来，有14名村干部招录为乡镇公务员，有2名村干部和2名大学生村官通过公选进入乡镇领导岗位。 [br][br][br][br]　　创新工作理念  构建城乡统筹基层党建新格局[br][br][br][br]　　建立健全城乡一体流动党员动态管理机制。集中开展了流动党员“大走访”活动，采取实地走访、普遍查访、电函信访、上门拜访等方式，对流动党组织和流动党员进行走访，激励流动党员立足岗位、创先争优。[br][br][br][br]　　深入开展城乡基层党组织结对共建工作。组织全市923个党政机关、企事业单位与739个村和124个社区结成对子，实现了结对工作全覆盖，城乡党建同促进。广泛开展“六个一”活动，充分发挥城市党组织在资金、项目、人才、信息、技术等方面优势，帮助农村抓发展。2011年以来，各级党政机关、企事业单位共走访慰问困难党员、群众6300多人，协调、解决资金3400多万元，为结对村办实事2900多件。[br][br][br][br]　　为解决部分村党组织缺乏“领头雁”、组织建设相对薄弱等问题，连续五批共选派908名优秀年轻党员干部到相对贫困村、后进村和新农村建设示范村任职。我市连续三次荣获全省选派工作先进市称号。从2008年开始，连续四批选聘255名高校毕业生到村担任村党组织书记助理或村委会主任助理，为新农村建设注入新的活力，提供了人才支持。（靳玮）[br][br]', N'0', N'0', N'2012-07-09 15:14:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'14', N'104', N'58', N'宣州区沈村镇女村干部喜获“种子计划”金奖x', NULL, NULL, N'　　在由省市妇联组织的李嘉诚项目资金——启璞计划中，来自宣州区沈村镇丁店村的陈守梅，凭借自己的真才实学，通过层层选拔、专家评价和公开投票票决，力压群芳，获得了 “种子计划”金奖，成为安徽省江南地区唯一获此殊荣的妇女干部。[br][br][br][br]　　启璞计划试点项目是推进村“两委”女干部能力建设的创新之举，由李嘉诚基金会出资，全国妇联负责组织实施，于2010年起在我省进行试点，对全省4305名村“两委”正副职女干部开展了全员培训。参加培训的女干部所学到的知识好比“种子”，将这些“种子”带回所在地区并传播下去，生根发芽，运用于实际，惠及广大人民群众。学员要根据本地实际，运用所学，写出一份详细的评估项目报告书，并对报告书做出详细解释，在经过答辩、学员提问、投票等环节后，选出最优秀的报告书评选出金银奖，全国共计产生27名金奖，25名银奖。沈村镇丁店村村委会主任陈守梅所作的《计划生育二女户特困生帮扶计划》报告书，内容翔实，切合农村工作实际，并有实例相辅，经过层层评选，在本次“种子计划”的角逐中脱颖而出，成为安徽省7名金奖获得者中的一员，更是我省江南地区唯一获得者，为我市、我区获得了荣誉。（谢祯莉）[br]', N'0', N'0', N'2012-07-09 15:15:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'15', N'104', N'58', N'旌德县蔡家桥镇老党员集中观看县“七一”专题节目', NULL, NULL, N'　　为纪念建党91周年，7月6日，旌德蔡家桥镇老干支部组织党员集中观看县党建电视栏目《旌旗飘扬》推出的两部“七一”专题节目。[br][br][br][br]　　在镇大会议室，老干支部的党员们通过投影仪，观看《建设美好安徽的坚强保证----不断创新发展的安徽组织工作》专题节目。观看节目后，大家畅谈自己的心得和体会。纷纷表示，近年来，在省委的正确领导下，我省组织工作不断创新，为建设美好安徽提供了坚强的组织保证。[br][br][br][br]　　在观看《灿若晚霞》节目后，老干支部书记李家起说，叶光华同志是我支部已故离休老干部。他离休后仍积极工作，关心下一代的健康成长，先后荣获市关心下一代工作先进个人、省保护未成年人杰出公民、省老干部先进个人等称号，是我们学习的楷模。现在他虽然离开了我们，但是他的音容笑貌仍然留在我们的心中，激励着我们为蔡家桥镇的经济和社会发展发挥自己的余热。（汪小宏）[br][br]', N'0', N'1', N'2012-07-09 15:17:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'16', N'104', N'58', N'人民网评：党委换届一年间 领导班子实现平稳过渡', NULL, NULL, N'发布时间：2012-07-04[br]　　伴随着蛟龙深潜大洋，神九顺利返回，中国共产党迎来了91岁的生日。[br][br][br]    一年前，在建党90周年纪念大会上，胡锦涛总书记曾说，回顾90年中国的发展进步，可以得出一个基本结论：办好中国的事情，关键在党。而党不是一个空洞的名词，中国共产党之所以能够在90余年间筚路蓝缕，一路奋进，到今天带领中国跻身世界第二大经济体，依靠的是广大党员特别是党员领导干部的引领与才干。党员领导干部的能力与素质，直接决定着党的执政水平，影响着中国社会的发展方向。[br][br][br][br][br]    一年间，党的建设历经了一系列重大的活动。从去年开始，全国陆续开始了省市县乡四级党委换届，涉及31个省区市、361个市、2811个县、34171个乡镇，干部总规模达到3千万。到现在，各地的换届已接近尾声，顺利实现了领导班子的代际更替和平稳过渡，这无疑为党的人才梯队建设、为中国的经济社会平稳发展奠定了坚实的基础。[br][br][br][br][br]    换届之际，一批德才兼备，年富力强的干部脱颖而出，走上了新的领导岗位，“新班子”成为热门关键词。他们树立什么样的作风，展示什么样的形象，有什么样的作为，干部群众寄予厚望。对于新任的党员领导干部，五年任期，既是为党分忧、为民造福的宝贵机会，也是施展才华、成就事业的广阔舞台。[br][br][br][br][br]    当前，我国正处于“十二五”开局之际，面临战略机遇期与矛盾凸显期交织的复杂局面：面对资源环境的压力，如何加快转变经济发展方式？面对体制机制、利益格局的调整，如何兼顾各方利益？面对日趋复杂的社会管理，如何化解矛盾，维护稳定与和谐？面对社情民意表达方式和渠道的日益多元，如何回应人民群众的利益关切？新任的领导干部，肩负着推动科学发展、全面建设小康社会的历史重任。面对种种新任务和新挑战，新班子理应要有新作为，通过扎实工作打开新局面，要敢于负责、勇于担当，无私无畏、满怀激情地履职尽责。[br][br][br][br][br]    与此同时，新任领导干部也要妥善处理继承与发展的关系。接好棒，不仅在于出新求变，也在于处理好前任的“旧事”。一个地方的经济社会发展，往往具有连续性，需要数年乃至数十年持之以恒的努力。前任做得对的，要继承和发展，前任留下的问题，要下功夫着力解决，切忌全盘否定、撒手不管的“新官不理旧事”心态。唯有如此，才能树立威信，才能保证事业的稳定可持续。[br][br][br][br][br]    值得注意的是，新任的党员领导干部特别是高级领导干部，大都接受过高等教育，具备较强的学习能力，同时又多具备基层等多个工作岗位的历练，具备较强工作能力。这样的特点，表明了当下党选拔人才的导向和标准，这也是学习型党组织、创先争优活动开展得如火如荼的重要原因，唯有加强党员领导干部的学习能力，加强基层党组织的凝聚力和战斗力，才能培养和选拔出治理人才，党的事业才能兴旺发达。[br][br][br][br][br]    再过一段时间，我们即将迎来党的十八大，这是对全党全国具有重大历史意义的重要会议。陆续走上新的工作岗位的党员领导干部，当以扎实苦干的精神开创政通人和、安定团结的良好局面，以优异成绩迎接党的十八大胜利召开！[br][br][br]', N'0', N'1', N'2012-07-09 15:18:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'17', N'104', N'58', N'市政务服务中心：组织党员听党课 主题教育再推进', NULL, NULL, N'[br]发布时间：2012-07-09[br][br][br]　　为进一步推进“保持党的纯洁性，迎接党的十八大”主题教育实践活动，提升政务服务中心党员干部思想理论水平，7月6日下午，市政务服务中心组织党员聆听市委党校教育长李绪文教授作的题为《关于保持党的纯洁性的几点学习体会和思考》专题讲座。[br][br][br]　　李绪文教授从党的纯洁性遇到的挑战、党的纯洁性主要要求、保持党的纯洁性的重要措施三个方面进行授课，详实丰富的事实依据、生动典型的客观事例、深入浅出的分析，让大家深受启发和教育，掌声不时地从会场响起。[br][br][br][br]　　课后，党员们纷纷表示受益匪浅，认为上这样的党课很有意义，都表示以后会更加坚定理想信念，增强党性修养，保持党的纯洁性，充分发挥党员干部的先锋模范作用，立足本职工作，为推进宣城科学发展、跨越崛起提供更加良好的政务服务环境。（余正华）[br][br]', N'0', N'0', N'2012-07-09 15:20:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'18', N'107', N'123', N'第1次获得“中国最受尊敬企业”', N'集团', N'集团', N'第八次获得“中国最受尊敬企业”', N'0', N'1', N'2012-07-10 17:44:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'19', N'107', N'123', N'第2次获得“中国最受尊敬企业”', N'集团', N'集团', N'第八次获得“中国最受尊敬企业”', N'0', N'0', N'2012-07-10 17:44:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'20', N'107', N'123', N'第3次获得“中国最受尊敬企业”', N'集团', N'集团', N'第八次获得“中国最受尊敬企业”', N'0', N'0', N'2012-07-10 17:44:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'21', N'107', N'123', N'第4次获得“中国最受尊敬企业”', N'集团', N'集团', N'第八次获得“中国最受尊敬企业”', N'0', N'1', N'2012-07-10 17:44:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'22', N'107', N'123', N'第5次获得“中国最受尊敬企业”', N'集团', N'集团', N'第八次获得“中国最受尊敬企业”', N'0', N'1', N'2012-07-10 17:44:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'24', N'111', N'128', N'尊贵系列', N'尊贵系列', N'尊贵系列', N'[center][img]/NetImages/model/model11/yf1.jpg[/img][br]尊贵系列[br][br][img]/NetImages/model/model11/yf2.jpg[/img][br]尊贵系列[br][br][img]/NetImages/model/model11/yf5.jpg[/img][br]尊贵系列[br][br][img]/NetImages/model/model11/yf4.jpg[/img][br]尊贵系列[br][next]', N'0', N'12', N'2012-07-28 15:32:00', N'0', N'0', N'0', N'0', N'0', N'0', N'111', NULL, N'', N'尊贵系列|尊贵系列|尊贵系列|', N'upload/111/2012/07/27/111_1726360.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'25', N'111', N'128', N'婚庆系列', N'婚庆系列', N'婚庆系列', N'[center][img]/NetImages/model/model11/yf1.jpg[/img][br]婚庆系列[br][br][img]/NetImages/model/model11/yf2.jpg[/img][br]婚庆系列[br][br][img]/NetImages/model/model11/yf5.jpg[/img][br]婚庆系列[br][br][img]/NetImages/model/model11/yf4.jpg[/img][br]婚庆系列[br][next]', N'0', N'7', N'2012-07-28 15:32:00', N'0', N'0', N'0', N'0', N'0', N'0', N'111', NULL, N'', N'', N'upload/111/2012/07/27/111_1729390.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'26', N'111', N'128', N'商务系列', N'商务系列', N'商务系列', N'[center][img]/NetImages/model/model11/yf1.jpg[/img][br]商务系列[br][br][img]/NetImages/model/model11/yf2.jpg[/img][br]商务系列[br][br][img]/NetImages/model/model11/yf5.jpg[/img][br]商务系列[br][br][img]/NetImages/model/model11/yf4.jpg[/img][br]商务系列[br][next]', N'0', N'31', N'2012-07-28 15:31:00', N'0', N'0', N'0', N'0', N'0', N'0', N'111', NULL, N'', N'', N'upload/111/2012/07/27/111_1729500.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'27', N'111', N'128', N'时尚系列', N'时尚系列', N'时尚系列', N'[center][img]/NetImages/model/model11/yf1.jpg[/img][br]时尚系列[br][br][img]/NetImages/model/model11/yf2.jpg[/img][br]时尚系列[br][br][img]/NetImages/model/model11/yf5.jpg[/img][br]时尚系列[br][br][img]/NetImages/model/model11/yf4.jpg[/img][br]时尚系列[br][next]', N'0', N'93', N'2012-07-28 15:31:00', N'0', N'0', N'0', N'0', N'0', N'0', N'111', NULL, N'', N'', N'upload/111/2012/07/27/111_1730010.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'28', N'111', N'127', N'柯林企业版', N'柯林企业版', N'柯林企业版', N'　　柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版柯林企业版', N'0', N'3', N'2012-07-31 11:05:00', N'0', N'0', N'0', N'0', N'0', N'0', N'111', NULL, N'', N'', N'upload/111/2012/07/27/111_1816460.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'29', N'111', N'127', N'柯林标准版', N'柯林标准版', N'柯林标准版', N'　　柯林标准版柯林标准版柯林标准版柯林标准版柯林标准版柯林标准版', N'0', N'8', N'2012-07-31 11:04:00', N'0', N'0', N'0', N'0', N'0', N'0', N'111', NULL, N'', N'', N'upload/111/2012/07/27/111_1817190.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'30', N'111', N'127', N'柯林个人版', N'柯林个人版', N'柯林个人版', N'　　柯林标准版柯林标准版柯林标准版柯林标准版柯林标准版柯林标准版', N'0', N'44', N'2012-07-31 11:04:00', N'0', N'0', N'0', N'0', N'0', N'0', N'111', NULL, N'', N'', N'upload/111/2012/07/27/111_1817390.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'31', N'112', N'132', N'奔驰G500报价', N'奔驰G500报价', N'奔驰G500报价', N'奔驰G500报价', N'0', N'0', N'2012-07-28 16:08:00', N'0', N'0', N'0', N'0', N'0', NULL, N'112', NULL, N'', N'', N'upload/112/2012/07/28/112_1607210.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'32', N'112', N'132', N'奔驰G500内饰', N'奔驰G500内饰', N'奔驰G500内饰', N'奔驰G500内饰', N'0', N'4', N'2012-07-28 16:08:00', N'0', N'0', N'0', N'0', N'0', NULL, N'112', NULL, N'', N'', N'upload/112/2012/07/28/112_1607340.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'33', N'112', N'132', N'奔驰G500外观', N'奔驰G500外观', N'奔驰G500外观', N'奔驰G500外观', N'0', N'3', N'2012-07-28 16:08:00', N'0', N'0', N'0', N'0', N'0', NULL, N'112', NULL, N'', N'', N'upload/112/2012/07/28/112_1607460.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'34', N'112', N'132', N'奔驰G500性能', N'奔驰G500性能', N'奔驰G500性能', N'奔驰G500性能', N'0', N'3', N'2012-07-28 16:08:00', N'0', N'0', N'0', N'0', N'0', NULL, N'112', NULL, N'', N'', N'upload/112/2012/07/28/112_1607570.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'35', N'112', N'131', N'智者之选—省20万！', N'智者之选', N'智者之选', N'智者之选—省20万！5月25-27日奔驰零公里试驾车3台任选，参与本次活动车型是奔驰SLK/E300L.', N'0', N'5', N'2012-07-28 16:29:00', N'0', N'0', N'0', N'0', N'0', NULL, N'112', NULL, N'', N'', N'upload/112/2012/07/28/112_1628310.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'36', N'112', N'131', N'奔驰夏季保养活动', N'奔驰夏季保养活动', N'奔驰夏季保养活动', N'智者之选—省20万！5月25-27日奔驰零公里试驾车3台任选，参与本次活动车型是奔驰SLK/E300L.', N'0', N'4', N'2012-07-28 16:29:00', N'0', N'0', N'0', N'0', N'0', NULL, N'112', NULL, N'', N'', N'upload/112/2012/07/28/112_1628580.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'37', N'113', N'136', N'生物有机肥', N'生物有机肥', N'生物有机肥', N'生物有机肥生物有机肥生物有机肥生物有机肥生物有机肥生物有机肥生物有机肥生物有机肥生物有机肥生物有机肥', N'0', N'5', N'2012-07-28 18:37:00', N'0', N'0', N'0', N'0', N'0', NULL, N'113', NULL, N'', N'', N'upload/113/2012/07/28/113_1836060.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'38', N'113', N'136', N'胶原蛋白护肤液', N'胶原蛋白护肤液', N'胶原蛋白护肤液', N'胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液胶原蛋白护肤液', N'0', N'22', N'2012-07-28 18:37:00', N'0', N'0', N'0', N'0', N'0', NULL, N'113', NULL, N'', N'', N'upload/113/2012/07/28/113_1836360.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'39', N'113', N'136', N'智者之选—省20万！', N'智者之选—省20万！', N'智者之选—省20万！', N'智者之选—省20万！智者之选—省20万！智者之选—省20万！智者之选—省20万！智者之选—省20万！智者之选—省20万！智者之选—省20万！智者之选—省20万！智者之选—省20万！智者之选—省20万！智者之选—省20万！智者之选—省20万！', N'0', N'33', N'2012-07-28 18:38:00', N'0', N'0', N'0', N'0', N'0', NULL, N'113', NULL, N'', N'', N'upload/113/2012/07/28/113_1837160.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'40', N'113', N'136', N'夏季保养活动', N'夏季保养活动', N'夏季保养活动', N'夏季保养活动夏季保养活动夏季保养活动夏季保养活动夏季保养活动夏季保养活动夏季保养活动夏季保养活动夏季保养活动夏季保养活动夏季保养活动夏季保养活动夏季保养活动夏季保养活动', N'0', N'5', N'2012-07-28 18:38:00', N'0', N'0', N'0', N'0', N'0', NULL, N'113', NULL, N'', N'', N'upload/113/2012/07/28/113_1837370.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'41', N'113', N'135', N'* 《人民日报》', N'* 《人民日报》', N'* 《人民日报》', N'* 《人民日报》', N'0', N'0', N'2012-07-28 19:00:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'42', N'113', N'135', N'* 《人民日报》2', N'* 《人民日报》', N'* 《人民日报》', N'* 《人民日报》', N'0', N'2', N'2012-07-28 19:00:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'43', N'113', N'135', N'* 《人民日报》3', N'* 《人民日报》', N'* 《人民日报》', N'* 《人民日报》', N'0', N'0', N'2012-07-28 19:00:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'44', N'114', N'140', N'标准版-柯林自助建站系统', N'标准版-柯林自助建站系统', N'标准版-柯林自助建站系统', N'标准版-柯林自助建站系统标准版-柯林自助建站系统标准版-柯林自助建站系统标准版-柯林自助建站系统', N'0', N'9', N'2012-07-29 10:38:00', N'0', N'0', N'0', N'1', N'0', NULL, N'114', NULL, N'upload/114/2012/07/29/114_1037541.gif|', N'|', N'upload/114/2012/07/29/114_1037540.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'45', N'114', N'140', N'企业版-柯林自助建站系统', N'企业版-柯林自助建站系统', N'企业版-柯林自助建站系统', N'企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统', N'0', N'10', N'2012-07-29 10:39:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/29/114_1038181.gif|', N'|', N'upload/114/2012/07/29/114_1038180.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'46', N'114', N'140', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统', N'0', N'12', N'2012-07-29 10:39:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/29/114_1038441.gif|', N'|', N'upload/114/2012/07/29/114_1038440.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'47', N'114', N'140', N'开发版-柯林自助建站系统', N'开发版-柯林自助建站系统', N'开发版-柯林自助建站系统', N'开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统', N'0', N'7', N'2012-07-29 10:39:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/29/114_1039061.gif|', N'|', N'upload/114/2012/07/29/114_1039060.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'49', N'115', N'143', N'柯林软件1', N'柯林软件1', N'柯林软件1', N'　　柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件', N'0', N'17', N'2012-07-29 17:00:00', N'0', N'0', N'0', N'0', N'0', N'0', N'115', NULL, N'upload/115/2012/07/29/115_1658411.gif|', N'　　柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件|', N'upload/115/2012/07/29/115_1658410.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'50', N'115', N'143', N'柯林软件2', N'柯林软件2', N'柯林软件2', N'　　柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件', N'0', N'16', N'2012-07-29 17:00:00', N'0', N'0', N'0', N'0', N'0', NULL, N'115', NULL, N'upload/115/2012/07/29/115_1659191.gif|', N'|', N'upload/115/2012/07/29/115_1659190.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'51', N'115', N'143', N'柯林软件3', N'柯林软件3', N'柯林软件3', N'　　柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件柯林软件', N'0', N'12', N'2012-07-29 17:00:00', N'0', N'0', N'0', N'0', N'0', NULL, N'115', NULL, N'upload/115/2012/07/29/115_1659361.gif|', N'|', N'upload/115/2012/07/29/115_1659360.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'52', N'116', N'148', N'柯林企业版', N'柯林企业版', N'柯林企业版', N'柯林企业版', N'0', N'10', N'2012-07-30 09:55:00', N'0', N'0', N'0', N'0', N'0', NULL, N'116', NULL, N'upload/116/2012/07/30/116_0954391.gif|', N'|', N'upload/116/2012/07/30/116_0954380.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'53', N'116', N'148', N'柯林标准版', N'柯林标准版', N'柯林标准版', N'柯林标准版柯林标准版柯林标准版柯林标准版柯林标准版柯林标准版柯林标准版柯林标准版柯林标准版柯林标准版', N'0', N'3', N'2012-07-30 09:56:00', N'0', N'0', N'0', N'0', N'0', NULL, N'116', NULL, N'upload/116/2012/07/30/116_0955341.gif|', N'|', N'upload/116/2012/07/30/116_0955340.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'54', N'116', N'148', N'柯林开发版', N'柯林开发版', N'柯林开发版', N'柯林开发版柯林开发版柯林开发版柯林开发版柯林开发版柯林开发版柯林开发版柯林开发版柯林开发版柯林开发版柯林开发版柯林开发版', N'0', N'8', N'2012-07-30 09:58:00', N'0', N'0', N'0', N'0', N'0', NULL, N'116', NULL, N'upload/116/2012/07/30/116_0957331.gif|', N'|', N'upload/116/2012/07/30/116_0957330.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'55', N'114', N'139', N'开发版-柯林自助建站系统', N'开发版-柯林自助建站系统', N'开发版-柯林自助建站系统', N'　　开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-', N'0', N'1', N'2012-07-31 11:17:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/31/114_1116301.gif|', N'|', N'upload/114/2012/07/31/114_1116300.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'56', N'114', N'139', N'企业版-柯林自助建站系统', N'企业版-柯林自助建站系统', N'企业版-柯林自助建站系统', N'　　企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统', N'0', N'2', N'2012-07-31 11:17:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/31/114_1116571.gif|', N'|', N'upload/114/2012/07/31/114_1116560.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'57', N'114', N'139', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'　　个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统', N'0', N'2', N'2012-07-31 11:17:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/31/114_1117131.gif|', N'|', N'upload/114/2012/07/31/114_1117130.gif')
-GO
-
 INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'58', N'1000', N'156', N'标准版-柯林自助建站系统', N'标准版-柯林自助建站系统', N'标准版-柯林自助建站系统', N'标准版-柯林自助建站系统标准版-柯林自助建站系统标准版-柯林自助建站系统标准版-柯林自助建站系统', N'0', N'12', N'2012-07-29 10:38:00', N'0', N'0', N'0', N'1', N'0', NULL, N'114', NULL, N'upload/114/2012/07/29/114_1037541.gif|', N'|', N'upload/114/2012/07/29/114_1037540.gif')
 GO
 
 INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'59', N'1000', N'156', N'企业版-柯林自助建站系统', N'企业版-柯林自助建站系统', N'企业版-柯林自助建站系统', N'企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统', N'0', N'11', N'2012-07-29 10:39:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/29/114_1038181.gif|', N'|', N'upload/114/2012/07/29/114_1038180.gif')
 GO
 
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'60', N'1000', N'156', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统', N'0', N'14', N'2012-07-29 10:39:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/29/114_1038441.gif|', N'|', N'upload/114/2012/07/29/114_1038440.gif')
+INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'60', N'1000', N'156', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统', N'0', N'15', N'2012-07-29 10:39:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/29/114_1038441.gif|', N'|', N'upload/114/2012/07/29/114_1038440.gif')
 GO
 
 INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'61', N'1000', N'156', N'开发版-柯林自助建站系统', N'开发版-柯林自助建站系统', N'开发版-柯林自助建站系统', N'开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统开发版-柯林自助建站系统', N'0', N'10', N'2012-07-29 10:39:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/29/114_1039061.gif|', N'|', N'upload/114/2012/07/29/114_1039060.gif')
@@ -9992,97 +7597,7 @@ GO
 INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'63', N'1000', N'155', N'企业版-柯林自助建站系统', N'企业版-柯林自助建站系统', N'企业版-柯林自助建站系统', N'　　企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统企业版-柯林自助建站系统', N'0', N'8', N'2012-07-31 11:17:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/31/114_1116571.gif|', N'|', N'upload/114/2012/07/31/114_1116560.gif')
 GO
 
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'64', N'1000', N'155', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'　　个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统', N'0', N'6', N'2012-07-31 11:17:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/31/114_1117131.gif|', N'|', N'upload/114/2012/07/31/114_1117130.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'65', N'119', N'187', N'测试房地产开发有限公司', N'测试房地产开发有限公司', N'测试房地产开发有限公司', N'测试房地产开发有限公司', N'0', N'0', N'2012-12-02 18:47:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'66', N'119', N'187', N'测试房地产开发有限公司2', N'测试房地产开发有限公司', N'测试房地产开发有限公司', N'测试房地产开发有限公司', N'0', N'0', N'2012-12-02 18:47:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'67', N'119', N'187', N'测试房地产开发有限公司3', N'测试房地产开发有限公司', N'测试房地产开发有限公司', N'测试房地产开发有限公司', N'0', N'0', N'2012-12-02 18:47:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'68', N'119', N'187', N'测试房地产开发有限公司4', N'测试房地产开发有限公司', N'测试房地产开发有限公司', N'测试房地产开发有限公司4', N'0', N'0', N'2012-12-02 18:47:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'69', N'119', N'187', N'测试房地产开发有限公司5', N'测试房地产开发有限公司', N'测试房地产开发有限公司', N'测试房地产开发有限公司5', N'0', N'3', N'2012-12-02 18:47:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'70', N'120', N'212', N'测试测试1', N'测试测试1', N'测试测试1', N'测试测试1', N'0', N'0', N'2012-12-02 20:54:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'71', N'120', N'212', N'测试测试2', N'测试测试1', N'测试测试1', N'测试测试', N'0', N'0', N'2012-12-02 20:54:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'72', N'120', N'212', N'测试测试3', N'测试测试1', N'测试测试1', N'测试测试', N'0', N'0', N'2012-12-02 20:54:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'73', N'120', N'212', N'测试测试4', N'测试测试1', N'测试测试1', N'测试测试', N'0', N'0', N'2012-12-02 20:54:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'74', N'120', N'212', N'测试测试5', N'测试测试1', N'测试测试1', N'测试测试', N'0', N'0', N'2012-12-02 20:54:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'75', N'122', N'256', N'测试新闻1', N'测试新闻', N'测试新闻', N'测试新闻', N'0', N'0', N'2012-12-03 11:35:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'76', N'122', N'256', N'测试新闻2', N'测试新闻', N'测试新闻', N'测试新闻', N'0', N'0', N'2012-12-03 11:35:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'77', N'122', N'256', N'测试新闻3', N'测试新闻', N'测试新闻', N'测试新闻', N'0', N'0', N'2012-12-03 11:35:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'78', N'122', N'256', N'测试新闻4', N'测试新闻', N'测试新闻', N'测试新闻', N'0', N'0', N'2012-12-03 11:35:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'79', N'122', N'256', N'测试新闻5', N'测试新闻', N'测试新闻', N'测试新闻', N'0', N'0', N'2012-12-03 11:35:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'80', N'123', N'258', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'0', N'0', N'2012-12-09 23:39:00', N'0', N'0', N'0', N'0', N'0', NULL, N'123', NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'81', N'123', N'258', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'0', N'0', N'2012-12-09 23:39:00', N'0', N'0', N'0', N'0', N'0', NULL, N'123', NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'82', N'123', N'258', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'0', N'0', N'2012-12-09 23:39:00', N'0', N'0', N'0', N'0', N'0', NULL, N'123', NULL, NULL, NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'83', N'123', N'258', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要，在2012年的今天', N'0', N'0', N'2012-12-19 11:09:00', N'0', N'0', N'0', N'0', N'0', N'0', N'123', NULL, N'/UploadFiles/123/2012/12/19/123_11426.jpg', N'/UploadFiles/123/2012/12/19/123_11426.jpg', N'/UploadFiles/123/2012/12/19/123_11426.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'84', N'123', N'258', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要', N'姜教授：孕期保健很重要，在2012年的今天', N'0', N'0', N'2012-12-19 11:05:00', N'0', N'0', N'0', N'0', N'0', N'0', N'123', NULL, N'/UploadFiles/123/2012/12/19/123_11426.jpg', N'/UploadFiles/123/2012/12/19/123_11426.jpg', N'/UploadFiles/123/2012/12/19/123_11426.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'85', N'126', N'285', N'测试汽车行业新闻资讯', N'', N'', N'测试汽车行业新闻资讯测试汽车行业新闻资讯测试汽车行业新闻资讯', N'0', N'9', N'2014-07-02 14:45:00', N'0', N'0', N'0', N'0', N'0', N'0', N'126', NULL, N'|upload/126/2014/07/02/126_1445110.jpg|', N'||', N'http://v.kelink.com/article/upload/126/2014/07/02/126_1445110.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'86', N'126', N'285', N'测试新闻再来一条', N'', N'', N'测试新闻再来一条测试新闻再来一条测试新闻再来一条测试新闻再来一条测试新闻再来一条测试新闻再来一条测试新闻再来一条测试新闻再来一条测试新闻再来一条测试新闻再来一条', N'0', N'15', N'2014-07-02 15:03:00', N'0', N'0', N'0', N'0', N'0', N'0', N'126', NULL, N'http://v.kelink.com/article/picDIY.aspx?siteid=126&classid=285&id=86&path=article%5cupload%2f126%2f2014%2f07%2f02%2f126_1502590.jpg|upload/126/2014/07/02/126_1503520.jpg|', N'||||', N'http://v.kelink.com/article/upload/126/2014/07/02/126_1503520.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'87', N'127', N'288', N'爱要让全世界都知道（2014-07-10）', N'', N'', N'爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道爱让全世界都知道', N'0', N'13', N'2014-07-10 17:21:00', N'0', N'0', N'0', N'0', N'0', N'0', N'127', NULL, N'/Template/127/Images/20140106153657.jpg', N'', N'/Template/127/Images/20140106153657.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'88', N'127', N'288', N'我也要上头条！参与活动赢汪峰演唱会门票', N'', N'', N'我也要上头条！参与活动赢汪峰演唱会门票（2014-07-10）我也要上头条！参与活动赢汪峰演唱会门票（2014-07-10）', N'0', N'10', N'2014-07-10 17:37:00', N'0', N'0', N'0', N'0', N'0', N'0', N'127', NULL, N'/Template/127/Images/20131126140226.jpg', N'', N'/Template/127/Images/20131126140226.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'89', N'127', N'287', N'柯林CMS程序-企业版', N'', N'', N'柯林CMS程序-企业版柯林CMS程序-企业版柯林CMS程序-企业版柯林CMS程序-企业版柯林CMS程序-企业版柯林CMS程序-企业版', N'0', N'16', N'2014-07-10 18:00:00', N'0', N'0', N'0', N'0', N'0', N'0', N'127', NULL, N'/Template/127/Images/chu.jpg', N'', N'/Template/127/Images/chu.jpg')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'90', N'128', N'293', N'国家主席习近平在巴西利亚同巴西总统罗塞夫举行会谈', NULL, NULL, N'　　巴西当地时间7月17日，国家主席习近平在巴西利亚同巴西总统罗塞夫举行会谈，并共同出席百度葡语搜索引擎发布仪式。在两国元首的共同见证下，百度董事长兼CEO李彦宏在现场输入了首个葡语版搜索关键词“Brasil China”(巴西 中国)，页面显示出 “中巴建交40周年”主题的搜索结果。百度葡语版搜索在巴西正式上线提供服务，成为中巴两国加强技术创新领域合作的一个重要标志。 <br>', N'0', N'0', N'2014-07-18 11:42:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'/Template/128/logo.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'91', N'128', N'293', N'百度葡语版搜索在巴西正式上线提供服务', NULL, NULL, N'　　巴西当地时间7月17日，国家主席习近平在巴西利亚同巴西总统罗塞夫举行会谈，并共同出席百度葡语搜索引擎发布仪式。在两国元首的共同见证下，百度董事长兼CEO李彦宏在现场输入了首个葡语版搜索关键词“Brasil China”(巴西 中国)，页面显示出 “中巴建交40周年”主题的搜索结果。百度葡语版搜索在巴西正式上线提供服务，成为中巴两国加强技术创新领域合作的一个重要标志。 <br>', N'0', N'2', N'2014-07-18 11:43:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'/Template/128/logo.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'92', N'128', N'294', N'项目一', NULL, NULL, N'<p>项目一</p><p>项目一</p><p>项目一</p><p>项目一</p><p>项目一</p><p>项目一</p>', N'0', N'0', N'2014-07-18 11:44:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'/Template/128/logo.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'93', N'128', N'294', N'项目二', NULL, NULL, N'<p>项目二</p><p>项目二</p><p>项目二</p><p>项目二</p><p>项目二</p><p>项目二</p>', N'0', N'0', N'2014-07-18 11:44:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'/Template/128/logo.gif')
-GO
-
-INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'94', N'128', N'295', N'中巴建交40周年', NULL, NULL, N'　　巴西当地时间7月17日，国家主席习近平在巴西利亚同巴西总统罗塞夫举行会谈，并共同出席百度葡语搜索引擎发布仪式。在两国元首的共同见证下，百度董事长兼CEO李彦宏在现场输入了首个葡语版搜索关键词“Brasil China”(巴西 中国)，页面显示出 “中巴建交40周年”主题的搜索结果。百度葡语版搜索在巴西正式上线提供服务，成为中巴两国加强技术创新领域合作的一个重要标志。 <br>', N'0', N'3', N'2014-07-18 11:45:00', N'0', N'0', N'0', N'0', N'0', NULL, NULL, NULL, N'', N'', N'')
+INSERT INTO [dbo].[wap_book] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [xi], [nu], [han], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileInfo], [book_img]) VALUES (N'64', N'1000', N'155', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'个人版-柯林自助建站系统', N'　　个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统个人版-柯林自助建站系统', N'0', N'8', N'2012-07-31 11:17:00', N'0', N'0', N'0', N'0', N'0', NULL, N'114', NULL, N'upload/114/2012/07/31/114_1117131.gif|', N'|', N'upload/114/2012/07/31/114_1117130.gif')
 GO
 
 SET IDENTITY_INSERT [dbo].[wap_book] OFF
@@ -10280,24 +7795,6 @@ GO
 -- ----------------------------
 -- Records of wap_card
 -- ----------------------------
-INSERT INTO [dbo].[wap_card] ([userid], [ltd], [realname], [nameID], [zhiye], [tel], [mobile], [email], [website], [address], [post], [sale], [bank], [cardnum], [addtime], [HangBiaoShi], [ishidden]) VALUES (N'101', N'', N'', N'', N'', N'', N'123456453', N'24123431@126.com', N'', N'', N'', N'', N'', N'', N'2012-07-12 11:20:59.813', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_card] ([userid], [ltd], [realname], [nameID], [zhiye], [tel], [mobile], [email], [website], [address], [post], [sale], [bank], [cardnum], [addtime], [HangBiaoShi], [ishidden]) VALUES (N'125', N'', N'', N'', N'', N'', N'123456453', N'24123431@126.com', N'', N'', N'', N'', N'', N'', N'2014-06-27 20:49:44.167', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_card] ([userid], [ltd], [realname], [nameID], [zhiye], [tel], [mobile], [email], [website], [address], [post], [sale], [bank], [cardnum], [addtime], [HangBiaoShi], [ishidden]) VALUES (N'126', N'', N'', N'', N'', N'', N'123456453', N'24123431@126.com', N'', N'', N'', N'', N'', N'', N'2014-07-01 17:27:20.287', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_card] ([userid], [ltd], [realname], [nameID], [zhiye], [tel], [mobile], [email], [website], [address], [post], [sale], [bank], [cardnum], [addtime], [HangBiaoShi], [ishidden]) VALUES (N'127', N'', N'', N'', N'', N'', N'123456453', N'24123431@126.com', N'', N'', N'', N'', N'', N'', N'2014-07-10 16:08:58.467', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_card] ([userid], [ltd], [realname], [nameID], [zhiye], [tel], [mobile], [email], [website], [address], [post], [sale], [bank], [cardnum], [addtime], [HangBiaoShi], [ishidden]) VALUES (N'128', N'', N'', N'', N'', N'', N'123456453', N'24123431@126.com', N'', N'', N'', N'', N'', N'', N'2014-08-02 09:32:14.180', NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_card] ([userid], [ltd], [realname], [nameID], [zhiye], [tel], [mobile], [email], [website], [address], [post], [sale], [bank], [cardnum], [addtime], [HangBiaoShi], [ishidden]) VALUES (N'129', N'', N'', N'', N'', N'', N'123456453', N'24123431@126.com', N'', N'', N'', N'', N'', N'', N'2014-08-04 18:09:15.560', NULL, N'0')
-GO
-
 INSERT INTO [dbo].[wap_card] ([userid], [ltd], [realname], [nameID], [zhiye], [tel], [mobile], [email], [website], [address], [post], [sale], [bank], [cardnum], [addtime], [HangBiaoShi], [ishidden]) VALUES (N'1000', N'广州市联速计算机科技有限公司', N'钟国强', N'', N'软件工程师', N'13048036868', N'13048036868', N'chinastrong@126.com', N'http://www.kelink.com', N'广州市番禺区大石街沿江中路73号神怡商业中心5A12室', N'511430', N'广州市联速计算机科技有限公司主要产品Kelink WAP手机自助建站系统适应于电信运营商、SP公司、各类门户站点、移动电子商务网站及企业手机网站等，面向企业、政府机构、事业单位、学校和广大个人用户提供完整全面的无线应用解决方案。', N'', N'', N'2014-06-27 17:01:11.770', NULL, N'0')
 GO
 
@@ -10575,24 +8072,6 @@ GO
 SET IDENTITY_INSERT [dbo].[wap_download] ON
 GO
 
-INSERT INTO [dbo].[wap_download] ([id], [userid], [book_classid], [book_title], [book_author], [book_ext], [book_size], [book_img], [book_file], [book_content], [book_re], [book_click], [book_date], [sysid], [money], [book_down], [ding], [yiban], [cai], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_imgTrue], [updateInfo], [softMoney], [softSafe], [softVer], [softLtd], [softLang], [book_lable], [book_top], [book_good], [book_recommend], [book_score]) VALUES (N'1', N'110', N'37', N'摩宝卫士', N'model10', NULL, NULL, N'Android1024X800,', NULL, N'手机被盗了怎么办？通讯录丢失了还能找回吗？！摩宝卫士可以帮你全部找回来！此软件的被盗保护机制能在第一时间通知您的手机处于被盗状态，并且可以通过短信远程控制被盗或丢失的手机，对手机进行锁定、信息备份、文件删除等操作，确保了您个人隐私的安全。该软件还具有隐藏运行、防止非法卸载，并能在格式化手机后仍然保证防盗功能有效，继续对被盗手机进行控制！除此之外，情景驱动的人性化来电防火墙，真正实现礼貌拒接来电，并保护敏感来电和短信内容！《摩宝手机卫士》就是这样一款用于保护用户手机信息安全的软件，具有强大的手机私密保护和防盗功能！', N'0', N'0', N'2012-07-06 17:41:00', N'0', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'upload/110/2012/07/06/S110_1742310_墨宝1.jpg', N'', N'使用完全免费', N'无病毒/无插件/无暗扣', N'', N'', N'简体中文', N'', N'0', N'0', N'0', N'5')
-GO
-
-INSERT INTO [dbo].[wap_download] ([id], [userid], [book_classid], [book_title], [book_author], [book_ext], [book_size], [book_img], [book_file], [book_content], [book_re], [book_click], [book_date], [sysid], [money], [book_down], [ding], [yiban], [cai], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_imgTrue], [updateInfo], [softMoney], [softSafe], [softVer], [softLtd], [softLang], [book_lable], [book_top], [book_good], [book_recommend], [book_score]) VALUES (N'2', N'110', N'37', N'一键清理 v2.1', N'model10', NULL, NULL, N'Android1024X480,', NULL, N'Android上第一款深度清理软件，真正清理SD卡，缓存，垃圾短信，垃圾文件，全部清光光！ 新版一键清理加入了先进的垃圾文件过滤机制，只清理无用的垃圾文件，不影响电影，小说等 重要文件，让您安心，放心“一键清理”！ 软件功能： 1、缓存清理：清理软件运行时产生在手机内存里的缓存文件 2、短信清理：一键快速删除短信，标记删除选定短信 3、深度清理：清理软件运行时产生在SD卡上的垃圾文件 4、痕迹清理：清理手机浏览器历史记录以及手机通话记录 5、一键清理：一键清理手机缓存', N'0', N'0', N'2012-07-06 17:43:00', N'0', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'upload/110/2012/07/06/S110_1743410_一键清理.jpg', N'', N'使用完全免费', N'无病毒/无插件/无暗扣', N'', N'', N'简体中文', N'', N'0', N'0', N'0', N'5')
-GO
-
-INSERT INTO [dbo].[wap_download] ([id], [userid], [book_classid], [book_title], [book_author], [book_ext], [book_size], [book_img], [book_file], [book_content], [book_re], [book_click], [book_date], [sysid], [money], [book_down], [ding], [yiban], [cai], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_imgTrue], [updateInfo], [softMoney], [softSafe], [softVer], [softLtd], [softLang], [book_lable], [book_top], [book_good], [book_recommend], [book_score]) VALUES (N'3', N'110', N'37', N'超级任务管理1.4', N'model10', N'', N'', N'Android1024X800,', N'', N'还在为不明程序后台运行而恐慌吗？还在为手机费电耗流量而担心吗？还在为内存不足手机运行不流畅而担心吗？这一切只需一款小小的超级任务管理来帮您解决！体积更小巧，功能更实用，一切只为您的手机着想！超级任务管理拥有后台程序和服务双重管理功能，快速扫描正在运行的程序及相关服务进程，让你详细了解手机后台的隐秘情况 软件功能 1，一键轻松结束运行中的程序和服务，释放手机内存 2，过滤列表功能，将需要的程序添置过滤列表，防止被结束掉 3，自动结束程序功能，自动结束自结列表里的进程。 4，实用的桌面小工具让你随时一键结束程序 1.4版本更新 1、优化结束方法，结束更彻底 2，其他一些细节的优化', N'0', N'0', N'2012-07-06 17:44:00', N'0', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'upload/110/2012/07/06/S110_1744500_超级任务管理1.4.gif', N'', N'使用完全免费', N'无病毒/无插件/无暗扣', N'', N'', N'简体中文', N'', N'0', N'0', N'0', N'5')
-GO
-
-INSERT INTO [dbo].[wap_download] ([id], [userid], [book_classid], [book_title], [book_author], [book_ext], [book_size], [book_img], [book_file], [book_content], [book_re], [book_click], [book_date], [sysid], [money], [book_down], [ding], [yiban], [cai], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_imgTrue], [updateInfo], [softMoney], [softSafe], [softVer], [softLtd], [softLang], [book_lable], [book_top], [book_good], [book_recommend], [book_score]) VALUES (N'4', N'110', N'37', N'安卓跑分', N'model10', N'', N'', N'Android1024X480,', N'', N'想挑战一下你的手机性能在全球的评比的座次吗？累积10万人参与的性能测试评比。 安卓跑分是一款专业的Android手机性能测试软件，针对CPU、内存、2D及3D图像等性能，提供了一键式的完整测试，并得到具体的性能分数。将得分上传，通过云端数据处理，您可以看到自己的手机性能在世界的排名，以及同机型的排名和热门机型性能对比。 此外它还提供了内容格式清晰的系统信息查看功能，让你方便的了解非常详尽的手机处理器、内存及系统版本等特性。 软件功能： CPU检测：包括整数、浮点等多项内容的运算速度得分； 内存检测：手机运行内存读写性能测试得分； 2D图形处理：2D画面的绘图性能测试 3D图形处理：3D画面的绘图性能测试 得分排名：提交得分，知晓自己手机的各种排名 手机信息：详细了解手机软硬件信息 提供实用的屏幕坏点检测功能。 v2.2版更新信息： 1.“系统检测”调整了CPU整型、浮点型测试、内存评测算法，评分更加准确 2.“货源查询”增强货源查询的用户体验 3.实现与PC版卓大师的互连，通过PC版客户端您可以更方便、高效的管理您的手机 4.新增PC客户端对手机性能检测的触发和结果呈现 5.增加腾讯微博分享测试结果 6.清新的界面带给您更多美感', N'0', N'0', N'2012-07-06 17:45:00', N'0', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'upload/110/2012/07/06/S110_1745240_安卓跑分.gif', N'', N'使用完全免费', N'无病毒/无插件/无暗扣', N'', N'', N'简体中文', N'', N'0', N'0', N'0', N'5')
-GO
-
-INSERT INTO [dbo].[wap_download] ([id], [userid], [book_classid], [book_title], [book_author], [book_ext], [book_size], [book_img], [book_file], [book_content], [book_re], [book_click], [book_date], [sysid], [money], [book_down], [ding], [yiban], [cai], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_imgTrue], [updateInfo], [softMoney], [softSafe], [softVer], [softLtd], [softLang], [book_lable], [book_top], [book_good], [book_recommend], [book_score]) VALUES (N'5', N'110', N'37', N'系统面板汉化版', N'model10', NULL, NULL, N'', NULL, N'管理任务进程的软件不少，查看系统信息的软件不少，但是没有一款有这一款这么华丽，而且不是华而不实，它的信息详实而有用。 v1.1.1版更新信息： * 动态监视窗口支持显示多核CPU每个核心的使用图表； * 存储信息窗口可以正确地显示内置用户存储和外置存储(如Droid 3和某些版本的Galaxy Tab)； * 储存窗口可显示所有已挂载的文件系统； * 修复Bug。', N'0', N'0', N'2012-07-06 17:45:00', N'0', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'upload/110/2012/07/06/S110_1746480_系统面板汉化版.jpg', N'', N'使用完全免费', N'无病毒/无插件/无暗扣', N'', N'', N'简体中文', N'', N'0', N'0', N'0', N'5')
-GO
-
-INSERT INTO [dbo].[wap_download] ([id], [userid], [book_classid], [book_title], [book_author], [book_ext], [book_size], [book_img], [book_file], [book_content], [book_re], [book_click], [book_date], [sysid], [money], [book_down], [ding], [yiban], [cai], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_imgTrue], [updateInfo], [softMoney], [softSafe], [softVer], [softLtd], [softLang], [book_lable], [book_top], [book_good], [book_recommend], [book_score]) VALUES (N'6', N'124', N'273', N'下载测试', N'model24', N'', N'', N'', N'', N'下载测试', N'0', N'1', N'2013-01-17 11:02:00', N'0', N'0', N'0', N'0', N'0', N'0', N'0', NULL, N'0', N'0', N'/NetImages/model/886198167151.gif', N'', N'使用完全免费', N'无病毒/无插件/无暗扣', N'', N'', N'简体中文', N'', N'0', N'0', N'0', N'5')
-GO
-
 SET IDENTITY_INSERT [dbo].[wap_download] OFF
 GO
 
@@ -10661,6 +8140,9 @@ GO
 -- Records of wap_friends
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[wap_friends] ON
+GO
+
+INSERT INTO [dbo].[wap_friends] ([id], [siteid], [userid], [frienduserid], [friendusername], [friendnickname], [rank], [addtime], [friendtype], [HangBiaoShi]) VALUES (N'1', N'1000', N'1000', N'1001', N'', N'test', N'0', N'2024-07-29 09:19:41.707', N'1', NULL)
 GO
 
 SET IDENTITY_INSERT [dbo].[wap_friends] OFF
@@ -11138,21 +8620,6 @@ GO
 SET IDENTITY_INSERT [dbo].[wap_link] ON
 GO
 
-INSERT INTO [dbo].[wap_link] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [ishidden], [last_time], [smalltype], [MakerID], [HangBiaoShi], [redirectURL], [book_img]) VALUES (N'1', N'105', N'69', N'新浪网', N'model5', N'http://news.sina.com.cn/', N'新浪新闻', N'0', N'1', N'2012-07-09 11:47:00', N'0', N'0', N'0', NULL, N'0', N'105', N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_link] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [ishidden], [last_time], [smalltype], [MakerID], [HangBiaoShi], [redirectURL], [book_img]) VALUES (N'2', N'105', N'69', N'搜狐网', N'model5', N'http://news.sohu.com/', N'搜狐新闻', N'0', N'1', N'2012-07-09 11:54:00', N'1', N'0', N'0', NULL, N'0', N'105', N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_link] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [ishidden], [last_time], [smalltype], [MakerID], [HangBiaoShi], [redirectURL], [book_img]) VALUES (N'3', N'105', N'69', N'腾讯网', N'model5', N'http://news.qq.com/', N'腾讯新闻', N'0', N'1', N'2012-07-09 11:54:00', N'1', N'0', N'0', NULL, N'0', N'105', N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_link] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [ishidden], [last_time], [smalltype], [MakerID], [HangBiaoShi], [redirectURL], [book_img]) VALUES (N'4', N'105', N'69', N'新华网', N'model5', N'http://www.xinhuanet.com/', N'新华网', N'0', N'1', N'2012-07-09 11:59:00', N'1', N'0', N'0', NULL, N'0', N'105', N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_link] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [ishidden], [last_time], [smalltype], [MakerID], [HangBiaoShi], [redirectURL], [book_img]) VALUES (N'5', N'105', N'69', N'柯林软件', N'model5', N'http://kelink.com', N'柯林软件', N'0', N'1', N'2012-07-09 16:10:00', N'1', N'0', N'0', NULL, N'0', N'105', N'0', NULL, NULL)
-GO
-
 SET IDENTITY_INSERT [dbo].[wap_link] OFF
 GO
 
@@ -11187,367 +8654,19 @@ GO
 SET IDENTITY_INSERT [dbo].[wap_log] ON
 GO
 
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'636', N'118', N'0', N'游客95409', N'1', N'加入了网站:<a href="http://localhost/link/book_view.aspx?siteid=118&amp;classid=180&amp;id=0&amp;sid=[sid]"></a>', N'127.0.0.1', N'2012-12-02 01:15:19.233', NULL)
+INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'750', N'1000', N'1001', N'test', N'1', N'发表新贴:<a href="http://localhost:58946/bbs/book_view.aspx?siteid=1000&amp;classid=305&amp;id=22">屏蔽测试11</a>', N'::1', N'2024-07-31 16:13:40.797', NULL)
 GO
 
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'655', N'118', N'0', N'游客14818', N'1', N'正在论坛查询关键字:关键字', N'192.168.1.119', N'2012-12-03 11:52:55.843', NULL)
+INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'746', N'1000', N'1000', N'超级管理员', N'1', N'发表新贴:<a href="http://localhost/bbs/book_view.aspx?siteid=1000&amp;classid=305&amp;id=21">测试测试测试测试</a>', N'::1', N'2024-07-31 15:28:55.607', NULL)
 GO
 
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'659', N'117', N'0', N'游客14818', N'1', N'在玩<a href="http://192.168.1.107/games/MarkSix/index.aspx?siteid=117&amp;classid=173&amp;sid=[sid]">博彩</a>', N'192.168.1.119', N'2012-12-03 12:00:59.107', NULL)
+INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'747', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2024-07-31 15:30:43.223', NULL)
 GO
 
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'708', N'125', N'0', N'游客90396', N'1', N'会员注册', N'113.104.64.202', N'2014-06-27 22:28:45.280', NULL)
+INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'748', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2024-07-31 15:41:38.660', NULL)
 GO
 
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'620', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-11-28 16:53:58.873', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'622', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-11-28 17:17:10.247', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'623', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-11-29 15:21:25.717', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'624', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-11-29 15:21:25.967', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'625', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-11-29 17:49:06.717', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'626', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-11-30 09:52:22.937', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'627', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-11-30 11:32:30.640', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'628', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-11-30 16:05:48.250', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'629', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-11-30 17:21:31.513', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'630', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-01 01:32:36.780', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'632', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-01 01:54:54.467', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'639', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 13:03:09.340', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'641', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 13:17:14.263', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'656', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 11:58:15.450', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'657', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 11:58:53.373', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'666', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 15:45:22.217', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'677', N'117', N'117', N'model17', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-14 16:38:20.200', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'631', N'118', N'118', N'model18', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-01 01:40:48.687', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'633', N'118', N'118', N'model18', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-01 15:24:48.217', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'634', N'118', N'118', N'model18', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-01 20:38:39.857', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'635', N'118', N'118', N'model18', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 00:36:28.293', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'637', N'118', N'118', N'model18', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 02:06:21.623', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'660', N'118', N'118', N'model18', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 12:21:05.263', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'638', N'119', N'119', N'model19', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 13:01:40.903', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'640', N'119', N'119', N'model19', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 13:08:49.967', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'642', N'119', N'119', N'model19', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 14:27:14.420', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'643', N'119', N'119', N'model19', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 18:43:24.233', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'645', N'119', N'119', N'model19', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 20:42:23.390', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'647', N'119', N'119', N'model19', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 20:51:17.043', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'650', N'119', N'119', N'model19', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 08:30:02.890', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'661', N'119', N'119', N'model19', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 12:27:36.687', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'665', N'119', N'119', N'model19', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 12:41:10.950', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'678', N'119', N'119', N'model19', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-14 16:38:32.450', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'644', N'120', N'120', N'model20', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 20:38:57.077', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'646', N'120', N'120', N'model20', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-02 20:49:45.950', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'662', N'120', N'120', N'model20', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 12:31:03.840', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'648', N'121', N'121', N'model21', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 02:21:42.247', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'663', N'121', N'121', N'model21', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 12:34:42.577', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'649', N'122', N'122', N'model22', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 08:22:19.967', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'651', N'122', N'122', N'model22', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 11:03:39.390', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'652', N'122', N'122', N'model22', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 11:06:18.950', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'653', N'122', N'122', N'model22', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 11:09:01.263', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'654', N'122', N'122', N'model22', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 11:09:56.640', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'664', N'122', N'122', N'model22', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 12:38:21.437', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'669', N'122', N'122', N'model22', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-09 00:41:26.450', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'667', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-07 14:29:19.187', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'668', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-09 00:40:55.450', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'670', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-09 01:47:53.293', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'671', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-09 17:47:20.530', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'672', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-09 22:46:02.373', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'673', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-19 09:56:05.593', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'675', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-10 16:13:43.230', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'686', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-17 18:09:41.263', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'687', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-17 18:16:43.543', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'688', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-18 09:39:26.450', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'689', N'123', N'123', N'model23', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-18 09:40:22.623', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'674', N'124', N'124', N'model24', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-19 11:25:25.513', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'676', N'124', N'124', N'model24', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-10 16:13:56.250', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'680', N'124', N'124', N'model24', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-17 10:27:15.437', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'681', N'124', N'124', N'model24', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-17 10:34:14.030', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'682', N'124', N'124', N'model24', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-17 14:32:03.543', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'683', N'124', N'124', N'model24', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-17 16:02:59.077', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'684', N'124', N'124', N'model24', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-17 16:03:59.310', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'713', N'128', N'128', N'model28', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-06-30 10:54:02.037', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'617', N'1000', N'1000', N'wap', N'2', N'登录成功!', N'::1', N'2012-08-27 15:47:36.987', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'618', N'1000', N'1000', N'wap', N'2', N'登录成功!', N'::1', N'2012-09-02 20:41:19.717', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'619', N'1000', N'1000', N'wap', N'2', N'登录成功!', N'::1', N'2012-09-05 09:39:44.603', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'621', N'1000', N'1000', N'wap', N'2', N'登录成功!', N'127.0.0.1', N'2012-11-28 16:54:57.107', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'658', N'1000', N'1000', N'wap', N'2', N'登录成功!', N'127.0.0.1', N'2012-12-03 12:00:37.763', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'679', N'1000', N'1000', N'wap', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-14 17:36:47.810', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'685', N'1000', N'1000', N'wap', N'2', N'登录成功!', N'127.0.0.1', N'2013-01-17 18:09:05.187', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'690', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2013-01-19 10:21:10.740', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'691', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2013-01-20 13:12:40.577', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'692', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2013-01-20 17:19:15.823', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'693', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2013-01-21 15:42:05.557', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'694', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2013-01-21 15:51:28.427', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'695', N'1000', N'1000', N'wap', N'2', N'登录成功!', N'::1', N'2013-01-23 09:56:18.560', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'696', N'1000', N'1000', N'wap', N'2', N'登录成功!', N'::1', N'2013-01-23 10:03:00.703', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'697', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-04-24 14:19:59.667', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'698', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-04-24 14:25:01.547', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'699', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-06-27 17:00:55.830', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'700', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-06-27 17:04:30.527', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'701', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-06-27 17:10:28.377', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'702', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-06-27 17:12:04.657', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'703', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-06-27 17:21:17.550', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'704', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-06-27 17:23:25.547', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'705', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'113.104.64.202', N'2014-06-27 20:25:29.327', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'706', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'113.104.64.202', N'2014-06-27 20:48:15.013', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'707', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'113.104.64.202', N'2014-06-27 22:17:54.483', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'709', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'113.104.64.202', N'2014-06-27 22:38:10.873', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'710', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'113.104.64.202', N'2014-06-28 09:57:34.427', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'711', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-06-30 10:20:16.880', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'712', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-06-30 10:30:31.770', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'714', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'113.104.64.211', N'2014-07-01 17:26:47.643', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'715', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'183.44.131.25', N'2014-07-10 16:08:32.213', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'716', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 09:47:35.000', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'717', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 10:29:03.077', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'718', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 10:34:41.770', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'719', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 10:36:40.750', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'720', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 11:05:15.163', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'721', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 12:04:36.320', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'722', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 14:02:57.310', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'723', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 15:30:23.677', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'724', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 16:49:20.053', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'725', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 16:51:27.007', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'726', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 16:53:00.393', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'727', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 16:54:25.157', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'728', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'61.234.123.235', N'2014-07-18 16:58:32.947', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'729', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-08-02 09:30:38.220', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'730', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-08-04 11:29:08.757', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'731', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-08-04 18:07:33.913', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'732', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-08-04 18:59:53.887', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'733', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-08-04 19:15:13.150', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'734', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-08-04 20:22:16.063', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'735', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-09-27 22:04:05.697', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'736', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-10-09 15:23:49.257', NULL)
-GO
-
-INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'737', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2014-11-28 16:45:12.850', NULL)
+INSERT INTO [dbo].[wap_log] ([id], [siteid], [oper_userid], [oper_nickname], [oper_type], [log_info], [oper_ip], [oper_time], [HangBiaoShi]) VALUES (N'749', N'1000', N'1000', N'wap', N'2', N'登录WEB后台成功!', N'::1', N'2024-07-31 15:43:40.480', NULL)
 GO
 
 SET IDENTITY_INSERT [dbo].[wap_log] OFF
@@ -12788,21 +9907,6 @@ GO
 SET IDENTITY_INSERT [dbo].[wap_shop] ON
 GO
 
-INSERT INTO [dbo].[wap_shop] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [book_smallimg], [book_hottel], [book_shortmessage], [book_xinghao], [book_jiage], [book_yhjiage], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileINFO], [book_charge], [saleCount], [book_content_img], [book_gongxiao], [book_tishi], [book_xingxing], [book_otherTitle], [book_otherContent], [book_tip], [book_copyid]) VALUES (N'1', N'101', N'9', N'诺基亚5800XM智能音乐手机', N'model1', N'101', N'诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机', N'0', N'5', N'2012-07-06 09:15:00', N'0', N'0', N'upload/101/2012/07/06/S101_0914480.jpg', N'1000', N'3456784654', N'诺基亚5800XM', N'1200.0000', N'1000.0000', N'0', N'0', N'101', N'0', N'upload/101/2012/07/06/101_0914480.jpg|', N'|', N'1.0000', N'0', N'诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机', N'诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机', N'诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机', N'★★★★★', N'诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机', N'诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机诺基亚5800XM智能音乐手机', N'诺基亚5800XM智能音乐手机', N'0')
-GO
-
-INSERT INTO [dbo].[wap_shop] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [book_smallimg], [book_hottel], [book_shortmessage], [book_xinghao], [book_jiage], [book_yhjiage], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileINFO], [book_charge], [saleCount], [book_content_img], [book_gongxiao], [book_tishi], [book_xingxing], [book_otherTitle], [book_otherContent], [book_tip], [book_copyid]) VALUES (N'2', N'101', N'9', N'诺基亚5230智能手机', N'model1', N'101', N'诺基亚5230智能手机诺基亚5230智能手机', N'0', N'2', N'2012-07-06 09:33:00', N'0', N'0', N'upload/101/2012/07/06/S101_0933290.jpg', N'1000', N'1343245', N'诺基亚5230智能手机', N'1100.0000', N'1000.0000', N'0', N'0', N'101', N'0', N'upload/101/2012/07/06/101_0933290.jpg|', N'|', N'1.0000', N'0', N'诺基亚5230智能手机诺基亚5230智能手机诺基亚5230智能手机', N'诺基亚5230智能手机诺基亚5230智能手机', N'诺基亚5230智能手机诺基亚5230智能手机诺基亚5230智能手机', N'★★★★★', N'诺基亚5230智能手机诺基亚5230智能手机诺基亚5230智能手机诺基亚5230智能手机', N'诺基亚5230智能手机诺基亚5230智能手机诺基亚5230智能手机诺基亚5230智能手机诺基亚5230智能手机', N'诺基亚5230智能手机', N'0')
-GO
-
-INSERT INTO [dbo].[wap_shop] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [book_smallimg], [book_hottel], [book_shortmessage], [book_xinghao], [book_jiage], [book_yhjiage], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileINFO], [book_charge], [saleCount], [book_content_img], [book_gongxiao], [book_tishi], [book_xingxing], [book_otherTitle], [book_otherContent], [book_tip], [book_copyid]) VALUES (N'3', N'101', N'10', N'HTC Incredible G11智能商务手机', N'model1', N'101', N'HTC Incredible G11智能商务手机', N'0', N'0', N'2012-07-06 09:36:00', N'0', N'0', N'upload/101/2012/07/06/S101_0935530.jpg', N'1000', N'546475', N'HTC Incredible G11智能商务手机', N'1300.0000', N'1000.0000', N'0', N'0', N'101', N'0', N'upload/101/2012/07/06/101_0935530.jpg|', N'|', N'1.0000', N'0', N'HTC Incredible G11智能商务手机', N'HTC Incredible G11智能商务手机HTC Incredible G11智能商务手机', N'HTC Incredible G11智能商务手机HTC Incredible G11智能商务手机', N'★★★★★', N'HTC Incredible G11智能商务手机HTC Incredible G11智能商务手机', N'HTC Incredible G11智能商务手机HTC Incredible G11智能商务手机', N'HTC Incredible G11智能商务手机', N'0')
-GO
-
-INSERT INTO [dbo].[wap_shop] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [book_smallimg], [book_hottel], [book_shortmessage], [book_xinghao], [book_jiage], [book_yhjiage], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileINFO], [book_charge], [saleCount], [book_content_img], [book_gongxiao], [book_tishi], [book_xingxing], [book_otherTitle], [book_otherContent], [book_tip], [book_copyid]) VALUES (N'4', N'101', N'11', N'三星I900智能3G手机', N'model1', N'101', N'三星I900智能3G手机三星I900智能3G手机', N'0', N'1', N'2012-07-06 09:39:00', N'0', N'0', N'upload/101/2012/07/06/S101_0938330.jpg', N'1000', N'13123123123', N'三星I900智能3G手机1', N'1500.0000', N'1400.0000', N'0', N'0', N'101', N'0', N'upload/101/2012/07/06/101_0938330.jpg|', N'|', N'1.0000', N'0', N'三星I900智能3G手机三星I900智能3G手机三星I900智能3G手机', N'三星I900智能3G手机三星I900智能3G手机', N'三星I900智能3G手机三星I900智能3G手机三星I900智能3G手机', N'★★★★★', N'三星I900智能3G手机三星I900智能3G手机三星I900智能3G手机', N'三星I900智能3G手机三星I900智能3G手机三星I900智能3G手机', N'三星I900智能3G手机', N'0')
-GO
-
-INSERT INTO [dbo].[wap_shop] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [book_good], [book_top], [book_smallimg], [book_hottel], [book_shortmessage], [book_xinghao], [book_jiage], [book_yhjiage], [isCheck], [smalltype], [MakerID], [HangBiaoShi], [book_file], [book_fileINFO], [book_charge], [saleCount], [book_content_img], [book_gongxiao], [book_tishi], [book_xingxing], [book_otherTitle], [book_otherContent], [book_tip], [book_copyid]) VALUES (N'5', N'101', N'12', N'苹果iPhone 4', N'model1', N'101', N'苹果iPhone 4苹果iPhone 4', N'0', N'0', N'2012-07-06 09:41:00', N'0', N'0', N'upload/101/2012/07/06/S101_0940430.jpg', N'1000', N'13123123123', N'苹果iPhone 4', N'124353.0000', N'12354.0000', N'0', N'0', N'101', N'0', N'upload/101/2012/07/06/101_0940430.jpg|', N'|', N'1.0000', N'0', N'苹果iPhone 4苹果iPhone 4苹果iPhone 4', N'苹果iPhone 4苹果iPhone 4苹果iPhone 4', N'苹果iPhone 4苹果iPhone 4苹果iPhone 4', N'★★★★★', N'苹果iPhone 4苹果iPhone 4苹果iPhone 4', N'苹果iPhone 4苹果iPhone 4苹果iPhone 4', N'苹果iPhone 4', N'0')
-GO
-
 SET IDENTITY_INSERT [dbo].[wap_shop] OFF
 GO
 
@@ -13253,6 +10357,12 @@ GO
 INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'94', N'127', N'0', N'841', N'http://localhost/wapindex.aspx?siteid=127', N'http://localhost/models/systemindex.aspx?typeid=194', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-10-09 15:24:36.297', N'0', N'', N'b6e0ec0909290335', N'0', N'柯林清新简洁ISO风格触屏版', N'')
 GO
 
+INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'92', N'128', N'0', N'839', N'http://localhost/wapindex.aspx?siteid=128', N'http://localhost/models/systemindex.aspx?typeid=195', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-10-09 15:24:34.640', N'0', N'', N'b6e0ec0909290335', N'0', N'餐厅网站模板', N'')
+GO
+
+INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'89', N'129', N'0', N'836', N'http://localhost/wapindex.aspx?siteid=129', N'http://localhost/models/systemindex.aspx?typeid=196', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-09-27 22:05:57.697', N'0', N'', N'520ed12511572201', N'0', N'【红米Note 手机】限时秒杀', N'')
+GO
+
 INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'85', N'128', N'0', N'833', N'http://localhost/WML/admin_WAPmodify.aspx?action=go&id=22&siteid=128&classid=292&page=1&sid=D86F6968DBF066690_8_128_888_120-2-0-0-0-500', N'', N'直接访问', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-08-02 09:32:28.733', N'0', N'', N'6288c30209301934', N'128', N'html代码栏目', N'')
 GO
 
@@ -13265,151 +10375,7 @@ GO
 INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'88', N'128', N'0', N'833', N'http://localhost/wml/admin_WAPmodify.aspx?', N'http://localhost/WML/admin_WAPmodify.aspx?action=go&id=27&siteid=128&classid=292&page=1&sid=D86F6968DBF066690_8_128_888_120-2-0-0-0-500', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-08-02 09:33:18.977', N'0', N'', N'6288c30209301934', N'128', N'html代码栏目', N'')
 GO
 
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'92', N'128', N'0', N'839', N'http://localhost/wapindex.aspx?siteid=128', N'http://localhost/models/systemindex.aspx?typeid=195', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-10-09 15:24:34.640', N'0', N'', N'b6e0ec0909290335', N'0', N'餐厅网站模板', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'89', N'129', N'0', N'836', N'http://localhost/wapindex.aspx?siteid=129', N'http://localhost/models/systemindex.aspx?typeid=196', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-09-27 22:05:57.697', N'0', N'', N'520ed12511572201', N'0', N'【红米Note 手机】限时秒杀', N'')
-GO
-
 INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'91', N'129', N'0', N'838', N'http://localhost/wapindex.aspx?siteid=129', N'http://localhost/models/systemindex.aspx?typeid=196', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-10-09 15:24:30.457', N'0', N'', N'b6e0ec0909290335', N'0', N'【红米Note 手机】限时秒杀', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'1', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:18:47.687', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'2', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-0', N'http://localhost/index.aspx', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:18:56.517', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'5', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:00.907', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'6', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:01.953', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'7', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:02.627', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'12', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:40.233', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'13', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:40.703', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'14', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:40.970', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'15', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:41.173', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'16', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:41.377', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'17', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:41.547', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'18', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:41.733', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'19', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:41.923', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'20', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:42.750', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'21', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:43.110', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'22', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:43.250', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'23', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:43.407', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'24', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:50.250', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'25', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:50.437', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'26', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:20:50.610', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'28', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:26:56.937', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'29', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-480', N'http://localhost/waplogin.aspx?siteid=1000&sid=-2-0-0-0-480', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 13:26:58.093', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'30', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-0', N'http://localhost/index.aspx', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 15:00:44.313', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'31', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-0', N'http://localhost/index.aspx', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 15:01:07.407', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'32', N'1000', N'0', N'1', N'http://localhost/wapindex.aspx?siteid=1000', N'http://localhost/admin/login.aspx', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.045', N'window', N'127.0.0.1', N'本机地址', N'本机地址', N'其它', N'2012-07-27 15:31:05.827', N'0', NULL, NULL, N'0', NULL, NULL)
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'33', N'1000', N'0', N'754', N'http://localhost/wapindex.aspx?siteid=1000', N'http://localhost/index.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-04-24 14:19:38.967', N'0', N'', N'ceb4b52011265336', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'34', N'1000', N'0', N'754', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-04-24 14:21:57.310', N'0', N'', N'ceb4b52011265336', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'35', N'1000', N'0', N'754', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-04-24 14:22:09.633', N'0', N'', N'ceb4b52011265336', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'36', N'1000', N'0', N'754', N'http://localhost/wapindex.aspx?siteid=1000&sid=-2-0-0-0-320', N'', N'直接访问', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 6.1; zh-cn) Opera 8.0', N'opera', N'::1', N'其它', N'其它', N'其它', N'2014-04-24 14:22:46.083', N'0', N'', N'7f65e32919400945', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'37', N'1000', N'0', N'754', N'http://localhost/waplogin.aspx?', N'http://localhost/waplogin.aspx?siteid=1000&classid=0&backurl=myfile.aspx%3fsiteid%3d1000&sid=-2-0-0-0-320', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 6.1; zh-cn) Opera 8.0', N'opera', N'::1', N'其它', N'其它', N'其它', N'2014-04-24 14:22:55.540', N'0', N'', N'7f65e32919400945', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'38', N'1000', N'0', N'754', N'http://localhost/myfile.aspx?siteid=1000&sid=31DF73957A9768610_0_00_15987_500100-2-0-0-0-320', N'http://localhost/waplogin.aspx', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 6.1; zh-cn) Opera 8.0', N'opera', N'::1', N'其它', N'其它', N'其它', N'2014-04-24 14:22:56.547', N'0', N'', N'7f65e32919400945', N'1000', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'39', N'1000', N'0', N'754', N'http://localhost/admin/basesitemodifywml.aspx?siteid=1000&sid=31DF73957A9768610_0_00_15987_500100-2-0-0-0-320', N'http://localhost/myfile.aspx?siteid=1000&sid=31DF73957A9768610_0_00_15987_500100-2-0-0-0-320', N'本站链接', N'其它', N'', N'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 6.1; zh-cn) Opera 8.0', N'opera', N'::1', N'其它', N'其它', N'其它', N'2014-04-24 14:23:03.423', N'0', N'', N'7f65e32919400945', N'1000', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'80', N'1000', N'0', N'754', N'http://localhost/wapindex.aspx?siteid=1000', N'http://localhost/index.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-04-24 14:33:40.207', N'0', N'', N'ceb4b52011265336', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'81', N'1000', N'0', N'754', N'http://localhost/wapindex.aspx?siteid=1000', N'http://localhost/index.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-04-24 14:33:52.717', N'0', N'', N'ceb4b52011265336', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'82', N'1000', N'0', N'781', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-06-27 17:08:54.820', N'0', N'', N'c39a152417040507', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'83', N'1000', N'0', N'832', N'http://localhost/wapindex.aspx?siteid=1000', N'http://localhost/index.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-08-02 09:30:20.087', N'0', N'', N'6288c30209301934', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'84', N'1000', N'0', N'832', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-08-02 09:31:31.383', N'0', N'', N'6288c30209301934', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'90', N'1000', N'0', N'837', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-10-09 15:24:24.910', N'0', N'', N'b6e0ec0909290335', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'96', N'1000', N'0', N'837', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-10-09 15:25:20.947', N'0', N'', N'b6e0ec0909290335', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'106', N'1000', N'0', N'837', N'http://localhost/wapindex.aspx?siteid=1000', N'http://localhost/index.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-10-09 15:38:13.570', N'0', N'', N'b6e0ec0909290335', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'107', N'1000', N'0', N'837', N'http://localhost/wapindex.aspx?siteid=1000', N'http://localhost/Index.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-10-09 15:38:45.357', N'0', N'', N'b6e0ec0909290335', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'108', N'1000', N'0', N'843', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-11-28 16:45:19.990', N'0', N'', N'03602f2816451950', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'109', N'1000', N'0', N'843', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-11-28 16:45:51.410', N'0', N'', N'03602f2816451950', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'110', N'1000', N'0', N'843', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-11-28 16:46:18.333', N'0', N'', N'03602f2816451950', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'111', N'1000', N'0', N'843', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-11-28 16:46:41.970', N'0', N'', N'03602f2816451950', N'0', N'柯林WAP建站系统NET版', N'')
-GO
-
-INSERT INTO [dbo].[wap_vcount_Detail] ([id], [siteid], [types], [bookid], [localURL], [welcomeURL], [fromTypes], [search], [searchKey], [UA], [browser], [IP], [city1], [city2], [net], [everyDate], [HangBiaoShi], [mobile], [cookies], [userid], [classname], [book_title]) VALUES (N'134', N'1000', N'0', N'843', N'http://localhost/wapindex.aspx?siteid=1000&classid=0', N'http://localhost/admin/wapindexedit.aspx', N'本站链接', N'其它', N'', N'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)', N'window', N'::1', N'其它', N'其它', N'其它', N'2014-11-28 16:50:01.250', N'0', N'', N'03602f2816451950', N'0', N'柯林WAP建站系统NET版', N'')
 GO
 
 SET IDENTITY_INSERT [dbo].[wap_vcount_Detail] OFF
@@ -14307,6 +11273,39 @@ GO
 INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'843', N'1000', N'0', N'2014-11-28 16:50:01.250', N'5', N'1', N'6', N'1', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'5', N'0', N'0', N'0')
 GO
 
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'864', N'1000', N'0', N'2024-05-23 17:41:41.757', N'30', N'20', N'39', N'21', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'30', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'865', N'101', N'0', N'2024-05-23 17:00:36.963', N'3', N'2', N'2', N'2', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'3', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'866', N'102', N'0', N'2024-05-23 17:36:43.547', N'13', N'6', N'8', N'8', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'13', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'867', N'103', N'0', N'2024-05-23 16:56:24.097', N'1', N'0', N'1', N'1', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'1', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'868', N'104', N'0', N'2024-05-23 16:56:43.473', N'1', N'0', N'1', N'1', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'1', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'870', N'1000', N'0', N'2024-05-24 16:58:06.433', N'146', N'55', N'214', N'49', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'146', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'871', N'1000', N'0', N'2024-07-29 17:31:34.277', N'32', N'5', N'33', N'6', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'30', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'872', N'101', N'0', N'2024-07-29 09:50:56.963', N'1', N'1', N'1', N'1', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'1', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'869', N'101', N'0', N'2024-05-24 09:38:30.280', N'1', N'1', N'1', N'1', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'1', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'873', N'1000', N'0', N'2024-07-30 14:57:11.817', N'7', N'5', N'5', N'6', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'7', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
+INSERT INTO [dbo].[wap_vcount_everyDate] ([id], [siteid], [types], [everyDate], [PV], [UV], [VV], [IP], [SH_google], [SH_soso], [SH_baidu], [SH_sogou], [SH_yahoo], [SH_bing], [SH_youdao], [SH_gougou], [CT_beijing], [CT_shanghai], [CT_guangzhou], [CT_shenzhen], [NT_ChinaMobile], [NT_ChinaUnicom], [NT_ChinaTelecom], [BS_Safari], [BS_Chrome], [BS_Opera], [BS_IE], [BS_UC], [BS_QQ], [HangBiaoShi]) VALUES (N'874', N'1000', N'0', N'2024-07-31 16:49:39.723', N'116', N'17', N'527', N'12', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'97', N'0', N'0', N'0', N'0', N'0', N'0')
+GO
+
 SET IDENTITY_INSERT [dbo].[wap_vcount_everyDate] OFF
 GO
 
@@ -14701,2414 +11700,6 @@ GO
 SET IDENTITY_INSERT [dbo].[wap_wml] ON
 GO
 
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'1', N'123', N'269', N'搜索', N'', N'', N'<div class="sou"><form name="g" action="/article/book_list.aspx" method="get"><input type="text" name="key" size="5"/><input type="hidden" name="type" value="title"/><input type="hidden" name="siteid" value="[siteid]"/><input type="hidden" name="classid" value="0"/><input type="hidden" name="action" value="search"/><input type="hidden" name="sid" value="[sid]"/><span><input type="submit" value=" "/></span></form></div>', N'0', N'0', N'2012-12-09 23:38:00', N'0', N'0', N'<div class="sou"><form name="g" action="/article/book_list.aspx" method="get"><input type="text" name="key" size="5"/><input type="hidden" name="type" value="title"/><input type="hidden" name="siteid" value="[siteid]"/><input type="hidden" name="classid" value="0"/><input type="hidden" name="action" value="search"/><input type="hidden" name="sid" value="[sid]"/><span><input type="submit" value=" "/></span></form></div>', NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'2', N'124', N'274', N'搜索', N'', N'', N'<form name="g" action="/download/book_list.aspx" method="get"><input type="text" name="key" value="请输入关键字" size="10"/><input type="hidden" name="type" value="title"/><input type="hidden" name="siteid" value="[siteid]"/><input type="hidden" name="classid" value="0"/><input type="hidden" name="action" value="search"/><input type="hidden" name="sid" value="[sid]"/><input type="submit" value="搜下载"/></form> ', N'0', N'0', N'2013-01-17 12:05:00', N'0', N'0', N'<form name="g" action="/download/book_list.aspx" method="get"><input class="searchTxt" type="text" name="key" value="请输入关键字" size="10"/><input type="hidden" name="type" value="title"/><input type="hidden" name="siteid" value="[siteid]"/><input type="hidden" name="classid" value="0"/><input type="hidden" name="action" value="search"/><input type="hidden" name="sid" value="[sid]"/><input type="submit" class="searchBtn" value=" "/></form> ', N'0', N'124', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'3', N'125', N'277', N'网站首页', N'', N'', N'', N'0', N'4', N'2014-06-27 22:43:00', N'0', N'0', N'        <div id="indexWrapper">
-            <!--            Index BG SLider, Put here your images-->
-            <div id="IndexBGSlider" class="flexslider-bgslider"> 
-                <ul class="slides">
-                	<li>
-                    	<a href="#" title="客照">
-                    		<img src="/Template/125/uploads/allimg/131206/1-1312061A3330-L.jpg" alt="客照" title="客照" border="0" />
-                        </a>
-                    </li><li>
-                    	<a href="#" title="内景">
-                    		<img src="/Template/125/uploads/allimg/131206/1-1312061A3150-L.jpg" alt="内景" title="内景" border="0" />
-                        </a>
-                    </li><li>
-                    	<a href="#" title="外景">
-                    		<img src="/Template/125/uploads/allimg/131206/1-1312061A2550-L.jpg" alt="外景" title="外景" border="0" />
-                        </a>
-                    </li><li>
-                    	<a href="#" title="品牌">
-                    		<img src="/Template/125/uploads/allimg/131206/1-1312061A1270-L.jpg" alt="品牌" title="品牌" border="0" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--            headlineSection-->
-            <div id="BigHeadline">
-                <h1><img src="/Template/125/templets/m2013/img/logo1.png"></h1>
-            </div> 
-            <!--            Main Nav Section-->
-            <div id="MainNavHome">
-                <div class="flexslider-nav"> 
-                    <ul class="slides">
-                        <li>
-                            <a href="/picture/list.aspx?classid=280">
-                                <p>作品</p><p class="NavItemInfo">PHOTOS</p>
-                            </a>
-                            <a href="/picture/list.aspx?classid=281">
-                                <p>场景</p><p class="NavItemInfo">SCENSE</p>
-                            </a>
-                            <a href="/wapindex.aspx?siteid=125&amp;classid=279">
-                                <p>活动</p><p class="NavItemInfo">EVENTS</p>
-                            </a>
-                            <a href="/picture/list.aspx?classid=282">
-                                <p>套餐</p><p class="NavItemInfo">SERVICE</p>
-                            </a>
-							 <a href="/wapindex.aspx?siteid=125&amp;classid=278">
-                                <p>品牌</p><p class="NavItemInfo">BRAND</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--            footer section-->
-<div id="footer" class="IndexFooter">
-    <span>
-        <a href="/wapindex.aspx?siteid=125&amp;classid=278" target="_blank"><img src="/Template/125/templets/m2013/img/socialIcons/zixun.png" alt="咨询" /></a>
-        <a href="wtai://wp/mc;4000048028"><img src="/Template/125/templets/m2013/img/socialIcons/tel.png" alt="拨打电话" /></a>
-        <a href="/wapindex.aspx?siteid=125&amp;classid=279"><img src="/Template/125/templets/m2013/img/socialIcons/down.png" alt="咨询" /></a>
-    </span>
-</div> 
-        </div>', N'0', N'125', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'4', N'125', N'277', N'关于我们页面', N'', N'', N'', N'0', N'8', N'2014-06-28 10:15:00', N'0', N'0', N'<div id="Headline">
-    <h1><img src="/Template/125/templets/m2013/img/logo2.png"></h1>
-</div> 
-<!--            Main Nav Section-->
-<div id="MainNav">
-    <div class="flexslider-nav"> 
- <ul class="slides">
-                        <li>
-                            <a href="/picture/list.aspx?classid=280">
-                                <p>作品</p><p class="NavItemInfo">PHOTOS</p>
-                            </a>
-                            <a href="/picture/list.aspx?classid=281">
-                                <p>场景</p><p class="NavItemInfo">SCENSE</p>
-                            </a>
-                            <a href="/wapindex.aspx?siteid=125&amp;classid=279">
-                                <p>活动</p><p class="NavItemInfo">EVENTS</p>
-                            </a>
-                            <a href="/picture/list.aspx?classid=282">
-                                <p>套餐</p><p class="NavItemInfo">SERVICE</p>
-                            </a>
-							 <a href="/wapindex.aspx?siteid=125&amp;classid=278">
-                                <p>品牌</p><p class="NavItemInfo">BRAND</p>
-                            </a>
-                        </li>
-                    </ul>
-    </div>
-</div>
-<ul id="ShowingRibbons">
-    <li id="RBNShowMenu"><img src="/Template/125/templets/m2013/img/RED/dropdown_show.png" alt="Show Menu" /></li>
-    <li><a href="/wapindex.aspx?siteid=125&amp;classid=0"><img src="/Template/125/templets/m2013/img/RED/dropdown_index.png" alt="Back to homepage" /></a></li>
-</ul> 
-        <!--        main Content-->
-        <div class="ContentWrapper" id="HomeContentWrapper">
-            <span class="BigComments"></span>
-            <h2>柯林摄影品牌介绍</h2>
-            <p class="BlogInfo">ABOUT JIALIPHOTO</p>
-            <img class="HeadlineImg" src="/Template/125/templets/m2013/ad/ad2.jpg" alt="Blog Image" />
-            <p>
-            	广州柯林摄影艺术有限公司是由&ldquo;全国人像摄影十杰&rdquo;、&ldquo;广州摄影大师&rdquo;、&ldquo;第九届广州市青年英才&rdquo;、国际评委房翔先生于1994年创立。经过十几年的发展，目前拥有&ldquo;柯林摄影&rdquo;、&ldquo;巴黎春天&rdquo;、&ldquo;索菲亚婚礼广场&rdquo;、&ldquo;童梦奇缘&rdquo;等四大品牌；更有滨江至爱影城、西溪主题摄影基地、青山湖罗曼私人摄影会所、上海美兰湖摄影基地等四大外景与实景相结合的国际化拍摄基地。国际知名艺人与体育界巨星如大S、何润东、汤唯、周迅、姚明和妻子叶莉都在柯林机构留下足迹。<br />
-<br />
-柯林摄影是柯林旗下最大的时尚婚纱摄影品牌，千万巨资打造的柯林&ldquo;爱会所&rdquo;，坐拥10万平米的梦幻西湖摄影基地是集国际顶级的设计理念，诠释了登峰造极的艺术享受。<br />
-<br />
-公司在2005年获得了由中国内贸部、中国人像摄影协会颁布的&ldquo;中国十佳婚纱影楼&rdquo;的称号，同时董事长房翔先生也被评为&ldquo;中国婚纱行业最具影响力人物&rdquo;。<br />
-<br />
-1996年以来，柯林摄影先后获得了&ldquo;全国摄影名店&rdquo;、&ldquo;全国摄影百强企业&rdquo;、&ldquo;亚太华人婚纱摄影金像奖&rdquo;、&ldquo;浙江省著名婚纱摄影品牌&rdquo;、&ldquo;广州市特级照相店&rdquo;、&ldquo;广东省消费者信得过单位&rdquo;、&ldquo;中国十佳化妆师&rdquo;、&ldquo;中国摄影名师&rdquo;、&ldquo;中国优秀数码名师&rdquo;等多项荣誉。其几百幅作品也获得国内外金奖、银奖、铜奖，以及国际顶级摄影大赛&ldquo;奥赛&rdquo;连续三年金奖。 2011年柯林摄影私属花园拍摄基地&ldquo;左岸&middot;万国花园&rdquo;绚烂绽放，从此柯林摄影多了一个画一般的后花园。客人在这里将不受季节的限制，可以畅拍一年四季万国花海。每一天都可以拍到不一样的花景，让每一对客人的花海留影都是独一无二的。左岸&middot;万国花园很快就成为杭城新人最爱的结婚照拍摄外景地之一。&nbsp;
-            </p>
-            <!--My skills section -->
-						<span class="BigComments"></span>
-                    <h2>柯林摄影核心特色</h2>
-                    <p class="BlogInfo">OUR SPECIAL SERVICE</p>
-
-            <div class="TwoTapes">
-                <img class="leftTape" src="/Template/125/templets/m2013/img/tapeLeft.png" alt="Left tape" />
-                <img class="rightTape" src="/Template/125/templets/m2013/img/tapeRight.png" alt="Right tape" />
-            </div>
-            <ul class="NotepadLines">
-                <li></li>
-                <li class="listCorrect">坚持原创，我们只创造流行</li>
-                <li class="listCorrect">采购国际一线品牌，最完美新娘</li>
-                <li class="listCorrect">超过6家门店服务全国结婚新人</li>
-                <li class="listCorrect">建立6s服务体系，保障100%满意</li>
-                <li class="listCorrect">坚持原创，我们只创造流行</li>
-                <li class="listCorrect">采购国际一线品牌，最完美新娘</li>
-                <li class="listCorrect">超过6家门店服务全国结婚新人</li>
-                <li></li>
-            </ul>
-            <!--Latest News Section-->
-			<span class="BigComments"></span>
-                    <h2>柯林摄影十大品质承诺</h2>
-                    <p class="BlogInfo">10 COMMITMENTS</p>
-
-            <div class="TwoTapes">
-                <img class="leftTape" src="/Template/125/templets/m2013/img/tapeLeft.png" alt="Left tape" />
-                <img class="rightTape" src="/Template/125/templets/m2013/img/tapeRight.png" alt="Right tape" />
-            </div>
-            <ul class="NotepadLines">
-                <li></li>
-                <li class="listCorrect">1：21年诚信经营，品质保证</li>
-                <li class="listCorrect">2：全国十大婚纱摄影品牌</li>
-                <li class="listCorrect">3：广州本土唯一认证品牌</li>
-                <li class="listCorrect">4：所有拍摄底片全部赠送</li>
-                <li class="listCorrect">5：专业门市顾问全程服务</li>
-                <li class="listCorrect">6：产品质量终身保证</li>
-                <li class="listCorrect">7：拍摄不满意无条件重拍</li>
-				<li class="listCorrect">8：拍摄过程透明消费</li>
-                <li class="listCorrect">9：拍摄前无条件更换套系</li>
-                <li class="listCorrect">10：所有化妆品饰品均免费使用</li>
-                <li></li>
-            </ul>
-            <!--Latest News Section-->
-			<span class="BigComments"></span>
-            <h2>柯林摄影服务门店</h2>
-            <p class="BlogInfo">OUR SHOP ADDRESS</p>
-			<img class="HeadlineImg" src="/Template/125/templets/m2013/ad/ad3.jpg" alt="Blog Image" />
-            <ul id="LatestNewsItems">
-                <li>
-                    <span class="Comments"></span>
-                    <h4><a href="default.htm">[珠海]珠海办事处</a></h4>
-                    <p>珠海市前山科技园华威路128号311室（爱嘉酒店三楼）;<a href="tel:0566231585">056-6231585</a>[点击号码直接咨询]</p>
-                </li>
-				 <li>
-                    <span class="Comments"></span>
-                    <h4><a href="default.htm">[广州]广州办事处</a></h4>
-                    <p>广州市番禺区大石街沿江中路73号神怡商业中心5A12室 ;<a href="wtai://wp/mc;0566231585">056-6231585</a>[点击号码直接咨询]</p>
-                </li>
-                <li>
-                    <span class="Comments"></span>
-                    <h4><a href="default.htm">[拍迅]前端开发工作室</a></h4>
-                    <p>广州南洋理工职业学院;<a href="wtai://wp/mc;4000048028">4000-048-028</a>[点击号码直接咨询]</p>
-                </li>
-            </ul>
-        </div>
-        <!--            footer section-->
-<div id="footer">
-    <span>
-        <a href="/wapindex.aspx?siteid=125&amp;classid=278" target="_blank"><img src="/Template/125/templets/m2013/img/socialIcons/zixun.png" alt="咨询" /></a>
-        <a href="wtai://wp/mc;4000048028"><img src="/Template/125/templets/m2013/img/socialIcons/tel.png" alt="拨打电话" /></a>
-        <a href="/wapindex.aspx?siteid=125&amp;classid=279"><img src="/Template/125/templets/m2013/img/socialIcons/down.png" alt="咨询" /></a>
-    </span>
-</div> ', N'0', N'125', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'5', N'125', N'277', N'活动页面', N'', N'', N'', N'0', N'9', N'2014-06-28 11:01:00', N'0', N'0', N'<div id="Headline">
-    <h1><img src="/Template/125/templets/m2013/img/logo2.png"></h1>
-</div> 
-<!--            Main Nav Section-->
-<div id="MainNav">
-    <div class="flexslider-nav"> 
- <ul class="slides">
-                        <li>
-                            <a href="/picture/list.aspx?classid=280">
-                                <p>作品</p><p class="NavItemInfo">PHOTOS</p>
-                            </a>
-                            <a href="/picture/list.aspx?classid=281">
-                                <p>场景</p><p class="NavItemInfo">SCENSE</p>
-                            </a>
-                            <a href="/wapindex.aspx?siteid=125&amp;classid=279">
-                                <p>活动</p><p class="NavItemInfo">EVENTS</p>
-                            </a>
-                            <a href="/picture/list.aspx?classid=282">
-                                <p>套餐</p><p class="NavItemInfo">SERVICE</p>
-                            </a>
-							 <a href="/wapindex.aspx?siteid=125&amp;classid=278">
-                                <p>品牌</p><p class="NavItemInfo">BRAND</p>
-                            </a>
-                        </li>
-                    </ul>
-    </div>
-</div>
-<ul id="ShowingRibbons">
-    <li id="RBNShowMenu"><img src="/Template/125/templets/m2013/img/RED/dropdown_show.png" alt="Show Menu" /></li>
-    <li><a href="/wapindex.aspx?siteid=125&amp;classid=0"><img src="/Template/125/templets/m2013/img/RED/dropdown_index.png" alt="Back to homepage" /></a></li>
-</ul> 
-        <!--        main Content-->
-        <div class="ContentWrapper" id="BlogSContentWrapper">
-            <!--            Blog Content-->
-            <div id="BlogPost">
-                <span class="BigComments"></span>
-                <h2>柯林摄影双旦狂欢年终盛典</h2>
-                <p class="BlogInfo">时效:2014-11-25 范围：各门店通用</p>
-                <img src="/Template/125/uploads/allimg/131203/1-1312031441260-L.jpg" alt="[field:title/]" title="[field:title/]" border="0" />
-                <span class="BigComments"></span> <h2>活动说明</h2>
-                <p class="BlogInfo">EVENT INFORMATION</p>
-                <p>
-                    柯林摄影双旦狂欢年终盛典，定5000享10000<br />
-
-
-                </p>
-            </div>
-			<img alt="" src="/Template/125/uploads/allimg/131203/1-131203144201D4.jpg" style="margin-left: -20px;" /><br />
-            <!--            Quote-->
-
-           <span class="BigComments"></span>
-                    <h2>大家关注的问题</h2>
-                    <p class="BlogInfo">MORE COMMENTS</p>
-            <ul class="CommentsList">
-                <li>
-                    <div class="CommentContent">
-                        <img class="UserIcon" src="/Template/125/templets/m2013/img/commentdefaultIcon.jpg" alt="User icon" />
-                         <span>[提问]</span> <h5>如何领取大红包呢？</h5>
-                      
-                        <p>
-                           这个问题比较困难结婚的时候首选就是柯林，因为看过同事拍的，觉得唯美的风格很喜欢，所以柯林是第一选择。
-柯林的服务可以用专业来形容， 每一个步骤都比较到位，因为已经形成流程了，也没有特别推销，照片拍的也不错，婚纱照一般都比本人要美。
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="CommentContent">
-                        <img class="UserIcon" src="/Template/125/templets/m2013/img/commentdefaultIcon.jpg" alt="User icon" />
-                        <span>[提问]</span> <h5>外地客人可以享受优惠么</h5>
-                        <p>
-                            算是杭州人气最旺的婚纱影楼了，分布的门店也很广，当然，还是喜欢在总店逛逛，这里的营业员和摄影师都是最资深的，审美观相当好，从专业角度来说，就是一眼就能为你挑选出最理想最贴身的礼服，甚至超出你的各种对礼服的想象！. 
-                        </p>
-                    </div>
-                </li>
-            </ul>
-            <!--            contactForm-->
-			<span class="BigComments"></span>
-            <h2>活动报名登记</h2>
-            <p class="BlogInfo">请您填写真实资料，通过手机报名享受活动优惠。</p>
-<form name="formedit" action="/FormEdit/book_view.aspx" method="post" onsubmit="return checkSubmit();" style="margin-left: -20px;">姓名:<input name="KL0" value="" size="0" type="text"><br>手机:<input name="KL1" value="" size="11" type="text"><br>需求:<input style="height: 100px;" name="KL2" value="" size="0" type="text"><br><input name="action" value="gosubmit" type="hidden"><input name="id" value="1" type="hidden"><input name="classid" value="0" type="hidden"><input name="siteid" value="[siteid]" type="hidden"><input name="backurl" value="formedit/book_view.aspx?siteid=[siteid]&amp;classid=0&amp;id=1" type="hidden"><input name="sid" value="[sid]" type="hidden"><input name="bt" class="btn" value="提交活动报名登记信息" type="submit"></form>	</div>
-        <!--            footer section-->
-<div id="footer">
-    <span>
-        <a href="/wapindex.aspx?siteid=125&amp;classid=278" target="_blank"><img src="/Template/125/templets/m2013/img/socialIcons/zixun.png" alt="咨询" /></a>
-        <a href="wtai://wp/mc;4000048028"><img src="/Template/125/templets/m2013/img/socialIcons/tel.png" alt="拨打电话" /></a>
-        <a href="/wapindex.aspx?siteid=125&amp;classid=279"><img src="/Template/125/templets/m2013/img/socialIcons/down.png" alt="咨询" /></a>
-    </span>
-</div> ', N'0', N'125', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'6', N'125', N'277', N'全局底部', N'', N'', N'', N'0', N'2', N'2014-06-28 11:21:00', N'0', N'0', N'<div id="footer" class="IndexFooter">
-    <span>
-        <a href="/wapindex.aspx?siteid=125&amp;classid=278" target="_blank"><img src="/Template/125/templets/m2013/img/socialIcons/zixun.png" alt="咨询" /></a>
-        <a href="wtai://wp/mc;4000048028"><img src="/Template/125/templets/m2013/img/socialIcons/tel.png" alt="拨打电话" /></a>
-        <a href="/wapindex.aspx?siteid=125&amp;classid=279"><img src="/Template/125/templets/m2013/img/socialIcons/down.png" alt="咨询" /></a>
-    </span>
-</div> 
-        </div>', NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'7', N'125', N'277', N'顶部', N'', N'', N'', N'0', N'3', N'2014-06-28 12:08:00', N'0', N'0', N'<div id="Headline">
-    <h1><img src="/Template/125/templets/m2013/img/logo2.png"></h1>
-</div> 
-<!--            Main Nav Section-->
-<div id="MainNav">
-    <div class="flexslider-nav"> 
- <ul class="slides">
-                        <li>
-                            <a href="/picture/list.aspx?classid=280">
-                                <p>作品</p><p class="NavItemInfo">PHOTOS</p>
-                            </a>
-                            <a href="/picture/list.aspx?classid=281">
-                                <p>场景</p><p class="NavItemInfo">SCENSE</p>
-                            </a>
-                            <a href="/wapindex.aspx?siteid=125&amp;classid=279">
-                                <p>活动</p><p class="NavItemInfo">EVENTS</p>
-                            </a>
-                            <a href="/picture/list.aspx?classid=282">
-                                <p>套餐</p><p class="NavItemInfo">SERVICE</p>
-                            </a>
-							 <a href="/wapindex.aspx?siteid=125&amp;classid=278">
-                                <p>品牌</p><p class="NavItemInfo">BRAND</p>
-                            </a>
-                        </li>
-                    </ul>
-    </div>
-</div>
-<ul id="ShowingRibbons">
-    <li id="RBNShowMenu"><img src="/Template/125/templets/m2013/img/RED/dropdown_show.png" alt="Show Menu" /></li>
-    <li><a href="/wapindex.aspx?siteid=125&amp;classid=0"><img src="/Template/125/templets/m2013/img/RED/dropdown_index.png" alt="Back to homepage" /></a></li>
-</ul> ', N'0', N'125', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'8', N'125', N'277', N'底部', N'', N'', N'', N'0', N'2', N'2014-06-28 12:11:00', N'0', N'0', N'        <!--            footer section-->
-<div id="footer">
-    <span>
-        <a href="/wapindex.aspx?siteid=125&amp;classid=278" target="_blank"><img src="/Template/125/templets/m2013/img/socialIcons/zixun.png" alt="咨询" /></a>
-        <a href="wtai://wp/mc;4000048028"><img src="/Template/125/templets/m2013/img/socialIcons/tel.png" alt="拨打电话" /></a>
-        <a href="/wapindex.aspx?siteid=125&amp;classid=279"><img src="/Template/125/templets/m2013/img/socialIcons/down.png" alt="咨询" /></a>
-    </span>
-</div> ', NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'9', N'126', N'301', N'首页', N'', N'', N'', N'0', N'9', N'2014-07-01 17:35:00', N'0', N'0', N'<div id="wrapper">
-  <div class="swipe">
-    <ul id="slider">
-        <li><img src="/Template/126/images/banner.jpg" /></li>
-        <li><img src="/Template/126/images/banner.jpg" /></li>
-        <li><img src="/Template/126/images/banner.jpg" /></li>
-        <li><img src="/Template/126/images/banner.jpg" /></li>
-    </ul>
-    <div id="pagenavi"></div>
-  </div>
-</div>
-<!--网站栏目-->
-<nav>
-	<ul>
-		<li><a href="/wapindex.aspx?siteid=126&amp;classid=283"><img src="/Template/126/images/img01.jpg" /><span>车型介绍页</span></a></li>
-        <li><a href="/article/list.aspx?classid=285"><img src="/Template/126/images/img02.jpg" /><span>新车资讯</span></a></li>
-        <li><a href="/wapindex.aspx?siteid=126&amp;classid=284"><img src="/Template/126/images/img03.jpg" /><span>车型列表</span></a></li>
-        <li><a href="#"><img src="/Template/126/images/img04.jpg" /><span>预约保险</span></a></li>
-        <li><a href="#"><img src="/Template/126/images/img05.jpg" /><span>置换服务</span></a></li>
-        <li><a href="/wapindex.aspx?siteid=126&amp;classid=286"><img src="/Template/126/images/img06.jpg" /><span>联系我们</span></a></li>
-	</ul>
-</nav>', N'0', N'126', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'10', N'126', N'301', N'全局底部', N'', N'', N'', N'0', N'2', N'2014-07-01 18:00:00', N'0', N'0', N'</div><footer><a href="javascript:history.back()" id="fanhui"></a><a href="/wapindex.aspx?siteid=126&amp;classid=0" id="home"></a><a href="#" id="list" onclick="fadeIn(document.getElementById(''huhu''));"></a><a href="tel:4000048029" id="tel"></a><a href="/wapindex.aspx?siteid=126&amp;classid=286" id="map"></a></footer>', N'0', N'126', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'11', N'126', N'301', N'全局顶部导航', N'', N'', N'', N'0', N'0', N'2014-07-01 18:17:00', N'0', N'0', N'<div id="huhu" style="display: none;"  class="nav">
-   <h1>网站导航</h1> 
-   <ul>
-      <li><a href="/wapindex.aspx?siteid=126&amp;classid=283">车型介绍页</a></li>
-      <li><a href="/wapindex.aspx?siteid=126&amp;classid=284">车型列表</a></li>
-      <li><a href="/article/list.aspx?classid=285">汽车资讯</a></li>
-      <li><a href="/wapindex.aspx?siteid=126&amp;classid=286">联系我们</a></li>
-      <li><a href="#">置换服务</a></li>
-      <li><a href="#">新车上市</a></li>
-   </ul>
-</div>
-<div onclick="fadeOut(document.getElementById(''huhu''),50);" style="width: 100%; height: 100%;">', N'0', N'126', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'12', N'126', N'301', N'车型介绍页面', N'', N'', N'', N'0', N'2', N'2014-07-02 13:30:00', N'0', N'0', N'<div id="wrapper">
-  <div class="swipe">
-    <ul id="slider">
-        <li><img src="/Template/126/images/banner.jpg" /></li>
-        <li><img src="/Template/126/images/banner.jpg" /></li>
-        <li><img src="/Template/126/images/banner.jpg" /></li>
-        <li><img src="/Template/126/images/banner.jpg" /></li>
-    </ul>
-    <div id="pagenavi"></div>
-  </div>
-</div>
- 
- <div class="car_xx">
-    <p  class="car_name">奔驰M级AMG(进口) ML 63 AMG 2014款</p>
-    <p class="car_peizhi">5.5L，手自一体</p>
-    <p>报价：<span class="jiage">189.80万</span></p>
-    <p><a href="tel:4000048028" class="bttn dhbj"><span>电话询价</span></a><a href="#" class="bttn sqsj"><span>申请试驾</span></a></p>
- </div>
- 
- <div class="car_fenlei"><strong>配置<span id="jiao"><svg width="10" height="5">
-  <polygon points="0,5 10,5 5,0"   style="fill:#666;"/>
-</svg></span></strong></div>
-<div class="box">
-<table width="100%" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<th colspan="2"><span>基本信息</span></th>
-</tr>
-<tr>
-<td>
-<span>上市日期(月)：</span>
-<p>1</p>
-</td>
-<td>
-<span>上市日期(年)：</span>
-<p>2014</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>保修政策：</span>
-<p>三年不限公里</p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<th colspan="2"><span>基本参数</span></th>
-</tr>
-<tr>
-<td>
-<span>加速距离：</span>
-<p>0.00</p>
-</td>
-<td>
-<span>百公里等速油耗速度：</span>
-<p>综合</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>最高车速：</span>
-<p>250</p>
-</td>
-<td>
-<span>乘员人数（含司机）：</span>
-<p>5</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>最小转弯半径：</span>
-<p>5.00</p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<th colspan="2"><span>车身结构</span></th>
-</tr>
-<tr>
-<td>
-<span>车门数：</span>
-<p>5</p>
-</td>
-<td>
-<span>车顶型式：</span>
-<p>硬顶</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>车身型式：</span>
-<p>两厢</p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<th colspan="2"><span>外部尺寸</span></th>
-</tr>
-<tr>
-<td>
-<span>高：</span>
-<p>1796</p>
-</td>
-<td>
-<span>长：</span>
-<p>4804</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>轴距：</span>
-<p>2915</p>
-</td>
-<td>
-<span>宽：</span>
-<p>1926</p>
-</td>
-</tr>
-<tr>
-<th colspan="2"><span>内部尺寸</span></th>
-</tr>
-<tr>
-<td>
-<span>行李箱容积：</span>
-<p>1499</p>
-</td>
-<td>
-<span>行李箱最大拓展容积：</span>
-<p>2050</p>
-</td>
-</tr>
-<tr>
-<th colspan="2"><span>发动机与变速箱</span></th>
-</tr>
-<tr>
-<td>
-<span>增压方式：</span>
-<p>双涡轮增压</p>
-</td>
-<td>
-<span>气门结构：</span>
-<p>双顶置凸轮(DOHC)</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>三元催化器：</span>
-<p>有</p>
-</td>
-<td>
-<span>压缩比：</span>
-<p>10.00</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>缸径：</span>
-<p>98.00</p>
-</td>
-<td>
-<span>缸体材料：</span>
-<p>铝合金</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>汽缸数：</span>
-<p>8</p>
-</td>
-<td>
-<span>气缸排列型式：</span>
-<p>V型</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>缸盖材料：</span>
-<p>铝合金</p>
-</td>
-<td>
-<span>环保标准：</span>
-<p>欧5</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>排量：</span>
-<p>5461</p>
-</td>
-<td>
-<span>进气型式：</span>
-<p>增压</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>发动机位置：</span>
-<p>前置</p>
-</td>
-<td>
-<span>最大扭矩—扭矩值：</span>
-<p>700</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>最大功率—功率值：</span>
-<p>386</p>
-</td>
-<td>
-<span>最大扭矩—转速：</span>
-<p>5200</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>最大功率—转速：</span>
-<p>6800</p>
-</td>
-<td>
-<span>行程：</span>
-<p>98.00</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>特有技术：</span>
-<p>双涡轮增压</p>
-</td>
-<td>
-<span>型号：</span>
-<p>156 980</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>每缸气门数：</span>
-<p>4</p>
-</td>
-<td>
-<span>燃油箱容积：</span>
-<p>93</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>燃油标号：</span>
-<p>93号</p>
-</td>
-<td>
-<span>燃料类型：</span>
-<p>汽油</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>供油方式：</span>
-<p>直喷</p>
-</td>
-<td>
-<span>变速箱类型：</span>
-<p>手自一体</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>档位个数：</span>
-<p>7</p>
-</td>
-<td>
-<span>变速箱变速杆位置：</span>
-<p>地排</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>排量（升）：</span>
-<p>5.5</p>
-</td>
-<td>
-<span>最大马力：</span>
-<p>525</p>
-</td>
-</tr>
-<tr>
-<th colspan="2"><span>底盘操控</span></th>
-</tr>
-<tr>
-<td>
-<span>随速助力转向调节(EPS)：</span>
-<p>有</p>
-</td>
-<td>
-<span>转向助力：</span>
-<p>电子</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>前制动类型：</span>
-<p>通风盘</p>
-</td>
-<td>
-<span>前轮毂规格：</span>
-<p>20英寸</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>前悬挂类型：</span>
-<p>双叉臂式独立悬挂</p>
-</td>
-<td>
-<span>前轮胎规格：</span>
-<p>265/45 R20</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>手刹类型：</span>
-<p>电子驻车制动</p>
-</td>
-<td>
-<span>后制动类型：</span>
-<p>通风盘</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>后轮毂规格：</span>
-<p>20英寸</p>
-</td>
-<td>
-<span>后悬挂类型：</span>
-<p>多连杆式独立悬挂</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>后轮胎规格：</span>
-<p>265/45 R20</p>
-</td>
-<td>
-<span>轮毂材料：</span>
-<p>铝合金</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>减震器类型：</span>
-<p>空气</p>
-</td>
-<td>
-<span>备胎位置：</span>
-<p>车内</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>备胎类型：</span>
-<p>非全尺寸</p>
-</td>
-<td>
-<span>驱动方式：</span>
-<p>全时四驱</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>底盘结构：</span>
-<p>承载式</p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<th colspan="2"><span>外部配置</span></th>
-</tr>
-<tr>
-<td>
-<span>后窗遮阳帘：</span>
-<p>无</p>
-</td>
-<td>
-<span>运动包围：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>行李箱盖开合方式：</span>
-<p>电动</p>
-</td>
-<td>
-<span>天窗型式：</span>
-<p>全景</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>天窗开合方式：</span>
-<p>电动</p>
-</td>
-<td>
-<span>车篷型式：</span>
-<p>硬顶</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>车顶行李箱架：</span>
-<p>有</p>
-</td>
-<td>
-<span>后导流尾翼：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>行李箱打开方式：</span>
-<p>掀背</p>
-</td>
-<td>
-<span>电动吸合门：</span>
-<p>无</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>行李箱电动吸合门：</span>
-<p>有</p>
-</td>
-<td>
-<span>运动外观套件：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<th colspan="2"><span>内部配置</span></th>
-</tr>
-<tr>
-<td>
-<span>车内电源电压：</span>
-<p>12V</p>
-</td>
-<td>
-<span>车厢后阅读灯：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>行车电脑：</span>
-<p>有</p>
-</td>
-<td>
-<span>HUD抬头数字显示：</span>
-<p>无</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>多功能方向盘功能：</span>
-<p>音响调节,定速巡航,蓝牙</p>
-</td>
-<td>
-<span>多功能方向盘：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>燃油不足警告方式：</span>
-<p>灯光</p>
-</td>
-<td>
-<span>仪表板显示型式：</span>
-<p>指针</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>换档拨片：</span>
-<p>有</p>
-</td>
-<td>
-<span>方向盘表面材料：</span>
-<p>真皮/皮革</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>方向盘记忆设置：</span>
-<p>有</p>
-</td>
-<td>
-<span>方向盘幅数：</span>
-<p>4</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>方向盘调节方式：</span>
-<p>电动</p>
-</td>
-<td>
-<span>转速表：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>倒车雷达（车后）：</span>
-<p>有</p>
-</td>
-<td>
-<span>倒车影像：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>车厢前阅读灯：</span>
-<p>有</p>
-</td>
-<td>
-<span>定速巡航：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>方向盘上下调节：</span>
-<p>有</p>
-</td>
-<td>
-<span>方向盘前后调节：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>泊车雷达（车前）：</span>
-<p>有</p>
-</td>
-<td>
-<span>行车电脑显示屏：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<th colspan="2"><span>灯光配置</span></th>
-</tr>
-<tr>
-<td>
-<span>侧转向灯：</span>
-<p>外后视镜</p>
-</td>
-<td>
-<span>前雾灯：</span>
-<p>无</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>前照灯自动清洗功能：</span>
-<p>有</p>
-</td>
-<td>
-<span>前大灯自动开闭：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>前照灯照射范围调整：</span>
-<p>有</p>
-</td>
-<td>
-<span>前大灯随动转向：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>前照灯类型：</span>
-<p>氙气</p>
-</td>
-<td>
-<span>高位（第三）制动灯：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>日间行车灯：</span>
-<p>有</p>
-</td>
-<td>
-<span>车内氛围灯：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>LED尾灯：</span>
-<p>无</p>
-</td>
-<td>
-<span>转向头灯（辅助灯）：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>后雾灯：</span>
-<p>有</p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<th colspan="2"><span>玻璃/后视镜</span></th>
-</tr>
-<tr>
-<td>
-<span>防紫外线/隔热玻璃：</span>
-<p>防紫外线+隔热</p>
-</td>
-<td>
-<span>后排侧遮阳帘：</span>
-<p>无</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>内后视镜防眩目功能：</span>
-<p>有</p>
-</td>
-<td>
-<span>外后视镜电动调节：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>外后视镜电动折叠功能：</span>
-<p>有</p>
-</td>
-<td>
-<span>外后视镜加热功能：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>外后视镜记忆功能：</span>
-<p>有</p>
-</td>
-<td>
-<span>前风窗玻璃类型：</span>
-<p>防紫外线隔热玻璃</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>后风窗玻璃类型：</span>
-<p>防紫外线隔热玻璃</p>
-</td>
-<td>
-<span>车窗：</span>
-<p>前后电动窗</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>感应雨刷：</span>
-<p>有</p>
-</td>
-<td>
-<span>后雨刷器：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>电动窗防夹功能：</span>
-<p>全车车窗</p>
-</td>
-<td>
-<span>电动窗锁止功能：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>遮阳板化妆镜：</span>
-<p>有</p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<th colspan="2"><span>多媒体配置</span></th>
-</tr>
-<tr>
-<td>
-<span>VCD：</span>
-<p>有</p>
-</td>
-<td>
-<span>车载电视：</span>
-<p>选配</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>DVD碟数：</span>
-<p>6</p>
-</td>
-<td>
-<span>DVD：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>车载电话：</span>
-<p>有</p>
-</td>
-<td>
-<span>收音机：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>扬声器数量：</span>
-<p>8</p>
-</td>
-<td>
-<span>MP3：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>蓝牙系统：</span>
-<p>有</p>
-</td>
-<td>
-<span>GPS导航系统：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>音响品牌：</span>
-<p>harman/kardon LOGIC7</p>
-</td>
-<td>
-<span>后排液晶屏：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>卡带：</span>
-<p>无</p>
-</td>
-<td>
-<span>中控台液晶屏：</span>
-<p>有</p>
-
-</td>
-</tr>
-<tr>
-<td>
-<span>CD：</span>
-<p>无</p>
-</td>
-<td>
-<span>人机交互系统：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>内置硬盘：</span>
-<p>有</p>
-</td>
-<td>
-<span>内置硬盘容量：</span>
-<p>4</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>音频格式支持：</span>
-<p>MP3</p>
-</td>
-<td>
-<span>外接音源接口：</span>
-<p>AUX</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>定位互动服务：</span>
-<p>无</p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<th colspan="2"><span>便利功能</span></th>
-</tr>
-<tr>
-<td>
-<span>整体主动转向系统：</span>
-<p>无</p>
-</td>
-<td>
-<span>自动泊车入位：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>并线辅助：</span>
-<p>无</p>
-</td>
-<td>
-<span>主动刹车/主动安全系统：</span>
-<p>无</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>夜视系统：</span>
-<p>选配</p>
-</td>
-<td>
-<span>全景摄像头：</span>
-<p>无</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>电子限速：</span>
-<p>有</p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<th colspan="2"><span>座椅配置</span></th>
-</tr>
-<tr>
-<td>
-<span>前排杯架：</span>
-<p>有</p>
-</td>
-<td>
-<span>前座中央扶手：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>前座椅头枕调节：</span>
-<p>高度</p>
-</td>
-<td>
-<span>儿童安全座椅固定装置：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>衣物挂钩：</span>
-<p>有</p>
-</td>
-<td>
-<span>副驾驶座椅调节方向：</span>
-<p>8</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>副驾驶座椅调节方式：</span>
-<p>电动</p>
-</td>
-<td>
-<span>座椅加热：</span>
-<p>前排座椅</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>驾驶座椅调节记忆位置组数：</span>
-<p>3</p>
-</td>
-<td>
-<span>驾驶座腰部支撑调节：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>驾驶座座椅调节方向：</span>
-<p>8</p>
-</td>
-<td>
-<span>驾驶座座椅调节方式：</span>
-<p>电动</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>中央置物盒：</span>
-<p>有</p>
-</td>
-<td>
-<span>主动式安全头枕：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>后座椅头枕：</span>
-<p>有</p>
-</td>
-<td>
-<span>后排杯架：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>后座中央扶手：</span>
-<p>有</p>
-</td>
-<td>
-<span>运动座椅：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>座椅按摩功能：</span>
-<p>无</p>
-</td>
-<td>
-<span>座椅材质：</span>
-<p>真皮</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>驾驶座肩部支撑调节：</span>
-<p>无</p>
-</td>
-<td>
-<span>电动座椅记忆：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>座椅通风：</span>
-<p>无</p>
-</td>
-<td>
-<span>第三排座椅：</span>
-<p>无</p>
-</td>
-</tr>
-<tr>
-<th colspan="2"><span>操控技术</span></th>
-</tr>
-<tr>
-<td>
-<span>自动驻车：</span>
-<p>有</p>
-</td>
-<td>
-<span>上坡辅助：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>陡坡缓降：</span>
-<p>有</p>
-</td>
-<td>
-<span>空气悬挂：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>刹车防抱死制动系统（ABS）：</span>
-<p>有</p>
-</td>
-<td>
-<span>紧急制动辅助系统（EBA/BAS/BA/EVA等）：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>电子制动力分配系统（EBD/CBC/EBV等）：</span>
-<p>有</p>
-</td>
-<td>
-<span>动态稳定控制系统（ESP/DSC/VSC等）：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>牵引力控制系统（ASR/TCS/TRC/ATC等）：</span>
-<p>有</p>
-</td>
-<td>
-<span>可调悬挂：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>胎压监测装置：</span>
-<p>有</p>
-</td>
-<td>
-<span>零压续行（零胎压继续行驶）：</span>
-<p>无</p>
-</td>
-</tr>
-<tr>
-<th colspan="2"><span>空调/冰箱</span></th>
-</tr>
-<tr>
-<td>
-<span>后排出风口：</span>
-<p>有</p>
-</td>
-<td>
-<span>空调：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>空调控制方式：</span>
-<p>自动</p>
-</td>
-<td>
-<span>车载冰箱：</span>
-<p>无</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>温区个数：</span>
-<p>3</p>
-</td>
-<td>
-<span>后排独立空调：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>温度分区控制：</span>
-<p>有</p>
-</td>
-<td>
-<span>空气调节/花粉过滤：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<th colspan="2"><span>安全装备</span></th>
-</tr>
-<tr>
-<td>
-<span>遥控钥匙：</span>
-<p>有</p>
-</td>
-<td>
-<span>后排安全带：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>后排中间三点式安全带：</span>
-<p>有</p>
-</td>
-<td>
-<span>前安全带调节：</span>
-<p>高度可调</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>安全带预收紧功能：</span>
-<p>有</p>
-</td>
-<td>
-<span>后排头部气囊(气帘)：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>后排侧安全气囊：</span>
-<p>有</p>
-</td>
-<td>
-<span>车门防撞杆(防撞侧梁)：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>驾驶位安全气囊：</span>
-<p>有</p>
-</td>
-<td>
-<span>发动机防盗系统：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>电子防盗系统：</span>
-<p>有</p>
-</td>
-<td>
-<span>前排头部气囊(气帘)：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>前排侧安全气囊：</span>
-<p>有</p>
-</td>
-
-<td>
-<span>副驾驶位安全气囊：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>可溃缩转向柱：</span>
-<p>有</p>
-</td>
-<td>
-<span>无钥匙启动系统：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>中控门锁：</span>
-<p>有</p>
-</td>
-<td>
-<span>儿童锁：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>安全带限力功能：</span>
-<p>有</p>
-</td>
-<td>
-<span>膝部气囊：</span>
-<p>有</p>
-</td>
-</tr>
-<tr>
-<td>
-<span>安全带未系提示：</span>
-<p>有</p>
-</td>
-<td>
-<span>车内中控锁：</span>
-<p>有</p>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<br/><br/>', N'0', N'126', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'13', N'126', N'301', N'车型列表', N'', N'', N'', N'0', N'2', N'2014-07-02 13:45:00', N'0', N'0', N'<div class="car_fenlei"><strong>奔驰M级AMG(进口)<span id="jiao"><svg width="10" height="5">
-  <polygon points="0,5 10,5 5,0"   style="fill:#666;"/>
-</svg></span></strong></div>
-  <div class="car_list">
-     <ul>
-       <li><a href="#"><img src="/Template/126/images/0345147792_6.jpg"/><span>奔驰S级AMG(进口)</span></a></li>
-       <li><a href="#"><img src="/Template/126/images/0529038670_6.jpg"/><span>奔驰C级AMG(进口)</span></a></li>
-       <li><a href="#"><img src="/Template/126/images/0529333277_6.jpg"/><span>奔驰M级AMG(进口)</span></a></li>
-       <li><a href="#"><img src="/Template/126/images/0530314580_6.jpg"/><span>奔驰M级AMG(进口)</span></a></li>
-       <li><a href="#"><img src="/Template/126/images/0538471863_6.jpg"/><span>奔驰M级AMG(进口)</span></a></li>
-     </ul>
-  </div>
-  
-  <div class="car_fenlei"><strong>奔驰Smart<span id="jiao"><svg width="10"  height="5">
-  <polygon points="0,5 10,5 5,0"   style="fill:#666;"/>
-</svg></span></strong></div>
-  <div class="car_list">
-     <ul>
-       <li><a href="#"><img src="/Template/126/images/0345147792_6.jpg"/><span>奔驰S级AMG(进口)</span></a></li>
-       <li><a href="#"><img src="/Template/126/images/0529038670_6.jpg"/><span>奔驰C级AMG(进口)</span></a></li>
-       <li><a href="#"><img src="/Template/126/images/0529333277_6.jpg"/><span>奔驰M级AMG(进口)</span></a></li>
-       <li><a href="#"><img src="/Template/126/images/0530314580_6.jpg"/><span>奔驰M级AMG(进口)</span></a></li>
-       <li><a href="#"><img src="/Template/126/images/0538471863_6.jpg"/><span>奔驰M级AMG(进口)</span></a></li>
-     </ul>
-  </div><br/><br/>', N'0', N'126', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'14', N'126', N'301', N'联系我们页面', N'', N'', N'', N'0', N'8', N'2014-07-02 15:09:00', N'0', N'0', N'<div class="car_fenlei"><strong>服务门店<span id="jiao"><svg width="10" height="5">
-  <polygon points="0,5 10,5 5,0" style="fill:#666;"></polygon>
-</svg></span></strong></div>
-<div class="car_xx">
-<img src="/Template/125/templets/m2013/ad/ad3.jpg"></div>
-<div class="car_fenlei"><strong>联系我们<span id="jiao"><svg width="10" height="5">
-  <polygon points="0,5 10,5 5,0" style="fill:#666;"></polygon>
-</svg></span></strong></div>
-<div class="car_xx">
-<p>地址：珠海市前山科技园华威路128号311室（爱嘉酒店三楼）</p>
-<p>联系电话：056-6231585</p></div><br/><br/>', N'0', N'126', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'15', N'127', N'302', N'首页', N'', N'', N'', N'0', N'8', N'2014-07-10 16:21:00', N'0', N'0', N'<div class="container">
- <div class="header">
- <img src="/Template/127/Images/logo.png" style="height: 40px; margin: 10px 0px 0px 15px" />
- </div>
-     <div style="padding:0 5px 0 0;">
-      
-     <ul class="unstyled defaultlist pt20">
-         <li class="f">
-             <a href="/article/list.aspx?classid=287">
-             <h3>产品套餐</h3>
-             <figure class="jp_icon"></figure>
-             </a>
-         </li>
-         <li class="h">
-             <a href="/article/list.aspx?classid=288">
-              <h3>最新活动</h3>
-              <figure class="jd_icon"></figure>
-              </a>
-         </li>
-     </ul>
-     <ul class="unstyled defaultlist">
-         <li class="a">
-             <a href="http://kelink.com">
-                  <h3>订单查询</h3>
-              <figure class="hb_icon"></figure>
-             </a>
-             
-         </li>
-         <li class="p">
-            <a href="/wapindex.aspx?siteid=127&amp;classid=289">
-            <h3>关于我们</h3>
-            <figure class="mp_icon"></figure>
-            </a>
-         </li>
-     </ul>
-     <ul class="unstyled defaultlist">
-         <li class="t">
-            <a href="/wapindex.aspx?siteid=127&amp;classid=290">
-            <h3> 礼品商城</h3>
-            <figure class="hcp_icon"></figure>
-            </a>
-         </li>
-         
-         <li class="m">
-             <a href="/wapindex.aspx?siteid=127&amp;classid=291">
-            <h3> 帮助咨询</h3>
-            <figure class="wdxc_icon"></figure>
-              </a>
-         </li>
-       
-     </ul>
-     </div>
- </div>    ', N'0', N'127', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'16', N'127', N'302', N'全局底部', N'', N'', N'', N'0', N'2', N'2014-07-10 16:32:00', N'0', N'0', N'  <div class="footer">
-  <div class="gezifooter">
-    <p style="color:#bbb;">柯林前端开发团队 &copy; 版权所有 2012-2013</p>
-  </div>
-  </div>', NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'17', N'127', N'302', N'二级首页', N'', N'', N'', N'0', N'4', N'2014-07-10 16:43:00', N'0', N'0', N' <div class="header">
- <a href="/wapindex.aspx?siteid=127" class="home">
-            <span class="header-icon header-icon-home"></span>
-            <span class="header-name">主页</span>
-</a>
-<div class="title" id="titleString">[classname]</div>
-<a href="javascript:history.go(-1);" class="back">
-            <span class="header-icon header-icon-return"></span>
-            <span class="header-name">返回</span>
-        </a>
- </div>', N'0', N'127', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'18', N'127', N'302', N'咨询帮助', N'', N'', N'', N'0', N'2', N'2014-07-10 16:52:00', N'0', N'0', N'    <div class="container width90 pt20">
-        <img src="/Template/127/Images/help/0.jpg"/>
-        <img src="/Template/127/Images/help/1.jpg"/>
-        <img src="/Template/127/Images/help/2.jpg"/>
-        <img src="/Template/127/Images/help/3.jpg"/>
-        <img src="/Template/127/Images/help/4.jpg"/>
-        <img src="/Template/127/Images/help/5.jpg"/>
-    </div>', NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'19', N'127', N'302', N'礼品商城', N'', N'', N'', N'0', N'5', N'2014-07-10 16:58:00', N'0', N'0', N'<div class="container">
-    <ul class="giftlist unstyled">
-         
-        <li>
-            <div class="imgbox">
-   <a href="#"><img src="/Template/127/Images/13.jpg"> </a> 
-   </div>
-    <div class="desc">
-   <a href="#">萨摩充电宝</a> <br/>
-     <a href="#"><em>9600 积分 </em></a> 
-  </div>
-        </li>
-         
-        <li>
-            <div class="imgbox">
-   <a href="#"><img src="/Template/127/Images/7.jpg"> </a> 
-   </div>
-    <div class="desc">
-   <a href="#">森海塞尔耳塞 MX80</a> <br/>
-     <a href="#"><em>7600 积分 </em></a> 
-  </div>
-        </li>
-         
-        <li>
-            <div class="imgbox">
-   <a href="#"><img src="/Template/127/Images/11.jpg"> </a> 
-   </div>
-    <div class="desc">
-   <a href="#">咔咔 保温杯</a> <br/>
-     <a href="#"><em>6800 积分 </em></a> 
-  </div>
-        </li>
-         
-        <li>
-            <div class="imgbox">
-   <a href="#"><img src="/Template/127/Images/9.jpg"> </a> 
-   </div>
-    <div class="desc">
-   <a href="#">木否搪瓷杯</a> <br/>
-     <a href="#"><em>5000 积分 </em></a> 
-  </div>
-        </li>
-         
-        <li>
-            <div class="imgbox">
-   <a href="#"><img src="/Template/127/Images/8.jpg"> </a> 
-   </div>
-    <div class="desc">
-   <a href="#">关节动物收纳桶</a> <br/>
-     <a href="#"><em>5200 积分 </em></a> 
-  </div>
-        </li>
-         
-        <li>
-            <div class="imgbox">
-   <a href="#"><img src="/Template/127/Images/12.jpg"> </a> 
-   </div>
-    <div class="desc">
-   <a href="#">360随身WIFI</a> <br/>
-     <a href="#"><em>3800 积分 </em></a> 
-  </div>
-        </li>
-    </ul>
-    </div>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(''.giftlist li img'').each(function () {
-
-                var width = $(this).width(); // 图片实际宽度
-                var height = $(this).height(); // 图片实际高度
-
-                // 检查图片是否超宽
-                if (width != height) {
-                 
-                    $(this).css("height", width); // 设定等比例缩放后的高度
-                }
-            });
-        });
-    </script>', N'0', N'127', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'20', N'127', N'302', N'三级页面顶部', N'', N'', N'', N'0', N'2', N'2014-07-10 17:09:00', N'0', N'0', N' <div class="header">
- <a href="/wapindex.aspx?siteid=127" class="home">
-            <span class="header-icon header-icon-home"></span>
-            <span class="header-name">主页</span>
-</a>
-<div class="title" id="titleString">[title]</div>
-<a href="javascript:history.go(-1);" class="back">
-            <span class="header-icon header-icon-return"></span>
-            <span class="header-name">返回</span>
-        </a>
- </div>', NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'21', N'127', N'302', N'关于我们页面', N'', N'', N'', N'0', N'4', N'2014-07-10 17:11:00', N'0', N'0', N'<div id="hotelinfo" class="hotel-prompt ">
-			<span class="hotel-prompt-title">公司简介</span>
-			<p>广州市联速计算机科技有限公司，为拓展经营范围，新公司于2009.08.28日成立，注册号:440106000040708 (原广州市柯林软件有限公司，注册号:4401052015582)，是一家专业移动互联网技术应用解决方案提供商，以及拥有计算机硬件研发、维修、维护、销售电子产品等拓展业务。公司以基于WAP无线应用协议的移动商务应用系统开发为主，SMS/二维码MMS及WEB互联网服务的开发为辅。公司凭借领先的移动通信技术、经验丰富的WAP开发队伍、创新的管理模式和优质的服务意识，为企业客户全力拓展移动信息时代的商务空间，全面提升企业的竞争力。主要产品Kelink WAP手机自助建站系统适应于电信运营商、SP公司、各类门户站点、移动电子商务网站及企业手机网站等，面向企业、政府机构、事业单位、学校和广大个人用户提供完整全面的无线应用解决方案。</p>
-			<span class="hotel-prompt-title">联系我们</span>
-            <p>客服电话1：4000-588-605</p>
-            <p>客服电话2：13798981178 / 1304806868</p>
-            <p>固定电话：0756-6231585</p>
-            <p>传真电话：0756-6231585</p>
-            <p>企业ＱＱ：800007757</p>
-            <p>E-mail：chinastrong@163.com</p>
-			<span class="hotel-prompt-title">公司地址</span>
-            <p>珠海办事处：
-珠海市前山科技园华威路128号311室（爱嘉酒店三楼）
-
-</p>
-            <p>广州办事处：
-广州市番禺区大石街沿江中路73号神怡商业中心5A12室
-
-</p>
-            <p>邮编： 511430</p>
-<img src="http://kelink.com/Images/map2.jpg" alt="公司地图">
-		</div>', N'0', N'127', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'22', N'128', N'292', N'网站首页显示', N'', N'', N'', N'0', N'0', N'2014-07-18 11:20:00', N'0', N'0', N'<article id="pageWrapper" style="background:url(/Template/128/bj.png) center center no-repeat; background-size:100% 100%;" class="homePage">
-			<header id="header">
-    
-
-
-	
-	<figure class="logo">
-	     <h1 class="logoPic">
-	     	
-	     	
-	     		<a href="#"><img src="/Template/128/wsImg_002.png" style="max-height: 90px;max-width: 320px"></a>
-	     		     	
-	     </h1>
-	</figure>
-
-
-</header>
-			<article id="container">
-    <nav class="indexNav">
-        <ul>
-            
-            <li class="change">
-	    		
-                	
-                   
-		                <a href="/article/list.aspx?classid=293">
-		                    
-		                        
-		                            <img index="0" alt="沙龙新闻" src="/Template/128/wsImg.png" height="68" width="68">
-		                        
-		                        
-		                        
-		                    
-		                    
-		                    
-		                        <span style="color: #fcfcfc">沙龙新闻</span>
-		                    
-		                </a>                     
-                   
-                            
-                
-                
-            </li>
-            
-            <li class="change">
-	    		
-                	
-                   
-		                <a href="/wapindex.aspx?siteid=128&classid=298">
-		                    
-		                        
-		                            <img index="1" alt="营业时间" src="/Template/128/wsImg.png" height="68" width="68">
-		                        
-		                        
-		                        
-		                    
-		                    
-		                    
-		                        <span style="color: #fcfcfc">营业时间</span>
-		                    
-		                </a>                     
-                   
-                            
-                
-                
-            </li>
-            
-            <li class="change">
-	    		
-                	
-                   
-		                <a href="/article/list.aspx?classid=294">
-		                    
-		                        
-		                            <img index="2" alt="我们项目" src="/Template/128/wsImg.png" height="68" width="68">
-		                        
-		                        
-		                        
-		                    
-		                    
-		                    
-		                        <span style="color: #fcfcfc">我们项目</span>
-		                    
-		                </a>                     
-                   
-                            
-                
-                
-            </li>
-            
-            <li class="">
-	    		
-                	
-                   
-		                <a href="/article/list.aspx?classid=295">
-		                    
-		                        
-		                            <img index="3" alt="店内公告" src="/Template/128/wsImg.png" height="68" width="68">
-		                        
-		                        
-		                        
-		                    
-		                    
-		                    
-		                        <span style="color: #fcfcfc">店内公告</span>
-		                    
-		                </a>                     
-                   
-                            
-                
-                
-            </li>
-            
-            <li class="">
-	    		
-                	
-                   
-		                <a href="/picture/list.aspx?classid=296">
-		                    
-		                        
-		                            <img index="4" alt="优惠券" src="/Template/128/wsImg_003.png" height="68" width="68">
-		                        
-		                        
-		                        
-		                    
-		                    
-		                    
-		                        <span style="color: #fcfcfc">优惠券</span>
-		                    
-		                </a>                     
-                   
-                            
-                
-                
-            </li>
-            
-            <li class="change">
-	    		
-                	
-                   
-		                <a href="/wapindex.aspx?siteid=128&classid=297">
-		                    
-		                        
-		                            <img index="5" alt="联系我们" src="/Template/128/wsImg.png" height="68" width="68">
-		                        
-		                        
-		                        
-		                    
-		                    
-		                    
-		                        <span style="color: #fcfcfc">联系我们</span>
-		                    
-		                </a>                     
-                   
-                            
-                
-                
-            </li>
-            
-        </ul>
-    </nav>
-
-		
-		
-
-
-
-
-
-
-
-
-
-    <script type="text/javascript">
-    	var isMobile = {
-            Android: function() {
-            	return navigator.userAgent.match(/Android/i) ? true : false;
-            },
-            BlackBerry: function() {
-                return navigator.userAgent.match(/BlackBerry/i) ? true : false;
-            },
-            iOS: function() {
-                return navigator.userAgent.match(/iPhone|iPod/i) ? true : false;
-            },
-            Windows: function() {
-                return navigator.userAgent.match(/IEMobile/i) ? true : false;
-            },
-            Linux: function() {
-                return navigator.userAgent.match(/Linux/i) ? true : false;
-            },
-            any: function() {
-                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows() || isMobile.Linux());
-            }
-		};
-        $(function(){
-            if(!isMobile.any()){
-	            var msg="该功能仅在手机上可用"
-	            $(''a[href*="tel"]'').attr("href",''javaScript:alert("''+msg+''");'');
-            }
-        });
-    </script>
-
-
-
-', N'0', N'128', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'23', N'128', N'292', N'全局底部', N'', N'', N'', N'0', N'0', N'2014-07-18 11:21:00', N'0', N'0', N'        
-			<footer style="font-size: 12px;font-family: Arial;line-height: 20px;padding: 4px 0px;margin-top: 20px;color: #999;border-top: 1px solid #DDD;background-color: #F1F1F1;">
-<div class="copyright">	
-  <p>Copyright © [year] 联速科技:<a href="http://kelink.com">Kelink.com</a></p>
-</div>
-</footer>', NULL, NULL, N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'24', N'128', N'292', N'显示地址地图', N'', N'', N'', N'0', N'0', N'2014-07-18 11:22:00', N'0', N'0', N'<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://api.map.baidu.com/marker?location=23.034403,113.33194&title=联速科技公司&content=地址或说明&src=公司名或应用程序名&output=html "></iframe><br /><small>In view of the larger map:<a href="http://api.map.baidu.com/marker?location=23.034403,113.33194&title=联速科技公司&content=地址或说明&src=公司名或应用程序名&output=html " style="color:#0000FF;text-align:left">联束科技-柯林程序</a></small>
-
-', N'0', N'128', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'27', N'128', N'292', N'二级三级顶部', N'', N'', N'', N'0', N'0', N'2014-07-18 11:26:00', N'0', N'0', N'<header id="header">
-    
-
-
-<nav class="catePageTitle" style="background:url(/Template/128/11.png) left top repeat-x;">
-	<h1>[title] [classname]</h1>
-	<a class="pageBackBtn" href="javascript:history.back();">返回</a>
-	<div class="titleTapMenu">
-		<a href="/wapindex.aspx?siteid=[siteid]">首页</a>
-	</div>
-</nav>
-</header>
-<div style="margin-top: 50px;"></div>', N'0', N'128', N'0')
-GO
-
-INSERT INTO [dbo].[wap_wml] ([id], [userid], [book_classid], [book_title], [book_author], [book_pub], [book_content], [book_re], [book_click], [book_date], [sysid], [isCheck], [book_content2], [smalltype], [MakerID], [HangBiaoShi]) VALUES (N'28', N'129', N'303', N'首页显示模板', N'', N'', N'', N'0', N'0', N'2014-08-04 11:40:00', N'0', N'0', N'<DIV>
-<DIV style="margin: 0px auto; border: 1px solid rgb(170, 204, 238); width: 320px; height: 1px;" 
-id="div_ad_1_14">
-<DIV style="text-align: center;"><IMG alt="图" src="/Template/129/2014073022381411034448.jpg"></DIV>
-<DIV style="text-align: center;"><IMG alt="图" src="/Template/129/2014073022382481199149.jpg"></DIV>
-<DIV style="text-align: center; color: rgb(0, 0, 0); font-size: 24px; font-weight: bold;">【红米Note 
-手机】限时秒杀</DIV>
-<DIV class="counter"> 
-<TABLE class="discount">
-  <TBODY>
-  <TR>
-    <TD width="105">市场价</TD>
-    <TD width="90">折扣</TD>
-    <TD>节省</TD></TR>
-  <TR>
-    <TD class="pink">￥1399</TD>
-    <TD class="pink">6.4折</TD>
-    <TD class="pink">￥510</TD></TR></TBODY> </TABLE> 
-<H5 class="counter_h5"><SPAN 
-class="counter_price">￥<STRONG>889</STRONG></SPAN>
-<!--
-<A id="f_btn" class="counter_btn counter_btn_pending" href="javascript:void(0)"></A>
--->
-</H5> 
-
-<TABLE class="counter_time" >
-  <TBODY>
-  <TR>
-    <TD style="height: 160px;" id="counter_msg" 
-      class="counter_msg pink">
-      <br/><DIV style=''text-align: center;''><img src=''/Template/129/tel1.jpg'' width=''120'' alt=''在线订购''/><img src=''/Template/129/tel2.jpg'' width=''120'' alt=''电话订购''/></div><SPAN>限时秒杀，剩余时间<BR></SPAN><SPAN style="display: none;" 
-      id="f_hh"></SPAN><SPAN style="display: none;" id="f_mm"></SPAN><SPAN 
-      style="font-size: 3em; font-weight: bold;" id="f_ss"></SPAN>秒              
-         <SPAN style="color: rgb(0, 0, 0);" id="shuzi"><BR>1054 
-      人正在等待秒杀开始</SPAN></TD></TR></TBODY> </TABLE>
-
-
-</div>
-
-<DIV style="text-align: center; font-size: 22px;">标准版 增强版</DIV>
-<DIV style="text-align: center; color: rgb(253, 105, 0); font-size: 22px; font-weight: bold;">￥889 
-￥1099</DIV>
-<DIV style="text-align: center;"><IMG alt="图" src="/Template/129/2014073023055462402168.jpg"></DIV>
-<DIV style="font-size: 14px;">采用MTK联发科真八核28纳米 
-CPU，主频为标准版1.4GHz，增强1.7GHz其性能比MTK顶级四核MT6589T 提升78%（1.4G版提升53%）。</DIV>
-<DIV style="text-align: center; color: rgb(255, 255, 255); font-size: 16px; font-weight: bold; background-color: rgb(228, 11, 11);">无忧购物 
-三大保证</DIV>
-<DIV style="font-size: 14px;"><B>① 正规发票</B><BR> 全新原装手机，开具正规机打发票，购物有保障。<BR> <B>② 
-无忧退货</B><BR> 根据国家三包政策，可以享受30天包退换货服务。<BR> <B>③ 顺丰包邮</B><BR> 
-全国顺丰包邮，安全快捷配送，支持货到再付款。</DIV>
-<DIV style="text-align: center; color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(213, 0, 0);">红米Note 
-详细介绍</DIV>
-<DIV style="font-size: 16px; font-weight: bold;">MIUI V5，全球3000万用户共同选择</DIV>
-<DIV style="text-align: center;"><IMG alt="图" src="/Template/129/2014072121243080978342.jpg"></DIV>
-<DIV 
-style="font-size: 14px;">全球200万发烧友共同改进，连续150周升级，优化1000项功能。而且，还在继续。MIUI也许是当今最好的Android定制系统，基于Android4.2深度定制，在全球拥有3000万发烧友用户。</DIV>
-<DIV style="font-size: 16px; font-weight: bold;">Mali-450 图形处理器性能提升140%</DIV>
-<DIV style="text-align: center;"><IMG alt="图" src="/Template/129/2014072121252764064044.jpg"></DIV>
-<DIV style="font-size: 14px;">采用ARM Mali-450 
-GPU，图形性能相对前一代Mali-400显著提升140%，将大型3D游戏的阴影效果及环境细节展现的淋漓尽致，轻松玩转最新3D大型游戏。</DIV>
-<DIV style="font-size: 16px; font-weight: bold;">新一代性能怪兽！</DIV>
-<DIV style="text-align: center;"><IMG alt="图" src="/Template/129/2014072121264877638746.jpg"></DIV>
-<DIV 
-style="font-size: 14px;">大屏幕！读书、游戏、看电影都变得焕然一新。IPS技术可视角度可达178°，色彩更加细腻丰富。全贴合GFF技术。让表面玻璃与屏幕间的距离微乎其微，图像更加真实同时可以减少炫光。</DIV>
-<DIV style="font-size: 15px; font-weight: bold;">广角、大光圈、好画质</DIV>
-<DIV style="text-align: center;"><IMG alt="图" src="/Template/129/2014072121285228174448.jpg"></DIV>
-<DIV 
-style="font-size: 14px;">配备28mm大广角相机，拍摄视野更大，聚会合影也更容易同时拍下所有朋友。F2.2大光圈让相机拥有更多的进光量，在暗光下照片更加明亮清晰，同时也能轻松拍摄出柔美的背景虚化效果。</DIV>
-<DIV style="text-align: center; color: rgb(255, 255, 255); font-size: 16px; font-weight: bold; background-color: rgb(228, 11, 11);">主要参数介绍</DIV>
-<TABLE class="table1">
-  <TBODY>
-  <TR>
-    <TD class="STYLE34" vAlign="middle" 
-      width="3%"><STRONG>基<BR>本<BR>参<BR>数</STRONG></TD>
-    <TD width="80%">
-      <TABLE border="1" cellSpacing="0" borderColor="#999999" cellPadding="1" 
-      width="100%">
-        <TBODY>
-        <TR>
-          <TD width="80"><STRONG>手机类型： </STRONG></TD>
-          <TD>3G手机，智能手机，拍照手机，平板手机</TD></TR>
-        <TR>
-          <TD><STRONG>网络制式：</STRONG></TD>
-          <TD>支持中国移动3G(TD-SCDMA)及中国移动、中国联通2G(GSM)网络</TD></TR>
-        <TR>
-          <TD><STRONG>主屏尺寸：</STRONG></TD>
-          <TD>5.5英寸</TD></TR>
-        <TR>
-          <TD><STRONG>触摸屏：</STRONG></TD>
-          <TD>电容屏，多点触控</TD></TR>
-        <TR>
-          <TD><STRONG>主屏材质：</STRONG></TD>
-          <TD>IPS</TD></TR>
-        <TR>
-          <TD><STRONG>主屏分辨率：</STRONG></TD>
-          <TD>1280x720像素</TD></TR>
-        <TR>
-          <TD><STRONG>屏幕像素密度：</STRONG></TD>
-          <TD>326ppi</TD></TR>
-        <TR>
-          <TD><STRONG>CPU型号：</STRONG></TD>
-          <TD>MTK MT6592</TD></TR>
-        <TR>
-          <TD><STRONG>CPU频率：</STRONG></TD>
-          <TD>增强版8核1.7GHz </TD></TR>
-        <TR>
-          <TD><STRONG>电池类型：</STRONG></TD>
-          <TD>可拆卸式电池</TD></TR>
-        <TR>
-          <TD><STRONG>电池容量：</STRONG></TD>
-          <TD>3200mAh</TD></TR>
-        <TR>
-          <TD><STRONG>可选颜色：</STRONG></TD>
-          <TD>象牙白</TD></TR></TBODY></TABLE></TD></TR>
-  <TR>
-    <TD class="STYLE34" vAlign="middle" width="3%"><STRONG>容<BR>量</STRONG></TD>
-    <TD width="97%">
-      <TABLE border="1" cellSpacing="0" borderColor="#999999" cellPadding="1" 
-      width="100%">
-        <TBODY>
-        <TR>
-          <TD width="80"><STRONG>RAM容量：</STRONG></TD>
-          <TD>2G</TD></TR>
-        <TR>
-          <TD><STRONG>ROM容量：</STRONG></TD>
-          <TD>8G</TD></TR></TBODY></TABLE></TD></TR>
-  <TR>
-    <TD class="STYLE34" vAlign="middle" 
-      width="3%"><STRONG>拍<BR>照<BR>功<BR>能</STRONG></TD>
-    <TD width="97%">
-      <TABLE border="1" cellSpacing="0" borderColor="#999999" cellPadding="1" 
-      width="100%">
-        <TBODY>
-        <TR>
-          <TD width="80"><STRONG>摄像头：</STRONG></TD>
-          <TD>内置双摄像头（前后）</TD></TR>
-        <TR>
-          <TD><STRONG>摄像头像素：</STRONG></TD>
-          <TD>前：500万像素，后：1300万像素</TD></TR>
-        <TR>
-          <TD><STRONG>闪光灯：</STRONG></TD>
-          <TD>LED补光灯</TD></TR>
-        <TR>
-          <TD><STRONG>自动对焦：</STRONG></TD>
-          <TD>支持</TD></TR>
-        <TR>
-          <TD><STRONG>视频拍摄：</STRONG></TD>
-          <TD>支持</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
-<span id="showpic1"><DIV style="text-align: center;"><IMG alt="图" src="/Template/129/tel1.jpg"><IMG alt="图" src="/Template/129/tel2.jpg"></DIV></span>
-<DIV style="text-align: center; color: rgb(255, 255, 255); font-size: 16px; font-weight: bold; background-color: rgb(228, 11, 11);">选择我们的四大理由</DIV>
-<DIV style="font-size: 14px;"><B>① 全新正品</B><BR> 小米旗舰店直接供货，只出售全新正品手机。<BR> <B>② 
-正规发票</B><BR> 开具小米正规的机打发票，严格保障您的权益。<BR> <B>③ 无忧退货</B><BR> 
-根据国家三包政策，非质量问题不影响二次销售的前提下，享受30天包退换货服务。<BR> <B>④ 顺丰包邮</B><BR> 
-签约顺丰VIP大客户合同，手机顺丰包邮配送,专业、安全、快捷，支持货到再付款</DIV>
-<DIV style="text-align: center; color: rgb(255, 255, 255); font-size: 16px; font-weight: bold; background-color: rgb(228, 11, 11);">正品保障，无忧购物</DIV>
-<DIV style="font-size: 16px; font-weight: bold;">提供正规小米发票</DIV>
-<DIV style="text-align: center;"><IMG alt="图" src="/Template/129/2014072121351966169553.jpg"></DIV>
-<DIV 
-style="font-size: 14px;">郑重承诺：我们所售手机均享受30天包退包换。在这此期间您手机遇到什么问题都可以随时联系我们的在线客服，我们坚信，售前只是开始，售后才是王道，坚决抵制一锤子买卖！</DIV>
-<DIV style="text-align: center; color: rgb(255, 255, 255); font-size: 16px; font-weight: bold; background-color: rgb(228, 11, 11);">顾客评价</DIV>
-<div  class="mod_comment tleft p10 f14">
-     	<h4>众多顾客的好评才是最真实有力的广告</h4>
-        <div  class="box_comment"  id="marquee">
-            <ul  class="list_comm"  style="top: -378.625px;">
-                <li>
-                    <p>手机昨天到货了，用了一下，还不错，是全新的手机。</p>
-                    <p  class="user_name">186****5929 朱先生发表评论</p>
-                </li>
-
-                <li>
-                    <p>亲，我终于拿到了想了很久的土豪金的，没有想到可以这五折活动价买到，我太兴奋了，不过之前也是有顾虑的我拿去专卖店验证了，没有失望的确实是正品港行货的！亲们放心抢购吧！</p>
-                    <p  class="user_name">186****5934 吴先生发表评论</p>
-                </li>
-                <li>
-                    <p>还可以,不错！！！</p>
-                    <p  class="user_name">134****9052 郑先生发表评论</p>
-                </li>
-                <li>
-                    <p>手机相当给力，是正品港版，没问题，价格比朋友在别的地方买的要便宜很多让他那个羡慕嫉妒恨啊！哈哈！！</p>
-                    <p  class="user_name">136****7813 周先生发表评论</p>
-                </li>
-                <li>
-                    <p>货已经收到了，商家效率好，服务也很到位，手机很不错！</p>
-                    <p  class="user_name">186****2619 黄先生发表评论</p>
-                </li>
-
-                <li>
-                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
-                    <p  class="user_name">134****4223 沈先生发表评论</p>
-                </li>
-
-                <li>
-                    <p>手机不错，大大滴给个赞,这样的团购活动真爽！！！</p>
-                    <p  class="user_name">135****3923 李先生发表评论</p>
-                </li>
-              
-                <li>
-                    <p>想不到手机这么好，正品港版，值得信赖！！！</p>
-                    <p  class="user_name">136****7623 高先生发表评论</p>
-                </li>
-
-
-
-                <li>
-                    <p>手机上网速度很快，拍照也很清晰，不错，支持港版。</p>
-                    <p  class="user_name">136****7828 蓝先生发表评论</p>
-                </li>
-                
-                <li>
-                    <p>物流很给力，才两天就收到了，手机上网很不错，支持港货。</p>
-                    <p  class="user_name">186****8893 孙先生发表评论</p>
-                </li>
-                <li>
-                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
-                    <p  class="user_name">134****4223 沈先生发表评论</p>
-                </li>
-                <li>
-                    <p>前天收到的货，不错，值得购买。</p>
-                    <p  class="user_name">135****7623 马先生发表评论</p>
-                </li>
-
-            <li>
-                    <p>手机昨天到货了，用了一下，还不错，是全新的手机。</p>
-                    <p  class="user_name">186****5929 朱先生发表评论</p>
-                </li><li>
-                    <p>亲，我终于拿到了想了很久的土豪金的，没有想到可以这五折活动价买到，我太兴奋了，不过之前也是有顾虑的我拿去专卖店验证了，没有失望的确实是正品港行货的！亲们放心抢购吧！</p>
-                    <p  class="user_name">186****5934 吴先生发表评论</p>
-                </li><li>
-                    <p>还可以,不错！！！</p>
-                    <p  class="user_name">134****9052 郑先生发表评论</p>
-                </li><li>
-                    <p>手机相当给力，是正品港版，没问题，价格比朋友在别的地方买的要便宜很多让他那个羡慕嫉妒恨啊！哈哈！！</p>
-                    <p  class="user_name">136****7813 周先生发表评论</p>
-                </li><li>
-                    <p>货已经收到了，商家效率好，服务也很到位，手机很不错！</p>
-                    <p  class="user_name">186****2619 黄先生发表评论</p>
-                </li><li>
-                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
-                    <p  class="user_name">134****4223 沈先生发表评论</p>
-                </li><li>
-                    <p>手机不错，大大滴给个赞,这样的团购活动真爽！！！</p>
-                    <p  class="user_name">135****3923 李先生发表评论</p>
-                </li><li>
-                    <p>想不到手机这么好，正品港版，值得信赖！！！</p>
-                    <p  class="user_name">136****7623 高先生发表评论</p>
-                </li><li>
-                    <p>手机上网速度很快，拍照也很清晰，不错，支持港版。</p>
-                    <p  class="user_name">136****7828 蓝先生发表评论</p>
-                </li><li>
-                    <p>物流很给力，才两天就收到了，手机上网很不错，支持港货。</p>
-                    <p  class="user_name">186****8893 孙先生发表评论</p>
-                </li><li>
-                    <p>手机拍照很给力，图片很清晰，物流也很不错，赞一个。</p>
-                    <p  class="user_name">134****4223 沈先生发表评论</p>
-                </li><li>
-                    <p>前天收到的货，不错，值得购买。</p>
-                    <p  class="user_name">135****7623 马先生发表评论</p>
-                </li></ul>
-        </div>
-     </div>
-<span id="showpic2"><DIV style="text-align: center;"><IMG alt="图" src="/Template/129/tel1.jpg"><IMG alt="图" src="/Template/129/tel2.jpg"></DIV></span>
-
-<DIV style="text-align: center; color: rgb(255, 255, 255); font-size: 16px; font-weight: bold; background-color: rgb(228, 11, 11);">赠送惊喜大礼包</DIV>
-<DIV style="font-size: 14px;"><SPAN 
-class="red">*【优惠1】</SPAN>手机必备礼品：专用钢化贴膜,剪卡器,手机外壳；<BR> <SPAN 
-class="red">*【优惠2】</SPAN>中国移动300元移动充值卡免费赠送，购机不愁没话费<BR> <SPAN 
-class="red">*【优惠3】</SPAN>预付定金50元即可赠送价值320元的充电宝；<BR> <SPAN 
-class="red">*【优惠4】</SPAN>预付全款~即可领取由深圳旅游公司所带领的5天4夜港澳游旅游票一张,小伙伴们还在等什么?<BR> <SPAN 
-class="red">想要更优惠？预付100立即减100,红米全城最低价！</SPAN>（<BR>活动时间:7月31月-8月31日）</DIV>
-<DIV style="text-align: center; color: rgb(255, 255, 255); line-height: 40px; font-size: 16px; background-color: rgb(69, 116, 255);">恭喜你订购成功,请点击进去填写信息</DIV>
-<DIV style="font-size: 14px;">标配：一电一充、数据线、说明书<BR> <FONT 
-color="#ff6f00">赠送：皮套、保护膜、小米发票、三包凭证、保修卡</FONT></DIV><A id="order" 
-name="order"></A>
-<STRONG>产品名称:<SPAN class="red">红米 
-Note</SPAN></STRONG><BR>
-[getform]2[/getform] <DIV style="color: red; font-size: 14px;">提交订单不会扣除话费，我们的客服人员会尽快和 
-您确认订单信息并发货。```</DIV>
-<div  id="wffahuo"><p><span>[最新购买]：</span>赵**（139****1955）在7分钟前订购了红米1S双卡双待 <font  color="#FF0000">√</font></p><p><span>[最新购买]：</span>刘**（180****6999）在11分钟前订购了红米NOTE增强版 <font  color="#FF0000">√</font></p></div>
-<script  type="text/javascript"  src="/Template/129/wffh.js"></script>
-
-<DIV style="text-align: center;"><A href="#"><IMG 
-alt="图" src="/Template/129/2014072121414643315255.png"></A></DIV>
-<DIV style="text-align: center;"><IMG alt="图" src="/Template/129/2014072121425650849957.jpg"></DIV>
-<DIV 
-style="text-align: center; color: rgb(0, 0, 0); font-size: 12px;">	客服中心工作时间：早上9:00 
-- 下午8:00 (周一至周日)<BR> 订单处理工作时间：10:00 - 20:00 (周一至周日)</DIV>
-
-</DIV></DIV>
-
-<!--以下为js文件不能随意改动，注意下面调用html代码中的ID-->
-
-<SCRIPT type="text/javascript">
- var nMsDjs = "10";  //设置倒计时
- var toEndTime="2019/08/04 23:32:59";  //设置秒杀结束时间
- var vMsContent = "<DIV style=''text-align: center;''><a href=''#order''><img src=''/Template/129/2014072121320782819149.jpg'' width=''120'' alt=''在线订购''/></a><a href=''tel:4000588605''><img src=''/Template/129/2014072121320782814852.jpg'' width=''120'' alt=''电话订购''/></a></div><p  class=''el_leave''>目前已有<span  class=''el_red''  id=''renshu_0''>11765</span>人参与秒杀，离秒杀结束还有<span  class=''el_red hour''>00</span>时<span  class=''el_red minute''>00</span>分<span  class=''el_red second''>00</span>秒</p>"; 
- var vMsContent2 = "本次秒杀活动已结束！但由于我们与腾讯网、3G、环球等各大知名网站合作，以上网友恭喜你还有一次秒杀的机会！";
- 
- var orderpic1="<DIV style=''text-align: center;''><IMG alt=''图'' src=''/Template/129/tel1.jpg''><IMG alt=''图'' src=''/Template/129/tel2.jpg''></DIV>";
- var orderpic2="<DIV style=''text-align: center;''><A href=''#order''><IMG alt=''图'' src=''/Template/129/2014072121320782819149.jpg''></A><A href=''tel:4000188956''><IMG alt=''图'' src=''/Template/129/2014072121320782814852.jpg''></A></DIV>";
- 
- //document.formedit.bt.disabled = true; //倒计时关闭按钮
- 
- function TimeOutShow(){ 
- //倒计时完后显示
- document.getElementById(''counter_msg'').innerHTML = vMsContent;
- //document.formedit.bt.disabled = false;//显示按钮
- document.getElementById(''showpic1'').innerHTML = orderpic2;
- document.getElementById(''showpic2'').innerHTML = orderpic2;
- 
- }
-
- 
-<!--倒计时-->
-$(function(){
-	countDown(toEndTime,".hour",".minute",".second"); 
-});
-function countDown(time,hour_elem,minute_elem,second_elem){
-	var end_time = new Date(time).getTime(),
-	sys_second = (end_time-new Date().getTime())/1000;
-	
-	var timer = setInterval(function(){
-	    sys_second -= 1;
-		if (sys_second > 0) {
-			
-			var hour = Math.floor((sys_second / 3600) % 24);
-			var minute = Math.floor((sys_second / 60) % 60);
-			var second = Math.floor(sys_second % 60);
-			$(hour_elem).text(hour<10?"0"+hour:hour);//计算小时
-			$(minute_elem).text(minute<10?"0"+minute:minute);//计算分
-			$(second_elem).text(second<10?"0"+second:second);// 计算秒
-		} else { 
-		  nMsDjs=0;
-		  document.getElementById(''counter_msg'').innerHTML = vMsContent2;
-			clearInterval(timer);
-		}
-	}, 1000);
-} 
-<!--倒计时 end-->
-$(function(){
-	if($("#marquee li").length > 3){
-			$.marquee2("#marquee","top");
-	}
-})
-</script>
-<script  charset="gb2312"  src="/Template/129/marquee.js"></script> <!--滚动js-->
-<script  charset="gb2312"  src="/Template/129/ms.js"></script> <!--倒计时js-->
-
-<!--第三方的在线客服系统-->
-<!--
-<script type=''text/javascript'' src=''/Template/129/menu.js''></script>
--->
-<!--点击发送短信代码
-<a href="sms:13088888888?body=请问"><img src="/Template/129/kf.png" alt="在线聊天"/></a>
--->', N'0', N'129', N'0')
-GO
-
 SET IDENTITY_INSERT [dbo].[wap_wml] OFF
 GO
 
@@ -17486,6 +12077,27 @@ GO
 SET IDENTITY_INSERT [dbo].[wap2_games_chuiniu] ON
 GO
 
+INSERT INTO [dbo].[wap2_games_chuiniu] ([id], [siteid], [userid], [nickName], [Question], [Answer1], [Answer2], [myMoney], [myAnswer], [state], [winUserid], [winNickname], [winAnswer], [winTime], [addtime], [HangBiaoShi]) VALUES (N'1', N'1000', N'1000', N'超级管理员', N'爱生活还是爱妖火？', N'爱生活', N'爱妖火', N'100', N'1', N'1', N'1001', N'test', N'1', N'2024-05-24 15:53:30.080', N'2024-05-24 15:36:03.000', N'0')
+GO
+
+INSERT INTO [dbo].[wap2_games_chuiniu] ([id], [siteid], [userid], [nickName], [Question], [Answer1], [Answer2], [myMoney], [myAnswer], [state], [winUserid], [winNickname], [winAnswer], [winTime], [addtime], [HangBiaoShi]) VALUES (N'2', N'1000', N'1000', N'超级管理员', N'爱生活还是爱妖火？', N'爱生活', N'爱妖火', N'100', N'2', N'2', N'1001', N'test', N'1', N'2024-05-24 16:23:12.053', N'2024-05-24 15:54:15.000', N'0')
+GO
+
+INSERT INTO [dbo].[wap2_games_chuiniu] ([id], [siteid], [userid], [nickName], [Question], [Answer1], [Answer2], [myMoney], [myAnswer], [state], [winUserid], [winNickname], [winAnswer], [winTime], [addtime], [HangBiaoShi]) VALUES (N'3', N'1000', N'1000', N'超级管理员', N'我是吹牛大神！', N'不是', N'当然', N'100', N'1', N'1', N'1001', N'test', N'1', N'2024-05-24 16:23:59.257', N'2024-05-24 16:23:27.000', N'0')
+GO
+
+INSERT INTO [dbo].[wap2_games_chuiniu] ([id], [siteid], [userid], [nickName], [Question], [Answer1], [Answer2], [myMoney], [myAnswer], [state], [winUserid], [winNickname], [winAnswer], [winTime], [addtime], [HangBiaoShi]) VALUES (N'4', N'1000', N'1000', N'超级管理员', N'我是吹牛大神！', N'不是', N'当然', N'100', N'1', N'1', N'1001', N'test', N'1', N'2024-05-24 16:25:01.367', N'2024-05-24 16:24:17.000', N'0')
+GO
+
+INSERT INTO [dbo].[wap2_games_chuiniu] ([id], [siteid], [userid], [nickName], [Question], [Answer1], [Answer2], [myMoney], [myAnswer], [state], [winUserid], [winNickname], [winAnswer], [winTime], [addtime], [HangBiaoShi]) VALUES (N'5', N'1000', N'1000', N'超级管理员', N'爱生活还是爱妖火？', N'爱生活', N'爱妖火', N'100', N'1', N'1', N'1001', N'test', N'1', N'2024-05-24 16:26:05.473', N'2024-05-24 16:25:17.000', N'0')
+GO
+
+INSERT INTO [dbo].[wap2_games_chuiniu] ([id], [siteid], [userid], [nickName], [Question], [Answer1], [Answer2], [myMoney], [myAnswer], [state], [winUserid], [winNickname], [winAnswer], [winTime], [addtime], [HangBiaoShi]) VALUES (N'6', N'1000', N'1000', N'超级管理员', N'爱生活还是爱妖火？', N'爱生活', N'爱妖火', N'100', N'1', N'1', N'1001', N'test', N'1', N'2024-05-24 16:25:42.680', N'2024-05-24 16:25:19.000', N'0')
+GO
+
+INSERT INTO [dbo].[wap2_games_chuiniu] ([id], [siteid], [userid], [nickName], [Question], [Answer1], [Answer2], [myMoney], [myAnswer], [state], [winUserid], [winNickname], [winAnswer], [winTime], [addtime], [HangBiaoShi]) VALUES (N'7', N'1000', N'1000', N'超级管理员', N'爱生活还是爱妖火？', N'爱生活', N'爱妖火', N'100', N'1', N'1', N'1001', N'test', N'1', N'2024-05-24 16:25:32.960', N'2024-05-24 16:25:21.000', N'0')
+GO
+
 SET IDENTITY_INSERT [dbo].[wap2_games_chuiniu] OFF
 GO
 
@@ -17522,6 +12134,9 @@ SET IDENTITY_INSERT [dbo].[wap2_games_config] ON
 GO
 
 INSERT INTO [dbo].[wap2_games_config] ([id], [siteid], [gameEn], [gameCn], [config], [todayTimes], [todayMoney], [updateTime], [addtime], [HangBiaoShi]) VALUES (N'1', N'117', N'MarkSix', N'博彩', N'2012|开放|开启|3|100|100000|30|30|港彩通知|40|7.1|1.8|10|4|2.5|2.6|2.7|1.8|1.8|60|80|300|博彩首页|[div=subtitle]心水论坛[/div][div=content]此处录入论坛UBB链接排版内容。[/div]|龙|12,13,20,21,28,29,42,43|02,03,10,11,24,25,32,33,40,41|01,08,09,16,17,30,31,38,39,46,47|04,05,18,19,26,27,34,35,48,49|06,07,14,15,22,23,36,37,44,45|01,02,07,08,12,13,18,19,23,24,29,30,34,35,40,45,46|03,04,09,10,14,15,20,25,26,31,36,37,41,42,47,48|05,06,11,16,17,21,22,27,28,32,33,38,39,43,44,49|01,03,05,07,09,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47|02,04,06,08,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48|25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48|01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24|5|98|01,13,25,37,49|02,14,26,38|03,15,27,39|04,16,28,40|05,17,29,41|06,18,30,42|07,19,31,43|08,20,32,44|09,21,33,45|10,22,34,46|11,23,35,47|12,24,36,48|140|2|9|5|1.9|2|5|2|2|牛,马,兔,鸡,狗,猪|鼠,猴,羊,虎,龙,蛇|01,03,05,07,09,10,12,14,16,18,21,23,25,27,29,30,32,34,36,38,41,43,45,47|02,04,06,08,11,13,15,17,19,20,22,24,26,28,31,33,35,37,39,40,42,44,46,48|07,08,09,16,17,18,19,25,26,27,28,29,34,35,36,37,38,39,43,44,45,46,47,48|01,02,03,04,05,06,10,11,12,13,14,15,20,21,22,23,24,30,31,32,33,40,41,42', N'0', N'0', N'2012-12-03 12:00:39.890', N'2012-12-03 12:00:39.890', N'0')
+GO
+
+INSERT INTO [dbo].[wap2_games_config] ([id], [siteid], [gameEn], [gameCn], [config], [todayTimes], [todayMoney], [updateTime], [addtime], [HangBiaoShi]) VALUES (N'2', N'1000', N'chuiniu', N'吹牛', N'100|20000|95|10|5', N'7', N'700', N'2024-05-24 15:14:27.000', N'2024-05-24 15:14:27.000', N'0')
 GO
 
 SET IDENTITY_INSERT [dbo].[wap2_games_config] OFF
@@ -17950,6 +12565,9 @@ GO
 -- Records of wap2_games_rank
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[wap2_games_rank] ON
+GO
+
+INSERT INTO [dbo].[wap2_games_rank] ([id], [siteid], [gameEn], [gameCn], [userid], [nickName], [TimesTotal], [rankTimes], [moneyTotal], [rankMoney], [HangBiaoShi]) VALUES (N'1', N'1000', N'chuiniu', N'吹牛', N'1001', N'test', N'7', N'5', N'670', N'470', N'0')
 GO
 
 SET IDENTITY_INSERT [dbo].[wap2_games_rank] OFF
@@ -31546,6 +26164,12 @@ GO
 INSERT INTO [dbo].[wap2_visitZone] ([id], [siteid], [userid], [nickname], [touserid], [tonickname], [addtime], [hangbiaoshi]) VALUES (N'2', N'115', N'0', N'游客66173', N'115', N'model15', N'2012-07-29 17:43:37.263', NULL)
 GO
 
+INSERT INTO [dbo].[wap2_visitZone] ([id], [siteid], [userid], [nickname], [touserid], [tonickname], [addtime], [hangbiaoshi]) VALUES (N'3', N'1000', N'1000', N'超级管理员', N'1001', N'test', N'2024-07-29 09:52:38.027', NULL)
+GO
+
+INSERT INTO [dbo].[wap2_visitZone] ([id], [siteid], [userid], [nickname], [touserid], [tonickname], [addtime], [hangbiaoshi]) VALUES (N'4', N'1000', N'0', N'游客82812', N'1001', N'test', N'2024-07-31 16:14:06.067', NULL)
+GO
+
 SET IDENTITY_INSERT [dbo].[wap2_visitZone] OFF
 GO
 
@@ -31581,18 +26205,6 @@ GO
 -- ----------------------------
 -- Records of wap3_htmlContent
 -- ----------------------------
-INSERT INTO [dbo].[wap3_htmlContent] ([siteid], [classid], [html3_2], [config3_2], [html3_3], [config3_3], [html4_2], [config4_2], [html4_3], [config4_3], [MakerID], [addtime], [hangbiaoshi]) VALUES (N'1000', N'155', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'1000', N'2012-07-31 17:02:42.310', NULL)
-GO
-
-INSERT INTO [dbo].[wap3_htmlContent] ([siteid], [classid], [html3_2], [config3_2], [html3_3], [config3_3], [html4_2], [config4_2], [html4_3], [config4_3], [MakerID], [addtime], [hangbiaoshi]) VALUES (N'1000', N'156', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'1000', N'2012-07-31 17:02:42.310', NULL)
-GO
-
-INSERT INTO [dbo].[wap3_htmlContent] ([siteid], [classid], [html3_2], [config3_2], [html3_3], [config3_3], [html4_2], [config4_2], [html4_3], [config4_3], [MakerID], [addtime], [hangbiaoshi]) VALUES (N'1000', N'157', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'1000', N'2012-07-31 17:02:42.310', NULL)
-GO
-
-INSERT INTO [dbo].[wap3_htmlContent] ([siteid], [classid], [html3_2], [config3_2], [html3_3], [config3_3], [html4_2], [config4_2], [html4_3], [config4_3], [MakerID], [addtime], [hangbiaoshi]) VALUES (N'1000', N'158', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'1000', N'2012-07-31 17:02:42.310', NULL)
-GO
-
 INSERT INTO [dbo].[wap3_htmlContent] ([siteid], [classid], [html3_2], [config3_2], [html3_3], [config3_3], [html4_2], [config4_2], [html4_3], [config4_3], [MakerID], [addtime], [hangbiaoshi]) VALUES (N'1000', N'0', N'', N'<!DOCTYPE html>
 <html>
 <head>
@@ -31603,6 +26215,9 @@ INSERT INTO [dbo].[wap3_htmlContent] ([siteid], [classid], [html3_2], [config3_2
 <link rel="SHORTCUT ICON" href="favicon.ico" />  <!--地址栏小图标-->
 </head>
 <body>', N'', N'', N'', N'', N'', N'', N'1000', N'2012-07-31 17:22:40.000', N'0')
+GO
+
+INSERT INTO [dbo].[wap3_htmlContent] ([siteid], [classid], [html3_2], [config3_2], [html3_3], [config3_3], [html4_2], [config4_2], [html4_3], [config4_3], [MakerID], [addtime], [hangbiaoshi]) VALUES (N'1000', N'305', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'1000', N'2024-07-31 15:29:47.903', NULL)
 GO
 
 
@@ -31898,8 +26513,7 @@ Nin de gong si ming cheng
 <!--Button6.Content.End-->
 
 <!--Button7.Content.Begin-->
-              <tr> 
-', N'<html>
+              <tr> ', N'<html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=gb2312" />
 <meta name="keywords" content="wap建站,wap建站系统,wap自助建站,wap网站,wap下载"> <!--此处为SEO搜索优化-->
@@ -33164,20 +27778,6 @@ GO
 
 
 -- ----------------------------
--- View structure for wap_novel_section_VIEW
--- ----------------------------
-IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[wap_novel_section_VIEW]') AND type IN ('V'))
-	DROP VIEW [dbo].[wap_novel_section_VIEW]
-GO
-
-CREATE VIEW [dbo].[wap_novel_section_VIEW] AS SELECT a.*, b.book_title AS book_title, b.book_classid AS book_classid, b.classname AS classname, 
-    b.book_click AS book_click
-FROM dbo.wap_novel_sections a INNER JOIN
-    dbo.wap_novel_VIEW b ON a.BookId = b.id
-GO
-
-
--- ----------------------------
 -- View structure for wap_novel_VIEW
 -- ----------------------------
 IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[wap_novel_VIEW]') AND type IN ('V'))
@@ -33388,6 +27988,542 @@ FROM  dbo.wap2_games_waBao_bet INNER JOIN
                dbo.UserVO_View ON dbo.wap2_games_waBao_bet.userid = dbo.UserVO_View.userid
 GROUP BY dbo.wap2_games_waBao_bet.siteid, dbo.wap2_games_waBao_bet.userid, dbo.wap2_games_waBao_bet.types, dbo.UserVO_View.idname, 
                dbo.UserVO_View.nickname, dbo.UserVO_View.HangBiaoShi
+GO
+
+
+-- ----------------------------
+-- procedure structure for dt_checkinobject_u
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_checkinobject_u]') AND type IN ('P', 'PC', 'RF', 'X'))
+	DROP PROCEDURE[dbo].[dt_checkinobject_u]
+GO
+
+CREATE PROCEDURE [dbo].[dt_checkinobject_u]
+    @chObjectType  char(4),
+    @vchObjectName nvarchar(255),
+    @vchComment    nvarchar(255)='',
+    @vchLoginName  nvarchar(255),
+    @vchPassword   nvarchar(255)='',
+    @iVCSFlags     int = 0,
+    @iActionFlag   int = 0,   /* 0 => AddFile, 1 => CheckIn */
+    @txStream1     Text = '', /* There is a bug that if items are NULL they do not pass to OLE servers */
+    @txStream2     Text = '',
+    @txStream3     Text = ''
+
+
+as
+
+set nocount on
+
+declare @iReturn int
+declare @iObjectId int
+select @iObjectId = 0
+
+declare @VSSGUID nvarchar(100)
+select @VSSGUID = N'SQLVersionControl.VCS_SQL'
+
+
+declare @iPropertyObjectId int
+select @iPropertyObjectId  = 0
+
+    select @iPropertyObjectId = (select objectid from dbo.dtproperties where property = 'VCSProjectID')
+
+    declare @vchProjectName   nvarchar(255)
+    declare @vchSourceSafeINI nvarchar(255)
+    declare @vchServerName    nvarchar(255)
+    declare @vchDatabaseName  nvarchar(255)
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSProject',       @vchProjectName   OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSourceSafeINI', @vchSourceSafeINI OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLServer',     @vchServerName    OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLDatabase',   @vchDatabaseName  OUT
+
+    if @chObjectType = 'PROC'
+    begin
+        if @iActionFlag = 1
+        begin
+            /* Procedure Can have up to three streams
+            Drop Stream, Create Stream, GRANT stream */
+
+            begin tran compile_all
+
+            /* try to compile the streams */
+            exec (@txStream1)
+            if @@error <> 0 GOTO E_Compile_Fail
+
+            exec (@txStream2)
+            if @@error <> 0 GOTO E_Compile_Fail
+
+            exec (@txStream3)
+            if @@error <> 0 GOTO E_Compile_Fail
+        end
+
+        exec @iReturn = sp_OACreate @VSSGUID, @iObjectId OUT
+        if @iReturn <> 0 GOTO E_OAError
+
+        if @iActionFlag = 1
+        begin
+            exec @iReturn = sp_OAMethod @iObjectId,
+                                        N'CheckIn_StoredProcedure',
+                                        NULL,
+                                        @sProjectName = @vchProjectName,
+                                        @sSourceSafeINI = @vchSourceSafeINI,
+                                        @sServerName = @vchServerName,
+                                        @sDatabaseName = @vchDatabaseName,
+                                        @sObjectName = @vchObjectName,
+                                        @sComment = @vchComment,
+                                        @sLoginName = @vchLoginName,
+                                        @sPassword = @vchPassword,
+                                        @iVCSFlags = @iVCSFlags,
+                                        @iActionFlag = @iActionFlag,
+                                        @sStream = @txStream2
+        end
+        else
+        begin
+            declare @iStreamObjectId int
+            declare @iReturnValue int
+
+            exec @iReturn = sp_OAGetProperty @iObjectId, N'GetStreamObject', @iStreamObjectId OUT
+            if @iReturn <> 0 GOTO E_OAError
+
+            select colid, text into #ProcLines
+            from syscomments
+            where id = object_id(@vchObjectName)
+            order by colid
+
+            declare @iCurProcLine int
+            declare @iProcLines int
+            select @iCurProcLine = 1
+            select @iProcLines = (select count(*) from #ProcLines)
+            while @iCurProcLine <= @iProcLines
+            begin
+                declare @pos int
+                select @pos = 1
+                declare @iCurLineSize int
+                select @iCurLineSize = len((select text from #ProcLines where colid = @iCurProcLine))
+                while @pos <= @iCurLineSize
+                begin
+                    declare @vchProcLinePiece nvarchar(255)
+                    select @vchProcLinePiece = convert(nvarchar(255),
+                        substring((select text from #ProcLines where colid = @iCurProcLine),
+                                  @pos, 255 ))
+                    exec @iReturn = sp_OAMethod @iStreamObjectId, N'AddStream', @iReturnValue OUT, @vchProcLinePiece
+                    if @iReturn <> 0 GOTO E_OAError
+                    select @pos = @pos + 255
+                end
+                select @iCurProcLine = @iCurProcLine + 1
+            end
+            drop table #ProcLines
+
+            exec @iReturn = sp_OAMethod @iObjectId,
+                                        N'CheckIn_StoredProcedure',
+                                        NULL,
+                                        @sProjectName = @vchProjectName,
+                                        @sSourceSafeINI = @vchSourceSafeINI,
+                                        @sServerName = @vchServerName,
+                                        @sDatabaseName = @vchDatabaseName,
+                                        @sObjectName = @vchObjectName,
+                                        @sComment = @vchComment,
+                                        @sLoginName = @vchLoginName,
+                                        @sPassword = @vchPassword,
+                                        @iVCSFlags = @iVCSFlags,
+                                        @iActionFlag = @iActionFlag,
+                                        @sStream = ''
+        end
+
+        if @iReturn <> 0 GOTO E_OAError
+
+        if @iActionFlag = 1
+        begin
+            commit tran compile_all
+            if @@error <> 0 GOTO E_Compile_Fail
+        end
+
+    end
+
+CleanUp:
+    return
+
+E_Compile_Fail:
+    declare @lerror int
+    select @lerror = @@error
+    rollback tran compile_all
+    RAISERROR (@lerror,16,-1)
+    goto CleanUp
+
+E_OAError:
+    if @iActionFlag = 1 rollback tran compile_all
+    exec dbo.dt_displayoaerror_u @iObjectId, @iReturn
+    goto CleanUp
+GO
+
+
+-- ----------------------------
+-- procedure structure for dt_checkoutobject_u
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_checkoutobject_u]') AND type IN ('P', 'PC', 'RF', 'X'))
+	DROP PROCEDURE[dbo].[dt_checkoutobject_u]
+GO
+
+CREATE PROCEDURE [dbo].[dt_checkoutobject_u]
+    @chObjectType  char(4),
+    @vchObjectName nvarchar(255),
+    @vchComment    nvarchar(255),
+    @vchLoginName  nvarchar(255),
+    @vchPassword   nvarchar(255),
+    @iVCSFlags     int = 0,
+    @iActionFlag   int = 0/* 0 => Checkout, 1 => GetLatest, 2 => UndoCheckOut */
+
+as
+
+set nocount on
+
+declare @iReturn int
+declare @iObjectId int
+select @iObjectId =0
+
+declare @VSSGUID nvarchar(100)
+select @VSSGUID = N'SQLVersionControl.VCS_SQL'
+
+declare @iReturnValue int
+select @iReturnValue = 0
+
+declare @vchTempText nvarchar(255)
+
+/* this is for our strings */
+declare @iStreamObjectId int
+select @iStreamObjectId = 0
+
+    declare @iPropertyObjectId int
+    select @iPropertyObjectId = (select objectid from dbo.dtproperties where property = 'VCSProjectID')
+
+    declare @vchProjectName   nvarchar(255)
+    declare @vchSourceSafeINI nvarchar(255)
+    declare @vchServerName    nvarchar(255)
+    declare @vchDatabaseName  nvarchar(255)
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSProject',       @vchProjectName   OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSourceSafeINI', @vchSourceSafeINI OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLServer',     @vchServerName    OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLDatabase',   @vchDatabaseName  OUT
+
+    if @chObjectType = 'PROC'
+    begin
+        /* Procedure Can have up to three streams
+           Drop Stream, Create Stream, GRANT stream */
+
+        exec @iReturn = sp_OACreate @VSSGUID, @iObjectId OUT
+
+        if @iReturn <> 0 GOTO E_OAError
+
+        exec @iReturn = sp_OAMethod @iObjectId,
+                                    N'CheckOut_StoredProcedure',
+                                    NULL,
+                                    @sProjectName = @vchProjectName,
+                                    @sSourceSafeINI = @vchSourceSafeINI,
+                                    @sObjectName = @vchObjectName,
+                                    @sServerName = @vchServerName,
+                                    @sDatabaseName = @vchDatabaseName,
+                                    @sComment = @vchComment,
+                                    @sLoginName = @vchLoginName,
+                                    @sPassword = @vchPassword,
+                                    @iVCSFlags = @iVCSFlags,
+                                    @iActionFlag = @iActionFlag
+
+        if @iReturn <> 0 GOTO E_OAError
+
+
+        exec @iReturn = sp_OAGetProperty @iObjectId, N'GetStreamObject', @iStreamObjectId OUT
+
+        if @iReturn <> 0 GOTO E_OAError
+
+        create table #commenttext (id int identity, sourcecode nvarchar(255))
+
+
+        select @vchTempText = N'STUB'
+        while @vchTempText IS NOT NULL
+        begin
+            exec @iReturn = sp_OAMethod @iStreamObjectId, N'GetStream', @iReturnValue OUT, @vchTempText OUT
+            if @iReturn <> 0 GOTO E_OAError
+
+            if (@vchTempText IS NOT NULL) insert into #commenttext (sourcecode) select @vchTempText
+        end
+
+        select N'VCS'=sourcecode from #commenttext order by id
+        select N'SQL'=text from syscomments where id = object_id(@vchObjectName) order by colid
+
+    end
+
+CleanUp:
+    return
+
+E_OAError:
+    exec dbo.dt_displayoaerror_u @iObjectId, @iReturn
+    GOTO CleanUp
+GO
+
+
+-- ----------------------------
+-- procedure structure for dt_displayoaerror_u
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_displayoaerror_u]') AND type IN ('P', 'PC', 'RF', 'X'))
+	DROP PROCEDURE[dbo].[dt_displayoaerror_u]
+GO
+
+CREATE PROCEDURE [dbo].[dt_displayoaerror_u]
+    @iObject int,
+    @iresult int
+as
+
+set nocount on
+
+declare @vchOutput      nvarchar(255)
+declare @hr             int
+declare @vchSource      nvarchar(255)
+declare @vchDescription nvarchar(255)
+
+    exec @hr = sp_OAGetErrorInfo @iObject, @vchSource OUT, @vchDescription OUT
+
+    select @vchOutput = @vchSource + ': ' + @vchDescription
+    raiserror (@vchOutput,16,-1)
+
+    return
+GO
+
+
+-- ----------------------------
+-- procedure structure for dt_getpropertiesbyid_vcs_u
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_getpropertiesbyid_vcs_u]') AND type IN ('P', 'PC', 'RF', 'X'))
+	DROP PROCEDURE[dbo].[dt_getpropertiesbyid_vcs_u]
+GO
+
+CREATE PROCEDURE [dbo].[dt_getpropertiesbyid_vcs_u]
+    @id       int,
+    @property varchar(64),
+    @value    nvarchar(255) = NULL OUT
+
+as
+
+    set nocount on
+
+    select @value = (
+        select uvalue
+                from dbo.dtproperties
+                where @id=objectid and @property=property
+                )
+GO
+
+
+-- ----------------------------
+-- procedure structure for dt_isundersourcecontrol_u
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_isundersourcecontrol_u]') AND type IN ('P', 'PC', 'RF', 'X'))
+	DROP PROCEDURE[dbo].[dt_isundersourcecontrol_u]
+GO
+
+CREATE PROCEDURE [dbo].[dt_isundersourcecontrol_u]
+    @vchLoginName nvarchar(255) = '',
+    @vchPassword  nvarchar(255) = '',
+    @iWhoToo      int = 0 /* 0 => Just check project; 1 => get list of objs */
+
+as
+
+	set nocount on
+
+	declare @iReturn int
+	declare @iObjectId int
+	select @iObjectId = 0
+
+	declare @VSSGUID nvarchar(100)
+	select @VSSGUID = N'SQLVersionControl.VCS_SQL'
+
+	declare @iReturnValue int
+	select @iReturnValue = 0
+
+	declare @iStreamObjectId int
+	select @iStreamObjectId   = 0
+
+	declare @vchTempText nvarchar(255)
+
+    declare @iPropertyObjectId int
+    select @iPropertyObjectId = (select objectid from dbo.dtproperties where property = 'VCSProjectID')
+
+    declare @vchProjectName   nvarchar(255)
+    declare @vchSourceSafeINI nvarchar(255)
+    declare @vchServerName    nvarchar(255)
+    declare @vchDatabaseName  nvarchar(255)
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSProject',       @vchProjectName   OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSourceSafeINI', @vchSourceSafeINI OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLServer',     @vchServerName    OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLDatabase',   @vchDatabaseName  OUT
+
+    if (@vchProjectName IS NULL) or (@vchSourceSafeINI  IS NULL) or (@vchServerName IS NULL) or (@vchDatabaseName IS NULL)
+    begin
+        RAISERROR(N'Not Under Source Control',16,-1)
+        return
+    end
+
+    if @iWhoToo = 1
+    begin
+
+        /* Get List of Procs in the project */
+        exec @iReturn = sp_OACreate @VSSGUID, @iObjectId OUT
+        if @iReturn <> 0 GOTO E_OAError
+
+        exec @iReturn = sp_OAMethod @iObjectId,
+                                    N'GetListOfObjects',
+                                    NULL,
+                                    @vchProjectName,
+                                    @vchSourceSafeINI,
+                                    @vchServerName,
+                                    @vchDatabaseName,
+                                    @vchLoginName,
+                                    @vchPassword
+
+        if @iReturn <> 0 GOTO E_OAError
+
+        exec @iReturn = sp_OAGetProperty @iObjectId, N'GetStreamObject', @iStreamObjectId OUT
+
+        if @iReturn <> 0 GOTO E_OAError
+
+        create table #ObjectList (id int identity, vchObjectlist nvarchar(255))
+
+        select @vchTempText = N'STUB'
+        while @vchTempText IS NOT NULL
+        begin
+            exec @iReturn = sp_OAMethod @iStreamObjectId, N'GetStream', @iReturnValue OUT, @vchTempText OUT
+            if @iReturn <> 0 GOTO E_OAError
+
+            if (@vchTempText IS NOT NULL) insert into #ObjectList (vchObjectlist ) select @vchTempText
+        end
+
+        select vchObjectlist from #ObjectList order by id
+    end
+
+CleanUp:
+    return
+
+E_OAError:
+    exec dbo.dt_displayoaerror_u @iObjectId, @iReturn
+    goto CleanUp
+GO
+
+
+-- ----------------------------
+-- procedure structure for dt_validateloginparams_u
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_validateloginparams_u]') AND type IN ('P', 'PC', 'RF', 'X'))
+	DROP PROCEDURE[dbo].[dt_validateloginparams_u]
+GO
+
+CREATE PROCEDURE [dbo].[dt_validateloginparams_u]
+    @vchLoginName  nvarchar(255),
+    @vchPassword   nvarchar(255)
+as
+
+set nocount on
+
+declare @iReturn int
+declare @iObjectId int
+select @iObjectId =0
+
+declare @VSSGUID nvarchar(100)
+select @VSSGUID = N'SQLVersionControl.VCS_SQL'
+
+    declare @iPropertyObjectId int
+    select @iPropertyObjectId = (select objectid from dbo.dtproperties where property = 'VCSProjectID')
+
+    declare @vchSourceSafeINI nvarchar(255)
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSourceSafeINI', @vchSourceSafeINI OUT
+
+    exec @iReturn = sp_OACreate @VSSGUID, @iObjectId OUT
+    if @iReturn <> 0 GOTO E_OAError
+
+    exec @iReturn = sp_OAMethod @iObjectId,
+                                N'ValidateLoginParams',
+                                NULL,
+                                @sSourceSafeINI = @vchSourceSafeINI,
+                                @sLoginName = @vchLoginName,
+                                @sPassword = @vchPassword
+    if @iReturn <> 0 GOTO E_OAError
+
+CleanUp:
+    return
+
+E_OAError:
+    exec dbo.dt_displayoaerror_u @iObjectId, @iReturn
+    GOTO CleanUp
+GO
+
+
+-- ----------------------------
+-- procedure structure for dt_whocheckedout_u
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_whocheckedout_u]') AND type IN ('P', 'PC', 'RF', 'X'))
+	DROP PROCEDURE[dbo].[dt_whocheckedout_u]
+GO
+
+CREATE PROCEDURE [dbo].[dt_whocheckedout_u]
+        @chObjectType  char(4),
+        @vchObjectName nvarchar(255),
+        @vchLoginName  nvarchar(255),
+        @vchPassword   nvarchar(255)
+
+as
+
+set nocount on
+
+declare @iReturn int
+declare @iObjectId int
+select @iObjectId =0
+
+declare @VSSGUID nvarchar(100)
+select @VSSGUID = N'SQLVersionControl.VCS_SQL'
+
+    declare @iPropertyObjectId int
+
+    select @iPropertyObjectId = (select objectid from dbo.dtproperties where property = 'VCSProjectID')
+
+    declare @vchProjectName   nvarchar(255)
+    declare @vchSourceSafeINI nvarchar(255)
+    declare @vchServerName    nvarchar(255)
+    declare @vchDatabaseName  nvarchar(255)
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSProject',       @vchProjectName   OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSourceSafeINI', @vchSourceSafeINI OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLServer',     @vchServerName    OUT
+    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLDatabase',   @vchDatabaseName  OUT
+
+    if @chObjectType = 'PROC'
+    begin
+        exec @iReturn = sp_OACreate @VSSGUID, @iObjectId OUT
+
+        if @iReturn <> 0 GOTO E_OAError
+
+        declare @vchReturnValue nvarchar(255)
+        select @vchReturnValue = ''
+
+        exec @iReturn = sp_OAMethod @iObjectId,
+                                    N'WhoCheckedOut',
+                                    @vchReturnValue OUT,
+                                    @sProjectName = @vchProjectName,
+                                    @sSourceSafeINI = @vchSourceSafeINI,
+                                    @sObjectName = @vchObjectName,
+                                    @sServerName = @vchServerName,
+                                    @sDatabaseName = @vchDatabaseName,
+                                    @sLoginName = @vchLoginName,
+                                    @sPassword = @vchPassword
+
+        if @iReturn <> 0 GOTO E_OAError
+
+        select @vchReturnValue
+
+    end
+
+CleanUp:
+    return
+
+E_OAError:
+    exec dbo.dt_displayoaerror_u @iObjectId, @iReturn
+    GOTO CleanUp
 GO
 
 
@@ -34952,542 +30088,6 @@ GO
 
 
 -- ----------------------------
--- procedure structure for dt_checkinobject_u
--- ----------------------------
-IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_checkinobject_u]') AND type IN ('P', 'PC', 'RF', 'X'))
-	DROP PROCEDURE[dbo].[dt_checkinobject_u]
-GO
-
-CREATE PROCEDURE [dbo].[dt_checkinobject_u]
-    @chObjectType  char(4),
-    @vchObjectName nvarchar(255),
-    @vchComment    nvarchar(255)='',
-    @vchLoginName  nvarchar(255),
-    @vchPassword   nvarchar(255)='',
-    @iVCSFlags     int = 0,
-    @iActionFlag   int = 0,   /* 0 => AddFile, 1 => CheckIn */
-    @txStream1     Text = '', /* There is a bug that if items are NULL they do not pass to OLE servers */
-    @txStream2     Text = '',
-    @txStream3     Text = ''
-
-
-as
-
-set nocount on
-
-declare @iReturn int
-declare @iObjectId int
-select @iObjectId = 0
-
-declare @VSSGUID nvarchar(100)
-select @VSSGUID = N'SQLVersionControl.VCS_SQL'
-
-
-declare @iPropertyObjectId int
-select @iPropertyObjectId  = 0
-
-    select @iPropertyObjectId = (select objectid from dbo.dtproperties where property = 'VCSProjectID')
-
-    declare @vchProjectName   nvarchar(255)
-    declare @vchSourceSafeINI nvarchar(255)
-    declare @vchServerName    nvarchar(255)
-    declare @vchDatabaseName  nvarchar(255)
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSProject',       @vchProjectName   OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSourceSafeINI', @vchSourceSafeINI OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLServer',     @vchServerName    OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLDatabase',   @vchDatabaseName  OUT
-
-    if @chObjectType = 'PROC'
-    begin
-        if @iActionFlag = 1
-        begin
-            /* Procedure Can have up to three streams
-            Drop Stream, Create Stream, GRANT stream */
-
-            begin tran compile_all
-
-            /* try to compile the streams */
-            exec (@txStream1)
-            if @@error <> 0 GOTO E_Compile_Fail
-
-            exec (@txStream2)
-            if @@error <> 0 GOTO E_Compile_Fail
-
-            exec (@txStream3)
-            if @@error <> 0 GOTO E_Compile_Fail
-        end
-
-        exec @iReturn = sp_OACreate @VSSGUID, @iObjectId OUT
-        if @iReturn <> 0 GOTO E_OAError
-
-        if @iActionFlag = 1
-        begin
-            exec @iReturn = sp_OAMethod @iObjectId,
-                                        N'CheckIn_StoredProcedure',
-                                        NULL,
-                                        @sProjectName = @vchProjectName,
-                                        @sSourceSafeINI = @vchSourceSafeINI,
-                                        @sServerName = @vchServerName,
-                                        @sDatabaseName = @vchDatabaseName,
-                                        @sObjectName = @vchObjectName,
-                                        @sComment = @vchComment,
-                                        @sLoginName = @vchLoginName,
-                                        @sPassword = @vchPassword,
-                                        @iVCSFlags = @iVCSFlags,
-                                        @iActionFlag = @iActionFlag,
-                                        @sStream = @txStream2
-        end
-        else
-        begin
-            declare @iStreamObjectId int
-            declare @iReturnValue int
-
-            exec @iReturn = sp_OAGetProperty @iObjectId, N'GetStreamObject', @iStreamObjectId OUT
-            if @iReturn <> 0 GOTO E_OAError
-
-            select colid, text into #ProcLines
-            from syscomments
-            where id = object_id(@vchObjectName)
-            order by colid
-
-            declare @iCurProcLine int
-            declare @iProcLines int
-            select @iCurProcLine = 1
-            select @iProcLines = (select count(*) from #ProcLines)
-            while @iCurProcLine <= @iProcLines
-            begin
-                declare @pos int
-                select @pos = 1
-                declare @iCurLineSize int
-                select @iCurLineSize = len((select text from #ProcLines where colid = @iCurProcLine))
-                while @pos <= @iCurLineSize
-                begin
-                    declare @vchProcLinePiece nvarchar(255)
-                    select @vchProcLinePiece = convert(nvarchar(255),
-                        substring((select text from #ProcLines where colid = @iCurProcLine),
-                                  @pos, 255 ))
-                    exec @iReturn = sp_OAMethod @iStreamObjectId, N'AddStream', @iReturnValue OUT, @vchProcLinePiece
-                    if @iReturn <> 0 GOTO E_OAError
-                    select @pos = @pos + 255
-                end
-                select @iCurProcLine = @iCurProcLine + 1
-            end
-            drop table #ProcLines
-
-            exec @iReturn = sp_OAMethod @iObjectId,
-                                        N'CheckIn_StoredProcedure',
-                                        NULL,
-                                        @sProjectName = @vchProjectName,
-                                        @sSourceSafeINI = @vchSourceSafeINI,
-                                        @sServerName = @vchServerName,
-                                        @sDatabaseName = @vchDatabaseName,
-                                        @sObjectName = @vchObjectName,
-                                        @sComment = @vchComment,
-                                        @sLoginName = @vchLoginName,
-                                        @sPassword = @vchPassword,
-                                        @iVCSFlags = @iVCSFlags,
-                                        @iActionFlag = @iActionFlag,
-                                        @sStream = ''
-        end
-
-        if @iReturn <> 0 GOTO E_OAError
-
-        if @iActionFlag = 1
-        begin
-            commit tran compile_all
-            if @@error <> 0 GOTO E_Compile_Fail
-        end
-
-    end
-
-CleanUp:
-    return
-
-E_Compile_Fail:
-    declare @lerror int
-    select @lerror = @@error
-    rollback tran compile_all
-    RAISERROR (@lerror,16,-1)
-    goto CleanUp
-
-E_OAError:
-    if @iActionFlag = 1 rollback tran compile_all
-    exec dbo.dt_displayoaerror_u @iObjectId, @iReturn
-    goto CleanUp
-GO
-
-
--- ----------------------------
--- procedure structure for dt_checkoutobject_u
--- ----------------------------
-IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_checkoutobject_u]') AND type IN ('P', 'PC', 'RF', 'X'))
-	DROP PROCEDURE[dbo].[dt_checkoutobject_u]
-GO
-
-CREATE PROCEDURE [dbo].[dt_checkoutobject_u]
-    @chObjectType  char(4),
-    @vchObjectName nvarchar(255),
-    @vchComment    nvarchar(255),
-    @vchLoginName  nvarchar(255),
-    @vchPassword   nvarchar(255),
-    @iVCSFlags     int = 0,
-    @iActionFlag   int = 0/* 0 => Checkout, 1 => GetLatest, 2 => UndoCheckOut */
-
-as
-
-set nocount on
-
-declare @iReturn int
-declare @iObjectId int
-select @iObjectId =0
-
-declare @VSSGUID nvarchar(100)
-select @VSSGUID = N'SQLVersionControl.VCS_SQL'
-
-declare @iReturnValue int
-select @iReturnValue = 0
-
-declare @vchTempText nvarchar(255)
-
-/* this is for our strings */
-declare @iStreamObjectId int
-select @iStreamObjectId = 0
-
-    declare @iPropertyObjectId int
-    select @iPropertyObjectId = (select objectid from dbo.dtproperties where property = 'VCSProjectID')
-
-    declare @vchProjectName   nvarchar(255)
-    declare @vchSourceSafeINI nvarchar(255)
-    declare @vchServerName    nvarchar(255)
-    declare @vchDatabaseName  nvarchar(255)
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSProject',       @vchProjectName   OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSourceSafeINI', @vchSourceSafeINI OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLServer',     @vchServerName    OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLDatabase',   @vchDatabaseName  OUT
-
-    if @chObjectType = 'PROC'
-    begin
-        /* Procedure Can have up to three streams
-           Drop Stream, Create Stream, GRANT stream */
-
-        exec @iReturn = sp_OACreate @VSSGUID, @iObjectId OUT
-
-        if @iReturn <> 0 GOTO E_OAError
-
-        exec @iReturn = sp_OAMethod @iObjectId,
-                                    N'CheckOut_StoredProcedure',
-                                    NULL,
-                                    @sProjectName = @vchProjectName,
-                                    @sSourceSafeINI = @vchSourceSafeINI,
-                                    @sObjectName = @vchObjectName,
-                                    @sServerName = @vchServerName,
-                                    @sDatabaseName = @vchDatabaseName,
-                                    @sComment = @vchComment,
-                                    @sLoginName = @vchLoginName,
-                                    @sPassword = @vchPassword,
-                                    @iVCSFlags = @iVCSFlags,
-                                    @iActionFlag = @iActionFlag
-
-        if @iReturn <> 0 GOTO E_OAError
-
-
-        exec @iReturn = sp_OAGetProperty @iObjectId, N'GetStreamObject', @iStreamObjectId OUT
-
-        if @iReturn <> 0 GOTO E_OAError
-
-        create table #commenttext (id int identity, sourcecode nvarchar(255))
-
-
-        select @vchTempText = N'STUB'
-        while @vchTempText IS NOT NULL
-        begin
-            exec @iReturn = sp_OAMethod @iStreamObjectId, N'GetStream', @iReturnValue OUT, @vchTempText OUT
-            if @iReturn <> 0 GOTO E_OAError
-
-            if (@vchTempText IS NOT NULL) insert into #commenttext (sourcecode) select @vchTempText
-        end
-
-        select N'VCS'=sourcecode from #commenttext order by id
-        select N'SQL'=text from syscomments where id = object_id(@vchObjectName) order by colid
-
-    end
-
-CleanUp:
-    return
-
-E_OAError:
-    exec dbo.dt_displayoaerror_u @iObjectId, @iReturn
-    GOTO CleanUp
-GO
-
-
--- ----------------------------
--- procedure structure for dt_displayoaerror_u
--- ----------------------------
-IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_displayoaerror_u]') AND type IN ('P', 'PC', 'RF', 'X'))
-	DROP PROCEDURE[dbo].[dt_displayoaerror_u]
-GO
-
-CREATE PROCEDURE [dbo].[dt_displayoaerror_u]
-    @iObject int,
-    @iresult int
-as
-
-set nocount on
-
-declare @vchOutput      nvarchar(255)
-declare @hr             int
-declare @vchSource      nvarchar(255)
-declare @vchDescription nvarchar(255)
-
-    exec @hr = sp_OAGetErrorInfo @iObject, @vchSource OUT, @vchDescription OUT
-
-    select @vchOutput = @vchSource + ': ' + @vchDescription
-    raiserror (@vchOutput,16,-1)
-
-    return
-GO
-
-
--- ----------------------------
--- procedure structure for dt_getpropertiesbyid_vcs_u
--- ----------------------------
-IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_getpropertiesbyid_vcs_u]') AND type IN ('P', 'PC', 'RF', 'X'))
-	DROP PROCEDURE[dbo].[dt_getpropertiesbyid_vcs_u]
-GO
-
-CREATE PROCEDURE [dbo].[dt_getpropertiesbyid_vcs_u]
-    @id       int,
-    @property varchar(64),
-    @value    nvarchar(255) = NULL OUT
-
-as
-
-    set nocount on
-
-    select @value = (
-        select uvalue
-                from dbo.dtproperties
-                where @id=objectid and @property=property
-                )
-GO
-
-
--- ----------------------------
--- procedure structure for dt_isundersourcecontrol_u
--- ----------------------------
-IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_isundersourcecontrol_u]') AND type IN ('P', 'PC', 'RF', 'X'))
-	DROP PROCEDURE[dbo].[dt_isundersourcecontrol_u]
-GO
-
-CREATE PROCEDURE [dbo].[dt_isundersourcecontrol_u]
-    @vchLoginName nvarchar(255) = '',
-    @vchPassword  nvarchar(255) = '',
-    @iWhoToo      int = 0 /* 0 => Just check project; 1 => get list of objs */
-
-as
-
-	set nocount on
-
-	declare @iReturn int
-	declare @iObjectId int
-	select @iObjectId = 0
-
-	declare @VSSGUID nvarchar(100)
-	select @VSSGUID = N'SQLVersionControl.VCS_SQL'
-
-	declare @iReturnValue int
-	select @iReturnValue = 0
-
-	declare @iStreamObjectId int
-	select @iStreamObjectId   = 0
-
-	declare @vchTempText nvarchar(255)
-
-    declare @iPropertyObjectId int
-    select @iPropertyObjectId = (select objectid from dbo.dtproperties where property = 'VCSProjectID')
-
-    declare @vchProjectName   nvarchar(255)
-    declare @vchSourceSafeINI nvarchar(255)
-    declare @vchServerName    nvarchar(255)
-    declare @vchDatabaseName  nvarchar(255)
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSProject',       @vchProjectName   OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSourceSafeINI', @vchSourceSafeINI OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLServer',     @vchServerName    OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLDatabase',   @vchDatabaseName  OUT
-
-    if (@vchProjectName IS NULL) or (@vchSourceSafeINI  IS NULL) or (@vchServerName IS NULL) or (@vchDatabaseName IS NULL)
-    begin
-        RAISERROR(N'Not Under Source Control',16,-1)
-        return
-    end
-
-    if @iWhoToo = 1
-    begin
-
-        /* Get List of Procs in the project */
-        exec @iReturn = sp_OACreate @VSSGUID, @iObjectId OUT
-        if @iReturn <> 0 GOTO E_OAError
-
-        exec @iReturn = sp_OAMethod @iObjectId,
-                                    N'GetListOfObjects',
-                                    NULL,
-                                    @vchProjectName,
-                                    @vchSourceSafeINI,
-                                    @vchServerName,
-                                    @vchDatabaseName,
-                                    @vchLoginName,
-                                    @vchPassword
-
-        if @iReturn <> 0 GOTO E_OAError
-
-        exec @iReturn = sp_OAGetProperty @iObjectId, N'GetStreamObject', @iStreamObjectId OUT
-
-        if @iReturn <> 0 GOTO E_OAError
-
-        create table #ObjectList (id int identity, vchObjectlist nvarchar(255))
-
-        select @vchTempText = N'STUB'
-        while @vchTempText IS NOT NULL
-        begin
-            exec @iReturn = sp_OAMethod @iStreamObjectId, N'GetStream', @iReturnValue OUT, @vchTempText OUT
-            if @iReturn <> 0 GOTO E_OAError
-
-            if (@vchTempText IS NOT NULL) insert into #ObjectList (vchObjectlist ) select @vchTempText
-        end
-
-        select vchObjectlist from #ObjectList order by id
-    end
-
-CleanUp:
-    return
-
-E_OAError:
-    exec dbo.dt_displayoaerror_u @iObjectId, @iReturn
-    goto CleanUp
-GO
-
-
--- ----------------------------
--- procedure structure for dt_validateloginparams_u
--- ----------------------------
-IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_validateloginparams_u]') AND type IN ('P', 'PC', 'RF', 'X'))
-	DROP PROCEDURE[dbo].[dt_validateloginparams_u]
-GO
-
-CREATE PROCEDURE [dbo].[dt_validateloginparams_u]
-    @vchLoginName  nvarchar(255),
-    @vchPassword   nvarchar(255)
-as
-
-set nocount on
-
-declare @iReturn int
-declare @iObjectId int
-select @iObjectId =0
-
-declare @VSSGUID nvarchar(100)
-select @VSSGUID = N'SQLVersionControl.VCS_SQL'
-
-    declare @iPropertyObjectId int
-    select @iPropertyObjectId = (select objectid from dbo.dtproperties where property = 'VCSProjectID')
-
-    declare @vchSourceSafeINI nvarchar(255)
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSourceSafeINI', @vchSourceSafeINI OUT
-
-    exec @iReturn = sp_OACreate @VSSGUID, @iObjectId OUT
-    if @iReturn <> 0 GOTO E_OAError
-
-    exec @iReturn = sp_OAMethod @iObjectId,
-                                N'ValidateLoginParams',
-                                NULL,
-                                @sSourceSafeINI = @vchSourceSafeINI,
-                                @sLoginName = @vchLoginName,
-                                @sPassword = @vchPassword
-    if @iReturn <> 0 GOTO E_OAError
-
-CleanUp:
-    return
-
-E_OAError:
-    exec dbo.dt_displayoaerror_u @iObjectId, @iReturn
-    GOTO CleanUp
-GO
-
-
--- ----------------------------
--- procedure structure for dt_whocheckedout_u
--- ----------------------------
-IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[dt_whocheckedout_u]') AND type IN ('P', 'PC', 'RF', 'X'))
-	DROP PROCEDURE[dbo].[dt_whocheckedout_u]
-GO
-
-CREATE PROCEDURE [dbo].[dt_whocheckedout_u]
-        @chObjectType  char(4),
-        @vchObjectName nvarchar(255),
-        @vchLoginName  nvarchar(255),
-        @vchPassword   nvarchar(255)
-
-as
-
-set nocount on
-
-declare @iReturn int
-declare @iObjectId int
-select @iObjectId =0
-
-declare @VSSGUID nvarchar(100)
-select @VSSGUID = N'SQLVersionControl.VCS_SQL'
-
-    declare @iPropertyObjectId int
-
-    select @iPropertyObjectId = (select objectid from dbo.dtproperties where property = 'VCSProjectID')
-
-    declare @vchProjectName   nvarchar(255)
-    declare @vchSourceSafeINI nvarchar(255)
-    declare @vchServerName    nvarchar(255)
-    declare @vchDatabaseName  nvarchar(255)
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSProject',       @vchProjectName   OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSourceSafeINI', @vchSourceSafeINI OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLServer',     @vchServerName    OUT
-    exec dbo.dt_getpropertiesbyid_vcs_u @iPropertyObjectId, 'VCSSQLDatabase',   @vchDatabaseName  OUT
-
-    if @chObjectType = 'PROC'
-    begin
-        exec @iReturn = sp_OACreate @VSSGUID, @iObjectId OUT
-
-        if @iReturn <> 0 GOTO E_OAError
-
-        declare @vchReturnValue nvarchar(255)
-        select @vchReturnValue = ''
-
-        exec @iReturn = sp_OAMethod @iObjectId,
-                                    N'WhoCheckedOut',
-                                    @vchReturnValue OUT,
-                                    @sProjectName = @vchProjectName,
-                                    @sSourceSafeINI = @vchSourceSafeINI,
-                                    @sObjectName = @vchObjectName,
-                                    @sServerName = @vchServerName,
-                                    @sDatabaseName = @vchDatabaseName,
-                                    @sLoginName = @vchLoginName,
-                                    @sPassword = @vchPassword
-
-        if @iReturn <> 0 GOTO E_OAError
-
-        select @vchReturnValue
-
-    end
-
-CleanUp:
-    return
-
-E_OAError:
-    exec dbo.dt_displayoaerror_u @iObjectId, @iReturn
-    GOTO CleanUp
-GO
-
-
--- ----------------------------
 -- Auto increment value for chinaBank_order
 -- ----------------------------
 DBCC CHECKIDENT ('[dbo].[chinaBank_order]', RESEED, 1)
@@ -35538,7 +30138,7 @@ GO
 -- ----------------------------
 -- Auto increment value for class
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[class]', RESEED, 304)
+DBCC CHECKIDENT ('[dbo].[class]', RESEED, 305)
 GO
 
 
@@ -35796,21 +30396,13 @@ GO
 -- ----------------------------
 -- Auto increment value for fcount
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[fcount]', RESEED, 1250)
+DBCC CHECKIDENT ('[dbo].[fcount]', RESEED, 1275)
 GO
 
 
 -- ----------------------------
 -- Indexes structure for table fcount
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_fcount]
-ON [dbo].[fcount] (
-  [ftime] ASC,
-  [fuserid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PL_S]
 ON [dbo].[fcount] (
   [fip] ASC,
@@ -35836,13 +30428,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table Form_Data
 -- ----------------------------
-CREATE CLUSTERED INDEX [pk_siteid]
-ON [dbo].[Form_Data] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[Form_Data] (
   [id] ASC
@@ -35860,13 +30445,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table Form_List
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[Form_List] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_ID]
 ON [dbo].[Form_List] (
   [id] ASC
@@ -35884,13 +30462,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table Form_List_Detail
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[Form_List_Detail] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[Form_List_Detail] (
   [id] ASC
@@ -35983,14 +30554,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table sys_ad_show
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[sys_ad_show] (
-  [siteid] ASC,
-  [systype] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[sys_ad_show] (
   [id] ASC
@@ -36098,14 +30661,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table sys_wap_files
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_sys_wap_files]
-ON [dbo].[sys_wap_files] (
-  [userid] ASC,
-  [book_file] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[sys_wap_files] (
   [id] ASC
@@ -36205,7 +30760,7 @@ GO
 -- ----------------------------
 -- Auto increment value for user
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[user]', RESEED, 1000)
+DBCC CHECKIDENT ('[dbo].[user]', RESEED, 1001)
 GO
 
 
@@ -36231,18 +30786,6 @@ GO
 ALTER TABLE [dbo].[user] ADD CONSTRAINT [PK_user] PRIMARY KEY CLUSTERED ([userid])
 WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
 ON [PRIMARY]
-GO
-
-
--- ----------------------------
--- Indexes structure for table user_Info
--- ----------------------------
-CREATE UNIQUE CLUSTERED INDEX [PK_user_info]
-ON [dbo].[user_Info] (
-  [siteid] ASC,
-  [userid] ASC
-)  
-FILESTREAM_ON [NULL]
 GO
 
 
@@ -36314,13 +30857,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_action
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap_action] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_ID]
 ON [dbo].[wap_action] (
   [id] ASC
@@ -36475,20 +31011,13 @@ GO
 -- ----------------------------
 -- Auto increment value for wap_bankLog
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[wap_bankLog]', RESEED, 1)
+DBCC CHECKIDENT ('[dbo].[wap_bankLog]', RESEED, 17)
 GO
 
 
 -- ----------------------------
 -- Indexes structure for table wap_bankLog
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap_bankLog] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_addtime]
 ON [dbo].[wap_bankLog] (
   [addtime] ASC
@@ -36508,21 +31037,13 @@ GO
 -- ----------------------------
 -- Auto increment value for wap_bbs
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[wap_bbs]', RESEED, 20)
+DBCC CHECKIDENT ('[dbo].[wap_bbs]', RESEED, 22)
 GO
 
 
 -- ----------------------------
 -- Indexes structure for table wap_bbs
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_bbs]
-ON [dbo].[wap_bbs] (
-  [userid] ASC,
-  [book_classid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_userid]
 ON [dbo].[wap_bbs] (
   [userid] ASC
@@ -36584,17 +31105,6 @@ GO
 
 
 -- ----------------------------
--- Indexes structure for table wap_bbs_MarkSix_bet
--- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap_bbs_MarkSix_bet] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
-
--- ----------------------------
 -- Primary Key structure for table wap_bbs_MarkSix_bet
 -- ----------------------------
 ALTER TABLE [dbo].[wap_bbs_MarkSix_bet] ADD CONSTRAINT [PK_wap_bbs_MarkSix_bet] PRIMARY KEY NONCLUSTERED ([id])
@@ -36645,14 +31155,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_bbsre
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_wap_bbsre]
-ON [dbo].[wap_bbsre] (
-  [devid] ASC,
-  [bookid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_userid]
 ON [dbo].[wap_bbsre] (
   [userid] ASC
@@ -36936,13 +31438,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_friends
 -- ----------------------------
-CREATE UNIQUE CLUSTERED INDEX [PK_wap_friends]
-ON [dbo].[wap_friends] (
-  [id] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_siteid]
 ON [dbo].[wap_friends] (
   [siteid] ASC
@@ -37042,14 +31537,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_guangbo
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid_classid]
-ON [dbo].[wap_guangbo] (
-  [siteid] ASC,
-  [book_classid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[wap_guangbo] (
   [id] ASC
@@ -37067,13 +31554,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_guessbook
 -- ----------------------------
-CREATE UNIQUE CLUSTERED INDEX [PK_wap_guessbook]
-ON [dbo].[wap_guessbook] (
-  [id] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_userid]
 ON [dbo].[wap_guessbook] (
   [userid] ASC
@@ -37097,13 +31577,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_guessbookre
 -- ----------------------------
-CREATE UNIQUE CLUSTERED INDEX [PK_wap_guessbookre]
-ON [dbo].[wap_guessbookre] (
-  [id] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_userid]
 ON [dbo].[wap_guessbookre] (
   [userid] ASC
@@ -37173,13 +31646,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_link
 -- ----------------------------
-CREATE UNIQUE CLUSTERED INDEX [PK_wap_link]
-ON [dbo].[wap_link] (
-  [id] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_userid]
 ON [dbo].[wap_link] (
   [userid] ASC
@@ -37196,20 +31662,13 @@ GO
 -- ----------------------------
 -- Auto increment value for wap_log
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[wap_log]', RESEED, 737)
+DBCC CHECKIDENT ('[dbo].[wap_log]', RESEED, 750)
 GO
 
 
 -- ----------------------------
 -- Indexes structure for table wap_log
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_userid]
-ON [dbo].[wap_log] (
-  [oper_userid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_siteid]
 ON [dbo].[wap_log] (
   [siteid] ASC
@@ -37527,13 +31986,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_question
 -- ----------------------------
-CREATE UNIQUE CLUSTERED INDEX [PK_wap_question]
-ON [dbo].[wap_question] (
-  [id] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_userid]
 ON [dbo].[wap_question] (
   [userid] ASC
@@ -37557,13 +32009,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_questionre
 -- ----------------------------
-CREATE UNIQUE CLUSTERED INDEX [PK_wap_questionre]
-ON [dbo].[wap_questionre] (
-  [id] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_userid]
 ON [dbo].[wap_questionre] (
   [userid] ASC
@@ -37828,13 +32273,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_vcount_Detail
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_vcount_siteid]
-ON [dbo].[wap_vcount_Detail] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_v_addtime]
 ON [dbo].[wap_vcount_Detail] (
   [everyDate] ASC
@@ -37851,21 +32289,13 @@ GO
 -- ----------------------------
 -- Auto increment value for wap_vcount_everyDate
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[wap_vcount_everyDate]', RESEED, 863)
+DBCC CHECKIDENT ('[dbo].[wap_vcount_everyDate]', RESEED, 874)
 GO
 
 
 -- ----------------------------
 -- Indexes structure for table wap_vcount_everyDate
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_types]
-ON [dbo].[wap_vcount_everyDate] (
-  [siteid] ASC,
-  [types] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE NONCLUSTERED INDEX [PK_everyDate]
 ON [dbo].[wap_vcount_everyDate] (
   [everyDate] ASC
@@ -37953,13 +32383,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_wabao
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap_wabao] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[wap_wabao] (
   [id] ASC
@@ -37977,13 +32400,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap_wabaoRe
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap_wabaoRe] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [pk_id]
 ON [dbo].[wap_wabaoRe] (
   [id] ASC
@@ -38229,7 +32645,7 @@ GO
 -- ----------------------------
 -- Auto increment value for wap2_games_chuiniu
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[wap2_games_chuiniu]', RESEED, 1)
+DBCC CHECKIDENT ('[dbo].[wap2_games_chuiniu]', RESEED, 7)
 GO
 
 
@@ -38245,7 +32661,7 @@ GO
 -- ----------------------------
 -- Auto increment value for wap2_games_config
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[wap2_games_config]', RESEED, 1)
+DBCC CHECKIDENT ('[dbo].[wap2_games_config]', RESEED, 2)
 GO
 
 
@@ -38268,13 +32684,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap2_games_happyTen
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap2_games_happyTen] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[wap2_games_happyTen] (
   [id] ASC
@@ -38292,13 +32701,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap2_games_happyTen_bet
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap2_games_happyTen_bet] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[wap2_games_happyTen_bet] (
   [id] ASC
@@ -38371,13 +32773,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap2_games_MarkSix
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap2_games_MarkSix] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[wap2_games_MarkSix] (
   [id] ASC
@@ -38395,13 +32790,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap2_games_MarkSix_bet
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap2_games_MarkSix_bet] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[wap2_games_MarkSix_bet] (
   [id] ASC
@@ -38513,13 +32901,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap2_games_waBao
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap2_games_waBao] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[wap2_games_waBao] (
   [id] ASC
@@ -38537,13 +32918,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap2_games_waBao_bet
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_siteid]
-ON [dbo].[wap2_games_waBao_bet] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[wap2_games_waBao_bet] (
   [id] ASC
@@ -38625,20 +32999,13 @@ GO
 -- ----------------------------
 -- Auto increment value for wap2_visitZone
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[wap2_visitZone]', RESEED, 2)
+DBCC CHECKIDENT ('[dbo].[wap2_visitZone]', RESEED, 4)
 GO
 
 
 -- ----------------------------
 -- Indexes structure for table wap3_htmlContent
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_site]
-ON [dbo].[wap3_htmlContent] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_CID]
 ON [dbo].[wap3_htmlContent] (
   [siteid] ASC,
@@ -38689,13 +33056,6 @@ GO
 -- ----------------------------
 -- Indexes structure for table wap3_style
 -- ----------------------------
-CREATE CLUSTERED INDEX [PK_wap3_style_1]
-ON [dbo].[wap3_style] (
-  [siteid] ASC
-)  
-FILESTREAM_ON [NULL]
-GO
-
 CREATE UNIQUE NONCLUSTERED INDEX [PK_id]
 ON [dbo].[wap3_style] (
   [ID] ASC
