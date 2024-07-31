@@ -13,8 +13,9 @@ using System.Threading;
 using System.Web;
 using System.Web.UI;
 using UBB_Expand;
+using YaoHuo.Plugin.Tool;
 
-namespace YaoHuo.Plugin.Tool
+namespace YaoHuo.Plugin.WebSite
 {
     public class MyPageWap : Page
     {

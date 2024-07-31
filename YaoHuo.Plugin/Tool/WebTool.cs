@@ -1630,7 +1630,7 @@ namespace YaoHuo.Plugin.Tool
                                                 text12 = "select top " + text4 + " userid,book_classid,id,book_title,book_content,book_img,book_date,classname from wap_" + text8 + "_view where ischeck=0 and userid=" + strSiteId;
                                                 if (text8 == "bbs" && strUserID != "")
                                                 {
-                                                    text12 += ExcludeTool.GetExcludeUserSql("book_pub", strUserID);//排除拉黑的用户
+                                                    text12 += BlackTool.GetExcludeUserSql(strUserID, "book_pub");//排除拉黑的用户
                                                 }
                                                 if (text9 != "0")
                                                 {
@@ -4783,15 +4783,15 @@ namespace YaoHuo.Plugin.Tool
 
         public static string getArryString(string tempStr, char splitstr, int int_0)
         {
-            string text = "";
             try
             {
-                return tempStr.Split(splitstr)[int_0];
+                if (!string.IsNullOrEmpty(tempStr))
+                {
+                    return tempStr.Split(splitstr)[int_0];
+                }
             }
-            catch (Exception)
-            {
-                return "";
-            }
+            catch { }
+            return "";
         }
 
         public static void setUserMoney(string siteid, string userid, string money)
@@ -5693,17 +5693,19 @@ namespace YaoHuo.Plugin.Tool
         {
             try
             {
-                string text = regcode;
-                string xmlString = "<RSAKeyValue><Modulus>uh9F4L86QqaXoFEPfnrkA5E205HsebGF1yf27JtAbY9CURc7cgx4mZFHn0pljnVRV6g/pUpgqXhzdbIAXulh1bm+Q3L5tjUY6/MEHWrDWmWQzXr1LO1MaFdeS6cMi2h/GnXjnKLTJT2sj2g4LiKWjmJQST60PkXuZPqHErLSyT0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
+                var text = regcode;
                 text = text.Substring(0, text.IndexOf('=') + 1);
-                using (RSACryptoServiceProvider rSACryptoServiceProvider = new RSACryptoServiceProvider())
+                var rgbSignature = Convert.FromBase64String(text);
+                //
+                var xmlString = "<RSAKeyValue><Modulus>uh9F4L86QqaXoFEPfnrkA5E205HsebGF1yf27JtAbY9CURc7cgx4mZFHn0pljnVRV6g/pUpgqXhzdbIAXulh1bm+Q3L5tjUY6/MEHWrDWmWQzXr1LO1MaFdeS6cMi2h/GnXjnKLTJT2sj2g4LiKWjmJQST60PkXuZPqHErLSyT0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
+                using (var rSACryptoServiceProvider = new RSACryptoServiceProvider())
                 {
+                    var sHA1Managed = new SHA1Managed();
+                    var rgbHash = sHA1Managed.ComputeHash(Encoding.ASCII.GetBytes(username));
+                    //
                     rSACryptoServiceProvider.FromXmlString(xmlString);
-                    RSAPKCS1SignatureDeformatter rSAPKCS1SignatureDeformatter = new RSAPKCS1SignatureDeformatter(rSACryptoServiceProvider);
+                    var rSAPKCS1SignatureDeformatter = new RSAPKCS1SignatureDeformatter(rSACryptoServiceProvider);
                     rSAPKCS1SignatureDeformatter.SetHashAlgorithm("SHA1");
-                    byte[] rgbSignature = Convert.FromBase64String(text);
-                    SHA1Managed sHA1Managed = new SHA1Managed();
-                    byte[] rgbHash = sHA1Managed.ComputeHash(Encoding.ASCII.GetBytes(username));
                     if (rSAPKCS1SignatureDeformatter.VerifySignature(rgbHash, rgbSignature))
                     {
                         return "1";
@@ -5711,7 +5713,7 @@ namespace YaoHuo.Plugin.Tool
                     return "0";
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return "0";
             }

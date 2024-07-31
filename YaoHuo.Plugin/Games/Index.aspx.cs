@@ -1,5 +1,5 @@
 ﻿using System;
-using YaoHuo.Plugin.Tool;
+using YaoHuo.Plugin.WebSite;
 
 namespace YaoHuo.Plugin.Games
 {

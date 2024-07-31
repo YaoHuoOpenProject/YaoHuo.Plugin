@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web;
 using YaoHuo.Plugin.Tool;
+using YaoHuo.Plugin.WebSite;
 
 namespace YaoHuo.Plugin
 {
@@ -29,7 +30,7 @@ namespace YaoHuo.Plugin
             var d1d = WapTool.DesDecrypt(d1);
             var d1dd = WapTool.GetSiteDefault(d1d, 3);
             //加密数据
-            var d2 = "0|2|1000|iiweb.com|art|bbs|pic|dow|rin|vid|wml|sho|gue|cha|lin|adl|";
+            var d2 = "0|2|1000|kelink.com|art|bbs|pic|dow|rin|vid|wml|sho|gue|cha|lin|adl|";
             var d2d = WapTool.DesEncrypt(d2);
             //版权去除
             //1、domainname 表的 domain 改为自己的域名

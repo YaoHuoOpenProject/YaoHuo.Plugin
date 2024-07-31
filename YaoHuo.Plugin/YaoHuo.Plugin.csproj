@@ -93,6 +93,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BBS\Book_View_add.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Games\ChuiNiu\Add.aspx" />
     <Content Include="Games\ChuiNiu\Book_List.aspx" />
@@ -148,6 +149,10 @@
     </Compile>
     <Compile Include="BBS\Book_View.aspx.cs">
       <DependentUpon>Book_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_View_add.aspx.cs">
+      <DependentUpon>Book_View_add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_View_addfileAdd.aspx.cs">
@@ -261,11 +266,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tool\BlackTool.cs" />
-    <Compile Include="Tool\ExcludeTool.cs" />
     <Compile Include="Tool\HttpTool.cs" />
     <Compile Include="Tool\MessageTool.cs" />
-    <Compile Include="Tool\MyCount.cs" />
-    <Compile Include="Tool\MyPageWap.cs">
+    <Compile Include="WebSite\BLL\WapVCountEveryDateBLL.cs" />
+    <Compile Include="WebSite\DAL\WapVCountEveryDateDAL.cs" />
+    <Compile Include="WebSite\MyCount.cs" />
+    <Compile Include="WebSite\MyPageWap.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tool\SendMoneyTool.cs" />
@@ -287,7 +293,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

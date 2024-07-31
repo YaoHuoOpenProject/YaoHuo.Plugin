@@ -1,8 +1,8 @@
 ﻿using KeLin.ClassManager.ExUtility;
 using KeLin.ClassManager.Model;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace YaoHuo.Plugin.Tool
 {
@@ -30,6 +30,7 @@ namespace YaoHuo.Plugin.Tool
                 case 180:
                     blackUp = 30;
                     break;
+
                 default:
                     break;
             }
@@ -115,6 +116,43 @@ namespace YaoHuo.Plugin.Tool
             var sqlStr = $"select count(0) from wap_friends where friendtype = 1 and userid = '{muUserID}' and frienduserid = '{isUserID}'";
             var isCount = DbHelperSQL.ExecuteScalar(connStr, CommandType.Text, sqlStr).ToInt();
             return isCount > 0;
+        }
+
+        /// <summary>
+        /// 获取排除用户脚本
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <param name="name">字段名称</param>
+        /// <returns></returns>
+        public static string GetExcludeUserSql(string userId, string name = "book_pub")
+        {
+            //会员角色ID
+            var vipRoleIDs = new string[]
+            {
+                "180",
+            };
+            //排除黑名单用户脚本
+            var sqlStr = string.Empty;
+            if (!userId.IsNullOrZero())
+            {
+                //普通用户，不显示黑名单的帖子
+                sqlStr = $@" and {name} not in (
+    select frienduserid
+    from wap_friends
+    where friendtype = 1
+    and userid = {userId}
+)";
+                //普通用户被会员拉黑时，不显示会员的帖子
+                sqlStr += $@" and  {name} not in (
+    select t1.userid
+    from wap_friends t1
+    inner join UserVO_View t2 on t1.userid = t2.userid
+    where friendtype = 1
+    and t1.frienduserid = {userId}
+    and t2.SessionTimeout in ({string.Join(",", vipRoleIDs)})
+)";
+            }
+            return sqlStr;
         }
     }
 }

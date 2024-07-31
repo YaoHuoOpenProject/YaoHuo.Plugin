@@ -217,6 +217,8 @@ namespace YaoHuo.Plugin
 1. /admin/addtopwapALL.aspx?siteid=1000&classid=0
 2. /bbs/admin_WAPadvertise.aspx?action=go&siteid=1000&classid=0
 3. /bbs/toMoneylvl.aspx?siteid=1000
+4. /bbs/book_list.aspx?action=new
+5. /bbs/book_view_add.aspx?classid=305
 
 ## 其他
 

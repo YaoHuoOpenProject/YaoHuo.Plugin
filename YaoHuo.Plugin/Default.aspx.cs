@@ -2,7 +2,6 @@
 using KeLin.ClassManager.ExUtility;
 using System;
 using System.Data;
-using System.Threading;
 using System.Web.UI;
 using YaoHuo.Plugin.Tool;
 

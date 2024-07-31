@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web;
 using YaoHuo.Plugin.Tool;
+using YaoHuo.Plugin.WebSite;
 
 namespace YaoHuo.Plugin.BBS
 {
@@ -269,7 +270,8 @@ namespace YaoHuo.Plugin.BBS
                 }
                 else
                 {
-                    var sreWhere = $@"{condition} and book_top = 0 {ExcludeTool.GetExcludeUserSql("book_pub", userid)}";//排除拉黑的用户
+                    var sreWhere = $@"{condition} and book_top = 0";
+                    sreWhere += BlackTool.GetExcludeUserSql(userid, "book_pub");//排除拉黑的用户
                     listVo = wap_bbs_BLL.GetListVo(pageSize, CurrentPage, sreWhere, "book_classid,classname,id,book_title,book_date,book_click,book_re,book_author,book_pub,book_top,book_good,topic,islock,ischeck,sendMoney,isvote,redate,isdown,hangbiaoshi,freeMoney,book_img,MarkSixBetID,MarkSixWin", "redate", total, 1);
                 }
                 sys_ad_show_BLL sys_ad_show_BLL = new sys_ad_show_BLL(a);
@@ -286,8 +288,8 @@ namespace YaoHuo.Plugin.BBS
         {
             if (classid == "0")
             {
-                //condition = " ischeck=0 and userid=" + siteid;
-                condition = $" ischeck = 0 and userid = {siteid} {ExcludeTool.GetExcludeUserSql("book_pub", userid)}";//排除拉黑的用户
+                condition = " ischeck=0 and userid=" + siteid;
+                condition += BlackTool.GetExcludeUserSql(userid, "book_pub");//排除拉黑的用户
                 classVo.classid = 0L;
                 classVo.position = "left";
                 classVo.classname = "所有最新贴子";

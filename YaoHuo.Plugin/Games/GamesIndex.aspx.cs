@@ -4,7 +4,7 @@ using KeLin.ClassManager.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using YaoHuo.Plugin.Tool;
+using YaoHuo.Plugin.WebSite;
 
 namespace YaoHuo.Plugin.Games
 {
