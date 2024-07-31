@@ -25,10 +25,15 @@ namespace YaoHuo.Plugin.Tool
             //会员用户增加黑名单上限
             switch (userInfo.SessionTimeout)
             {
+                case 101:
+                case 358:
+                    blackUp = 30;
+                    break;
+
                 case 105:
                 case 140:
                 case 180:
-                    blackUp = 30;
+                    blackUp = 40;
                     break;
 
                 default:
@@ -129,7 +134,11 @@ namespace YaoHuo.Plugin.Tool
             //会员角色ID
             var vipRoleIDs = new string[]
             {
+                "101",
+                "105",
+                "140",
                 "180",
+                "358",
             };
             //排除黑名单用户脚本
             var sqlStr = string.Empty;
