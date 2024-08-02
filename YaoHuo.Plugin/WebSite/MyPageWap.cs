@@ -1083,13 +1083,13 @@ namespace YaoHuo.Plugin.WebSite
                 stringBuilder.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
                 stringBuilder.Append("<input type=\"submit\" name=\"go\" class=\"btn\" value=\"确定\"/></form>");
                 stringBuilder.Append("</div>");
-                stringBuilder.Append("<div class=\"line\">");
-                stringBuilder.Append("当前IP:" + IP + "，如果老是提示输入密码，看IP是否老是在变。");
+                //stringBuilder.Append("<div class=\"line\">");
+                //stringBuilder.Append("当前IP:" + IP + "，如果老是提示输入密码，看IP是否老是在变。");
                 if (userVo != null && "|00|01|".IndexOf(userVo.managerlvl) > 0)
                 {
-                    stringBuilder.Append("(管理员可看：此验证可在web.config中参数KL_WAPAdmin_NeedPassWord设为1关闭。)");
+                    //stringBuilder.Append("(管理员可看：此验证可在web.config中参数KL_WAPAdmin_NeedPassWord设为1关闭。)");
                 }
-                stringBuilder.Append("</div>");
+                //stringBuilder.Append("</div>");
                 stringBuilder.Append("<div class=\"btBox\"><div class=\"bt1\">");
                 stringBuilder.Append("<a href=\"" + http_start + "wapindex.aspx?siteid=" + siteid + "\">" + GetLang("返回首页|返回首頁|back Index") + "</a></div></div>");
             }
@@ -1303,7 +1303,7 @@ namespace YaoHuo.Plugin.WebSite
             {
                 if (userVo.managerlvl != "00" && userVo.managerlvl != "01" && userVo.managerlvl != "03" && userVo.managerlvl != "04")
                 {
-                    ShowTipInfo(GetLang("您没有权限！|您沒有權限！|You do not have permission!"), backurl);
+                    ShowTipInfo(GetLang("帖子已删除，无法查看。|您沒有權限！|You do not have permission!"), backurl);
                 }
                 else if (userVo.managerlvl == "04" && base.Request.ServerVariables["URL"].ToLower().StartsWith("/bbs/") && classVo.typePath != null && "bbs/index.aspx" != classVo.typePath.ToLower())
                 {
@@ -1740,6 +1740,7 @@ namespace YaoHuo.Plugin.WebSite
 
         public void addMoneyToMyBank()
         {
+            bool sendInterestMessage = false; // 控制是否发送利息消息和产生日志
             if (userVo.dtimes >= 30L)
             {
                 long lvLRegular = WapTool.getLvLRegular(siteVo.lvlRegular, 7);
