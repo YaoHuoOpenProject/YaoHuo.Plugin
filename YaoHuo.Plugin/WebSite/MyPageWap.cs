@@ -1741,6 +1741,7 @@ namespace YaoHuo.Plugin.WebSite
         public void addMoneyToMyBank()
         {
             bool sendInterestMessage = false; // 控制是否发送利息消息和产生日志
+
             if (userVo.dtimes >= 30L)
             {
                 long lvLRegular = WapTool.getLvLRegular(siteVo.lvlRegular, 7);
@@ -1749,15 +1750,20 @@ namespace YaoHuo.Plugin.WebSite
                 long num3 = Convert.ToInt64(userVo.myBankMoney) * Convert.ToInt64(lvLRegular) * num / 100L;
                 long num4 = Convert.ToInt64(userVo.myBankMoney) + num3;
                 MainBll.UpdateSQL("update [user] set mybankmoney=" + num4 + ",mybanktime=getdate()-" + num2.ToString() + " where siteid=" + siteid + " and  userid=" + userid);
-                string text = "您的银行月结息:" + num + "个月，利息:" + num3;
-                string text2 = "执行时间" + DateTime.Now;
-                if (userVo.myBankMoney != 0L)
+
+                if (sendInterestMessage)
                 {
-                    SaveBankLog(userid, "银行利息", num3.ToString(), siteid, "系统", "银行月结息");
-                    MainBll.UpdateSQL("insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)values(" + siteid + "," + siteid + ",'" + siteVo.nickname + "','" + text + "','" + text2 + "'," + userid + ",1)");
+                    string text = "您的银行月结息:" + num + "个月，利息:" + num3;
+                    string text2 = "执行时间" + DateTime.Now;
+                    if (userVo.myBankMoney != 0L)
+                    {
+                        SaveBankLog(userid, "银行利息", num3.ToString(), siteid, "系统", "银行月结息");
+                        MainBll.UpdateSQL("insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)values(" + siteid + "," + siteid + ",'" + siteVo.nickname + "','" + text + "','" + text2 + "'," + userid + ",1)");
+                    }
                 }
             }
         }
+
 
         public void CheckFunction(string string_10, long page)
         {
