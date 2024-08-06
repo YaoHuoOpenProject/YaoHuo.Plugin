@@ -388,9 +388,9 @@ namespace YaoHuo.Plugin.WebSite
             }
             if (KL_Expires == "0")
             {
-                base.Response.Expires = -1;
-                base.Response.ExpiresAbsolute = DateTime.Now.AddDays(-1.0);
-                base.Response.CacheControl = "no-cache";
+                //base.Response.Expires = -1;
+                //base.Response.ExpiresAbsolute = DateTime.Now.AddDays(-1.0);
+                //base.Response.CacheControl = "no-cache";
             }
             else
             {
