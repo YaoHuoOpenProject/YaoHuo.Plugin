@@ -455,7 +455,7 @@ namespace YaoHuo.Plugin.Tool
                 }
                 if (wmlVo.mycss.IndexOf(".btBox") < 0)
                 {
-                    stringBuilder.Append("\r\n<link rel=\"stylesheet\" href=\"/Template/default/default.css?v=" + $"{DateTime.Now:yyyyMMdd}" + "\" type=\"text/css\" />\r\n");
+                    stringBuilder.Append("\r\n<link rel=\"stylesheet\" href=\"/Template/default/default.css?v=" + $"{DateTime.Now:yyyyMMdd}" + "\" type=\"text/css\" />");
                 }
                 stringBuilder.Append("\n<title>");
                 stringBuilder.Append(title.Replace("［", "[").Replace("］", "]"));

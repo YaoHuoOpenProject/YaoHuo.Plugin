@@ -101,17 +101,17 @@ namespace YaoHuo.Plugin.Games.ChuiNiu
                 answer1 = GetRequestValue("answer1");
                 answer2 = GetRequestValue("answer2");
                 myanswer = GetRequestValue("myanswer");
-                if (question.Length > 50)
+                if (question.Length > 20)
                 {
-                    question = question.Substring(0, 50);
+                    question = question.Substring(0, 20);
                 }
-                if (answer1.Length > 30)
+                if (answer1.Length > 20)
                 {
-                    answer1 = answer1.Substring(0, 30);
+                    answer1 = answer1.Substring(0, 20);
                 }
-                if (answer2.Length > 30)
+                if (answer2.Length > 20)
                 {
-                    answer1 = answer2.Substring(0, 30);
+                    answer1 = answer2.Substring(0, 20);
                 }
                 if (myanswer != "1" && myanswer != "2")
                 {
