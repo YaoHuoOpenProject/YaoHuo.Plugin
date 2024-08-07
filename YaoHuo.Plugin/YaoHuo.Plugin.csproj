@@ -96,6 +96,7 @@
     <Content Include="BBS\Book_View_add.aspx" />
     <Content Include="BBS\Book_View_del.aspx" />
     <Content Include="BBS\Book_View_end.aspx" />
+    <Content Include="BBS\ModifyInfo.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Games\ChuiNiu\Add.aspx" />
     <Content Include="Games\ChuiNiu\Book_List.aspx" />
@@ -195,6 +196,10 @@
     </Compile>
     <Compile Include="BBS\MessageList_Del.aspx.cs">
       <DependentUpon>MessageList_Del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\ModifyInfo.aspx.cs">
+      <DependentUpon>ModifyInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\SendMoney.aspx.cs">

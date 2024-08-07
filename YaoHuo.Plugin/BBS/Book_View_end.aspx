@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_end.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_View_end" %><%@ Import Namespace="YaoHuo.Plugin.Tool" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_end.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_View_end" %>
+<%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     StringBuilder strhtml = new StringBuilder();
     string lang1 = "";
