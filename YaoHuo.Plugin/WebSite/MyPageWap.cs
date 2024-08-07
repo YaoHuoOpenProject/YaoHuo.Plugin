@@ -1058,17 +1058,15 @@ namespace YaoHuo.Plugin.WebSite
             }
             else
             {
-                stringBuilder.Append("<div class=\"subtitle\">" + GetLang("温馨提示：|温馨提示：|Tips:") + "</div>");
-                stringBuilder.Append("<div class=\"tip\">");
-                stringBuilder.Append(TIP);
-                stringBuilder.Append("</div>");
+                stringBuilder.Append("<div class=\"title\">" + GetLang("温馨提示|温馨提示：|Tips:") + "</div>");
                 stringBuilder.Append("<div class=\"content\">");
+                stringBuilder.Append(TIP);
                 backurl = backurl.Replace("&amp;", "&");
                 string text = backurl.Split('?')[0];
                 string text2 = backurl.Split('?')[1];
                 string[] array = text2.Split('&');
                 stringBuilder.Append("<form name=\"go\" action=\"" + http_start + text + "\" method=\"post\">");
-                stringBuilder.Append("输入密码:<br/><input type=\"password\" name=\"needpassword\" class=\"txt\" value=\"\"/><br/>");
+                stringBuilder.Append("<input style=\"width:75%;\" type=\"password\" name=\"needpassword\" class=\"txt\" value=\"\"/><br/>");
                 try
                 {
                     for (int i = 0; i < array.Length; i++)

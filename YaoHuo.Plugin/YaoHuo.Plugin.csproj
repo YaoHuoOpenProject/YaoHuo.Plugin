@@ -95,6 +95,7 @@
   <ItemGroup>
     <Content Include="BBS\Book_View_add.aspx" />
     <Content Include="BBS\Book_View_del.aspx" />
+    <Content Include="BBS\Book_View_end.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Games\ChuiNiu\Add.aspx" />
     <Content Include="Games\ChuiNiu\Book_List.aspx" />
@@ -162,6 +163,10 @@
     </Compile>
     <Compile Include="BBS\Book_View_del.aspx.cs">
       <DependentUpon>Book_View_del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_View_end.aspx.cs">
+      <DependentUpon>Book_View_end.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_View_mod.aspx.cs">

@@ -13,7 +13,7 @@ namespace YaoHuo.Plugin.BBS
         public string why = "";
         private string string_10 = PubConstant.GetAppString("InstanceName");
         public string action = "";
-        public string id = "";  // 修改：使用 id 变量而不是 string_11
+        public string id = "";
         public string lpage = "";
         public string INFO = "";
         public string ERROR = "";
@@ -148,6 +148,9 @@ namespace YaoHuo.Plugin.BBS
             catch (Exception ex)
             {
                 // 处理异常
+                Console.WriteLine(ex.Message);
+                // 或者记录日志
+                // LogError(ex);
             }
         }
     }
