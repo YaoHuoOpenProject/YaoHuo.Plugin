@@ -50,14 +50,14 @@ namespace YaoHuo.Plugin.BBS
             }
 
             IsLogin(userid, "bbs/book_view_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
-            needPassWordToAdmin();
+            //needPassWordToAdmin();
 
             wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
 
             long parsedId;
             if (!long.TryParse(id, out parsedId))
             {
-                ShowTipInfo("无效的帖子ID。", "");
+                ShowTipInfo("无效的帖子ID", "");
                 return;
             }
 
@@ -147,10 +147,7 @@ namespace YaoHuo.Plugin.BBS
             }
             catch (Exception ex)
             {
-                // 处理异常
                 Console.WriteLine(ex.Message);
-                // 或者记录日志
-                // LogError(ex);
             }
         }
     }

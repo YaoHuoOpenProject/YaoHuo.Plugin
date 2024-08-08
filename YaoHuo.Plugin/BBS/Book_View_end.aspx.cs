@@ -41,7 +41,7 @@ namespace YaoHuo.Plugin.BBS
             whylock = GetRequestValue("whylock");
             whylock = whylock.Replace("|", "");
             IsLogin(userid, "bbs/book_view_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
-            needPassWordToAdmin();
+            //needPassWordToAdmin();
             wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
             bookVo = wap_bbs_BLL.GetModel(long.Parse(id));
             if (bookVo == null)

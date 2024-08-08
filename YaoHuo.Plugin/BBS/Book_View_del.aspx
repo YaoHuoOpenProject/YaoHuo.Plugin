@@ -9,7 +9,7 @@ if (ver == "1")
     strhtml.Append(this.ERROR);
     if (this.INFO == "")
     {
-        if (this.userid == bbsVo.book_pub.ToString()) //自己删除自己的
+        if (this.userid == bbsVo.book_pub.ToString())
         {
             strhtml.Append("删除自己帖子扣2倍币和经验<br/>");
             strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_del.aspx?action=godel&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定删除！|确定删除！|submit") + "</a><br/>");
@@ -63,10 +63,10 @@ else //2.0界面
     if (this.INFO == "")
     {
         strhtml.Append("<div class=\"content\">");
-        if (this.userid == bbsVo.book_pub.ToString()) //自己删除自己的
+        if (this.userid == bbsVo.book_pub.ToString()) //删除自己的帖子
         {
             strhtml.Append("删除自己帖子扣2倍币和经验<br/>");
-            strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_del.aspx?action=godel&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定删除！|确定删除！|submit") + "</a><br/>");
+            strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_del.aspx?action=godel&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定删除|确定删除|submit") + "</a><br/>");
         }
         else
         {
@@ -93,7 +93,7 @@ else //2.0界面
         strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
         strhtml.Append("</div>");
     }
-    string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码    
+    string isWebHtml = this.ShowWEB_view(this.classid);
     if (isWebHtml != "")
     {
         Response.Clear();
