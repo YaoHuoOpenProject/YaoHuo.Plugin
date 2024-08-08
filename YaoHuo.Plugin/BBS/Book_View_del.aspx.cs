@@ -28,7 +28,7 @@ namespace YaoHuo.Plugin.BBS
             }
 
             action = GetRequestValue("action");
-            id = GetRequestValue("id");  // 修改：使用 id
+            id = GetRequestValue("id");
             lpage = GetRequestValue("lpage");
             string_12 = GetRequestValue("sub");
             why = GetRequestValue("why");
@@ -50,7 +50,7 @@ namespace YaoHuo.Plugin.BBS
             }
 
             IsLogin(userid, "bbs/book_view_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
-            //needPassWordToAdmin();
+           needPassWordToAdmin();
 
             wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
 
