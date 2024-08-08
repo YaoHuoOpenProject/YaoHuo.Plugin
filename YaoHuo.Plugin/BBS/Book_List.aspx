@@ -277,7 +277,6 @@
         //显示导航分页
         //strhtml_list.Append(linkTOP);
         //显示列表
-        string isBR = "<br/>";
         //if (classVo.articlenum == 1)
         //{
         //   isBR = "<br/>";

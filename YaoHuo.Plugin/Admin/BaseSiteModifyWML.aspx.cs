@@ -1,23 +1,25 @@
-// KeLin.WebSite.admin.BaseSiteModifyWML
 using System;
-using KeLin.WebSite;
+using YaoHuo.Plugin.WebSite;
 
-public class BaseSiteModifyWML : PageWap
+namespace YaoHuo.Plugin.Admin
 {
-	public string strTitle2 = "";
+    public class BaseSiteModifyWML : MyPageWap
+    {
+    public string strTitle2 = "";
 
-	public string strHtml = "";
+    public string strHtml = "";
 
-	public string strHtml1 = "";
+    public string strHtml1 = "";
 
-	public string strHtml2 = "";
+    public string strHtml2 = "";
 
-	public string cname = "";
+    public string cname = "";
 
-	public string string_10 = "";
+    public string string_10 = "";
 
-	protected void Page_Load(object sender, EventArgs e)
-	{
-		IsCheckUserManager(userid, userVo.managerlvl, classVo.adminusername, GetUrlQueryString());
-	}
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        IsCheckUserManager(userid, userVo.managerlvl, classVo.adminusername, GetUrlQueryString());
+    }
+    }
 }
