@@ -998,7 +998,7 @@ namespace YaoHuo.Plugin.WebSite
                 }
                 else
                 {
-                    stringBuilder.Append("<div class=\"subtitle\">" + GetLang("温馨提示：|温馨提示：|Tips:") + "</div>");
+                    stringBuilder.Append("<div class=\"title\">" + GetLang("温馨提示|温馨提示：|Tips:") + "</div>");
                     stringBuilder.Append("<div class=\"tip\">");
                     stringBuilder.Append(WapTool.ToWML(Error, wmlVo));
                     stringBuilder.Append("</div>");
@@ -1301,7 +1301,7 @@ namespace YaoHuo.Plugin.WebSite
             {
                 if (userVo.managerlvl != "00" && userVo.managerlvl != "01" && userVo.managerlvl != "03" && userVo.managerlvl != "04")
                 {
-                    ShowTipInfo(GetLang("帖子已删除，无法查看。|您沒有權限！|You do not have permission!"), backurl);
+                    ShowTipInfo(GetLang("您没有权限操作，或者帖子已删除。|您沒有權限！|You do not have permission!"), backurl);
                 }
                 else if (userVo.managerlvl == "04" && base.Request.ServerVariables["URL"].ToLower().StartsWith("/bbs/") && classVo.typePath != null && "bbs/index.aspx" != classVo.typePath.ToLower())
                 {
