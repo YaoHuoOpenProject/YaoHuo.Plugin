@@ -1058,17 +1058,28 @@ namespace YaoHuo.Plugin.WebSite
             }
             else
             {
-                stringBuilder.Append("<div class=\"title\">" + GetLang("温馨提示|温馨提示：|Tips:") + "</div>");
-                stringBuilder.Append("<div class=\"content\">");
+                stringBuilder.Append("<link rel=\"stylesheet\" href=\"/NetCSS/CSS/NeedPW.css\" type=\"text/css\" />");
+                stringBuilder.Append("<form class=\"ui-modal\" data-state=\"idle\" autocomplete=\"off\" action=\"" + http_start + backurl.Split('?')[0] + "\" method=\"post\">");
+                stringBuilder.Append("<div class=\"ui-icon\">");
+                stringBuilder.Append("<div class=\"ui-lock\"></div>");
+                stringBuilder.Append("</div>");
+                stringBuilder.Append("<div class=\"ui-title\">");
                 stringBuilder.Append(TIP);
-                backurl = backurl.Replace("&amp;", "&");
-                string text = backurl.Split('?')[0];
-                string text2 = backurl.Split('?')[1];
-                string[] array = text2.Split('&');
-                stringBuilder.Append("<form name=\"go\" action=\"" + http_start + text + "\" method=\"post\">");
-                stringBuilder.Append("<input style=\"width:75%;\" type=\"password\" name=\"needpassword\" class=\"txt\" value=\"\"/><br/>");
+                stringBuilder.Append("</div>");
+                stringBuilder.Append("<div class=\"ui-subtitle\"></div>");
+                stringBuilder.Append("<div class=\"ui-password\">");
+                stringBuilder.Append("<input type=\"password\" name=\"needpassword\" id=\"\" class=\"ui-password-input\" placeholder=\"请输入密码\" autocomplete=\"current-password\" required />");
+                stringBuilder.Append("</div>");
+                stringBuilder.Append("<button class=\"ui-submit\" type=\"submit\">确认</button>");
+                stringBuilder.Append("<button class=\"ui-reset\" type=\"button\" title=\"返回\">");
+                stringBuilder.Append("<div class=\"arrow\">");
+                stringBuilder.Append("<div class=\"arrow-mask\"></div>");
+                stringBuilder.Append("</div>");
+                stringBuilder.Append("</button>");
                 try
                 {
+                    string text2 = backurl.Split('?')[1];
+                    string[] array = text2.Split('&');
                     for (int i = 0; i < array.Length; i++)
                     {
                         string[] array2 = array[i].Split('=');
@@ -1078,18 +1089,43 @@ namespace YaoHuo.Plugin.WebSite
                 catch (Exception)
                 {
                 }
-                stringBuilder.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
-                stringBuilder.Append("<input type=\"submit\" name=\"go\" class=\"btn\" value=\"确定\"/></form>");
-                stringBuilder.Append("</div>");
-                //stringBuilder.Append("<div class=\"line\">");
-                //stringBuilder.Append("当前IP:" + IP + "，如果老是提示输入密码，看IP是否老是在变。");
-                if (userVo != null && "|00|01|".IndexOf(userVo.managerlvl) > 0)
-                {
-                    //stringBuilder.Append("(管理员可看：此验证可在web.config中参数KL_WAPAdmin_NeedPassWord设为1关闭。)");
-                }
+                stringBuilder.Append("</form>");
+                stringBuilder.Append("<script>");
+                stringBuilder.Append("window.onload = function() { document.querySelector('.ui-password-input').focus(); };");
+                stringBuilder.Append("document.querySelector('.ui-reset').addEventListener('click', function() { history.back(); });");
+                stringBuilder.Append("</script>");
+
+
+                //stringBuilder.Append("<div class=\"title\">" + GetLang("温馨提示|温馨提示：|Tips:") + "</div>");
+                //stringBuilder.Append("<div class=\"content\">");
+                //stringBuilder.Append(TIP);
+                //backurl = backurl.Replace("&amp;", "&");
+                //string text = backurl.Split('?')[0];
+                //string text2 = backurl.Split('?')[1];
+                //string[] array = text2.Split('&');
+                //stringBuilder.Append("<form name=\"go\" action=\"" + http_start + text + "\" method=\"post\">");
+                //stringBuilder.Append("<input style=\"width:75%;\" type=\"password\" name=\"needpassword\" class=\"txt\" value=\"\"/><br/>");
+                //try
+                //{
+                //    for (int i = 0; i < array.Length; i++)
+                //    {
+                //        string[] array2 = array[i].Split('=');
+                //        stringBuilder.Append("<input type=\"hidden\" name=\"" + array2[0] + "\" value=\"" + array2[1] + "\" />");
+                //    }
+                //}
+                //catch (Exception)
+                //{
+                //}
+                //stringBuilder.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
+                //stringBuilder.Append("<input type=\"submit\" name=\"go\" class=\"btn\" value=\"确定\"/></form>");
                 //stringBuilder.Append("</div>");
-                stringBuilder.Append("<div class=\"btBox\"><div class=\"bt1\">");
-                stringBuilder.Append("<a href=\"" + http_start + "wapindex.aspx?siteid=" + siteid + "\">" + GetLang("返回首页|返回首頁|back Index") + "</a></div></div>");
+                //if (userVo != null && "|00|01|".IndexOf(userVo.managerlvl) > 0)
+                //{
+                //    //stringBuilder.Append("(管理员可看：此验证可在web.config中参数KL_WAPAdmin_NeedPassWord设为1关闭。)");
+                //}
+                //stringBuilder.Append("<div class=\"btBox\"><div class=\"bt1\">");
+                //stringBuilder.Append("<a href=\"" + http_start + "wapindex.aspx?siteid=" + siteid + "\">" + GetLang("返回首页|返回首頁|back Index") + "</a></div></div>");
+
             }
             string text3 = ShowWEB_view(classid);
             if (text3 != "")
@@ -1384,12 +1420,20 @@ namespace YaoHuo.Plugin.WebSite
             {
                 if (requestValue != "")
                 {
-                    ShowNeedPassword("<b>密码错误！</b><br/>", GetUrlQueryString());
+                    ShowNeedPassword("<b>密码错误，请重试</b>", GetUrlQueryString());
                 }
                 else
                 {
-                    ShowNeedPassword("请输入您的密码：<br/>", GetUrlQueryString());
+                    ShowNeedPassword("此操作需验证密码", GetUrlQueryString());
                 }
+                //if (requestValue != "")
+                //{
+                //    ShowNeedPassword("<b>密码错误！</b><br/>", GetUrlQueryString());
+                //}
+                //else
+                //{
+                //    ShowNeedPassword("请输入您的密码：<br/>", GetUrlQueryString());
+                //}
             }
         }
 
