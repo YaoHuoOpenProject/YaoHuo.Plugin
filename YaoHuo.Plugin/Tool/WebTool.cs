@@ -2187,10 +2187,32 @@ namespace YaoHuo.Plugin.Tool
             }
             if (WapStr.IndexOf("[/url]") > 0)
             {
+                // 正则表达式匹配 [url]...[/url] 形式
                 Regex regex = new Regex("(\\[url\\])(.[^\\[]*)(\\[\\/url\\])");
-                WapStr = ((!(wmlVo.ver == "0")) ? regex.Replace(WapStr, "<a href=\"$2\">$2</a>") : regex.Replace(WapStr, "<a href=\"javascript:T('{{url}}$2{{/url}}');\">$2</a>"));
+                WapStr = regex.Replace(WapStr, match =>
+                {
+                    string url = match.Groups[2].Value.Trim(); // 去掉前后的空格
+                                                               // 检查是否包含 javascript: 协议
+                    if (url.ToLower().Replace(" ", "").StartsWith("javascript:"))
+                    {
+                        return "链接无效";
+                    }
+                    return wmlVo.ver == "0" ? $"<a href=\"javascript:T('{{url}}{url}{{/url}}');\">{url}</a>" : $"<a href=\"{url}\">{url}</a>";
+                });
+
+                // 正则表达式匹配 [url=...]...[/url] 形式
                 regex = new Regex("(\\[url=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/url\\])");
-                WapStr = ((!(wmlVo.ver == "0")) ? regex.Replace(WapStr, "<a href=\"$2\">$3</a>") : regex.Replace(WapStr, "<a href=\"javascript:T('{{url=$2}}$3{{/url}}');\">$3</a>"));
+                WapStr = regex.Replace(WapStr, match =>
+                {
+                    string url = match.Groups[2].Value.Trim(); // 去掉前后的空格
+                    string linkText = match.Groups[3].Value;
+                    // 检查是否包含 javascript: 协议
+                    if (url.ToLower().Replace(" ", "").StartsWith("javascript:"))
+                    {
+                        return "链接无效";
+                    }
+                    return wmlVo.ver == "0" ? $"<a href=\"javascript:T('{{url={url}}}{linkText}{{/url}}');\">{linkText}</a>" : $"<a href=\"{url}\">{linkText}</a>";
+                });
             }
             if (WapStr.IndexOf("[/js]") > 0)
             {
@@ -2202,29 +2224,29 @@ namespace YaoHuo.Plugin.Tool
             //    Regex regex = new Regex("(\\[css\\])(.[^\\[]*)(\\[\\/css\\])");
             //    WapStr = ((wmlVo.ver == "0") ? regex.Replace(WapStr, "<a href=\"javascript:T('{{css}}$2{{/css}}');\">{CSS}</a>") : ((!(wmlVo.ver == "1")) ? regex.Replace(WapStr, "<link href=\"$2\" rel=\"stylesheet\" type=\"text/css\">") : regex.Replace(WapStr, "")));
             //}
-            if (WapStr.IndexOf("[/rndurl]") > 0)
-            {
-                Regex regex = new Regex("(\\[rndurl=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/rndurl\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    Random random = new Random();
-                    while (match.Success)
-                    {
-                        string value = match.Groups[2].Value.Replace("｜", "|");
-                        string text = match.Groups[3].Value.Replace("｜", "|");
-                        string[] array3 = value.Split('|');
-                        string[] array4 = text.Split('|');
-                        int num = random.Next(0, array3.Length);
-                        WapStr = ((!(wmlVo.ver == "0")) ? regex.Replace(WapStr, "<a href=\"" + array3[num] + "\">" + showImg(array4[num]) + "</a>", 1) : regex.Replace(WapStr, "<a href=\"javascript:alert('UBB方法:" + array3[num] + "');\">" + showImg(array4[num]) + "</a>", 1));
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
+            //if (WapStr.IndexOf("[/rndurl]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[rndurl=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/rndurl\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        Random random = new Random();
+            //        while (match.Success)
+            //        {
+            //            string value = match.Groups[2].Value.Replace("｜", "|");
+            //            string text = match.Groups[3].Value.Replace("｜", "|");
+            //            string[] array3 = value.Split('|');
+            //            string[] array4 = text.Split('|');
+            //            int num = random.Next(0, array3.Length);
+            //            WapStr = ((!(wmlVo.ver == "0")) ? regex.Replace(WapStr, "<a href=\"" + array3[num] + "\">" + showImg(array4[num]) + "</a>", 1) : regex.Replace(WapStr, "<a href=\"javascript:alert('UBB方法:" + array3[num] + "');\">" + showImg(array4[num]) + "</a>", 1));
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
             if (WapStr.IndexOf("[/rndtxt]") > 0)
             {
                 Regex regex = new Regex("(\\[rndtxt\\])(.[^\\[]*)(\\[\\/rndtxt\\])");
@@ -3063,20 +3085,20 @@ namespace YaoHuo.Plugin.Tool
                 Regex regex = new Regex("(\\[div=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/div\\])");
                 WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<div class=\"$2\">$3</div>") : regex.Replace(WapStr, "$3"));
             }
-            //if (WapStr.IndexOf("[/wap1]") > 0)
-            //{
-            //    Regex regex = new Regex("(\\[wap1\\])(.[^\\[]*)(\\[\\/wap1\\])");
-            //    if (wmlVo.ver == "2" || wmlVo.ver == "3")
-            //    {
-            //        WapStr = regex.Replace(WapStr, "");
-            //    }
-            //    WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
-            //}
-            //if (WapStr.IndexOf("[/wap2]") > 0)
-            //{
-            //    Regex regex = new Regex("(\\[wap2\\])(.[^\\[]*)(\\[\\/wap2\\])");
-            //    WapStr = ((!(wmlVo.ver == "2") && (!(wmlVo.ver == "0") || !(wmlVo.mycss != ""))) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
-            //}
+            if (WapStr.IndexOf("[/wap1]") > 0)
+            {
+                Regex regex = new Regex("(\\[wap1\\])(.[^\\[]*)(\\[\\/wap1\\])");
+                if (wmlVo.ver == "2" || wmlVo.ver == "3")
+                {
+                    WapStr = regex.Replace(WapStr, "");
+                }
+                WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
+            }
+            if (WapStr.IndexOf("[/wap2]") > 0)
+            {
+                Regex regex = new Regex("(\\[wap2\\])(.[^\\[]*)(\\[\\/wap2\\])");
+                WapStr = ((!(wmlVo.ver == "2") && (!(wmlVo.ver == "0") || !(wmlVo.mycss != ""))) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
+            }
             //if (WapStr.IndexOf("[/wap3]") > 0)
             //{
             //    Regex regex = new Regex("(\\[wap3\\])(.[^\\[]*)(\\[\\/wap3\\])");
