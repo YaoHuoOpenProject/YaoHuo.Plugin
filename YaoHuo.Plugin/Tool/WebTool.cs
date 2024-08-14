@@ -2068,11 +2068,11 @@ namespace YaoHuo.Plugin.Tool
                     ? regex2.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\"$4\"/>")
                     : regex2.Replace(WapStr, "<a href=\"javascript:T('{{img=$2}}$4{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\"$4\"/></a>"));
             }
-            if (WapStr.IndexOf("[/bgsound]") > 0)
-            {
-                Regex regex = new Regex("(\\[bgsound\\])(.[^\\[]*)(\\[\\/bgsound\\])");
-                WapStr = regex.Replace(WapStr, "<bgsound src=\"$2\" loop=\"infinite\"/>");
-            }
+            //if (WapStr.IndexOf("[/bgsound]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[bgsound\\])(.[^\\[]*)(\\[\\/bgsound\\])");
+            //    WapStr = regex.Replace(WapStr, "<bgsound src=\"$2\" loop=\"infinite\"/>");
+            //}
             if (WapStr.IndexOf("[/call]") > 0)
             {
                 Regex regex = new Regex("(\\[call\\])(.[^\\[]*)(\\[\\/call\\])");
@@ -2080,61 +2080,61 @@ namespace YaoHuo.Plugin.Tool
                 regex = new Regex("(\\[call=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/call\\])");
                 WapStr = ((!(wmlVo.ver == "0")) ? regex.Replace(WapStr, "<a href=\"tel:$2\">$3</a>") : regex.Replace(WapStr, "<a href=\"javascript:T('{{call=$2}}$3{{/call}}');\">$3</a>"));
             }
-            if (WapStr.IndexOf("[/map]") > 0)
-            {
-                Regex regex = new Regex("(\\[map\\])(.[^\\[]*)(\\[\\/map\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    Random random = new Random();
-                    while (match.Success)
-                    {
-                        string[] array = match.Groups[2].Value.Split('*');
-                        WapStr = regex.Replace(WapStr, Page_Layout.GetMap(array[0], array[1], "", ""), 1);
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-                regex = new Regex("(\\[map=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/map\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    Random random = new Random();
-                    while (match.Success)
-                    {
-                        string[] array = match.Groups[2].Value.Split('*');
-                        string[] array2 = match.Groups[3].Value.Split('*');
-                        WapStr = regex.Replace(WapStr, Page_Layout.GetMap(array2[0], array2[1], array[0], array[1]), 1);
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
-            if (WapStr.IndexOf("[/shopstate]") > 0)
-            {
-                Regex regex = new Regex("(\\[shopstate\\])(.[^\\[]*)(\\[\\/shopstate\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    Random random = new Random();
-                    while (match.Success)
-                    {
-                        string value = match.Groups[2].Value;
-                        WapStr = regex.Replace(WapStr, GetShopState(wmlVo, value), 1);
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
+            //if (WapStr.IndexOf("[/map]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[map\\])(.[^\\[]*)(\\[\\/map\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        Random random = new Random();
+            //        while (match.Success)
+            //        {
+            //            string[] array = match.Groups[2].Value.Split('*');
+            //            WapStr = regex.Replace(WapStr, Page_Layout.GetMap(array[0], array[1], "", ""), 1);
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //    regex = new Regex("(\\[map=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/map\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        Random random = new Random();
+            //        while (match.Success)
+            //        {
+            //            string[] array = match.Groups[2].Value.Split('*');
+            //            string[] array2 = match.Groups[3].Value.Split('*');
+            //            WapStr = regex.Replace(WapStr, Page_Layout.GetMap(array2[0], array2[1], array[0], array[1]), 1);
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
+            //if (WapStr.IndexOf("[/shopstate]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[shopstate\\])(.[^\\[]*)(\\[\\/shopstate\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        Random random = new Random();
+            //        while (match.Success)
+            //        {
+            //            string value = match.Groups[2].Value;
+            //            WapStr = regex.Replace(WapStr, GetShopState(wmlVo, value), 1);
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
             if (WapStr.IndexOf("[/back]") > 0)
             {
                 Regex regex = new Regex("(\\[back\\])(.[^\\[]*)(\\[\\/back\\])");
@@ -2197,11 +2197,11 @@ namespace YaoHuo.Plugin.Tool
                 Regex regex = new Regex("(\\[js\\])(.[^\\[]*)(\\[\\/js\\])");
                 WapStr = ((wmlVo.ver == "0") ? regex.Replace(WapStr, "<a href=\"javascript:T('{{js}}$2{{/js}}');\">{JS}</a>") : ((wmlVo.ver == "1") ? regex.Replace(WapStr, "") : ((wmlVo.strUrl.ToLower().IndexOf("index") <= 0) ? regex.Replace(WapStr, "{此处UBB只有排版页面有效其它页面无效}") : regex.Replace(WapStr, "<script type=\"text/javascript\" src=\"$2\"></script>"))));
             }
-            if (WapStr.IndexOf("[/css]") > 0)
-            {
-                Regex regex = new Regex("(\\[css\\])(.[^\\[]*)(\\[\\/css\\])");
-                WapStr = ((wmlVo.ver == "0") ? regex.Replace(WapStr, "<a href=\"javascript:T('{{css}}$2{{/css}}');\">{CSS}</a>") : ((!(wmlVo.ver == "1")) ? regex.Replace(WapStr, "<link href=\"$2\" rel=\"stylesheet\" type=\"text/css\">") : regex.Replace(WapStr, "")));
-            }
+            //if (WapStr.IndexOf("[/css]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[css\\])(.[^\\[]*)(\\[\\/css\\])");
+            //    WapStr = ((wmlVo.ver == "0") ? regex.Replace(WapStr, "<a href=\"javascript:T('{{css}}$2{{/css}}');\">{CSS}</a>") : ((!(wmlVo.ver == "1")) ? regex.Replace(WapStr, "<link href=\"$2\" rel=\"stylesheet\" type=\"text/css\">") : regex.Replace(WapStr, "")));
+            //}
             if (WapStr.IndexOf("[/rndurl]") > 0)
             {
                 Regex regex = new Regex("(\\[rndurl=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/rndurl\\])");
@@ -2287,106 +2287,106 @@ namespace YaoHuo.Plugin.Tool
                     WapStr = regex.Replace(WapStr, "{格式错误}");
                 }
             }
-            if (WapStr.IndexOf("[/iframe]") > 0)
-            {
-                Regex regex = new Regex("(\\[iframe=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/iframe\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    Random random = new Random();
-                    while (match.Success)
-                    {
-                        string value = match.Groups[2].Value.Replace("｜", "|");
-                        string text = match.Groups[3].Value.Replace("｜", "|");
-                        string[] array5 = value.Split('*');
-                        string text3 = array5[0];
-                        string text4 = array5[1];
-                        StringBuilder stringBuilder = new StringBuilder();
-                        if (!IsNumeric(text3))
-                        {
-                            text3 = "0";
-                        }
-                        else
-                        {
-                            stringBuilder.Append(" width=" + text3);
-                        }
-                        if (!IsNumeric(text4))
-                        {
-                            text4 = "0";
-                        }
-                        else
-                        {
-                            stringBuilder.Append(" height=" + text4);
-                        }
-                        WapStr = ((!(wmlVo.ver == "0")) ? ((!(wmlVo.ver == "1")) ? ((wmlVo.strUrl.ToLower().IndexOf("index") <= 0) ? regex.Replace(WapStr, "{此处UBB只有排版页面有效，其它页面无效}", 1) : regex.Replace(WapStr, "<iframe src=\"" + text + "\" " + stringBuilder.ToString() + " scrolling=\"yes\"></iframe>", 1)) : regex.Replace(WapStr, "<a href=\"" + text + "\">{查看页面}</a>", 1)) : regex.Replace(WapStr, "<a href=\"javascript:T('{{iframe=$2}}$3{{/iframe}}');\"><img src=\"\"  border=\"0\" " + stringBuilder.ToString() + " alt=\"页面框架，预览网站能看到效果。\"/></a>", 1));
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
-            if (WapStr.IndexOf("[/float]") > 0)
-            {
-                Regex regex = new Regex("(\\[float=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/float\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    Random random = new Random();
-                    while (match.Success)
-                    {
-                        string value = match.Groups[2].Value.Replace("｜", "|");
-                        string text = match.Groups[3].Value.Replace("｜", "|");
-                        string[] array5 = value.Split('*');
-                        string[] array6 = text.Split('*');
-                        string text3 = array5[0];
-                        string text4 = array5[1];
-                        string text5 = array5[2];
-                        string text6 = array5[3];
-                        string text7 = "0";
-                        try
-                        {
-                            text7 = array5[4];
-                        }
-                        catch (Exception)
-                        {
-                            text7 = "0";
-                        }
-                        StringBuilder stringBuilder = new StringBuilder();
-                        if (!IsNumeric(text3))
-                        {
-                            text3 = "30";
-                        }
-                        if (!IsNumeric(text4))
-                        {
-                            text4 = "30";
-                        }
-                        if (!IsNumeric(text5))
-                        {
-                            text4 = "10";
-                        }
-                        if (!IsNumeric(text6))
-                        {
-                            text6 = "20";
-                        }
-                        if (int.Parse(text3) > 320)
-                        {
-                            text3 = "150";
-                        }
-                        if (int.Parse(text4) > 320)
-                        {
-                            text4 = "150";
-                        }
-                        WapStr = ((!(wmlVo.ver == "0")) ? ((wmlVo.strUrl.ToLower().IndexOf("ustomeronline") <= 0) ? ((!(text7 == "1")) ? regex.Replace(WapStr, "<a href='" + array6[1] + "'><img id='AdLayer1' style='position: absolute;visibility:hidden;z-index:1' src='" + array6[0] + "' width=" + text3 + "px  height=" + text4 + "px alt='快点我哦～' /></a><script>KL_AD_X=" + text5 + "; KL_AD_Y=" + text6 + "</script><script type=\"text/javascript\" src=\"/NetCSS/adjs.js\"></script>", 1) : regex.Replace(WapStr, "<a href='" + array6[1] + "'><img id='AdLayer1' style='position: absolute;visibility:hidden;z-index:1' src='" + array6[0] + "' width=" + text3 + "px  height=" + text4 + "px alt='快点我哦～' /></a><script>KL_AD_X=" + text5 + "; KL_AD_Y=" + text6 + "</script><script type=\"text/javascript\" src=\"/NetCSS/adjs_right.js\"></script>", 1)) : regex.Replace(WapStr, "", 1)) : ((!(text7 == "1")) ? regex.Replace(WapStr, "<a href='" + array6[1] + "'><img id='AdLayer1' style='position: absolute;visibility:hidden;z-index:1' src='" + array6[0] + "' width=" + text3 + "px  height=" + text4 + "px alt='快点我哦～' /></a><script>KL_AD_X=" + text5 + "; KL_AD_Y=" + text6 + "</script><script type=\"text/javascript\" src=\"/NetCSS/adjs.js\"></script>", 1) : regex.Replace(WapStr, "<a href='" + array6[1] + "'><img id='AdLayer1' style='position: absolute;visibility:hidden;z-index:1' src='" + array6[0] + "' width=" + text3 + "px  height=" + text4 + "px alt='快点我哦～' /></a><script>KL_AD_X=" + text5 + "; KL_AD_Y=" + text6 + "</script><script type=\"text/javascript\" src=\"/NetCSS/adjs_right.js\"></script>", 1)));
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
+            //if (WapStr.IndexOf("[/iframe]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[iframe=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/iframe\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        Random random = new Random();
+            //        while (match.Success)
+            //        {
+            //            string value = match.Groups[2].Value.Replace("｜", "|");
+            //            string text = match.Groups[3].Value.Replace("｜", "|");
+            //            string[] array5 = value.Split('*');
+            //            string text3 = array5[0];
+            //            string text4 = array5[1];
+            //            StringBuilder stringBuilder = new StringBuilder();
+            //            if (!IsNumeric(text3))
+            //            {
+            //                text3 = "0";
+            //            }
+            //            else
+            //            {
+            //                stringBuilder.Append(" width=" + text3);
+            //            }
+            //            if (!IsNumeric(text4))
+            //            {
+            //                text4 = "0";
+            //            }
+            //            else
+            //            {
+            //                stringBuilder.Append(" height=" + text4);
+            //            }
+            //            WapStr = ((!(wmlVo.ver == "0")) ? ((!(wmlVo.ver == "1")) ? ((wmlVo.strUrl.ToLower().IndexOf("index") <= 0) ? regex.Replace(WapStr, "{此处UBB只有排版页面有效，其它页面无效}", 1) : regex.Replace(WapStr, "<iframe src=\"" + text + "\" " + stringBuilder.ToString() + " scrolling=\"yes\"></iframe>", 1)) : regex.Replace(WapStr, "<a href=\"" + text + "\">{查看页面}</a>", 1)) : regex.Replace(WapStr, "<a href=\"javascript:T('{{iframe=$2}}$3{{/iframe}}');\"><img src=\"\"  border=\"0\" " + stringBuilder.ToString() + " alt=\"页面框架，预览网站能看到效果。\"/></a>", 1));
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
+            //if (WapStr.IndexOf("[/float]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[float=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/float\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        Random random = new Random();
+            //        while (match.Success)
+            //        {
+            //            string value = match.Groups[2].Value.Replace("｜", "|");
+            //            string text = match.Groups[3].Value.Replace("｜", "|");
+            //            string[] array5 = value.Split('*');
+            //            string[] array6 = text.Split('*');
+            //            string text3 = array5[0];
+            //            string text4 = array5[1];
+            //            string text5 = array5[2];
+            //            string text6 = array5[3];
+            //            string text7 = "0";
+            //            try
+            //            {
+            //                text7 = array5[4];
+            //            }
+            //            catch (Exception)
+            //            {
+            //                text7 = "0";
+            //            }
+            //            StringBuilder stringBuilder = new StringBuilder();
+            //            if (!IsNumeric(text3))
+            //            {
+            //                text3 = "30";
+            //            }
+            //            if (!IsNumeric(text4))
+            //            {
+            //                text4 = "30";
+            //            }
+            //            if (!IsNumeric(text5))
+            //            {
+            //                text4 = "10";
+            //            }
+            //            if (!IsNumeric(text6))
+            //            {
+            //                text6 = "20";
+            //            }
+            //            if (int.Parse(text3) > 320)
+            //            {
+            //                text3 = "150";
+            //            }
+            //            if (int.Parse(text4) > 320)
+            //            {
+            //                text4 = "150";
+            //            }
+            //            WapStr = ((!(wmlVo.ver == "0")) ? ((wmlVo.strUrl.ToLower().IndexOf("ustomeronline") <= 0) ? ((!(text7 == "1")) ? regex.Replace(WapStr, "<a href='" + array6[1] + "'><img id='AdLayer1' style='position: absolute;visibility:hidden;z-index:1' src='" + array6[0] + "' width=" + text3 + "px  height=" + text4 + "px alt='快点我哦～' /></a><script>KL_AD_X=" + text5 + "; KL_AD_Y=" + text6 + "</script><script type=\"text/javascript\" src=\"/NetCSS/adjs.js\"></script>", 1) : regex.Replace(WapStr, "<a href='" + array6[1] + "'><img id='AdLayer1' style='position: absolute;visibility:hidden;z-index:1' src='" + array6[0] + "' width=" + text3 + "px  height=" + text4 + "px alt='快点我哦～' /></a><script>KL_AD_X=" + text5 + "; KL_AD_Y=" + text6 + "</script><script type=\"text/javascript\" src=\"/NetCSS/adjs_right.js\"></script>", 1)) : regex.Replace(WapStr, "", 1)) : ((!(text7 == "1")) ? regex.Replace(WapStr, "<a href='" + array6[1] + "'><img id='AdLayer1' style='position: absolute;visibility:hidden;z-index:1' src='" + array6[0] + "' width=" + text3 + "px  height=" + text4 + "px alt='快点我哦～' /></a><script>KL_AD_X=" + text5 + "; KL_AD_Y=" + text6 + "</script><script type=\"text/javascript\" src=\"/NetCSS/adjs.js\"></script>", 1) : regex.Replace(WapStr, "<a href='" + array6[1] + "'><img id='AdLayer1' style='position: absolute;visibility:hidden;z-index:1' src='" + array6[0] + "' width=" + text3 + "px  height=" + text4 + "px alt='快点我哦～' /></a><script>KL_AD_X=" + text5 + "; KL_AD_Y=" + text6 + "</script><script type=\"text/javascript\" src=\"/NetCSS/adjs_right.js\"></script>", 1)));
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
             if (WapStr.IndexOf("[/getform]") > 0)
             {
                 Regex regex = new Regex("(\\[getform\\])(.[^\\[]*)(\\[\\/getform\\])");
@@ -2406,135 +2406,135 @@ namespace YaoHuo.Plugin.Tool
                     UpdateSystemAuto();
                 }
             }
-            if (WapStr.IndexOf("[/picurl8]") > 0)
-            {
-                Regex regex = new Regex("(\\[picurl8=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/picurl8\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    Random random = new Random();
-                    int num2 = 0;
-                    while (match.Success)
-                    {
-                        string value = match.Groups[2].Value.Replace("｜", "|");
-                        string text = match.Groups[3].Value.Replace("｜", "|");
-                        string[] array6 = text.Split('*');
-                        string[] array3 = array6[1].Split('|');
-                        string[] array4 = array6[0].Split('|');
-                        List<Page_Layout_Model> list = new List<Page_Layout_Model>();
-                        for (int num = 0; num < array3.Length; num++)
-                        {
-                            Page_Layout_Model page_Layout_Model = new Page_Layout_Model();
-                            if (wmlVo.ver == "0")
-                            {
-                                page_Layout_Model.linkURL = "javascript:T('{{picurl8=$2}}$3{{/picurl8}}');";
-                            }
-                            else
-                            {
-                                page_Layout_Model.linkURL = array3[num];
-                            }
-                            page_Layout_Model.imageURL = array4[num];
-                            page_Layout_Model.title = ".";
-                            page_Layout_Model.content = "";
-                            list.Add(page_Layout_Model);
-                        }
-                        num2++;
-                        wmlVo.parameter2 = num2.ToString();
-                        WapStr = regex.Replace(WapStr, Page_Layout.GetListLayout(list, "8*" + value, wmlVo, ""), 1);
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
-            if (WapStr.IndexOf("[/picurl9]") > 0)
-            {
-                Regex regex = new Regex("(\\[picurl9=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/picurl9\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    Random random = new Random();
-                    int num2 = 0;
-                    while (match.Success)
-                    {
-                        string value = match.Groups[2].Value.Replace("｜", "|");
-                        string text = match.Groups[3].Value.Replace("｜", "|");
-                        string[] array6 = text.Split('*');
-                        string[] array3 = array6[1].Split('|');
-                        string[] array4 = array6[0].Split('|');
-                        List<Page_Layout_Model> list = new List<Page_Layout_Model>();
-                        for (int num = 0; num < array3.Length; num++)
-                        {
-                            Page_Layout_Model page_Layout_Model = new Page_Layout_Model();
-                            if (wmlVo.ver == "0")
-                            {
-                                page_Layout_Model.linkURL = "javascript:T('{{picurl9=$2}}$3{{/picurl9}}');";
-                            }
-                            else
-                            {
-                                page_Layout_Model.linkURL = array3[num];
-                            }
-                            page_Layout_Model.imageURL = array4[num];
-                            page_Layout_Model.title = ".";
-                            page_Layout_Model.content = "";
-                            list.Add(page_Layout_Model);
-                        }
-                        num2++;
-                        wmlVo.parameter2 = num2.ToString();
-                        WapStr = regex.Replace(WapStr, Page_Layout.GetListLayout(list, "9*" + value, wmlVo, ""), 1);
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
-            if (WapStr.IndexOf("[/picurl10]") > 0)
-            {
-                Regex regex = new Regex("(\\[picurl10=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/picurl10\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    Random random = new Random();
-                    int num2 = 2;
-                    while (match.Success)
-                    {
-                        string value = match.Groups[2].Value.Replace("｜", "|");
-                        string text = match.Groups[3].Value.Replace("｜", "|");
-                        string[] array6 = text.Split('*');
-                        string[] array3 = array6[1].Split('|');
-                        string[] array4 = array6[0].Split('|');
-                        List<Page_Layout_Model> list = new List<Page_Layout_Model>();
-                        for (int num = 0; num < array3.Length; num++)
-                        {
-                            Page_Layout_Model page_Layout_Model = new Page_Layout_Model();
-                            if (wmlVo.ver == "0")
-                            {
-                                page_Layout_Model.linkURL = "javascript:T('{{picurl10=$2}}$3{{/picurl10}}');";
-                            }
-                            else
-                            {
-                                page_Layout_Model.linkURL = array3[num];
-                            }
-                            page_Layout_Model.imageURL = array4[num];
-                            page_Layout_Model.title = ".";
-                            page_Layout_Model.content = "";
-                            list.Add(page_Layout_Model);
-                        }
-                        num2++;
-                        wmlVo.parameter2 = num2.ToString();
-                        WapStr = regex.Replace(WapStr, Page_Layout.GetListLayout(list, "10*" + value, wmlVo, ""), 1);
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
+            //if (WapStr.IndexOf("[/picurl8]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[picurl8=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/picurl8\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        Random random = new Random();
+            //        int num2 = 0;
+            //        while (match.Success)
+            //        {
+            //            string value = match.Groups[2].Value.Replace("｜", "|");
+            //            string text = match.Groups[3].Value.Replace("｜", "|");
+            //            string[] array6 = text.Split('*');
+            //            string[] array3 = array6[1].Split('|');
+            //            string[] array4 = array6[0].Split('|');
+            //            List<Page_Layout_Model> list = new List<Page_Layout_Model>();
+            //            for (int num = 0; num < array3.Length; num++)
+            //            {
+            //                Page_Layout_Model page_Layout_Model = new Page_Layout_Model();
+            //                if (wmlVo.ver == "0")
+            //                {
+            //                    page_Layout_Model.linkURL = "javascript:T('{{picurl8=$2}}$3{{/picurl8}}');";
+            //                }
+            //                else
+            //                {
+            //                    page_Layout_Model.linkURL = array3[num];
+            //                }
+            //                page_Layout_Model.imageURL = array4[num];
+            //                page_Layout_Model.title = ".";
+            //                page_Layout_Model.content = "";
+            //                list.Add(page_Layout_Model);
+            //            }
+            //            num2++;
+            //            wmlVo.parameter2 = num2.ToString();
+            //            WapStr = regex.Replace(WapStr, Page_Layout.GetListLayout(list, "8*" + value, wmlVo, ""), 1);
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
+            //if (WapStr.IndexOf("[/picurl9]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[picurl9=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/picurl9\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        Random random = new Random();
+            //        int num2 = 0;
+            //        while (match.Success)
+            //        {
+            //            string value = match.Groups[2].Value.Replace("｜", "|");
+            //            string text = match.Groups[3].Value.Replace("｜", "|");
+            //            string[] array6 = text.Split('*');
+            //            string[] array3 = array6[1].Split('|');
+            //            string[] array4 = array6[0].Split('|');
+            //            List<Page_Layout_Model> list = new List<Page_Layout_Model>();
+            //            for (int num = 0; num < array3.Length; num++)
+            //            {
+            //                Page_Layout_Model page_Layout_Model = new Page_Layout_Model();
+            //                if (wmlVo.ver == "0")
+            //                {
+            //                    page_Layout_Model.linkURL = "javascript:T('{{picurl9=$2}}$3{{/picurl9}}');";
+            //                }
+            //                else
+            //                {
+            //                    page_Layout_Model.linkURL = array3[num];
+            //                }
+            //                page_Layout_Model.imageURL = array4[num];
+            //                page_Layout_Model.title = ".";
+            //                page_Layout_Model.content = "";
+            //                list.Add(page_Layout_Model);
+            //            }
+            //            num2++;
+            //            wmlVo.parameter2 = num2.ToString();
+            //            WapStr = regex.Replace(WapStr, Page_Layout.GetListLayout(list, "9*" + value, wmlVo, ""), 1);
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
+            //if (WapStr.IndexOf("[/picurl10]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[picurl10=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/picurl10\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        Random random = new Random();
+            //        int num2 = 2;
+            //        while (match.Success)
+            //        {
+            //            string value = match.Groups[2].Value.Replace("｜", "|");
+            //            string text = match.Groups[3].Value.Replace("｜", "|");
+            //            string[] array6 = text.Split('*');
+            //            string[] array3 = array6[1].Split('|');
+            //            string[] array4 = array6[0].Split('|');
+            //            List<Page_Layout_Model> list = new List<Page_Layout_Model>();
+            //            for (int num = 0; num < array3.Length; num++)
+            //            {
+            //                Page_Layout_Model page_Layout_Model = new Page_Layout_Model();
+            //                if (wmlVo.ver == "0")
+            //                {
+            //                    page_Layout_Model.linkURL = "javascript:T('{{picurl10=$2}}$3{{/picurl10}}');";
+            //                }
+            //                else
+            //                {
+            //                    page_Layout_Model.linkURL = array3[num];
+            //                }
+            //                page_Layout_Model.imageURL = array4[num];
+            //                page_Layout_Model.title = ".";
+            //                page_Layout_Model.content = "";
+            //                list.Add(page_Layout_Model);
+            //            }
+            //            num2++;
+            //            wmlVo.parameter2 = num2.ToString();
+            //            WapStr = regex.Replace(WapStr, Page_Layout.GetListLayout(list, "10*" + value, wmlVo, ""), 1);
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
             if (WapStr.IndexOf("[/movie]") > 0)
             {
                 Regex regex = new Regex("(\\[movie=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/movie\\])");
@@ -2630,29 +2630,29 @@ namespace YaoHuo.Plugin.Tool
                     WapStr = regex.Replace(WapStr, "{格式错误}");
                 }
             }
-            if (WapStr.IndexOf("[/friend]") > 0)
-            {
-                Regex regex = new Regex("(\\[friend\\])(.[^\\[]*)(\\[\\/friend\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    while (match.Success)
-                    {
-                        string message = GetFriendCount(wmlVo.siteid, wmlVo.userid, match.Groups[2].Value);
-                        WapStr = regex.Replace(WapStr, message, 1);
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
-            if (WapStr.IndexOf("[/anchor]") > 0)
-            {
-                Regex regex = new Regex("(\\[anchor=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/anchor\\])");
-                WapStr = ((wmlVo.ver == "1" || wmlVo.mycss == "") ? regex.Replace(WapStr, "<anchor>$3<go sendreferer=\"true\" href=\"$2\"></go></anchor>") : ((!(wmlVo.ver == "0")) ? regex.Replace(WapStr, "<input type=\"button\" value=\"$3\" name=\"BT\" onclick=\"javascript:window.location.href='$2';\" >") : regex.Replace(WapStr, "<input type=\"button\" value=\"$3\" name=\"BT\" onclick=\"javascript:alert('UBB方法链接至:$2 请用手机或IE访问测试！');\" >")));
-            }
+            //if (WapStr.IndexOf("[/friend]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[friend\\])(.[^\\[]*)(\\[\\/friend\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        while (match.Success)
+            //        {
+            //            string message = GetFriendCount(wmlVo.siteid, wmlVo.userid, match.Groups[2].Value);
+            //            WapStr = regex.Replace(WapStr, message, 1);
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
+            //if (WapStr.IndexOf("[/anchor]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[anchor=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/anchor\\])");
+            //    WapStr = ((wmlVo.ver == "1" || wmlVo.mycss == "") ? regex.Replace(WapStr, "<anchor>$3<go sendreferer=\"true\" href=\"$2\"></go></anchor>") : ((!(wmlVo.ver == "0")) ? regex.Replace(WapStr, "<input type=\"button\" value=\"$3\" name=\"BT\" onclick=\"javascript:window.location.href='$2';\" >") : regex.Replace(WapStr, "<input type=\"button\" value=\"$3\" name=\"BT\" onclick=\"javascript:alert('UBB方法链接至:$2 请用手机或IE访问测试！');\" >")));
+            //}
             if (WapStr.IndexOf("[/i]") > 0)
             {
                 Regex regex = new Regex("(\\[i\\])(.[^\\[]*)(\\[\\/i\\])");
@@ -2992,11 +2992,11 @@ namespace YaoHuo.Plugin.Tool
                     }
                 }
             }
-            if (WapStr.IndexOf("[/fly]") > 0)
-            {
-                Regex regex = new Regex("(\\[fly\\])(.[^\\[]*)(\\[\\/fly\\])");
-                WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<marquee  behavior=\"scroll\" scrollamount=\"2\" onMouseOut=\"this.start()\" onMouseOver=\"this.stop()\">$2</marquee>") : regex.Replace(WapStr, "$2"));
-            }
+            //if (WapStr.IndexOf("[/fly]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[fly\\])(.[^\\[]*)(\\[\\/fly\\])");
+            //    WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<marquee  behavior=\"scroll\" scrollamount=\"2\" onMouseOut=\"this.start()\" onMouseOver=\"this.stop()\">$2</marquee>") : regex.Replace(WapStr, "$2"));
+            //}
             WapStr = UBB.EndIntercept(WapStr, wmlVo);
             if (WapStr.IndexOf("[/span2]") > 0)
             {
@@ -3270,18 +3270,18 @@ namespace YaoHuo.Plugin.Tool
             //    wmlVo.showlink = "3";
             //    WapHtmlStr = WapHtmlStr.Replace("[vs3]", GetVS_True(wmlVo));
             //}
-            if (WapHtmlStr.IndexOf("[nv]") > -1)
-            {
-                WapHtmlStr = WapHtmlStr.Replace("[nv]", GetNavigation(wmlVo));
-            }
+            //if (WapHtmlStr.IndexOf("[nv]") > -1)
+            //{
+            //    WapHtmlStr = WapHtmlStr.Replace("[nv]", GetNavigation(wmlVo));
+            //}
             if (WapHtmlStr.IndexOf("[hello]") > -1)
             {
                 WapHtmlStr = WapHtmlStr.Replace("[hello]", GetHello());
             }
-            if (WapHtmlStr.IndexOf("[shopcard]") > -1)
-            {
-                WapHtmlStr = ((wmlVo.siteVo == null || wmlVo.siteVo.myShopCardList == null) ? WapHtmlStr.Replace("[shopcard]", "<span id=\"shopcard\" class=\"shopcard\">0</span>") : WapHtmlStr.Replace("[shopcard]", "<span id=\"shopcard\" class=\"shopcard\">" + wmlVo.siteVo.myShopCardList + "</span>"));
-            }
+            //if (WapHtmlStr.IndexOf("[shopcard]") > -1)
+            //{
+            //    WapHtmlStr = ((wmlVo.siteVo == null || wmlVo.siteVo.myShopCardList == null) ? WapHtmlStr.Replace("[shopcard]", "<span id=\"shopcard\" class=\"shopcard\">0</span>") : WapHtmlStr.Replace("[shopcard]", "<span id=\"shopcard\" class=\"shopcard\">" + wmlVo.siteVo.myShopCardList + "</span>"));
+            //}
             if (WapHtmlStr.IndexOf("[vtoday]") > -1)
             {
                 WapHtmlStr = WapHtmlStr.Replace("[vtoday]", GetCount("vtoday", wmlVo.siteUserName, wmlVo.siteid));
@@ -3318,24 +3318,24 @@ namespace YaoHuo.Plugin.Tool
             {
                 WapHtmlStr = WapHtmlStr.Replace("[automsg]", GetAutoMessage(wmlVo.ver, wmlVo.userid, wmlVo.siteid, wmlVo.http_start, wmlVo.sid, wmlVo.classid));
             }
-            if (WapHtmlStr.IndexOf("[/ui]") > 0)
-            {
-                Regex regex = new Regex("(\\[ui\\])(.[^\\[]*)(\\[\\/ui\\])");
-                try
-                {
-                    Match match = regex.Match(WapHtmlStr);
-                    while (match.Success)
-                    {
-                        string value = match.Groups[2].Value;
-                        WapHtmlStr = ((!IsNumeric(value)) ? regex.Replace(WapHtmlStr, "{格式错误}", 1) : regex.Replace(WapHtmlStr, GetUserInfoFromUBB(value, wmlVo), 1));
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapHtmlStr = regex.Replace(WapHtmlStr, "{格式错误}");
-                }
-            }
+            //if (WapHtmlStr.IndexOf("[/ui]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[ui\\])(.[^\\[]*)(\\[\\/ui\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapHtmlStr);
+            //        while (match.Success)
+            //        {
+            //            string value = match.Groups[2].Value;
+            //            WapHtmlStr = ((!IsNumeric(value)) ? regex.Replace(WapHtmlStr, "{格式错误}", 1) : regex.Replace(WapHtmlStr, GetUserInfoFromUBB(value, wmlVo), 1));
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapHtmlStr = regex.Replace(WapHtmlStr, "{格式错误}");
+            //    }
+            //}
             return WapHtmlStr;
         }
 
