@@ -96,11 +96,13 @@
     <Content Include="BBS\Book_View_add.aspx" />
     <Content Include="BBS\Book_View_del.aspx" />
     <Content Include="BBS\Book_View_end.aspx" />
+    <Content Include="BBS\MessageList_view.aspx" />
     <Content Include="BBS\ModifyHead.aspx" />
     <Content Include="BBS\ModifyInfo.aspx" />
     <Content Include="BBS\ModifyNick.aspx" />
     <Content Include="BBS\ModifyPW.aspx" />
     <Content Include="BBS\ModifyRemark.aspx" />
+    <Content Include="BBS\userGuessBook.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Games\ChuiNiu\Add.aspx" />
     <Content Include="Games\ChuiNiu\Book_List.aspx" />
@@ -202,6 +204,10 @@
       <DependentUpon>MessageList_Del.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BBS\MessageList_view.aspx.cs">
+      <DependentUpon>MessageList_view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BBS\ModifyHead.aspx.cs">
       <DependentUpon>ModifyHead.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -240,6 +246,10 @@
     </Compile>
     <Compile Include="BBS\ToMyBankMoney.aspx.cs">
       <DependentUpon>ToMyBankMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\userGuessBook.aspx.cs">
+      <DependentUpon>userGuessBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\UserInfo.aspx.cs">

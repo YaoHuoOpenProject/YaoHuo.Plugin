@@ -101,6 +101,12 @@ namespace YaoHuo.Plugin.Games.ChuiNiu
                 answer1 = GetRequestValue("answer1");
                 answer2 = GetRequestValue("answer2");
                 myanswer = GetRequestValue("myanswer");
+
+                // 替换 question 和 answer 字段中的 [] 符号为空格
+                question = question.Replace("[", " ").Replace("]", " ");
+                answer1 = answer1.Replace("[", " ").Replace("]", " ");
+                answer2 = answer2.Replace("[", " ").Replace("]", " ");
+
                 if (question.Length > 20)
                 {
                     question = question.Substring(0, 20);
@@ -111,7 +117,7 @@ namespace YaoHuo.Plugin.Games.ChuiNiu
                 }
                 if (answer2.Length > 20)
                 {
-                    answer1 = answer2.Substring(0, 20);
+                    answer2 = answer2.Substring(0, 20);
                 }
                 if (myanswer != "1" && myanswer != "2")
                 {

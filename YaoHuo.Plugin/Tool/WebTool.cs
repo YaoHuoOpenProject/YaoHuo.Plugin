@@ -3255,21 +3255,21 @@ namespace YaoHuo.Plugin.Tool
             {
                 WapHtmlStr = WapHtmlStr.Replace("[ua1]", GetUAUBB(wmlVo.myua, wmlVo.ver, wmlVo.lang, wmlVo.sid, 1));
             }
-            if (WapHtmlStr.IndexOf("[vs]") > -1)
-            {
-                wmlVo.showlink = "1";
-                WapHtmlStr = WapHtmlStr.Replace("[vs]", GetVS_True(wmlVo));
-            }
-            if (WapHtmlStr.IndexOf("[vs2]") > -1)
-            {
-                wmlVo.showlink = "2";
-                WapHtmlStr = WapHtmlStr.Replace("[vs2]", GetVS_True(wmlVo));
-            }
-            if (WapHtmlStr.IndexOf("[vs3]") > -1)
-            {
-                wmlVo.showlink = "3";
-                WapHtmlStr = WapHtmlStr.Replace("[vs3]", GetVS_True(wmlVo));
-            }
+            //if (WapHtmlStr.IndexOf("[vs]") > -1)
+            //{
+            //    wmlVo.showlink = "1";
+            //    WapHtmlStr = WapHtmlStr.Replace("[vs]", GetVS_True(wmlVo));
+            //}
+            //if (WapHtmlStr.IndexOf("[vs2]") > -1)
+            //{
+            //    wmlVo.showlink = "2";
+            //    WapHtmlStr = WapHtmlStr.Replace("[vs2]", GetVS_True(wmlVo));
+            //}
+            //if (WapHtmlStr.IndexOf("[vs3]") > -1)
+            //{
+            //    wmlVo.showlink = "3";
+            //    WapHtmlStr = WapHtmlStr.Replace("[vs3]", GetVS_True(wmlVo));
+            //}
             if (WapHtmlStr.IndexOf("[nv]") > -1)
             {
                 WapHtmlStr = WapHtmlStr.Replace("[nv]", GetNavigation(wmlVo));

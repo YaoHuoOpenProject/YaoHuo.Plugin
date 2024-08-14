@@ -63,7 +63,7 @@
         strhtml.Append("<br/>");
         strhtml.Append(linkTOP);
         //显示列表
-        string YesOrNo = "";
+        //string YesOrNo = "";
         for (int i = 0; (listVo != null && i < listVo.Count); i++)
         {
             index = index + kk;
@@ -174,7 +174,7 @@
 
         strhtml.Append(linkTOP);
         //显示列表
-        string YesOrNo = "";
+        //string YesOrNo = "";
         for (int i = 0; (listVo != null && i < listVo.Count); i++)
         {
             if (i % 2 == 0)
