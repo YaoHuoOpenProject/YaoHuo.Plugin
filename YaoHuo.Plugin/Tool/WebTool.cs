@@ -2998,21 +2998,21 @@ namespace YaoHuo.Plugin.Tool
             //    WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<marquee  behavior=\"scroll\" scrollamount=\"2\" onMouseOut=\"this.start()\" onMouseOver=\"this.stop()\">$2</marquee>") : regex.Replace(WapStr, "$2"));
             //}
             WapStr = UBB.EndIntercept(WapStr, wmlVo);
-            if (WapStr.IndexOf("[/span2]") > 0)
-            {
-                Regex regex = new Regex("(\\[span2=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/span2\\])");
-                WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<span class=\"$2\">$3</span>") : regex.Replace(WapStr, "$3"));
-            }
-            if (WapStr.IndexOf("[/span1]") > 0)
-            {
-                Regex regex = new Regex("(\\[span1=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/span1\\])");
-                WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<span class=\"$2\">$3</span>") : regex.Replace(WapStr, "$3"));
-            }
-            if (WapStr.IndexOf("[/span]") > 0)
-            {
-                Regex regex = new Regex("(\\[span=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/span\\])");
-                WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<span class=\"$2\">$3</span>") : regex.Replace(WapStr, "$3"));
-            }
+            //if (WapStr.IndexOf("[/span2]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[span2=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/span2\\])");
+            //    WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<span class=\"$2\">$3</span>") : regex.Replace(WapStr, "$3"));
+            //}
+            //if (WapStr.IndexOf("[/span1]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[span1=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/span1\\])");
+            //    WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<span class=\"$2\">$3</span>") : regex.Replace(WapStr, "$3"));
+            //}
+            //if (WapStr.IndexOf("[/span]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[span=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/span\\])");
+            //    WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<span class=\"$2\">$3</span>") : regex.Replace(WapStr, "$3"));
+            //}
             if (WapStr.IndexOf("[/p]") > 0)
             {
                 Regex regex = new Regex("(\\[p=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/p\\])");
@@ -3063,35 +3063,35 @@ namespace YaoHuo.Plugin.Tool
                 Regex regex = new Regex("(\\[div=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/div\\])");
                 WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<div class=\"$2\">$3</div>") : regex.Replace(WapStr, "$3"));
             }
-            if (WapStr.IndexOf("[/wap1]") > 0)
-            {
-                Regex regex = new Regex("(\\[wap1\\])(.[^\\[]*)(\\[\\/wap1\\])");
-                if (wmlVo.ver == "2" || wmlVo.ver == "3")
-                {
-                    WapStr = regex.Replace(WapStr, "");
-                }
-                WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
-            }
-            if (WapStr.IndexOf("[/wap2]") > 0)
-            {
-                Regex regex = new Regex("(\\[wap2\\])(.[^\\[]*)(\\[\\/wap2\\])");
-                WapStr = ((!(wmlVo.ver == "2") && (!(wmlVo.ver == "0") || !(wmlVo.mycss != ""))) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
-            }
-            if (WapStr.IndexOf("[/wap3]") > 0)
-            {
-                Regex regex = new Regex("(\\[wap3\\])(.[^\\[]*)(\\[\\/wap3\\])");
-                WapStr = ((!(wmlVo.ver == "3")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
-            }
-            if (WapStr.IndexOf("[/wap4]") > 0)
-            {
-                Regex regex = new Regex("(\\[wap4\\])(.[^\\[]*)(\\[\\/wap4\\])");
-                WapStr = ((!(wmlVo.ver == "4")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
-            }
-            if (WapStr.IndexOf("[/wap5]") > 0)
-            {
-                Regex regex = new Regex("(\\[wap5\\])(.[^\\[]*)(\\[\\/wap5\\])");
-                WapStr = ((!(wmlVo.ver == "5")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
-            }
+            //if (WapStr.IndexOf("[/wap1]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[wap1\\])(.[^\\[]*)(\\[\\/wap1\\])");
+            //    if (wmlVo.ver == "2" || wmlVo.ver == "3")
+            //    {
+            //        WapStr = regex.Replace(WapStr, "");
+            //    }
+            //    WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
+            //}
+            //if (WapStr.IndexOf("[/wap2]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[wap2\\])(.[^\\[]*)(\\[\\/wap2\\])");
+            //    WapStr = ((!(wmlVo.ver == "2") && (!(wmlVo.ver == "0") || !(wmlVo.mycss != ""))) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
+            //}
+            //if (WapStr.IndexOf("[/wap3]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[wap3\\])(.[^\\[]*)(\\[\\/wap3\\])");
+            //    WapStr = ((!(wmlVo.ver == "3")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
+            //}
+            //if (WapStr.IndexOf("[/wap4]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[wap4\\])(.[^\\[]*)(\\[\\/wap4\\])");
+            //    WapStr = ((!(wmlVo.ver == "4")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
+            //}
+            //if (WapStr.IndexOf("[/wap5]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[wap5\\])(.[^\\[]*)(\\[\\/wap5\\])");
+            //    WapStr = ((!(wmlVo.ver == "5")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
+            //}
             if (WapStr.IndexOf("[/nologins]") > 0)
             {
                 Regex regex = new Regex("(\\[nologins\\])(.[^\\[]*)(\\[\\/nologins\\])");
@@ -3102,71 +3102,71 @@ namespace YaoHuo.Plugin.Tool
                 Regex regex = new Regex("(\\[logins\\])(.[^\\[]*)(\\[\\/logins\\])");
                 WapStr = ((!(wmlVo.userid != "0")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "$2"));
             }
-            if (WapStr.IndexOf("[/show]") > 0)
-            {
-                string text10 = wmlVo.strUrl.Split('?')[0];
-                Regex regex = new Regex("(\\[show=(.[^\\]]*)_(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/show\\])");
-                Match match = regex.Match(WapStr);
-                while (match.Success)
-                {
-                    string value4 = match.Groups[2].Value;
-                    string value5 = match.Groups[3].Value;
-                    string value6 = match.Groups[4].Value;
-                    WapStr = ((text10.ToLower().IndexOf(value4.ToLower()) <= -1 && value4.ToLower().IndexOf(text10.ToLower()) <= -1 && ("," + value4 + ",").ToLower().IndexOf("," + wmlVo.classid + ",") <= -1) ? regex.Replace(WapStr, "", 1) : ((!(value5 == "2")) ? ((!(value5 == "1")) ? regex.Replace(WapStr, value6, 1) : ((!"1".Equals(wmlVo.siteVo.siteVIP)) ? regex.Replace(WapStr, "", 1) : regex.Replace(WapStr, value6, 1))) : ((!"0".Equals(wmlVo.siteVo.siteVIP)) ? regex.Replace(WapStr, "", 1) : regex.Replace(WapStr, value6, 1))));
-                    match = match.NextMatch();
-                }
-            }
-            if (WapStr.IndexOf("[/noshow]") > 0)
-            {
-                string text10 = wmlVo.strUrl.Split('?')[0];
-                Regex regex = new Regex("(\\[noshow=(.[^\\]]*)_(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/noshow\\])");
-                Match match = regex.Match(WapStr);
-                while (match.Success)
-                {
-                    string value4 = match.Groups[2].Value;
-                    string value5 = match.Groups[3].Value;
-                    string value6 = match.Groups[4].Value;
-                    WapStr = ((text10.ToLower().IndexOf(value4.ToLower()) <= -1 && value4.ToLower().IndexOf(text10.ToLower()) <= -1 && ("," + value4 + ",").ToLower().IndexOf("," + wmlVo.classid + ",") <= -1) ? regex.Replace(WapStr, value6, 1) : ((!(value5 == "2")) ? ((!(value5 == "1")) ? regex.Replace(WapStr, "", 1) : ((!"1".Equals(wmlVo.siteVo.siteVIP)) ? regex.Replace(WapStr, value6, 1) : regex.Replace(WapStr, "", 1))) : ((!"0".Equals(wmlVo.siteVo.siteVIP)) ? regex.Replace(WapStr, value6, 1) : regex.Replace(WapStr, "", 1))));
-                    match = match.NextMatch();
-                }
-            }
-            if (WapStr.IndexOf("[/mtu]") > 0)
-            {
-                Regex regex = new Regex("(\\[mtu=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/mtu\\])");
-                try
-                {
-                    string text11 = IPToALL.IPLocate(wmlVo.parameter1 + "\\visiteCount\\QQWry.Dat", wmlVo.IP);
-                    Match match = regex.Match(WapStr);
-                    while (match.Success)
-                    {
-                        string text2 = match.Groups[2].Value;
-                        WapStr = ((!IsNumeric(text2)) ? regex.Replace(WapStr, "{格式错误}", 1) : ((text2 == "0" && text11.IndexOf("移动") > 0) ? regex.Replace(WapStr, "$3", 1) : ((text2 == "1" && text11.IndexOf("联通") > 0) ? regex.Replace(WapStr, "$3", 1) : ((text2 == "2" && text11.IndexOf("电信") > 0) ? regex.Replace(WapStr, "$3", 1) : ((!(text2 == "3") || text11.IndexOf("铁通") <= 0) ? regex.Replace(WapStr, "", 1) : regex.Replace(WapStr, "$3", 1))))));
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
-            if (WapStr.IndexOf("[/wap]") > 0)
-            {
-                Regex regex = new Regex("(\\[wap=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/wap\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    while (match.Success)
-                    {
-                        string text2 = match.Groups[2].Value;
-                        WapStr = ((!IsNumeric(text2)) ? regex.Replace(WapStr, "{格式错误}", 1) : ((!(text2 == wmlVo.ver)) ? regex.Replace(WapStr, "", 1) : regex.Replace(WapStr, "$3", 1)));
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
+            //if (WapStr.IndexOf("[/show]") > 0)
+            //{
+            //    string text10 = wmlVo.strUrl.Split('?')[0];
+            //    Regex regex = new Regex("(\\[show=(.[^\\]]*)_(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/show\\])");
+            //    Match match = regex.Match(WapStr);
+            //    while (match.Success)
+            //    {
+            //        string value4 = match.Groups[2].Value;
+            //        string value5 = match.Groups[3].Value;
+            //        string value6 = match.Groups[4].Value;
+            //        WapStr = ((text10.ToLower().IndexOf(value4.ToLower()) <= -1 && value4.ToLower().IndexOf(text10.ToLower()) <= -1 && ("," + value4 + ",").ToLower().IndexOf("," + wmlVo.classid + ",") <= -1) ? regex.Replace(WapStr, "", 1) : ((!(value5 == "2")) ? ((!(value5 == "1")) ? regex.Replace(WapStr, value6, 1) : ((!"1".Equals(wmlVo.siteVo.siteVIP)) ? regex.Replace(WapStr, "", 1) : regex.Replace(WapStr, value6, 1))) : ((!"0".Equals(wmlVo.siteVo.siteVIP)) ? regex.Replace(WapStr, "", 1) : regex.Replace(WapStr, value6, 1))));
+            //        match = match.NextMatch();
+            //    }
+            //}
+            //if (WapStr.IndexOf("[/noshow]") > 0)
+            //{
+            //    string text10 = wmlVo.strUrl.Split('?')[0];
+            //    Regex regex = new Regex("(\\[noshow=(.[^\\]]*)_(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/noshow\\])");
+            //    Match match = regex.Match(WapStr);
+            //    while (match.Success)
+            //    {
+            //        string value4 = match.Groups[2].Value;
+            //        string value5 = match.Groups[3].Value;
+            //        string value6 = match.Groups[4].Value;
+            //        WapStr = ((text10.ToLower().IndexOf(value4.ToLower()) <= -1 && value4.ToLower().IndexOf(text10.ToLower()) <= -1 && ("," + value4 + ",").ToLower().IndexOf("," + wmlVo.classid + ",") <= -1) ? regex.Replace(WapStr, value6, 1) : ((!(value5 == "2")) ? ((!(value5 == "1")) ? regex.Replace(WapStr, "", 1) : ((!"1".Equals(wmlVo.siteVo.siteVIP)) ? regex.Replace(WapStr, value6, 1) : regex.Replace(WapStr, "", 1))) : ((!"0".Equals(wmlVo.siteVo.siteVIP)) ? regex.Replace(WapStr, value6, 1) : regex.Replace(WapStr, "", 1))));
+            //        match = match.NextMatch();
+            //    }
+            //}
+            //if (WapStr.IndexOf("[/mtu]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[mtu=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/mtu\\])");
+            //    try
+            //    {
+            //        string text11 = IPToALL.IPLocate(wmlVo.parameter1 + "\\visiteCount\\QQWry.Dat", wmlVo.IP);
+            //        Match match = regex.Match(WapStr);
+            //        while (match.Success)
+            //        {
+            //            string text2 = match.Groups[2].Value;
+            //            WapStr = ((!IsNumeric(text2)) ? regex.Replace(WapStr, "{格式错误}", 1) : ((text2 == "0" && text11.IndexOf("移动") > 0) ? regex.Replace(WapStr, "$3", 1) : ((text2 == "1" && text11.IndexOf("联通") > 0) ? regex.Replace(WapStr, "$3", 1) : ((text2 == "2" && text11.IndexOf("电信") > 0) ? regex.Replace(WapStr, "$3", 1) : ((!(text2 == "3") || text11.IndexOf("铁通") <= 0) ? regex.Replace(WapStr, "", 1) : regex.Replace(WapStr, "$3", 1))))));
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
+            //if (WapStr.IndexOf("[/wap]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[wap=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/wap\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        while (match.Success)
+            //        {
+            //            string text2 = match.Groups[2].Value;
+            //            WapStr = ((!IsNumeric(text2)) ? regex.Replace(WapStr, "{格式错误}", 1) : ((!(text2 == wmlVo.ver)) ? regex.Replace(WapStr, "", 1) : regex.Replace(WapStr, "$3", 1)));
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //    }
+            //}
             return WapStr;
         }
 
