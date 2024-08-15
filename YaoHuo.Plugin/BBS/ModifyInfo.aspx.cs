@@ -15,7 +15,7 @@ namespace YaoHuo.Plugin.BBS
 
         public string aihao = "";
         public string qq = "";
-        public string string_12 = "0";
+        public string ot = "0";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,10 +24,10 @@ namespace YaoHuo.Plugin.BBS
             string text = base.Request.Form.Get("action");
             aihao = (userVo.aihao + "___").Split('_')[0];
             qq = (userVo.aihao + "___").Split('_')[1];
-            string_12 = WapTool.GetSiteDefault(siteVo.Version, 50);
-            if (!WapTool.IsNumeric(string_12) || string_12 == "0")
+            ot = WapTool.GetSiteDefault(siteVo.Version, 50);
+            if (!WapTool.IsNumeric(ot) || ot == "0")
             {
-                string_12 = "50";
+                ot = "50";
             }
             if (!(text == "gomod"))
             {
@@ -45,7 +45,7 @@ namespace YaoHuo.Plugin.BBS
                 userVo.xingzuo = GetRequestValue("xingzuo");
                 userVo.fenfuo = GetRequestValue("fenfuo");
                 userVo.zhiye = GetRequestValue("zhiye");
-                userVo.city = WapTool.left(GetRequestValue("city"), int.Parse(string_12));
+                userVo.city = WapTool.left(GetRequestValue("city"), int.Parse(ot));
                 aihao = GetRequestValue("aihao");
                 qq = GetRequestValue("qq");
                 userVo.aihao = aihao + "_" + qq;

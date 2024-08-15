@@ -32,7 +32,7 @@ namespace YaoHuo.Plugin.BBS
 
     public string lpage = "";
 
-    public string string_12 = "0";
+    public string ot = "0";
 
     public string touserid = "";
 
@@ -44,7 +44,7 @@ namespace YaoHuo.Plugin.BBS
 
     public StringBuilder strhtml = new StringBuilder();
 
-    public long long_0 = 1L;
+    public long kk = 1L;
 
     public long index = 0L;
 
@@ -62,7 +62,7 @@ namespace YaoHuo.Plugin.BBS
     {
         action = base.Request.Form.Get("action");
         lpage = GetRequestValue("lpage");
-        string_12 = GetRequestValue("ot");
+        ot = GetRequestValue("ot");
         touserid = GetRequestValue("touserid");
         face = GetRequestValue("face");
         if (face.Trim() == "")
@@ -104,10 +104,10 @@ namespace YaoHuo.Plugin.BBS
             }
             CurrentPage = WapTool.CheckCurrpage(total, pageSize, CurrentPage);
             index = pageSize * (CurrentPage - 1L);
-            linkURL = http_start + "bbs/userGuessBook.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + touserid + "&amp;ot=" + string_12 + "&amp;getTotal=" + total;
+            linkURL = http_start + "bbs/userGuessBook.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;touserid=" + touserid + "&amp;ot=" + ot + "&amp;getTotal=" + total;
             linkTOP = WapTool.GetPageLinkShowTOP(ver, lang, total, pageSize, CurrentPage, linkURL);
             linkURL = WapTool.GetPageLink(ver, lang, total, pageSize, CurrentPage, linkURL, "1");
-            if (string_12 == "1")
+            if (ot == "1")
             {
                 listVo = wap2_userGuessBook_BLL.GetListVo(pageSize, CurrentPage, condition, "*", "id", total, 0);
             }

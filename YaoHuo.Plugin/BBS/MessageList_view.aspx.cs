@@ -22,11 +22,11 @@ namespace YaoHuo.Plugin.BBS
 
     public string ERROR = "";
 
-    public string string_11 = "";
+    public string key = "";
 
     public string types = "";
 
-    public string string_12 = "";
+    public string id = "";
 
     public string backurl = "";
 
@@ -52,7 +52,7 @@ namespace YaoHuo.Plugin.BBS
         issystem = GetRequestValue("issystem");
         isclose = GetRequestValue("isclose");
         backurl = base.Request.QueryString.Get("backurl");
-        string_12 = base.Request.QueryString.Get("id");
+        id = base.Request.QueryString.Get("id");
         page = base.Request.QueryString.Get("page");
         types = base.Request.QueryString.Get("types");
         backurl = base.Request.QueryString.Get("backurl");
@@ -68,9 +68,9 @@ namespace YaoHuo.Plugin.BBS
         backurl = ToHtm(backurl);
         backurl = HttpUtility.UrlDecode(backurl);
         backurl = WapTool.URLtoWAP(backurl);
-        if (!WapTool.IsNumeric(string_12))
+        if (!WapTool.IsNumeric(id))
         {
-            string_12 = "0";
+            id = "0";
         }
         IsLogin(userid, backurl);
         if (WapTool.getArryString(siteVo.Version, '|', 53) == "1")
@@ -90,7 +90,7 @@ namespace YaoHuo.Plugin.BBS
             base.Response.Cookies["KL_MESSAGE_TIMES"].Value = isclose;
         }
         wap_message_BLL wap_message_BLL = new wap_message_BLL(string_10);
-        bookVo = wap_message_BLL.GetModel(long.Parse(string_12));
+        bookVo = wap_message_BLL.GetModel(long.Parse(id));
         if (bookVo.userid.ToString() != userid && bookVo.touserid.ToString() != userid)
         {
             ShowTipInfo(GetLang("你没有权限！|你沒有權限|You do not have permission"), "");
@@ -98,7 +98,7 @@ namespace YaoHuo.Plugin.BBS
         needpwFlag = WapTool.getArryString(siteVo.Version, '|', 31);
         if (bookVo.isnew == 1L)
         {
-            MainBll.UpdateSQL("update wap_message set isnew=0 where id=" + long.Parse(string_12));
+            MainBll.UpdateSQL("update wap_message set isnew=0 where id=" + long.Parse(id));
         }
         condition = " siteid=" + siteid + " and isnew < 2 and issystem<> 2 and   ((touserid=" + userid + " and userid=" + bookVo.userid + ") or (touserid=" + bookVo.userid + " and userid=" + userid + ") ) ";
         if (isclose != "1")

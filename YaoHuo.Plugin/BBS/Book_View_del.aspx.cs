@@ -17,7 +17,7 @@ namespace YaoHuo.Plugin.BBS
         public string lpage = "";
         public string INFO = "";
         public string ERROR = "";
-        public string string_12 = "";
+        public string ot = "";
         public wap_bbs_Model bbsVo = null;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -30,23 +30,23 @@ namespace YaoHuo.Plugin.BBS
             action = GetRequestValue("action");
             id = GetRequestValue("id");
             lpage = GetRequestValue("lpage");
-            string_12 = GetRequestValue("sub");
+            ot = GetRequestValue("sub");
             why = GetRequestValue("why");
 
             if (action.ToLower() == "del_1")
             {
                 action = "godel";
-                string_12 = "1";
+                ot = "1";
             }
             else if (action.ToLower() == "del_2")
             {
                 action = "godel";
-                string_12 = "2";
+                ot = "2";
             }
             else if (action.ToLower() == "del_3")
             {
                 action = "godel";
-                string_12 = "0";
+                ot = "0";
             }
 
             IsLogin(userid, "bbs/book_view_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
@@ -107,12 +107,12 @@ namespace YaoHuo.Plugin.BBS
                     num *= 2L;
                     num2 *= 2L;
                 }
-                else if (string_12 == "2")
+                else if (ot == "2")
                 {
                     num *= 2L;
                     num2 *= 2L;
                 }
-                else if (string_12 == "0")
+                else if (ot == "0")
                 {
                     num = 0L;
                     num2 = 0L;

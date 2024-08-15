@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="userGuessBook.aspx.cs" Inherits="KeLin.WebSite.bbs.userGuessBook" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="userGuessBook.aspx.cs" Inherits="YaoHuo.Plugin.BBS.userGuessBook" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 Response.Write(WapTool.showTop(this.GetLang("ÁôÑÔ°å|ÁôÑÔ°å|GuessBook"), wmlVo));//ÏÔÊ¾Í·                                                                                                                                                                       

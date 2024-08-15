@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MessageList_view.aspx.cs" Inherits="KeLin.WebSite.bbs.MessageList_view" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MessageList_view.aspx.cs" Inherits="YaoHuo.Plugin.BBS.MessageList_view" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 Response.Write(WapTool.showTop(this.GetLang("查看信息|查看信息|view Message"), wmlVo));//显示头                                                                                                                                                                       

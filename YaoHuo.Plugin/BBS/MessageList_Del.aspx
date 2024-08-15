@@ -2,17 +2,6 @@
 
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-    string msgbox = "";
-    string actionstr = "";
-    if (types == "0")
-    {
-        msgbox = "收件箱|收件箱|Receive";
-    }
-    else
-    {
-        msgbox = "发件箱|发件箱|Send";
-    }
-
     StringBuilder strhtml = new StringBuilder();
     Response.Write(WapTool.showTop(this.GetLang("删除|删除|delete"), wmlVo));//显示头                                                                                                                                                                       
     if (ver == "1")

@@ -2409,25 +2409,25 @@ namespace YaoHuo.Plugin.Tool
             //        WapStr = regex.Replace(WapStr, "{格式错误}");
             //    }
             //}
-            if (WapStr.IndexOf("[/getform]") > 0)
-            {
-                Regex regex = new Regex("(\\[getform\\])(.[^\\[]*)(\\[\\/getform\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    Random random = new Random();
-                    while (match.Success)
-                    {
-                        WapStr = regex.Replace(WapStr, Page_Layout.GetFormEdit(wmlVo, match.Groups[2].Value), 1);
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                    UpdateSystemAuto();
-                }
-            }
+            //if (WapStr.IndexOf("[/getform]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[getform\\])(.[^\\[]*)(\\[\\/getform\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapStr);
+            //        Random random = new Random();
+            //        while (match.Success)
+            //        {
+            //            WapStr = regex.Replace(WapStr, Page_Layout.GetFormEdit(wmlVo, match.Groups[2].Value), 1);
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapStr = regex.Replace(WapStr, "{格式错误}");
+            //        UpdateSystemAuto();
+            //    }
+            //}
             //if (WapStr.IndexOf("[/picurl8]") > 0)
             //{
             //    Regex regex = new Regex("(\\[picurl8=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/picurl8\\])");
