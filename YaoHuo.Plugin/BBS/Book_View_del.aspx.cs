@@ -51,7 +51,7 @@ namespace YaoHuo.Plugin.BBS
 
             IsLogin(userid, "bbs/book_view_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
 
-            needPassWordToAdmin();
+            NeedPassWordToAdminNew();
 
             wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
 

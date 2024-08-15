@@ -2710,16 +2710,16 @@ namespace YaoHuo.Plugin.Tool
                 Regex regex = new Regex("(\\[ancho=(.[^\\]]*)_(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/ancho\\])");
                 WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "") : regex.Replace(WapStr, "<anchor><go href=\"" + wmlVo.http_start + "$2/book_list.aspx\" method=\"get\"><postfield name=\"action\" value=\"search\"/><postfield name=\"siteid\" value=\"" + wmlVo.siteid + "\"/><postfield name=\"classid\" value=\"$3\"/><postfield name=\"key\" value=\"$(key)\"/><postfield name=\"type\" value=\"title\"/><postfield name=\"sid\" value=\"" + wmlVo.sid + "\"/></go>$4</anchor>"));
             }
-            if (wmlVo.ver == "1" || wmlVo.mycss == "" || wmlVo.ver == "0")
-            {
-                WapStr = WapStr.Replace("[form2]", "");
-                WapStr = WapStr.Replace("[/form2]", "");
-            }
-            else
-            {
-                WapStr = WapStr.Replace("[form2]", "<form name=\"fs\" action=\"" + wmlVo.http_start + "search.aspx\" method=\"get\">");
-                WapStr = WapStr.Replace("[/form2]", "<input type=\"hidden\" name=\"sid\" value=\"" + wmlVo.sid + "\"/><input type=\"hidden\" name=\"siteid\" value=\"" + wmlVo.siteid + "\"/><input type=\"hidden\" name=\"classid\" value=\"" + wmlVo.classid + "\"/></form>");
-            }
+            //if (wmlVo.ver == "1" || wmlVo.mycss == "" || wmlVo.ver == "0")
+            //{
+            //    WapStr = WapStr.Replace("[form2]", "");
+            //    WapStr = WapStr.Replace("[/form2]", "");
+            //}
+            //else
+            //{
+            //    WapStr = WapStr.Replace("[form2]", "<form name=\"fs\" action=\"" + wmlVo.http_start + "search.aspx\" method=\"get\">");
+            //    WapStr = WapStr.Replace("[/form2]", "<input type=\"hidden\" name=\"sid\" value=\"" + wmlVo.sid + "\"/><input type=\"hidden\" name=\"siteid\" value=\"" + wmlVo.siteid + "\"/><input type=\"hidden\" name=\"classid\" value=\"" + wmlVo.classid + "\"/></form>");
+            //}
             if (WapStr.IndexOf("[/input2]") > 0)
             {
                 Regex regex = new Regex("(\\[input2=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/input2\\])");
@@ -3340,24 +3340,24 @@ namespace YaoHuo.Plugin.Tool
             {
                 WapHtmlStr = WapHtmlStr.Replace("[automsg]", GetAutoMessage(wmlVo.ver, wmlVo.userid, wmlVo.siteid, wmlVo.http_start, wmlVo.sid, wmlVo.classid));
             }
-            //if (WapHtmlStr.IndexOf("[/ui]") > 0)
-            //{
-            //    Regex regex = new Regex("(\\[ui\\])(.[^\\[]*)(\\[\\/ui\\])");
-            //    try
-            //    {
-            //        Match match = regex.Match(WapHtmlStr);
-            //        while (match.Success)
-            //        {
-            //            string value = match.Groups[2].Value;
-            //            WapHtmlStr = ((!IsNumeric(value)) ? regex.Replace(WapHtmlStr, "{格式错误}", 1) : regex.Replace(WapHtmlStr, GetUserInfoFromUBB(value, wmlVo), 1));
-            //            match = match.NextMatch();
-            //        }
-            //    }
-            //    catch (Exception)
-            //    {
-            //        WapHtmlStr = regex.Replace(WapHtmlStr, "{格式错误}");
-            //    }
-            //}
+            if (WapHtmlStr.IndexOf("[/userinformation]") > 0)
+            {
+                Regex regex = new Regex("(\\[userinformation\\])(.[^\\[]*)(\\[\\/userinformation\\])");
+                try
+                {
+                    Match match = regex.Match(WapHtmlStr);
+                    while (match.Success)
+                    {
+                        string value = match.Groups[2].Value;
+                        WapHtmlStr = ((!IsNumeric(value)) ? regex.Replace(WapHtmlStr, "{格式错误}", 1) : regex.Replace(WapHtmlStr, GetUserInfoFromUBB(value, wmlVo), 1));
+                        match = match.NextMatch();
+                    }
+                }
+                catch (Exception)
+                {
+                    WapHtmlStr = regex.Replace(WapHtmlStr, "{格式错误}");
+                }
+            }
             return WapHtmlStr;
         }
 
