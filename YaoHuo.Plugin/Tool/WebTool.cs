@@ -2135,6 +2135,26 @@ namespace YaoHuo.Plugin.Tool
             //        WapStr = regex.Replace(WapStr, "{格式错误}");
             //    }
             //}
+            if (WapStr.IndexOf("[/qqmusic]") > 0)
+            {
+                Regex regex = new Regex("(\\[qqmusic\\])(.[^\\[]*)(\\[\\/qqmusic\\])");
+                WapStr = regex.Replace(WapStr, match =>
+                {
+                    string input = match.Groups[2].Value.Trim();
+                    string songid = input;
+
+                    // 检查输入是否为包含 songid 的 URL
+                    Regex songidRegex = new Regex("songid=([0-9]+)");
+                    Match songidMatch = songidRegex.Match(input);
+                    if (songidMatch.Success)
+                    {
+                        songid = songidMatch.Groups[1].Value;
+                    }
+
+                    // 构建 iframe HTML
+                    return $"<iframe frameborder=\"no\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" width=\"320\" height=\"65\" src=\"https://i.y.qq.com/n2/m/outchain/player/index.html?songid={songid}\"></iframe>";
+                });
+            }
             if (WapStr.IndexOf("[/back]") > 0)
             {
                 Regex regex = new Regex("(\\[back\\])(.[^\\[]*)(\\[\\/back\\])");
