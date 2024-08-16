@@ -754,7 +754,7 @@ namespace YaoHuo.Plugin.Tool
         public static string GetOnlyImg(string content)
         {
             Regex regex = new Regex("(\\[img\\])(.[^\\[]*)(\\[\\/img\\])");
-            content = regex.Replace(content, "<img src=\"$2\" alt=\".\"/>");
+            content = regex.Replace(content, "<img src=\"$2\"/>");
             content = content.Replace("[", "［");
             content = content.Replace("]", "］");
             return content;
@@ -2051,16 +2051,16 @@ namespace YaoHuo.Plugin.Tool
                 {
                     Regex regex = new Regex("(\\[img\\])(.[^\\[]*)(\\[\\/img\\])");
                     WapStr = ((!(wmlVo.ver == "0"))
-                        ? regex.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\".\"/>")
-                        : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\".\"/></a>"));
+                        ? regex.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\"/>")
+                        : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\"/></a>"));
                 }
                 else
                 {
                     //Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|GIF|JPG))(\\[\\/img\\])");
                     Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp))(\\[\\/img\\])", RegexOptions.IgnoreCase);
                     WapStr = ((!(wmlVo.ver == "0"))
-                        ? regex.Replace(WapStr, "<img class=\"ubbimg\" src=\"$2\" referrerpolicy=\"no-referrer\" alt=\".\"/>")
-                        : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\".\"/></a>"));
+                        ? regex.Replace(WapStr, "<img class=\"ubbimg\" src=\"$2\" referrerpolicy=\"no-referrer\"/>")
+                        : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\"/></a>"));
                 }
                 //Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|GIF|JPG))\\])(.[^\\[]*)(\\[\\/img\\])");
                 Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp))\\])(.[^\\[]*)(\\[\\/img\\])", RegexOptions.IgnoreCase);
@@ -2143,7 +2143,7 @@ namespace YaoHuo.Plugin.Tool
                     string input = match.Groups[2].Value.Trim();
                     string songid = input;
 
-                    // 检查输入是否为包含 songid 的 URL
+                    // 检查输入是否为包含歌曲 id 的 URL
                     Regex songidRegex = new Regex("id=([0-9]+)");
                     Match songidMatch = songidRegex.Match(input);
                     if (songidMatch.Success)
@@ -2151,8 +2151,17 @@ namespace YaoHuo.Plugin.Tool
                         songid = songidMatch.Groups[1].Value;
                     }
 
+                    // 随机选择音乐链接
+                    string[] musicSources = new string[]
+                    {
+            $"https://interface.music.163.com/outchain/player?type=2&id={songid}&auto=0&height=66",
+            $"https://interface3.music.163.com/outchain/player?type=2&id={songid}&auto=0&height=66"
+                    };
+                    Random rnd = new Random();
+                    string selectedSource = musicSources[rnd.Next(musicSources.Length)];
+
                     // 构建 iframe HTML
-                    return $"<iframe frameborder=\"no\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" width=\"320\" height=\"86\" src=\"https://interface3.music.163.com/outchain/player?type=2&id={songid}&auto=0&height=66\"></iframe>";
+                    return $"<iframe loading=\"lazy\" frameborder=\"no\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" width=\"320\" height=\"86\" src=\"{selectedSource}\"></iframe>";
                 });
             }
             if (WapStr.IndexOf("[/qqmusic]") > 0)
@@ -2172,7 +2181,7 @@ namespace YaoHuo.Plugin.Tool
                     }
 
                     // 构建 iframe HTML
-                    return $"<iframe frameborder=\"no\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" width=\"320\" height=\"65\" src=\"https://i.y.qq.com/n2/m/outchain/player/index.html?songid={songid}\"></iframe>";
+                    return $"<iframe loading=\"lazy\" frameborder=\"no\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" width=\"320\" height=\"65\" src=\"https://i.y.qq.com/n2/m/outchain/player/index.html?songid={songid}\"></iframe>";
                 });
             }
             if (WapStr.IndexOf("[/back]") > 0)
