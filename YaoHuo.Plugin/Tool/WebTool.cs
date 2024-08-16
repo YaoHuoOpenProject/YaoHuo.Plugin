@@ -2135,6 +2135,26 @@ namespace YaoHuo.Plugin.Tool
             //        WapStr = regex.Replace(WapStr, "{格式错误}");
             //    }
             //}
+            if (WapStr.IndexOf("[/wymusic]") > 0)
+            {
+                Regex regex = new Regex("(\\[wymusic\\])(.[^\\[]*)(\\[\\/wymusic\\])");
+                WapStr = regex.Replace(WapStr, match =>
+                {
+                    string input = match.Groups[2].Value.Trim();
+                    string songid = input;
+
+                    // 检查输入是否为包含 songid 的 URL
+                    Regex songidRegex = new Regex("id=([0-9]+)");
+                    Match songidMatch = songidRegex.Match(input);
+                    if (songidMatch.Success)
+                    {
+                        songid = songidMatch.Groups[1].Value;
+                    }
+
+                    // 构建 iframe HTML
+                    return $"<iframe frameborder=\"no\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" width=\"320\" height=\"86\" src=\"https://interface3.music.163.com/outchain/player?type=2&id={songid}&auto=0&height=66\"></iframe>";
+                });
+            }
             if (WapStr.IndexOf("[/qqmusic]") > 0)
             {
                 Regex regex = new Regex("(\\[qqmusic\\])(.[^\\[]*)(\\[\\/qqmusic\\])");
@@ -2290,37 +2310,48 @@ namespace YaoHuo.Plugin.Tool
             }
             if (WapStr.IndexOf("[/imgurl]") > 0)
             {
-                Regex regex = new Regex("(\\[imgurl=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/imgurl\\])");
+                Regex regex = new Regex("(\\[imgurl(?:=(.[^\\]]*))?\\])(.[^\\[]*)(\\[\\/imgurl\\])");
                 try
                 {
                     Match match = regex.Match(WapStr);
-                    Random random = new Random();
                     while (match.Success)
                     {
-                        string value = match.Groups[2].Value.Replace("｜", "|");
-                        string text = match.Groups[3].Value.Replace("｜", "|");
-                        string[] array5 = value.Split('*');
-                        string[] array6 = text.Split('*');
-                        string text3 = array5[0];
-                        string text4 = array5[1];
+                        string size = match.Groups[2].Value.Replace("｜", "|");
+                        string content = match.Groups[3].Value.Replace("｜", "|");
+                        string[] urls = content.Split('*');
+                        string imgSrc = urls[0];
+                        string linkHref = urls.Length > 1 ? urls[1] : imgSrc; // 如果没有提供链接地址，使用图片地址
+
                         StringBuilder stringBuilder = new StringBuilder();
-                        if (!IsNumeric(text3))
+                        if (!string.IsNullOrEmpty(size))
                         {
-                            text3 = "0";
+                            string[] dimensions = size.Split('*');
+                            if (dimensions.Length > 0 && IsNumeric(dimensions[0]))
+                            {
+                                stringBuilder.Append(" width=" + dimensions[0]);
+                            }
+                            if (dimensions.Length > 1 && IsNumeric(dimensions[1]))
+                            {
+                                stringBuilder.Append(" height=" + dimensions[1]);
+                            }
+                        }
+
+                        string imgTag = $"<img src=\"{imgSrc}\" {stringBuilder.ToString()} />";
+                        string linkTag = $"<a href=\"{linkHref}\">{imgTag}</a>";
+
+                        if (wmlVo.ver == "0")
+                        {
+                            WapStr = regex.Replace(WapStr, $"<a href=\"javascript:T('{{imgurl={size}}}{content}{{/imgurl}}');\">{imgTag}</a>", 1);
+                        }
+                        else if (wmlVo.ver == "1")
+                        {
+                            WapStr = regex.Replace(WapStr, linkTag, 1);
                         }
                         else
                         {
-                            stringBuilder.Append(" width=" + text3);
+                            WapStr = regex.Replace(WapStr, linkTag, 1);
                         }
-                        if (!IsNumeric(text4))
-                        {
-                            text4 = "0";
-                        }
-                        else
-                        {
-                            stringBuilder.Append(" height=" + text4);
-                        }
-                        WapStr = ((!(wmlVo.ver == "0")) ? ((!(wmlVo.ver == "1")) ? regex.Replace(WapStr, "<a href=\"" + array6[1] + "\"><img src=\"" + array6[0] + "\"  border=\"0\" " + stringBuilder.ToString() + " alt=\"Load...\"/></a>", 1) : regex.Replace(WapStr, "<a href=\"" + array6[1] + "\"><img src=\"" + array6[0] + "\" alt=\"Load...\"/></a>", 1)) : regex.Replace(WapStr, "<a href=\"javascript:T('{{imgurl=$2}}$3{{/imgurl}}');\"><img src=\"" + array6[0] + "\"  border=\"0\" " + stringBuilder.ToString() + " alt=\"Load...\"/></a>", 1));
+
                         match = match.NextMatch();
                     }
                 }
