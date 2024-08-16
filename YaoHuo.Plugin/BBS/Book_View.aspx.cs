@@ -118,7 +118,7 @@ namespace YaoHuo.Plugin.BBS
             }
             if (!WapTool.IsNumeric(id))
             {
-                ShowTipInfo("贴子ID参数错误！", "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + stypelink);
+                ShowTipInfo("帖子ID参数错误！", "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + stypelink);
             }
             if ("1".Equals(WapTool.getArryString(classVo.smallimg, '|', 0)))
             {
@@ -508,8 +508,8 @@ namespace YaoHuo.Plugin.BBS
                         MainBll.UpdateSQL("update [fcount] set SubMoneyFlag='" + fcountSubMoneyFlag + ",' where fip='" + IP + "' and fuserid=" + siteid + " and userid=" + userid);
                         MainBll.UpdateSQL("update [user] set money=money-" + bookVo.viewmoney + " where userid=" + userVo.userid);
                         MainBll.UpdateSQL("update [user] set money=money+" + bookVo.viewmoney + " where userid=" + bookVo.book_pub);
-                        SaveBankLog(userid.ToString(), "购买帖子", "-" + bookVo.viewmoney, userid, nickname, "购买贴子[ID:" + id + "]");
-                        SaveBankLog(bookVo.book_pub.ToString(), "帖子赚币", bookVo.viewmoney.ToString(), userid, nickname, "操作人购买你的贴子[ID:" + id + "]");
+                        SaveBankLog(userid.ToString(), "购买帖子", "-" + bookVo.viewmoney, userid, nickname, "购买帖子[ID:" + id + "]");
+                        SaveBankLog(bookVo.book_pub.ToString(), "帖子赚币", bookVo.viewmoney.ToString(), userid, nickname, "操作人购买你的帖子[ID:" + id + "]");
                     }
                     if (fcountSubMoneyFlag.IndexOf("BBSNEED" + id) < 0)
                     {
@@ -642,8 +642,8 @@ namespace YaoHuo.Plugin.BBS
                         MainBll.UpdateSQL("update [fcount] set SubMoneyFlag='" + fcountSubMoneyFlag + ",' where fip='" + IP + "' and fuserid=" + siteid + " and userid=" + userid);
                         MainBll.UpdateSQL("update [user] set money=money-" + text12 + " where userid=" + userVo.userid);
                         MainBll.UpdateSQL("update [user] set money=money+" + text12 + " where userid=" + bookVo.book_pub);
-                        SaveBankLog(userid.ToString(), "购买帖子", "-" + text12.ToString(), userid, nickname, "购买贴子[ID:" + id + "]");
-                        SaveBankLog(bookVo.book_pub.ToString(), "帖子赚币", text12.ToString(), userid, nickname, "操作人购买你的贴子[ID:" + id + "]");
+                        SaveBankLog(userid.ToString(), "购买帖子", "-" + text12.ToString(), userid, nickname, "购买帖子[ID:" + id + "]");
+                        SaveBankLog(bookVo.book_pub.ToString(), "帖子赚币", text12.ToString(), userid, nickname, "操作人购买你的帖子[ID:" + id + "]");
                     }
                     if (userid != bookVo.book_pub && fcountSubMoneyFlag.IndexOf("BBSNEED" + id) < 0)
                     {
@@ -789,7 +789,7 @@ namespace YaoHuo.Plugin.BBS
                     stringBuilder.Append("0)");
                     userListVo_IDName = MainBll.GetUserListVo(stringBuilder.ToString());
                 }
-                VisiteCount("正在浏览贴子:<a href='" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "'>" + bookVo.book_title + "</a>");
+                VisiteCount("正在浏览帖子:<a href='" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "'>" + bookVo.book_title + "</a>");
                 Action_user_doit(3);
             }
             catch (Exception ex)

@@ -3818,7 +3818,7 @@ namespace YaoHuo.Plugin.Tool
 
         public static string GetOnlineCount(string strType, string strSiteID)
         {
-            string text = "";
+            //string text = "";
             DataSet dataSet = DbHelperSQL.ExecuteDataset(commandText: (!(strType != "") || !(strType != "0")) ? ("select  count(fid)  from fcount where  fuserid='" + strSiteID + "' ") : ("select  count(fid)  from fcount where  fuserid='" + strSiteID + "' and classid=" + strType), connectionString: _ConnStr, commandType: CommandType.Text);
             if (dataSet != null && dataSet.Tables[0].Rows.Count > 0)
             {
@@ -4037,7 +4037,7 @@ namespace YaoHuo.Plugin.Tool
 
         public static string DateToString(long TS, string lang, int longOrShort)
         {
-            string text = "";
+            //string text = "";
             long num = TS;
             if (num > 60L)
             {
@@ -4131,7 +4131,7 @@ namespace YaoHuo.Plugin.Tool
                 {
                     if (text2 != "")
                     {
-                        text = ((text2.IndexOf("XinZhang") < 0) ? ((!text2.StartsWith("/") && !text2.StartsWith("http://")) ? (text + "<img src=\"" + http_start + "bbs/medal/" + text2 + "\" alt=\".\"/>") : (text + "<img src=\"" + text2 + "\" alt=\".\"/>")) : (text + "<img src=\"" + http_start + text2 + "\" alt=\".\"/>"));
+                        text = ((text2.IndexOf("XinZhang") < 0) ? ((!text2.StartsWith("/") && !text2.StartsWith("http://")) ? (text + "<img src=\"" + http_start + "bbs/medal/" + text2 + "\"/>") : (text + "<img src=\"" + text2 + "\"/>")) : (text + "<img src=\"" + http_start + text2 + "\"/>"));
                     }
                 }
             }
@@ -4154,7 +4154,7 @@ namespace YaoHuo.Plugin.Tool
                 {
                     if (text2 != "")
                     {
-                        text = ((text2.IndexOf("XinZhang") >= 0) ? (text + "<img src=\"" + wmlVo.http_start + text2 + "\" alt=\".\"/>") : ((!text2.StartsWith("/") && !text2.StartsWith("http://")) ? (text + "<img src=\"" + wmlVo.http_start + "bbs/medal/" + text2 + "\" alt=\".\"/>") : (text + "<img src=\"" + text2 + "\" alt=\".\"/>")));
+                        text = ((text2.IndexOf("XinZhang") >= 0) ? (text + "<img src=\"" + wmlVo.http_start + text2 + "\"/>") : ((!text2.StartsWith("/") && !text2.StartsWith("http://")) ? (text + "<img src=\"" + wmlVo.http_start + "bbs/medal/" + text2 + "\"/>") : (text + "<img src=\"" + text2 + "\"/>")));
                         num++;
                         if (num > int.Parse(string_0))
                         {
@@ -4190,7 +4190,7 @@ namespace YaoHuo.Plugin.Tool
                     if (array2[num2].IndexOf("[/img]") > 0)
                     {
                         Regex regex = new Regex("(\\[img\\])(.[^\\[]*)(\\[\\/img\\])");
-                        return regex.Replace(array2[num2], "<img src=\"$2\" alt=\".\"/>");
+                        return regex.Replace(array2[num2], "<img src=\"$2\" />");
                     }
                     return array2[num2];
                 }
@@ -4224,7 +4224,7 @@ namespace YaoHuo.Plugin.Tool
                     if (array2[num2].IndexOf("[/img]") > 0)
                     {
                         Regex regex = new Regex("(\\[img\\])(.[^\\[]*)(\\[\\/img\\])");
-                        return regex.Replace(array2[num2], "<img src=\"$2\" alt=\".\"/>");
+                        return regex.Replace(array2[num2], "<img src=\"$2\" />");
                     }
                     return array2[num2];
                 }
@@ -4253,7 +4253,7 @@ namespace YaoHuo.Plugin.Tool
                         num--;
                         continue;
                     }
-                    return "<img src=\"" + http_start + "bbs/medal/" + array2[num] + "\" alt=\".\"/>";
+                    return "<img src=\"" + http_start + "bbs/medal/" + array2[num] + "\"/>";
                 }
             }
             catch (Exception)
@@ -4839,7 +4839,7 @@ namespace YaoHuo.Plugin.Tool
 
         public static long getMoneyRegular(string tempStr, int int_0)
         {
-            long num = 0L;
+            //long num = 0L;
             try
             {
                 return long.Parse(tempStr.Split('|')[int_0]);
@@ -4852,7 +4852,7 @@ namespace YaoHuo.Plugin.Tool
 
         public static long getLvLRegular(string tempStr, int int_0)
         {
-            long num = 0L;
+            //long num = 0L;
             try
             {
                 return long.Parse(tempStr.Split('|')[int_0]);
@@ -5795,7 +5795,7 @@ namespace YaoHuo.Plugin.Tool
                     return "0";
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 return "0";
             }
@@ -6002,7 +6002,7 @@ namespace YaoHuo.Plugin.Tool
 
         public static string GetUAAuto(string string_0)
         {
-            string text = "";
+            //string text = "";
             try
             {
                 string text2 = "";

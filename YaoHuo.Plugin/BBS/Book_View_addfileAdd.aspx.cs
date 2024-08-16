@@ -85,7 +85,7 @@ namespace YaoHuo.Plugin.BBS
             }
             if ("1".Equals(WapTool.getArryString(classVo.smallimg, '|', 7)))
             {
-                ShowTipInfo("续文件贴功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
+                ShowTipInfo("续文件帖功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
             }
             KL_NotDownAndUpload += WapTool.KL_NotDownAndUpload_SYS;
             IsLogin(userid, "bbs/book_view_addfileadd.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
@@ -96,7 +96,7 @@ namespace YaoHuo.Plugin.BBS
                 long num2 = WapTool.DateDiff(DateTime.Now, userVo.RegTime, "MM");
                 if (num2 < num)
                 {
-                    ShowTipInfo("请再过:" + (num - num2) + "分钟才能发贴！", "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + lpage);
+                    ShowTipInfo("请再过:" + (num - num2) + "分钟才能发帖！", "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + lpage);
                 }
             }
             wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
@@ -115,11 +115,11 @@ namespace YaoHuo.Plugin.BBS
             }
             else if (bookVo.islock == 1L)
             {
-                ShowTipInfo("此贴已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
             }
             else if (bookVo.islock == 2L)
             {
-                ShowTipInfo("此贴已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
             }
             if (userid != bookVo.book_pub.ToString())
             {
@@ -301,7 +301,7 @@ namespace YaoHuo.Plugin.BBS
                     INFO = "LOCK";
                     return;
                 }
-                string text8 = "{" + userVo.nickname + "(ID" + userVo.userid + ")文件续贴" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                string text8 = "{" + userVo.nickname + "(ID" + userVo.userid + ")文件续帖" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                 text8 += bookVo.whylock;
                 MainBll.UpdateSQL("update wap_bbs set isdown=1,whylock='" + text8 + "' where id=" + long.Parse(id));
                 wap2_attachment_BLL wap2_attachment_BLL = new wap2_attachment_BLL(a);

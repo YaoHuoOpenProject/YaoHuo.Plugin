@@ -91,7 +91,7 @@ namespace YaoHuo.Plugin.BBS
             }
             if ("1".Equals(WapTool.getArryString(classVo.smallimg, '|', 2)) && !CheckManagerLvl("04", classVo.adminusername))
             {
-                ShowTipInfo("发贴功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
+                ShowTipInfo("发帖功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
             }
             try
             {
@@ -130,7 +130,7 @@ namespace YaoHuo.Plugin.BBS
                 arryString = "|" + arryString + "|";
                 if (!IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername) && arryString.IndexOf("|" + userVo.SessionTimeout + "|") < 0)
                 {
-                    ShowTipInfo("我当前的用户级别：" + WapTool.GetMyID(userVo.idname, lang, userVo.endTime) + " 不允许发贴。<br/>允许发贴用户级别为：" + WapTool.GetCardIDNameFormID_multiple(siteid, arryString, lang), "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
+                    ShowTipInfo("我当前的用户级别：" + WapTool.GetMyID(userVo.idname, lang, userVo.endTime) + " 不允许发帖。<br/>允许发帖用户级别为：" + WapTool.GetCardIDNameFormID_multiple(siteid, arryString, lang), "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
                 }
             }
             string text = WapTool.GetSiteDefault(siteVo.Version, 14);
@@ -144,7 +144,7 @@ namespace YaoHuo.Plugin.BBS
                 long num2 = WapTool.DateDiff(DateTime.Now, userVo.RegTime, "MM");
                 if (num2 < num)
                 {
-                    ShowTipInfo("请再过:" + (num - num2) + "分钟才能发贴！", "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
+                    ShowTipInfo("请再过:" + (num - num2) + "分钟才能发帖！", "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
                 }
             }
             if (classid == "0")
@@ -249,7 +249,7 @@ namespace YaoHuo.Plugin.BBS
                     }
                     if (long.Parse(reshow) > 0L && !"1".Equals(WapTool.getArryString(siteVo.Version, '|', 18)) && "|00|01|".IndexOf(userVo.managerlvl) < 0)
                     {
-                        ShowTipInfo("站长关闭此版主发签到贴权限。<br/><br/>【网站默认设置】中配置。", "bbs/book_view_add.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
+                        ShowTipInfo("站长关闭此版主发签到帖权限。<br/><br/>【网站默认设置】中配置。", "bbs/book_view_add.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
                     }
                     string arryString2 = WapTool.getArryString(classVo.smallimg, '|', 21);
                     if (arryString2.Trim() != "")
@@ -263,7 +263,7 @@ namespace YaoHuo.Plugin.BBS
                         }
                         if (flag && !IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername) && arryString2.IndexOf("|" + userVo.SessionTimeout + "|") < 0)
                         {
-                            ShowTipInfo("我当前的用户级别：" + WapTool.GetMyID(userVo.idname, lang, userVo.endTime) + " 不允许发特殊贴。<br/>允许发特殊贴用户级别为：" + WapTool.GetCardIDNameFormID_multiple(siteid, arryString2, lang), "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
+                            ShowTipInfo("我当前的用户级别：" + WapTool.GetMyID(userVo.idname, lang, userVo.endTime) + " 不允许发特殊帖。<br/>允许发特殊帖用户级别为：" + WapTool.GetCardIDNameFormID_multiple(siteid, arryString2, lang), "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
                         }
                     }
                     string[] array = (WapTool.getArryString(classVo.smallimg, '|', 34) + ",").Split(',');
@@ -362,12 +362,12 @@ namespace YaoHuo.Plugin.BBS
                             getexpr = array2[1];
                         }
                         MainBll.UpdateSQL("update [user] set [money]=([money]+" + getmoney + "-" + sendmoney + "),expR=expR+" + getexpr + ",bbscount=" + (userVo.bbsCount + 1L) + " where siteid=" + siteid + " and userid=" + userid);
-                        SaveBankLog(userid, "论坛发贴", getmoney.ToString(), userid, nickname, "发新贴[" + getid + "]");
+                        SaveBankLog(userid, "论坛发帖", getmoney.ToString(), userid, nickname, "发新帖[" + getid + "]");
                         if (long.Parse(sendmoney) > 0L)
                         {
-                            SaveBankLog(userid, "发布赏贴", "-" + sendmoney.ToString(), userid, nickname, "发赏贴[" + getid + "]");
+                            SaveBankLog(userid, "发布赏帖", "-" + sendmoney.ToString(), userid, nickname, "发赏帖[" + getid + "]");
                         }
-                        VisiteCount("发表新贴:<a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + getid + "\">" + WapTool.GetShowImg(wap_bbs_Model.book_title, "200", "bbs") + "</a>");
+                        VisiteCount("发表新帖:<a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + getid + "\">" + WapTool.GetShowImg(wap_bbs_Model.book_title, "200", "bbs") + "</a>");
                         INFO = "OK";
                         WapTool.ClearDataBBS("bbs" + siteid + classid);
                         WapTool.ClearDataTemp("bbsTotal" + siteid + classid);
@@ -381,7 +381,7 @@ namespace YaoHuo.Plugin.BBS
             }
             if (INFO == "WAITING")
             {
-                VisiteCount("发表新贴。");
+                VisiteCount("发表新帖。");
             }
         }
 

@@ -59,15 +59,15 @@
         }
         else if (this.INFO == "MAX")
         {
-            strhtml.Append("<b>今天你已超过回贴限制：" + this.KL_CheckBBSreCount + " 个回贴子，请明天再来！</b><br/>");
+            strhtml.Append("<b>今天你已超过回帖限制：" + this.KL_CheckBBSreCount + " 个回帖子，请明天再来！</b><br/>");
         }
         else if (this.INFO == "LOCK")
         {
-            strhtml.Append("<b>抱歉，您已经被加入黑名单，请注意发贴规则！</b><br/>");
+            strhtml.Append("<b>抱歉，您已经被加入黑名单，请注意发帖规则！</b><br/>");
         }
         else if (this.INFO == "NOMONEY")
         {
-            strhtml.Append("<b>你当前的只有:" + userVo.money + "个，发贴需要扣掉：" + getmoney2 + "个</b><br/>");
+            strhtml.Append("<b>你当前的只有:" + userVo.money + "个，发帖需要扣掉：" + getmoney2 + "个</b><br/>");
         }
         if (this.INFO == "")
         {
@@ -135,7 +135,7 @@
                 strhtml.Append("<postfield name=\"touserid\" value=\"" + this.GetRequestValue("touserid") + "\"/>");
                 strhtml.Append("<postfield name=\"sid\" value=\"" + sid + "\"/>");
                 //strhtml.Append("<postfield name=\"backurl\" value=\"" + HttpUtility.UrlEncode("bbs/book_re.aspx?action=class&siteid=" + siteid + "&classid=" + classid + "&id=" + id) + "\"/>");
-                strhtml.Append("</go>发表回复</anchor> <a href=\"" + this.http_start + "bbs/book_re_addfile.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("文件回贴|文件回贴|upload file") + "</a>");
+                strhtml.Append("</go>发表回复</anchor> <a href=\"" + this.http_start + "bbs/book_re_addfile.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("文件回帖|文件回帖|upload file") + "</a>");
                 strhtml.Append("<br/>");
             }
 
@@ -197,7 +197,7 @@
                         strhtml.Append("[<a href=\"" + this.http_start + "bbs/Book_re_top.aspx?action=go&amp;tops=1&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">顶</a>]");
                     }
                 }
-                else if (this.userid == listVo[i].userid.ToString())  //自己删除自己的贴子
+                else if (this.userid == listVo[i].userid.ToString())  //自己删除自己的帖子
                 {
                     strhtml.Append("[<a href=\"" + this.http_start + "bbs/Book_re_del.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">删</a>]");
                 }
@@ -285,18 +285,18 @@
         else if (this.INFO == "MAX")
         {
             strhtml.Append("<div class=\"tip\">");
-            strhtml.Append("<b>今天你已超过回贴限制：" + this.KL_CheckBBSreCount + " 个回贴了，请明天再来！</b><br/>");
+            strhtml.Append("<b>今天你已超过回帖限制：" + this.KL_CheckBBSreCount + " 个回帖了，请明天再来！</b><br/>");
             strhtml.Append("</div>");
         }
         else if (this.INFO == "LOCK")
         {
             strhtml.Append("<div class=\"tip\">");
-            strhtml.Append("<b>抱歉，您已经被加入黑名单，请注意发贴规则！</b><br/>");
+            strhtml.Append("<b>抱歉，您已经被加入黑名单，请注意发帖规则！</b><br/>");
             strhtml.Append("</div>");
         }
         else if (this.INFO == "NOMONEY")
         {
-            strhtml.Append("<div class=\"tip\"><b>你当前的只有:" + userVo.money + "个，发贴需要扣掉：" + getmoney2 + "个</b></div>");
+            strhtml.Append("<div class=\"tip\"><b>你当前的只有:" + userVo.money + "个，发帖需要扣掉：" + getmoney2 + "个</b></div>");
         }
         if (this.INFO == "")
         {
@@ -431,7 +431,7 @@
                         strhtml.Append("[<a href=\"" + this.http_start + "bbs/Book_re_top.aspx?action=go&amp;tops=1&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">顶</a>]");
                     }
                 }
-                else if (this.userid == listVo[i].userid.ToString())  //自己删除自己的贴子
+                else if (this.userid == listVo[i].userid.ToString())  //自己删除自己的帖子
                 {
                     strhtml.Append("[<a href=\"" + this.http_start + "bbs/Book_re_del.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;id=" + this.id + "&amp;ot=" + this.ot + "\">删</a>]");
                 }

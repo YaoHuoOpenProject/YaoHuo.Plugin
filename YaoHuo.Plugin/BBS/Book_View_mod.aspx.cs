@@ -46,7 +46,7 @@ namespace YaoHuo.Plugin.BBS
             //needPassWordToAdmin();
             if ("1".Equals(WapTool.getArryString(classVo.smallimg, '|', 28)) && "|00|01|".IndexOf(userVo.managerlvl) < 0)
             {
-                ShowTipInfo("修改贴子功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
+                ShowTipInfo("修改帖子功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
             }
             try
             {
@@ -81,11 +81,11 @@ namespace YaoHuo.Plugin.BBS
             }
             else if (bbsVo.islock == 1L)
             {
-                ShowTipInfo("此贴已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bbsVo.book_classid + "&amp;id=" + bbsVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bbsVo.book_classid + "&amp;id=" + bbsVo.id + "&amp;lpage=" + lpage);
             }
             else if (bbsVo.islock == 2L)
             {
-                ShowTipInfo("此贴已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bbsVo.book_classid + "&amp;id=" + bbsVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bbsVo.book_classid + "&amp;id=" + bbsVo.id + "&amp;lpage=" + lpage);
             }
             if (bbsVo.userid.ToString() != siteid)
             {
@@ -158,7 +158,7 @@ namespace YaoHuo.Plugin.BBS
                     }
                     if (flag && !IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername) && arryString.IndexOf("_" + userVo.SessionTimeout + "_") < 0)
                     {
-                        ShowTipInfo("您当前的身份不允许发特殊贴。", "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id);
+                        ShowTipInfo("您当前的身份不允许发特殊帖。", "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id);
                     }
                 }
                 if (bbsVo.book_title.Trim().Length < long.Parse(titlemax) || bbsVo.book_content.Trim().Length < long.Parse(contentmax))
@@ -184,7 +184,7 @@ namespace YaoHuo.Plugin.BBS
                 {
                     ShowTipInfo("类别不能为空！", "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
                 }
-                string text3 = "{" + userVo.nickname + "(ID" + userVo.userid + ")修改此贴" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                string text3 = "{" + userVo.nickname + "(ID" + userVo.userid + ")修改此帖" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                 bbsVo.whylock = text3 + bbsVo.whylock;
                 string arryString2 = WapTool.getArryString(classVo.smallimg, '|', 43);
                 if (arryString2 == "2")

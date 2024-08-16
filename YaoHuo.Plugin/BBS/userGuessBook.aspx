@@ -42,7 +42,7 @@ else //2.0界面
     }
     else if (this.INFO == "LOCK")
     {
-        strhtml.Append("<b>抱歉，您已经被加入黑名单，请注意发贴规则！</b><br/>");
+        strhtml.Append("<b>抱歉，您已经被加入黑名单，请注意发帖规则！</b><br/>");
     }
     if (this.INFO != "") strhtml.Append("</div>");
     strhtml.Append("<div class=\"content\">");
@@ -99,7 +99,7 @@ else //2.0界面
         strhtml.Append("[" + index + "楼] ");
         //strhtml.Append("[<a href=\"" + this.http_start + "bbs/userguessbook_re.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;touserid=" + this.touserid + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;ot=" + this.ot + "\">回</a>]");
         //--------------------管理员
-        if (this.userid == listVo[i].userid.ToString() || this.IsUserManager(this.userid, userVo.managerlvl, ""))  //自己删除自己的贴子
+        if (this.userid == listVo[i].userid.ToString() || this.IsUserManager(this.userid, userVo.managerlvl, ""))  //自己删除自己的帖子
         {
             strhtml.Append("[<a href=\"" + this.http_start + "bbs/userguessbook_del.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;reid=" + listVo[i].id + "&amp;touserid=" + this.touserid + "&amp;ot=" + this.ot + "\">删</a>]");
         }

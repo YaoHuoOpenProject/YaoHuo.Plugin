@@ -292,13 +292,13 @@ namespace YaoHuo.Plugin.BBS
                 condition += BlackTool.GetExcludeUserSql(userid, "book_pub");//排除拉黑的用户
                 classVo.classid = 0L;
                 classVo.position = "left";
-                classVo.classname = "所有最新贴子";
+                classVo.classname = "所有最新帖子";
                 classVo.siteimg = "NetImages/no.gif";
                 classVo.introduce = "";
             }
             else
             {
-                classVo.classname += ".最新贴子";
+                classVo.classname += ".最新帖子";
                 condition = $" userid={siteid} and book_classid in (select classid from [class] where childid={classid} union select '{classid}') ";
             }
             try
@@ -495,13 +495,13 @@ namespace YaoHuo.Plugin.BBS
                 condition = " ischeck=0 and book_good=1 and userid=" + siteid;
                 classVo.classid = 0L;
                 classVo.position = "left";
-                classVo.classname = "所有精华贴子";
+                classVo.classname = "所有精华帖子";
                 classVo.siteimg = "NetImages/no.gif";
                 classVo.introduce = "";
             }
             else
             {
-                classVo.classname += ".最新精华贴子";
+                classVo.classname += ".最新精华帖子";
                 condition = "  ischeck=0 and book_good=1 and userid=" + siteid + " and   book_classid in (select classid from [class] where childid=" + classid + " union select '" + classid + "') ";
             }
             try

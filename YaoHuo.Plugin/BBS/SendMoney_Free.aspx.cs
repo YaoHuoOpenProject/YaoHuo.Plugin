@@ -76,7 +76,7 @@ namespace YaoHuo.Plugin.BBS
                 MainBll.UpdateSQL("update [user] set money=money - " + requestValue + " where userid=" + userid);
                 MainBll.UpdateSQL("update [user] set money=money + " + requestValue + " where userid=" + touserid);
                 string text = "恭喜您，" + userVo.nickname + "奖励" + requestValue + "个币给您！";
-                string text2 = "您的回贴得到奖励！";
+                string text2 = "您的回帖得到奖励！";
                 if (GetRequestValue("remark") != "")
                 {
                     text2 = GetRequestValue("remark");
@@ -86,7 +86,7 @@ namespace YaoHuo.Plugin.BBS
                 string text4 = "insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)";
                 text4 = text4 + "  values(" + siteid + "," + userid + ",'" + userVo.nickname + "','" + text + "','" + text3 + "'," + touserid + ",1)";
                 MainBll.UpdateSQL(text4);
-                SaveBankLog(touserid, "转币操作", requestValue.ToString(), userid, nickname, "回贴奖励给我");
+                SaveBankLog(touserid, "转币操作", requestValue.ToString(), userid, nickname, "回帖奖励给我");
                 SaveBankLog(userid, "转币操作", "-" + requestValue.ToString(), userid, nickname, "我奖币给会员ID(" + touserid + ")");
                 INFO = "OK";
             }

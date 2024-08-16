@@ -113,7 +113,7 @@
         strhtml.Append("<b>" + TA + "的</b><a href=\"" + this.http_start + "bbs/userinfomore.aspx?siteid=" + this.siteid + "&amp;touserid=" + this.touserid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">详细资料&gt;&gt;</a><br/>");
         strhtml.Append("<b>" + TA + "的</b><a href=\"" + this.http_start + "bbs/userinfoFriends.aspx?siteid=" + this.siteid + "&amp;touserid=" + this.touserid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "" + "\">交友资料&gt;&gt;</a><br/>");
 
-        strhtml.Append("<b>" + TA + "的</b><a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=0&amp;key=" + this.touserid + "&amp;type=pub\">贴子(" + toUserVo.bbsCount + ")</a>.");
+        strhtml.Append("<b>" + TA + "的</b><a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=0&amp;key=" + this.touserid + "&amp;type=pub\">帖子(" + toUserVo.bbsCount + ")</a>.");
         strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=0&amp;touserid=" + this.touserid + "" + "\">回复(" + toUserVo.bbsReCount + ")</a><br/>");
         strhtml.Append("<b>" + TA + "的家族:</b>" + this.showClan + "<br/>");
         strhtml.Append("<b>" + TA + "的粉丝</b>(" + this.fans + ")<a href=\"" + this.http_start + "bbs/FriendList.aspx?action=addfriend&amp;friendtype=0&amp;siteid=" + this.siteid + "&amp;touserid=" + touserid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "\">喜欢</a>");
@@ -301,7 +301,7 @@
 
         strhtml.Append("<b>" + TA + "的</b><a href=\"" + this.http_start + "bbs/userinfomore.aspx?siteid=" + this.siteid + "&amp;touserid=" + this.touserid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "\">详细资料&gt;&gt;</a><br/>");
 
-        strhtml.Append("<b>" + TA + "的</b><a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=0&amp;key=" + this.touserid + "&amp;type=pub\">贴子(" + toUserVo.bbsCount + ")</a>.");
+        strhtml.Append("<b>" + TA + "的</b><a href=\"" + this.http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + this.siteid + "&amp;classid=0&amp;key=" + this.touserid + "&amp;type=pub\">帖子(" + toUserVo.bbsCount + ")</a>.");
         strhtml.Append("<a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=0&amp;touserid=" + this.touserid + "\">回复(" + toUserVo.bbsReCount + ")</a>");
         //strhtml.Append("<br/><b>" + TA + "的家族:</b>" + this.showClan + "");
         //strhtml.Append("<b>" + TA + "的粉丝</b>(" + this.fans + ")<a href=\"" + this.http_start + "bbs/FriendList.aspx?action=addfriend&amp;friendtype=0&amp;siteid=" + this.siteid + "&amp;touserid=" + touserid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "\">喜欢</a>");

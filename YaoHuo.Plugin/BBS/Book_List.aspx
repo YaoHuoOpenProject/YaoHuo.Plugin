@@ -22,12 +22,12 @@
             strhtml.Append(classVo.introduce + "<br/>");
         }
 
-        //显示查询某人的所有贴子
+        //显示查询某人的所有帖子
         if (this.type == "pub")
         {
             if (this.CheckManagerLvl("04", "") == true)
             {
-                strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_List_delmy.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.key + "\">清空(" + this.key + ")的所有贴子</a><br/>");
+                strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_List_delmy.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.key + "\">清空(" + this.key + ")的所有帖子</a><br/>");
             }
         }
 
@@ -47,7 +47,7 @@
                 ranktypes = "bbs/marksix/rank.aspx?";
             }
 
-            strhtml.Append("<a href=\"" + this.http_start + addtypes + "page=" + this.CurrentPage + "&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">发贴</a>.<a href=\"" + this.http_start + "bbs/showadmin.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">版务</a>.<a href=\"" + this.http_start + "bbs/book_list.aspx?action=good&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">精华</a>.<a href=\"" + this.http_start + "bbs/showTopic.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">专题</a>.");
+            strhtml.Append("<a href=\"" + this.http_start + addtypes + "page=" + this.CurrentPage + "&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">发帖</a>.<a href=\"" + this.http_start + "bbs/showadmin.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">版务</a>.<a href=\"" + this.http_start + "bbs/book_list.aspx?action=good&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">精华</a>.<a href=\"" + this.http_start + "bbs/showTopic.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">专题</a>.");
 
             strhtml.Append(" <a href=\"" + this.http_start + ranktypes + "classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">排行</a><br/>");
 
@@ -246,12 +246,12 @@
             strhtml.Append(classVo.introduce);
         }
 
-        //显示查询某人的所有贴子
+        //显示查询某人的所有帖子
         if (this.type == "pub")
         {
             if (this.IsUserManager(this.userid, userVo.managerlvl, ""))
             {
-                strhtml.Append("<div class=\"tip\"><a class=\"urlbtn\" href=\"" + this.http_start + "bbs/Book_List_delmy.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.key + "\">清空(" + this.key + ")的所有贴子</a></div>");
+                strhtml.Append("<div class=\"tip\"><a class=\"urlbtn\" href=\"" + this.http_start + "bbs/Book_List_delmy.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.key + "\">清空(" + this.key + ")的所有帖子</a></div>");
             }
         }
 
@@ -270,7 +270,7 @@
                 addtypes = "bbs/marksix/doit.aspx?mymarksix=" + WapTool.getArryString(classVo.smallimg, '|', 39) + "&amp;";
                 ranktypes = "bbs/marksix/rank.aspx?";
             }
-            strhtml_list.Append("<div class=\"btBox\"><div class=\"bt5\"><a href=\"" + this.http_start + addtypes + "page=" + this.CurrentPage + "&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">发贴</a> <a href=\"" + this.http_start + "bbs/showadmin.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">版务</a> <a href=\"" + this.http_start + "bbs/book_list.aspx?action=good&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">精华</a> <a href=\"" + this.http_start + "bbs/showTopic.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">专题</a> <a href=\"" + this.http_start + ranktypes + "classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">排行</a>");
+            strhtml_list.Append("<div class=\"btBox\"><div class=\"bt5\"><a href=\"" + this.http_start + addtypes + "page=" + this.CurrentPage + "&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">发帖</a> <a href=\"" + this.http_start + "bbs/showadmin.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">版务</a> <a href=\"" + this.http_start + "bbs/book_list.aspx?action=good&amp;classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">精华</a> <a href=\"" + this.http_start + "bbs/showTopic.aspx?classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">专题</a> <a href=\"" + this.http_start + ranktypes + "classid=" + this.classid + "&amp;siteid=" + this.siteid + "\">排行</a>");
             strhtml_list.Append("</div></div>");
         }
 

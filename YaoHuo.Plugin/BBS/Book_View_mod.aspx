@@ -32,8 +32,8 @@
         strhtml.Append("<input type=\"text\"  name=\"book_content" + r + "\" value=\"" + bbsVo.book_content + "\" /><br/>");
         strhtml.Append(this.GetLang("缩放图地址|缩放图地址|Photo") + "*:<br/>");
         strhtml.Append("<input type=\"text\" name=\"book_img" + r + "\" value=\"" + bbsVo.book_img + "\"/><br/>");
-        strhtml.Append("特殊贴:<select name=\"viewtype" + r + "\" value=\"" + bbsVo.viewtype + "\">");
-        strhtml.Append("<option value=\"0\">0_特殊贴↓</option>");
+        strhtml.Append("特殊帖:<select name=\"viewtype" + r + "\" value=\"" + bbsVo.viewtype + "\">");
+        strhtml.Append("<option value=\"0\">0_特殊帖↓</option>");
         strhtml.Append("<option value=\"1\">1_登录可见</option>");
         strhtml.Append("<option value=\"2\">2_手机可见</option>");
         strhtml.Append("<option value=\"3\">3_回复可见</option>");
@@ -73,7 +73,7 @@
         {
             strhtml.Append("<b>");
             strhtml.Append(this.GetLang("修改成功！|修改成功！|Successfully modified"));
-            strhtml.Append("</b> 自动跳转至 <a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("贴子主题|贴子主题|Back to subject") + "</a><br/>");
+            strhtml.Append("</b> 自动跳转至 <a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("帖子主题|帖子主题|Back to subject") + "</a><br/>");
         }
         else if (this.INFO == "NULL")
         {

@@ -68,7 +68,7 @@ namespace YaoHuo.Plugin.BBS
                             }
                             goto case 6;
                         case 21:
-                            ShowTipInfo("续贴功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
+                            ShowTipInfo("续帖功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
                             num = 5;
                             continue;
                         case 16:
@@ -311,7 +311,7 @@ namespace YaoHuo.Plugin.BBS
                                                 continue;
                                             case 25:
                                                 {
-                                                    string text4 = "{" + userVo.nickname + "(ID" + userVo.userid + ")文字续贴" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                                                    string text4 = "{" + userVo.nickname + "(ID" + userVo.userid + ")文字续帖" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                                                     bbsVo.whylock = text4 + bbsVo.whylock;
                                                     wap_bbs_BLL.Update(bbsVo);
                                                     INFO = "OK";
@@ -375,7 +375,7 @@ namespace YaoHuo.Plugin.BBS
                                                 num3 = 0;
                                                 goto IL_0b3b;
                                             case 22:
-                                                ShowTipInfo("您当前的身份不允许发特殊贴。", "bbs/book_view_modadd.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id);
+                                                ShowTipInfo("您当前的身份不允许发特殊帖。", "bbs/book_view_modadd.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id);
                                                 num = 20;
                                                 continue;
                                             case 12:
@@ -422,7 +422,7 @@ namespace YaoHuo.Plugin.BBS
                             num = 10;
                             continue;
                         case 24:
-                            ShowTipInfo("此贴已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bbsVo.book_classid + "&amp;id=" + bbsVo.id + "&amp;lpage=" + lpage);
+                            ShowTipInfo("此帖已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bbsVo.book_classid + "&amp;id=" + bbsVo.id + "&amp;lpage=" + lpage);
                             num = 6;
                             continue;
                         case 5:
@@ -547,7 +547,7 @@ namespace YaoHuo.Plugin.BBS
                             num2 = 1;
                             goto IL_115b;
                         case 25:
-                            ShowTipInfo("此贴已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bbsVo.book_classid + "&amp;id=" + bbsVo.id + "&amp;lpage=" + lpage);
+                            ShowTipInfo("此帖已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bbsVo.book_classid + "&amp;id=" + bbsVo.id + "&amp;lpage=" + lpage);
                             num = 22;
                             continue;
                         case 15:

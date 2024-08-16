@@ -58,7 +58,7 @@ namespace YaoHuo.Plugin.BBS
             }
             else if (bookVo.islock == 1L)
             {
-                ShowTipInfo("此贴已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
             }
             if (userid != bookVo.book_pub.ToString())
             {
@@ -97,7 +97,7 @@ namespace YaoHuo.Plugin.BBS
                     INFO = "ERR";
                     return;
                 }
-                whylock = "{" + userVo.nickname + "(ID" + userVo.userid + ")解除结束贴子" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                whylock = "{" + userVo.nickname + "(ID" + userVo.userid + ")解除结束帖子" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                 whylock += bookVo.whylock;
                 MainBll.UpdateSQL("update wap_bbs set islock=0,whylock='" + whylock + "' where userid=" + siteid + " and  id=" + long.Parse(id));
                 book_title = bookVo.book_title;

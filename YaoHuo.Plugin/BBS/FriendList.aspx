@@ -51,7 +51,7 @@
         }
         else if (this.INFO == "LOCK")
         {
-            strhtml.Append("<b>" + this.GetLang("抱歉，您已经被加入黑名单，请注意发贴规则！||") + "</b><br/>");
+            strhtml.Append("<b>" + this.GetLang("抱歉，您已经被加入黑名单，请注意发帖规则！||") + "</b><br/>");
         }
         else if (this.INFO == "NOTBLACK")
         {
@@ -149,7 +149,7 @@
         }
         else if (this.INFO == "LOCK")
         {
-            strhtml.Append("<div class=\"tip\"><b>" + this.GetLang("抱歉，您已经被加入黑名单，请注意发贴规则！||") + "</b></div>");
+            strhtml.Append("<div class=\"tip\"><b>" + this.GetLang("抱歉，您已经被加入黑名单，请注意发帖规则！||") + "</b></div>");
         }
         else if (this.INFO == "NOTBLACK")
         {

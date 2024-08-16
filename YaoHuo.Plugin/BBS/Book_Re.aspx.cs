@@ -127,13 +127,25 @@ namespace YaoHuo.Plugin.BBS
             }
             if (!WapTool.IsNumeric(this.id))
             {
-                base.ShowTipInfo("贴子ID参数为非数字！", "bbs/book_view.aspx?siteid=" + base.siteid + "&amp;classid=" + this.bookVo.book_classid + "&amp;id=" + this.bookVo.id + "&amp;lpage=" + this.lpage);
+                base.ShowTipInfo("帖子ID参数为非数字！", "bbs/book_view.aspx?siteid=" + base.siteid + "&amp;classid=" + this.bookVo.book_classid + "&amp;id=" + this.bookVo.id + "&amp;lpage=" + this.lpage);
             }
             this.bbsbll = new wap_bbs_BLL(this.a);
             this.bookVo = this.bbsbll.GetModel(long.Parse(this.id));
             if (this.bookVo == null)
             {
-                base.ShowTipInfo("已删除！或不存在！", "");
+                base.ShowTipInfo("帖子已删除，或不存在。", "");
+            }
+            else if (this.bookVo.ischeck == 2L)
+            {
+                CheckManagerLvl("04", classVo.adminusername, "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;lpage=" + lpage + "&amp;id=" + id);
+            }
+            else if (this.bookVo.ischeck == 1L)
+            {
+                CheckManagerLvl("04", classVo.adminusername, "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;lpage=" + lpage + "&amp;id=" + id);
+            }
+            else if (this.bookVo.book_classid.ToString() != base.classid)
+            {
+                base.ShowTipInfo("栏目ID不正确！", "");
             }
             switch (this.action)
             {
@@ -292,11 +304,11 @@ namespace YaoHuo.Plugin.BBS
                 var sqlStr = string.Empty;//数据库脚本
                 if ("1".Equals(WapTool.getArryString(base.classVo.smallimg, '|', 3)))
                 {
-                    base.ShowTipInfo("回贴功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + base.siteid + "&amp;classid=" + base.classVo.childid);
+                    base.ShowTipInfo("回帖功能已关闭", "wapindex.aspx?siteid=" + base.siteid + "&amp;classid=" + base.classVo.childid);
                 }
                 if (this.bookVo == null)
                 {
-                    base.ShowTipInfo("已删除！或不存在！", "");
+                    base.ShowTipInfo("帖子不存在！", "");
                 }
                 else if (this.bookVo.ischeck == 1L)
                 {
@@ -304,15 +316,11 @@ namespace YaoHuo.Plugin.BBS
                 }
                 else if (this.bookVo.book_classid.ToString() != base.classid)
                 {
-                    base.ShowTipInfo("栏目ID对不上！可能没有传classid值！", "");
+                    base.ShowTipInfo("栏目ID不正确！", "");
                 }
                 else if (this.bookVo.islock == 1L)
                 {
-                    base.ShowTipInfo("此贴已锁！", "bbs/book_view.aspx?siteid=" + base.siteid + "&amp;classid=" + this.bookVo.book_classid + "&amp;id=" + this.bookVo.id + "&amp;lpage=" + this.lpage);
-                }
-                else if (this.bookVo.islock == 2L)
-                {
-                    base.ShowTipInfo("此贴已结！", "bbs/book_view.aspx?siteid=" + base.siteid + "&amp;classid=" + this.bookVo.book_classid + "&amp;id=" + this.bookVo.id + "&amp;lpage=" + this.lpage);
+                    base.ShowTipInfo("此帖已锁定！", "bbs/book_view.aspx?siteid=" + base.siteid + "&amp;classid=" + this.bookVo.book_classid + "&amp;id=" + this.bookVo.id + "&amp;lpage=" + this.lpage);
                 }
                 string text;
                 text = base.GetRequestValue("content");
@@ -365,7 +373,7 @@ namespace YaoHuo.Plugin.BBS
                     num2 = WapTool.DateDiff(DateTime.Now, base.userVo.RegTime, "MM");
                     if (num2 < num)
                     {
-                        base.ShowTipInfo("请再过:" + (num - num2) + "分钟才能回贴！", "bbs/book_re.aspx?siteid=" + base.siteid + "&amp;classid=" + base.classid + "&amp;id=" + this.id);
+                        base.ShowTipInfo("请再过:" + (num - num2) + "分钟才能回帖！", "bbs/book_re.aspx?siteid=" + base.siteid + "&amp;classid=" + base.classid + "&amp;id=" + this.id);
                     }
                 }
                 this.getmoney2 = (WapTool.getArryString(base.classVo.smallimg, '|', 36) + ",").Split(',')[0];
@@ -483,7 +491,7 @@ namespace YaoHuo.Plugin.BBS
                         if (!isBlack)
                         {
                             //第一个回复通知
-                            sqlStr = string.Concat("insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)values(", base.siteid, ",", base.userid, ",'", base.nickname, "','", base.nickname, "第一个回复了你的贴子','回复时间：", DateTime.Now, "<br/>回复内容：", WapTool.left(text, 200), " <br/><a href=\"", base.http_start, "bbs/book_view.aspx?id=", this.bookVo.id, "&amp;siteid=", base.siteid, "&amp;classid=", this.bookVo.book_classid, "\">到帖子中查看</a>',", this.bookVo.book_pub, ",1)");
+                            sqlStr = string.Concat("insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)values(", base.siteid, ",", base.userid, ",'", base.nickname, "','", base.nickname, "第一个回复了你的帖子','回复时间：", DateTime.Now, "<br/>回复内容：", WapTool.left(text, 200), " <br/><a href=\"", base.http_start, "bbs/book_view.aspx?id=", this.bookVo.id, "&amp;siteid=", base.siteid, "&amp;classid=", this.bookVo.book_classid, "\">到帖子中查看</a>',", this.bookVo.book_pub, ",1)");
                             base.MainBll.UpdateSQL(sqlStr);
                         }
                     }
@@ -495,7 +503,7 @@ namespace YaoHuo.Plugin.BBS
                         if (!isBlack)
                         {
                             //回复通知楼主
-                            sqlStr = string.Concat("insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)values(", base.siteid, ",", base.userid, ",'", base.nickname, "','", base.nickname, "回复了你的贴子','回复时间：", DateTime.Now, "<br/>回复内容：", WapTool.left(text, 200), " <br/><a href=\"", base.http_start, "bbs/book_view.aspx?id=", this.bookVo.id, "&amp;siteid=", base.siteid, "&amp;classid=", this.bookVo.book_classid, "\">到帖子中查看</a>',", this.bookVo.book_pub, ",1)");
+                            sqlStr = string.Concat("insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)values(", base.siteid, ",", base.userid, ",'", base.nickname, "','", base.nickname, "回复了你的帖子','回复时间：", DateTime.Now, "<br/>回复内容：", WapTool.left(text, 200), " <br/><a href=\"", base.http_start, "bbs/book_view.aspx?id=", this.bookVo.id, "&amp;siteid=", base.siteid, "&amp;classid=", this.bookVo.book_classid, "\">到帖子中查看</a>',", this.bookVo.book_pub, ",1)");
                             base.MainBll.UpdateSQL(sqlStr);
                         }
                     }
@@ -535,10 +543,10 @@ namespace YaoHuo.Plugin.BBS
                     this.bookVo.book_re = this.bookVo.book_re + 1L;
                     WapTool.ClearDataBBSRe("bbsRe" + base.siteid + this.id);
                     this.INFO = "OK";
-                    base.SaveBankLog(base.userid, "论坛回贴", this.allMoney.ToString(), base.userid, base.nickname, "回复贴子[" + this.id + "]");
+                    base.SaveBankLog(base.userid, "论坛回帖", this.allMoney.ToString(), base.userid, base.nickname, "回复帖子[" + this.id + "]");
                     base.Action_user_doit(2);
                 }
-                base.VisiteCount("回复了贴子:<a href=\"" + base.http_start + "bbs/book_view.aspx?siteid=" + base.siteid + "&amp;classid=" + base.classid + "&amp;id=" + this.id + "\">" + WapTool.GetShowImg(this.bookVo.book_title, "200", "bbs") + "</a>");
+                base.VisiteCount("回复了帖子:<a href=\"" + base.http_start + "bbs/book_view.aspx?siteid=" + base.siteid + "&amp;classid=" + base.classid + "&amp;id=" + this.id + "\">" + WapTool.GetShowImg(this.bookVo.book_title, "200", "bbs") + "</a>");
                 this.showclass();
             }
             catch (Exception ex)
@@ -547,7 +555,7 @@ namespace YaoHuo.Plugin.BBS
             }
             if (this.INFO == "WAITING")
             {
-                base.VisiteCount("回复了贴子。");
+                base.VisiteCount("回复了帖子。");
             }
         }
 

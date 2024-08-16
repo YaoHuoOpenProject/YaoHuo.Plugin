@@ -87,7 +87,7 @@ namespace YaoHuo.Plugin.BBS
                         MainBll.UpdateSQL("update [wap_bbs] set hasMoney=" + (hasMoney + num) + " where id=" + bbsVo.id);
                         MainBll.UpdateSQL("update [wap_bbsre] set myGetMoney=" + (num + bbsReVo.myGetMoney) + " where id=" + bbsReVo.id);
                         MainBll.UpdateSQL("update [user] set money=money+" + num + " where userid=" + bbsReVo.userid);
-                        SaveBankLog(bbsReVo.userid.ToString(), "论坛赏分", num.ToString(), userid, nickname, "得到贴子赏分[" + bbsVo.id + "]");
+                        SaveBankLog(bbsReVo.userid.ToString(), "论坛赏分", num.ToString(), userid, nickname, "得到帖子赏分[" + bbsVo.id + "]");
                         string text = "insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)";
                         text = string.Concat(text, " values(", siteid, ",", userid, ",'", nickname, "','您得到赏分:", num, "喽~','时间：", DateTime.Now, "[br]点击查看:[url=/bbs/book_view.aspx?siteid=", siteid, "&amp;classid=", classid, "&amp;id=", bbsVo.id, "]", bbsVo.book_title.Replace("[", "［").Replace("]", "］"), "[/url]',", bbsReVo.userid, ",1)");
                         MainBll.UpdateSQL(text);
