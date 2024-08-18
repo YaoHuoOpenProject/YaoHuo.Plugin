@@ -2619,33 +2619,50 @@ namespace YaoHuo.Plugin.Tool
             //}
             if (WapStr.IndexOf("[/movie]") > 0)
             {
-                Regex regex = new Regex("(\\[movie=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/movie\\])");
+                Regex regex = new Regex("(\\[movie(=[^\\]]*)?\\])(.[^\\[]*)(\\[\\/movie\\])");
                 try
                 {
                     Match match = regex.Match(WapStr);
-                    Random random = new Random();
                     while (match.Success)
                     {
-                        string[] array = match.Groups[2].Value.Replace("｜", "|").Split('*');
-                        string[] array2 = match.Groups[3].Value.Replace("｜", "|").Split('|');
-                        string text8 = array2[1];
-                        if (text8 == "")
+                        string videoUrl = "";
+                        string posterUrl = "";
+                        string[] urls = match.Groups[3].Value.Replace("｜", "|").Split('|');
+
+                        // 视频和封面链接处理
+                        videoUrl = urls[0];
+                        posterUrl = urls.Length > 1 ? urls[1] : "";
+
+                        if (string.IsNullOrEmpty(posterUrl))
                         {
-                            text8 = "/NetImages/play.gif";
+                            posterUrl = "/NetImages/play.gif"; // 如果没有提供封面链接，则使用默认封面
                         }
-                        //宽度
-                        string width = array[0];
-                        bool isWidthPercentage = width.EndsWith("%");
-                        width = isWidthPercentage ? width.TrimEnd('%') : width;
-                        string widthAttribute = isWidthPercentage ? $"width=\"{width}%\"" : $"width=\"{width}px\"";
-                        //高度
-                        string height = array[1];
-                        bool isHeightPercentage = height.EndsWith("%");
-                        height = isHeightPercentage ? height.TrimEnd('%') : height;
-                        string heightAttribute = isHeightPercentage ? $"height=\"{height}%\"" : $"height=\"{height}px\"";
-                        WapStr = regex.Replace(WapStr, "<video class=\"ubbvideo\" onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"" + array2[0]
+
+                        // 宽度和高度处理
+                        string width = "100%";
+                        string height = "100%";
+
+                        if (!string.IsNullOrEmpty(match.Groups[2].Value))
+                        {
+                            // 去掉参数开头的等号
+                            string parameter = match.Groups[2].Value.TrimStart('=');
+                            string[] settings = parameter.Split('*');
+
+                            width = settings[0];
+
+                            if (settings.Length > 1)
+                            {
+                                height = settings[1];
+                            }
+                        }
+
+                        string widthAttribute = width.EndsWith("%") ? $"width=\"{width}\"" : $"width=\"{width}px\"";
+                        string heightAttribute = height.EndsWith("%") ? $"height=\"{height}\"" : $"height=\"{height}px\"";
+
+                        WapStr = regex.Replace(WapStr, "<video class=\"ubbvideo\" onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"" + videoUrl
                             + "\" " + widthAttribute + " " + heightAttribute
-                            + " poster=\"" + text8 + "\" controls>{不支持在线播放，请更换浏览器}</video>", 1);
+                            + " poster=\"" + posterUrl + "\" controls>{不支持在线播放，请更换浏览器}</video>", 1);
+
                         match = match.NextMatch();
                     }
                 }
@@ -2656,16 +2673,19 @@ namespace YaoHuo.Plugin.Tool
             }
             if (WapStr.IndexOf("[/audio]") > 0)
             {
-                Regex regex = new Regex("(\\[audio=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/audio\\])");
+                // 修改正则表达式以支持没有 = 的 [audio] 标签
+                Regex regex = new Regex("(\\[audio(?:=(.[^\\]]*))?\\])(.[^\\[]*)(\\[\\/audio\\])");
                 try
                 {
                     Match match = regex.Match(WapStr);
                     Random random = new Random();
                     while (match.Success)
                     {
-                        string value = match.Groups[2].Value.Replace("｜", "|");
-                        string text = match.Groups[3].Value.Replace("｜", "|");
+                        string value = match.Groups[2].Value.Replace("｜", "|"); // 处理 value
+                        string text = match.Groups[3].Value.Replace("｜", "|");  // 处理音频链接
                         string text9 = "";
+
+                        // 根据 value 值设置 autoplay 和 loop 属性
                         if (value == "1")
                         {
                             text9 = " autoplay ";
@@ -2674,6 +2694,7 @@ namespace YaoHuo.Plugin.Tool
                         {
                             text9 = " autoplay loop ";
                         }
+                        // 如果 value 为空或不是 "1" 或 "2"，则不设置自动播放
                         WapStr = regex.Replace(WapStr, "<audio referrerpolicy='no-referrer' controls src=\"" + text + "\" " + text9 + ">{不支持在线播放，请更换浏览器}</audio>", 1);
                         match = match.NextMatch();
                     }
