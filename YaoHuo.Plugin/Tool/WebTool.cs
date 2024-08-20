@@ -2961,38 +2961,38 @@ namespace YaoHuo.Plugin.Tool
                 Regex regex = new Regex("(\\[strike\\])(.[^\\[]*)(\\[\\/strike\\])");
                 WapStr = ((!(wmlVo.ver == "1") && !(wmlVo.mycss == "")) ? regex.Replace(WapStr, "<strike>$2</strike>") : regex.Replace(WapStr, "$2"));
             }
-            if (WapStr.IndexOf("[/tq]") > 0)
-            {
-                WapStr = WapStr.Replace("[tq]", "[tq=0]");
-                Regex regex = new Regex("(\\[tq=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/tq\\])");
-                Match match = regex.Match(WapStr);
-                Random random = new Random();
-                while (match.Success)
-                {
-                    string value = match.Groups[2].Value;
-                    if (wmlVo.cityCode == "")
-                    {
-                        wmlVo.cityCode = match.Groups[3].Value;
-                    }
-                    StringBuilder stringBuilder2 = new StringBuilder();
-                    switch (value)
-                    {
-                        case "0":
-                            stringBuilder2.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"18\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=1&v=0&d=1&bd=0&k=&f=&q=1&e=0&a=1&c=54511&w=317&h=18&align=center\"></iframe>");
-                            break;
+            //if (WapStr.IndexOf("[/tq]") > 0)
+            //{
+            //    WapStr = WapStr.Replace("[tq]", "[tq=0]");
+            //    Regex regex = new Regex("(\\[tq=(.[^\\]]*)\\])(.[^\\[]*)(\\[\\/tq\\])");
+            //    Match match = regex.Match(WapStr);
+            //    Random random = new Random();
+            //    while (match.Success)
+            //    {
+            //        string value = match.Groups[2].Value;
+            //        if (wmlVo.cityCode == "")
+            //        {
+            //            wmlVo.cityCode = match.Groups[3].Value;
+            //        }
+            //        StringBuilder stringBuilder2 = new StringBuilder();
+            //        switch (value)
+            //        {
+            //            case "0":
+            //                stringBuilder2.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"18\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=1&v=0&d=1&bd=0&k=&f=&q=1&e=0&a=1&c=54511&w=317&h=18&align=center\"></iframe>");
+            //                break;
 
-                        case "1":
-                            stringBuilder2.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"64\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=2&d=2&bd=0&k=&f=&q=0&e=1&a=1&c=54511&w=317&h=64&align=center\"></iframe>");
-                            break;
+            //            case "1":
+            //                stringBuilder2.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"64\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=2&d=2&bd=0&k=&f=&q=0&e=1&a=1&c=54511&w=317&h=64&align=center\"></iframe>");
+            //                break;
 
-                        case "2":
-                            stringBuilder2.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"98\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=1&z=1&t=1&v=0&d=2&bd=0&k=&f=&q=1&e=1&a=1&c=54511&w=317&h=98&align=center\"></iframe>");
-                            break;
-                    }
-                    WapStr = regex.Replace(WapStr, stringBuilder2.ToString(), 1);
-                    match = match.NextMatch();
-                }
-            }
+            //            case "2":
+            //                stringBuilder2.Append("<iframe allowtransparency=\"true\" frameborder=\"0\" width=\"317\" height=\"98\" scrolling=\"no\" src=\"http://tianqi.2345.com/plugin/widget/index.htm?s=1&z=1&t=1&v=0&d=2&bd=0&k=&f=&q=1&e=1&a=1&c=54511&w=317&h=98&align=center\"></iframe>");
+            //                break;
+            //        }
+            //        WapStr = regex.Replace(WapStr, stringBuilder2.ToString(), 1);
+            //        match = match.NextMatch();
+            //    }
+            //}
             if (WapStr.IndexOf("[/codo]") > 0)
             {
                 Regex regex = new Regex("(\\[codo\\])(.[^\\[]*)(\\[\\/codo\\])");
