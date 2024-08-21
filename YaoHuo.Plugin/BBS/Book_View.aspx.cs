@@ -195,7 +195,8 @@ namespace YaoHuo.Plugin.BBS
                 bookVo = wap_bbs_BLL.GetModel(long.Parse(id));
                 if (bookVo == null)
                 {
-                    ShowTipInfo("可能已删除！或不存在！或已转移至历史表中，点击此<a href='" + http_start + "bbs/book_view_bak.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;sid=" + a + "'>尝试访问历史数据</a>。", backurl);
+                    //ShowTipInfo("可能已删除！或不存在！或已转移至历史表中，点击此<a href='" + http_start + "bbs/book_view_bak.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;sid=" + a + "'>尝试访问历史数据</a>。", backurl);
+                    ShowTipInfo("帖子已删除，或不存在。", backurl);
                 }
                 else if (bookVo.ischeck == 1L)
                 {

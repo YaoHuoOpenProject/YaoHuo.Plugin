@@ -322,6 +322,10 @@ namespace YaoHuo.Plugin.BBS
                 {
                     base.ShowTipInfo("此帖已锁定！", "bbs/book_view.aspx?siteid=" + base.siteid + "&amp;classid=" + this.bookVo.book_classid + "&amp;id=" + this.bookVo.id + "&amp;lpage=" + this.lpage);
                 }
+                else if (this.bookVo.islock == 2L)
+                {
+                    base.ShowTipInfo("此帖已结束！", "bbs/book_view.aspx?siteid=" + base.siteid + "&amp;classid=" + this.bookVo.book_classid + "&amp;id=" + this.bookVo.id + "&amp;lpage=" + this.lpage);
+                }
                 string text;
                 text = base.GetRequestValue("content");
                 this.contentmax = WapTool.getArryString(base.classVo.smallimg, '|', 26);
