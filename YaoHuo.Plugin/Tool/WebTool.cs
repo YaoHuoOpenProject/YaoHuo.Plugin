@@ -3336,7 +3336,7 @@ namespace YaoHuo.Plugin.Tool
             {
                 WapHtmlStr = WapHtmlStr.Replace("[myaction]", GetMyAction(wmlVo));
             }
-            WapHtmlStr = WapHtmlStr.Replace("[domain]", wmlVo.http_start.Replace("http:", "").Replace("/", ""));
+            WapHtmlStr = WapHtmlStr.Replace("[domain]", wmlVo.http_start.Replace("https:", "").Replace("/", ""));
             WapHtmlStr = WapHtmlStr.Replace("[userid]", wmlVo.userid);
             WapHtmlStr = WapHtmlStr.Replace("[sid]", wmlVo.sid);
             WapHtmlStr = WapHtmlStr.Replace("[money]", wmlVo.money.ToString());
@@ -3385,33 +3385,33 @@ namespace YaoHuo.Plugin.Tool
             //{
             //    WapHtmlStr = ((wmlVo.siteVo == null || wmlVo.siteVo.myShopCardList == null) ? WapHtmlStr.Replace("[shopcard]", "<span id=\"shopcard\" class=\"shopcard\">0</span>") : WapHtmlStr.Replace("[shopcard]", "<span id=\"shopcard\" class=\"shopcard\">" + wmlVo.siteVo.myShopCardList + "</span>"));
             //}
-            if (WapHtmlStr.IndexOf("[vtoday]") > -1)
-            {
-                WapHtmlStr = WapHtmlStr.Replace("[vtoday]", GetCount("vtoday", wmlVo.siteUserName, wmlVo.siteid));
-            }
-            if (WapHtmlStr.IndexOf("[vyestaday]") > -1)
-            {
-                WapHtmlStr = WapHtmlStr.Replace("[vyestaday]", GetCount("vyestaday", wmlVo.siteUserName, wmlVo.siteid));
-            }
-            if (WapHtmlStr.IndexOf("[vtotal]") > -1)
-            {
-                WapHtmlStr = WapHtmlStr.Replace("[vtotal]", GetCount("vtotal", wmlVo.siteUserName, wmlVo.siteid));
-            }
-            if (WapHtmlStr.IndexOf("[vweek]") > -1)
-            {
-                WapHtmlStr = WapHtmlStr.Replace("[vweek]", GetCount("vweek", wmlVo.siteUserName, wmlVo.siteid));
-            }
-            if (WapHtmlStr.IndexOf("[vmonth]") > -1)
-            {
-                WapHtmlStr = WapHtmlStr.Replace("[vmonth]", GetCount("vmonth", wmlVo.siteUserName, wmlVo.siteid));
-            }
+            //if (WapHtmlStr.IndexOf("[vtoday]") > -1)
+            //{
+            //    WapHtmlStr = WapHtmlStr.Replace("[vtoday]", GetCount("vtoday", wmlVo.siteUserName, wmlVo.siteid));
+            //}
+            //if (WapHtmlStr.IndexOf("[vyestaday]") > -1)
+            //{
+            //    WapHtmlStr = WapHtmlStr.Replace("[vyestaday]", GetCount("vyestaday", wmlVo.siteUserName, wmlVo.siteid));
+            //}
+            //if (WapHtmlStr.IndexOf("[vtotal]") > -1)
+            //{
+            //    WapHtmlStr = WapHtmlStr.Replace("[vtotal]", GetCount("vtotal", wmlVo.siteUserName, wmlVo.siteid));
+            //}
+            //if (WapHtmlStr.IndexOf("[vweek]") > -1)
+            //{
+            //    WapHtmlStr = WapHtmlStr.Replace("[vweek]", GetCount("vweek", wmlVo.siteUserName, wmlVo.siteid));
+            //}
+            //if (WapHtmlStr.IndexOf("[vmonth]") > -1)
+            //{
+            //    WapHtmlStr = WapHtmlStr.Replace("[vmonth]", GetCount("vmonth", wmlVo.siteUserName, wmlVo.siteid));
+            //}
+            //if (WapHtmlStr.IndexOf("[valltotal]") > -1)
+            //{
+            //    WapHtmlStr = WapHtmlStr.Replace("[valltotal]", GetAllCount());
+            //}
             if (WapHtmlStr.IndexOf("[online]") > -1)
             {
                 WapHtmlStr = WapHtmlStr.Replace("[online]", GetOnlineCount("0", wmlVo.siteid));
-            }
-            if (WapHtmlStr.IndexOf("[valltotal]") > -1)
-            {
-                WapHtmlStr = WapHtmlStr.Replace("[valltotal]", GetAllCount());
             }
             if (WapHtmlStr.IndexOf("[message]") > -1)
             {
