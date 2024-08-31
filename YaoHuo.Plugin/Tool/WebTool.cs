@@ -567,24 +567,24 @@ namespace YaoHuo.Plugin.Tool
                 return "";
             }
             WapHtmlStr = UBB.StartIntercept(WapHtmlStr, wmlvo);
-            if (WapHtmlStr.IndexOf("[/code]") > 0)
-            {
-                Regex regex = new Regex("(\\[code\\])(.[^\\[]*)(\\[\\/code\\])");
-                try
-                {
-                    Match match = regex.Match(WapHtmlStr);
-                    while (match.Success)
-                    {
-                        string value = match.Groups[2].Value;
-                        WapHtmlStr = ((!IsNumeric(value)) ? regex.Replace(WapHtmlStr, "{格式错误}", 1) : regex.Replace(WapHtmlStr, GetCode_WEB(value, wmlvo), 1));
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapHtmlStr = regex.Replace(WapHtmlStr, "{格式错误}");
-                }
-            }
+            //if (WapHtmlStr.IndexOf("[/code]") > 0)
+            //{
+            //    Regex regex = new Regex("(\\[code\\])(.[^\\[]*)(\\[\\/code\\])");
+            //    try
+            //    {
+            //        Match match = regex.Match(WapHtmlStr);
+            //        while (match.Success)
+            //        {
+            //            string value = match.Groups[2].Value;
+            //            WapHtmlStr = ((!IsNumeric(value)) ? regex.Replace(WapHtmlStr, "{格式错误}", 1) : regex.Replace(WapHtmlStr, GetCode_WEB(value, wmlvo), 1));
+            //            match = match.NextMatch();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        WapHtmlStr = regex.Replace(WapHtmlStr, "{格式错误}");
+            //    }
+            //}
             WapHtmlStr = GetAllMid(wmlvo.ver, wmlvo.lang, WapHtmlStr, "getwml", wmlvo.userid, wmlvo.http_start, wmlvo.siteid, wmlvo.classid, wmlvo.sid, wmlvo);
             WapHtmlStr = GetAllMid(wmlvo.ver, wmlvo.lang, WapHtmlStr, "wml", wmlvo.userid, wmlvo.http_start, wmlvo.siteid, wmlvo.classid, wmlvo.sid, wmlvo);
             WapHtmlStr = GetAllMid(wmlvo.ver, wmlvo.lang, WapHtmlStr, "article", wmlvo.userid, wmlvo.http_start, wmlvo.siteid, wmlvo.classid, wmlvo.sid, wmlvo);
@@ -2057,13 +2057,13 @@ namespace YaoHuo.Plugin.Tool
                 else
                 {
                     //Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|GIF|JPG))(\\[\\/img\\])");
-                    Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp))(\\[\\/img\\])", RegexOptions.IgnoreCase);
+                    Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|avif|apng|jpg|jpeg|png|bmp|webp|svg|svgz))(\\[\\/img\\])", RegexOptions.IgnoreCase);
                     WapStr = ((!(wmlVo.ver == "0"))
                         ? regex.Replace(WapStr, "<img class=\"ubbimg\" src=\"$2\" referrerpolicy=\"no-referrer\"/>")
                         : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\"/></a>"));
                 }
                 //Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|GIF|JPG))\\])(.[^\\[]*)(\\[\\/img\\])");
-                Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|webp))\\])(.[^\\[]*)(\\[\\/img\\])", RegexOptions.IgnoreCase);
+                Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|avif|apng|jpg|jpeg|png|bmp|webp|svg|svgz))\\])(.[^\\[]*)(\\[\\/img\\])", RegexOptions.IgnoreCase);
                 WapStr = ((!(wmlVo.ver == "0"))
                     ? regex2.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\"$4\"/>")
                     : regex2.Replace(WapStr, "<a href=\"javascript:T('{{img=$2}}$4{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\"$4\"/></a>"));
@@ -2201,30 +2201,24 @@ namespace YaoHuo.Plugin.Tool
             }
             if (WapStr.IndexOf("[/text]") > 0)
             {
-                Regex regex = new Regex("(\\[text\\])(.[^\\[]*)(\\[\\/text\\])");
-                if (wmlVo.ver == "0")
+                Regex regex = new Regex(@"\[text\](.*?)\[/text\]", RegexOptions.Singleline);
+
+                foreach (Match matche in regex.Matches(WapStr))
                 {
-                    WapStr = regex.Replace(WapStr, "<a href=\"javascript:T('{{text}}$2{{/text}}');\">$2</a>");
-                }
-                else
-                {
-                    foreach (Match matche in regex.Matches(WapStr))
-                    {
-                        var bbsData = matche.Value;
-                        var bbsContent = Regex.Match(bbsData, "(?<=\\[text\\]).+?(?=\\[\\/text\\])").Value;
-                        bbsContent = bbsContent.Replace("“", "\"")
-                                                .Replace("‘", "'")
-                                                .Replace("”", "\"")
-                                                .Replace("’", "'")
-                                                .Replace("《", "<")
-                                                .Replace("》", ">")
-                                                .Replace("：", ";")
-                                                .Replace("，", ",")
-                                                .Replace("。", ".")
-                                                .Replace("【", "[")
-                                                .Replace("】", "]");
-                        WapStr = WapStr.Replace(bbsData, bbsContent);
-                    }
+                    var bbsData = matche.Value;
+                    var bbsContent = Regex.Match(bbsData, "(?<=\\[text\\]).+?(?=\\[\\/text\\])").Value;
+                    bbsContent = bbsContent.Replace("“", "\"")
+                                            .Replace("‘", "'")
+                                            .Replace("”", "\"")
+                                            .Replace("’", "'")
+                                            .Replace("《", "<")
+                                            .Replace("》", ">")
+                                            .Replace("：", ";")
+                                            .Replace("，", ",")
+                                            .Replace("。", ".")
+                                            .Replace("【", "[")
+                                            .Replace("】", "]");
+                    WapStr = WapStr.Replace(bbsData, bbsContent);
                 }
             }
             if (WapStr.IndexOf("[/a]") > 0)

@@ -1460,7 +1460,7 @@ namespace YaoHuo.Plugin.WebSite
                 stringBuilder.Append("</div>");
                 stringBuilder.Append("<div class=\"ui-subtitle\"></div>");
                 stringBuilder.Append("<div class=\"ui-password\">");
-                stringBuilder.Append("<input type=\"password\" name=\"needpassword\" id=\"\" class=\"ui-password-input\" placeholder=\"请输入密码\" autocomplete=\"current-password\" required />");
+                stringBuilder.Append("<input type=\"password\" name=\"needpassword\" id=\"\" class=\"ui-password-input\" placeholder=\"请输入密码\" required />");
                 stringBuilder.Append("</div>");
                 try
                 {

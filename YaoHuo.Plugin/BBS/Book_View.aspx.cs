@@ -397,7 +397,7 @@ namespace YaoHuo.Plugin.BBS
                             stringBuilder.Append("(" + list2[i].book_size + ")");
                             stringBuilder.Append("</span></span>");
                         }
-                        if (list2[i].book_ext.Trim() != "" && ".gif|.jpg|.jpeg|.png|.webp|.bmp|".IndexOf(list2[i].book_ext.ToLower()) >= 0)
+                        if (list2[i].book_ext.Trim() != "" && ".jpg|.jpeg|.png|.gif|.webp".IndexOf(list2[i].book_ext.ToLower()) >= 0)
                         {
                             string text8 = http_start + "bbs/" + list2[i].book_file;
                             if (list2[i].book_file.ToLower().StartsWith("http"))
