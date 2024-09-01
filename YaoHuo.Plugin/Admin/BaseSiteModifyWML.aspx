@@ -1,8 +1,7 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BaseSiteModifyWML.aspx.cs" Inherits="KeLin.WebSite.admin.BaseSiteModifyWML" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BaseSiteModifyWML.aspx.cs" Inherits="YaoHuo.Plugin.Admin.BaseSiteModifyWML" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 Response.Write(WapTool.showTop(this.GetLang("手机管理后台|手機管理後台|Mobile Admin"), wmlVo));//显示头   
-
 if (ver == "1")
 {%>	
 <%Response.Write(WapTool.GetVS(wmlVo));%>
@@ -63,5 +62,5 @@ Response.Write("<a href=\"" + http_start + "bbs/banklist.aspx?siteid=" + siteid 
 <a href="<%=http_start%>myfile.aspx?siteid=<%=siteid%>&amp;userid=<%=userid%>">返回上级</a> <a href="<%=http_start%>wapindex.aspx?siteid=<%=siteid%>">返回首页</a>	
 </div></div>
 <%}
-Response.Write(WapTool.showDown(wmlVo));   //显示底部
+Response.Write(WapTool.showDown(wmlVo)); //显示底部
 %>
