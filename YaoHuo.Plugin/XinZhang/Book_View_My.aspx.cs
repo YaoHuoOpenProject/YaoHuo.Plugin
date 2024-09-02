@@ -79,7 +79,6 @@ ALTER TABLE XinZhang_Plugin ADD CONSTRAINT PK_XinZhang_Plugin PRIMARY KEY (useri
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Discarded unreachable code: IL_00ac
             while (true)
             {
                 this.id = base.GetRequestValue("id");

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_re_mod.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_re_mod" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_Re_mod.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_re_mod" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 Response.Write(WapTool.showTop(this.GetLang("修改回复操作|修改回複|Modify Reply"), wmlVo));//显示头                                                                                                                                                                       

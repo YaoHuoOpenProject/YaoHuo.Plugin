@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Report_add.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Report_add" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Report_Add.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Report_add" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
   Response.Write(WapTool.showTop(this.GetLang("举报帖子|舉報|tip-off"), wmlVo));//调用HEAD头部

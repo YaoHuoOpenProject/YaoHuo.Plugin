@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MessageList_view.aspx.cs" Inherits="YaoHuo.Plugin.BBS.MessageList_view" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MessageList_View.aspx.cs" Inherits="YaoHuo.Plugin.BBS.MessageList_view" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 Response.Write(WapTool.showTop(this.GetLang("查看信息|查看信息|view Message"), wmlVo));//显示头                                                                                                                                                                       
@@ -211,5 +211,5 @@ else //2.0界面
     Response.Write("<a href=\"" + http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=0" + "\">返回首页</a>");
     Response.Write("</div></div>");  
 }
-//显示底部
-Response.Write(WapTool.showDown(wmlVo)); %>
+Response.Write(WapTool.showDown(wmlVo)); //显示底部
+%>

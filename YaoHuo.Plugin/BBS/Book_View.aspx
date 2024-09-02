@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_View" %>
-
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     Response.Write(WapTool.showTop(bookVo.book_title, wmlVo));//显示头
@@ -23,13 +22,11 @@
         {
             strhtml.Append(adVo.threeShowTop + "<br/>");
         }
-
         //顶部按钮
         strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + this.lpage + this.stypelink + "" + "\">返回</a>.");
         strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_add.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;sid=" + this.sid + "\">发帖</a>.");
         strhtml.Append("<a href=\"" + this.http_start + "bbs/toDefine.aspx?siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode("bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;lpage=" + this.lpage) + "\">设置</a>.");
         strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_View_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + this.id + "&amp;lpage=" + this.lpage + "" + "\">管理</a><br/>");
-
         if (bookVo.sendMoney > 0)
         {
             strhtml.Append("悬赏:" + bookVo.sendMoney + " 已赏:" + bookVo.hasMoney + "<br/>");
@@ -52,9 +49,7 @@
                     strhtml.Append("<br/>楼层:" + free1[y] + "派礼:" + free2[y]);
                 }
             }
-
             strhtml.Append("<br/>----------<br/>");
-
         }
         if (this.threePageType == "1")
         {
@@ -71,7 +66,6 @@
             {
                 strhtml.Append("<br/>[奖励]: <b>" + bookVo.myGetMoney + " " + siteVo.sitemoneyname + "</b>");
             }
-
             strhtml.Append("<br/>----------<br/>");
             strhtml.Append(content + "<br/>");
             strhtml.Append(linkURL);
@@ -391,7 +385,6 @@
             {
                 strhtml.Append("悬赏：" + bookVo.sendMoney + " 已赏:" + bookVo.hasMoney + "<br/>");
             }
-
             strhtml.Append("标题：<b>" + bookVo.book_title + " (阅" + bookVo.book_click + ")</b><br/>");
             strhtml.Append("<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + this.siteid + "&amp;touserid=" + bookVo.book_pub + "&amp;backurl=" + HttpUtility.UrlEncode(this.GetUrlQueryString()) + "\">" + bookVo.book_author + "(" + WapTool.GetHandle(siteVo.lvlNumer, toUserVo.expr, toUserVo.money, type) + ")</a>" + WapTool.GetOnline(http_start, toUserVo.isonline, toUserVo.sex.ToString()) + WapTool.GetOLtimePic(this.http_start, siteVo.lvlTimeImg, toUserVo.LoginTimes) + "<br/>");
             strhtml.Append("等级:" + WapTool.GetLevl(siteVo.lvlNumer, toUserVo.expr, toUserVo.money, type) + " 勋章:" + WapTool.GetMedal(toUserVo.moneyname, this.http_start) + "<br/>");
@@ -543,7 +536,6 @@
             string strhtml_list = strhtml.ToString();
             int s = strhtml_list.IndexOf("<!--web-->");
             strhtml_list = strhtml_list.Substring(s, strhtml_list.Length - s);
-
             Response.Clear();
             Response.Write(WapTool.ToWML(isWebHtml.Replace("[view]", strhtml_list), wmlVo));
             Response.End();
@@ -553,7 +545,6 @@
         {
             strhtml.Append(adVo.threeShowDown);
         }
-
         if (downLink != "")
         {
             strhtml.Append(downLink);

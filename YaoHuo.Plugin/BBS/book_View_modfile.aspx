@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="book_view_modfile.aspx.cs" Inherits="YaoHuo.Plugin.BBS.book_view_modfile" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_modfile.aspx.cs" Inherits="YaoHuo.Plugin.BBS.book_view_modfile" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     StringBuilder strhtml = new StringBuilder();
@@ -117,6 +116,5 @@
         strhtml.Append("</div></div>");
         Response.Write(strhtml);
     }
-    //显示底部
-    Response.Write(WapTool.showDown(wmlVo));
+    Response.Write(WapTool.showDown(wmlVo)); //显示底部
 %>

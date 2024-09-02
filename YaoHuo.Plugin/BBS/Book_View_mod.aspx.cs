@@ -115,7 +115,7 @@ namespace YaoHuo.Plugin.BBS
             }
             try
             {
-                bbsVo.book_title = GetRequestValue("book_title");
+                bbsVo.book_title = GetRequestValue("book_title").Trim(); // 移除标题前后的空格
                 if (bbsVo.book_title.Length > 200)
                 {
                     bbsVo.book_title = bbsVo.book_title.Substring(0, 200);
@@ -176,6 +176,7 @@ namespace YaoHuo.Plugin.BBS
                 {
                     bbsVo.book_title = "[img]face/" + face + "[/img]" + bbsVo.book_title;
                 }
+                bbsVo.book_title = bbsVo.book_title.Trim(); // 再次移除标题前后的空格
                 if (bbsVo.book_title.Length > 200)
                 {
                     bbsVo.book_title = bbsVo.book_title.Substring(0, 200);

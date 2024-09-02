@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_wapClasslist.aspx.cs" Inherits="YaoHuo.Plugin.Admin.admin_wapClasslist" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_WapClasslist.aspx.cs" Inherits="YaoHuo.Plugin.Admin.admin_wapClasslist" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 string str = this.http_start + gopath + "?action=wapAdmin" + "&amp;siteid=" + siteid ;

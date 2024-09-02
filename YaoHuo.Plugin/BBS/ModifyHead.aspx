@@ -8,28 +8,21 @@
        strhtml.Append("<p>");
        if (ERROR != "")
        {
-          
            strhtml.Append(ERROR);
            strhtml.Append("<br/>");
        }
        if (INFO == "OK")
        {
-           
            strhtml.Append("<b>更新成功！</b>");
            strhtml.Append("<br/>");
        }
        else if (INFO == "NULL")
        {
-           
            strhtml.Append("<b>不能为空！</b>");
            strhtml.Append("<br/>");
        }
-       
-
        strhtml.Append("我现在的头像：<br/>");
        strhtml.Append(WapTool.GetHeadImgHTML(http_start, toheadimg) + "<br/>");
-      
-
        strhtml.Append("<b>A.选择系统头像：</b><br/>");
        if (sysimg == "")
        {
@@ -47,7 +40,6 @@
            strhtml.Append("<a href=\"" + this.http_start + "bbs/modifyhead.aspx?sysimg=" + Convert.ToString(Convert.ToInt64(sysimg) + 1) + "&amp;siteid=" + siteid + "" + "\">下一张</a> &nbsp;&nbsp;");
        }
        strhtml.Append("<a href=\"" + this.http_start + "bbs/modifyhead.aspx?sysimg=63&amp;siteid=" + siteid + "" + "\">女</a> <br />");
-
        strhtml.Append("<b>B.自定义照片地址：</b><br/>");
        strhtml.Append(this.http_start + "<input type=\"text\" name=\"toheadimg" + r + "\" /><br/>");
        strhtml.Append("(方法一:论坛上传相片例输入:bbs/upload/123.gif)<br/>");
@@ -143,5 +135,5 @@
        }
        Response.Write(strhtml);
    }
- Response.Write(WapTool.showDown(wmlVo));   //显示底部
+ Response.Write(WapTool.showDown(wmlVo)); //显示底部
  %>

@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MessageList_Del.aspx.cs" Inherits="YaoHuo.Plugin.BBS.MessageList_Del" %>
-
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     StringBuilder strhtml = new StringBuilder();
@@ -16,9 +15,7 @@
         {
             strhtml.Append("<b>" + this.GetLang("删除成功！|刪除成功！|Deleted successfully!") + "</b><br/>");
         }
-
         strhtml.Append("<a href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=" + this.types + "&amp;issystem=" + this.issystem + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.page + "" + "\">返回上级</a>");
-
         strhtml.Append("</p>");
         Response.Write(strhtml);
     }
@@ -39,10 +36,8 @@
             strhtml.Append("<b>" + this.GetLang("删除成功！|刪除成功！|Deleted successfully!") + "</b><br/>");
             strhtml.Append("</div>");
         }
-
         strhtml.Append("<div class=\"bt1\">");
         strhtml.Append("<a href=\"" + http_start + "bbs/messagelist.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;types=" + this.types + "&amp;issystem=" + this.issystem + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "&amp;page=" + this.page + "" + "\">返回上级</a>");
-
         strhtml.Append("</div>");
         string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码   
         if (isWebHtml != "")
@@ -50,14 +45,11 @@
             //string strhtml_list = strhtml.ToString();
             //int s = strhtml_list.IndexOf("<div class=\"title\">");
             //strhtml_list = strhtml_list.Substring(s, strhtml_list.Length - s);
-
             Response.Clear();
             Response.Write(WapTool.ToWML(isWebHtml, wmlVo).Replace("[view]", strhtml.ToString()));
             Response.End();
         }
         Response.Write(strhtml);
     }
-
-    //显示底部
-    Response.Write(WapTool.showDown(wmlVo));
+    Response.Write(WapTool.showDown(wmlVo)); //显示底部
 %>

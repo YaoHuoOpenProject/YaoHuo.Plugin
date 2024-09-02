@@ -93,7 +93,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\Admin_wapClasslist.aspx" />
+    <Content Include="Admin\Admin_WapClasslist.aspx" />
     <Content Include="Admin\BaseSiteModifyWML.aspx" />
     <Content Include="Admin\BaseSiteModifyWML00.aspx" />
     <Content Include="BBS\Admin_guestlistWAP.aspx" />
@@ -101,26 +101,30 @@
     <Content Include="BBS\Admin_guestlistWAPdel00.aspx" />
     <Content Include="BBS\Admin_userlistWAP.aspx" />
     <Content Include="BBS\Admin_userlistWAP00.aspx" />
-    <Content Include="BBS\Book_re_mod.aspx" />
+    <Content Include="BBS\Book_Re_mod.aspx" />
     <Content Include="BBS\Book_View_add.aspx" />
+    <Content Include="BBS\Book_View_addfile.aspx" />
+    <Content Include="BBS\Book_View_addurl.aspx" />
+    <Content Include="BBS\Book_View_addvote.aspx" />
     <Content Include="BBS\Book_View_change.aspx" />
     <Content Include="BBS\Book_View_del.aspx" />
     <Content Include="BBS\Book_View_down.aspx" />
     <Content Include="BBS\Book_View_end.aspx" />
     <Content Include="BBS\Book_View_good.aspx" />
     <Content Include="BBS\Book_View_lock.aspx" />
+    <Content Include="BBS\Book_View_sendmoney.aspx" />
     <Content Include="BBS\Book_View_top.aspx" />
     <Content Include="BBS\Book_View_topall.aspx" />
     <Content Include="BBS\LockUser_List_add.aspx" />
     <Content Include="BBS\LockUser_List_del.aspx" />
-    <Content Include="BBS\MessageList_view.aspx" />
+    <Content Include="BBS\MessageList_View.aspx" />
     <Content Include="BBS\ModifyHead.aspx" />
     <Content Include="BBS\ModifyInfo.aspx" />
     <Content Include="BBS\ModifyNick.aspx" />
     <Content Include="BBS\ModifyPW.aspx" />
     <Content Include="BBS\ModifyRemark.aspx" />
     <Content Include="BBS\ModifyUserName.aspx" />
-    <Content Include="BBS\Report_add.aspx" />
+    <Content Include="BBS\Report_Add.aspx" />
     <Content Include="BBS\Report_List.aspx" />
     <Content Include="BBS\ResetVIP.aspx" />
     <Content Include="BBS\Share.aspx" />
@@ -153,7 +157,7 @@
     <Content Include="BBS\Book_View_addfileAdd.aspx" />
     <Content Include="BBS\Book_View_mod.aspx" />
     <Content Include="BBS\Book_View_modadd.aspx" />
-    <Content Include="BBS\book_View_modfile.aspx" />
+    <Content Include="BBS\Book_View_modfile.aspx" />
     <Content Include="BBS\Index.aspx" />
     <Content Include="BBS\MessageList.aspx" />
     <Content Include="BBS\MessageList_Clear.aspx" />
@@ -173,8 +177,8 @@
     <Content Include="XinZhang\Book_View_My.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Admin_wapClasslist.aspx.cs">
-      <DependentUpon>Admin_wapClasslist.aspx</DependentUpon>
+    <Compile Include="Admin\Admin_WapClasslist.aspx.cs">
+      <DependentUpon>Admin_WapClasslist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\BaseSiteModifyWML.aspx.cs">
@@ -213,8 +217,8 @@
       <DependentUpon>Book_Re.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\Book_re_mod.aspx.cs">
-      <DependentUpon>Book_re_mod.aspx</DependentUpon>
+    <Compile Include="BBS\Book_Re_mod.aspx.cs">
+      <DependentUpon>Book_Re_mod.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_View.aspx.cs">
@@ -225,8 +229,20 @@
       <DependentUpon>Book_View_add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BBS\Book_View_addfile.aspx.cs">
+      <DependentUpon>Book_View_addfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BBS\Book_View_addfileAdd.aspx.cs">
       <DependentUpon>Book_View_addfileAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_View_addurl.aspx.cs">
+      <DependentUpon>Book_View_addurl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_View_addvote.aspx.cs">
+      <DependentUpon>Book_View_addvote.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_View_change.aspx.cs">
@@ -261,8 +277,12 @@
       <DependentUpon>Book_View_modadd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\book_View_modfile.aspx.cs">
-      <DependentUpon>book_View_modfile.aspx</DependentUpon>
+    <Compile Include="BBS\Book_View_modfile.aspx.cs">
+      <DependentUpon>Book_View_modfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_View_sendmoney.aspx.cs">
+      <DependentUpon>Book_View_sendmoney.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_View_top.aspx.cs">
@@ -297,8 +317,8 @@
       <DependentUpon>MessageList_Del.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\MessageList_view.aspx.cs">
-      <DependentUpon>MessageList_view.aspx</DependentUpon>
+    <Compile Include="BBS\MessageList_View.aspx.cs">
+      <DependentUpon>MessageList_View.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\ModifyHead.aspx.cs">
@@ -325,8 +345,8 @@
       <DependentUpon>ModifyUserName.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\Report_add.aspx.cs">
-      <DependentUpon>Report_add.aspx</DependentUpon>
+    <Compile Include="BBS\Report_Add.aspx.cs">
+      <DependentUpon>Report_Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Report_List.aspx.cs">
