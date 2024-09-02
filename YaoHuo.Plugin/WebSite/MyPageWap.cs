@@ -1111,9 +1111,9 @@ namespace YaoHuo.Plugin.WebSite
             return WapTool.GetLang(title, lang);
         }
 
-        public string ToFilterChar(string string_10)
+        public string ToFilterChar(string a)
         {
-            if (string.IsNullOrEmpty(string_10))
+            if (string.IsNullOrEmpty(a))
             {
                 return "";
             }
@@ -1135,17 +1135,17 @@ namespace YaoHuo.Plugin.WebSite
                 {
                     try
                     {
-                        string_10 = Regex.Replace(string_10, text2, "*", RegexOptions.IgnoreCase);
+                        a = Regex.Replace(a, text2, "*", RegexOptions.IgnoreCase);
                     }
                     catch (Exception)
                     {
                     }
                 }
             }
-            return string_10;
+            return a;
         }
 
-        public string ToHtm(string string_10)
+        public string ToHtm(string a)
         {
             bool flag = false;
             try
@@ -1155,7 +1155,7 @@ namespace YaoHuo.Plugin.WebSite
             catch
             {
             }
-            if (string.IsNullOrEmpty(string_10))
+            if (string.IsNullOrEmpty(a))
             {
                 return "";
             }
@@ -1163,24 +1163,24 @@ namespace YaoHuo.Plugin.WebSite
             {
                 if (siteVo.sitelist == 1L)
                 {
-                    string_10 = string_10.Replace("[url", "[***");
-                    string_10 = string_10.Replace("[anchor", "[***");
+                    a = a.Replace("[url", "[***");
+                    a = a.Replace("[anchor", "[***");
                 }
                 else if (siteVo.sitelist == 2L)
                 {
-                    string_10 = string_10.Replace("[img", "[***");
+                    a = a.Replace("[img", "[***");
                 }
                 else if (siteVo.sitelist == 3L)
                 {
-                    string_10 = string_10.Replace("[", "*");
-                    string_10 = string_10.Replace("]", "*");
+                    a = a.Replace("[", "*");
+                    a = a.Replace("]", "*");
                 }
             }
-            string_10 = string_10.Replace("\"", "“");
-            string_10 = string_10.Replace("'", "‘");
-            string_10 = string_10.Replace("<", "&lt;");
-            string_10 = string_10.Replace(">", "&gt;");
-            string_10 = string_10.Replace("\r\n", "[br]");
+            a = a.Replace("\"", "“");
+            a = a.Replace("'", "‘");
+            a = a.Replace("<", "&lt;");
+            a = a.Replace(">", "&gt;");
+            a = a.Replace("\r\n", "[br]");
             string text = PubConstant.GetAppString("KL_In") + "|" + PubConstant.GetAppString("KL_Filter_All");
             if (!flag && siteVo != null)
             {
@@ -1199,7 +1199,7 @@ namespace YaoHuo.Plugin.WebSite
                 {
                     try
                     {
-                        string_10 = Regex.Replace(string_10, text2, "*", RegexOptions.IgnoreCase);
+                        a = Regex.Replace(a, text2, "*", RegexOptions.IgnoreCase);
                     }
                     catch (Exception)
                     {
@@ -1208,13 +1208,13 @@ namespace YaoHuo.Plugin.WebSite
             }
             if (!flag)
             {
-                string_10 = string_10.Replace("[sid]", "[sid2]");
-                string_10 = string_10.Replace("[sid1]", "[sid2]");
+                a = a.Replace("[sid]", "[sid2]");
+                a = a.Replace("[sid1]", "[sid2]");
             }
-            return string_10;
+            return a;
         }
 
-        public void IsCheckManagerLvl(string string_10, string classadmin, string backurl)
+        public void IsCheckManagerLvl(string a, string classadmin, string backurl)
         {
             bool flag = false;
             bool flag2 = false;
@@ -1224,8 +1224,8 @@ namespace YaoHuo.Plugin.WebSite
             {
                 flag = true;
             }
-            string_10 = "|" + string_10 + "|";
-            if (string_10.IndexOf("|" + userVo.managerlvl + "|") >= 0)
+            a = "|" + a + "|";
+            if (a.IndexOf("|" + userVo.managerlvl + "|") >= 0)
             {
                 flag2 = true;
             }
@@ -1236,7 +1236,7 @@ namespace YaoHuo.Plugin.WebSite
             needPassWordToAdmin();
         }
 
-        public bool IsCheckManagerLvl(string string_10, string classadmin)
+        public bool IsCheckManagerLvl(string a, string classadmin)
         {
             if (userid == "0")
             {
@@ -1247,15 +1247,15 @@ namespace YaoHuo.Plugin.WebSite
             {
                 return true;
             }
-            string_10 = "|" + string_10 + "|";
-            if (string_10.IndexOf("|" + userVo.managerlvl + "|") >= 0)
+            a = "|" + a + "|";
+            if (a.IndexOf("|" + userVo.managerlvl + "|") >= 0)
             {
                 return true;
             }
             return false;
         }
 
-        public void IsCheckUserManager(string userid, string string_10, string classadmin, string backurl)
+        public void IsCheckUserManager(string userid, string a, string classadmin, string backurl)
         {
             bool flag = false;
             bool flag2 = false;
@@ -1265,7 +1265,7 @@ namespace YaoHuo.Plugin.WebSite
             {
                 flag = true;
             }
-            if (string_10 == "00" || string_10 == "01")
+            if (a == "00" || a == "01")
             {
                 flag2 = true;
             }
@@ -1501,7 +1501,7 @@ namespace YaoHuo.Plugin.WebSite
             base.Response.End();
         }
 
-        public bool IsUserManager(string userid, string string_10, string classadmin)
+        public bool IsUserManager(string userid, string a, string classadmin)
         {
             bool result = false;
             if (userid == "0")
@@ -1516,7 +1516,7 @@ namespace YaoHuo.Plugin.WebSite
                     result = true;
                 }
             }
-            if (string_10 == "00" || string_10 == "01")
+            if (a == "00" || a == "01")
             {
                 result = true;
             }
@@ -1532,10 +1532,10 @@ namespace YaoHuo.Plugin.WebSite
             }
         }
 
-        public void IsCheckSuperAdmin(string userid, string string_10, string backurl)
+        public void IsCheckSuperAdmin(string userid, string a, string backurl)
         {
             IsLogin(userid, backurl);
-            if (string_10 != "00")
+            if (a != "00")
             {
                 backurl = ToHtm(backurl);
                 backurl = WapTool.URLtoWAP(backurl);
@@ -1544,10 +1544,10 @@ namespace YaoHuo.Plugin.WebSite
             needPassWordToAdmin();
         }
 
-        public void IsCheckWebSiteAdmin(string userid, string string_10, string backurl)
+        public void IsCheckWebSiteAdmin(string userid, string a, string backurl)
         {
             IsLogin(userid, backurl);
-            if (string_10 != "00" && string_10 != "01")
+            if (a != "00" && a != "01")
             {
                 backurl = ToHtm(backurl);
                 backurl = WapTool.URLtoWAP(backurl);
@@ -1871,9 +1871,9 @@ namespace YaoHuo.Plugin.WebSite
         }
 
 
-        public void CheckFunction(string string_10, long page)
+        public void CheckFunction(string a, long page)
         {
-            if (method_1().IndexOf(string_10) < 0)
+            if (method_1().IndexOf(a) < 0)
             {
                 ShowTipInfo("<!--listS-->" + GetLang("你无购买此功能！|無此功能|No such function") + "<!--listE-->", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
             }
@@ -2348,9 +2348,9 @@ namespace YaoHuo.Plugin.WebSite
             return empty;
         }
 
-        public static bool IsIP(string string_10)
+        public static bool IsIP(string a)
         {
-            return Regex.IsMatch(string_10, "^((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)$");
+            return Regex.IsMatch(a, "^((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)$");
         }
 
         public void SaveBankLog(string local_userid, string actionName, string money, string opera_userid, string opera_nickname, string remark)

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin_guestlistWAP.aspx.cs" Inherits="YaoHuo.Plugin.BBS.admin_guestlistWAP" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_guestlistWAP.aspx.cs" Inherits="YaoHuo.Plugin.BBS.admin_guestlistWAP" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 Response.Write(WapTool.showTop(this.GetLang("论坛回贴|论坛回贴|re of the bbs"), wmlVo));//显示头                                                                                                                                                                       

@@ -9,7 +9,7 @@ namespace YaoHuo.Plugin.BBS
 {
 	public class toMedal : MyPageWap
     {
-        private string string_10 = PubConstant.GetAppString("InstanceName");
+        private string a = PubConstant.GetAppString("InstanceName");
 
         public string action = "";
 
@@ -34,7 +34,7 @@ namespace YaoHuo.Plugin.BBS
                 {
                     touserid = "0";
                 }
-                user_BLL user_BLL = new user_BLL(string_10);
+                user_BLL user_BLL = new user_BLL(a);
                 user_Model userInfo = user_BLL.getUserInfo(touserid, siteid);
                 if (userInfo != null)
                 {

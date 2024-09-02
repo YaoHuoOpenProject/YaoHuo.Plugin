@@ -93,14 +93,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\admin_wapClasslist.aspx" />
+    <Content Include="Admin\Admin_wapClasslist.aspx" />
     <Content Include="Admin\BaseSiteModifyWML.aspx" />
     <Content Include="Admin\BaseSiteModifyWML00.aspx" />
-    <Content Include="BBS\admin_guestlistWAP.aspx" />
-    <Content Include="BBS\admin_guestlistWAP00.aspx" />
-    <Content Include="BBS\admin_guestlistWAPdel00.aspx" />
-    <Content Include="BBS\admin_userlistWAP.aspx" />
-    <Content Include="BBS\admin_userlistWAP00.aspx" />
+    <Content Include="BBS\Admin_guestlistWAP.aspx" />
+    <Content Include="BBS\Admin_guestlistWAP00.aspx" />
+    <Content Include="BBS\Admin_guestlistWAPdel00.aspx" />
+    <Content Include="BBS\Admin_userlistWAP.aspx" />
+    <Content Include="BBS\Admin_userlistWAP00.aspx" />
     <Content Include="BBS\Book_re_mod.aspx" />
     <Content Include="BBS\Book_View_add.aspx" />
     <Content Include="BBS\Book_View_change.aspx" />
@@ -120,9 +120,12 @@
     <Content Include="BBS\ModifyPW.aspx" />
     <Content Include="BBS\ModifyRemark.aspx" />
     <Content Include="BBS\ModifyUserName.aspx" />
+    <Content Include="BBS\Report_add.aspx" />
+    <Content Include="BBS\Report_List.aspx" />
     <Content Include="BBS\ResetVIP.aspx" />
-    <Content Include="BBS\toMedal.aspx" />
-    <Content Include="BBS\userGuessBook.aspx" />
+    <Content Include="BBS\Share.aspx" />
+    <Content Include="BBS\ToMedal.aspx" />
+    <Content Include="BBS\UserGuessBook.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Games\ChuiNiu\Add.aspx" />
     <Content Include="Games\ChuiNiu\Book_List.aspx" />
@@ -140,7 +143,7 @@
     <Content Include="Lib\WeiXinClassManager.dll" />
     <Content Include="Lib\WwwClassManager.dll" />
     <Content Include="MyFile.aspx" />
-    <Content Include="Search\toManager.aspx" />
+    <Content Include="Search\ToManager.aspx" />
     <Content Include="WapIndex.aspx" />
     <Content Include="WapLogin.aspx" />
     <Content Include="Web.config" />
@@ -165,13 +168,13 @@
     <Content Include="BBS\ViewUser.aspx" />
     <Content Include="BBS\FriendList.aspx" />
     <Content Include="BBS\List.aspx" />
-    <Content Include="WML\admin_userlistWAP.aspx" />
+    <Content Include="WML\Admin_userlistWAP.aspx" />
     <Content Include="XinZhang\Book_View_Buy.aspx" />
     <Content Include="XinZhang\Book_View_My.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\admin_wapClasslist.aspx.cs">
-      <DependentUpon>admin_wapClasslist.aspx</DependentUpon>
+    <Compile Include="Admin\Admin_wapClasslist.aspx.cs">
+      <DependentUpon>Admin_wapClasslist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\BaseSiteModifyWML.aspx.cs">
@@ -182,24 +185,24 @@
       <DependentUpon>BaseSiteModifyWML00.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\admin_guestlistWAP.aspx.cs">
-      <DependentUpon>admin_guestlistWAP.aspx</DependentUpon>
+    <Compile Include="BBS\Admin_guestlistWAP.aspx.cs">
+      <DependentUpon>Admin_guestlistWAP.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\admin_guestlistWAP00.aspx.cs">
-      <DependentUpon>admin_guestlistWAP00.aspx</DependentUpon>
+    <Compile Include="BBS\Admin_guestlistWAP00.aspx.cs">
+      <DependentUpon>Admin_guestlistWAP00.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\admin_guestlistWAPdel00.aspx.cs">
-      <DependentUpon>admin_guestlistWAPdel00.aspx</DependentUpon>
+    <Compile Include="BBS\Admin_guestlistWAPdel00.aspx.cs">
+      <DependentUpon>Admin_guestlistWAPdel00.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\admin_userlistWAP.aspx.cs">
-      <DependentUpon>admin_userlistWAP.aspx</DependentUpon>
+    <Compile Include="BBS\Admin_userlistWAP.aspx.cs">
+      <DependentUpon>Admin_userlistWAP.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\admin_userlistWAP00.aspx.cs">
-      <DependentUpon>admin_userlistWAP00.aspx</DependentUpon>
+    <Compile Include="BBS\Admin_userlistWAP00.aspx.cs">
+      <DependentUpon>Admin_userlistWAP00.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_List.aspx.cs">
@@ -322,6 +325,14 @@
       <DependentUpon>ModifyUserName.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BBS\Report_add.aspx.cs">
+      <DependentUpon>Report_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Report_List.aspx.cs">
+      <DependentUpon>Report_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BBS\ResetVIP.aspx.cs">
       <DependentUpon>ResetVIP.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -338,8 +349,12 @@
       <DependentUpon>SendMoney_FreeMain.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\toMedal.aspx.cs">
-      <DependentUpon>toMedal.aspx</DependentUpon>
+    <Compile Include="BBS\Share.aspx.cs">
+      <DependentUpon>Share.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\ToMedal.aspx.cs">
+      <DependentUpon>ToMedal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\ToMoney.aspx.cs">
@@ -350,8 +365,8 @@
       <DependentUpon>ToMyBankMoney.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BBS\userGuessBook.aspx.cs">
-      <DependentUpon>userGuessBook.aspx</DependentUpon>
+    <Compile Include="BBS\UserGuessBook.aspx.cs">
+      <DependentUpon>UserGuessBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\UserInfo.aspx.cs">
@@ -412,8 +427,8 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Search\toManager.aspx.cs">
-      <DependentUpon>toManager.aspx</DependentUpon>
+    <Compile Include="Search\ToManager.aspx.cs">
+      <DependentUpon>ToManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tool\BlackTool.cs" />
@@ -435,8 +450,8 @@
       <DependentUpon>WapLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WML\admin_userlistWAP.aspx.cs">
-      <DependentUpon>admin_userlistWAP.aspx</DependentUpon>
+    <Compile Include="WML\Admin_userlistWAP.aspx.cs">
+      <DependentUpon>Admin_userlistWAP.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="XinZhang\Book_View_Buy.aspx.cs">

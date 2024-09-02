@@ -12,7 +12,7 @@ namespace YaoHuo.Plugin.BBS
 {
     public class admin_userlistWAP : MyPageWap
     {
-        private string string_10 = PubConstant.GetAppString("InstanceName");
+        private string a = PubConstant.GetAppString("InstanceName");
 
         public string action = "";
 
@@ -92,7 +92,7 @@ namespace YaoHuo.Plugin.BBS
             try
             {
                 pageSize = Convert.ToInt32(siteVo.MaxPerPage_Default);
-                wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
+                wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
                 if (GetRequestValue("getTotal") != "")
                 {
                     total = long.Parse(GetRequestValue("getTotal"));

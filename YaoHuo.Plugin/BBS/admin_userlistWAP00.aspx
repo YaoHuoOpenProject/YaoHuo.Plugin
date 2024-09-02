@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin_userlistWAP00.aspx.cs" Inherits="YaoHuo.Plugin.BBS.admin_userlistWAP00" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_userlistWAP00.aspx.cs" Inherits="YaoHuo.Plugin.BBS.admin_userlistWAP00" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 Response.Write(WapTool.showTop(this.GetLang("论坛内容审核|论坛內容审核|Check Content of the bbs"), wmlVo));//显示头                                                                                                                                                                       

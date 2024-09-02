@@ -11,7 +11,7 @@ namespace YaoHuo.Plugin.BBS
     public class Book_View_del : MyPageWap
     {
         public string why = "";
-        private string string_10 = PubConstant.GetAppString("InstanceName");
+        private string a = PubConstant.GetAppString("InstanceName");
         public string action = "";
         public string id = "";
         public string lpage = "";
@@ -53,7 +53,7 @@ namespace YaoHuo.Plugin.BBS
 
             NeedPassWordToAdminNew();
 
-            wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
+            wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
 
             long parsedId;
             if (!long.TryParse(id, out parsedId))

@@ -15,7 +15,7 @@ namespace YaoHuo.Plugin.Admin
 
     public string cname = "";
 
-    public string string_10 = "";
+    public string a = "";
 
     protected void Page_Load(object sender, EventArgs e)
     {

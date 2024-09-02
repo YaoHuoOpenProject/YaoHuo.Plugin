@@ -10,7 +10,7 @@ namespace YaoHuo.Plugin.BBS
 {
     public class Book_View_end : MyPageWap
     {
-        private string string_10 = PubConstant.GetAppString("InstanceName");
+        private string a = PubConstant.GetAppString("InstanceName");
 
         public string action = "";
 
@@ -42,7 +42,7 @@ namespace YaoHuo.Plugin.BBS
             whylock = whylock.Replace("|", "");
             IsLogin(userid, "bbs/book_view_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
             //needPassWordToAdmin();
-            wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
+            wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
             bookVo = wap_bbs_BLL.GetModel(long.Parse(id));
             if (bookVo == null)
             {

@@ -16,7 +16,7 @@ namespace YaoHuo.Plugin.BBS
     public class userGuessBook : MyPageWap
     {
 
-    private string string_10 = PubConstant.GetAppString("InstanceName");
+    private string a = PubConstant.GetAppString("InstanceName");
 
     public string action = "";
 
@@ -28,7 +28,7 @@ namespace YaoHuo.Plugin.BBS
 
     public string INFO = "";
 
-    public string string_11 = "0";
+    public string id = "0";
 
     public string lpage = "";
 
@@ -89,7 +89,7 @@ namespace YaoHuo.Plugin.BBS
         try
         {
             pageSize = Convert.ToInt32(siteVo.MaxPerPage_Default);
-            wap2_userGuessBook_BLL wap2_userGuessBook_BLL = new wap2_userGuessBook_BLL(string_10);
+            wap2_userGuessBook_BLL wap2_userGuessBook_BLL = new wap2_userGuessBook_BLL(a);
             if (GetRequestValue("getTotal") != "" && GetRequestValue("getTotal") != "0")
             {
                 total = Convert.ToInt32(GetRequestValue("getTotal"));
@@ -133,7 +133,7 @@ namespace YaoHuo.Plugin.BBS
         {
             KL_CheckZoneReCount = "20";
         }
-        wap2_userGuessBook_BLL wap2_userGuessBook_BLL = new wap2_userGuessBook_BLL(string_10);
+        wap2_userGuessBook_BLL wap2_userGuessBook_BLL = new wap2_userGuessBook_BLL(a);
         long num = wap2_userGuessBook_BLL.GetListCount(" (DATEDIFF(dd, addtime, GETDATE()) < 1) and siteid=" + long.Parse(siteid) + " and fromuserid=" + long.Parse(userid));
         if (text.Trim().Length < 2)
         {

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="toMedal.aspx.cs" Inherits="YaoHuo.Plugin.BBS.toMedal" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ToMedal.aspx.cs" Inherits="YaoHuo.Plugin.BBS.toMedal" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 Response.Write(WapTool.showTop(this.GetLang("奖励会员勋章|奖励会员勋章设置|Content of the guessbook"), wmlVo));//显示头                                                                                                                                                                       

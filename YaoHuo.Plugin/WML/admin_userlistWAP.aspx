@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin_userlistWAP.aspx.cs" Inherits="YaoHuo.Plugin.WML.admin_userlistWAP" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_userlistWAP.aspx.cs" Inherits="YaoHuo.Plugin.WML.admin_userlistWAP" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 Response.Write(WapTool.showTop(this.GetLang("WML内容|WML內容|Content of the wml"), wmlVo));//显示头                                                                                                                                                                       

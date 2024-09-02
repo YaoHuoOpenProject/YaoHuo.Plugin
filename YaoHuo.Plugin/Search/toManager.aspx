@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="toManager.aspx.cs" Inherits="YaoHuo.Plugin.Search.toManager" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ToManager.aspx.cs" Inherits="YaoHuo.Plugin.Search.toManager" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
 Response.Write(WapTool.showTop(this.GetLang("管理会员|管理会员|user admin"), wmlVo));//显示头                                                                                                                                                                       

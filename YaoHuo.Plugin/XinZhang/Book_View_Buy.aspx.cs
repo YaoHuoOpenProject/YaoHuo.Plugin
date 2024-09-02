@@ -41,7 +41,6 @@ namespace YaoHuo.Plugin.XinZhang
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Discarded unreachable code: IL_0195
             this.id = base.GetRequestValue("id");
             this.lpage = base.GetRequestValue("lpage");
             this.action = base.GetRequestValue("action");

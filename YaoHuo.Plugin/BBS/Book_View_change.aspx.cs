@@ -10,7 +10,7 @@ namespace YaoHuo.Plugin.BBS
 {
 	public class Book_View_change : MyPageWap
     {
-        private string string_10 = PubConstant.GetAppString("InstanceName");
+        private string a = PubConstant.GetAppString("InstanceName");
 
         public wap_book_Model bookVo = new wap_book_Model();
 
@@ -41,7 +41,7 @@ namespace YaoHuo.Plugin.BBS
             lpage = GetRequestValue("lpage");
             toclassid = classid;
             CheckManagerLvl("04", classVo.adminusername, "bbs/book_view_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;lpage=" + lpage + "&amp;id=" + id);
-            class_BLL class_BLL = new class_BLL(string_10);
+            class_BLL class_BLL = new class_BLL(a);
             classList = class_BLL.GetFromPathList(long.Parse(siteid), "bbs/index.aspx");
             if (!(action == "gomod"))
             {
@@ -50,7 +50,7 @@ namespace YaoHuo.Plugin.BBS
             try
             {
                 toclassid = GetRequestValue("toclassid");
-                wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
+                wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
                 bbsVo = wap_bbs_BLL.GetModel(long.Parse(id));
                 if (bbsVo == null)
                 {

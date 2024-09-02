@@ -12,7 +12,7 @@ namespace YaoHuo.Plugin.BBS
     public class MessageList_view : MyPageWap
     {
 
-    private string string_10 = PubConstant.GetAppString("InstanceName");
+    private string a = PubConstant.GetAppString("InstanceName");
 
     public string action = "";
 
@@ -89,7 +89,7 @@ namespace YaoHuo.Plugin.BBS
             base.Response.Cookies["KL_MESSAGE_TIMES"].Expires = DateTime.Now.AddYears(1);
             base.Response.Cookies["KL_MESSAGE_TIMES"].Value = isclose;
         }
-        wap_message_BLL wap_message_BLL = new wap_message_BLL(string_10);
+        wap_message_BLL wap_message_BLL = new wap_message_BLL(a);
         bookVo = wap_message_BLL.GetModel(long.Parse(id));
         if (bookVo.userid.ToString() != userid && bookVo.touserid.ToString() != userid)
         {

@@ -6,7 +6,7 @@ namespace YaoHuo.Plugin.BBS
 {
     public class ModifyHead : MyPageWap
     {
-    private string string_10 = PubConstant.GetAppString("InstanceName");
+    private string a = PubConstant.GetAppString("InstanceName");
 
     public string txtPW = "";
 
