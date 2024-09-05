@@ -2045,28 +2045,99 @@ namespace YaoHuo.Plugin.Tool
                 return WapStr;
             }
             WapStr = UBB.CenterIntercept(WapStr, wmlVo);
+            //if (WapStr.IndexOf("[/img]") > 0)
+            //{
+            //    if (wmlVo.strUrl.ToLower().IndexOf("index") > 0)
+            //    {
+            //        Regex regex = new Regex("(\\[img\\])(.[^\\[]*)(\\[\\/img\\])");
+            //        WapStr = ((!(wmlVo.ver == "0"))
+            //            ? regex.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\"/>")
+            //            : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\"/></a>"));
+            //    }
+            //    else
+            //    {
+            //        Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|avif|apng|jpg|jpeg|png|bmp|webp|svg|svgz))(\\[\\/img\\])", RegexOptions.IgnoreCase);
+            //        WapStr = ((!(wmlVo.ver == "0"))
+            //            ? regex.Replace(WapStr, "<img class=\"ubbimg\" src=\"$2\" referrerpolicy=\"no-referrer\"/>")
+            //            : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\"/></a>"));
+            //    }
+            //    Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|avif|apng|jpg|jpeg|png|bmp|webp|svg|svgz))\\])(.[^\\[]*)(\\[\\/img\\])", RegexOptions.IgnoreCase);
+            //    WapStr = ((!(wmlVo.ver == "0"))
+            //        ? regex2.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\"$4\"/>")
+            //        : regex2.Replace(WapStr, "<a href=\"javascript:T('{{img=$2}}$4{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\"$4\"/></a>"));
+            //}
             if (WapStr.IndexOf("[/img]") > 0)
             {
                 if (wmlVo.strUrl.ToLower().IndexOf("index") > 0)
                 {
-                    Regex regex = new Regex("(\\[img\\])(.[^\\[]*)(\\[\\/img\\])");
+                    Regex regex = new Regex(@"\[img\](\/?[^\[]+\.(gif|avif|apng|jpg|jpeg|png|bmp|webp|svg|svgz))\[\/img\]", RegexOptions.IgnoreCase);
                     WapStr = ((!(wmlVo.ver == "0"))
-                        ? regex.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\"/>")
-                        : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\"/></a>"));
+                        ? regex.Replace(WapStr, "<img src=\"$1\" referrerpolicy=\"no-referrer\"/>")
+                        : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$1{{/img}}');\"><img src=\"$1\" referrerpolicy=\"no-referrer\"/></a>"));
                 }
                 else
                 {
-                    //Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|GIF|JPG))(\\[\\/img\\])");
-                    Regex regex = new Regex("(\\[img\\])(.[^\\[|^\\?^&]*\\.(gif|avif|apng|jpg|jpeg|png|bmp|webp|svg|svgz))(\\[\\/img\\])", RegexOptions.IgnoreCase);
+                    Regex regex = new Regex(@"\[img\](\/?[^\[]+\.(gif|avif|apng|jpg|jpeg|png|bmp|webp|svg|svgz))\[\/img\]", RegexOptions.IgnoreCase);
                     WapStr = ((!(wmlVo.ver == "0"))
-                        ? regex.Replace(WapStr, "<img class=\"ubbimg\" src=\"$2\" referrerpolicy=\"no-referrer\"/>")
-                        : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\"/></a>"));
+                        ? regex.Replace(WapStr, "<img class=\"ubbimg\" src=\"$1\" referrerpolicy=\"no-referrer\"/>")
+                        : regex.Replace(WapStr, "<a href=\"javascript:T('{{img}}$1{{/img}}');\"><img src=\"$1\" referrerpolicy=\"no-referrer\"/></a>"));
                 }
-                //Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|jpg|bmp|jpeg|png|GIF|JPG))\\])(.[^\\[]*)(\\[\\/img\\])");
-                Regex regex2 = new Regex("(\\[img=(.[^\\[|^\\?^&]*\\.(gif|avif|apng|jpg|jpeg|png|bmp|webp|svg|svgz))\\])(.[^\\[]*)(\\[\\/img\\])", RegexOptions.IgnoreCase);
+                Regex regex2 = new Regex(@"\[img=(\d+)\](\/?[^\[]+\.(gif|avif|apng|jpg|jpeg|png|bmp|webp|svg|svgz))\[\/img\]", RegexOptions.IgnoreCase);
                 WapStr = ((!(wmlVo.ver == "0"))
-                    ? regex2.Replace(WapStr, "<img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\"$4\"/>")
-                    : regex2.Replace(WapStr, "<a href=\"javascript:T('{{img=$2}}$4{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\" alt=\"$4\"/></a>"));
+                    ? regex2.Replace(WapStr, "<img class=\"ubbimg\" src=\"$2\" referrerpolicy=\"no-referrer\" style=\"width:$1px;\"/>")
+                    : regex2.Replace(WapStr, "<a href=\"javascript:T('{{img=$2}}$2{{/img}}');\"><img src=\"$2\" referrerpolicy=\"no-referrer\" style=\"width:$1px;\"/></a>"));
+            }
+            if (WapStr.IndexOf("[/imgurl]") > 0)
+            {
+                Regex regex = new Regex("(\\[imgurl(?:=(.[^\\]]*))?\\])(.[^\\[]*)(\\[\\/imgurl\\])");
+                try
+                {
+                    Match match = regex.Match(WapStr);
+                    while (match.Success)
+                    {
+                        string size = match.Groups[2].Value.Replace("｜", "|");
+                        string content = match.Groups[3].Value.Replace("｜", "|");
+                        string[] urls = content.Split('*');
+                        string imgSrc = urls[0];
+                        string linkHref = urls.Length > 1 ? urls[1] : imgSrc; // 如果没有提供链接地址，使用图片地址
+
+                        StringBuilder stringBuilder = new StringBuilder();
+                        if (!string.IsNullOrEmpty(size))
+                        {
+                            string[] dimensions = size.Split('*');
+                            if (dimensions.Length > 0 && IsNumeric(dimensions[0]))
+                            {
+                                stringBuilder.Append(" width=" + dimensions[0]);
+                            }
+                            if (dimensions.Length > 1 && IsNumeric(dimensions[1]))
+                            {
+                                stringBuilder.Append(" height=" + dimensions[1]);
+                            }
+                        }
+
+                        string imgTag = $"<img src=\"{imgSrc}\" {stringBuilder.ToString()} />";
+                        string linkTag = $"<a href=\"{linkHref}\">{imgTag}</a>";
+
+                        if (wmlVo.ver == "0")
+                        {
+                            WapStr = regex.Replace(WapStr, $"<a href=\"javascript:T('{{imgurl={size}}}{content}{{/imgurl}}');\">{imgTag}</a>", 1);
+                        }
+                        else if (wmlVo.ver == "1")
+                        {
+                            WapStr = regex.Replace(WapStr, linkTag, 1);
+                        }
+                        else
+                        {
+                            WapStr = regex.Replace(WapStr, linkTag, 1);
+                        }
+
+                        match = match.NextMatch();
+                    }
+                }
+                catch (Exception)
+                {
+                    WapStr = regex.Replace(WapStr, "{格式错误}");
+                }
             }
             //if (WapStr.IndexOf("[/bgsound]") > 0)
             //{
@@ -2303,58 +2374,6 @@ namespace YaoHuo.Plugin.Tool
                         string[] array3 = text2.Split('|');
                         int num = random.Next(0, array3.Length);
                         WapStr = regex.Replace(WapStr, showImg(array3[num]), 1);
-                        match = match.NextMatch();
-                    }
-                }
-                catch (Exception)
-                {
-                    WapStr = regex.Replace(WapStr, "{格式错误}");
-                }
-            }
-            if (WapStr.IndexOf("[/imgurl]") > 0)
-            {
-                Regex regex = new Regex("(\\[imgurl(?:=(.[^\\]]*))?\\])(.[^\\[]*)(\\[\\/imgurl\\])");
-                try
-                {
-                    Match match = regex.Match(WapStr);
-                    while (match.Success)
-                    {
-                        string size = match.Groups[2].Value.Replace("｜", "|");
-                        string content = match.Groups[3].Value.Replace("｜", "|");
-                        string[] urls = content.Split('*');
-                        string imgSrc = urls[0];
-                        string linkHref = urls.Length > 1 ? urls[1] : imgSrc; // 如果没有提供链接地址，使用图片地址
-
-                        StringBuilder stringBuilder = new StringBuilder();
-                        if (!string.IsNullOrEmpty(size))
-                        {
-                            string[] dimensions = size.Split('*');
-                            if (dimensions.Length > 0 && IsNumeric(dimensions[0]))
-                            {
-                                stringBuilder.Append(" width=" + dimensions[0]);
-                            }
-                            if (dimensions.Length > 1 && IsNumeric(dimensions[1]))
-                            {
-                                stringBuilder.Append(" height=" + dimensions[1]);
-                            }
-                        }
-
-                        string imgTag = $"<img src=\"{imgSrc}\" {stringBuilder.ToString()} />";
-                        string linkTag = $"<a href=\"{linkHref}\">{imgTag}</a>";
-
-                        if (wmlVo.ver == "0")
-                        {
-                            WapStr = regex.Replace(WapStr, $"<a href=\"javascript:T('{{imgurl={size}}}{content}{{/imgurl}}');\">{imgTag}</a>", 1);
-                        }
-                        else if (wmlVo.ver == "1")
-                        {
-                            WapStr = regex.Replace(WapStr, linkTag, 1);
-                        }
-                        else
-                        {
-                            WapStr = regex.Replace(WapStr, linkTag, 1);
-                        }
-
                         match = match.NextMatch();
                     }
                 }

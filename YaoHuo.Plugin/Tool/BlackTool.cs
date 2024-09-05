@@ -134,11 +134,11 @@ namespace YaoHuo.Plugin.Tool
             //会员角色ID
             var vipRoleIDs = new string[]
             {
-                "101",
-                "105",
-                "140",
-                "180",
-                "358",
+        "101",
+        "105",
+        "140",
+        "180",
+        "358",
             };
             //排除黑名单用户脚本
             var sqlStr = string.Empty;
@@ -146,20 +146,21 @@ namespace YaoHuo.Plugin.Tool
             {
                 //普通用户，不显示黑名单的帖子
                 sqlStr = $@" and {name} not in (
-    select frienduserid
-    from wap_friends
-    where friendtype = 1
-    and userid = {userId}
-)";
+            select frienduserid
+            from wap_friends
+            where friendtype = 1
+            and userid = {userId}
+        )";
                 //普通用户被会员拉黑时，不显示会员的帖子
-                sqlStr += $@" and  {name} not in (
-    select t1.userid
-    from wap_friends t1
-    inner join UserVO_View t2 on t1.userid = t2.userid
-    where friendtype = 1
-    and t1.frienduserid = {userId}
-    and t2.SessionTimeout in ({string.Join(",", vipRoleIDs)})
-)";
+                sqlStr += $@" and not exists (
+            select 1
+            from wap_friends t1
+            inner join UserVO_View t2 on t1.userid = t2.userid
+            where t1.friendtype = 1
+            and t1.frienduserid = {userId}
+            and t2.SessionTimeout in ({string.Join(",", vipRoleIDs)})
+            and t1.userid = {name}
+        )";
             }
             return sqlStr;
         }
