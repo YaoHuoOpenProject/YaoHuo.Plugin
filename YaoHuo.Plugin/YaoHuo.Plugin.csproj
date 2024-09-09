@@ -96,12 +96,20 @@
     <Content Include="Admin\Admin_WapClasslist.aspx" />
     <Content Include="Admin\BaseSiteModifyWML.aspx" />
     <Content Include="Admin\BaseSiteModifyWML00.aspx" />
+    <Content Include="Album\AlbumList.aspx" />
+    <Content Include="Album\AlbumList_del.aspx" />
+    <Content Include="Album\Book_View.aspx" />
     <Content Include="BBS\Admin_guestlistWAP.aspx" />
     <Content Include="BBS\Admin_guestlistWAP00.aspx" />
     <Content Include="BBS\Admin_guestlistWAPdel00.aspx" />
     <Content Include="BBS\Admin_userlistWAP.aspx" />
     <Content Include="BBS\Admin_userlistWAP00.aspx" />
+    <Content Include="BBS\Book_List_delmy.aspx" />
+    <Content Include="BBS\Book_Re_del.aspx" />
+    <Content Include="BBS\Book_Re_delmy.aspx" />
     <Content Include="BBS\Book_Re_mod.aspx" />
+    <Content Include="BBS\Book_Re_my.aspx" />
+    <Content Include="BBS\Book_Re_top.aspx" />
     <Content Include="BBS\Book_View_add.aspx" />
     <Content Include="BBS\Book_View_addfile.aspx" />
     <Content Include="BBS\Book_View_addurl.aspx" />
@@ -115,6 +123,7 @@
     <Content Include="BBS\Book_View_sendmoney.aspx" />
     <Content Include="BBS\Book_View_top.aspx" />
     <Content Include="BBS\Book_View_topall.aspx" />
+    <Content Include="BBS\Download.aspx" />
     <Content Include="BBS\LockUser_List_add.aspx" />
     <Content Include="BBS\LockUser_List_del.aspx" />
     <Content Include="BBS\MessageList_View.aspx" />
@@ -189,6 +198,18 @@
       <DependentUpon>BaseSiteModifyWML00.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Album\AlbumList.aspx.cs">
+      <DependentUpon>AlbumList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Album\AlbumList_del.aspx.cs">
+      <DependentUpon>AlbumList_del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Album\Book_View.aspx.cs">
+      <DependentUpon>Book_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BBS\Admin_guestlistWAP.aspx.cs">
       <DependentUpon>Admin_guestlistWAP.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -213,12 +234,32 @@
       <DependentUpon>Book_List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BBS\Book_List_delmy.aspx.cs">
+      <DependentUpon>Book_List_delmy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BBS\Book_Re.aspx.cs">
       <DependentUpon>Book_Re.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BBS\Book_Re_del.aspx.cs">
+      <DependentUpon>Book_Re_del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_Re_delmy.aspx.cs">
+      <DependentUpon>Book_Re_delmy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BBS\Book_Re_mod.aspx.cs">
       <DependentUpon>Book_Re_mod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_Re_my.aspx.cs">
+      <DependentUpon>Book_Re_my.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_Re_top.aspx.cs">
+      <DependentUpon>Book_Re_top.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_View.aspx.cs">
@@ -291,6 +332,10 @@
     </Compile>
     <Compile Include="BBS\Book_View_topall.aspx.cs">
       <DependentUpon>Book_View_topall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Download.aspx.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Index.aspx.cs">

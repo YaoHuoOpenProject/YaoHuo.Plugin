@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_guestlistWAP.aspx.cs" Inherits="YaoHuo.Plugin.BBS.admin_guestlistWAP" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-Response.Write(WapTool.showTop(this.GetLang("论坛回贴|论坛回贴|re of the bbs"), wmlVo));//显示头                                                                                                                                                                       
+Response.Write(WapTool.showTop(this.GetLang("论坛回帖|论坛回帖|re of the bbs"), wmlVo));//显示头                                                                                                                                                                       
 if (ver == "1")
 {
 }
@@ -9,7 +9,7 @@ else //2.0界面
 {
     strhtml.Append("<div class=\"title\">" + classVo.classname + "</div>");
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/admin_userlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">内容管理</a><span class=\"separate\"></span>回贴管理<br/>");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs/admin_userlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">内容管理</a><span class=\"separate\"></span>回帖管理<br/>");
     strhtml.Append("<form id=\"form1\" action=\"" + http_start + "bbs/admin_guestlistWAP.aspx\" method=\"get\">");
     strhtml.Append("关键字 <input type=\"text\" name=\"key\" value=\"" + key + "\" style=\"width:60%\"/><br/>");
     strhtml.Append("栏目ID <input type=\"text\" name=\"classid\" value=\"" + classid + "\"  style=\"width:30%\"/><br/>");

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using KeLin.ClassManager;
 using KeLin.ClassManager.BLL;
@@ -276,87 +277,93 @@ namespace YaoHuo.Plugin.BBS
                     {
                         INFO = "REPEAT";
                     }
-                    else if (KL_CheckBBSCount != "0" && !WapTool.CheckUserBBSCount(siteid, userid, KL_CheckBBSCount, "bbs"))
-                    {
-                        INFO = "MAX";
-                    }
-                    else if (WapTool.isLockuser(siteid, userid, classid) > -1L)
-                    {
-                        INFO = "LOCK";
-                    }
-                    else if (WapTool.CheckStrCount(freerule1, "|") != WapTool.CheckStrCount(freerule2, "|"))
-                    {
-                        INFO = "FORMATERR";
-                    }
-                    else if (long.Parse(freemoney) > userVo.money || long.Parse(freemoney) < 1L)
-                    {
-                        INFO = "NOMONEY";
-                    }
-                    else if (allMoney > long.Parse(freemoney))
-                    {
-                        INFO = "MAXMONEY";
-                    }
-                    else if (array2.Length > 1 && allMoney != long.Parse(freemoney))
-                    {
-                        INFO = "NOEQUALMONEY";
-                    }
                     else
                     {
-                        Session["content"] = book_title;
-                        stype = stype.Replace("类别", "");
-                        face = face.Replace("表情", "");
-                        if (stype != "")
+                        List<long> exemptUserIds = new List<long> { 1000 }; // 这里添加不受限制的用户ID
+                        long userIdLong;
+
+                        if (long.TryParse(userid, out userIdLong) && !exemptUserIds.Contains(userIdLong) && KL_CheckBBSCount != "0" && !WapTool.CheckUserBBSCount(siteid, userid, KL_CheckBBSCount, "bbs"))
                         {
-                            book_title = "[" + stype + "]" + book_title;
+                            INFO = "MAX";
                         }
-                        if (face.Trim().Length > 3 && face.Substring(face.Length - 3, 3).ToLower() == "gif")
+                        else if (WapTool.isLockuser(siteid, userid, classid) > -1L)
                         {
-                            book_title = "[img]face/" + face + "[/img]" + book_title;
+                            INFO = "LOCK";
                         }
-                        if (book_title.Length > 200)
+                        else if (WapTool.CheckStrCount(freerule1, "|") != WapTool.CheckStrCount(freerule2, "|"))
                         {
-                            book_title = book_title.Substring(0, 200);
+                            INFO = "FORMATERR";
                         }
-                        wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
-                        wap_bbs_Model wap_bbs_Model = new wap_bbs_Model();
-                        wap_bbs_Model.ischeck = siteVo.isCheck;
-                        wap_bbs_Model.userid = long.Parse(siteid);
-                        wap_bbs_Model.book_classid = long.Parse(classid);
-                        wap_bbs_Model.book_title = book_title;
-                        wap_bbs_Model.book_author = userVo.nickname;
-                        wap_bbs_Model.book_pub = userid;
-                        wap_bbs_Model.book_content = book_content;
-                        wap_bbs_Model.book_date = DateTime.Now;
-                        wap_bbs_Model.reShow = 0L;
-                        wap_bbs_Model.sendMoney = 0L;
-                        wap_bbs_Model.viewmoney = 0L;
-                        wap_bbs_Model.viewtype = 0L;
-                        wap_bbs_Model.reDate = DateTime.Now;
-                        wap_bbs_Model.freeMoney = long.Parse(freemoney);
-                        wap_bbs_Model.freeLeftMoney = wap_bbs_Model.freeMoney;
-                        wap_bbs_Model.freeRule = freerule1 + "_" + freerule2;
-                        getid = wap_bbs_BLL.Add(wap_bbs_Model);
-                        getmoney = WapTool.GetSiteDefault(siteVo.moneyregular, 0);
-                        if (!WapTool.IsNumeric(getmoney))
+                        else if (long.Parse(freemoney) > userVo.money || long.Parse(freemoney) < 1L)
                         {
-                            getmoney = "0";
+                            INFO = "NOMONEY";
                         }
-                        getexpr = WapTool.GetSiteDefault(siteVo.lvlRegular, 0);
-                        if (!WapTool.IsNumeric(getexpr))
+                        else if (allMoney > long.Parse(freemoney))
                         {
-                            getexpr = "0";
+                            INFO = "MAXMONEY";
                         }
-                        MainBll.UpdateSQL("update [user] set [money]=([money]+" + getmoney + "-" + long.Parse(freemoney) + "),expR=expR+" + getexpr + ",bbscount=" + (userVo.bbsCount + 1L) + " where siteid=" + siteid + " and userid=" + userid);
-                        SaveBankLog(userid, "论坛发帖", getmoney.ToString(), userid, nickname, "发派币帖[" + getid + "]");
-                        if (long.Parse(freemoney) > 0L)
+                        else if (array2.Length > 1 && allMoney != long.Parse(freemoney))
                         {
-                            SaveBankLog(userid, "发派币帖", "-" + freemoney.ToString(), userid, nickname, "发布派币帖[" + getid + "]");
+                            INFO = "NOEQUALMONEY";
                         }
-                        VisiteCount("发表新帖:<a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + getid + "\">" + WapTool.GetShowImg(wap_bbs_Model.book_title, "200", "bbs") + "</a>");
-                        INFO = "OK";
-                        WapTool.ClearDataBBS("bbs" + siteid + classid);
-                        WapTool.ClearDataTemp("bbsTotal" + siteid + classid);
-                        Action_user_doit(1);
+                        else
+                        {
+                            Session["content"] = book_title;
+                            stype = stype.Replace("类别", "");
+                            face = face.Replace("表情", "");
+                            if (stype != "")
+                            {
+                                book_title = "[" + stype + "]" + book_title;
+                            }
+                            if (face.Trim().Length > 3 && face.Substring(face.Length - 3, 3).ToLower() == "gif")
+                            {
+                                book_title = "[img]face/" + face + "[/img]" + book_title;
+                            }
+                            if (book_title.Length > 200)
+                            {
+                                book_title = book_title.Substring(0, 200);
+                            }
+                            wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
+                            wap_bbs_Model wap_bbs_Model = new wap_bbs_Model();
+                            wap_bbs_Model.ischeck = siteVo.isCheck;
+                            wap_bbs_Model.userid = long.Parse(siteid);
+                            wap_bbs_Model.book_classid = long.Parse(classid);
+                            wap_bbs_Model.book_title = book_title;
+                            wap_bbs_Model.book_author = userVo.nickname;
+                            wap_bbs_Model.book_pub = userid;
+                            wap_bbs_Model.book_content = book_content;
+                            wap_bbs_Model.book_date = DateTime.Now;
+                            wap_bbs_Model.reShow = 0L;
+                            wap_bbs_Model.sendMoney = 0L;
+                            wap_bbs_Model.viewmoney = 0L;
+                            wap_bbs_Model.viewtype = 0L;
+                            wap_bbs_Model.reDate = DateTime.Now;
+                            wap_bbs_Model.freeMoney = long.Parse(freemoney);
+                            wap_bbs_Model.freeLeftMoney = wap_bbs_Model.freeMoney;
+                            wap_bbs_Model.freeRule = freerule1 + "_" + freerule2;
+                            getid = wap_bbs_BLL.Add(wap_bbs_Model);
+                            getmoney = WapTool.GetSiteDefault(siteVo.moneyregular, 0);
+                            if (!WapTool.IsNumeric(getmoney))
+                            {
+                                getmoney = "0";
+                            }
+                            getexpr = WapTool.GetSiteDefault(siteVo.lvlRegular, 0);
+                            if (!WapTool.IsNumeric(getexpr))
+                            {
+                                getexpr = "0";
+                            }
+                            MainBll.UpdateSQL("update [user] set [money]=([money]+" + getmoney + "-" + long.Parse(freemoney) + "),expR=expR+" + getexpr + ",bbscount=" + (userVo.bbsCount + 1L) + " where siteid=" + siteid + " and userid=" + userid);
+                            SaveBankLog(userid, "论坛发帖", getmoney.ToString(), userid, nickname, "发派币帖[" + getid + "]");
+                            if (long.Parse(freemoney) > 0L)
+                            {
+                                SaveBankLog(userid, "发派币帖", "-" + freemoney.ToString(), userid, nickname, "发布派币帖[" + getid + "]");
+                            }
+                            VisiteCount("发表新帖:<a href=\"" + http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + getid + "\">" + WapTool.GetShowImg(wap_bbs_Model.book_title, "200", "bbs") + "</a>");
+                            INFO = "OK";
+                            WapTool.ClearDataBBS("bbs" + siteid + classid);
+                            WapTool.ClearDataTemp("bbsTotal" + siteid + classid);
+                            Action_user_doit(1);
+                        }
                     }
                 }
                 catch (Exception ex)

@@ -11,20 +11,20 @@
         lang2 = "取消";
         lang3 = "Cancel";
     }
-Response.Write(WapTool.showTop(this.GetLang(lang1 + "设沉贴子|" + lang2 + "设沉貼子|" + lang3 + " Top Good"), wmlVo));//显示头                                                                                                                                                             
+Response.Write(WapTool.showTop(this.GetLang(lang1 + "设沉帖子|" + lang2 + "设沉貼子|" + lang3 + " Top Good"), wmlVo));//显示头                                                                                                                                                             
 if (ver == "1")
 {
     strhtml.Append("<p>");
     strhtml.Append(this.ERROR);
     if (this.INFO == "")
     {
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_down.aspx?action=gomod&amp;tops=" + this.tops + "&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定要" + lang1 + "设沉此贴吗？是！|確定要" + lang2 + "设沉此贴嗎？是！|Are you sure? YES") + "</a><br/><br/>注意：如有附件请不要操作，否则看不到附件！<br/>");
+        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_down.aspx?action=gomod&amp;tops=" + this.tops + "&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定要" + lang1 + "设沉此帖吗？是！|確定要" + lang2 + "设沉此帖嗎？是！|Are you sure? YES") + "</a><br/><br/>注意：如有附件请不要操作，否则看不到附件！<br/>");
     }else if(this.INFO=="ERR"){
         strhtml.Append("<b>" + this.GetLang(lang1 + "设沉失败！|" + lang2 + "设沉失敗！|" + lang3 + " TOP Failure!") + "</b><br/>");
     }
     else if (this.INFO == "NOTDOWN")
     {
-        strhtml.Append("<b>附件贴不能设置</b><br/>");
+        strhtml.Append("<b>附件帖不能设置</b><br/>");
     }
     else if (this.INFO == "OK")
     {
@@ -37,12 +37,12 @@ if (ver == "1")
 }
 else //2.0界面
 {
-    strhtml.Append("<div class=\"title\">" + this.GetLang(lang1 + "设沉贴子|" + lang2 + "设沉貼子|" + lang3 + " Top Notes") + "</div>");
+    strhtml.Append("<div class=\"title\">" + this.GetLang(lang1 + "设沉帖子|" + lang2 + "设沉貼子|" + lang3 + " Top Notes") + "</div>");
     strhtml.Append(this.ERROR);
     if (this.INFO == "")
     {
         strhtml.Append("<div class=\"content\">");
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_down.aspx?action=gomod&amp;tops=" + this.tops + "&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定要" + lang1 + "设沉此贴吗？是！|確定要" + lang2 + "设沉此贴嗎？是！|Are you sure? YES") + "</a><br/>注意：如有附件请勿操作，否则看不到附件！<br/>");
+        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_down.aspx?action=gomod&amp;tops=" + this.tops + "&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定要" + lang1 + "设沉此帖吗？是！|確定要" + lang2 + "设沉此帖嗎？是！|Are you sure? YES") + "</a><br/>注意：如有附件请勿操作，否则看不到附件！<br/>");
         strhtml.Append("</div>");
     }
     else if (this.INFO == "ERR")
@@ -54,7 +54,7 @@ else //2.0界面
     else if (this.INFO == "NOTDOWN")
     {
         strhtml.Append("<div class=\"tip\">");
-        strhtml.Append("<b>附件贴不能设置</b><br/>");
+        strhtml.Append("<b>附件帖不能设置</b><br/>");
         strhtml.Append("</div>");
     }
     else if (this.INFO == "OK")

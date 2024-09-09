@@ -10,7 +10,7 @@ else //2.0界面
     strhtml.Append("<div class=\"title\">" + classVo.classname + "</div>");
     //显示搜索
     strhtml.Append("<div class=\"content\">");
-    strhtml.Append("内容管理<span class=\"separate\"></span><a href=\"" + this.http_start + "bbs/admin_guestlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">回贴管理</a><span class=\"separate\"></span>");
+    strhtml.Append("内容管理<span class=\"separate\"></span><a href=\"" + this.http_start + "bbs/admin_guestlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">回帖管理</a><span class=\"separate\"></span>");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/admin_WAPadvertise.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">插入广告</a><br/>");
     strhtml.Append("<form id=\"form1\" action=\"" + http_start + "bbs/admin_userlistWAP.aspx\" method=\"get\">");
     strhtml.Append("关键字 <input type=\"text\" name=\"key\" value=\"" + key + "\" style=\"width:60%\"/><br/>");

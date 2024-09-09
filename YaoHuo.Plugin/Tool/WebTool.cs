@@ -16,6 +16,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Management;
 using System.Net;
 using System.Net.Mail;
@@ -2278,20 +2279,45 @@ namespace YaoHuo.Plugin.Tool
                 {
                     var bbsData = matche.Value;
                     var bbsContent = Regex.Match(bbsData, "(?<=\\[text\\]).+?(?=\\[\\/text\\])").Value;
-                    bbsContent = bbsContent.Replace("“", "\"")
-                                            .Replace("‘", "'")
-                                            .Replace("”", "\"")
-                                            .Replace("’", "'")
-                                            .Replace("《", "<")
-                                            .Replace("》", ">")
-                                            .Replace("：", ";")
-                                            .Replace("，", ",")
-                                            .Replace("。", ".")
-                                            .Replace("【", "[")
-                                            .Replace("】", "]");
+                    bbsContent = bbsContent.Replace("“", "\"").Replace("‘", "'").Replace("”", "\"").Replace("’", "'")
+                                           .Replace("《", "<").Replace("》", ">").Replace("：", ";").Replace("，", ",")
+                                           .Replace("。", ".").Replace("【", "[").Replace("】", "]");
                     WapStr = WapStr.Replace(bbsData, bbsContent);
                 }
             }
+            //bool scriptsAdded = false;
+            //if (WapStr.IndexOf("[/code]", StringComparison.OrdinalIgnoreCase) > 0)
+            //{
+            //    Regex codeRegex = new Regex(@"\[code\](.*?)\[/code\]", RegexOptions.Singleline | RegexOptions.IgnoreCase);
+
+            //    foreach (Match match in codeRegex.Matches(WapStr))
+            //    {
+            //        // 直接提取 Code 中的内容
+            //        var codeContent = Regex.Match(match.Value, "(?<=\\[code\\]).+?(?=\\[\\/code\\])", RegexOptions.IgnoreCase).Value;
+
+            //        // 检查内容是否为空值
+            //        if (string.IsNullOrEmpty(codeContent.Trim()))
+            //        {
+            //            continue; // 跳过空值内容
+            //        }
+
+            //        // 全角冒号转换成半角冒号
+            //        codeContent = codeContent.Replace("“", "\"").Replace("‘", "'").Replace("”", "\"").Replace("’", "'");
+
+            //        // 创建紧凑的 HTML 结构，添加 highlight.js 的类
+            //        string codeHtml = $@"<pre class=""CodeContainer""><button class=""CopyButton""><div class=""CopyIcon""><img src=""/css/img/svg/copy.svg""></div></button><code class=""CodeSnippet hljs"">{codeContent}</code></pre>";
+
+            //        WapStr = WapStr.Replace(match.Value, codeHtml);
+
+            //        if (!scriptsAdded)
+            //        {
+            //            // 添加 highlight.js 的 CSS 和 JS
+            //            string scriptTags = @"<link rel=""stylesheet"" href=""https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/atom-one-light.min.css""><script src=""https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/highlight.min.js""></script><script src=""/css/img/svg/ClipBoard.js""></script><script src=""/css/img/svg/ClickCopy.js""></script><script>document.addEventListener('DOMContentLoaded', (event) => {document.querySelectorAll('code.CodeSnippet').forEach((block) => {block.innerHTML = block.innerHTML.replace(/<br>/g, '\n');hljs.highlightElement(block);});});</script>";
+            //            WapStr = scriptTags + WapStr;
+            //            scriptsAdded = true;
+            //        }
+            //    }
+            //}
             if (WapStr.IndexOf("[/a]") > 0)
             {
                 Regex regex = new Regex("(\\[a\\])(.[^\\[]*)(\\[\\/a\\])");

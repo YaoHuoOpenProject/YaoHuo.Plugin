@@ -52,11 +52,11 @@ namespace YaoHuo.Plugin.BBS
             }
             else if (bookVo.islock == 1L)
             {
-                ShowTipInfo("此贴已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
             }
             else if (bookVo.islock == 2L)
             {
-                ShowTipInfo("此贴已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
             }
             if (!(action == "gomod"))
             {
@@ -76,7 +76,7 @@ namespace YaoHuo.Plugin.BBS
                     string fcountSubMoneyFlag = WapTool.getFcountSubMoneyFlag(siteid, userid, IP);
                     if (fcountSubMoneyFlag.IndexOf("BBSGOOD" + id) < 0)
                     {
-                        string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")加精此贴" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                        string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")加精此帖" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                         text += bookVo.whylock;
                         MainBll.UpdateSQL("update wap_bbs set book_good=1,whylock='" + text + "' where userid=" + siteid + " and  id=" + long.Parse(id));
                         long moneyRegular = WapTool.getMoneyRegular(siteVo.moneyregular, 2);
@@ -104,7 +104,7 @@ namespace YaoHuo.Plugin.BBS
                 }
                 else
                 {
-                    string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")取消加精此贴" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                    string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")取消加精此帖" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                     text += bookVo.whylock;
                     MainBll.UpdateSQL("update wap_bbs set book_good=0,whylock='" + text + "' where userid=" + siteid + " and  id=" + long.Parse(id));
                     string book_title = bookVo.book_title;

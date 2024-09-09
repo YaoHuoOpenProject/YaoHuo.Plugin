@@ -3,6 +3,7 @@ using KeLin.ClassManager.BLL;
 using KeLin.ClassManager.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -255,6 +256,7 @@ namespace YaoHuo.Plugin.BBS
                 }
                 content = bookVo.book_content;
                 content = content.Replace("[id]", id);
+                content = ProcessCodeTags(content);
                 if (view != "all")
                 {
                     if (content.IndexOf("[next]") > 0)
@@ -781,7 +783,7 @@ namespace YaoHuo.Plugin.BBS
                     StringBuilder stringBuilder = new StringBuilder();
                     stringBuilder.Append("siteid=" + siteid + " and userid in(");
                     int i = 0;
-                    while (relistVo != null && i < relistVo.Count && i < 5)
+                    while (relistVo != null && i < relistVo.Count && i < 30)
                     {
                         stringBuilder.Append(relistVo[i].userid);
                         stringBuilder.Append(",");
@@ -825,5 +827,47 @@ namespace YaoHuo.Plugin.BBS
             long num = wap_bbsre_BLL.GetListCount(" devid='" + siteid + "' and bookid=" + nowid + " and ischeck=0");
             MainBll.UpdateSQL("update wap_bbs set book_re=" + num + " where id=" + nowid);
         }
+
+        private string ProcessCodeTags(string content)
+        {
+            bool scriptsAdded = false;  // 确保脚本只添加一次
+            if (content.IndexOf("[/code]", StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                Regex codeRegex = new Regex(@"\[code\](.*?)\[/code\]", RegexOptions.Singleline | RegexOptions.IgnoreCase);
+
+                foreach (Match match in codeRegex.Matches(content))
+                {
+                    // 直接提取 Code 中的内容
+                    var codeContent = Regex.Match(match.Value, "(?<=\\[code\\]).+?(?=\\[\\/code\\])", RegexOptions.IgnoreCase).Value;
+
+                    // 检查内容是否为空值
+                    if (string.IsNullOrEmpty(codeContent.Trim()))
+                    {
+                        continue; // 跳过空值内容
+                    }
+
+                    // 对代码内容进行 HTML 转义
+                    codeContent = HttpUtility.HtmlEncode(codeContent);
+
+                    // 全角冒号转换成半角冒号
+                    codeContent = codeContent.Replace("“", "\"").Replace("‘", "'").Replace("”", "\"").Replace("’", "'");
+
+                    // 创建紧凑的 HTML 结构，添加 highlight.js 的类
+                    string codeHtml = $@"<pre class=""CodeContainer""><button class=""CopyButton""><div class=""CopyIcon""><img src=""/css/img/svg/copy.svg""></div></button><code class=""CodeSnippet hljs"">{codeContent}</code></pre>";
+
+                    content = content.Replace(match.Value, codeHtml);
+
+                    if (!scriptsAdded)
+                    {
+                        // 添加 highlight.js 的 CSS 和 JS
+                        string scriptTags = @"<link rel=""stylesheet"" href=""//lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/atom-one-light.min.css""><script src=""//lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/highlight.min.js""></script><script src=""/css/img/svg/ClipBoard.js""></script><script src=""/css/img/svg/ClickCopy.js""></script><script>document.addEventListener('DOMContentLoaded', (event) => {document.querySelectorAll('code.CodeSnippet').forEach((block) => {block.innerHTML = block.innerHTML.replace(/<br>/g, '\n');hljs.highlightElement(block);});});</script>";
+                        content = scriptTags + content;
+                        scriptsAdded = true;
+                    }
+                }
+            }
+            return content;
+        }
+
     }
 }

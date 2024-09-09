@@ -71,12 +71,12 @@ namespace YaoHuo.Plugin.BBS
                 condition = " devid='" + siteid + "'";
                 classVo.classid = 0L;
                 classVo.position = "left";
-                classVo.classname = "管理 所有留言板回贴:" + key;
+                classVo.classname = "管理 所有留言板回帖:" + key;
                 classVo.siteimg = "NetImages/no.gif";
             }
             else
             {
-                classVo.classname = "管理 " + classVo.classname + "回贴:" + key;
+                classVo.classname = "管理 " + classVo.classname + "回帖:" + key;
                 condition = " devid='" + siteid + "' and   classid=" + classid + " ";
             }
             if (key.Trim() != "")

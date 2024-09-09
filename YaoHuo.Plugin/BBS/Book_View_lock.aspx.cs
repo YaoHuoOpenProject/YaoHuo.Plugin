@@ -73,7 +73,7 @@ namespace YaoHuo.Plugin.BBS
                 }
                 else
                 {
-                    whylock = "{" + userVo.nickname + "(ID" + userVo.userid + ")解锁贴子" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                    whylock = "{" + userVo.nickname + "(ID" + userVo.userid + ")解锁帖子" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                     whylock += bookVo.whylock;
                     MainBll.UpdateSQL("update wap_bbs set islock=0,whylock='" + whylock + "' where userid=" + siteid + " and  id=" + long.Parse(id));
                     string book_title = bookVo.book_title;

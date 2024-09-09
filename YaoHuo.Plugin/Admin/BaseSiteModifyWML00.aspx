@@ -72,7 +72,7 @@ else //2.0界面
 69.<a href="<%=http_start%>class/admin_userlistWAP00.aspx?siteid=<%=siteid%>">栏目名称审核</a><br/>
 70.<a href="<%=http_start%>class/admin_infolistWAP00.aspx?siteid=<%=siteid%>">排版内容审核</a><br/>
 71.<a href="<%=http_start%>search/admin_userlistWAP00.aspx?siteid=<%=siteid%>">站内短信审核</a><br/>
-72.<a href="<%=http_start %>bbs/Report_List.aspx?action=class&amp;siteid=<%=siteid %>&amp;classid=0">贴子举报审核</a><br/>
+72.<a href="<%=http_start %>bbs/Report_List.aspx?action=class&amp;siteid=<%=siteid %>&amp;classid=0">帖子举报审核</a><br/>
 73.<a href="<%=http_start%>guangbo/admin_userlistWAP00.aspx?siteid=<%=siteid%>">广播内容审核</a><br/>
 74.<a href="<%=http_start%>myaccount/admin_userlistWAP00.aspx?siteid=<%=siteid%>">记帐内容审核</a><br/>
 75.<a href="<%=http_start%>novel/admin_userlistWAP00.aspx?siteid=<%=siteid%>">小说内容审核</a><br/>

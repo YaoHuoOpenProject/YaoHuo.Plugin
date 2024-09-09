@@ -52,11 +52,11 @@ namespace YaoHuo.Plugin.BBS
             }
             else if (bookVo.islock == 1L)
             {
-                ShowTipInfo("此贴已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
             }
             else if (bookVo.islock == 2L)
             {
-                ShowTipInfo("此贴已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
             }
             if (!(action == "gomod"))
             {
@@ -76,7 +76,7 @@ namespace YaoHuo.Plugin.BBS
                     string fcountSubMoneyFlag = WapTool.getFcountSubMoneyFlag(siteid, userid, IP);
                     if (fcountSubMoneyFlag.IndexOf("BBSTOP" + id) < 0)
                     {
-                        string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")全区置顶此贴" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                        string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")全区置顶此帖" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                         text += bookVo.whylock;
                         MainBll.UpdateSQL("update wap_bbs set book_top=2,whylock='" + text + "' where userid=" + siteid + " and  id=" + long.Parse(id));
                         long moneyRegular = WapTool.getMoneyRegular(siteVo.moneyregular, 3);
@@ -87,7 +87,7 @@ namespace YaoHuo.Plugin.BBS
                         if (moneyRegular > 0L || lvLRegular > 0L)
                         {
                             MainBll.UpdateSQL("update [user] set money=money+" + moneyRegular + ",expR=expR+" + lvLRegular + " where userid=" + bookVo.book_pub);
-                            SaveBankLog(bookVo.book_pub.ToString(), "帖子置顶", moneyRegular.ToString(), userid, nickname, "贴子[ID:" + bookVo.id + "]");
+                            SaveBankLog(bookVo.book_pub.ToString(), "帖子置顶", moneyRegular.ToString(), userid, nickname, "帖子[ID:" + bookVo.id + "]");
                             MainBll.UpdateSQL(string.Concat("insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)values(", siteid, ",", userid, ",'", nickname, "','您的一个主题设为置顶，奖励:", moneyRegular, "个", siteVo.sitemoneyname, "，奖励经验：", lvLRegular, "','设置时间：", DateTime.Now, "[br]论坛主题:[url=/bbs/book_view.aspx?siteid=", siteid, "&amp;classid=", bookVo.book_classid, "&amp;id=", id, "]", book_title, "[/url]',", bookVo.book_pub, ",1)"));
                         }
                         MainBll.UpdateSQL("insert into wap_log(siteid,oper_userid,oper_nickname,oper_type,log_info,oper_ip)values(" + siteid + "," + userid + ",'" + nickname + "',0,'用户ID:" + userid + "置顶用户ID:" + bookVo.book_pub + "发表的ID=" + id + "主题:" + book_title + "','" + IP + "')");
@@ -105,7 +105,7 @@ namespace YaoHuo.Plugin.BBS
                 }
                 else
                 {
-                    string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")取消全区置顶此贴" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                    string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")取消全区置顶此帖" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                     text += bookVo.whylock;
                     MainBll.UpdateSQL("update wap_bbs set book_top=0,whylock='" + text + "' where userid=" + siteid + " and  id=" + long.Parse(id));
                     string book_title = bookVo.book_title;

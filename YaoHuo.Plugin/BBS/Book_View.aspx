@@ -472,7 +472,7 @@
             strhtml.Append("</form>");
         }
         strhtml.Append("<div class=\"recontent\">");
-        for (int i = 0; (relistVo != null && i < relistVo.Count && i < 15); i++)
+        for (int i = 0; (relistVo != null && i < relistVo.Count && i < 30); i++)
         {
             if (relistVo[i].book_top == 1)
             {

@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_List.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_List" %>
-
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%@ Import Namespace="System.Data" %>
 <%
@@ -249,7 +248,7 @@
         //显示查询某人的所有帖子
         if (this.type == "pub")
         {
-            if (this.IsUserManager(this.userid, userVo.managerlvl, ""))
+            if (this.IsUserManager(this.userid, userVo.managerlvl, "") && this.key != "1000") // 检查是否为管理员且ID不为1000
             {
                 strhtml.Append("<div class=\"tip\"><a class=\"urlbtn\" href=\"" + this.http_start + "bbs/Book_List_delmy.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;touserid=" + this.key + "\">清空(" + this.key + ")的所有帖子</a></div>");
             }

@@ -11,14 +11,14 @@
         lang2 = "取消";
         lang3 = "Cancel";
     }
-Response.Write(WapTool.showTop(this.GetLang(lang1 + "加精贴子|" + lang2 + "加精貼子|" + lang3 + " Top Good"), wmlVo));//显示头                                                                                                                                                             
+Response.Write(WapTool.showTop(this.GetLang(lang1 + "加精帖子|" + lang2 + "加精貼子|" + lang3 + " Top Good"), wmlVo));//显示头                                                                                                                                                             
 if (ver == "1")
 {
     strhtml.Append("<p>");
     strhtml.Append(this.ERROR);
     if (this.INFO == "")
     {
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_good.aspx?action=gomod&amp;tops=" + this.tops + "&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定要" + lang1 + "加精此贴吗？是！|確定要" + lang2 + "加精此贴嗎？是！|Are you sure? YES") + "</a><br/>");
+        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_good.aspx?action=gomod&amp;tops=" + this.tops + "&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定要" + lang1 + "加精此帖吗？是！|確定要" + lang2 + "加精此帖嗎？是！|Are you sure? YES") + "</a><br/>");
     }else if(this.INFO=="ERR"){
         strhtml.Append("<b>" + this.GetLang(lang1 + "加精失败！|" + lang2 + "加精失敗！|" + lang3 + " TOP Failure!") + "</b><br/>");
     }
@@ -33,12 +33,12 @@ if (ver == "1")
 }
 else //2.0界面
 {
-    strhtml.Append("<div class=\"title\">" + this.GetLang(lang1 + "加精贴子|" + lang2 + "加精貼子|" + lang3 + " Top Notes") + "</div>");
+    strhtml.Append("<div class=\"title\">" + this.GetLang(lang1 + "加精帖子|" + lang2 + "加精貼子|" + lang3 + " Top Notes") + "</div>");
     strhtml.Append(this.ERROR);
     if (this.INFO == "")
     {
         strhtml.Append("<div class=\"content\">");
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_good.aspx?action=gomod&amp;tops=" + this.tops + "&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定要" + lang1 + "加精此贴吗？是！|確定要" + lang2 + "加精此贴嗎？是！|Are you sure? YES") + "</a><br/>");
+        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_good.aspx?action=gomod&amp;tops=" + this.tops + "&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定要" + lang1 + "加精此帖吗？是！|確定要" + lang2 + "加精此帖嗎？是！|Are you sure? YES") + "</a><br/>");
         strhtml.Append("</div>");
     }
     else if (this.INFO == "ERR")

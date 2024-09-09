@@ -52,11 +52,11 @@ namespace YaoHuo.Plugin.BBS
             }
             else if (bookVo.islock == 1L)
             {
-                ShowTipInfo("此贴已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已锁！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
             }
             else if (bookVo.islock == 2L)
             {
-                ShowTipInfo("此贴已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
+                ShowTipInfo("此帖已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bookVo.book_classid + "&amp;id=" + bookVo.id + "&amp;lpage=" + lpage);
             }
             else if (bookVo.isdown == 1L)
             {
@@ -82,7 +82,7 @@ namespace YaoHuo.Plugin.BBS
                         INFO = "NOTDOWN";
                         return;
                     }
-                    string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")设沉贴子" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                    string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")设沉帖子" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                     text += bookVo.whylock;
                     MainBll.UpdateSQL("update wap_bbs set isdown=2,whylock='" + text + "' where userid=" + siteid + " and  id=" + long.Parse(id));
                     MainBll.UpdateSQL("insert into wap_log(siteid,oper_userid,oper_nickname,oper_type,log_info,oper_ip)values(" + siteid + "," + userid + ",'" + nickname + "',0,'用户ID:" + userid + "设沉用户ID:" + bookVo.book_pub + "发表的ID=" + id + "主题:" + bookVo.book_title + "','" + IP + "')");
@@ -98,13 +98,13 @@ namespace YaoHuo.Plugin.BBS
                 }
                 else
                 {
-                    string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")解除沉贴" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+                    string text = "{" + userVo.nickname + "(ID" + userVo.userid + ")解除沉帖" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
                     text += bookVo.whylock;
                     MainBll.UpdateSQL("update wap_bbs set isdown=0,whylock='" + text + "' where userid=" + siteid + " and  id=" + long.Parse(id));
                     string book_title = bookVo.book_title;
                     book_title = book_title.Replace("[", "［");
                     book_title = book_title.Replace("]", "］");
-                    MainBll.UpdateSQL(string.Concat("insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)values(", siteid, ",", userid, ",'", nickname, "','您的一个主题取消沉贴!','设置时间：", DateTime.Now, "[br]论坛主题:[url=/bbs/book_view.aspx?siteid=", siteid, "&amp;classid=", bookVo.book_classid, "&amp;id=", id, "]", book_title, "[/url]',", bookVo.book_pub, ",1)"));
+                    MainBll.UpdateSQL(string.Concat("insert into wap_message(siteid,userid,nickname,title,content,touserid,issystem)values(", siteid, ",", userid, ",'", nickname, "','您的一个主题取消沉帖!','设置时间：", DateTime.Now, "[br]论坛主题:[url=/bbs/book_view.aspx?siteid=", siteid, "&amp;classid=", bookVo.book_classid, "&amp;id=", id, "]", book_title, "[/url]',", bookVo.book_pub, ",1)"));
                     MainBll.UpdateSQL("insert into wap_log(siteid,oper_userid,oper_nickname,oper_type,log_info,oper_ip)values(" + siteid + "," + userid + ",'" + nickname + "',0,'用户ID:" + userid + "取消设沉用户ID:" + bookVo.book_pub + "发表的ID=" + id + "主题:" + book_title + "','" + IP + "')");
                     INFO = "OK";
                 }
