@@ -2,6 +2,7 @@
 using KeLin.ClassManager.BLL;
 using KeLin.ClassManager.Model;
 using System;
+using System.Text.RegularExpressions;
 using YaoHuo.Plugin.Tool;
 using YaoHuo.Plugin.WebSite;
 
@@ -121,6 +122,7 @@ namespace YaoHuo.Plugin.BBS
                     bbsVo.book_title = bbsVo.book_title.Substring(0, 200);
                 }
                 bbsVo.book_content = GetRequestValue("book_content");
+                bbsVo.book_title = bbsVo.book_title.Replace("/", "／").Replace("[", "［").Replace("]", "］");
                 bbsVo.book_img = GetRequestValue("book_img");
                 face = GetRequestValue("face");
                 stype = GetRequestValue("stype");

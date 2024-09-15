@@ -6822,7 +6822,7 @@ namespace YaoHuo.Plugin.Tool
             }
             if (string_0.EndsWith(".gif") || string_0.EndsWith(".jpg") || string_0.EndsWith(".jpeg") || string_0.EndsWith(".png"))
             {
-                return "<img src=\"" + string_0 + "\" alt=\"load...\"/>";
+                return "<img src=\"" + string_0 + "\"/>";
             }
             return string_0;
         }

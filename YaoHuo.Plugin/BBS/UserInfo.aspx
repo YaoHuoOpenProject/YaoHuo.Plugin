@@ -149,7 +149,7 @@
         strhtml.Append("<br/>");
         for (int i = 0; (this.albumlistVo != null && i < albumlistVo.Count); i++)
         {
-            strhtml.Append("<a href=\"" + http_start + "album/book_view.aspx?siteid=" + siteid + "&amp;classid=" + albumlistVo[i].book_classid + "&amp;id=" + albumlistVo[i].id + "" + "\"><img src=\"" + this.http_start + "album/" + albumlistVo[i].book_img + "\" alt=\"load...\"/></a> ");
+            strhtml.Append("<a href=\"" + http_start + "album/book_view.aspx?siteid=" + siteid + "&amp;classid=" + albumlistVo[i].book_classid + "&amp;id=" + albumlistVo[i].id + "" + "\"><img src=\"" + this.http_start + "album/" + albumlistVo[i].book_img + "\"/></a> ");
             if (i == (albumlistVo.Count - 1)) strhtml.Append("<br/>");
         }
         if (albumlistVo == null)
@@ -293,7 +293,7 @@
         //strhtml.Append("<div class=\"content\">");
         //for (int i = 0; (this.albumlistVo != null && i < albumlistVo.Count); i++)
         {
-            //strhtml.Append("<a href=\"" + http_start + "album/book_view.aspx?siteid=" + siteid + "&amp;classid=" + albumlistVo[i].book_classid + "&amp;id=" + albumlistVo[i].id + "" + "\"><img src=\"" + this.http_start + "album/" + albumlistVo[i].book_img + "\" alt=\"load...\"/></a> ");
+            //strhtml.Append("<a href=\"" + http_start + "album/book_view.aspx?siteid=" + siteid + "&amp;classid=" + albumlistVo[i].book_classid + "&amp;id=" + albumlistVo[i].id + "" + "\"><img src=\"" + this.http_start + "album/" + albumlistVo[i].book_img + "\"/></a> ");
             //if (i == (albumlistVo.Count - 1)) strhtml.Append("<br/>");
         }
         //if (albumlistVo == null)

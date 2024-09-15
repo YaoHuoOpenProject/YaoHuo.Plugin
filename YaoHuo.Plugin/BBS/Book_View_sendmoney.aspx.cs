@@ -269,10 +269,10 @@ namespace YaoHuo.Plugin.BBS
                     {
                         INFO = "TITLEMAX";
                     }
-                    else if (book_title.IndexOf("$(") >= 0 || book_content.IndexOf("$(") >= 0)
-                    {
-                        INFO = "ERR_FORMAT";
-                    }
+                    //else if (book_title.IndexOf("$(") >= 0 || book_content.IndexOf("$(") >= 0)
+                    //{
+                    //    INFO = "ERR_FORMAT";
+                    //}
                     else if (book_title.Equals(Session["content"]))
                     {
                         INFO = "REPEAT";

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using KeLin.ClassManager;
 using KeLin.ClassManager.BLL;
 using KeLin.ClassManager.Model;
@@ -321,11 +322,11 @@ namespace YaoHuo.Plugin.BBS
                     INFO = "TITLEMAX";
                     return;
                 }
-                if (book_title.IndexOf("$(") >= 0 || book_content.IndexOf("$(") >= 0)
-                {
-                    INFO = "ERR_FORMAT";
-                    return;
-                }
+                //if (book_title.IndexOf("$(") >= 0 || book_content.IndexOf("$(") >= 0)
+                //{
+                //    INFO = "ERR_FORMAT";
+                //    return;
+                //}
                 if (book_title.Equals(Session["content"]))
                 {
                     INFO = "REPEAT";

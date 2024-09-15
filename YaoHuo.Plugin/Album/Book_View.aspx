@@ -24,7 +24,7 @@
             strhtml.Append("<a href=\"" + this.http_start + "album/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;id=" + this.id + "&amp;action=addhead\">设为我的头像</a>");
             strhtml.Append("</div></div>");
         }
-        strhtml.Append("<img src=\"" + this.http_start + "album/" + filelist[i].book_file + "\" alt=\"load...\"/><br/>");
+        strhtml.Append("<img src=\"" + this.http_start + "album/" + filelist[i].book_file + "\"/><br/>");
     }
     strhtml.Append("</div>");
     string isWebHtml = this.ShowWEB_view(this.classid);

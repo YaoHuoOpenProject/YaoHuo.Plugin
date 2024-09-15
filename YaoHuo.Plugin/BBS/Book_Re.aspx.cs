@@ -389,10 +389,10 @@ namespace YaoHuo.Plugin.BBS
                 {
                     this.INFO = "TITLEMAX";
                 }
-                else if (text.IndexOf("$(") >= 0)
-                {
-                    this.INFO = "ERR_FORMAT";
-                }
+                //else if (text.IndexOf("$(") >= 0)
+                //{
+                //    this.INFO = "ERR_FORMAT";
+                //}
                 else if (text.Equals(this.Session["content"]))
                 {
                     this.INFO = "REPEAT";

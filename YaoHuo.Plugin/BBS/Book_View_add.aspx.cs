@@ -3,6 +3,7 @@ using KeLin.ClassManager.BLL;
 using KeLin.ClassManager.Model;
 using System;
 using System.Text;
+using System.Text.RegularExpressions;
 using YaoHuo.Plugin.Tool;
 using YaoHuo.Plugin.WebSite;
 
@@ -284,10 +285,10 @@ namespace YaoHuo.Plugin.BBS
                     {
                         INFO = "TITLEMAX";
                     }
-                    else if (book_title.IndexOf("$(") >= 0 || book_content.IndexOf("$(") >= 0)
-                    {
-                        INFO = "ERR_FORMAT";
-                    }
+                    //else if (book_title.IndexOf("$(") >= 0 || book_content.IndexOf("$(") >= 0)
+                    //{
+                    //    INFO = "ERR_FORMAT";
+                    //}
                     else if (book_title.Equals(Session["content"]))
                     {
                         INFO = "REPEAT";
