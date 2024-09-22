@@ -10,6 +10,8 @@ namespace YaoHuo.Plugin.BBS
 {
     public class Book_View_mod : MyPageWap
     {
+        private const long MIN_ADDITIONAL_REWARD = 1000;
+
         private string a = PubConstant.GetAppString("InstanceName");
 
         public wap_bbs_Model bbsVo = new wap_bbs_Model();
@@ -38,36 +40,93 @@ namespace YaoHuo.Plugin.BBS
 
         public string contentmax = "2";
 
+        public string logMessage = "";
+
+        public bool isAuthor = false;
+
+        public bool isFreeMoney = false;
+
+        public string additionalRewardMessage = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             action = GetRequestValue("action");
             id = GetRequestValue("id");
             lpage = GetRequestValue("lpage");
             IsLogin(userid, "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
-            //needPassWordToAdmin();
+
             if ("1".Equals(WapTool.getArryString(classVo.smallimg, '|', 28)) && "|00|01|".IndexOf(userVo.managerlvl) < 0)
             {
                 ShowTipInfo("修改帖子功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
             }
+
+            InitializeBbsData();
+
+            if (action == "gomod")
+            {
+                try
+                {
+                    UpdateBbsContent();
+                    HandleAdditionalReward();
+                    wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
+                    wap_bbs_BLL.Update(bbsVo);
+                    WapTool.ClearDataBBS("bbs" + siteid + classid);
+                    INFO = "OK";
+                }
+                catch (Exception ex)
+                {
+                    ERROR = ex.ToString();
+                }
+            }
+        }
+
+        private void InitializeBbsData()
+        {
             try
             {
-                if (classVo.bbsFace.IndexOf('_') < 0)
+                InitializeFaceAndTypeList();
+
+                wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
+                bbsVo = wap_bbs_BLL.GetModel(long.Parse(id));
+                ValidateBbsData();
+
+                isAuthor = userid == bbsVo.book_pub.ToString();
+                if (!isAuthor)
                 {
-                    classVo.bbsFace = "_";
+                    CheckManagerLvl("04", classVo.adminusername, "bbs/book_view_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;lpage=" + lpage + "&amp;id=" + id);
                 }
-                facelist = classVo.bbsFace.Split('_')[0].Split('|');
-                facelistImg = classVo.bbsFace.Split('_')[1].Split('|');
-                if (classVo.bbsType.IndexOf('_') < 0)
+                else
                 {
-                    classVo.bbsType = "_";
+                    IsLogin(userid, "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
                 }
-                stypelist = classVo.bbsType.Split('_')[0].Split('|');
+
+                isFreeMoney = bbsVo.freeMoney > 0;
+
+                RemoveTitlePrefix();
             }
             catch (Exception)
             {
+                // 处理异常
             }
-            wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
-            bbsVo = wap_bbs_BLL.GetModel(long.Parse(id));
+        }
+
+        private void InitializeFaceAndTypeList()
+        {
+            if (classVo.bbsFace.IndexOf('_') < 0)
+            {
+                classVo.bbsFace = "_";
+            }
+            facelist = classVo.bbsFace.Split('_')[0].Split('|');
+            facelistImg = classVo.bbsFace.Split('_')[1].Split('|');
+            if (classVo.bbsType.IndexOf('_') < 0)
+            {
+                classVo.bbsType = "_";
+            }
+            stypelist = classVo.bbsType.Split('_')[0].Split('|');
+        }
+
+        private void ValidateBbsData()
+        {
             if (bbsVo == null)
             {
                 ShowTipInfo("已删除！或不存在！", "");
@@ -88,6 +147,7 @@ namespace YaoHuo.Plugin.BBS
             {
                 ShowTipInfo("此帖已结！", "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + bbsVo.book_classid + "&amp;id=" + bbsVo.id + "&amp;lpage=" + lpage);
             }
+
             if (bbsVo.userid.ToString() != siteid)
             {
                 base.Response.End();
@@ -96,112 +156,151 @@ namespace YaoHuo.Plugin.BBS
             {
                 base.Response.End();
             }
-            if (userid != bbsVo.book_pub.ToString())
-            {
-                CheckManagerLvl("04", classVo.adminusername, "bbs/book_view_admin.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;lpage=" + lpage + "&amp;id=" + id);
-            }
-            else
-            {
-                IsLogin(userid, "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
-                //needPassWordToAdmin();
-            }
+        }
+
+        private void RemoveTitlePrefix()
+        {
             int num = bbsVo.book_title.LastIndexOf("]");
             if (num > 0)
             {
                 bbsVo.book_title = bbsVo.book_title.Substring(num + 1, bbsVo.book_title.Length - num - 1);
             }
-            if (!(action == "gomod"))
+        }
+
+        private void UpdateBbsContent()
+        {
+            bbsVo.book_title = GetSafeRequestValue("book_title").Trim();
+            if (bbsVo.book_title.Length > 200)
             {
-                return;
+                bbsVo.book_title = bbsVo.book_title.Substring(0, 200);
             }
-            try
+            bbsVo.book_content = GetSafeRequestValue("book_content");
+            bbsVo.book_title = bbsVo.book_title.Replace("/", "／").Replace("[", "［").Replace("]", "］");
+            bbsVo.book_img = GetSafeRequestValue("book_img");
+            face = GetSafeRequestValue("face");
+            stype = GetSafeRequestValue("stype");
+            bbsVo.book_content = WapTool.URLtoWAP(bbsVo.book_content);
+            titlemax = WapTool.getArryString(classVo.smallimg, '|', 24);
+            contentmax = WapTool.getArryString(classVo.smallimg, '|', 25);
+            if (!WapTool.IsNumeric(titlemax) || titlemax == "0")
             {
-                bbsVo.book_title = GetRequestValue("book_title").Trim(); // 移除标题前后的空格
-                if (bbsVo.book_title.Length > 200)
+                titlemax = "2";
+            }
+            if (!WapTool.IsNumeric(contentmax) || contentmax == "0")
+            {
+                contentmax = "2";
+            }
+            string text = GetSafeRequestValue("viewtype");
+            string text2 = GetSafeRequestValue("viewmoney");
+            if (!WapTool.IsNumeric(text))
+            {
+                text = "0";
+            }
+            if (!WapTool.IsNumeric(text2))
+            {
+                text2 = "0";
+            }
+            bbsVo.viewtype = long.Parse(text);
+            bbsVo.viewmoney = long.Parse(text2);
+            ValidateSpecialPost();
+            AddTypeAndFaceToTitle();
+            UpdateBbsMetadata();
+        }
+
+        private string GetSafeRequestValue(string key)
+        {
+            return System.Web.HttpUtility.HtmlEncode(GetRequestValue(key));
+        }
+
+        private void ValidateSpecialPost()
+        {
+            string arryString = WapTool.getArryString(classVo.smallimg, '|', 21);
+            if (arryString != "")
+            {
+                arryString = "_" + arryString + "_";
+                bool flag = false;
+                if (int.Parse(bbsVo.viewtype.ToString()) > 2 || bbsVo.book_content.IndexOf("[/reply]") > 0 || bbsVo.book_content.IndexOf("[/buy]") > 0 || bbsVo.book_content.IndexOf("[/coin]") > 0 || bbsVo.book_content.IndexOf("[/grade]") > 0)
                 {
-                    bbsVo.book_title = bbsVo.book_title.Substring(0, 200);
+                    flag = true;
                 }
-                bbsVo.book_content = GetRequestValue("book_content");
-                bbsVo.book_title = bbsVo.book_title.Replace("/", "／").Replace("[", "［").Replace("]", "］");
-                bbsVo.book_img = GetRequestValue("book_img");
-                face = GetRequestValue("face");
-                stype = GetRequestValue("stype");
-                bbsVo.book_content = WapTool.URLtoWAP(bbsVo.book_content);
-                titlemax = WapTool.getArryString(classVo.smallimg, '|', 24);
-                contentmax = WapTool.getArryString(classVo.smallimg, '|', 25);
-                if (!WapTool.IsNumeric(titlemax) || titlemax == "0")
+                if (flag && !IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername) && arryString.IndexOf("_" + userVo.SessionTimeout + "_") < 0)
                 {
-                    titlemax = "2";
+                    ShowTipInfo("您当前的身份不允许发特殊帖。", "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id);
                 }
-                if (!WapTool.IsNumeric(contentmax) || contentmax == "0")
+            }
+        }
+
+        private void AddTypeAndFaceToTitle()
+        {
+            stype = stype.Replace("类别", "");
+            face = face.Replace("表情", "");
+            if (stype != "")
+            {
+                bbsVo.book_title = "[" + stype + "]" + bbsVo.book_title;
+            }
+            if (face.Trim().Length > 3 && face.Substring(face.Length - 3, 3).ToLower() == "gif")
+            {
+                bbsVo.book_title = "[img]face/" + face + "[/img]" + bbsVo.book_title;
+            }
+            bbsVo.book_title = bbsVo.book_title.Trim();
+            if (bbsVo.book_title.Length > 200)
+            {
+                bbsVo.book_title = bbsVo.book_title.Substring(0, 200);
+            }
+            if (WapTool.getArryString(classVo.smallimg, '|', 41) == "1" && stype.Trim() == "")
+            {
+                ShowTipInfo("类别不能为空！", "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
+            }
+        }
+
+        private void UpdateBbsMetadata()
+        {
+            string text3 = "{" + userVo.nickname + "(ID" + userVo.userid + ")修改此帖" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
+            bbsVo.whylock = text3 + bbsVo.whylock;
+            string arryString2 = WapTool.getArryString(classVo.smallimg, '|', 43);
+            if (arryString2 == "2")
+            {
+                bbsVo.reDate = DateTime.Now;
+            }
+        }
+
+        private void HandleAdditionalReward()
+        {
+            if (!isFreeMoney)
+            {
+                string additionalReward = GetSafeRequestValue("additionalReward");
+                if (!string.IsNullOrEmpty(additionalReward) && long.TryParse(additionalReward, out long additionalRewardAmount))
                 {
-                    contentmax = "2";
-                }
-                string text = GetRequestValue("viewtype");
-                string text2 = GetRequestValue("viewmoney");
-                if (!WapTool.IsNumeric(text))
-                {
-                    text = "0";
-                }
-                if (!WapTool.IsNumeric(text2))
-                {
-                    text2 = "0";
-                }
-                bbsVo.viewtype = long.Parse(text);
-                bbsVo.viewmoney = long.Parse(text2);
-                string arryString = WapTool.getArryString(classVo.smallimg, '|', 21);
-                if (arryString != "")
-                {
-                    arryString = "_" + arryString + "_";
-                    bool flag = false;
-                    if (int.Parse(text) > 2 || bbsVo.book_content.IndexOf("[/reply]") > 0 || bbsVo.book_content.IndexOf("[/buy]") > 0 || bbsVo.book_content.IndexOf("[/coin]") > 0 || bbsVo.book_content.IndexOf("[/grade]") > 0)
+                    if (additionalRewardAmount >= MIN_ADDITIONAL_REWARD && isAuthor)
                     {
-                        flag = true;
+                        if (userVo.money >= additionalRewardAmount)
+                        {
+                            UpdateRewardAndUserBalance(additionalRewardAmount);
+                        }
+                        else
+                        {
+                            additionalRewardMessage = "insufficient_balance";
+                        }
                     }
-                    if (flag && !IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername) && arryString.IndexOf("_" + userVo.SessionTimeout + "_") < 0)
+                    else if (additionalRewardAmount > 0 && !isAuthor)
                     {
-                        ShowTipInfo("您当前的身份不允许发特殊帖。", "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id);
+                        additionalRewardMessage = "not_author";
+                    }
+                    else if (additionalRewardAmount > 0 && additionalRewardAmount < MIN_ADDITIONAL_REWARD)
+                    {
+                        additionalRewardMessage = "min_amount";
                     }
                 }
-                if (bbsVo.book_title.Trim().Length < long.Parse(titlemax) || bbsVo.book_content.Trim().Length < long.Parse(contentmax))
-                {
-                    INFO = "NULL";
-                    return;
-                }
-                stype = stype.Replace("类别", "");
-                face = face.Replace("表情", "");
-                if (stype != "")
-                {
-                    bbsVo.book_title = "[" + stype + "]" + bbsVo.book_title;
-                }
-                if (face.Trim().Length > 3 && face.Substring(face.Length - 3, 3).ToLower() == "gif")
-                {
-                    bbsVo.book_title = "[img]face/" + face + "[/img]" + bbsVo.book_title;
-                }
-                bbsVo.book_title = bbsVo.book_title.Trim(); // 再次移除标题前后的空格
-                if (bbsVo.book_title.Length > 200)
-                {
-                    bbsVo.book_title = bbsVo.book_title.Substring(0, 200);
-                }
-                if (WapTool.getArryString(classVo.smallimg, '|', 41) == "1" && stype.Trim() == "")
-                {
-                    ShowTipInfo("类别不能为空！", "bbs/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;id=" + id + "&amp;lpage=" + lpage);
-                }
-                string text3 = "{" + userVo.nickname + "(ID" + userVo.userid + ")修改此帖" + $"{DateTime.Now:MM-dd HH:mm}" + "}<br/>";
-                bbsVo.whylock = text3 + bbsVo.whylock;
-                string arryString2 = WapTool.getArryString(classVo.smallimg, '|', 43);
-                if (arryString2 == "2")
-                {
-                    bbsVo.reDate = DateTime.Now;
-                }
-                wap_bbs_BLL.Update(bbsVo);
-                WapTool.ClearDataBBS("bbs" + siteid + classid);
-                INFO = "OK";
             }
-            catch (Exception ex)
-            {
-                ERROR = ex.ToString();
-            }
+        }
+
+        private void UpdateRewardAndUserBalance(long additionalRewardAmount)
+        {
+            bbsVo.sendMoney += additionalRewardAmount;
+            MainBll.UpdateSQL("UPDATE [user] SET [money] = [money] - " + additionalRewardAmount + " WHERE siteid = " + siteid + " AND userid = " + userid);
+            SaveBankLog(userid, "追加悬赏", "-" + additionalRewardAmount.ToString(), userid, userVo.nickname, "追加悬赏[" + id + "]");
+            additionalRewardMessage = "success," + additionalRewardAmount;
+            userVo.money -= additionalRewardAmount;
         }
     }
 }

@@ -1,71 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_mod.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_View_mod" %>
-
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     if (this.INFO == "OK")
     {
-        wmlVo.timer = "0.3";
+        // 修改：根据是否有追加悬赏提示信息来设置跳转时间
+        wmlVo.timer = string.IsNullOrEmpty(this.additionalRewardMessage) ? "0.5" : "35";
         wmlVo.strUrl = "bbs-" + id + ".html";
     }
     StringBuilder strhtml = new StringBuilder();
-    Response.Write(WapTool.showTop(this.GetLang("修改内容|修改內容|content modification"), wmlVo));//显示头                                                                                                                          
-    if (ver == "1")
-    {
-        strhtml.Append("<p>");
-        strhtml.Append(this.ERROR);
-        if (this.INFO == "OK")
-        {
-            strhtml.Append("<b>");
-            strhtml.Append(this.GetLang("修改成功！|修改成功！|Successfully modified"));
-            strhtml.Append("</b><br/>");
-        }
-        else if (this.INFO == "NULL")
-        {
-            strhtml.Append("<b>");
-            strhtml.Append("<b>标题最少" + this.titlemax + "字，内容最少" + this.contentmax + "字！</b><br/>");
-            strhtml.Append("</b><br/>");
-        }
-        strhtml.Append(this.GetLang("标题|標題|Title") + "*:<br/>");
-        strhtml.Append("<input type=\"text\" name=\"book_title" + r + "\" value=\"" + bbsVo.book_title + "\"/><br/>");
-        strhtml.Append(this.GetLang("作者|作者|Author") + ":" + bbsVo.book_author + "<br/>");
-        strhtml.Append(this.GetLang("内容|內容|Content") + "*:<br/>");
-        strhtml.Append("<input type=\"text\"  name=\"book_content" + r + "\" value=\"" + bbsVo.book_content + "\" /><br/>");
-        strhtml.Append(this.GetLang("缩放图地址|缩放图地址|Photo") + "*:<br/>");
-        strhtml.Append("<input type=\"text\" name=\"book_img" + r + "\" value=\"" + bbsVo.book_img + "\"/><br/>");
-        strhtml.Append("特殊帖:<select name=\"viewtype" + r + "\" value=\"" + bbsVo.viewtype + "\">");
-        strhtml.Append("<option value=\"0\">0_特殊帖↓</option>");
-        strhtml.Append("<option value=\"1\">1_登录可见</option>");
-        strhtml.Append("<option value=\"2\">2_手机可见</option>");
-        strhtml.Append("<option value=\"3\">3_回复可见</option>");
-        strhtml.Append("<option value=\"4\">4_金钱可见需要</option>");
-        strhtml.Append("<option value=\"5\">5_经验可见需要</option>");
-        strhtml.Append("<option value=\"6\">6_付费" + siteVo.sitemoneyname + "可见需要</option>");
-        strhtml.Append("<option value=\"7\">7_付费RMB可见需要</option>");
-        strhtml.Append("</select><br/>");
-        //查看值
-        strhtml.Append("需要:<input type=\"text\" format=\"*N\" name=\"viewmoney" + r + "\" value=\"" + bbsVo.viewmoney + "\" size=\"4\" /><br/>");
-        strhtml.Append("<anchor><go href=\"" + http_start + "bbs/book_view_mod.aspx\" method=\"post\" accept-charset=\"utf-8\">");
-        strhtml.Append("<postfield name=\"action\" value=\"gomod\"/>");
-        strhtml.Append("<postfield name=\"id\" value=\"" + id + "\"/>");
-        strhtml.Append("<postfield name=\"classid\" value=\"" + classid + "\"/>");
-        strhtml.Append("<postfield name=\"siteid\" value=\"" + siteid + "\"/>");
-        strhtml.Append("<postfield name=\"lpage\" value=\"" + lpage + "\"/>");
-        strhtml.Append("<postfield name=\"book_title\" value=\"$(book_title" + r + ")\"/>");
-        strhtml.Append("<postfield name=\"book_content\" value=\"$(book_content" + r + ")\"/>");
-        strhtml.Append("<postfield name=\"viewtype\" value=\"$(viewtype" + r + ")\"/>");
-        strhtml.Append("<postfield name=\"viewmoney\" value=\"$(viewmoney" + r + ")\"/>");
-        strhtml.Append("<postfield name=\"book_img\" value=\"$(book_img" + r + ")\"/>");
-        strhtml.Append("<postfield name=\"sid\" value=\"" + sid + "\"/>");
-        strhtml.Append("</go>" + this.GetLang("修 改|修 改|Modify") + "</anchor><br/><br/>");
-        strhtml.Append("<br/><a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回主题|返回主题|Back to subject") + "</a> ");
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_admin.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回管理|返回上級|Back to admin") + "</a> ");
-        strhtml.Append("</p>");
-        Response.Write(strhtml);
-    }
-    else //2.0界面
-    {
-        //strhtml.Append("<script type=\"text/javascript\" src=\"/css/js/bbs/tuchuang.js?Q2\"></script>");
+    Response.Write(WapTool.showTop(this.GetLang("修改帖子内容|修改帖子內容|content modification"), wmlVo));
         strhtml.Append("<div class=\"title\">" + this.GetLang("修改帖子|修改操作|Modify operation") + "</div>");
         strhtml.Append("<div class=\"tip\">");
         strhtml.Append(this.ERROR);
@@ -73,7 +16,7 @@
         {
             strhtml.Append("<b>");
             strhtml.Append(this.GetLang("修改成功！|修改成功！|Successfully modified"));
-            strhtml.Append("</b> 自动跳转至 <a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("帖子主题|帖子主题|Back to subject") + "</a><br/>");
+            strhtml.Append("</b>正在跳转至 <a style=\"font-size: unset;\" href=\"" + this.http_start + "bbs-" + this.id + ".html\">" + this.GetLang("帖子主题|帖子主题|Back to subject") + "</a><br/>");
         }
         else if (this.INFO == "NULL")
         {
@@ -82,9 +25,27 @@
             strhtml.Append("</b><br/>");
         }
         strhtml.Append("</div>");
+        // 新增: 追加悬赏提示信息
+        if (!string.IsNullOrEmpty(this.additionalRewardMessage))
+        {
+            strhtml.Append("<div class=\"tip\" id=\"additionalRewardMessage\"></div>");
+            strhtml.Append("<script>");
+            strhtml.Append("var message = '" + this.additionalRewardMessage + "';");
+            strhtml.Append("var messageElement = document.getElementById('additionalRewardMessage');");
+            strhtml.Append("if (message.startsWith('success')) {");
+            strhtml.Append("    var amount = message.split(',')[1];");
+            strhtml.Append("    messageElement.innerHTML = '追加悬赏成功，悬赏已增加:' + amount;");
+            strhtml.Append("} else if (message === 'insufficient_balance') {");
+            strhtml.Append("    messageElement.innerHTML = '追加悬赏失败，余额不足！';");
+            strhtml.Append("} else if (message === 'not_author') {");
+            strhtml.Append("    messageElement.innerHTML = '只有帖子作者可以追加悬赏！';");
+            strhtml.Append("} else if (message === 'min_amount') {");
+            strhtml.Append("    messageElement.innerHTML = '追加悬赏失败，最低金额为:1000';");
+            strhtml.Append("}");
+            strhtml.Append("</script>");
+        }
         if (this.INFO != "OK")
         {
-            //显示表情
             strhtml.Append("<form name=\"go\" action=\"" + this.http_start + "bbs/book_view_mod.aspx\" method=\"post\">");
             strhtml.Append("<select name=\"face\" style=\"display:none;\">");
             strhtml.Append("<option value=\"\">表情</option>");
@@ -92,7 +53,6 @@
             {
             }
             strhtml.Append("</select>");
-            //显示类别
             strhtml.Append("<select name=\"stype\" style=\"display:none;\">");
             strhtml.Append("<option value=\"\">类别</option>");
             for (int i = 0; (stypelist != null && i < this.stypelist.Length); i++)
@@ -104,38 +64,37 @@
             strhtml.Append("<div class='centered-container'>");
             strhtml.Append("<input type=\"text\" minlength=\"5\" maxlength=\"25\" required=\"required\" name=\"book_title\" value=\"" + bbsVo.book_title + "\" style=\"width:98.6%;\"/>");
             strhtml.Append("</div>");
-            //strhtml.Append(this.GetLang("作者|作者|Author") + "：" + bbsVo.book_author + "<br/>");
             strhtml.Append(this.GetLang("内容|內容|Content") + " <br/>");
             strhtml.Append("<script> function adjustTextareaHeight(textarea) { if (textarea.scrollHeight > textarea.offsetHeight) { textarea.style.height = textarea.scrollHeight + 'px'; } } window.addEventListener('DOMContentLoaded', function() { var textareas = document.querySelectorAll('textarea'); textareas.forEach(function(textarea) { adjustTextareaHeight(textarea); }); }); </script>");
             strhtml.Append("<div class='centered-container'>");
-            strhtml.Append("<textarea name=\"book_content\" oninput=\"adjustTextareaHeight(this)\" minlength=\"15\" required=\"required\" style=\"min-height:55vh;margin-bottom:5px;width:98.6%;\">" + bbsVo.book_content.Replace("[br]", "\r\n") + "</textarea>");
+            strhtml.Append("<textarea name=\"book_content\" oninput=\"adjustTextareaHeight(this)\" minlength=\"15\" required=\"required\" style=\"min-height:47vh;margin-bottom:5px;width:98.6%;\">" + bbsVo.book_content.Replace("[br]", "\r\n") + "</textarea>");
             strhtml.Append("</div>");
+            if (isAuthor && !isFreeMoney)
+            {
+                strhtml.Append("追加悬赏");
+                strhtml.Append("<input type=\"number\" name=\"additionalReward\" value=\"\" placeholder=\"最少1000,可留空\" min=\"1000\" max=\"10000000\" style=\"margin-left:6px;width:115px;max-width:50%;\"/>");
+                strhtml.Append("<br/>");
+            }
             strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"lpage\" value=\"" + lpage + "\"/>");
-            //strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
             strhtml.Append("<input type=\"submit\" name=\"bt\" style=\"margin-right:10px;\" class=\"btn\" value=\"" + this.GetLang("修 改|修 改|Modify") + "\"/>");
             strhtml.Append("</div></form>");
         }
-        string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码    
+        string isWebHtml = this.ShowWEB_view(this.classid);
         if (isWebHtml != "")
         {
-            //string strhtml_list = strhtml.ToString();
-            //int s = strhtml_list.IndexOf("<div class=\"title\">");
-            //strhtml_list = strhtml_list.Substring(s, strhtml_list.Length - s);
             Response.Clear();
             Response.Write(WapTool.ToWML(isWebHtml, wmlVo).Replace("[view]", strhtml.ToString()));
             Response.End();
         }
         strhtml.Append("<div class=\"btBox\"><div class=\"bt3\">");
         strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
+        strhtml.Append("<a href=\"" + this.http_start + "bbs/list.aspx?classid=" + this.classid + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
         strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_admin.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回管理|返回上級|Back to admin") + "</a> ");
         strhtml.Append("</div></div>");
         Response.Write(strhtml);
-    }
-    //显示底部
     Response.Write(WapTool.showDown(wmlVo));
 %>

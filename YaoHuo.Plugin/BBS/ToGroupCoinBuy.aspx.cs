@@ -78,7 +78,8 @@ namespace YaoHuo.Plugin.BBS
             }
             if (userVo.userid.ToString() == userVo.siteid.ToString())
             {
-                INFO = "MASTERNO";
+                // 移除站长购买限制
+                // INFO = "MASTERNO";
             }
 
             // 获取当前用户的身份信息

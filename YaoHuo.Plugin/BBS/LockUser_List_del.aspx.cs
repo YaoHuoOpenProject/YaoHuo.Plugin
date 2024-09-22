@@ -59,7 +59,7 @@ namespace YaoHuo.Plugin.BBS
 							try
 							{
 								MainBll.UpdateSQL("delete from user_lock where siteid=" + siteid + " and id=" + long.Parse(delid));
-								MainBll.UpdateSQL("insert into wap_log(siteid,oper_userid,oper_nickname,oper_type,log_info,oper_ip)values(" + siteid + "," + userid + ",'" + nickname + "',0,'用户ID:" + userid + "解除加黑用户ID:" + touserid + "','" + IP + "')");
+								MainBll.UpdateSQL("insert into wap_log(siteid,oper_userid,oper_nickname,oper_type,log_info,oper_ip)values(" + siteid + "," + userid + ",'" + nickname + "',0,'解除加黑用户ID" + touserid + "','" + IP + "')");
 								INFO = "OK";
 							}
 							catch (Exception ex)

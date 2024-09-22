@@ -4628,7 +4628,7 @@ namespace YaoHuo.Plugin.Tool
             text2 = array[1];
             if (text.ToLower().IndexOf(".gif") > 0 || text.ToLower().IndexOf(".jpg") > 0)
             {
-                stringBuilder.Append("<img src=\"" + text + "\" alt=\"" + GetLang("图|圖|PIC", lang) + "\"/>");
+                stringBuilder.Append("<img src=\"" + text + "\"/>");
                 stringBuilder.Append(" ");
             }
             if (string_0 != "1" && text2 != "")

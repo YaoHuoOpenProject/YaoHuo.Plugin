@@ -112,6 +112,7 @@
     <Content Include="BBS\Book_Re_top.aspx" />
     <Content Include="BBS\Book_View_add.aspx" />
     <Content Include="BBS\Book_View_addfile.aspx" />
+    <Content Include="BBS\Book_View_addfileaddurl.aspx" />
     <Content Include="BBS\Book_View_addurl.aspx" />
     <Content Include="BBS\Book_View_addvote.aspx" />
     <Content Include="BBS\Book_View_change.aspx" />
@@ -120,6 +121,7 @@
     <Content Include="BBS\Book_View_end.aspx" />
     <Content Include="BBS\Book_View_good.aspx" />
     <Content Include="BBS\Book_View_lock.aspx" />
+    <Content Include="BBS\Book_View_mod.aspx" />
     <Content Include="BBS\Book_View_sendmoney.aspx" />
     <Content Include="BBS\Book_View_top.aspx" />
     <Content Include="BBS\Book_View_topall.aspx" />
@@ -166,7 +168,6 @@
     <Content Include="BBS\Book_Re.aspx" />
     <Content Include="BBS\Book_View.aspx" />
     <Content Include="BBS\Book_View_addfileAdd.aspx" />
-    <Content Include="BBS\Book_View_mod.aspx" />
     <Content Include="BBS\Book_View_modadd.aspx" />
     <Content Include="BBS\Book_View_modfile.aspx" />
     <Content Include="BBS\Index.aspx" />
@@ -278,6 +279,10 @@
     </Compile>
     <Compile Include="BBS\Book_View_addfileAdd.aspx.cs">
       <DependentUpon>Book_View_addfileAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_View_addfileaddurl.aspx.cs">
+      <DependentUpon>Book_View_addfileaddurl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_View_addurl.aspx.cs">

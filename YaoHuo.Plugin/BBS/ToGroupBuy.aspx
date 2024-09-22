@@ -3,7 +3,6 @@
 <%
     StringBuilder strhtml = new StringBuilder();
     Response.Write(WapTool.showTop(this.GetLang("RMB购买身份"), wmlVo)); //显示头
-
     strhtml.Append("<div class=\"title\">");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/togroupcoinbuy.aspx?siteid=" + this.siteid + "&classid=" + this.classid + "&toid=" + this.toid + "\">" + this.GetLang("妖晶购买") + "</a> | ");
     strhtml.Append("RMB购买");
@@ -15,10 +14,6 @@
         strhtml.Append("<b>");
         strhtml.Append("购买身份成功！");
         strhtml.Append("</b><br/>[<a href=\"/bbs/userinfo.aspx?touserid=" + this.userid + "\">进入空间查看</a>]<br/>");
-    }
-    else if (this.INFO == "MASTERNO")
-    {
-        strhtml.Append("<b>您是正站长，不能在此购买，请用小号测试。正站长可在修改用户资料处直接设置，不管设置何身份，正站长的身份期限固定为无限期！</b><br/>");
     }
     else if (this.INFO == "CLOSE")
     {

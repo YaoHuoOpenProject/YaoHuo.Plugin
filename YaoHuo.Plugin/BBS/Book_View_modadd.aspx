@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_modadd.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_View_modadd" %>
-
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     StringBuilder strhtml = new StringBuilder();

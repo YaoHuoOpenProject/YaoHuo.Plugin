@@ -194,9 +194,9 @@ namespace YaoHuo.Plugin.BBS
                     needpw = GetRequestValue("needpw");
                     face = GetRequestValue("face");
                     stype = GetRequestValue("stype");
-                    freemoney = GetRequestValue("freemoney");
+                    freemoney = GetRequestValue("freemoney").TrimStart('0');
                     freerule1 = GetRequestValue("freerule1");
-                    freerule2 = GetRequestValue("freerule2");
+                    freerule2 = GetRequestValue("freerule2").TrimStart('0');
                     if (WapTool.getArryString(classVo.smallimg, '|', 41) == "1" && stype.Trim() == "")
                     {
                         ShowTipInfo("类别不能为空！", "bbs/book_view_sendmoney.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
