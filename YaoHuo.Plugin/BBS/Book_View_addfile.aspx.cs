@@ -33,27 +33,11 @@ namespace YaoHuo.Plugin.BBS
 
         public string book_content = "";
 
-        public string face = "";
-
-        public string stype = "";
-
-        public string viewtype = "";
-
-        public string viewmoney = "";
-
-        public string reshow = "";
-
         private string string_11 = "";
 
         private string string_12 = "";
 
         public string sendmoney = "";
-
-        public string[] facelist;
-
-        public string[] facelistImg;
-
-        public string[] stypelist;
 
         public bool isadmin = false;
 
@@ -91,7 +75,7 @@ namespace YaoHuo.Plugin.BBS
         {
             if (classid != "0" && classVo.typePath.ToLower() != "bbs/index.aspx")
             {
-                ShowTipInfo("抱歉，当前访问的栏目ID对应非论坛模块，请联系站长处理。", "");
+                ShowTipInfo("抱歉，当前访问的栏目ID对应非论坛模块。", "");
             }
             if (classid == "0")
             {
@@ -99,30 +83,13 @@ namespace YaoHuo.Plugin.BBS
             }
             if ("1".Equals(WapTool.getArryString(classVo.smallimg, '|', 5)) && !CheckManagerLvl("04", classVo.adminusername))
             {
-                ShowTipInfo("发文件帖功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
+                ShowTipInfo("发文件帖功能已关闭！", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
             }
             action = GetRequestValue("action");
             page = GetRequestValue("page");
             if (GetRequestValue("num") != "")
             {
                 num = int.Parse(GetRequestValue("num"));
-            }
-            try
-            {
-                if (classVo.bbsFace.IndexOf('_') < 0)
-                {
-                    classVo.bbsFace = "_";
-                }
-                facelist = classVo.bbsFace.Split('_')[0].Split('|');
-                facelistImg = classVo.bbsFace.Split('_')[1].Split('|');
-                if (classVo.bbsType.IndexOf('_') < 0)
-                {
-                    classVo.bbsType = "_";
-                }
-                stypelist = classVo.bbsType.Split('_')[0].Split('|');
-            }
-            catch (Exception)
-            {
             }
             IsLogin(userid, "bbs/book_view_add.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
             string arryString = WapTool.getArryString(classVo.smallimg, '|', 27);
@@ -203,44 +170,19 @@ namespace YaoHuo.Plugin.BBS
                     contentmax = "2";
                 }
                 needpw = GetRequestValue("needpw");
-                face = GetRequestValue("face");
-                stype = GetRequestValue("stype");
-                viewtype = GetRequestValue("viewtype");
-                viewmoney = GetRequestValue("viewmoney");
-                reshow = GetRequestValue("reshow");
                 sendmoney = GetRequestValue("sendmoney");
                 string_11 = GetRequestValue("book_width");
                 string_12 = GetRequestValue("book_height");
-                if (WapTool.getArryString(classVo.smallimg, '|', 41) == "1" && stype.Trim() == "")
-                {
-                    ShowTipInfo("类别不能为空！", "bbs/book_view_addfile.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
-                }
                 string[] values = base.Request.Form.GetValues("book_file_info");
                 List<wap2_attachment_Model> list2 = new List<wap2_attachment_Model>();
-                if (!isadmin)
-                {
-                    reshow = "0";
-                }
                 if (book_title.Length > 200)
                 {
                     book_title = book_title.Substring(0, 200);
                 }
                 string text = WapTool.getArryString(siteVo.Version, '|', 22);
-                if (!WapTool.IsNumeric(reshow))
-                {
-                    reshow = "0";
-                }
                 if (!WapTool.IsNumeric(sendmoney))
                 {
                     sendmoney = "0";
-                }
-                if (!WapTool.IsNumeric(viewmoney))
-                {
-                    viewmoney = "0";
-                }
-                if (!WapTool.IsNumeric(viewtype))
-                {
-                    viewtype = "0";
                 }
                 if (!WapTool.IsNumeric(text))
                 {
@@ -254,21 +196,13 @@ namespace YaoHuo.Plugin.BBS
                 {
                     sendmoney = text;
                 }
-                if (long.Parse(reshow) > long.Parse(text))
-                {
-                    reshow = text;
-                }
-                if (viewtype == "6" && long.Parse(viewmoney) > long.Parse(text))
-                {
-                    viewmoney = text;
-                }
                 string arryString2 = WapTool.getArryString(classVo.smallimg, '|', 21);
                 if (arryString2.Trim() != "")
                 {
                     arryString2 = arryString2.Replace("_", "|");
                     arryString2 = "|" + arryString2 + "|";
                     bool flag = false;
-                    if (int.Parse(viewtype) > 2 || book_content.IndexOf("[/reply]") > 0 || book_content.IndexOf("[/buy]") > 0 || book_content.IndexOf("[/coin]") > 0 || book_content.IndexOf("[/grade]") > 0)
+                    if (book_content.IndexOf("[/reply]") > 0 || book_content.IndexOf("[/buy]") > 0 || book_content.IndexOf("[/coin]") > 0 || book_content.IndexOf("[/grade]") > 0)
                     {
                         flag = true;
                     }
@@ -423,16 +357,6 @@ namespace YaoHuo.Plugin.BBS
                     return;
                 }
                 Session["content"] = book_title;
-                stype = stype.Replace("类别", "");
-                face = face.Replace("表情", "");
-                if (stype != "")
-                {
-                    book_title = "[" + stype + "]" + book_title;
-                }
-                if (face.Trim().Length > 3 && face.Substring(face.Length - 3, 3).ToLower() == "gif")
-                {
-                    book_title = "[img]face/" + face + "[/img]" + book_title;
-                }
                 wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
                 wap_bbs_Model wap_bbs_Model = new wap_bbs_Model();
                 wap_bbs_Model.ischeck = siteVo.isCheck;
@@ -443,10 +367,7 @@ namespace YaoHuo.Plugin.BBS
                 wap_bbs_Model.book_pub = userid;
                 wap_bbs_Model.book_content = book_content;
                 wap_bbs_Model.book_date = DateTime.Now;
-                wap_bbs_Model.reShow = long.Parse(reshow);
                 wap_bbs_Model.sendMoney = long.Parse(sendmoney);
-                wap_bbs_Model.viewmoney = long.Parse(viewmoney);
-                wap_bbs_Model.viewtype = long.Parse(viewtype);
                 wap_bbs_Model.reDate = DateTime.Now;
                 wap_bbs_Model.isdown = 1L;
                 if (list2 != null)

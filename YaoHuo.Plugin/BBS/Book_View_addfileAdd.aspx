@@ -85,12 +85,10 @@
                     //strhtml.Append(this.GetLang("图片宽度|图片宽度|Width") + " <input type=\"number\" min=\"300\" style=\"width:60px;text-align:center;\" name=\"book_width\" value=\"\" \"\"/> PX<br/>");
                 }
             }
-            //strhtml.Append("<anchor><go href=\"" + http_start + "bbs/book_view_add.aspx\" method=\"post\" accept-charset=\"utf-8\">");
             strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"lpage\" value=\"" + lpage + "\"/>");
-            //strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
             strhtml.Append("<input type=\"hidden\" name=\"num\" value=\"" + num + "\"/>");
             strhtml.Append("<input type=\"submit\" name=\"g\" value=\"" + this.GetLang("上传文件|上传文件|upload new subject") + "\"/>");
@@ -113,8 +111,6 @@
         strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
         strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_View_admin.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回上级|返回上级|add content") + "</a> ");
         strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
-        //strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
-        //strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">" + this.GetLang("返回首页|返回首页|Back to index") + "</a> "); 
         strhtml.Append("</div></div>");
         Response.Write(strhtml);
     }

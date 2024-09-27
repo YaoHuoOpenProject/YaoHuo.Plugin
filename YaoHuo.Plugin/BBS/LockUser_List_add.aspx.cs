@@ -71,16 +71,22 @@ namespace YaoHuo.Plugin.BBS
                 // 初始化 user_lock_BLL
                 user_lock_BLL user_lock_BLL = new user_lock_BLL(string_10);
 
-                // 删除之前的加黑记录
+                // 删除之前的加黑记录（仅当存在时）
                 try
                 {
-                    // 删除该用户在当前站点的所有加黑记录
+                    // 删除该用户的所有加黑记录，并获取受影响的行数
                     string deleteSql = "DELETE FROM user_lock WHERE siteid = " + siteid + " AND lockuserid = " + touserid;
-                    MainBll.UpdateSQL(deleteSql);
+                    long rowsAffected = MainBll.UpdateSQL(deleteSql); // 确认 UpdateSQL 返回受影响的行数
 
-                    // 记录解除加黑的日志（可选）
-                    MainBll.UpdateSQL("INSERT INTO wap_log(siteid, oper_userid, oper_nickname, oper_type, log_info, oper_ip) VALUES (" +
-                        siteid + "," + userid + ",'" + nickname + "',0,'清除用户ID" + touserid + "的所有加黑记录','" + IP + "')");
+                    if (rowsAffected > 0)
+                    {
+                        // 记录解除加黑的日志
+                        string logSql = "INSERT INTO wap_log(siteid, oper_userid, oper_nickname, oper_type, log_info, oper_ip) " +
+                                        "VALUES (" + siteid + "," + userid + ",'" + nickname + "',0," +
+                                        "'清除用户ID" + touserid + "的所有加黑记录','" + IP + "')";
+                        MainBll.UpdateSQL(logSql);
+                    }
+                    // 如果没有加黑记录，则不执行删除和日志记录
                 }
                 catch (Exception ex)
                 {
@@ -99,8 +105,11 @@ namespace YaoHuo.Plugin.BBS
                 MainBll.UpdateSQL(insertSql);
 
                 // 记录加黑日志
-                MainBll.UpdateSQL("INSERT INTO wap_log(siteid, oper_userid, oper_nickname, oper_type, log_info, oper_ip) VALUES (" +
-                    siteid + "," + userid + ",'" + nickname + "',0,'加黑用户ID" + touserid + "','" + IP + "')");
+                string logInsertSql = "INSERT INTO wap_log(siteid, oper_userid, oper_nickname, oper_type, log_info, oper_ip) " +
+                                      "VALUES (" + siteid + "," + userid + ",'" + nickname + "',0," +
+                                      "'加黑用户ID" + touserid + "','" + IP + "')";
+                MainBll.UpdateSQL(logInsertSql);
+
                 INFO = "OK";
             }
             catch (Exception ex)

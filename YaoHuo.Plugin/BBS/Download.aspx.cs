@@ -44,8 +44,27 @@ namespace YaoHuo.Plugin.BBS
                 ShowTipInfo("无效的参数", "bbs/book_view.aspx?siteid=" + siteid + "&classid=" + classid + "&id=" + book_id);
                 return;
             }
+
             wap2_attachment_BLL wap2_attachment_BLL = new wap2_attachment_BLL(string_10);
             bookVo = wap2_attachment_BLL.GetModel(long.Parse(id));
+
+            // 验证帖子存在性和栏目ID匹配
+            if (bookVo == null)
+            {
+                ShowTipInfo("文件不存在或已被删除", "bbs/book_view.aspx?siteid=" + siteid + "&classid=" + classid + "&id=" + book_id);
+                return;
+            }
+
+            // 获取帖子所属的栏目ID
+            wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
+            wap_bbs_Model bbsVo = wap_bbs_BLL.GetModel(long.Parse(book_id));
+
+            if (bbsVo == null || bbsVo.book_classid.ToString() != classid)
+            {
+                ShowTipInfo("栏目ID不匹配", "bbs/book_view.aspx?siteid=" + siteid + "&classid=" + classid + "&id=" + book_id);
+                return;
+            }
+
             string text = WapTool.getArryString(classVo.smallimg, '|', 16);
             string text2 = WapTool.getArryString(classVo.smallimg, '|', 17);
             string text3 = WapTool.getArryString(classVo.smallimg, '|', 18);
@@ -94,8 +113,13 @@ namespace YaoHuo.Plugin.BBS
                     SaveBankLog(userid, "论坛下载", "-" + text2.ToString(), userid, nickname, "下载扣币[" + id + "]");
                     if (text4 == "1")
                     {
-                        MainBll.UpdateSQL("update [user] set money=money+" + text2 + " where userid=" + bookVo.userid);
-                        SaveBankLog(bookVo.userid.ToString(), "论坛赚币", text2.ToString(), userid, nickname, "操作人下载您的文件[" + id + "]");
+                        // 计算税后金额
+                        long taxRate = 10; // 10% 的税率
+                        long afterTaxAmount = (long)(long.Parse(text2) * (100 - taxRate) / 100);
+
+                        // 更新上传者的余额
+                        MainBll.UpdateSQL("update [user] set money=money+" + afterTaxAmount + " where userid=" + bookVo.userid);
+                        SaveBankLog(bookVo.userid.ToString(), "论坛赚币(税后)", afterTaxAmount.ToString(), userid, nickname, "操作人下载您的文件[" + id + "]，税后所得");
                     }
                 }
             }

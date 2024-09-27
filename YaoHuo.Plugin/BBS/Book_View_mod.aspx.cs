@@ -57,7 +57,7 @@ namespace YaoHuo.Plugin.BBS
 
             if ("1".Equals(WapTool.getArryString(classVo.smallimg, '|', 28)) && "|00|01|".IndexOf(userVo.managerlvl) < 0)
             {
-                ShowTipInfo("修改帖子功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
+                ShowTipInfo("修改帖子功能已关闭！", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
             }
 
             InitializeBbsData();
@@ -174,7 +174,8 @@ namespace YaoHuo.Plugin.BBS
             {
                 bbsVo.book_title = bbsVo.book_title.Substring(0, 200);
             }
-            bbsVo.book_content = GetSafeRequestValue("book_content");
+            // 修改: 使用 PreserveCodeContent 方法处理 book_content
+            bbsVo.book_content = PreserveCodeContent(GetRequestValue("book_content"));
             bbsVo.book_title = bbsVo.book_title.Replace("/", "／").Replace("[", "［").Replace("]", "］");
             bbsVo.book_img = GetSafeRequestValue("book_img");
             face = GetSafeRequestValue("face");
@@ -205,6 +206,23 @@ namespace YaoHuo.Plugin.BBS
             ValidateSpecialPost();
             AddTypeAndFaceToTitle();
             UpdateBbsMetadata();
+        }
+
+        // 新增: PreserveCodeContent 方法，该方法用于保护 [code] 标签内的内容不被 HTML 编码
+        private string PreserveCodeContent(string content)
+        {
+            // 使用正则表达式分割内容，保留 [code] 标签
+            string[] parts = Regex.Split(content, @"(\[code\].*?\[/code\])", RegexOptions.Singleline);
+            for (int i = 0; i < parts.Length; i++)
+            {
+                // 只对非 [code] 标签内的内容进行 HTML 编码
+                if (i % 2 == 0)
+                {
+                    parts[i] = System.Web.HttpUtility.HtmlEncode(parts[i]);
+                }
+            }
+            // 将所有部分重新组合成一个字符串
+            return string.Join("", parts);
         }
 
         private string GetSafeRequestValue(string key)

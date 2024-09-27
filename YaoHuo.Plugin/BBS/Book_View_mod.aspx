@@ -65,9 +65,9 @@
             strhtml.Append("<input type=\"text\" minlength=\"5\" maxlength=\"25\" required=\"required\" name=\"book_title\" value=\"" + bbsVo.book_title + "\" style=\"width:98.6%;\"/>");
             strhtml.Append("</div>");
             strhtml.Append(this.GetLang("内容|內容|Content") + " <br/>");
-            strhtml.Append("<script> function adjustTextareaHeight(textarea) { if (textarea.scrollHeight > textarea.offsetHeight) { textarea.style.height = textarea.scrollHeight + 'px'; } } window.addEventListener('DOMContentLoaded', function() { var textareas = document.querySelectorAll('textarea'); textareas.forEach(function(textarea) { adjustTextareaHeight(textarea); }); }); </script>");
+            strhtml.Append("<script>function adjustTextareaHeight(t){var st=window.pageYOffset||document.documentElement.scrollTop;t.style.height='auto';t.style.height=t.scrollHeight+'px';window.scrollTo(0,st)}function initTextareas(){document.querySelectorAll('textarea[name=\"book_content\"]').forEach(function(t){adjustTextareaHeight(t);t.addEventListener('input',function(){adjustTextareaHeight(this)})})}document.readyState==='loading'?document.addEventListener('DOMContentLoaded',initTextareas):initTextareas();</script>");
             strhtml.Append("<div class='centered-container'>");
-            strhtml.Append("<textarea name=\"book_content\" oninput=\"adjustTextareaHeight(this)\" minlength=\"15\" required=\"required\" style=\"min-height:47vh;margin-bottom:5px;width:98.6%;\">" + bbsVo.book_content.Replace("[br]", "\r\n") + "</textarea>");
+            strhtml.Append("<textarea name=\"book_content\" oninput=\"adjustTextareaHeight(this)\" minlength=\"15\" required=\"required\" style=\"min-height:47vh;margin-bottom:5px;width:98.6%;white-space:pre-wrap;\">" + bbsVo.book_content.Replace("[br]", "\n") + "</textarea>");
             strhtml.Append("</div>");
             if (isAuthor && !isFreeMoney)
             {

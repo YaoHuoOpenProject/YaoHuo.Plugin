@@ -28,23 +28,7 @@ namespace YaoHuo.Plugin.BBS
 
         public string book_content = "";
 
-        public string face = "";
-
-        public string stype = "";
-
-        public string viewtype = "";
-
-        public string viewmoney = "";
-
-        public string reshow = "";
-
         public string sendmoney = "";
-
-        public string[] facelist;
-
-        public string[] facelistImg;
-
-        public string[] stypelist;
 
         public bool isadmin = false;
 
@@ -76,7 +60,7 @@ namespace YaoHuo.Plugin.BBS
         {
             if (classid != "0" && classVo.typePath.ToLower() != "bbs/index.aspx")
             {
-                ShowTipInfo("抱歉，当前访问的栏目ID对应非论坛模块，请联系站长处理。", "");
+                ShowTipInfo("抱歉，当前访问的栏目ID对应非论坛模块。", "");
             }
             if (classid == "0")
             {
@@ -84,7 +68,7 @@ namespace YaoHuo.Plugin.BBS
             }
             if ("1".Equals(WapTool.getArryString(classVo.smallimg, '|', 2)) && !CheckManagerLvl("04", classVo.adminusername))
             {
-                ShowTipInfo("发帖功能已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
+                ShowTipInfo("发帖功能已关闭！", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
             }
             action = base.Request.Form.Get("action");
             page = GetRequestValue("page");
@@ -96,44 +80,6 @@ namespace YaoHuo.Plugin.BBS
             if (classVo.topicID != "" && classVo.topicID != "0" && IsCheckManagerLvl("|00|01|03|04|", ""))
             {
                 isNeedSecret = true;
-            }
-            try
-            {
-                if (classVo.bbsFace.IndexOf('_') < 0)
-                {
-                    classVo.bbsFace = "_";
-                }
-                facelist = classVo.bbsFace.Split('_')[0].Split('|');
-                facelistImg = classVo.bbsFace.Split('_')[1].Split('|');
-                if (classVo.bbsType.IndexOf('_') < 0)
-                {
-                    classVo.bbsType = "_";
-                }
-                stypelist = classVo.bbsType.Split('_')[0].Split('|');
-            }
-            catch (Exception)
-            {
-            }
-            IsLogin(userid, "bbs/book_view_add.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
-            string arryString = WapTool.getArryString(classVo.smallimg, '|', 27);
-            if (arryString.Trim() != "")
-            {
-                arryString = arryString.Replace("_", "|");
-                arryString = "|" + arryString + "|";
-                if (!IsCheckManagerLvl("|00|01|03|04|", classVo.adminusername) && arryString.IndexOf("|" + userVo.SessionTimeout + "|") < 0)
-                {
-                    ShowTipInfo("我当前的用户级别：" + WapTool.GetMyID(userVo.idname, lang, userVo.endTime) + " 不允许发帖。<br/>允许发帖用户级别为：" + WapTool.GetCardIDNameFormID_multiple(siteid, arryString, lang), "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
-                }
-            }
-            // 重命名局部变量 num 为 localNum
-            long localNum = Convert.ToInt64(WapTool.GetSiteDefault(siteVo.Version, 14));
-            if (localNum > 0L)
-            {
-                long num2 = WapTool.DateDiff(DateTime.Now, userVo.RegTime, "MM");
-                if (num2 < localNum)
-                {
-                    ShowTipInfo("请再过:" + (localNum - num2) + "分钟才能发帖！", "bbs/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
-                }
             }
             if (userVo.managerlvl == "01" || userVo.managerlvl == "00")
             {
@@ -169,37 +115,12 @@ namespace YaoHuo.Plugin.BBS
                     content_max = "0";
                 }
                 needpw = GetRequestValue("needpw");
-                face = GetRequestValue("face");
-                stype = GetRequestValue("stype");
-                viewtype = GetRequestValue("viewtype");
-                viewmoney = GetRequestValue("viewmoney");
-                reshow = GetRequestValue("reshow");
                 sendmoney = GetRequestValue("sendmoney");
                 string[] values = base.Request.Form.GetValues("vote");
-                if (WapTool.getArryString(classVo.smallimg, '|', 41) == "1" && stype.Trim() == "")
-                {
-                    ShowTipInfo("类别不能为空！", "bbs/book_view_addvote.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;page=" + page);
-                }
-                if (!isadmin)
-                {
-                    reshow = "0";
-                }
                 string text = WapTool.getArryString(siteVo.Version, '|', 22);
-                if (!WapTool.IsNumeric(reshow))
-                {
-                    reshow = "0";
-                }
                 if (!WapTool.IsNumeric(sendmoney))
                 {
                     sendmoney = "0";
-                }
-                if (!WapTool.IsNumeric(viewmoney))
-                {
-                    viewmoney = "0";
-                }
-                if (!WapTool.IsNumeric(viewtype))
-                {
-                    viewtype = "0";
                 }
                 if (!WapTool.IsNumeric(text))
                 {
@@ -213,21 +134,13 @@ namespace YaoHuo.Plugin.BBS
                 {
                     sendmoney = text;
                 }
-                if (long.Parse(reshow) > long.Parse(text))
-                {
-                    reshow = text;
-                }
-                if (viewtype == "6" && long.Parse(viewmoney) > long.Parse(text))
-                {
-                    viewmoney = text;
-                }
                 string arryString2 = WapTool.getArryString(classVo.smallimg, '|', 21);
                 if (arryString2.Trim() != "")
                 {
                     arryString2 = arryString2.Replace("_", "|");
                     arryString2 = "|" + arryString2 + "|";
                     bool flag = false;
-                    if (int.Parse(viewtype) > 2 || book_content.IndexOf("[/reply]") > 0 || book_content.IndexOf("[/buy]") > 0 || book_content.IndexOf("[/coin]") > 0 || book_content.IndexOf("[/grade]") > 0)
+                    if (book_content.IndexOf("[/reply]") > 0 || book_content.IndexOf("[/buy]") > 0 || book_content.IndexOf("[/coin]") > 0 || book_content.IndexOf("[/grade]") > 0)
                     {
                         flag = true;
                     }
@@ -289,16 +202,6 @@ namespace YaoHuo.Plugin.BBS
                     return;
                 }
                 Session["content"] = book_title;
-                stype = stype.Replace("类别", "");
-                face = face.Replace("表情", "");
-                if (stype != "")
-                {
-                    book_title = "[" + stype + "]" + book_title;
-                }
-                if (face.Trim().Length > 3 && face.Substring(face.Length - 3, 3).ToLower() == "gif")
-                {
-                    book_title = "[img]face/" + face + "[/img]" + book_title;
-                }
                 if (book_title.Length > 200)
                 {
                     book_title = book_title.Substring(0, 200);
@@ -313,10 +216,7 @@ namespace YaoHuo.Plugin.BBS
                 wap_bbs_Model.book_pub = userid;
                 wap_bbs_Model.book_content = book_content;
                 wap_bbs_Model.book_date = DateTime.Now;
-                wap_bbs_Model.reShow = long.Parse(reshow);
                 wap_bbs_Model.sendMoney = long.Parse(sendmoney);
-                wap_bbs_Model.viewmoney = long.Parse(viewmoney);
-                wap_bbs_Model.viewtype = long.Parse(viewtype);
                 wap_bbs_Model.reDate = DateTime.Now;
                 wap_bbs_Model.isVote = 1L;
                 getid = wap_bbs_BLL.Add(wap_bbs_Model);

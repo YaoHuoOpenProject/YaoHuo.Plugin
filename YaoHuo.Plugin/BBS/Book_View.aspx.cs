@@ -227,33 +227,6 @@ namespace YaoHuo.Plugin.BBS
                 http_start_url = http_start + "bbs/book_view.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;lpage=" + lpage + stypelink;
                 sys_ad_show_BLL sys_ad_show_BLL = new sys_ad_show_BLL(a);
                 adVo = sys_ad_show_BLL.GetModelBySQL(" and systype='bbs' and siteid=" + siteid);
-                if (bookVo.MarkSixBetID != 0L)
-                {
-                    wap_bbs_MarkSix_bet_BLL wap_bbs_MarkSix_bet_BLL = new wap_bbs_MarkSix_bet_BLL(a);
-                    wap_bbs_MarkSix_bet_Model wap_bbs_MarkSix_bet_Model = new wap_bbs_MarkSix_bet_Model();
-                    wap_bbs_MarkSix_bet_Model = wap_bbs_MarkSix_bet_BLL.GetModel(long.Parse(siteid), bookVo.MarkSixBetID);
-                    if (wap_bbs_MarkSix_bet_Model != null)
-                    {
-                        string text = "";
-                        string text2 = "";
-                        text = "【";
-                        text = text + "<a href='" + http_start + "bbs/marksix/book_list.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;sid=" + a + "'>查看</a>";
-                        if (bookVo.userid.ToString() == userid)
-                        {
-                            text = text + ".<a href='" + http_start + "bbs/marksix/book_view_mod.aspx?siteid=" + siteid + "&amp;classid=" + classid + "&amp;bbsid=" + id + "&amp;id=" + wap_bbs_MarkSix_bet_Model.id + "'>修改</a>.<a href='" + http_start + "bbs/marksix/book_user_win.aspx?touserid=" + userid + "&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;sid=" + a + "'>兑奖</a>";
-                        }
-                        text += "】";
-                        if (bookVo.MarkSixWin == 1L)
-                        {
-                            text2 = "<img src='/NetImages/zhong.gif'alt='中'> ";
-                        }
-                        bookVo.book_content = text2 + wap_bbs_MarkSix_bet_Model.peroid + "期投注[" + GamesClassManager.Tool.GetMarkSix_PlayName(wap_bbs_MarkSix_bet_Model.types.ToString()) + "]为" + wap_bbs_MarkSix_bet_Model.types_content + " 共" + wap_bbs_MarkSix_bet_Model.num + "注" + text + "<br/>----------<br/>" + bookVo.book_content;
-                    }
-                    else
-                    {
-                        bookVo.book_content = "投注记录已删除<br/>----------<br/>" + bookVo.book_content;
-                    }
-                }
                 content = bookVo.book_content;
                 content = content.Replace("[id]", id);
                 content = ProcessCodeTags(content);

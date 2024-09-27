@@ -492,7 +492,7 @@ namespace YaoHuo.Plugin.WebSite
                     string text8 = base.Request.ServerVariables.Get("Path_Info").ToString();
                     if (text8.IndexOf("rizhi") < 0 && text8.IndexOf("album") < 0)
                     {
-                        ShowTipInfo("本站不存在栏目ID:" + classid + "！可能栏目已删除，或此UBB链接从网站模板导入。如果您是站长，您需要登录WEB或WAP后台管理找到此UBB链接，改成本网站内的有效地址！", "");
+                        ShowTipInfo("栏目ID " + classid + " 不存在", "");
                     }
                     else
                     {
