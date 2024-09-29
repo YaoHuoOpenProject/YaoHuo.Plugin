@@ -229,10 +229,7 @@ namespace YaoHuo.Plugin.BBS
                     }
                     else
                     {
-                        List<long> exemptUserIds = new List<long> { 1000 }; // 这里添加不受限制的用户ID
-                        long userIdLong;
-
-                        if (long.TryParse(userid, out userIdLong) && !exemptUserIds.Contains(userIdLong) && KL_CheckBBSCount != "0" && !WapTool.CheckUserBBSCount(siteid, userid, KL_CheckBBSCount, "bbs"))
+                        if (!WapTool.CheckUserBBSCount(siteid, userid, KL_CheckBBSCount, "bbs"))
                         {
                             INFO = "MAX";
                         }

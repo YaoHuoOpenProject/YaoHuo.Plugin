@@ -4968,6 +4968,11 @@ namespace YaoHuo.Plugin.Tool
 
         public static bool CheckUserBBSCount(string siteid, string userid, string count, string stype)
         {
+            if (stype == "bbs")
+            {
+                return CheckUserBBSCountNew(siteid, userid, count);
+            }
+
             bool result = false;
             if (count == "0")
             {
@@ -4979,10 +4984,6 @@ namespace YaoHuo.Plugin.Tool
             {
                 commandText = "select count(id) as n from [wap_bbsre] where devid='" + siteid + "' and userid=" + userid + " and   DATEDIFF(dd, redate, GETDATE()) <1";
             }
-            else if (stype == "bbs")
-            {
-                commandText = "select count(id) as n from [wap_bbs] where userid=" + siteid + " and book_pub='" + userid + "' and   DATEDIFF(dd, book_date, GETDATE()) <1";
-            }
             DataSet dataSet = DbHelperSQL.ExecuteDataset(_ConnStr, CommandType.Text, commandText);
             if (dataSet != null && dataSet.Tables[0].Rows.Count > 0)
             {
@@ -4991,6 +4992,53 @@ namespace YaoHuo.Plugin.Tool
             if (IsNumeric(text) && long.Parse(text) < long.Parse(count))
             {
                 return true;
+            }
+            return result;
+        }
+
+        public static bool CheckUserBBSCountNew(string siteid, string userid, string defaultCount)
+        {
+            // 获取特定用户的发帖限制
+            string specificUserConfig = PubConstant.GetAppString("KL_SpecificUserBBSCount");
+            Dictionary<string, int> specificUserLimits = ParseSpecificUserConfig(specificUserConfig);
+
+            int userLimit;
+            if (specificUserLimits.TryGetValue(userid, out userLimit))
+            {
+                // 使用特定用户的限制
+                defaultCount = userLimit.ToString();
+            }
+
+            // 检查用户今日发帖数
+            string commandText = "select count(id) as n from [wap_bbs] where userid=" + siteid + " and book_pub='" + userid + "' and DATEDIFF(dd, book_date, GETDATE()) <1";
+            DataSet dataSet = DbHelperSQL.ExecuteDataset(_ConnStr, CommandType.Text, commandText);
+
+            if (dataSet != null && dataSet.Tables[0].Rows.Count > 0)
+            {
+                string todayPostCount = dataSet.Tables[0].Rows[0]["n"].ToString();
+                if (IsNumeric(todayPostCount) && long.Parse(todayPostCount) < long.Parse(defaultCount))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private static Dictionary<string, int> ParseSpecificUserConfig(string config)
+        {
+            Dictionary<string, int> result = new Dictionary<string, int>();
+            if (!string.IsNullOrEmpty(config))
+            {
+                string[] pairs = config.Split(',');
+                foreach (string pair in pairs)
+                {
+                    string[] keyValue = pair.Split(':');
+                    if (keyValue.Length == 2 && IsNumeric(keyValue[0]) && IsNumeric(keyValue[1]))
+                    {
+                        result[keyValue[0]] = int.Parse(keyValue[1]);
+                    }
+                }
             }
             return result;
         }

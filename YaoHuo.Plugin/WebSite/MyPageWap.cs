@@ -1282,41 +1282,95 @@ namespace YaoHuo.Plugin.WebSite
 
         public void needPassWordToAdmin()
         {
+            NeedPassWordToAdminInternal("<b>密码错误！</b><br/>", "请输入您的密码：<br/>", ShowNeedPassword);
+        }
+
+        public void NeedPassWordToAdminNew()
+        {
+            NeedPassWordToAdminInternal("<b>密码错误，请重试</b><br/>", "此操作需验证密码", ShowNeedPasswordNew);
+        }
+
+        private void NeedPassWordToAdminInternal(string errorTip, string promptTip, Action<string, string> showNeedPasswordMethod)
+        {
             IsLogin(userid, "");
             string requestValue = GetRequestValue("needpassword");
-            string text = "";
-            if (requestValue != "")
+            bool isPasswordCorrect = false;
+
+            if (!string.IsNullOrEmpty(requestValue))
             {
-                if (PubConstant.md5(requestValue).ToLower() == userVo.password.ToLower() || (userVo.password.Length != 16 && requestValue.ToLower() == userVo.password.ToLower()))
+                if (!string.IsNullOrEmpty(KL_CHECKCODE) && userVo.managerlvl == "00")
                 {
-                    text = PubConstant.md5(PubConstant.md5(PubConstant.md5(userid + DateTime.Now.Day)));
-                    base.Response.Cookies["GET" + userid].Expires = DateTime.Now.AddHours(1.0);
-                    base.Response.Cookies["GET" + userid].Value = text;
+                    // 使用 KL_CHECKCODE 进行验证
+                    if (requestValue == KL_CHECKCODE)
+                    {
+                        isPasswordCorrect = true;
+                    }
                 }
                 else
                 {
-                    // 密码错误时重定向到当前页面
-                    base.Response.Redirect(base.Request.Url.PathAndQuery);
-                    return;
+                    // 使用常规密码验证
+                    if (PubConstant.md5(requestValue).ToLower() == userVo.password.ToLower() ||
+                        (userVo.password.Length != 16 && requestValue.ToLower() == userVo.password.ToLower()))
+                    {
+                        isPasswordCorrect = true;
+                    }
+                }
+
+                if (isPasswordCorrect)
+                {
+                    string text = PubConstant.md5(PubConstant.md5(PubConstant.md5(userid + DateTime.Now.Day)));
+                    Response.Cookies["GET" + userid].Expires = DateTime.Now.AddHours(1.0);
+                    Response.Cookies["GET" + userid].Value = text;
+                    Session["AdminPasswordVerified_" + userid] = true;
+                }
+
+                // 无论密码是否正确，都重定向
+                string redirectUrl = Request.Url.PathAndQuery;
+                redirectUrl = System.Text.RegularExpressions.Regex.Replace(redirectUrl, @"([?&])pwdStatus=[^&]*", "$1");
+                redirectUrl += redirectUrl.Contains("?") ? "&" : "?";
+                redirectUrl += "pwdStatus=" + (isPasswordCorrect ? "success" : "error");
+                Response.Redirect(redirectUrl);
+                return;
+            }
+
+            bool isVerified = Session["AdminPasswordVerified_" + userid] != null && (bool)Session["AdminPasswordVerified_" + userid];
+            if (!isVerified)
+            {
+                string cookieValue = Request.Cookies["GET" + userid]?.Value;
+                string expectedValue = PubConstant.md5(PubConstant.md5(PubConstant.md5(userid + DateTime.Now.Day)));
+
+                if (cookieValue == expectedValue)
+                {
+                    isVerified = true;
+                    Session["AdminPasswordVerified_" + userid] = true;
                 }
             }
-            if (text == "" && base.Request.Cookies["GET" + userid] != null)
+
+            if (!isVerified)
             {
-                text = base.Request.Cookies["GET" + userid].Value;
-            }
-            if (text != PubConstant.md5(PubConstant.md5(PubConstant.md5(userid + DateTime.Now.Day))))
-            {
-                if (requestValue != "")
+                string pwdStatus = GetRequestValue("pwdStatus");
+                if (pwdStatus == "error")
                 {
-                    ShowNeedPassword("<b>密码错误！</b><br/>", GetUrlQueryString());
+                    showNeedPasswordMethod(errorTip, GetUrlQueryString());
                 }
                 else
                 {
-                    ShowNeedPassword("请输入您的密码：<br/>", GetUrlQueryString());
+                    showNeedPasswordMethod(promptTip, GetUrlQueryString());
                 }
             }
         }
+
         public void ShowNeedPassword(string TIP, string backurl)
+        {
+            ShowNeedPasswordInternal(TIP, backurl, false);
+        }
+
+        public void ShowNeedPasswordNew(string TIP, string backurl)
+        {
+            ShowNeedPasswordInternal(TIP, backurl, true);
+        }
+
+        private void ShowNeedPasswordInternal(string TIP, string backurl, bool isNewVersion)
         {
             if ("1".Equals(KL_WAPAdmin_NeedPassWord))
             {
@@ -1329,125 +1383,76 @@ namespace YaoHuo.Plugin.WebSite
 
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append(WapTool.showTop(GetLang("请输入密码|请输入密码|show my password"), wmlVo));
-            stringBuilder.Append("<div class=\"title\">" + GetLang("温馨提示|温馨提示：|Tips:") + "</div>");
-            stringBuilder.Append("<div class=\"content\">");
-            stringBuilder.Append(TIP);
-            // 使用当前页面URL作为表单提交地址
-            string currentUrl = base.Request.Url.PathAndQuery;
-            stringBuilder.Append("<form name=\"go\" action=\"" + currentUrl + "\" method=\"post\">");
-            stringBuilder.Append("<input style=\"width:75%;\" type=\"password\" name=\"needpassword\" class=\"txt\" value=\"\"/><br/>");
-            stringBuilder.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
-            stringBuilder.Append("<input type=\"submit\" name=\"go\" class=\"btn\" value=\"确定\"/></form>");
-            stringBuilder.Append("</div>");
 
-            if (userVo != null && "|00|01|".IndexOf(userVo.managerlvl) > 0)
+            // 使用当前页面URL作为表单提交地址
+            string currentUrl = Request.Url.PathAndQuery;
+            // 移除可能存在的 pwdStatus 参数
+            currentUrl = System.Text.RegularExpressions.Regex.Replace(currentUrl, @"[?&]pwdStatus=[^&]*", "");
+
+            if (isNewVersion)
             {
-                //stringBuilder.Append("(管理员可看：此验证可在web.config中参数KL_WAPAdmin_NeedPassWord设为1关闭。)");
+                stringBuilder.Append("<link rel=\"stylesheet\" href=\"/NetCSS/CSS/NeedPW.css\" type=\"text/css\" />");
+                stringBuilder.Append("<form class=\"ui-modal\" data-state=\"idle\" autocomplete=\"off\" action=\"" + currentUrl + "\" method=\"post\">");
+                stringBuilder.Append("<div class=\"ui-icon\">");
+                stringBuilder.Append("<div class=\"ui-lock\"></div>");
+                stringBuilder.Append("</div>");
+                stringBuilder.Append("<div class=\"ui-title\">");
+                stringBuilder.Append(TIP);
+                stringBuilder.Append("</div>");
+                stringBuilder.Append("<div class=\"ui-subtitle\"></div>");
+                stringBuilder.Append("<div class=\"ui-password\">");
+                stringBuilder.Append("<input type=\"password\" name=\"needpassword\" id=\"\" class=\"ui-password-input\" placeholder=\"请输入密码\" required />");
+                stringBuilder.Append("</div>");
+                stringBuilder.Append("<button class=\"ui-submit\" type=\"submit\">确认</button>");
+                stringBuilder.Append("<button class=\"ui-reset\" type=\"button\" title=\"返回\">");
+                stringBuilder.Append("<div class=\"arrow\">");
+                stringBuilder.Append("<div class=\"arrow-mask\"></div>");
+                stringBuilder.Append("</button>");
+                stringBuilder.Append("</form>");
+                stringBuilder.Append("<script>");
+                stringBuilder.Append("window.onload = function() { document.querySelector('.ui-password-input').focus(); };");
+                stringBuilder.Append("document.querySelector('.ui-reset').addEventListener('click', function() { history.back(); });");
+                stringBuilder.Append("</script><style>.newMessage{display:none;}</style>");
             }
-            stringBuilder.Append("<div class=\"btBox\"><div class=\"bt1\">");
-            stringBuilder.Append("<a href=\"" + http_start + "wapindex.aspx?siteid=" + siteid + "\">" + GetLang("返回首页|返回首頁|back Index") + "</a></div></div>");
+            else
+            {
+                stringBuilder.Append("<div class=\"title\">" + GetLang("温馨提示|温馨提示：|Tips:") + "</div>");
+                stringBuilder.Append("<div class=\"content\">");
+                stringBuilder.Append(TIP);
+                stringBuilder.Append("<form name=\"go\" action=\"" + currentUrl + "\" method=\"post\">");
+                stringBuilder.Append("<input style=\"width:75%;\" type=\"password\" name=\"needpassword\" class=\"txt\" value=\"\"/><br/>");
+                stringBuilder.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\" />");
+                stringBuilder.Append("<input type=\"submit\" name=\"go\" class=\"btn\" value=\"确定\"/></form>");
+                stringBuilder.Append("</div>");
+
+                if (userVo != null && "|00|01|".IndexOf(userVo.managerlvl) > 0)
+                {
+                    //stringBuilder.Append("(管理员可看：此验证可在web.config中参数KL_WAPAdmin_NeedPassWord设为1关闭。)");
+                }
+
+                stringBuilder.Append("<div class=\"btBox\"><div class=\"bt1\">");
+                stringBuilder.Append("<a href=\"" + http_start + "wapindex.aspx?siteid=" + siteid + "\">" + GetLang("返回首页|返回首頁|back Index") + "</a></div></div>");
+            }
+
             string text3 = ShowWEB_view(classid);
-            if (text3 != "")
+            if (!string.IsNullOrEmpty(text3))
             {
                 string text4 = stringBuilder.ToString();
                 int num = text4.IndexOf("<div class=\"subtitle\">");
-                text4 = text4.Substring(num, text4.Length - num);
-                base.Response.Write(WapTool.ToWML(text3.ToString().Replace("[view]", text4), wmlVo));
+                if (num >= 0)
+                {
+                    text4 = text4.Substring(num);
+                }
+                Response.Write(WapTool.ToWML(text3.Replace("[view]", text4), wmlVo));
             }
             else
             {
                 stringBuilder.Append(WapTool.showDown(wmlVo));
-                base.Response.Write(stringBuilder);
+                Response.Write(stringBuilder);
             }
-            base.Response.End();
+            Response.End();
         }
 
-
-        public void NeedPassWordToAdminNew()
-        {
-            IsLogin(userid, "");
-            string requestValue = GetRequestValue("needpassword");
-            string text = "";
-            if (requestValue != "")
-            {
-                if (PubConstant.md5(requestValue).ToLower() == userVo.password.ToLower() || (userVo.password.Length != 16 && requestValue.ToLower() == userVo.password.ToLower()))
-                {
-                    text = PubConstant.md5(PubConstant.md5(PubConstant.md5(userid + DateTime.Now.Day)));
-                    base.Response.Cookies["GET" + userid].Expires = DateTime.Now.AddHours(1.0);
-                    base.Response.Cookies["GET" + userid].Value = text;
-                }
-                else
-                {
-                    base.Response.Redirect(base.Request.Url.PathAndQuery);
-                    return;
-                }
-            }
-            if (text == "" && base.Request.Cookies["GET" + userid] != null)
-            {
-                text = base.Request.Cookies["GET" + userid].Value;
-            }
-            if (text != PubConstant.md5(PubConstant.md5(PubConstant.md5(userid + DateTime.Now.Day))))
-            {
-                if (requestValue != "")
-                {
-                    ShowNeedPasswordNew("<b>密码错误，请重试</b>", GetUrlQueryString());
-                }
-                else
-                {
-                    ShowNeedPasswordNew("此操作需验证密码", GetUrlQueryString());
-                }
-            }
-        }
-
-        public void ShowNeedPasswordNew(string TIP, string backurl)
-        {
-            if ("1".Equals(KL_WAPAdmin_NeedPassWord))
-            {
-                return;
-            }
-
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(WapTool.showTop(GetLang("请输入密码|请输入密码|show my password"), wmlVo));
-            // 使用当前页面URL作为表单提交地址
-            string currentUrl = base.Request.Url.PathAndQuery;
-            stringBuilder.Append("<link rel=\"stylesheet\" href=\"/NetCSS/CSS/NeedPW.css\" type=\"text/css\" />");
-            stringBuilder.Append("<form class=\"ui-modal\" data-state=\"idle\" autocomplete=\"off\" action=\"" + currentUrl + "\" method=\"post\">");
-            stringBuilder.Append("<div class=\"ui-icon\">");
-            stringBuilder.Append("<div class=\"ui-lock\"></div>");
-            stringBuilder.Append("</div>");
-            stringBuilder.Append("<div class=\"ui-title\">");
-            stringBuilder.Append(TIP);
-            stringBuilder.Append("</div>");
-            stringBuilder.Append("<div class=\"ui-subtitle\"></div>");
-            stringBuilder.Append("<div class=\"ui-password\">");
-            stringBuilder.Append("<input type=\"password\" name=\"needpassword\" id=\"\" class=\"ui-password-input\" placeholder=\"请输入密码\" required />");
-            stringBuilder.Append("</div>");
-            stringBuilder.Append("<button class=\"ui-submit\" type=\"submit\">确认</button>");
-            stringBuilder.Append("<button class=\"ui-reset\" type=\"button\" title=\"返回\">");
-            stringBuilder.Append("<div class=\"arrow\">");
-            stringBuilder.Append("<div class=\"arrow-mask\"></div>");
-            stringBuilder.Append("</button>");
-            stringBuilder.Append("</form>");
-            stringBuilder.Append("<script>");
-            stringBuilder.Append("window.onload = function() { document.querySelector('.ui-password-input').focus(); };");
-            stringBuilder.Append("document.querySelector('.ui-reset').addEventListener('click', function() { history.back(); });");
-            stringBuilder.Append("</script><style>.newMessage{display:none;}</style>");
-
-            string text3 = ShowWEB_view(classid);
-            if (text3 != "")
-            {
-                string text4 = stringBuilder.ToString();
-                int num = text4.IndexOf("<div class=\"subtitle\">");
-                text4 = text4.Substring(num, text4.Length - num);
-                base.Response.Write(WapTool.ToWML(text3.ToString().Replace("[view]", text4), wmlVo));
-            }
-            else
-            {
-                stringBuilder.Append(WapTool.showDown(wmlVo));
-                base.Response.Write(stringBuilder);
-            }
-            base.Response.End();
-        }
 
         public bool IsUserManager(string userid, string string_10, string classadmin)
         {

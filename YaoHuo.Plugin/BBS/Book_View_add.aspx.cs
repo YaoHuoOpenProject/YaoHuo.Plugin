@@ -208,7 +208,7 @@ namespace YaoHuo.Plugin.BBS
                     {
                         INFO = "REPEAT";
                     }
-                    else if (KL_CheckBBSCount != "0" && !WapTool.CheckUserBBSCount(siteid, userid, KL_CheckBBSCount, "bbs"))
+                    else if (!WapTool.CheckUserBBSCount(siteid, userid, KL_CheckBBSCount, "bbs"))
                     {
                         INFO = "MAX";
                     }
