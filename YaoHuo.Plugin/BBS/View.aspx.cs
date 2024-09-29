@@ -21,11 +21,11 @@ namespace YaoHuo.Plugin.BBS
             wap_bbs_Model model = wap_bbs_BLL.GetModel(long.Parse(text));
             if (model != null)
             {
-                base.Server.Transfer("/bbs/book_view.aspx?siteid=" + model.userid + "&classid=" + model.book_classid + "&id=" + text + "&lpage=" + text2 + "&stype=" + text3);
+                base.Server.Transfer("/bbs/book_view.aspx?classid=" + model.book_classid + "&id=" + text);
             }
             else
             {
-                base.Response.Write("<html><title>提示</title><body>抱歉，找不到ID=" + text + "此记录！<br/><br/><a href=\"javascript:;\" onClick=\"javascript:history.back(-1);\">返回上级</a>-<a href=\"/\">返回首页</a></body></html>");
+                base.Response.Write("<!DOCTYPE html><html><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\"><title>提示信息</title><body>抱歉，找不到ID=" + text + "的记录！<br/><br/><a href=\"/\">返回首页</a></body></html>");
             }
         }
     }
