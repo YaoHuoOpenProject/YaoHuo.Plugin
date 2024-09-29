@@ -1,13 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_addfile.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_View_addfile" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-    StringBuilder strhtml=new StringBuilder ();
+    StringBuilder strhtml = new StringBuilder();
     Response.Write(WapTool.showTop(this.GetLang("发表文件帖|发表文件帖|add subject"), wmlVo));
     if (num > 9) num = 9;
     if (num < 1) num = 1;
     strhtml.Append("<link href=\"/netcss/css/save-notification.css\" rel=\"stylesheet\" type=\"text/css\"/>");
     strhtml.Append("<div class=\"title\">发表文件帖(");
-    strhtml.Append(classVo.classname+"");
+    strhtml.Append(classVo.classname + "");
     strhtml.Append(")</div>");
     strhtml.Append("<div style=\"display:none\" class=\"notification-container\"><div style=\"top: 55px;\" class=\"custom-notification\"> <div class=\"custom-notification-container\"> <p class=\"custom-notification-content\">草稿保存成功!</p> </div> </div></div>");
     strhtml.Append("<div class=\"btBox\">");
@@ -29,11 +29,11 @@
     }
     else if (this.INFO == "EXTERR")
     {
-        strhtml.Append("<b>上传文件格式错误，只允许上传："+siteVo.UpFileType+"</b><br/>");
+        strhtml.Append("<b>上传文件格式错误，只允许上传：" + siteVo.UpFileType + "</b><br/>");
     }
     else if (this.INFO == "NOTSPACE")
     {
-        strhtml.Append("<b>网站总空间已经大于系统分配给此网站的最大空间了，网站空间：" + siteVo.sitespace  + "M；此网站已使用：" + (siteVo.myspace) + "KB</b><br/>");
+        strhtml.Append("<b>网站总空间已经大于系统分配给此网站的最大空间了，网站空间：" + siteVo.sitespace + "M；此网站已使用：" + (siteVo.myspace) + "KB</b><br/>");
     }
     else if (this.INFO == "MAXFILE")
     {
@@ -165,7 +165,7 @@
     if (isWebHtml != "")
     {
         Response.Clear();
-        Response.Write(WapTool.ToWML(isWebHtml,wmlVo).Replace("[view]", strhtml.ToString()));
+        Response.Write(WapTool.ToWML(isWebHtml, wmlVo).Replace("[view]", strhtml.ToString()));
         Response.End();
     }
     strhtml.Append("<div class=\"btBox\">");

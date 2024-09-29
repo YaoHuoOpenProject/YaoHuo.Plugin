@@ -833,7 +833,7 @@ namespace YaoHuo.Plugin.BBS
                     if (!scriptsAdded)
                     {
                         // 添加 highlight.js 的 CSS 和 JS
-                        string scriptTags = @"<link rel=""stylesheet"" href=""//lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/atom-one-light.min.css""><script src=""//lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/highlight.min.js""></script><script src=""/css/img/svg/ClipBoard.js""></script><script src=""/css/img/svg/ClickCopy.js""></script><script>document.addEventListener('DOMContentLoaded', (event) => {document.querySelectorAll('code.CodeSnippet').forEach((block) => {block.innerHTML = block.innerHTML.replace(/<br>/g, '\n');hljs.highlightElement(block);});});</script>";
+                        string scriptTags = @"<link rel=""stylesheet"" href=""//lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/atom-one-light.min.css""><script src=""//lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/highlight.min.js""></script><script src=""//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/clipboard.js/2.0.10/clipboard.min.js""></script><script src=""/css/img/svg/ClickCopy.js""></script><script>document.addEventListener('DOMContentLoaded', (event) => {document.querySelectorAll('code.CodeSnippet').forEach((block) => {block.innerHTML = block.innerHTML.replace(/<br>/g, '\n');hljs.highlightElement(block);});});</script>";
                         content = scriptTags + content;
                         scriptsAdded = true;
                     }

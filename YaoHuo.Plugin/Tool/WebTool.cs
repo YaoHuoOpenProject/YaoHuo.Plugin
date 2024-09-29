@@ -383,8 +383,6 @@ namespace YaoHuo.Plugin.Tool
                 stringBuilder.Append("<?xml version=\"1.0\" encoding=\"utf-8\"?><!DOCTYPE wml PUBLIC \"-//WAPFORUM//DTD WML 1.1//EN\" \"http://www.wapforum.org/DTD/wml_1.1.xml\">\n");
                 stringBuilder.Append("<wml>\n");
                 stringBuilder.Append("<head>\n");
-                //stringBuilder.Append("<meta http-equiv=\"Cache-Control\" content=\"max-age=0\"/>\n");
-                //stringBuilder.Append("<meta http-equiv=\"Cache-Control\" content=\"no-cache\"/>\n");
                 if (wmlVo.timer != null && wmlVo.timer != "")
                 {
                     string text = wmlVo.strUrl;
@@ -413,8 +411,6 @@ namespace YaoHuo.Plugin.Tool
             {
                 stringBuilder.Append("<!DOCTYPE html><html>");
                 stringBuilder.Append("<head>\n");
-                //stringBuilder.Append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n");
-                //stringBuilder.Append("<meta http-equiv=\"Cache-Control\" content=\"no-cache\"/>\n");
                 if (wmlVo.mycss.IndexOf("viewport") < 0)
                 {
                     stringBuilder.Append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\">\n");
@@ -434,14 +430,14 @@ namespace YaoHuo.Plugin.Tool
                     {
                         stringBuilder.Append("<meta name=\"keywords\" content=\"" + wmlVo.title + " " + wmlVo.classVo.classname + "\" />\r\n");
                     }
-                    if (wmlVo.mycss.IndexOf("description") < 0)
-                    {
-                        stringBuilder.Append("<meta name=\"description\" content=\"" + wmlVo.title + " " + wmlVo.classVo.classname + " " + wmlVo.siteVo.sitename + " " + wmlVo.http_start.Replace("http:", "").Replace("/", "") + "\" />\r\n");
-                    }
-                    if (wmlVo.mycss.IndexOf("author") < 0)
-                    {
-                        stringBuilder.Append("<meta name=\"author\" content=\"" + wmlVo.siteVo.sitename + " " + wmlVo.http_start.Replace("http:", "").Replace("/", "") + "\" />\r\n");
-                    }
+                    //if (wmlVo.mycss.IndexOf("description") < 0)
+                    //{
+                    //    stringBuilder.Append("<meta name=\"description\" content=\"" + wmlVo.title + " " + wmlVo.classVo.classname + " " + wmlVo.siteVo.sitename + " " + wmlVo.http_start.Replace("http:", "").Replace("/", "") + "\" />\r\n");
+                    //}
+                    //if (wmlVo.mycss.IndexOf("author") < 0)
+                    //{
+                    //    stringBuilder.Append("<meta name=\"author\" content=\"" + wmlVo.siteVo.sitename + " " + wmlVo.http_start.Replace("http:", "").Replace("/", "") + "\" />\r\n");
+                    //}
                 }
                 catch (Exception)
                 {
@@ -469,7 +465,7 @@ namespace YaoHuo.Plugin.Tool
                 {
                     if (wmlVo.siteVo != null)
                     {
-                        stringBuilder.Append("_");
+                        stringBuilder.Append(" - "); // 将 "_" 改为 " - "
                         if (text2 != "")
                         {
                             stringBuilder.Append(text2);
@@ -484,12 +480,14 @@ namespace YaoHuo.Plugin.Tool
                 {
                     if (wmlVo.classVo != null)
                     {
-                        stringBuilder.Append("_");
+                        stringBuilder.Append(" - ");
                         stringBuilder.Append(wmlVo.classVo.classname);
                     }
+                    // 以下代码被注释掉，不再添加网站名称
+                    /*
                     if (wmlVo.siteVo != null)
                     {
-                        stringBuilder.Append("_");
+                        stringBuilder.Append(" - ");
                         if (text2 != "")
                         {
                             stringBuilder.Append(text2);
@@ -499,6 +497,7 @@ namespace YaoHuo.Plugin.Tool
                             stringBuilder.Append(wmlVo.siteVo.sitename);
                         }
                     }
+                    */
                 }
                 stringBuilder.Append("</title>\n");
                 stringBuilder.Append("</head>\n");

@@ -1,14 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_userlistWAP.aspx.cs" Inherits="YaoHuo.Plugin.WML.admin_userlistWAP" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin_userlistWAP.aspx.cs" Inherits="YaoHuo.Plugin.WML.admin_userlistWAP" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-Response.Write(WapTool.showTop(this.GetLang("WML内容|WML內容|Content of the wml"), wmlVo));//显示头                                                                                                                                                                       
-if (ver == "1")
-{
-}
-else //2.0界面
-{
+    Response.Write(WapTool.showTop(this.GetLang("WML内容|WML內容|Content of the wml"), wmlVo));
     strhtml.Append("<div class=\"title\">" + classVo.classname + "</div>");
-    //显示搜索
     strhtml.Append("<div class=\"content\">");
     //strhtml.Append("内容管理.<a href=\"" + this.http_start + "wml/admin_guestlistWAP.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">评论管理</a><br/>");
     strhtml.Append(" <a href=\"" + this.http_start + "wml/admin_WAPadd.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">批量新增</a> ");
@@ -40,7 +34,7 @@ else //2.0界面
         }
         if (listVo[i].ischeck.ToString() == "1")
         {
-            YesOrNo="nono.gif";
+            YesOrNo = "nono.gif";
             CheckStr = "[<a href=\"" + this.http_start + "wml/admin_userlistWAP.aspx?action=gocheck&amp;id=" + listVo[i].id + "&amp;state=0&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;tositeid=" + this.siteid + "&amp;page=" + this.CurrentPage + "\">审核</a>]";
         }
         else
@@ -50,22 +44,18 @@ else //2.0界面
         }
         strhtml.Append(index + ".<img src=\"" + this.http_start + "NetImages/" + YesOrNo + "\" alt=\"YES\"/>" + CheckStr + "[ID" + listVo[i].id + "][<a href=\"" + this.http_start + "wml/admin_WAPdel.aspx?action=go&amp;id=" + listVo[i].id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "\">删</a>][<a href=\"" + this.http_start + "wml/admin_WAPmodify.aspx?action=go&amp;id=" + listVo[i].id + "&amp;siteid=" + this.siteid + "&amp;classid=" + listVo[i].book_classid + "&amp;page=" + this.CurrentPage + "\">修</a>][<a href=\"" + this.http_start + "wml/admin_WAPchange.aspx?action=go&amp;id=" + listVo[i].id + "&amp;siteid=" + this.siteid + "&amp;classid=" + listVo[i].book_classid + "&amp;page=" + this.CurrentPage + "\">转</a>][<a href=\"" + this.http_start + "wml/admin_userlistWAP.aspx?action=class&amp;siteid=" + siteid + "&amp;classid=" + listVo[i].book_classid + "" + "\">" + listVo[i].classname + "</a>]<a href=\"" + http_start + "wml/book_view.aspx?siteid=" + siteid + "&amp;classid=" + listVo[i].book_classid + "&amp;id=" + listVo[i].id + "" + "\">" + listVo[i].book_title + "(" + listVo[i].book_click.ToString() + ")</a></div>");
     }
-    if (listVo==null)
+    if (listVo == null)
     {
         strhtml.Append("<div class=\"tip\">暂无记录</div>");
     }
     //显示导航分页
-    strhtml.Append( linkURL );
-    //导航按钮
+    strhtml.Append(linkURL);
     strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
-    strhtml.Append("<a href=\"" + this.http_start + "admin/admin_wapClasslist.aspx?sid=" + sid + "&amp;siteid=" + siteid + "&amp;gopathname=" + HttpUtility.UrlEncode("WML类") + "&amp;gopath=wml/index.aspx\">返回上级</a> ");
+    strhtml.Append("<a href=\"" + this.http_start + "admin/admin_wapClasslist.aspx?siteid=" + siteid + "&amp;gopathname=" + HttpUtility.UrlEncode("WML类") + "&amp;gopath=wml/index.aspx\">返回上级</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=0" + "\">返回首页</a>");
     strhtml.Append("</div></div>");
-    //输出
     Response.Write(strhtml);
-    //Response.Write(WapTool.ToWML(strhtml.ToString(), wmlVo));
-}
-Response.Write(ERROR);                                                                                                                                                                              
-//显示底部
-Response.Write(WapTool.showDown(wmlVo)); //显示底部
+    Response.Write(ERROR);
+    //显示底部
+    Response.Write(WapTool.showDown(wmlVo));
 %>

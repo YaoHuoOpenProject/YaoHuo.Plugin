@@ -150,7 +150,7 @@ namespace YaoHuo.Plugin.WML
                                 num = 0;
                                 continue;
                             }
-                            classVo.classname = "管理 " + classVo.classname + ":" + key;
+                            classVo.classname = "管理" + classVo.classname;
                             condition = " userid=" + siteid + " and   book_classid=" + classid + " ";
                             num = 3;
                             continue;
@@ -266,7 +266,7 @@ namespace YaoHuo.Plugin.WML
                             condition = " userid=" + siteid;
                             classVo.classid = 0L;
                             classVo.position = "left";
-                            classVo.classname = "管理 所有WML内容:" + key;
+                            classVo.classname = "管理所有WML内容";
                             classVo.siteimg = "NetImages/no.gif";
                             num = 5;
                             continue;

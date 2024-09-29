@@ -69,7 +69,7 @@ namespace YaoHuo.Plugin.BBS
             }
             if (classid != "0" && classVo.typePath.ToLower() != "bbs/index.aspx")
             {
-                ShowTipInfo("抱歉，当前访问的栏目ID对应非论坛模块，请联系站长处理。", "");
+                ShowTipInfo("抱歉，当前访问的栏目ID非论坛模块。", "");
             }
             action = GetRequestValue("action");
             if (classid == "0")
@@ -79,7 +79,7 @@ namespace YaoHuo.Plugin.BBS
             }
             if (!IsCheckManagerLvl("|00|01|", "") && "1".Equals(WapTool.getArryString(classVo.smallimg, '|', 0)))
             {
-                ShowTipInfo("此栏目已关闭！【版务】→【更多栏目属性】中设置。", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
+                ShowTipInfo("此版块已关闭！", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
             }
             titlecolor = WapTool.getArryString(classVo.smallimg, '|', 42);
             switch (action)
@@ -144,7 +144,7 @@ namespace YaoHuo.Plugin.BBS
         {
             if (classid == "0")
             {
-                ShowTipInfo("无此栏目ID", "");
+                ShowTipInfo("无此版块ID", "");
             }
             condition = " userid=" + siteid + " and book_classid=" + classid + " and ischeck=0 ";
             stype = GetRequestValue("stype");
@@ -298,7 +298,7 @@ namespace YaoHuo.Plugin.BBS
             }
             else
             {
-                classVo.classname += ".最新帖子";
+                classVo.classname += "・最新帖子";
                 condition = $" userid={siteid} and book_classid in (select classid from [class] where childid={classid} union select '{classid}') ";
             }
             try
@@ -346,7 +346,7 @@ namespace YaoHuo.Plugin.BBS
             }
             else
             {
-                classVo.classname += ".最热内容";
+                classVo.classname += "・最热内容";
                 condition = "  ischeck=0 and userid=" + siteid + " and   book_classid in (select classid from [class] where childid=" + classid + " union select '" + classid + "') ";
             }
             try
@@ -501,7 +501,7 @@ namespace YaoHuo.Plugin.BBS
             }
             else
             {
-                classVo.classname += ".最新精华帖子";
+                classVo.classname += "・精华帖子";
                 condition = "  ischeck=0 and book_good=1 and userid=" + siteid + " and   book_classid in (select classid from [class] where childid=" + classid + " union select '" + classid + "') ";
             }
             try
