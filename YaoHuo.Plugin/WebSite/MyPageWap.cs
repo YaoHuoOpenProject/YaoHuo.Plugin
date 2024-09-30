@@ -1453,6 +1453,40 @@ namespace YaoHuo.Plugin.WebSite
             Response.End();
         }
 
+        protected string ProcessCodeTags(string content)
+        {
+            bool scriptsAdded = false;
+            if (content.IndexOf("[/code]", StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                Regex codeRegex = new Regex("\\[code\\](.*?)\\[/code\\]", RegexOptions.Singleline | RegexOptions.IgnoreCase);
+
+                foreach (Match match in codeRegex.Matches(content))
+                {
+                    var codeContent = Regex.Match(match.Value, "(?<=\\[code\\]).+?(?=\\[\\/code\\])", RegexOptions.IgnoreCase).Value;
+
+                    if (string.IsNullOrEmpty(codeContent.Trim()))
+                    {
+                        continue;
+                    }
+
+                    codeContent = HttpUtility.HtmlEncode(codeContent);
+                    codeContent = codeContent.Replace("\u201C", "\"").Replace("\u2018", "'").Replace("\u201D", "\"").Replace("\u2019", "'");
+
+                    string codeHtml = "<pre class=\"CodeContainer\"><button class=\"CopyButton\"><div class=\"CopyIcon\"><img src=\"/css/img/svg/copy.svg\"></div></button><code class=\"CodeSnippet hljs\">" + codeContent + "</code></pre>";
+
+                    content = content.Replace(match.Value, codeHtml);
+
+                    if (!scriptsAdded)
+                    {
+                        string scriptTags = "<link rel=\"stylesheet\" href=\"//lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/atom-one-light.min.css\"><script src=\"//lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/highlight.min.js\"></script><script src=\"//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/clipboard.js/2.0.10/clipboard.min.js\"></script><script src=\"/css/img/svg/ClickCopy.js\"></script><script>document.addEventListener('DOMContentLoaded', (event) => {document.querySelectorAll('code.CodeSnippet').forEach((block) => {block.innerHTML = block.innerHTML.replace(/<br>/g, '\\n');hljs.highlightElement(block);});});</script>";
+                        content = scriptTags + content;
+                        scriptsAdded = true;
+                    }
+                }
+            }
+            return content;
+        }
+
 
         public bool IsUserManager(string userid, string string_10, string classadmin)
         {

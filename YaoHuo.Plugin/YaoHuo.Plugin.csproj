@@ -514,7 +514,9 @@
     <Compile Include="Tool\BlackTool.cs" />
     <Compile Include="Tool\HttpTool.cs" />
     <Compile Include="Tool\MessageTool.cs" />
+    <Compile Include="WebSite\BBSAttachment.cs" />
     <Compile Include="WebSite\BLL\WapVCountEveryDateBLL.cs" />
+    <Compile Include="WebSite\BookViewHelper.cs" />
     <Compile Include="WebSite\DAL\WapVCountEveryDateDAL.cs" />
     <Compile Include="WebSite\MyCount.cs" />
     <Compile Include="WebSite\MyPageWap.cs">

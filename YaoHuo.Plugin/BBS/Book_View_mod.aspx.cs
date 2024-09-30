@@ -67,11 +67,15 @@ namespace YaoHuo.Plugin.BBS
                 try
                 {
                     UpdateBbsContent();
-                    HandleAdditionalReward();
-                    wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
-                    wap_bbs_BLL.Update(bbsVo);
-                    WapTool.ClearDataBBS("bbs" + siteid + classid);
-                    INFO = "OK";
+                    // 修改: 只有当 INFO 不是 "TITLEMAX" 时才继续处理
+                    if (INFO != "TITLEMAX")
+                    {
+                        HandleAdditionalReward();
+                        wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
+                        wap_bbs_BLL.Update(bbsVo);
+                        WapTool.ClearDataBBS("bbs" + siteid + classid);
+                        INFO = "OK";
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -170,10 +174,13 @@ namespace YaoHuo.Plugin.BBS
         private void UpdateBbsContent()
         {
             bbsVo.book_title = GetSafeRequestValue("book_title").Trim();
-            if (bbsVo.book_title.Length > 200)
+            // 修改: 检查标题长度是否超过25个字符
+            if (bbsVo.book_title.Length > 25)
             {
-                bbsVo.book_title = bbsVo.book_title.Substring(0, 200);
+                INFO = "TITLEMAX";
+                return;
             }
+
             // 修改: 使用 PreserveCodeContent 方法处理 book_content
             bbsVo.book_content = PreserveCodeContent(GetRequestValue("book_content"));
             bbsVo.book_title = bbsVo.book_title.Replace("/", "／").Replace("[", "［").Replace("]", "］");
