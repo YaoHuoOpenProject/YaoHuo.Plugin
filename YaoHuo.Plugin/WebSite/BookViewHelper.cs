@@ -7,7 +7,7 @@ namespace YaoHuo.Plugin.BBS
 {
     public class BookViewHelper
     {
-        public static string ProcessContent(string content, int totalPage, int CurrentPage, int pageSize, string viewLeave)
+        public static string ProcessContent(string content, ref int totalPage, int CurrentPage, int pageSize, string viewLeave)
         {
             if (content.IndexOf("[next]") > 0)
             {
@@ -70,6 +70,10 @@ namespace YaoHuo.Plugin.BBS
                     content += WapTool.ErrorToString(ex.ToString());
                 }
             }
+
+            content = content.Replace("[next]", "");
+            content = content.Replace("\uff3e", "");
+
             return content;
         }
 

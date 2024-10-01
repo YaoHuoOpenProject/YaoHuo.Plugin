@@ -194,6 +194,17 @@ namespace YaoHuo.Plugin.BBS
                 content = bookVo.book_content;
                 content = content.Replace("[id]", id);
                 content = ProcessCodeTags(content);
+                if (view != "all")
+                {
+                    content = BookViewHelper.ProcessContent(content, ref totalPage, CurrentPage, pageSize, viewLeave);
+                    if (content != "")
+                    {
+                        content = "<!--listS-->" + content + "<!--listE-->";
+                    }
+                    linkURL = WapTool.GetPageContentLink(ver, lang, totalPage, pageSize, CurrentPage, http_start_url + "&amp;id=" + id);
+                }
+                content += "<span id='KL_show_next_list'></span>";
+
                 wap2_attachment_BLL attachmentBLL = new wap2_attachment_BLL(a);
                 string attachmentContent = BBSAttachment.ProcessAttachments(
                     bookVo.isdown,
@@ -210,18 +221,6 @@ namespace YaoHuo.Plugin.BBS
                 );
                 content += attachmentContent;
 
-                if (view != "all")
-                {
-                    content = BookViewHelper.ProcessContent(content, totalPage, CurrentPage, pageSize, viewLeave);
-                    if (content != "")
-                    {
-                        content = "<!--listS-->" + content + "<!--listE-->";
-                    }
-                    linkURL = WapTool.GetPageContentLink(ver, lang, totalPage, pageSize, CurrentPage, http_start_url + "&amp;id=" + id);
-                }
-
-                content = content.Replace("[next]", "");
-                content = content.Replace("\uff3e", "");
                 KL_ShowPreNextTitle_bbs = WapTool.GetSystemAndMyConfig(KL_ShowPreNextTitle_bbs, WapTool.getArryString(classVo.smallimg, '|', 15));
                 if (!"1".Equals(KL_ShowPreNextTitle_bbs))
                 {

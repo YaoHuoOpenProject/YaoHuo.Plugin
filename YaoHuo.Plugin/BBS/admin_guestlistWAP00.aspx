@@ -1,12 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_guestlistWAP00.aspx.cs" Inherits="YaoHuo.Plugin.BBS.admin_guestlistWAP00" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-Response.Write(WapTool.showTop(this.GetLang("论坛回复审核|论坛回复审核|Check Content of the bbs"), wmlVo));//显示头                                                                                                                                                                       
-if (ver == "1")
-{
-}
-else //2.0界面
-{
+    Response.Write(WapTool.showTop(this.GetLang("论坛回复审核|论坛回复审核|Check Content of the bbs"), wmlVo));
     strhtml.Append("<div class=\"title\">" + classVo.classname + "</div>");
     strhtml.Append("<div class=\"content\">");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/admin_userlistWAP00.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;tositeid=" + this.tositeid + "\">内容审核</a><span class=\"separate\"></span>回复审核<br/>");
@@ -57,16 +52,12 @@ else //2.0界面
     {
         strhtml.Append("<div class=\"tip\">暂无记录！</div>");
     }
-    //显示导航分页
     strhtml.Append(linkURL);
     strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
     strhtml.Append("<a href=\"" + this.http_start + "admin/basesitemodifywml00.aspx?siteid=" + siteid + "\">返回上级</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=0" + "\">返回首页</a>");
     strhtml.Append("</div></div>");
-    //输出
-    //Response.Write(WapTool.ToWML(strhtml.ToString(), wmlVo));
     Response.Write(strhtml);
-}
-Response.Write(ERROR);
-Response.Write(WapTool.showDown(wmlVo)); //显示底部
+    Response.Write(ERROR);
+    Response.Write(WapTool.showDown(wmlVo));
 %>
