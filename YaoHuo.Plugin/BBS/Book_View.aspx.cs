@@ -4,12 +4,13 @@ using KeLin.ClassManager.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Web.UI.WebControls;
 using YaoHuo.Plugin.Tool;
 using YaoHuo.Plugin.WebSite;
 
 namespace YaoHuo.Plugin.BBS
 {
-    public class Book_View : MyPageWap
+    public partial class Book_View : MyPageWap
     {
         private string a = PubConstant.GetAppString("InstanceName");
 
@@ -55,7 +56,7 @@ namespace YaoHuo.Plugin.BBS
 
         public string stypelink = "";
 
-        public string threePageType = "";
+        //public string threePageType = "";
 
         public string linkURL = "";
 
@@ -81,6 +82,14 @@ namespace YaoHuo.Plugin.BBS
 
         public bool isNeedSecret = false;
 
+        protected GuessData guessingData;
+
+        protected BetInfo userBet;
+
+        // 新增属性
+        public long? WinningOptionId { get; set; }
+        public string WinningOptionText { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (classid != "0" && classVo.typePath.ToLower() != "bbs/index.aspx")
@@ -99,11 +108,11 @@ namespace YaoHuo.Plugin.BBS
             type = WapTool.GetSiteDefault(siteVo.Version, 27);
             showhead = WapTool.getArryString(classVo.smallimg, '|', 38);
             downLink = WapTool.getArryString(classVo.smallimg, '|', 20).Trim().Replace("[stype]", stype);
-            threePageType = WapTool.getArryString(classVo.smallimg, '|', 23);
-            if (!WapTool.IsNumeric(threePageType))
-            {
-                threePageType = "1";
-            }
+            //threePageType = WapTool.getArryString(classVo.smallimg, '|', 23);
+            //if (!WapTool.IsNumeric(threePageType))
+            //{
+            //    threePageType = "1";
+            //}
             if (WapTool.IsNumeric(stype))
             {
                 stypelink = "&amp;stype=" + stype;
@@ -310,6 +319,26 @@ namespace YaoHuo.Plugin.BBS
                 }
                 VisiteCount("正在浏览帖子:<a href='" + http_start + "bbs-" + id + ".html'>" + bookVo.book_title + "</a>");
                 Action_user_doit(3);
+
+                // 获取竞猜数据
+                guessingData = GetGuessingData(long.Parse(id));
+                if (guessingData != null)
+                {
+                    if (guessingData.IsClosed)
+                    {
+                        // 设置新的属性
+                        WinningOptionId = guessingData.WinningOptionId;
+                        WinningOptionText = guessingData.WinningOptionText;
+                    }
+
+                    // 获取用户投注信息
+                    long userIdLong;
+                    if (long.TryParse(userid, out userIdLong))
+                    {
+                        GuessManager guessManager = new GuessManager(PubConstant.GetAppString("InstanceName"));
+                        userBet = guessManager.GetUserBet(guessingData.Id, userIdLong);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -329,5 +358,18 @@ namespace YaoHuo.Plugin.BBS
             MainBll.UpdateSQL("update wap_bbs set book_re=" + num + " where id=" + nowid);
         }
 
+        private GuessData GetGuessingData(long bbsId)
+        {
+            string instanceName = PubConstant.GetAppString("InstanceName");
+            if (string.IsNullOrEmpty(instanceName))
+            {
+                return null;
+            }
+
+            GuessManager guessManager = new GuessManager(instanceName);
+            return guessManager.GetGuessingByBbsId(bbsId);
+        }
+
     }
+
 }

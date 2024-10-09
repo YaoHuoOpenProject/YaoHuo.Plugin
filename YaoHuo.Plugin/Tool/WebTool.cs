@@ -4330,12 +4330,20 @@ namespace YaoHuo.Plugin.Tool
                 int num = array.Length - 1;
                 while (num >= 0)
                 {
-                    if (MoneyOrExpr <= Convert.ToInt32(array[num]))
+                    if (int.TryParse(array[num], out int value))
                     {
-                        num--;
-                        continue;
+                        if (MoneyOrExpr <= value)
+                        {
+                            num--;
+                            continue;
+                        }
+                        return array2[num];
                     }
-                    return array2[num];
+                    else
+                    {
+                        Console.WriteLine($"无法解析的值: {array[num]}");
+                        num--;
+                    }
                 }
             }
             catch (Exception)

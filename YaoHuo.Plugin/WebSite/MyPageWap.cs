@@ -556,10 +556,10 @@ namespace YaoHuo.Plugin.WebSite
                     {
                         KL_CSS_DIV_SYSAD_Name = "content";
                     }
-                    _KL_URL_INFO = WapTool.GetPage("http://www.kelink.com/download/update.aspx", "action=info&url=" + http_start + "&ver=10.2014.12.18&isNET=NET&nickname=" + siteVo.nickname + "&mobile=" + siteVo.mobile + "&email=" + siteVo.email + "&sysmobile=" + domainName_Model.tel + "&sysemail=" + domainName_Model.email + "&ip=" + base.Request.ServerVariables["LOCAL_ADDR"] + "&ua=" + UA + "&uv=" + num3 + "&pv=" + num2 + "&vertype=" + text10 + "&regdomain=" + domainName_Model.domain, "POST");
+                    //_KL_URL_INFO = WapTool.GetPage("http://www.kelink.com/download/update.aspx", "action=info&url=" + http_start + "&ver=10.2014.12.18&isNET=NET&nickname=" + siteVo.nickname + "&mobile=" + siteVo.mobile + "&email=" + siteVo.email + "&sysmobile=" + domainName_Model.tel + "&sysemail=" + domainName_Model.email + "&ip=" + base.Request.ServerVariables["LOCAL_ADDR"] + "&ua=" + UA + "&uv=" + num3 + "&pv=" + num2 + "&vertype=" + text10 + "&regdomain=" + domainName_Model.domain, "POST");
                     if (domainName_Model.domain.ToLower() == "xfjz8.com")
                     {
-                        KL_PAGE_DOWN = "[url=http://kelink.com]提示:此站未注册未授权联系Kelink.Com[/url]";
+                        //KL_PAGE_DOWN = "[url=http://kelink.com]提示:此站未注册未授权联系Kelink.Com[/url]";
                     }
                 }
                 catch (Exception)
@@ -579,7 +579,7 @@ namespace YaoHuo.Plugin.WebSite
                 }
                 if (KL_PAGE_DOWN == "")
                 {
-                    KL_PAGE_DOWN = "Powered by [url=http://kelink.com]Kelink.Com[/url]";
+                    //KL_PAGE_DOWN = "Powered by [url=http://kelink.com]Kelink.Com[/url]";
                 }
             }
             if ((KL_VERSION == "2" || KL_VERSION == "3") && siteVo.siteid < 201L && siteVo.siteid > 100L)
@@ -993,7 +993,7 @@ namespace YaoHuo.Plugin.WebSite
                     }
                     if (siteid != "")
                     {
-                        stringBuilder.Append("<br/><a href=\"" + http_start + "wapindex.aspx?siteid=" + siteid + "\">" + GetLang("返回首页|返回首頁|back Index") + "</a></p>");
+                        stringBuilder.Append("<br/><a href=\"" + http_start + "\">" + GetLang("返回首页|返回首頁|back Index") + "</a></p>");
                     }
                 }
                 else
@@ -1010,7 +1010,7 @@ namespace YaoHuo.Plugin.WebSite
                     if (siteid != "")
                     {
                         stringBuilder.Append("<div class=\"btBox\"><div class=\"bt1\">");
-                        stringBuilder.Append("<a href=\"" + http_start + "wapindex.aspx?siteid=" + siteid + "\">" + GetLang("返回首页|返回首頁|back Index") + "</a></div></div>");
+                        stringBuilder.Append("<a href=\"" + http_start + "\">" + GetLang("返回首页|返回首頁|back Index") + "</a></div></div>");
                     }
                 }
                 string text = ShowWEB_list(classid);

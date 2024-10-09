@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>YaoHuo.Plugin</RootNamespace>
     <AssemblyName>YaoHuo.Plugin</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -71,7 +71,9 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
@@ -104,7 +106,9 @@
     <Content Include="BBS\Admin_guestlistWAPdel00.aspx" />
     <Content Include="BBS\Admin_userlistWAP.aspx" />
     <Content Include="BBS\Admin_userlistWAP00.aspx" />
+    <Content Include="BBS\Banklist.aspx" />
     <Content Include="BBS\Book_List_delmy.aspx" />
+    <Content Include="BBS\Book_Re_addfileshow.aspx" />
     <Content Include="BBS\Book_Re_del.aspx" />
     <Content Include="BBS\Book_Re_delmy.aspx" />
     <Content Include="BBS\Book_Re_mod.aspx" />
@@ -122,10 +126,14 @@
     <Content Include="BBS\Book_View_good.aspx" />
     <Content Include="BBS\Book_View_lock.aspx" />
     <Content Include="BBS\Book_View_mod.aspx" />
+    <Content Include="BBS\Book_View_modfile_del.aspx" />
     <Content Include="BBS\Book_View_sendmoney.aspx" />
     <Content Include="BBS\Book_View_top.aspx" />
     <Content Include="BBS\Book_View_topall.aspx" />
     <Content Include="BBS\Download.aspx" />
+    <Content Include="BBS\GuessAdd.aspx" />
+    <Content Include="BBS\GuessMod.aspx" />
+    <Content Include="BBS\GuessVote.aspx" />
     <Content Include="BBS\LockUser_List_add.aspx" />
     <Content Include="BBS\LockUser_List_del.aspx" />
     <Content Include="BBS\MessageList_View.aspx" />
@@ -185,6 +193,7 @@
     <Content Include="BBS\FriendList.aspx" />
     <Content Include="BBS\List.aspx" />
     <Content Include="WML\Admin_userlistWAP.aspx" />
+    <Content Include="WML\Admin_WAPmodify.aspx" />
     <Content Include="XinZhang\Book_View_Buy.aspx" />
     <Content Include="XinZhang\Book_View_My.aspx" />
   </ItemGroup>
@@ -233,6 +242,10 @@
       <DependentUpon>Admin_userlistWAP00.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BBS\Banklist.aspx.cs">
+      <DependentUpon>Banklist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BBS\Book_List.aspx.cs">
       <DependentUpon>Book_List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -243,6 +256,10 @@
     </Compile>
     <Compile Include="BBS\Book_Re.aspx.cs">
       <DependentUpon>Book_Re.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_Re_addfileshow.aspx.cs">
+      <DependentUpon>Book_Re_addfileshow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_Re_del.aspx.cs">
@@ -329,6 +346,10 @@
       <DependentUpon>Book_View_modfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BBS\Book_View_modfile_del.aspx.cs">
+      <DependentUpon>Book_View_modfile_del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BBS\Book_View_sendmoney.aspx.cs">
       <DependentUpon>Book_View_sendmoney.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -343,6 +364,18 @@
     </Compile>
     <Compile Include="BBS\Download.aspx.cs">
       <DependentUpon>Download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\GuessAdd.aspx.cs">
+      <DependentUpon>GuessAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\GuessMod.aspx.cs">
+      <DependentUpon>GuessMod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\GuessVote.aspx.cs">
+      <DependentUpon>GuessVote.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Index.aspx.cs">
@@ -518,6 +551,7 @@
     <Compile Include="WebSite\BLL\WapVCountEveryDateBLL.cs" />
     <Compile Include="WebSite\BookViewHelper.cs" />
     <Compile Include="WebSite\DAL\WapVCountEveryDateDAL.cs" />
+    <Compile Include="WebSite\GuessData.cs" />
     <Compile Include="WebSite\MyCount.cs" />
     <Compile Include="WebSite\MyPageWap.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -534,6 +568,10 @@
     </Compile>
     <Compile Include="WML\Admin_userlistWAP.aspx.cs">
       <DependentUpon>Admin_userlistWAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WML\Admin_WAPmodify.aspx.cs">
+      <DependentUpon>Admin_WAPmodify.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="XinZhang\Book_View_Buy.aspx.cs">

@@ -48,20 +48,51 @@ namespace YaoHuo.Plugin.BBS
             wap2_attachment_BLL wap2_attachment_BLL = new wap2_attachment_BLL(string_10);
             bookVo = wap2_attachment_BLL.GetModel(long.Parse(id));
 
-            // 验证帖子存在性和栏目ID匹配
+            // 验证附件存在性
             if (bookVo == null)
             {
                 ShowTipInfo("文件不存在或已被删除", "bbs/book_view.aspx?siteid=" + siteid + "&classid=" + classid + "&id=" + book_id);
                 return;
             }
 
-            // 获取帖子所属的栏目ID
-            wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
-            wap_bbs_Model bbsVo = wap_bbs_BLL.GetModel(long.Parse(book_id));
-
-            if (bbsVo == null || bbsVo.book_classid.ToString() != classid)
+            // 根据附件类型获取对应的帖子或回复
+            if (bookVo.book_type == "bbs")
             {
-                ShowTipInfo("栏目ID不匹配", "bbs/book_view.aspx?siteid=" + siteid + "&classid=" + classid + "&id=" + book_id);
+                // 主题帖附件
+                wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
+                wap_bbs_Model bbsVo = wap_bbs_BLL.GetModel(long.Parse(book_id));
+
+                if (bbsVo == null || bbsVo.book_classid.ToString() != classid)
+                {
+                    ShowTipInfo("栏目ID不匹配", "bbs/book_view.aspx?siteid=" + siteid + "&classid=" + classid + "&id=" + book_id);
+                    return;
+                }
+            }
+            else if (bookVo.book_type == "bbsre")
+            {
+                // 回复附件
+                wap_bbsre_BLL wap_bbsre_BLL = new wap_bbsre_BLL(string_10);
+                wap_bbsre_Model bbsReVo = wap_bbsre_BLL.GetModel(long.Parse(book_id));
+
+                if (bbsReVo == null)
+                {
+                    ShowTipInfo("回复不存在或已被删除", "bbs/book_view.aspx?siteid=" + siteid + "&classid=" + classid + "&id=" + book_id);
+                    return;
+                }
+
+                // 获取主题帖信息以验证栏目ID
+                wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(string_10);
+                wap_bbs_Model bbsVo = wap_bbs_BLL.GetModel(bbsReVo.bookid);
+
+                if (bbsVo == null || bbsVo.book_classid.ToString() != classid)
+                {
+                    ShowTipInfo("栏目ID不匹配", "bbs/book_view.aspx?siteid=" + siteid + "&classid=" + classid + "&id=" + bbsReVo.bookid);
+                    return;
+                }
+            }
+            else
+            {
+                ShowTipInfo("无效的附件类型", "bbs/book_view.aspx?siteid=" + siteid + "&classid=" + classid + "&id=" + book_id);
                 return;
             }
 

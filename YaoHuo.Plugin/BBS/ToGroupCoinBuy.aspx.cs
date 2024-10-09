@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Web;
 using KeLin.ClassManager;
 using KeLin.ClassManager.BLL;
@@ -185,13 +186,35 @@ namespace YaoHuo.Plugin.BBS
                     string orderID = DateTime.Now.ToString("yyyyMMddHHmmss") + "-" + userid;
                     try
                     {
-                        MainBll.UpdateSQL("UPDATE [user] SET money=money-" + toNeedMoney + ",sessiontimeout=" + idVo.id + ",endtime='" + newEndTime.ToString("yyyy-MM-dd HH:mm:ss") + "' WHERE siteid=" + siteid + " AND userid=" + userid);
-                        SaveBankLog(userid, "购买身份级别", "-" + toNeedMoney, userid, nickname, "购买身份级别[" + idVo.id + "]");
-                        INFO = "OK";
+                        using (SqlConnection conn = new SqlConnection(PubConstant.GetConnectionString(string_10)))
+                        {
+                            conn.Open();
+                            string sql = @"UPDATE [user] SET money=money-@toNeedMoney, sessiontimeout=@idVoId, endtime=@newEndTime 
+                                           WHERE siteid=@siteid AND userid=@userid";
+
+                            using (SqlCommand cmd = new SqlCommand(sql, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@toNeedMoney", toNeedMoney);
+                                cmd.Parameters.AddWithValue("@idVoId", idVo.id);
+                                cmd.Parameters.AddWithValue("@newEndTime", newEndTime);
+                                cmd.Parameters.AddWithValue("@siteid", siteid);
+                                cmd.Parameters.AddWithValue("@userid", userid);
+
+                                int rowsAffected = cmd.ExecuteNonQuery();
+                                if (rowsAffected > 0)
+                                {
+                                    SaveBankLog(userid, "购买身份级别", "-" + toNeedMoney, userid, nickname, "购买身份级别[" + idVo.id + "]");
+                                    INFO = "OK";
+                                }
+                                else
+                                {
+                                    INFO = "ERROR";
+                                }
+                            }
+                        }
                     }
-                    catch
+                    catch (Exception)
                     {
-                        // 记录错误日志（具体实现根据实际情况）
                         INFO = "ERROR";
                     }
                 }
