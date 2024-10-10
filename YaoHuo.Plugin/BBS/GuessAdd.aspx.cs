@@ -63,8 +63,13 @@ namespace YaoHuo.Plugin.BBS
 
             if (!IsPostBack)
             {
-                // 设置默认截止时间为两天后的整点
-                DateTime defaultDeadline = DateTime.Now.AddDays(2).Date.AddHours(DateTime.Now.Hour);
+                // 设置默认截止时间为当前整点时间间隔6小时后
+                DateTime now = DateTime.Now;
+                DateTime defaultDeadline = now.Date.AddHours(now.Hour).AddHours(6);
+                if (defaultDeadline <= now)
+                {
+                    defaultDeadline = defaultDeadline.AddHours(6);
+                }
                 txtDeadline.Text = defaultDeadline.ToString("yyyy-MM-dd HH:00");
             }
 
@@ -95,9 +100,9 @@ namespace YaoHuo.Plugin.BBS
             try
             {
                 // 验证竞猜主题长度
-                if (txtGuessTitle.Text.Trim().Length > 12)
+                if (txtGuessTitle.Text.Trim().Length > 13)
                 {
-                    ShowTipInfo("竞猜主题最多12个字", backUrl);
+                    ShowTipInfo("竞猜主题最多13个字", backUrl);
                     return;
                 }
 
@@ -174,7 +179,12 @@ namespace YaoHuo.Plugin.BBS
             }
 
             DateTime now = DateTime.Now;
-            DateTime minDeadline = now.AddDays(2).Date.AddHours(now.Hour);
+            DateTime currentHour = now.Date.AddHours(now.Hour);
+            DateTime minDeadline = currentHour.AddHours(6);
+            if (minDeadline <= now)
+            {
+                minDeadline = minDeadline.AddHours(6);
+            }
             DateTime maxDeadline = now.AddDays(15).Date.AddHours(now.Hour);
 
             if (deadline < minDeadline)

@@ -49,8 +49,6 @@ namespace YaoHuo.Plugin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //测试代码
-            //TestCode();
 
             if (classid == "0")
             {

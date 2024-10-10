@@ -160,7 +160,7 @@ namespace YaoHuo.Plugin.WebSite
             string fileExt = WapTool.right(attachment.book_file.ToLower(), 3);
             if (("mov|flv|m3u8|mp4").IndexOf(fileExt) >= 0)
             {
-                stringBuilder.Append("<span class=\"videoplay\"><video onclick='if(this.paused) { this.play();}else{ this.pause();}' src='" + attachment.book_file + "' autobuffer='true' width='100%' height='100%' poster='/NetImages/play.gif' controls>{不支持在线播放，请更换浏览器}</video>");
+                stringBuilder.Append("<span class=\"videoplay\"><video src='" + attachment.book_file + "' autobuffer='true' width='100%' height='100%' poster='/NetImages/play.gif' controls>{不支持在线播放，请更换浏览器}</video>");
             }
             else
             {

@@ -129,7 +129,6 @@
     <Content Include="BBS\Book_View_modfile_del.aspx" />
     <Content Include="BBS\Book_View_sendmoney.aspx" />
     <Content Include="BBS\Book_View_top.aspx" />
-    <Content Include="BBS\Book_View_topall.aspx" />
     <Content Include="BBS\Download.aspx" />
     <Content Include="BBS\GuessAdd.aspx" />
     <Content Include="BBS\GuessMod.aspx" />
@@ -356,10 +355,6 @@
     </Compile>
     <Compile Include="BBS\Book_View_top.aspx.cs">
       <DependentUpon>Book_View_top.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BBS\Book_View_topall.aspx.cs">
-      <DependentUpon>Book_View_topall.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Download.aspx.cs">

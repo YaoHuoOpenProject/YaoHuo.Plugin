@@ -17,7 +17,24 @@
     if (this.INFO == "")
     {
         strhtml.Append("<div class=\"content\">");
-        strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view_top.aspx?action=gomod&amp;tops=" + this.tops + "&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + this.GetLang("确定要" + lang1 + "置顶此帖吗？是！|確定要" + lang2 + "置顶此帖嗎？是！|Are you sure? YES") + "</a><br/>");
+        if (bookVo.book_top == 0)
+        {
+            // 帖子未置顶，显示置顶选项
+            string normalTopMessage = this.GetLang("普通置顶|普通置頂|Normal Top");
+            string globalTopMessage = this.GetLang("全局置顶|全局置頂|Global Top");
+
+            strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_View_top.aspx?action=gomod&amp;tops=1&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;topType=normal\">" + normalTopMessage + "</a><br /><br />");
+            strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_View_top.aspx?action=gomod&amp;tops=1&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;topType=all\">" + globalTopMessage + "</a><br />");
+        }
+        else
+        {
+            // 帖子已置顶，显示取消置顶选项
+            string cancelTopMessage = bookVo.book_top == 1 ?
+                this.GetLang("取消普通置顶|取消普通置頂|Cancel Normal Top") :
+                this.GetLang("取消全局置顶|取消全局置頂|Cancel Global Top");
+
+            strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_View_top.aspx?action=gomod&amp;tops=0&amp;id=" + this.id + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "\">" + cancelTopMessage + "</a><br />");
+        }
         strhtml.Append("</div>");
     }
     else if (this.INFO == "ERR")

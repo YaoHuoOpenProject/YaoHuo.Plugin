@@ -40,50 +40,38 @@ namespace YaoHuo.Plugin
                     Session["_QR"] = text2;
                 }
                 var text3 = domain.Split('.')[0];
-                if (domain.IndexOf(".zone.") > 0)
+                var commandText = "select * from domainname where id=1 or domain='" + domain + "' order by id desc";
+                var dataSet = DbHelperSQL.ExecuteDataset(PubConstant.GetConnectionString(_InstanceName), CommandType.Text, commandText);
+                foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
-                    siteid = WapTool.GetSiteid(text3, "");
-                    if (WapTool.IsNumeric(text3))
+                    if (!(row["id"].ToString() == "1"))
                     {
-                        Session["KL_FROM_USERID"] = text3;
-                    }
-                    goURL = "http://" + domain + "/bbs/userinfo.aspx?siteid=" + siteid + "&touserid=" + text3 + "&TJ=" + text3;
-                }
-                else
-                {
-                    var commandText = "select * from domainname where id=1 or domain='" + domain + "' order by id desc";
-                    var dataSet = DbHelperSQL.ExecuteDataset(PubConstant.GetConnectionString(_InstanceName), CommandType.Text, commandText);
-                    foreach (DataRow row in dataSet.Tables[0].Rows)
-                    {
-                        if (!(row["id"].ToString() == "1"))
+                        if (row["domain"].ToString().ToLower() == domain)
                         {
-                            if (row["domain"].ToString().ToLower() == domain)
-                            {
-                                goURL = row["realpath"].ToString().Replace("&amp;", "&");
-                                break;
-                            }
-                            continue;
-                        }
-                        if (domain.ToLower().IndexOf("www.") >= 0)
-                        {
-                            goURL = "http://" + domain + "/index.aspx";
+                            goURL = row["realpath"].ToString().Replace("&amp;", "&");
                             break;
                         }
-                        siteid = WapTool.GetSiteid("", text3);
-                        if (siteid == "")
-                        {
-                            siteid = "0";
-                        }
-                        goURL = "http://" + domain + "/wapindex.aspx?siteid=" + siteid;
+                        continue;
+                    }
+                    if (domain.ToLower().IndexOf("www.") >= 0)
+                    {
+                        goURL = "/index.aspx";
                         break;
                     }
+                    siteid = WapTool.GetSiteid("", text3);
+                    if (siteid == "")
+                    {
+                        siteid = "0";
+                    }
+                    goURL = $"/wapindex.aspx?siteid={siteid}";
+                    break;
                 }
-                if ("0".Equals(KL_HiddenQuery) || !goURL.StartsWith("http://" + domain))
+                if ("0".Equals(KL_HiddenQuery) || !IsRelativeUrl(goURL))
                 {
                     base.Response.Redirect(goURL);
                     return;
                 }
-                var openUrl = goURL.Replace("http://" + domain, "");
+                var openUrl = goURL;
                 base.Server.Execute(openUrl);
                 //base.Server.Transfer(openUrl);
                 //base.Response.End();
@@ -96,6 +84,12 @@ namespace YaoHuo.Plugin
                     base.Response.Write(text4);
                 }
             }
+        }
+
+        private bool IsRelativeUrl(string url)
+        {
+            return !url.StartsWith("http://", StringComparison.OrdinalIgnoreCase) &&
+                   !url.StartsWith("https://", StringComparison.OrdinalIgnoreCase);
         }
     }
 }

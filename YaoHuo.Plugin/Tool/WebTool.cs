@@ -2697,7 +2697,7 @@ namespace YaoHuo.Plugin.Tool
                         string widthAttribute = width.EndsWith("%") ? $"width=\"{width}\"" : $"width=\"{width}px\"";
                         string heightAttribute = height.EndsWith("%") ? $"height=\"{height}\"" : $"height=\"{height}px\"";
 
-                        WapStr = regex.Replace(WapStr, "<video class=\"ubbvideo\" onclick=\"if(this.paused) { this.play();}else{ this.pause();}\" src=\"" + videoUrl
+                        WapStr = regex.Replace(WapStr, "<video class=\"ubbvideo\" src=\"" + videoUrl
                             + "\" " + widthAttribute + " " + heightAttribute
                             + " poster=\"" + posterUrl + "\" controls>{不支持在线播放，请更换浏览器}</video>", 1);
 
