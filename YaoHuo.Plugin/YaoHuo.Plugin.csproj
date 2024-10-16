@@ -114,6 +114,7 @@
     <Content Include="BBS\Book_Re_mod.aspx" />
     <Content Include="BBS\Book_Re_my.aspx" />
     <Content Include="BBS\Book_Re_top.aspx" />
+    <Content Include="BBS\Book_List_Search.aspx" />
     <Content Include="BBS\Book_View_add.aspx" />
     <Content Include="BBS\Book_View_addfile.aspx" />
     <Content Include="BBS\Book_View_addfileaddurl.aspx" />
@@ -167,6 +168,7 @@
     <Content Include="Lib\WeiXinClassManager.dll" />
     <Content Include="Lib\WwwClassManager.dll" />
     <Content Include="MyFile.aspx" />
+    <Content Include="Search.aspx" />
     <Content Include="Search\ToManager.aspx" />
     <Content Include="WapIndex.aspx" />
     <Content Include="WapLogin.aspx" />
@@ -279,6 +281,10 @@
     </Compile>
     <Compile Include="BBS\Book_Re_top.aspx.cs">
       <DependentUpon>Book_Re_top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Book_List_Search.aspx.cs">
+      <DependentUpon>Book_List_Search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\Book_View.aspx.cs">
@@ -535,6 +541,10 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Search\ToManager.aspx.cs">
       <DependentUpon>ToManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

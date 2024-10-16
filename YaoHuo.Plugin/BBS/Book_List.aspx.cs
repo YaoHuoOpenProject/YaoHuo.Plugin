@@ -77,7 +77,7 @@ namespace YaoHuo.Plugin.BBS
                 classVo.introduce = "";
                 classVo.sitedowntip = "";
             }
-            if (!IsCheckManagerLvl("|00|01|", "") && "1".Equals(WapTool.getArryString(classVo.smallimg, '|', 0)))
+            if (!IsCheckManagerLvl("|00|01|03|04|", "") && "1".Equals(WapTool.getArryString(classVo.smallimg, '|', 0)))
             {
                 ShowTipInfo("此版块已关闭！", "wapindex.aspx?siteid=" + siteid + "&amp;classid=" + classVo.childid);
             }
@@ -383,109 +383,7 @@ namespace YaoHuo.Plugin.BBS
 
         public void showsearch()
         {
-            if (WapTool.GetSiteDefault(siteVo.Version, 60) == "1")
-            {
-                IsLogin(userid, GetUrlQueryString());
-            }
-            key = GetRequestValue("key");
-            if (key.IsNull())
-            {
-                ShowTipInfo("禁止空白搜索", "");
-            }
-            type = GetRequestValue("type");
-            key = HttpUtility.UrlDecode(key);
-            key = key.Replace("[", "［");
-            key = key.Replace("]", "］");
-            key = key.Replace("%", "％");
-            key = key.Replace("_", "——");
-            if (classid == "0")
-            {
-                condition = " ischeck=0 and userid=" + siteid;
-                classVo.classid = 0L;
-                classVo.position = "left";
-                classVo.classname = "查询内容:" + key;
-                classVo.siteimg = "NetImages/no.gif";
-                classVo.introduce = "";
-            }
-            else
-            {
-                classVo.classname = classVo.classname + ":" + key;
-                condition = "  ischeck=0 and userid=" + siteid + " and   book_classid in (select classid from [class] where childid=" + classid + " union select '" + classid + "') ";
-            }
-            if (key.Trim() != "")
-            {
-                if (type == "title")
-                {
-                    if ("1".Equals(PubConstant.GetAppString("KL_FULLSEARCH_bbs")))
-                    {
-                        condition = condition + "and CONTAINS(book_title,'\"" + key + "\"') ";
-                    }
-                    else
-                    {
-                        condition = condition + " and book_title like '%" + key + "%' ";
-                    }
-                }
-                else if (!(type == "content"))
-                {
-                    if (type == "author")
-                    {
-                        condition = condition + " and book_author like '%" + key + "%' ";
-                    }
-                    else if (type == "days")
-                    {
-                        if (!WapTool.IsNumeric(key))
-                        {
-                            key = "0";
-                        }
-                        condition = condition + " and  (DATEDIFF(dd, book_date, GETDATE()) < " + key + ") ";
-                    }
-                    else if (type == "pub")
-                    {
-                        if (WapTool.IsNumeric(key))
-                        {
-                            condition = condition + " and book_pub='" + key + "'";
-                        }
-                        else
-                        {
-                            condition += " and 1=2 ";
-                        }
-                    }
-                }
-            }
-            try
-            {
-                pageSize = Convert.ToInt32(siteVo.MaxPerPage_Default);
-                wap_bbs_BLL wap_bbs_BLL = new wap_bbs_BLL(a);
-                if (GetRequestValue("getTotal") != "")
-                {
-                    total = long.Parse(GetRequestValue("getTotal"));
-                }
-                else
-                {
-                    total = wap_bbs_BLL.GetListCount(condition);
-                }
-                if (GetRequestValue("page") != "")
-                {
-                    CurrentPage = int.Parse(GetRequestValue("page"));
-                }
-                CurrentPage = WapTool.CheckCurrpage(total, pageSize, CurrentPage);
-                index = pageSize * (CurrentPage - 1L);
-                if (CurrentPage == 1L && type == "pub" && WapTool.IsNumeric(key))
-                {
-                    MainBll.UpdateSQL("update [user] set bbsCount=" + total + "  where siteid=" + siteid + " and  userid=" + key);
-                }
-                linkURL = http_start + "bbs/book_list.aspx?action=search&amp;siteid=" + siteid + "&amp;classid=" + classid + "&amp;type=" + type + "&amp;key=" + HttpUtility.UrlEncode(key) + "&amp;getTotal=" + total;
-                linkTOP = WapTool.GetPageLinkShowTOP(ver, lang, Convert.ToInt32(total), pageSize, CurrentPage, linkURL);
-                linkURL = WapTool.GetPageLink(ver, lang, Convert.ToInt32(total), pageSize, CurrentPage, linkURL, WapTool.getArryString(classVo.smallimg, '|', 40));
-                listVo = wap_bbs_BLL.GetListVo(pageSize, CurrentPage, condition, "book_classid,classname,id,book_title,book_date,book_click,book_re,book_author,book_pub,book_top,book_good,topic,islock,ischeck,sendMoney,isvote,isdown,hangbiaoshi,freeMoney,book_img,MarkSixBetID,MarkSixWin", "id", total, 1);
-                sys_ad_show_BLL sys_ad_show_BLL = new sys_ad_show_BLL(a);
-                adVo = sys_ad_show_BLL.GetModelBySQL(" and systype='bbs' and siteid=" + siteid);
-                VisiteCount("正在论坛查询关键字:" + key);
-            }
-            catch (Exception ex)
-            {
-                ERROR = ex.ToString();
-            }
+            Response.Redirect(http_start + "bbs/book_list_search.aspx?action=search&siteid=" + siteid + "&classid=" + classid + "&type=" + GetRequestValue("type") + "&key=" + HttpUtility.UrlEncode(GetRequestValue("key")));
         }
 
         public void showgood()

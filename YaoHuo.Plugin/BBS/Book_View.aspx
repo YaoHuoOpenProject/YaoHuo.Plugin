@@ -235,7 +235,7 @@
         // 添加脚本
         strhtml.Append("<script src=\"/NetCSS/JS/Confetti.Browser.min.js?001\"></script>");
         strhtml.Append("<script src=\"/NetCSS/JS/BookView/Celebration.js?001\"></script>");
-        strhtml.Append("<script src=\"/NetCSS/JS/BookView/Betting.js?00021\"></script>");
+        strhtml.Append("<script src=\"/NetCSS/JS/BookView/Betting.js?00028\"></script>");
         strhtml.Append("<script type=\"text/javascript\">");
         strhtml.Append("(function () {");
         strhtml.Append("var config = {");
@@ -310,6 +310,7 @@
 
         //显示上一页下一页
         strhtml.Append(preNextTitle);
+
         //显示最新回复
         strhtml.Append("<div class=\"viewContent\">");
         if (bookVo.islock == 0)
@@ -499,7 +500,7 @@
         }
         //页面脚本合集
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/Shad@w.js\" defer></script>");
-        strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/HyperLink.js?3\" defer></script>");
+        strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/HyperLink.js?L16\" defer></script>");
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/MiniSet.js\"></script>");
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/SelEmoji.js\"></script>");
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/HideInfo.js\"></script>");
@@ -507,7 +508,7 @@
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/FastPost.js?X\"></script>");
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/NewReplyUI.js\"></script>");
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/AttachSearch.js\"></script>");
-        strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/HideUseless.js\" defer></script>");
+        strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/HideUseless.js?C\" defer></script>");
         //会员可见结束
     }
     strhtml.Append(WapTool.GetVS(wmlVo));

@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GuessMod.aspx.cs" Inherits="YaoHuo.Plugin.BBS.GuessMod" %>
-
 <!DOCTYPE html>
 <html>
 <head runat="server">

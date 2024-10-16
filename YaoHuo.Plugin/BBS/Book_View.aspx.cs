@@ -339,6 +339,37 @@ namespace YaoHuo.Plugin.BBS
                         userBet = guessManager.GetUserBet(guessingData.Id, userIdLong);
                     }
                 }
+
+                if (state == "1")
+                {
+                    string fcountSubMoneyFlag = WapTool.getFcountSubMoneyFlag(siteid, userid, IP);
+                    if (fcountSubMoneyFlag.IndexOf("BBSF" + id) < 0)
+                    {
+                        if (userVo.money >= 5)
+                        {
+                            // 扣除当前用户5个币
+                            MainBll.UpdateSQL("update [user] set money=money - 5 where userid=" + userid);
+                            // 给楼主加10个币
+                            MainBll.UpdateSQL("update [user] set money=money + 10 where userid=" + bookVo.book_pub);
+                            // 更新帖子的点赞数
+                            wap_bbs_BLL.UpdateXiNuHan(siteid, id, state);
+                            // 更新用户操作记录
+                            MainBll.UpdateSQL("update [fcount] set SubMoneyFlag='" + fcountSubMoneyFlag + "BBSF" + id + ",' where fip='" + IP + "' and fuserid=" + siteid + " and userid=" + userid);
+
+                            // 记录交易日志
+                            SaveBankLog(userid.ToString(), "帖子点赞", "-5", bookVo.book_pub.ToString(), userVo.nickname, "给帖子ID(" + id + ")点赞");
+                            SaveBankLog(bookVo.book_pub.ToString(), "收到点赞", "10", userid.ToString(), userVo.nickname, "帖子ID(" + id + ")收到点赞");
+                        }
+                        else
+                        {
+                            strhtml.Append("<div class='tip'>您的妖晶不足5个，无法点赞。</div>");
+                        }
+                    }
+                    else
+                    {
+                        strhtml.Append("<div class='tip'>您已经给这篇帖子点过赞了。</div>");
+                    }
+                }
             }
             catch (Exception ex)
             {

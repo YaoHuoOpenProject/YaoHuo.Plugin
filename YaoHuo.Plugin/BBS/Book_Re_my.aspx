@@ -1,86 +1,142 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_Re_my.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_Re_My" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_Re_my.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_Re_My" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-Response.Write(WapTool.showTop(this.GetLang("²é¿´" + this.touserid + "»Ø¸´|²é¿´+this.touserid+»ØÑ}|View Reply"), wmlVo));//ÏÔÊ¾Í·
-if (ver == "1")
-{
-    //Êä³ö
-    Response.Write(WapTool.ToWML(strhtml.ToString(), wmlVo));
-}
-else //2.0½çÃæ
-{
-    strhtml.Append(ERROR);
-    //»áÔ±¿É¼û
- 	if (this.IsCheckManagerLvl("|00|01|02|03|04|","")==true)
+    Response.Write(WapTool.showTop(this.GetLang("æŸ¥çœ‹" + this.touserid + "å›å¤|æŸ¥çœ‹+this.touserid+å›è¤‡|View Reply"), wmlVo));
+    //ä¼šå‘˜å¯è§
+    if (this.IsCheckManagerLvl("|00|01|02|03|04|", "") == true)
     {
-	strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/HyperLink.js\" defer></script>");
-    strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/Shad@w.js?l\" defer></script>");
-    strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
-    //¶¥²¿Á´½Ó
-    strhtml.Append("<a ");
-    if (this.ot != "1")
-    {
-        strhtml.Append("class=\"btSelect\" ");
-    }
-    strhtml.Append("href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;touserid=" + this.touserid + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "&amp;ot=0&amp;go=" + this.r + "\">°´×îĞÂ»Ø¸´</a> ");
+        strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/HyperLink.js?L15\" defer></script>");
+        strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/Shad@w.js?l\" defer></script>");
+        strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
 
-    strhtml.Append("<a ");
-    if (this.ot == "1")
-    {
-        strhtml.Append("class=\"btSelect\" ");
-    }
-    strhtml.Append("href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;touserid=" + this.touserid + "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage + "&amp;ot=1&amp;go=" + this.r + "\">°´×îÔç»Ø¸´</a> ");
-    strhtml.Append("</div></div>");
-    //¹ÜÀíÔ±²Ù×÷
-    if (this.CheckManagerLvl("04", "") == true && this.touserid != "1000") // ¼ì²éÊÇ·ñÎª¹ÜÀíÔ±ÇÒID²»Îª1000
-    {
-        strhtml.Append("<div class=\"tip\">");
-        strhtml.Append("<a class=\"urlbtn\" onclick=\"return confirm('Çå¿Õ»Ø¸´Ç°ÇëÏÈÈ·ÈÏ²Ù×÷');\" href=\"" +
-            this.http_start + "bbs/Book_re_delmy.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" +
-            this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;touserid=" +
-            this.touserid + "&amp;ot=" + this.ot + "\">Çå¿Õ(" + this.touserid + ")µÄËùÓĞ»Ø¸´</a><br />");
-        strhtml.Append("</div>");
-    }
-    //ÏÔÊ¾µ¼º½·ÖÒ³
-    strhtml.Append(linkTOP);
-    //ÏÔÊ¾ÁĞ±í
-    kk = kk + ((CurrentPage - 1) * pageSize) - 1;
-    for (int i = 0; (listVo != null && i < listVo.Count); i++)
-    {
-        if (i % 2 == 0)
+        string newestUrl = this.http_start + "bbs/book_re_my.aspx?action=class&amp;touserid=" + this.touserid +
+                           "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid +
+                           "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage +
+                           "&amp;ot=0&amp;go=" + this.r;
+        string oldestUrl = this.http_start + "bbs/book_re_my.aspx?action=class&amp;touserid=" + this.touserid +
+                           "&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid +
+                           "&amp;page=" + this.CurrentPage + "&amp;lpage=" + this.lpage +
+                           "&amp;ot=1&amp;go=" + this.r;
+
+        if (!string.IsNullOrEmpty(this.searchKey))
         {
-            strhtml.Append("<div class=\"line1\">");
+            newestUrl += "&amp;searchKey=" + HttpUtility.UrlEncode(this.searchKey);
+            oldestUrl += "&amp;searchKey=" + HttpUtility.UrlEncode(this.searchKey);
+        }
+
+        strhtml.Append("<a ");
+        if (this.ot == "0")
+        {
+            strhtml.Append("class=\"btSelect\" ");
+        }
+        strhtml.Append("href=\"" + newestUrl + "\">æŒ‰æœ€æ–°å›å¤</a> ");
+
+        strhtml.Append("<a ");
+        if (this.ot == "1")
+        {
+            strhtml.Append("class=\"btSelect\" ");
+        }
+        strhtml.Append("href=\"" + oldestUrl + "\">æŒ‰æœ€æ—©å›å¤</a>");
+
+        strhtml.Append("</div></div>");
+
+        // é”™è¯¯ä¿¡æ¯å¤„ç†
+        if (this.ERROR == "ERR_PERMISSION")
+        {
+            strhtml.Append("<div class=\"tip\">æ‚¨åªèƒ½æœç´¢è‡ªå·±çš„å›å¤å†…å®¹!</div>");
+        }
+        else if (this.ERROR == "ERR_LENGTH")
+        {
+            strhtml.Append("<div class=\"tip\">æœç´¢å…³é”®è¯é•¿åº¦å¿…é¡»åœ¨1-10ä¸ªå­—ç¬¦ä¹‹é—´!</div>");
         }
         else
         {
-            strhtml.Append("<div class=\"line2\">");
+            strhtml.Append(ERROR);
         }
-        if (ot == "1")
+
+        // ä»…å½“ç”¨æˆ·æŸ¥çœ‹è‡ªå·±çš„å›å¤åˆ—è¡¨æ—¶æ˜¾ç¤ºæœç´¢æ¡†
+        if (this.touserid == this.userid || this.CheckManagerLvl("01", "") == true)
         {
-            index = (kk + 1);
+            strhtml.Append("<div id=\"searchBox\">");
+            strhtml.Append("<form action=\"" + this.http_start + "bbs/book_re_my.aspx\" style=\"margin-left:11px;\" method=\"get\">");
+            strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"class\">");
+            strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + this.siteid + "\">");
+            strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + this.classid + "\">");
+            strhtml.Append("<input type=\"hidden\" name=\"touserid\" value=\"" + this.touserid + "\">");
+            strhtml.Append("<input type=\"hidden\" name=\"ot\" value=\"" + this.ot + "\">");
+            strhtml.Append("<input type=\"text\" name=\"searchKey\" id=\"searchKey\" minlength=\"1\" maxlength=\"8\" value=\"" + this.searchKey + "\" style=\"padding:5px;width:35%; max-width:200px;margin-right:-2px;\" placeholder=\"æœç´¢" + this.touserid + "çš„å›å¤\">");
+            strhtml.Append("<input type=\"submit\" value=\"æœç´¢\">");
+            strhtml.Append("</form>");
+            strhtml.Append("</div>");
         }
-        else
+
+        // ä¿®æ”¹JavaScriptå‡½æ•°
+        strhtml.Append("<script type=\"text/javascript\">");
+        strhtml.Append("function toggleSearch() {");
+        strhtml.Append("  var searchBox = document.getElementById('searchBox');");
+        strhtml.Append("  if (searchBox.style.display === 'none') {");
+        strhtml.Append("    searchBox.style.display = 'block';");
+        strhtml.Append("  } else {");
+        strhtml.Append("    searchBox.style.display = 'none';");
+        strhtml.Append("  }");
+        strhtml.Append("}");
+        strhtml.Append("</script>");
+
+        //ç®¡ç†å‘˜æ“ä½œ
+        if (this.CheckManagerLvl("04", "") == true && this.touserid != "1000") // æ£€æŸ¥æ˜¯å¦ä¸ºç®¡ç†å‘˜ä¸”IDä¸ä¸º1000
         {
-            index = (total - kk);
+            strhtml.Append("<div class=\"tip\">");
+            strhtml.Append("<a class=\"urlbtn\" onclick=\"return confirm('æ¸…ç©ºå›å¤å‰è¯·å…ˆç¡®è®¤æ“ä½œ');\" href=\"" +
+                this.http_start + "bbs/Book_re_delmy.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=" +
+                this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.CurrentPage + "&amp;touserid=" +
+                this.touserid + "&amp;ot=" + this.ot + "\">æ¸…ç©º(" + this.touserid + ")çš„æ‰€æœ‰å›å¤</a><br />");
+            strhtml.Append("</div>");
         }
-        strhtml.Append("" + index + ".<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + "\">" + listVo[i].nickname + "(" + listVo[i].userid + ")</a>£º<span class=\"retext\">");
-        strhtml.Append(listVo[i].content + "</span><br/> " + string.Format("{0:MM-dd HH:mm}", listVo[i].redate) + " <a href=\"" + this.http_start + "bbs-" + listVo[i].bookid + "" + ".html\">²é¿´</a></div>");
-        kk = kk + 1;
+        //æ˜¾ç¤ºå¯¼èˆªåˆ†é¡µ
+        if (string.IsNullOrEmpty(this.searchKey))
+        {
+            strhtml.Append(linkTOP);
+        }
+	// å¦‚æœURLåŒ…å«searchKeyå‚æ•°ï¼Œæ˜¾ç¤ºå¹¿å‘Š
+    if (!string.IsNullOrEmpty(this.searchKey)) strhtml.Append("<script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2577891689868694\" crossorigin=\"anonymous\"></script> <ins class=\"adsbygoogle\" style=\"display:block\" data-ad-client=\"ca-pub-2577891689868694\" data-ad-slot=\"4083150768\" data-ad-format=\"auto\" data-full-width-responsive=\"true\"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>");
+
+        //æ˜¾ç¤ºåˆ—è¡¨
+        kk = kk + ((CurrentPage - 1) * pageSize) - 1;
+        for (int i = 0; (listVo != null && i < listVo.Count); i++)
+        {
+            if (i % 2 == 0)
+            {
+                strhtml.Append("<div class=\"line2\">");
+            }
+            else
+            {
+                strhtml.Append("<div class=\"line1\">");
+            }
+            if (ot == "1")
+            {
+                index = (kk + 1);
+            }
+            else
+            {
+                index = (total - kk);
+            }
+            strhtml.Append("" + index + ".<a href=\"" + this.http_start + "bbs/userinfo.aspx?siteid=" + siteid + "&amp;touserid=" + listVo[i].userid + "&amp;backurl=" + "\">" + listVo[i].nickname + "(" + listVo[i].userid + ")</a>ï¼š<span class=\"retext\">");
+            strhtml.Append(listVo[i].content + "</span><br/> " + string.Format("{0:MM-dd HH:mm}", listVo[i].redate) + " <a href=\"" + this.http_start + "bbs-" + listVo[i].bookid + "" + ".html\">æŸ¥çœ‹</a></div>");
+            kk = kk + 1;
+        }
+        if (listVo == null)
+        {
+            strhtml.Append("<div class=\"tip\">æš‚æ— å›å¤è®°å½•</div>");
+        }
+        //æ˜¾ç¤ºå¯¼èˆªåˆ†é¡µ
+        strhtml.Append(linkURL);
     }
-    if (listVo == null)
-    {
-        strhtml.Append("<div class=\"tip\">ÔİÎŞ»Ø¸´¼ÇÂ¼£¡</div>");
-    }
-    //ÏÔÊ¾µ¼º½·ÖÒ³
-    strhtml.Append(linkURL);
-    //»áÔ±¿É¼û½áÊø
-}
+    //ä¼šå‘˜å¯è§ç»“æŸ
     strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
-    strhtml.Append("<a href=\"" + this.http_start + "myfile.aspx\">ÎÒµÄµØÅÌ</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "\">·µ»ØÊ×Ò³</a>");
+    strhtml.Append("<a href=\"" + this.http_start + "bbs/userinfo.aspx?touserid=" + this.userid + "\">æˆ‘çš„ç©ºé—´</a> ");
+    strhtml.Append("<a href=\"" + this.http_start + "\">è¿”å›é¦–é¡µ</a>");
     strhtml.Append("</div></div>");
-    //Êä³ö
+    strhtml.Append("<script type=\"text/javascript\"> window.onload = function() { var paginationForm = document.querySelector('.showpage form'); if (paginationForm) { var searchKeyInput = paginationForm.querySelector('input[name=\"searchKey\"]'); if (searchKeyInput) { // ç§»é™¤åŸæœ‰çš„searchKeyè¾“å…¥å­—æ®µ searchKeyInput.parentNode.removeChild(searchKeyInput); // è·å–URLä¸­çš„searchKeyå‚æ•° var urlParams = new URLSearchParams(window.location.search); var searchKeyValue = urlParams.get('searchKey'); // å¦‚æœå­˜åœ¨searchKeyå‚æ•°ï¼Œæ·»åŠ ä¸€ä¸ªéšè—å­—æ®µ if (searchKeyValue) { var hiddenInput = document.createElement('input'); hiddenInput.type = 'hidden'; hiddenInput.name = 'searchKey'; hiddenInput.value = searchKeyValue; paginationForm.appendChild(hiddenInput); } } // æ‹¦æˆªè¡¨å•æäº¤äº‹ä»¶ paginationForm.addEventListener('submit', function(e) { e.preventDefault(); var formData = new FormData(paginationForm); var searchParams = new URLSearchParams(formData); // æ„å»ºæ–°çš„URL var newUrl = paginationForm.action + '?' + searchParams.toString(); // è·³è½¬åˆ°æ–°çš„URL window.location.href = newUrl; }); } }; </script>");
     Response.Write(WapTool.ToWML(strhtml.ToString(), wmlVo));
-}
-Response.Write(WapTool.showDown(wmlVo)); //ÏÔÊ¾µ×²¿
+    Response.Write(WapTool.showDown(wmlVo));
 %>
