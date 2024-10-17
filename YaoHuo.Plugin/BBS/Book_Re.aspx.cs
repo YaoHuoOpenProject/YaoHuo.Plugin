@@ -104,7 +104,7 @@ namespace YaoHuo.Plugin.BBS
         {
             if (base.classid != "0" && base.classVo.typePath.ToLower() != "bbs/index.aspx")
             {
-                base.ShowTipInfo("抱歉，当前访问的栏目ID对应非论坛模块，请联系站长处理。", "");
+                base.ShowTipInfo("抱歉，当前访问的栏目ID非论坛模块。", "");
             }
             this.action = base.Request.Form.Get("action");
             this.id = base.GetRequestValue("id");

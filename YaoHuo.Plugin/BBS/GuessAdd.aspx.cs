@@ -8,7 +8,6 @@ using Newtonsoft.Json;
 using YaoHuo.Plugin.Tool;
 using YaoHuo.Plugin.WebSite;
 using System.Threading;
-using System.Data.SqlClient;
 
 namespace YaoHuo.Plugin.BBS
 {
@@ -26,35 +25,30 @@ namespace YaoHuo.Plugin.BBS
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // 检查是否提供了 classid 参数
             if (classid == "0")
             {
                 ShowTipInfo("无此栏目ID", "");
                 return;
             }
 
-            // 检查栏目是否为论坛模块
             if (classVo.typePath.ToLower() != "bbs/index.aspx")
             {
                 ShowTipInfo("抱歉，当前访问的栏目ID对应非论坛模块。", "");
                 return;
             }
 
-            // 检查用户是否登录
             if (!CheckLogin())
             {
                 Response.Redirect("login.aspx?siteid=" + siteid + "&classid=" + classid);
                 return;
             }
 
-            // 检查用户是否有发帖权限
             if (!CheckManagerLvl("04", "0"))
             {
                 ShowTipInfo("对不起，您没有发帖权限！", "");
                 return;
             }
 
-            // 检查发帖功能是否关闭
             if ("1".Equals(WapTool.getArryString(classVo.smallimg, '|', 2)) && !CheckManagerLvl("04", classVo.adminusername))
             {
                 ShowTipInfo("发帖功能已关闭！", "");
@@ -185,7 +179,7 @@ namespace YaoHuo.Plugin.BBS
             {
                 minDeadline = minDeadline.AddHours(6);
             }
-            DateTime maxDeadline = now.AddDays(15).Date.AddHours(now.Hour);
+            DateTime maxDeadline = now.AddDays(30).Date.AddHours(now.Hour);
 
             if (deadline < minDeadline)
             {

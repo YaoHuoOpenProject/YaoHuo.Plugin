@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_del.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_View_del" %>
-
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     StringBuilder strhtml = new StringBuilder();

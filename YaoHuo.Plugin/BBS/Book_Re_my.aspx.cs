@@ -56,7 +56,7 @@ namespace YaoHuo.Plugin.BBS
         {
             if (classid != "0" && classVo.typePath.ToLower() != "bbs/index.aspx")
             {
-                ShowTipInfo("抱歉，当前访问的栏目ID对应非论坛模块，请联系站长处理。", "");
+                ShowTipInfo("抱歉，当前访问的栏目ID非论坛模块。", "");
             }
             action = GetRequestValue("action");
             touserid = GetRequestValue("touserid").TrimStart('0');

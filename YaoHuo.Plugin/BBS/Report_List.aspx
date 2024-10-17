@@ -1,12 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Report_List.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Report_List" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-Response.Write(WapTool.showTop(this.GetLang("举报管理|舉報管理|Report Management"), wmlVo));//显示头                                                                                                                                                                       
-if (ver == "1")
-{
-}
-else //2.0界面
-{
+    Response.Write(WapTool.showTop(this.GetLang("举报管理|舉報管理|Report Management"), wmlVo));
     strhtml.Append(ERROR);
     strhtml.Append("<div class=\"title\">");
     strhtml.Append(this.GetLang("举报管理|舉報管理|Report Management"));
@@ -17,7 +12,6 @@ else //2.0界面
         strhtml.Append("<a class=\"noafter\" href=\"" + this.http_start + "bbs/Report_List.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=0\">查看所有</a><a href=\"" + this.http_start + "bbs/Report_List_del.aspx?action=go&amp;siteid=" + this.siteid + "&amp;classid=0&amp;id=0\">删除所有</a> ");
         strhtml.Append("</div></div>");
     }
-    //显示列表    
     for (int i = 0; (listVo != null && i < listVo.Count); i++)
     {
         index = index + kk;
@@ -39,9 +33,8 @@ else //2.0界面
     {
         strhtml.Append("<div class=\"tip\">暂无记录！</div>");
     }
-    //显示导航分页
     strhtml.Append(linkURL);
-    string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码   
+    string isWebHtml = this.ShowWEB_view(this.classid);
     if (isWebHtml != "")
     {
         Response.Clear();
@@ -53,6 +46,5 @@ else //2.0界面
     strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + siteid + "&amp;classid=0" + "\">返回首页</a>");
     strhtml.Append("</div></div>");
     Response.Write(strhtml);
-}
-Response.Write(WapTool.showDown(wmlVo)); //显示底部
+    Response.Write(WapTool.showDown(wmlVo));
 %>

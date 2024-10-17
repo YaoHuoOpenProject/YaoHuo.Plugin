@@ -1,22 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ToMoney.aspx.cs" Inherits="YaoHuo.Plugin.BBS.ToMoney" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-StringBuilder strhtml=new StringBuilder ();
-Response.Write(WapTool.showTop(this.GetLang(siteVo.sitemoneyname + "转账|"+siteVo.sitemoneyname + "转账|Money to change"), wmlVo));//显示头
-
-if (this.type == "1" && userVo.managerlvl != "00" && userVo.managerlvl != "01")
-{
-    Response.Redirect(this.http_start + "bbs/tomoney.aspx?siteid=" + this.siteid + "&backurl=" + HttpUtility.UrlEncode(backurl));
-    Response.End();
-}
-
-if (ver == "1")
-{
-}
-
-else //2.0界面
-{
-    strhtml.Append("<div class=\"title\">" + this.GetLang(siteVo.sitemoneyname + "转账|"+siteVo.sitemoneyname + "转账|Money to change") + "</div>");
+    StringBuilder strhtml = new StringBuilder();
+    Response.Write(WapTool.showTop(this.GetLang(siteVo.sitemoneyname + "转账|" + siteVo.sitemoneyname + "转账|Money to change"), wmlVo));
+    if (this.type == "1" && userVo.managerlvl != "00" && userVo.managerlvl != "01")
+    {
+        Response.Redirect(this.http_start + "bbs/tomoney.aspx?siteid=" + this.siteid + "&backurl=" + HttpUtility.UrlEncode(backurl));
+        Response.End();
+    }
+    strhtml.Append("<div class=\"title\">" + this.GetLang(siteVo.sitemoneyname + "转账|" + siteVo.sitemoneyname + "转账|Money to change") + "</div>");
     strhtml.Append("<div class=\"tip\">");
     strhtml.Append(this.ERROR);
     if (this.INFO == "OK")
@@ -62,7 +54,7 @@ else //2.0界面
     if (this.INFO != "OK")
     {
         strhtml.Append("<div class=\"content\">");
-        strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/toMoney.aspx\" method=\"post\">");        
+        strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/toMoney.aspx\" method=\"post\">");
         strhtml.Append("会员ID号<br/>");
         strhtml.Append("<input type=\"number\" style=\"width:70%;max-width:220px;\" class=\"txt\" name=\"touserid\" value=\"" + this.touserid + "\"/><br/>");
         strhtml.Append("转账金额<br/>");
@@ -72,7 +64,6 @@ else //2.0界面
         strhtml.Append("<input type=\"hidden\"  name=\"siteid\" value=\"" + siteid + "\"/>");
         strhtml.Append("<input type=\"hidden\"  name=\"backurl\" value=\"" + backurl + "\"/>");
         strhtml.Append("<input type=\"hidden\"  name=\"type\" value=\"" + type + "\"/>");
-        //strhtml.Append("<input type=\"hidden\"  name=\"sid\" value=\"" + sid + "\"/>");
         if (this.type != "1")
         {
             strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"add\"/>");
@@ -88,15 +79,15 @@ else //2.0界面
         }
         if (userVo.managerlvl == "00" || userVo.managerlvl == "01")
         {
-            if (this.type!="1")
+            if (this.type != "1")
             {
-               // strhtml.Append("<br/><a href=\"" + this.http_start + "bbs/tomoney.aspx?type=1&amp;siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "\">" + this.GetLang("冻结操作|冻结操作|sub") + "</a>");
+                // strhtml.Append("<br/><a href=\"" + this.http_start + "bbs/tomoney.aspx?type=1&amp;siteid=" + this.siteid + "&amp;backurl=" + HttpUtility.UrlEncode(backurl) + "\">" + this.GetLang("冻结操作|冻结操作|sub") + "</a>");
             }
         }
         strhtml.Append("</form>");
         strhtml.Append("</div>");
     }
-    string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码   
+    string isWebHtml = this.ShowWEB_view(this.classid);
     strhtml.Append("<div class=\"btBox\"><div class=\"bt1\">");
     strhtml.Append("<a class=\"noafter\" href=\"" + this.http_start + (backurl) + "" + "\">返回来源页</a> ");
     if (isWebHtml == "")
@@ -107,14 +98,10 @@ else //2.0界面
     strhtml.Append("</div></div>");
     if (isWebHtml != "")
     {
-        //string strhtml_list = strhtml.ToString();
-        //int s = strhtml_list.IndexOf("<div class=\"title\">");
-        //strhtml_list = strhtml_list.Substring(s, strhtml_list.Length - s);
         Response.Clear();
         Response.Write(WapTool.ToWML(isWebHtml, wmlVo).Replace("[view]", strhtml.ToString()));
         Response.End();
     }
     Response.Write(strhtml);
-}
-Response.Write(WapTool.showDown(wmlVo)); //显示底部
+    Response.Write(WapTool.showDown(wmlVo));
 %>

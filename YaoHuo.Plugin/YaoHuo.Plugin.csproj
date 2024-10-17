@@ -145,6 +145,7 @@
     <Content Include="BBS\ModifyUserName.aspx" />
     <Content Include="BBS\Report_Add.aspx" />
     <Content Include="BBS\Report_List.aspx" />
+    <Content Include="BBS\Report_List_del.aspx" />
     <Content Include="BBS\ResetVIP.aspx" />
     <Content Include="BBS\Share.aspx" />
     <Content Include="BBS\ToGroupBuy.aspx" />
@@ -437,6 +438,10 @@
     </Compile>
     <Compile Include="BBS\Report_List.aspx.cs">
       <DependentUpon>Report_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBS\Report_List_del.aspx.cs">
+      <DependentUpon>Report_List_del.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BBS\ResetVIP.aspx.cs">

@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_View" %>
-
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     Response.Write(WapTool.showTop(bookVo.book_title, wmlVo));
@@ -231,11 +230,11 @@
         strhtml.Append("</div>");
 
         // 添加样式
-        strhtml.Append("<link rel=\"stylesheet\" href=\"/netcss/css/Betting.css?60\" type=\"text/css\" />");
+        strhtml.Append("<link rel=\"stylesheet\" href=\"/netcss/css/Betting.css?69\" type=\"text/css\" />");
         // 添加脚本
         strhtml.Append("<script src=\"/NetCSS/JS/Confetti.Browser.min.js?001\"></script>");
         strhtml.Append("<script src=\"/NetCSS/JS/BookView/Celebration.js?001\"></script>");
-        strhtml.Append("<script src=\"/NetCSS/JS/BookView/Betting.js?00028\"></script>");
+        strhtml.Append("<script src=\"/NetCSS/JS/BookView/Betting.js?00032\"></script>");
         strhtml.Append("<script type=\"text/javascript\">");
         strhtml.Append("(function () {");
         strhtml.Append("var config = {");
@@ -310,7 +309,6 @@
 
         //显示上一页下一页
         strhtml.Append(preNextTitle);
-
         //显示最新回复
         strhtml.Append("<div class=\"viewContent\">");
         if (bookVo.islock == 0)
@@ -508,7 +506,7 @@
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/FastPost.js?X\"></script>");
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/NewReplyUI.js\"></script>");
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/AttachSearch.js\"></script>");
-        strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/HideUseless.js?C\" defer></script>");
+        strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/BookView/HideUseless.js?C1\" defer></script>");
         //会员可见结束
     }
     strhtml.Append(WapTool.GetVS(wmlVo));

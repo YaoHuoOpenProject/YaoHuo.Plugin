@@ -2,7 +2,7 @@
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
     Response.Write(WapTool.showTop(this.GetLang("查看" + this.touserid + "回复|查看+this.touserid+回複|View Reply"), wmlVo));
-    //会员可见
+    // 会员可见
     if (this.IsCheckManagerLvl("|00|01|02|03|04|", "") == true)
     {
         strhtml.Append("<script type=\"text/javascript\" src=\"/NetCSS/JS/HyperLink.js?L15\" defer></script>");
@@ -82,7 +82,7 @@
         strhtml.Append("}");
         strhtml.Append("</script>");
 
-        //管理员操作
+        // 管理员操作
         if (this.CheckManagerLvl("04", "") == true && this.touserid != "1000") // 检查是否为管理员且ID不为1000
         {
             strhtml.Append("<div class=\"tip\">");
@@ -92,7 +92,7 @@
                 this.touserid + "&amp;ot=" + this.ot + "\">清空(" + this.touserid + ")的所有回复</a><br />");
             strhtml.Append("</div>");
         }
-        //显示导航分页
+        // 显示导航分页
         if (string.IsNullOrEmpty(this.searchKey))
         {
             strhtml.Append(linkTOP);
@@ -128,10 +128,9 @@
         {
             strhtml.Append("<div class=\"tip\">暂无回复记录</div>");
         }
-        //显示导航分页
         strhtml.Append(linkURL);
     }
-    //会员可见结束
+    // 会员可见结束
     strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/userinfo.aspx?touserid=" + this.userid + "\">我的空间</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "\">返回首页</a>");

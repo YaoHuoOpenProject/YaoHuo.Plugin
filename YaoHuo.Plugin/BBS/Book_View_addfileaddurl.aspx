@@ -1,30 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_View_addfileAddURL.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_View_addfileAddURL" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-StringBuilder strhtml=new StringBuilder();
-Response.Write(WapTool.showTop(this.GetLang("续传文件|续传文件|add subject"), wmlVo));//显示头                                                                                                                                                                       
-if (ver == "1")
-{
-    strhtml.Append("<p>");
-    strhtml.Append(this.ERROR);
-
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_View_addfileAddURL.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id="+this.id+"&amp;sid=" + this.sid1 + "-2-" + this.cs + "-" + this.lang + "-" + this.myua + "-" + this.width + "\">" + this.GetLang("进入WAP2.0界面续传文件|进入WAP2.0界面续传文件|wap2.0 add upfile") + "</a><br/>");
-
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_View_admin.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id="+this.id+"\">" + this.GetLang("返回上级|返回上级|add content") + "</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/book_view.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id="+this.id+"\">" + this.GetLang("返回主题|返回主题|add vote") + "</a><br/>");
-    strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
-    strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">" + this.GetLang("返回首页|返回首页|Back to index") + "</a> ");
-    strhtml.Append(WapTool.GetVS(wmlVo));
-    strhtml.Append("</p>");
-    Response.Write(strhtml);
-}
-else //2.0界面
-{
+    StringBuilder strhtml = new StringBuilder();
+    Response.Write(WapTool.showTop(this.GetLang("续传文件|续传文件|add subject"), wmlVo));
     if (num > 9) num = 9;
     if (num < 1) num = 1;
     strhtml.Append("<div class=\"btBox\">");
     strhtml.Append("<div class=\"bt2\">");
-    strhtml.Append("<a   href=\"" + this.http_start + "bbs/Book_View_addfileAdd.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "&amp;id="+this.id+"\">本地续传文件</a> ");
+    strhtml.Append("<a   href=\"" + this.http_start + "bbs/Book_View_addfileAdd.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "&amp;id=" + this.id + "\">本地续传文件</a> ");
     strhtml.Append("<a class=\"btSelect\" href=\"" + this.http_start + "bbs/book_view_addfileaddURL.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "&amp;id=" + this.id + "&amp;num=1\">外站资源续传</a> ");
     strhtml.Append("</div></div>");
     strhtml.Append(this.ERROR);
@@ -40,11 +23,11 @@ else //2.0界面
     }
     else if (this.INFO == "EXTERR")
     {
-        strhtml.Append("<b>上传文件格式错误，只允许上传："+siteVo.UpFileType+"</b><br/>");
+        strhtml.Append("<b>上传文件格式错误，只允许上传：" + siteVo.UpFileType + "</b><br/>");
     }
     else if (this.INFO == "NOTSPACE")
     {
-        strhtml.Append("<b>网站总空间已经大于系统分配给此网站的最大空间了，网站空间：" + siteVo.sitespace  + "M；此网站已使用：" + (siteVo.myspace) + "KB</b><br/>");
+        strhtml.Append("<b>网站总空间已经大于系统分配给此网站的最大空间了，网站空间：" + siteVo.sitespace + "M；此网站已使用：" + (siteVo.myspace) + "KB</b><br/>");
     }
     else if (this.INFO == "MAXFILE")
     {
@@ -58,7 +41,6 @@ else //2.0界面
     strhtml.Append("<div class=\"content\">");
     if (this.INFO != "OK")
     {
-        //选多少个
         strhtml.Append("<form name=\"g1\" action=\"" + http_start + "bbs/Book_View_addfileAddURL.aspx\" method=\"get\">");
         strhtml.Append(this.GetLang("上传数量|上传数量|Upload Number") + " <input type=\"number\" oninput=\"if(value.length>1)value=value.slice(0,1)\" style=\"width:30px;text-align:center\" name=\"num\" value=\"" + this.num + "\" size=\"2\"/>");
         strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"class\"/>");
@@ -66,7 +48,6 @@ else //2.0界面
         strhtml.Append("<input type=\"hidden\"  name=\"siteid\" value=\"" + siteid + "\"/>");
         strhtml.Append("<input type=\"hidden\"  name=\"lpage\" value=\"" + lpage + "\"/>");
         strhtml.Append("<input type=\"hidden\"  name=\"id\" value=\"" + id + "\"/>");
-        //strhtml.Append("<input type=\"hidden\"  name=\"sid\" value=\"" + sid + "\"/>");
         strhtml.Append(" <input type=\"submit\"  name=\"bt\" value=\"" + this.GetLang("确定|确定|GO") + "\"/></form>");
         strhtml.Append("<br/>");
         strhtml.Append("<form name=\"f\" action=\"" + http_start + "bbs/Book_View_addfileAddURL.aspx\" enctype=\"multipart/form-data\" method=\"post\">");
@@ -79,30 +60,25 @@ else //2.0界面
             strhtml.Append("文件后缀 <input type=\"text\" maxlength=\"5\" placeholder=\" 例如：txt \" required=\"required\" name=\"file_ext\" value=\"\" size=\"20\"/><br/>");
             strhtml.Append(this.GetLang("附件说明|附件说明|Source") + "<br/>");
             strhtml.Append("<script> function adjustTextareaHeight(textarea) { if (textarea.scrollHeight > textarea.offsetHeight) { textarea.style.height = textarea.scrollHeight + 'px'; } } </script>");
-			strhtml.Append("<div class='centered-container'>");
+            strhtml.Append("<div class='centered-container'>");
             strhtml.Append("<textarea name=\"file_info\" oninput=\"adjustTextareaHeight(this)\" placeholder=\"填写备注信息，比如网盘提取密码、解压密码 \" rows=\"6\" style=\"width:98.6%;margin-bottom:5px;\"></textarea>");
             strhtml.Append("</div>");
         }
-        //strhtml.Append("<anchor><go href=\"" + http_start + "bbs/book_view_add.aspx\" method=\"post\" accept-charset=\"utf-8\">");
         strhtml.Append("<input type=\"hidden\" name=\"action\" value=\"gomod\"/>");
         strhtml.Append("<input type=\"hidden\" name=\"classid\" value=\"" + classid + "\"/>");
         strhtml.Append("<input type=\"hidden\" name=\"siteid\" value=\"" + siteid + "\"/>");
-        strhtml.Append("<input type=\"hidden\" name=\"lpage\" value=\"" + lpage + "\"/>");        
-        //strhtml.Append("<input type=\"hidden\" name=\"sid\" value=\"" + sid + "\"/>");
+        strhtml.Append("<input type=\"hidden\" name=\"lpage\" value=\"" + lpage + "\"/>");
         strhtml.Append("<input type=\"hidden\" name=\"id\" value=\"" + id + "\"/>");
         strhtml.Append("<input type=\"hidden\" name=\"num\" value=\"" + num + "\"/>");
         strhtml.Append("<input type=\"submit\" name=\"g\" value=\"" + this.GetLang("上传文件|上传文件|upload new subject") + "\"/>");
         strhtml.Append("</form>");
     }
     strhtml.Append("</div>");
-    string isWebHtml = this.ShowWEB_view(this.classid); //看是存在html代码    
+    string isWebHtml = this.ShowWEB_view(this.classid);
     if (isWebHtml != "")
     {
-        //string strhtml_list = strhtml.ToString();
-        //int s = strhtml_list.IndexOf("<div class=\"title\">");
-        //strhtml_list = strhtml_list.Substring(s, strhtml_list.Length - s);
         Response.Clear();
-        Response.Write(WapTool.ToWML(isWebHtml,wmlVo).Replace("[view]", strhtml.ToString()));
+        Response.Write(WapTool.ToWML(isWebHtml, wmlVo).Replace("[view]", strhtml.ToString()));
         Response.End();
     }
     strhtml.Append("<div class=\"tip\">");
@@ -111,10 +87,7 @@ else //2.0界面
     strhtml.Append("<div class=\"btBox\"><div class=\"bt2\">");
     strhtml.Append("<a href=\"" + this.http_start + "bbs/Book_View_admin.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;id=" + this.id + "\">" + this.GetLang("返回上级|返回上级|add content") + "</a> ");
     strhtml.Append("<a href=\"" + this.http_start + "bbs-" + id + ".html\">返回主题</a>");
-    //strhtml.Append("<a href=\"" + this.http_start + "bbs/book_list.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;page=" + this.lpage + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a> ");
-    //strhtml.Append("<a href=\"" + this.http_start + "wapindex.aspx?siteid=" + this.siteid + "&amp;classid=" + this.classid + "\">" + this.GetLang("返回首页|返回首页|Back to index") + "</a> "); 
     strhtml.Append("</div></div>");
     Response.Write(strhtml);
-}
-//显示底部
-Response.Write(WapTool.showDown(wmlVo)); %>
+    Response.Write(WapTool.showDown(wmlVo));
+%>

@@ -1,12 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Book_Re_delmy.aspx.cs" Inherits="YaoHuo.Plugin.BBS.Book_re_delmy" %>
 <%@ Import Namespace="YaoHuo.Plugin.Tool" %>
 <%
-Response.Write(WapTool.showTop(this.GetLang("清空回复|清空回複|del all Replies"), wmlVo));//显示头                                                                                                                                                                       
-if (ver == "1")
-{
-}
-else //2.0界面
-{
+    Response.Write(WapTool.showTop(this.GetLang("清空回复|清空回複|del all Replies"), wmlVo));
     Response.Write("<div class=\"title\">" + this.GetLang("清空回复操作|清空回复操作|delete") + "</div>");
     Response.Write(this.ERROR);
     if (this.INFO == "OK")
@@ -53,6 +48,5 @@ else //2.0界面
     Response.Write("<div class=\"btBox\"><div class=\"bt1\">");
     Response.Write("<a href=\"" + this.http_start + "bbs/book_re_my.aspx?action=class&amp;siteid=" + this.siteid + "&amp;classid=" + this.classid + "&amp;lpage=" + this.lpage + "&amp;page=" + this.page + "&amp;ot=" + this.ot + "&amp;touserid=" + this.touserid + "\">" + this.GetLang("返回列表|返回列表|Back to list") + "</a>");
     Response.Write("</div></div>");
-}
-Response.Write(WapTool.showDown(wmlVo)); //显示底部
+    Response.Write(WapTool.showDown(wmlVo));
 %>
